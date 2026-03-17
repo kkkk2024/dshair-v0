@@ -184,8 +184,12 @@ export const products: Product[] = [
     price: 179,
     originalPrice: undefined,
     currencyCode: "GBP",
-    image: getPlaceholderImage("Signature Tape-In", "signature-tape"),
-    images: [getPlaceholderImage("Signature Tape-In", "signature-tape")],
+    image: "/images/products/signature-tape-in/product-1.jpg",
+    images: [
+      "/images/products/signature-tape-in/product-1.jpg",
+      "/images/products/signature-tape-in/product-2.jpg",
+      "/images/products/signature-tape-in/product-3.jpg"
+    ],
     variants: [],
     inStock: true,
     badge: "Best Seller",
