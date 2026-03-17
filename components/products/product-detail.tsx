@@ -3,12 +3,11 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Star, Heart, Share2, Minus, Plus, Check, ChevronRight, Truck, RefreshCw, Shield } from "lucide-react"
+import { Star, Heart, Share2, Minus, Plus, Check, ChevronRight, Truck, RefreshCw, Shield, MessageCircle, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Product } from "@/lib/products"
-import { useCart } from "@/lib/cart-context"
+import { Product, contactInfo } from "@/lib/products"
 
 interface ProductDetailProps {
   product: Product
@@ -19,7 +18,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedLength, setSelectedLength] = useState(product.lengths[0])
   const [quantity, setQuantity] = useState(1)
-  const { addItem } = useCart()
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-GB", {
@@ -28,17 +26,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
     }).format(price)
   }
 
-  const handleAddToCart = () => {
-    addItem({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      quantity,
-      image: product.images[0],
-      color: selectedColor.name,
-      length: selectedLength,
-    })
-  }
+  // Generate WhatsApp message with product details
+  const whatsappMessage = encodeURIComponent(
+    `Hi D.S HAIR & BEAUTY!\n\nI'm interested in:\n- Product: ${product.name}\n- Price: ${formatPrice(product.price)}\n- Colour: ${selectedColor.name}\n- Length: ${selectedLength}\n- Quantity: ${quantity}\n\nPlease let me know more details. Thanks!`
+  )
+
+  // Generate email subject
+  const emailSubject = encodeURIComponent(`Inquiry about ${product.name}`)
+  const emailBody = encodeURIComponent(
+    `Hi D.S HAIR & BEAUTY,\n\nI'm interested in:\n- Product: ${product.name}\n- Price: ${formatPrice(product.price)}\n- Colour: ${selectedColor.name}\n- Length: ${selectedLength}\n- Quantity: ${quantity}\n\nPlease let me know more details. Thanks!\n\nBest regards`
+  )
 
   return (
     <div className="container px-4 md:px-6 py-8 md:py-12">
@@ -224,33 +221,35 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
           </div>
 
-          {/* Add to Cart */}
+          {/* Contact to Order - Replaced Add to Cart */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <Button
               size="lg"
-              className="flex-1"
-              onClick={handleAddToCart}
-              disabled={!product.inStock}
+              className="flex-1 bg-green-600 hover:bg-green-700"
+              asChild
             >
-              Add to Bag - {formatPrice(product.price * quantity)}
+              <a
+                href={`https://wa.me/447456789012?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Order via WhatsApp
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="shrink-0" aria-label="Add to wishlist">
-              <Heart className="h-5 w-5" />
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex-1"
+              asChild
+            >
+              <a
+                href={`mailto:${contactInfo.email}?subject=${emailSubject}&body=${emailBody}`}
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Email Inquiry
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="shrink-0" aria-label="Share product">
-              <Share2 className="h-5 w-5" />
-            </Button>
-          </div>
-
-          {/* Payment Options */}
-          <div className="p-4 bg-secondary rounded-lg mb-6">
-            <p className="text-sm">
-              Or pay in 3 interest-free instalments of{" "}
-              <span className="font-semibold">
-                {formatPrice((product.price * quantity) / 3)}
-              </span>{" "}
-              with Klarna
-            </p>
           </div>
 
           {/* Trust Badges */}
@@ -267,6 +266,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <Shield className="h-5 w-5 text-muted-foreground" />
               <span className="text-xs text-muted-foreground">1 Year Warranty</span>
             </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="mt-8 p-4 bg-green-50 rounded-lg border border-green-200">
+            <p className="text-sm text-green-800 font-medium mb-2">
+              💬 Prefer to order differently?
+            </p>
+            <p className="text-sm text-green-700">
+              Contact us on WhatsApp: {contactInfo.whatsappNumber} or email: {contactInfo.email}
+            </p>
           </div>
         </div>
       </div>

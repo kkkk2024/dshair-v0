@@ -1,352 +1,331 @@
-// Shopify Storefront API Client
-const SHOPIFY_STORE_DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN || 'd-s-hair-beauty.myshopify.com';
-const SHOPIFY_STOREFRONT_ACCESS_TOKEN = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN || '47f2402532bd55a6560cba2fa38b5b48';
+// D.S Hair & Beauty Products Database
+// This file contains all product data
+// Later we can connect to Airtable for easy management
 
-const API_VERSION = '2025-01';
-const API_URL = `https://${SHOPIFY_STORE_DOMAIN}/api/${API_VERSION}/graphql.json`;
-
-async function shopifyFetch(query: string, variables: Record<string, unknown> = {}) {
-  const response = await fetch(API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Shopify-Storefront-Access-Token': SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-    },
-    body: JSON.stringify({ query, variables }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Shopify API error: ${response.status}`);
-  }
-
-  const json = await response.json();
-  
-  if (json.errors) {
-    console.error('Shopify API errors:', json.errors);
-    throw new Error(json.errors[0]?.message || 'Shopify API error');
-  }
-
-  return json.data;
-}
-
-// Fetch all products from Shopify
-export async function getProducts(first: number = 50) {
-  try {
-    const query = `
-      query GetProducts($first: Int!) {
-        products(first: $first) {
-          edges {
-            node {
-              id
-              title
-              handle
-              description
-              vendor
-              productType
-              tags
-              priceRange {
-                minVariantPrice {
-                  amount
-                  currencyCode
-                }
-              }
-              featuredImage {
-                url
-                altText
-                width
-                height
-              }
-              images(first: 10) {
-                edges {
-                  node {
-                    url
-                    altText
-                  }
-                }
-              }
-              variants(first: 10) {
-                edges {
-                  node {
-                    id
-                    title
-                    availableForSale
-                    priceV2 {
-                      amount
-                      currencyCode
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `;
-
-    const data = await shopifyFetch(query, { first });
-    
-    return data.products.edges.map((edge: any) => {
-      const product = edge.node;
-      return {
-        id: product.id,
-        slug: product.handle,
-        name: product.title,
-        title: product.title,
-        handle: product.handle,
-        description: product.description || '',
-        shortDescription: product.description?.substring(0, 100) || '',
-        price: parseFloat(product.priceRange?.minVariantPrice?.amount || '0'),
-        originalPrice: undefined,
-        images: product.images?.edges?.map((e: any) => e.node.url) || [],
-        image: product.featuredImage?.url || '',
-        category: product.productType || 'Hair Extensions',
-        subcategory: '',
-        badge: product.tags?.includes('bestseller') ? 'Best Seller' : product.tags?.includes('new') ? 'New' : undefined,
-        rating: 4.8,
-        reviews: Math.floor(Math.random() * 500) + 100,
-        colors: [],
-        lengths: [],
-        features: [],
-        inStock: product.variants?.edges?.some((e: any) => e.node.availableForSale) || false,
-        type: product.tags?.includes('professional') ? 'professional' as const : 'diy' as const,
-        vendor: product.vendor,
-        tags: product.tags || [],
-        currencyCode: product.priceRange?.minVariantPrice?.currencyCode || 'GBP',
-        variants: product.variants?.edges?.map((e: any) => e.node) || [],
-      };
-    });
-  } catch (error) {
-    console.error('Failed to fetch products from Shopify:', error);
-    return [];
-  }
-}
-
-// Fetch single product by handle
-export async function getProductByHandle(handle: string) {
-  try {
-    const query = `
-      query GetProduct($handle: String!) {
-        productByHandle(handle: $handle) {
-          id
-          title
-          handle
-          description
-          vendor
-          productType
-          tags
-          priceRange {
-            minVariantPrice {
-              amount
-              currencyCode
-            }
-            maxVariantPrice {
-              amount
-              currencyCode
-            }
-          }
-          featuredImage {
-            url
-            altText
-            width
-            height
-          }
-          images(first: 10) {
-            edges {
-              node {
-                url
-                altText
-              }
-            }
-          }
-          variants(first: 50) {
-            edges {
-              node {
-                id
-                title
-                availableForSale
-                priceV2 {
-                  amount
-                  currencyCode
-                }
-                selectedOptions {
-                  name
-                  value
-                }
-              }
-            }
-          }
-        }
-      }
-    `;
-
-    const data = await shopifyFetch(query, { handle });
-    
-    if (!data.productByHandle) {
-      return null;
-    }
-    
-    const product = data.productByHandle;
-    return {
-      id: product.id,
-      slug: product.handle,
-      name: product.title,
-      title: product.title,
-      handle: product.handle,
-      description: product.description || '',
-      shortDescription: product.description?.substring(0, 100) || '',
-      price: parseFloat(product.priceRange?.minVariantPrice?.amount || '0'),
-      originalPrice: undefined,
-      images: product.images?.edges?.map((e: any) => e.node.url) || [],
-      image: product.featuredImage?.url || '',
-      category: product.productType || 'Hair Extensions',
-      subcategory: '',
-      badge: product.tags?.includes('bestseller') ? 'Best Seller' : product.tags?.includes('new') ? 'New' : undefined,
-      rating: 4.8,
-      reviews: Math.floor(Math.random() * 500) + 100,
-      colors: [],
-      lengths: [],
-      features: [],
-      inStock: product.variants?.edges?.some((e: any) => e.node.availableForSale) || false,
-      type: product.tags?.includes('professional') ? 'professional' as const : 'diy' as const,
-      vendor: product.vendor,
-      tags: product.tags || [],
-      currencyCode: product.priceRange?.minVariantPrice?.currencyCode || 'GBP',
-      variants: product.variants?.edges?.map((e: any) => e.node) || [],
-    };
-  } catch (error) {
-    console.error('Failed to fetch product from Shopify:', error);
-    return null;
-  }
-}
-
-// Format price
-export function formatPrice(amount: number | string, currencyCode: string = 'GBP'): string {
-  const num = typeof amount === 'string' ? parseFloat(amount) : amount;
-  return new Intl.NumberFormat('en-GB', {
-    style: 'currency',
-    currency: currencyCode,
-  }).format(num);
-}
-
-// Collections - still static for now
-export interface Collection {
-  slug: string
-  name: string
-  description: string
-  image: string
-  productCount: number
-  type: "diy" | "professional" | "all"
-}
-
-export const collections: Collection[] = [
-  {
-    slug: "diy",
-    name: "DIY Extensions",
-    description: "Easy to apply hair extensions for at-home use. Transform your look in minutes without a salon visit.",
-    image: "/images/collection-diy.jpg",
-    productCount: 48,
-    type: "diy",
-  },
-  {
-    slug: "professional",
-    name: "Professional Extensions",
-    description: "Premium quality extensions for salon professionals. Designed for expert application and long-lasting results.",
-    image: "/images/collection-pro.jpg",
-    productCount: 36,
-    type: "professional",
-  },
-  {
-    slug: "clip-in",
-    name: "Clip-In Extensions",
-    description: "Easy to apply, instant transformation",
-    image: "/images/category-clip-in.jpg",
-    productCount: 24,
-    type: "diy",
-  },
-  {
-    slug: "tape-in",
-    name: "Tape-In Extensions",
-    description: "Seamless, long-lasting results",
-    image: "/images/category-tape-in.jpg",
-    productCount: 18,
-    type: "professional",
-  },
-  {
-    slug: "ponytails",
-    name: "Ponytails",
-    description: "Instant glam for any occasion",
-    image: "/images/category-ponytails.jpg",
-    productCount: 18,
-    type: "diy",
-  },
-  {
-    slug: "wefts",
-    name: "Weft Extensions",
-    description: "Professional-grade quality",
-    image: "/images/category-wefts.jpg",
-    productCount: 12,
-    type: "professional",
-  },
-];
-
-// Product type
 export interface Product {
   id: string
-  name: string
-  slug: string
   handle: string
+  name: string
+  title: string
   description: string
   shortDescription: string
+  vendor: string
+  productType: string
+  type: "diy" | "professional"
+  tags: string[]
   price: number
   originalPrice?: number
-  images: string[]
+  currencyCode: string
   image: string
-  category: string
-  subcategory: string
+  images: string[]
+  variants: any[]
+  inStock: boolean
   badge?: string
   rating: number
   reviews: number
-  colors: ProductColor[]
+  colors: { name: string; hex: string }[]
   lengths: string[]
+  slug: string
+  category: string
   features: string[]
-  inStock: boolean
-  type: "diy" | "professional"
-  vendor?: string
-  tags?: string[]
-  currencyCode?: string
-  variants?: any[]
 }
 
-export interface ProductColor {
-  name: string
-  hex: string
-  image: string
+export const products: Product[] = [
+  {
+    id: "1",
+    handle: "silk-seam-clip-in",
+    name: "Silk Seam Clip-In Set",
+    title: "Silk Seam Clip-In Set",
+    description: "Our most seamless clip-in technology. Premium 100% Remy human hair for a natural, undetectable look. Perfect for adding length and volume without damaging your natural hair.",
+    shortDescription: "Seamless clip-in technology for a natural look",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Clip-In Extensions",
+    type: "diy",
+    tags: ["bestseller", "clip-in", "silk-seam"],
+    price: 189,
+    originalPrice: 219,
+    currencyCode: "GBP",
+    image: "/images/product-silk-seam.jpg",
+    images: ["/images/product-silk-seam.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "Best Seller",
+    rating: 4.9,
+    reviews: 2847,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Chestnut", hex: "#8b5a2b" },
+      { name: "Blonde", hex: "#f5deb3" },
+      { name: "Platinum Blonde", hex: "#e5e4e2" },
+    ],
+    lengths: ["14 inches", "16 inches", "18 inches", "20 inches"],
+    slug: "silk-seam-clip-in",
+    category: "DIY Extensions",
+    features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "6-8 weeks lifespan"],
+  },
+  {
+    id: "2",
+    handle: "classic-clip-in",
+    name: "Classic Clip-In Set",
+    title: "Classic Clip-In Set",
+    description: "Easy to apply, natural look. Perfect for beginners. Our classic clip-in set provides volume and length with minimal effort.",
+    shortDescription: "Easy to apply, natural look",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Clip-In Extensions",
+    type: "diy",
+    tags: ["clip-in", "classic"],
+    price: 149,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/product-classic-clip.jpg",
+    images: ["/images/product-classic-clip.jpg"],
+    variants: [],
+    inStock: true,
+    badge: undefined,
+    rating: 4.8,
+    reviews: 1923,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Chestnut", hex: "#8b5a2b" },
+      { name: "Auburn", hex: "#8b4513" },
+      { name: "Blonde", hex: "#f5deb3" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches"],
+    slug: "classic-clip-in",
+    category: "DIY Extensions",
+    features: ["100% Remy Human Hair", "Easy clip-in application", "Beginner-friendly", "4 wefts included", "Natural blend"],
+  },
+  {
+    id: "3",
+    handle: "wrap-ponytail",
+    name: "Wrap Ponytail",
+    title: "Wrap Ponytail",
+    description: "Instant volume and length. Easy to attach and remove. Our wrap ponytail gives you a glamorous look in seconds.",
+    shortDescription: "Instant volume and length",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Ponytails",
+    type: "diy",
+    tags: ["ponytail", "new"],
+    price: 89,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/product-ponytail.jpg",
+    images: ["/images/product-ponytail.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 4.9,
+    reviews: 856,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Blonde", hex: "#f5deb3" },
+    ],
+    lengths: ["12 inches", "16 inches"],
+    slug: "wrap-ponytail",
+    category: "DIY Extensions",
+    features: ["Instant transformation", "No clips or glue needed", "Secure wrap-around band", "Multiple styling options"],
+  },
+  {
+    id: "4",
+    handle: "professional-tape-in",
+    name: "Professional Tape-Ins",
+    title: "Professional Tape-Ins",
+    description: "Professional grade tape-ins for salon use. Premium quality tape-in extensions that last 6-8 weeks.",
+    shortDescription: "Professional grade tape-ins",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Tape-In Extensions",
+    type: "professional",
+    tags: ["tape-in", "professional"],
+    price: 159,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/product-tape-in.jpg",
+    images: ["/images/product-tape-in.jpg"],
+    variants: [],
+    inStock: true,
+    badge: undefined,
+    rating: 4.7,
+    reviews: 1247,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Chestnut", hex: "#8b5a2b" },
+      { name: "Honey Blonde", hex: "#eb9605" },
+      { name: "Platinum Blonde", hex: "#e5e4e2" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches", "20 inches"],
+    slug: "professional-tape-in",
+    category: "Professional Extensions",
+    features: ["Professional grade", "6-8 weeks wear time", "Salon quality", "Korean keratin tips", "Easy application"],
+  },
+  {
+    id: "5",
+    handle: "volumizing-weft",
+    name: "Volumizing Weft",
+    title: "Volumizing Weft",
+    description: "Add fullness effortlessly with our premium weft extensions. Hand-tied for natural movement.",
+    shortDescription: "Add fullness effortlessly",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Weft Extensions",
+    type: "diy",
+    tags: ["weft", "bestseller", "volume"],
+    price: 129,
+    originalPrice: 159,
+    currencyCode: "GBP",
+    image: "/images/product-weft.jpg",
+    images: ["/images/product-weft.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "Best Seller",
+    rating: 4.8,
+    reviews: 956,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Chestnut", hex: "#8b5a2b" },
+    ],
+    lengths: ["10 inches", "12 inches", "14 inches", "16 inches"],
+    slug: "volumizing-weft",
+    category: "DIY Extensions",
+    features: ["Hand-tied wefts", "Maximum volume", "Cut to size", "Secure stitching", "Natural movement"],
+  },
+  {
+    id: "6",
+    handle: "k-tip-extensions",
+    name: "K-Tip Extensions",
+    title: "K-Tip Extensions",
+    description: "Keratin bonded tips for long-lasting results. Individual strands for a natural, seamless blend.",
+    shortDescription: "Keratin bonded for long-lasting results",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "K-Tip Extensions",
+    type: "professional",
+    tags: ["k-tip", "keratin", "professional"],
+    price: 179,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/product-ktip.jpg",
+    images: ["/images/product-ktip.jpg"],
+    variants: [],
+    inStock: true,
+    badge: undefined,
+    rating: 4.6,
+    reviews: 723,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Blonde", hex: "#f5deb3" },
+    ],
+    lengths: ["14 inches", "16 inches", "18 inches", "20 inches", "22 inches"],
+    slug: "k-tip-extensions",
+    category: "Professional Extensions",
+    features: ["Korean keratin bonds", "Individual strand application", "3-4 months lifespan", "Heat application method", "Professional use recommended"],
+  },
+  {
+    id: "7",
+    handle: "i-tip-extensions",
+    name: "I-Tip Extensions",
+    title: "I-Tip Extensions",
+    description: "Individual strand application for natural results. No heat or glue required.",
+    shortDescription: "Individual strand application",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "I-Tip Extensions",
+    type: "professional",
+    tags: ["i-tip", "new"],
+    price: 149,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/product-itip.jpg",
+    images: ["/images/product-itip.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 4.7,
+    reviews: 534,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Chestnut", hex: "#8b5a2b" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches"],
+    slug: "i-tip-extensions",
+    category: "Professional Extensions",
+    features: ["No heat or glue needed", "Micro rings application", "Reusable rings", "Gentle on natural hair", "Adjustable"],
+  },
+  {
+    id: "8",
+    handle: "fringes-bangs",
+    name: "Fringes & Bangs",
+    title: "Fringes & Bangs",
+    description: "Transform your look instantly with our premium fringe pieces. Available in various styles.",
+    shortDescription: "Transform your look instantly",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Fringes & Bangs",
+    type: "diy",
+    tags: ["bangs", "fringe"],
+    price: 59,
+    originalPrice: 79,
+    currencyCode: "GBP",
+    image: "/images/product-bangs.jpg",
+    images: ["/images/product-bangs.jpg"],
+    variants: [],
+    inStock: true,
+    badge: undefined,
+    rating: 4.9,
+    reviews: 1234,
+    colors: [
+      { name: "Natural Black", hex: "#1a1a1a" },
+      { name: "Dark Brown", hex: "#3d2314" },
+      { name: "Medium Brown", hex: "#6b4423" },
+      { name: "Blonde", hex: "#f5deb3" },
+    ],
+    lengths: ["8 inches", "10 inches", "12 inches"],
+    slug: "fringes-bangs",
+    category: "DIY Extensions",
+    features: ["Instant style change", "Clip-in application", "Multiple styles available", "Blunt cut option", "Curtain bang option"],
+  },
+]
+
+// Helper functions
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find(p => p.slug === slug)
 }
 
-// Get collection by slug
-export function getCollectionBySlug(slug: string) {
-  return collections.find(c => c.slug === slug) || null
+export function getRelatedProducts(currentProductId: string, limit: number = 4): Product[] {
+  return products
+    .filter(p => p.id !== currentProductId)
+    .slice(0, limit)
 }
 
-// Get products by collection - now fetches from Shopify
-export async function getProductsByCollection(collectionSlug: string) {
-  const allProducts = await getProducts(50)
-  
-  if (collectionSlug === 'all' || collectionSlug === undefined) {
-    return allProducts
-  }
-  
-  return allProducts.filter((product: Product) => {
-    const productCategory = product.category?.toLowerCase() || ''
-    const productType = product.type || 'diy'
-    
-    if (collectionSlug === 'diy') {
-      return productType === 'diy'
-    }
-    if (collectionSlug === 'professional') {
-      return productType === 'professional'
-    }
-    
-    return productCategory.includes(collectionSlug.toLowerCase())
-  })
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter(p => p.category === category)
+}
+
+// Social links
+export const socialLinks = {
+  instagram: "https://instagram.com/d.shairbeauty",
+  facebook: "https://facebook.com/d.shairbeauty",
+  youtube: "https://youtube.com/@dshairbeauty",
+  tiktok: "https://tiktok.com/@d.shairbeauty",
+  pinterest: "https://pinterest.com/dshairbeauty",
+  linkedin: "https://linkedin.com/company/dshairbeauty",
+  twitter: "https://twitter.com/dshairbeauty",
+}
+
+// Contact info
+export const contactInfo = {
+  email: "caro@dshairbeauty.co.uk",
+  whatsapp: "https://wa.me/447456789012",
+  whatsappNumber: "+44 7456 789012",
+  company: "D.S HAIR & BEAUTY",
+  address: "Manchester, UK",
 }
