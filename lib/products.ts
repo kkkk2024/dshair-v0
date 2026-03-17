@@ -310,6 +310,84 @@ export function getProductsByCategory(category: string): Product[] {
   return products.filter(p => p.category === category)
 }
 
+// Collections
+export interface Collection {
+  id: string
+  name: string
+  slug: string
+  description: string
+  image: string
+}
+
+export const collections: Collection[] = [
+  {
+    id: "1",
+    name: "All Products",
+    slug: "all",
+    description: "Browse our complete collection of premium hair extensions",
+    image: "/images/collection-all.jpg",
+  },
+  {
+    id: "2",
+    name: "DIY Extensions",
+    slug: "diy",
+    description: "Professional-quality extensions you can apply at home",
+    image: "/images/collection-diy.jpg",
+  },
+  {
+    id: "3",
+    name: "Professional Extensions",
+    slug: "professional",
+    description: "Salon-grade extensions for professional stylists",
+    image: "/images/collection-professional.jpg",
+  },
+  {
+    id: "4",
+    name: "Clip-In Extensions",
+    slug: "clip-in",
+    description: "Easy clip-in application for instant transformation",
+    image: "/images/collection-clipin.jpg",
+  },
+  {
+    id: "5",
+    name: "Tape-In Extensions",
+    slug: "tape-in",
+    description: "Seamless tape-in extensions for a natural look",
+    image: "/images/collection-tapein.jpg",
+  },
+  {
+    id: "6",
+    name: "Ponytails",
+    slug: "ponytails",
+    description: "Instant volume and length with our premium ponytails",
+    image: "/images/collection-ponytail.jpg",
+  },
+  {
+    id: "7",
+    name: "Hair Care",
+    slug: "hair-care",
+    description: "Premium hair care products to maintain your extensions",
+    image: "/images/collection-haircare.jpg",
+  },
+]
+
+export function getCollectionBySlug(slug: string): Collection | undefined {
+  return collections.find(c => c.slug === slug)
+}
+
+export function getProductsByCollection(collectionSlug: string): Product[] {
+  if (collectionSlug === "all") {
+    return products
+  }
+  if (collectionSlug === "diy") {
+    return products.filter(p => p.type === "diy")
+  }
+  if (collectionSlug === "professional") {
+    return products.filter(p => p.type === "professional")
+  }
+  return products.filter(p => p.category.toLowerCase().includes(collectionSlug.toLowerCase()))
+}
+
 // Social links
 export const socialLinks = {
   instagram: "https://instagram.com/d.shairbeauty",
