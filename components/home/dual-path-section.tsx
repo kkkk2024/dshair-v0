@@ -23,7 +23,7 @@ export function DualPathSection() {
           <div className="relative group overflow-hidden rounded-2xl">
             <div className="relative aspect-[4/3] lg:aspect-[3/2]">
               <Image
-                src="/images/path-diy.jpg"
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
                 alt="DIY hair extensions for home use"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -67,7 +67,7 @@ export function DualPathSection() {
           <div className="relative group overflow-hidden rounded-2xl">
             <div className="relative aspect-[4/3] lg:aspect-[3/2]">
               <Image
-                src="/images/path-pro.jpg"
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80"
                 alt="Professional hair extensions for stylists"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

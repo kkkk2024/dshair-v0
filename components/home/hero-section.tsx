@@ -11,7 +11,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
           alt="Beautiful hair extensions"
           fill
           className="object-cover"
