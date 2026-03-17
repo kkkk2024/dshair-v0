@@ -45,7 +45,7 @@ export default function AboutPage() {
           <section className="relative h-[500px] md:h-[600px] flex items-center">
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/about-hero.jpg"
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
                 alt="D.S HAIR & BEAUTY story"
                 fill
                 className="object-cover"
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/about-story.jpg"
+                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
                     alt="Our journey"
                     fill
                     className="object-cover"

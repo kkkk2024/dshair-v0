@@ -450,8 +450,8 @@ export const socialLinks = {
 // Contact info
 export const contactInfo = {
   email: "caro@dshairbeauty.co.uk",
-  whatsapp: "https://wa.me/447456789012",
-  whatsappNumber: "+44 7456 789012",
+  whatsapp: "https://wa.me/8613516946001",
+  whatsappNumber: "+86 13516946001",
   company: "D.S HAIR & BEAUTY",
   address: "Manchester, UK",
 }

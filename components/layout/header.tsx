@@ -58,7 +58,7 @@ export function Header() {
 
   const handleOrderClick = () => {
     const message = encodeURIComponent("Hi D.S HAIR & BEAUTY! I'd like to place an order. Please help me.")
-    window.open(`https://wa.me/447456789012?text=${message}`, "_blank")
+    window.open(`https://wa.me/8613516946001?text=${message}`, "_blank")
   }
 
   return (

@@ -229,7 +229,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               asChild
             >
               <a
-                href={`https://wa.me/447456789012?text=${whatsappMessage}`}
+                href={`https://wa.me/8613516946001?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
