@@ -424,7 +424,12 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
   if (collectionSlug === "professional") {
     return products.filter(p => p.type === "professional")
   }
-  return products.filter(p => p.category.toLowerCase().includes(collectionSlug.toLowerCase()))
+  // Check both category and productType for matching
+  return products.filter(p => 
+    p.category.toLowerCase().includes(collectionSlug.toLowerCase()) ||
+    p.productType.toLowerCase().includes(collectionSlug.toLowerCase()) ||
+    p.tags.some(tag => tag.toLowerCase().includes(collectionSlug.toLowerCase()))
+  )
 }
 
 // Social links
