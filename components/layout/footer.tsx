@@ -1,7 +1,8 @@
 import Link from "next/link"
+import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Facebook, Instagram, Youtube, Twitter, Linkedin, MessageCircle } from "lucide-react"
+import { Facebook, Instagram, Youtube, Twitter, Linkedin, MessageCircle, Check } from "lucide-react"
 import { socialLinks, contactInfo } from "@/lib/products"
 
 const footerLinks = {
@@ -35,6 +36,24 @@ const footerLinks = {
 }
 
 export function Footer() {
+  const [email, setEmail] = useState("")
+  const [subscribed, setSubscribed] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email.trim()) return
+    
+    setLoading(true)
+    
+    // Simulate subscription (in production, connect to newsletter service)
+    setTimeout(() => {
+      setSubscribed(true)
+      setLoading(false)
+      setEmail("")
+    }, 1000)
+  }
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Newsletter section */}
@@ -47,16 +66,33 @@ export function Footer() {
                 Subscribe for exclusive offers, hair tips, and be the first to know about new arrivals.
               </p>
             </div>
-            <div className="flex w-full md:w-auto gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 min-w-[250px]"
-              />
-              <Button variant="secondary" className="whitespace-nowrap">
-                Subscribe
-              </Button>
-            </div>
+            <form onSubmit={handleSubscribe} className="flex w-full md:w-auto gap-2">
+              {subscribed ? (
+                <div className="flex items-center gap-2 text-green-300 bg-green-900/30 px-4 py-2 rounded-lg">
+                  <Check className="h-5 w-5" />
+                  <span>Thanks for subscribing!</span>
+                </div>
+              ) : (
+                <>
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 min-w-[250px]"
+                  />
+                  <Button 
+                    variant="secondary" 
+                    className="whitespace-nowrap"
+                    disabled={loading}
+                    type="submit"
+                  >
+                    {loading ? "Subscribing..." : "Subscribe"}
+                  </Button>
+                </>
+              )}
+            </form>
           </div>
         </div>
       </div>

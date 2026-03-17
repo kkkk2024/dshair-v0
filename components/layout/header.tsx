@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Menu, Search, ShoppingBag, User, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
@@ -14,7 +15,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import { useCart } from "@/lib/cart-context"
+import { products } from "@/lib/products"
+import { contactInfo } from "@/lib/products"
 
 const diyExtensions = [
   { title: "Silk Seam Clip-In", href: "/collections/silk-seam-clip-in", description: "Our most seamless clip-in technology" },
@@ -41,13 +43,29 @@ const services = [
 
 export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const { itemCount, setIsOpen: setCartOpen } = useCart()
+  const [searchQuery, setSearchQuery] = useState("")
+  const router = useRouter()
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // Search products and redirect to collection with filter
+      router.push(`/collections/all?search=${encodeURIComponent(searchQuery)}`)
+      setIsSearchOpen(false)
+      setSearchQuery("")
+    }
+  }
+
+  const handleOrderClick = () => {
+    const message = encodeURIComponent("Hi D.S HAIR & BEAUTY! I'd like to place an order. Please help me.")
+    window.open(`https://wa.me/447456789012?text=${message}`, "_blank")
+  }
 
   return (
     <>
-      {/* Top announcement bar */}
+      {/* Top announcement bar - Updated */}
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <p>Free UK Delivery on Orders Over £175 | Use Code: WELCOME15 for 15% Off Your First Order</p>
+        <p>🇬🇧 UK Stockist | 100% Remy Human Hair | 20+ Years Industry Experience | Free Colour Matching</p>
       </div>
 
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -141,7 +159,7 @@ export function Header() {
             >
               <Search className="h-5 w-5" />
             </Button>
-            <Link href="/account">
+            <Link href="/contact">
               <Button variant="ghost" size="icon" aria-label="Account">
                 <User className="h-5 w-5" />
               </Button>
@@ -149,22 +167,17 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              aria-label="Shopping cart"
+              aria-label="Order via WhatsApp"
               className="relative"
-              onClick={() => setCartOpen(true)}
+              onClick={handleOrderClick}
             >
               <ShoppingBag className="h-5 w-5" />
-              {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-accent text-accent-foreground text-xs flex items-center justify-center">
-                  {itemCount}
-                </span>
-              )}
             </Button>
           </div>
         </div>
       </header>
 
-      {/* Search overlay */}
+      {/* Search overlay with functionality */}
       {isSearchOpen && (
         <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur">
           <div className="container flex flex-col items-center justify-center h-full px-4">
@@ -177,10 +190,12 @@ export function Header() {
             >
               <X className="h-6 w-6" />
             </Button>
-            <div className="w-full max-w-2xl">
+            <form onSubmit={handleSearch} className="w-full max-w-2xl">
               <input
                 type="text"
                 placeholder="Search for products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full text-2xl md:text-4xl bg-transparent border-b-2 border-foreground py-4 focus:outline-none placeholder:text-muted-foreground"
                 autoFocus
               />
@@ -188,13 +203,24 @@ export function Header() {
                 <p className="text-sm text-muted-foreground mb-4">Popular Searches</p>
                 <div className="flex flex-wrap gap-2">
                   {["Clip-In Extensions", "Tape-Ins", "Ponytails", "Blonde", "Brunette"].map((term) => (
-                    <Button key={term} variant="outline" size="sm" className="rounded-full">
+                    <Button 
+                      key={term} 
+                      variant="outline" 
+                      size="sm" 
+                      className="rounded-full"
+                      type="button"
+                      onClick={() => {
+                        setSearchQuery(term)
+                        router.push(`/collections/all?search=${encodeURIComponent(term)}`)
+                        setIsSearchOpen(false)
+                      }}
+                    >
                       {term}
                     </Button>
                   ))}
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       )}
