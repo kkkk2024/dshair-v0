@@ -12,7 +12,7 @@ const testimonials = [
     location: "London",
     rating: 5,
     text: "Absolutely stunning quality! The Silk Seam extensions blend so seamlessly with my natural hair. I have received so many compliments. Will definitely be ordering again!",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+    image: "/images/testimonial-1.jpg",
     product: "Silk Seam Clip-In Set",
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     location: "Manchester",
     rating: 5,
     text: "As a hairstylist, I only use D.S HAIR & BEAUTY for my clients. The quality is unmatched and the customer service is exceptional. Highly recommend the professional range.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+    image: "/images/testimonial-2.jpg",
     product: "Professional Tape-Ins",
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     location: "Birmingham",
     rating: 5,
     text: "The colour matching was perfect! I was worried about ordering online but the team helped me find the exact shade. The ponytail extension is my new go-to for events.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    image: "/images/testimonial-3.jpg",
     product: "Wrap Ponytail",
   },
 ]

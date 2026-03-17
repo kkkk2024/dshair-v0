@@ -5,12 +5,12 @@ import Image from "next/image"
 import { Instagram } from "lucide-react"
 
 const instagramPosts = [
-  { id: 1, image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80", likes: 1234 },
-  { id: 2, image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80", likes: 987 },
-  { id: 3, image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=80", likes: 1567 },
-  { id: 4, image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80", likes: 2341 },
-  { id: 5, image: "https://images.unsplash.com/photo-1609604351851-3d4d7d9e9e78?w=400&q=80", likes: 876 },
-  { id: 6, image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80", likes: 1432 },
+  { id: 1, image: "/images/instagram-1.jpg", likes: 1234 },
+  { id: 2, image: "/images/instagram-2.jpg", likes: 987 },
+  { id: 3, image: "/images/instagram-3.jpg", likes: 1567 },
+  { id: 4, image: "/images/instagram-4.jpg", likes: 2341 },
+  { id: 5, image: "/images/instagram-5.jpg", likes: 876 },
+  { id: 6, image: "/images/instagram-6.jpg", likes: 1432 },
 ]
 
 export function InstagramSection() {
