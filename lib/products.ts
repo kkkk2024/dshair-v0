@@ -442,7 +442,7 @@ export const socialLinks = {
   facebook: "https://facebook.com/d.shairbeauty",
   youtube: "https://youtube.com/@dshairbeauty",
   tiktok: "https://tiktok.com/@d.shairbeauty",
-  pinterest: "https://pinterest.com/dshairbeauty",
+  pinterest: "https://pinterest.com/dshairbeautyuk",
   linkedin: "https://linkedin.com/company/dshairbeauty",
   twitter: "https://twitter.com/dshairbeauty",
 }
