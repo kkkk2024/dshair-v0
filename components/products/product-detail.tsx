@@ -414,12 +414,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Seam Clip-Ins */}
+                {/* Seamless Clip-Ins */}
                 <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-gray-400">Seam Clip-Ins Image</span>
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img 
+                      src="/images/seamless-clip-ins.jpg" 
+                      alt="Seamless Clip-Ins" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2">Seam Clip-Ins</h4>
+                  <h4 className="font-semibold text-lg mb-2">Seamless Clip-Ins</h4>
                   <p className="text-sm text-muted-foreground mb-4">
                     Our seamless clip-in wefts lay completely flat against your head for a natural, undetectable look.
                   </p>
@@ -430,29 +434,24 @@ export function ProductDetail({ product }: ProductDetailProps) {
                       <tr className="border-b">
                         <th className="text-left py-2">Length</th>
                         <th className="text-right py-2">Weight</th>
-                        <th className="text-right py-2">Clips</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-b">
                         <td className="py-2">16"</td>
-                        <td className="text-right">115g</td>
-                        <td className="text-right">4</td>
+                        <td className="text-right">75-115g</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-2">18"</td>
-                        <td className="text-right">125g</td>
-                        <td className="text-right">4</td>
+                        <td className="text-right">75-125g</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-2">20"</td>
-                        <td className="text-right">140g</td>
-                        <td className="text-right">4</td>
+                        <td className="text-right">95-145g</td>
                       </tr>
                       <tr>
                         <td className="py-2">22"</td>
-                        <td className="text-right">155g</td>
-                        <td className="text-right">4</td>
+                        <td className="text-right">115-155g</td>
                       </tr>
                     </tbody>
                   </table>
@@ -460,8 +459,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Classic Clip-Ins */}
                 <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-gray-400">Classic Clip-Ins Image</span>
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img 
+                      src="/images/classic-clip-ins.png" 
+                      alt="Classic Clip-Ins" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h4 className="font-semibold text-lg mb-2">Classic Clip-Ins</h4>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -474,29 +477,28 @@ export function ProductDetail({ product }: ProductDetailProps) {
                       <tr className="border-b">
                         <th className="text-left py-2">Length</th>
                         <th className="text-right py-2">Weight</th>
-                        <th className="text-right py-2">Clips</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-b">
                         <td className="py-2">12"</td>
                         <td className="text-right">70g</td>
-                        <td className="text-right">4</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-2">14"</td>
                         <td className="text-right">85g</td>
-                        <td className="text-right">4</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-2">16"</td>
                         <td className="text-right">100g</td>
-                        <td className="text-right">6</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-2">18"</td>
+                        <td className="text-right">110g</td>
                       </tr>
                       <tr>
-                        <td className="py-2">18"</td>
-                        <td className="text-right">115g</td>
-                        <td className="text-right">6</td>
+                        <td className="py-2">20"</td>
+                        <td className="text-right">120g</td>
                       </tr>
                     </tbody>
                   </table>
