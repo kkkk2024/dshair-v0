@@ -301,6 +301,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
               Description
             </TabsTrigger>
             <TabsTrigger
+              value="howtouse"
+              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
+            >
+              How To Use
+            </TabsTrigger>
+            <TabsTrigger
               value="features"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
@@ -323,6 +329,77 @@ export function ProductDetail({ product }: ProductDetailProps) {
           <TabsContent value="description" className="mt-8">
             <div className="max-w-3xl">
               <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="howtouse" className="mt-8">
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
+              
+              {/* Step 1 */}
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Sectioning</h4>
+                  <p className="text-muted-foreground">
+                    Use a rat-tail comb to make a horizontal part from mid-ear to mid-ear. Next, secure all hair above mid-ear into a high ponytail or with clips.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Create A Foundation</h4>
+                  <p className="text-muted-foreground">
+                    To create a secure foundation for the clips, gently backcomb the hair one inch from your scalp. You can also use dry shampoo or hair spray to create a more secure foundation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Clip Them In</h4>
+                  <p className="text-muted-foreground">
+                    Choose a 2-clip or 3-clip weft and gently open each clip. Then, bring the clips into the foundation and close them. We recommend leaving a 1/2-1" perimeter of natural hair around your hairline for more comfort.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  4
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Repeat Your Sectioning</h4>
+                  <p className="text-muted-foreground">
+                    As you move towards the top of your head, keep clipping in the wefts row by row. Separate each row with 1-3 inches of natural hair. Once you reach the widest section of your hair, use whichever wefts will fully cover the foundation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  5
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Remaining Wefts</h4>
+                  <p className="text-muted-foreground">
+                    Use the remaining 2-clip wefts on the sides of your head, placing them about four fingers above your ears.
+                  </p>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
