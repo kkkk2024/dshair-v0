@@ -357,7 +357,8 @@ export const products: Product[] = [
     images: [
       "https://www.bellamihair.com/cdn/shop/files/PDP_CON_ashblonde_swatch_f11f9378-82bb-49f4-b71c-c80b5de6febb.jpg?format=pjpg&v=1773151368&width=2700",
       "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_ash_blonde-2B-v11.jpg?format=pjpg&v=1773151368&width=2700",
-      "https://www.bellamihair.com/cdn/shop/files/PDP_silkseam_Amelia_CaramelBlondeMarbleBlend_2dc9eb4c-1742-46d5-9c5a-c83ebaca2be5.jpg?format=pjpg&v=1773151368&width=2700"
+      // TODO: Replace with actual before/after comparison image when available
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop"
     ],
     variants: [],
     inStock: true,
