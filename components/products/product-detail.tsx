@@ -313,6 +313,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
               Finding the Perfect Fit
             </TabsTrigger>
             <TabsTrigger
+              value="results"
+              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
+            >
+              Real Results
+            </TabsTrigger>
+            <TabsTrigger
               value="features"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
@@ -531,6 +537,47 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <p className="text-sm text-green-700">
                   Contact us on WhatsApp for free colour matching: +86 13516946001
                 </p>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="results" className="mt-8">
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Real Results</h3>
+              
+              {/* Before/After Image */}
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/images/before-after.jpg" 
+                  alt="Before and After - D.S HAIR Clip-In Extensions" 
+                  className="w-full"
+                />
+              </div>
+              
+              {/* Customer Review */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center gap-1 mb-3">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <blockquote className="text-lg italic mb-4">
+                  "Loves the clip ins and the service was great. I bought the 20". Hair is easy to work with and I am now wearing them daily. Love love love!!!"
+                </blockquote>
+                <p className="font-medium">— Amy</p>
+              </div>
+
+              {/* More Reviews CTA */}
+              <div className="text-center">
+                <p className="text-muted-foreground mb-4">
+                  See what our customers are saying
+                </p>
+                <a 
+                  href="#reviews" 
+                  className="inline-block border border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition-colors"
+                >
+                  Read All Reviews
+                </a>
               </div>
             </div>
           </TabsContent>
