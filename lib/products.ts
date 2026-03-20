@@ -1381,6 +1381,43 @@ export const products: Product[] = [
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
     priceOnRequest: true,
   },
+  // ============================================
+  // NEW PRODUCT: D.S HAIR Clip-In Butter Blonde #P10/16/60
+  // ============================================
+  {
+    id: "new-31",
+    handle: "ds-hair-clip-in-butter-blonde-p10-16-60",
+    name: "D.S HAIR Clip-In, Butter Blonde #P10/16/60 Natural",
+    title: "D.S HAIR Clip-In, Butter Blonde #P10/16/60 Natural",
+    description: "Transform your look with D.S HAIR premium Clip-In hair extensions. Made from 100% Remy human hair for a seamless, natural look. Available in multiple lengths (16\"-26\") and colors. Perfect for adding volume and length instantly. UK stockist with free colour matching. Professional-grade quality at affordable prices.",
+    shortDescription: "Premium 100% Remy human hair clip-in extensions",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Clip-In Extensions",
+    type: "diy",
+    tags: ["clip-in", "butter-blonde", "blonde", "new"],
+    price: 0,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_butter_blonde_2B_v11.jpg?format=pjpg&v=1773149458&width=2700",
+    images: [
+      "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_butter_blonde_2B_v11.jpg?format=pjpg&v=1773149458&width=2700",
+      "https://www.bellamihair.com/cdn/shop/files/PDP_CON_butterblonde_swatch_446a371e-7437-40d7-929e-128e003f4541.jpg?format=pjpg&v=1773149458&width=2700",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop"
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [
+      { name: "Butter Blonde #P10/16/60", hex: "#E8DCC8" }
+    ],
+    lengths: ['16"', '18"', '20"', '22"', '24"', '26"'],
+    slug: "ds-hair-clip-in-butter-blonde-p10-16-60",
+    category: "DIY Extensions",
+    features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
+    priceOnRequest: true,
+  },
 ]
 
 // Helper functions
