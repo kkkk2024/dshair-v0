@@ -325,10 +325,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
               Features
             </TabsTrigger>
             <TabsTrigger
-              value="care"
+              value="faq"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Hair Care
+              FAQ
             </TabsTrigger>
             <TabsTrigger
               value="reviews"
@@ -595,31 +595,53 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
           </TabsContent>
 
-          <TabsContent value="care" className="mt-8">
-            <div className="max-w-3xl space-y-4">
-              <h3 className="font-semibold text-lg">How to Care for Your Extensions</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="font-semibold text-foreground">1.</span>
-                  Brush your extensions before and after each use with a soft bristle brush or loop brush.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="font-semibold text-foreground">2.</span>
-                  Wash your extensions every 15-20 wears using sulphate-free shampoo and conditioner.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="font-semibold text-foreground">3.</span>
-                  Always use heat protection spray before styling with hot tools.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="font-semibold text-foreground">4.</span>
-                  Store your extensions in the original packaging or a silk/satin bag.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="font-semibold text-foreground">5.</span>
-                  Avoid sleeping in clip-in extensions to prolong their lifespan.
-                </li>
-              </ul>
+          <TabsContent value="faq" className="mt-8">
+            <div className="max-w-3xl space-y-6">
+              <h3 className="font-semibold text-xl">Frequently Asked Questions</h3>
+              
+              {/* FAQ Item 1 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">Do I need to wash D.S HAIR clip-ins before wearing them?</h4>
+                <p className="text-muted-foreground">All clip-ins have a protective vitamin seal. Before wearing or installing them, it's necessary to wash the extensions.</p>
+              </div>
+
+              {/* FAQ Item 2 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">How often should D.S HAIR clip-ins be washed?</h4>
+                <p className="text-muted-foreground">ONLY wash them when they look and feel like they need it. Since they don't receive the scalp's natural oils, they are prone to dryness, so you don't need to wash them as often as your hair. However, if you feel buildup on them and they're dull and lifeless—it's time for a wash!</p>
+              </div>
+
+              {/* FAQ Item 3 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">After washing, how should you dry the clip-ins?</h4>
+                <p className="text-muted-foreground">Hang them on the D.S HAIR Extension Holder, then apply a leave-in conditioner and let them air dry. You can also apply a heat protectant and blow dry the extensions. The holder also makes it easy to curl or straighten the extensions before installing them.</p>
+              </div>
+
+              {/* FAQ Item 4 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">Can you sleep in clip-ins?</h4>
+                <p className="text-muted-foreground">No. Sleeping in clip-ins is uncomfortable and can damage the clips and cause matting and tangling.</p>
+              </div>
+
+              {/* FAQ Item 5 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">How long do D.S HAIR clip-ins last?</h4>
+                <p className="text-muted-foreground">With proper care, they last 6-12 months. Their lifespan will also depend on how often they are worn.</p>
+              </div>
+
+              {/* FAQ Item 6 */}
+              <div className="border-b pb-4">
+                <h4 className="font-medium mb-2">How long does my hair have to be to wear D.S HAIR?</h4>
+                <p className="text-muted-foreground">We recommend 6 inches minimum, but if you think you can make it work then you are more than welcome to try it out :)</p>
+              </div>
+
+              {/* FAQ Item 7 */}
+              <div className="pb-4">
+                <h4 className="font-medium mb-2">Can my D.S HAIR be dyed?</h4>
+                <p className="text-muted-foreground">Our extensions are 100% human hair that have gone through its own dyeing process, and although they were constructed to accept color, we do suggest getting a professional opinion by an experienced colorist. Dyeing may lead to shortening the lifespan of your D.S HAIR's and possibly cause damage if not done correctly. We also recommend not lightening or using any bleaching agents.</p>
+                <p className="text-muted-foreground mt-2">We do not recommend dying our Balayage or Ombre sets as they have been processed multiple times. Due to the processing they have gone through they do not take to dying well.</p>
+                <p className="text-muted-foreground mt-2">Please keep in mind, that if chosen to dye D.S HAIR, it is up to the customers discretion and done at your own risk. One of our fashionistas and fabulous YouTube beauty guru has a video on dying them, showing you how simple it is.</p>
+              </div>
             </div>
           </TabsContent>
 
