@@ -342,6 +342,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
               
+              {/* How To Use Image */}
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/images/how-to-use.png" 
+                  alt="How to Apply Clip-In Extensions" 
+                  className="w-full"
+                />
+              </div>
+              
               {/* Step 1 */}
               <div className="flex gap-4">
                 <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
