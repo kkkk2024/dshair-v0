@@ -307,6 +307,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
               How To Use
             </TabsTrigger>
             <TabsTrigger
+              value="sizeguide"
+              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
+            >
+              Finding the Perfect Fit
+            </TabsTrigger>
+            <TabsTrigger
               value="features"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
@@ -399,6 +405,121 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     Use the remaining 2-clip wefts on the sides of your head, placing them about four fingers above your ears.
                   </p>
                 </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="sizeguide" className="mt-8">
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Seam Clip-Ins */}
+                <div className="border rounded-lg p-4">
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400">Seam Clip-Ins Image</span>
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">Seam Clip-Ins</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Our seamless clip-in wefts lay completely flat against your head for a natural, undetectable look.
+                  </p>
+                  
+                  {/* Size Chart */}
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left py-2">Length</th>
+                        <th className="text-right py-2">Weight</th>
+                        <th className="text-right py-2">Clips</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="py-2">16"</td>
+                        <td className="text-right">115g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-2">18"</td>
+                        <td className="text-right">125g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-2">20"</td>
+                        <td className="text-right">140g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2">22"</td>
+                        <td className="text-right">155g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Classic Clip-Ins */}
+                <div className="border rounded-lg p-4">
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400">Classic Clip-Ins Image</span>
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">Classic Clip-Ins</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Our classic clip-ins are perfect for beginners and easy to apply at home.
+                  </p>
+                  
+                  {/* Size Chart */}
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left py-2">Length</th>
+                        <th className="text-right py-2">Weight</th>
+                        <th className="text-right py-2">Clips</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="py-2">12"</td>
+                        <td className="text-right">70g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-2">14"</td>
+                        <td className="text-right">85g</td>
+                        <td className="text-right">4</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-2">16"</td>
+                        <td className="text-right">100g</td>
+                        <td className="text-right">6</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2">18"</td>
+                        <td className="text-right">115g</td>
+                        <td className="text-right">6</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* How to Measure */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h4 className="font-semibold text-lg mb-4">How to Measure</h4>
+                <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                  <li>Measure from the crown of your head to the ends of your hair</li>
+                  <li>Decide how long you want your extensions to be</li>
+                  <li>Choose the length that is closest to your desired look</li>
+                  <li>For added length, we recommend going one size up</li>
+                </ol>
+              </div>
+
+              {/* Contact for Help */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="text-green-800 font-medium mb-2">Need help choosing?</p>
+                <p className="text-sm text-green-700">
+                  Contact us on WhatsApp for free colour matching: +86 13516946001
+                </p>
               </div>
             </div>
           </TabsContent>
