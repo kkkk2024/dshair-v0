@@ -270,46 +270,6 @@ export const products: Product[] = [
     features: ["Instant style change", "Clip-in application", "Multiple styles available", "Blunt cut option", "Curtain bang option"],
   },
   // ============================================
-  // NEW PRODUCT: D.S HAIR Clip-In Ash Blonde #60
-  // ============================================
-  {
-    id: "new-1",
-    handle: "ds-hair-clip-in-ash-blonde-60",
-    name: "D.S HAIR Clip-In, Ash Blonde #60 Natural",
-    title: "D.S HAIR Clip-In, Ash Blonde #60 Natural",
-    description: "Transform your look with D.S HAIR premium Clip-In hair extensions. Made from 100% Remy human hair for a seamless, natural look. Available in multiple lengths (16\"-26\") and colors. Perfect for adding volume and length instantly. UK stockist with free colour matching. Professional-grade quality at affordable prices.",
-    shortDescription: "Premium 100% Remy human hair clip-in extensions",
-    vendor: "D.S HAIR & BEAUTY",
-    productType: "Clip-In Extensions",
-    type: "diy",
-    tags: ["clip-in", "ash-blonde", "blonde", "new"],
-    price: 0, // Price on request - show WhatsApp
-    originalPrice: undefined,
-    currencyCode: "GBP",
-    image: "https://www.bellamihair.com/cdn/shop/files/PDP_CON_ashblonde_swatch_f11f9378-82bb-49f4-b71c-c80b5de6febb.jpg?format=pjpg&v=1773151368&width=2700",
-    images: [
-      "https://www.bellamihair.com/cdn/shop/files/PDP_CON_ashblonde_swatch_f11f9378-82bb-49f4-b71c-c80b5de6febb.jpg?format=pjpg&v=1773151368&width=2700",
-      "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_ash_blonde-2B-v11.jpg?format=pjpg&v=1773151368&width=2700",
-      // TODO: Replace with actual before/after comparison image when available
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop"
-    ],
-    variants: [],
-    inStock: true,
-    badge: "New",
-    rating: 5.0,
-    reviews: 0,
-    colors: [
-      { name: "Ash Blonde #60", hex: "#E8DCC8" },
-      { name: "Ash Blonde #2/60", hex: "#D4C8B0" },
-      { name: "Natural Blonde", hex: "#F5DEB3" }
-    ],
-    lengths: ['16"', '18"', '20"', '22"', '24"', '26"'],
-    slug: "ds-hair-clip-in-ash-blonde-60",
-    category: "DIY Extensions",
-    features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true, // Custom field for WhatsApp pricing
-  },
-  // ============================================
   // NEW PRODUCT: D.S HAIR Clip-In Jet Black #1
   // ============================================
   {
