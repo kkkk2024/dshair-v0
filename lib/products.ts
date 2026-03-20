@@ -530,6 +530,43 @@ export const products: Product[] = [
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
     priceOnRequest: true,
   },
+  // ============================================
+  // NEW PRODUCT: D.S HAIR Clip-In Chestnut Brown #6
+  // ============================================
+  {
+    id: "new-8",
+    handle: "ds-hair-clip-in-chestnut-brown-6",
+    name: "D.S HAIR Clip-In, Chestnut Brown #6 Natural",
+    title: "D.S HAIR Clip-In, Chestnut Brown #6 Natural",
+    description: "Transform your look with D.S HAIR premium Clip-In hair extensions. Made from 100% Remy human hair for a seamless, natural look. Available in multiple lengths (16\"-26\") and colors. Perfect for adding volume and length instantly. UK stockist with free colour matching. Professional-grade quality at affordable prices.",
+    shortDescription: "Premium 100% Remy human hair clip-in extensions",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Clip-In Extensions",
+    type: "diy",
+    tags: ["clip-in", "chestnut-brown", "brown", "new"],
+    price: 0,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_chestnut_brown2-2B-v11.jpg?format=pjpg&v=1773150347&width=2700",
+    images: [
+      "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_chestnut_brown2-2B-v11.jpg?format=pjpg&v=1773150347&width=2700",
+      "https://www.bellamihair.com/cdn/shop/files/PDP_CON_chestnutbrown_swatch_0a22344c-275a-4764-8c3d-a28f3edaf247.jpg?format=pjpg&v=1773150347&width=2700",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop"
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [
+      { name: "Chestnut Brown #6", hex: "#6B4423" }
+    ],
+    lengths: ['16"', '18"', '20"', '22"', '24"', '26"'],
+    slug: "ds-hair-clip-in-chestnut-brown-6",
+    category: "DIY Extensions",
+    features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
+    priceOnRequest: true,
+  },
 ]
 
 // Helper functions
