@@ -900,6 +900,43 @@ export const products: Product[] = [
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
     priceOnRequest: true,
   },
+  // ============================================
+  // NEW PRODUCT: D.S HAIR Clip-In Dirty Brunette Highlight
+  // ============================================
+  {
+    id: "new-18",
+    handle: "ds-hair-clip-in-dirty-brunette-highlight",
+    name: "D.S HAIR Clip-In, Dirty Brunette Highlight",
+    title: "D.S HAIR Clip-In, Dirty Brunette Highlight",
+    description: "Transform your look with D.S HAIR premium Clip-In hair extensions. Made from 100% Remy human hair for a seamless, natural look. Available in multiple lengths (16\"-26\") and colors. Perfect for adding volume and length instantly. UK stockist with free colour matching. Professional-grade quality at affordable prices.",
+    shortDescription: "Premium 100% Remy human hair clip-in extensions",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Clip-In Extensions",
+    type: "diy",
+    tags: ["clip-in", "highlight", "dirty-brunette", "new"],
+    price: 0,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_dirty_brunette_highlights1-2B-v11.jpg?format=pjpg&v=1773149311&width=2700",
+    images: [
+      "https://www.bellamihair.com/cdn/shop/files/PDP_SilkSeam_onmodel_dirty_brunette_highlights1-2B-v11.jpg?format=pjpg&v=1773149311&width=2700",
+      "https://www.bellamihair.com/cdn/shop/files/PDP_CON_dirtybrunettehighlight_swatch.jpg?format=pjpg&v=1773149459&width=2700",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop"
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [
+      { name: "Dirty Brunette Highlight", hex: "#6B4423" }
+    ],
+    lengths: ['16"', '18"', '20"', '22"', '24"', '26"'],
+    slug: "ds-hair-clip-in-dirty-brunette-highlight",
+    category: "DIY Extensions",
+    features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
+    priceOnRequest: true,
+  },
 ]
 
 // Helper functions
