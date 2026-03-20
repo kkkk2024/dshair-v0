@@ -1559,6 +1559,20 @@ export const collections: Collection[] = [
     image: "/images/collection-ponytail.jpg",
   },
   {
+    id: "8",
+    name: "Weft Extensions",
+    slug: "weft",
+    description: "Premium weft extensions for maximum volume",
+    image: "/images/collection-weft.jpg",
+  },
+  {
+    id: "9",
+    name: "Fringes & Bangs",
+    slug: "fringes-bangs",
+    description: "Transform your look with our premium fringe pieces",
+    image: "/images/collection-fringes.jpg",
+  },
+  {
     id: "7",
     name: "Hair Care",
     slug: "hair-care",
