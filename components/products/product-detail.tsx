@@ -115,15 +115,25 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-2xl font-semibold">{formatPrice(product.price)}</span>
-            {product.originalPrice && (
+            {product.priceOnRequest ? (
+              // Show WhatsApp button for price on request products
+              <div className="flex flex-col gap-2">
+                <span className="text-2xl font-semibold text-accent">Price on Request</span>
+                <span className="text-sm text-muted-foreground">Contact us for pricing via WhatsApp</span>
+              </div>
+            ) : (
               <>
-                <span className="text-lg text-muted-foreground line-through">
-                  {formatPrice(product.originalPrice)}
-                </span>
-                <Badge variant="secondary" className="bg-green-100 text-green-800">
-                  Save {formatPrice(product.originalPrice - product.price)}
-                </Badge>
+                <span className="text-2xl font-semibold">{formatPrice(product.price)}</span>
+                {product.originalPrice && (
+                  <>
+                    <span className="text-lg text-muted-foreground line-through">
+                      {formatPrice(product.originalPrice)}
+                    </span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">
+                      Save {formatPrice(product.originalPrice - product.price)}
+                    </Badge>
+                  </>
+                )}
               </>
             )}
           </div>
