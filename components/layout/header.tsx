@@ -18,27 +18,44 @@ import { cn } from "@/lib/utils"
 import { products } from "@/lib/products"
 import { contactInfo } from "@/lib/products"
 
+// 1. DIY Extensions - 包含 Clip-In, Weft, Ponytail, Fringes & Bangs
 const diyExtensions = [
-  { title: "Silk Seam Clip-In", href: "/collections/silk-seam-clip-in", description: "Our most seamless clip-in technology" },
-  { title: "Classic Clip-In", href: "/collections/classic-clip-in", description: "Easy to apply, natural look" },
-  { title: "Ponytails", href: "/collections/ponytails", description: "Instant volume and length" },
-  { title: "Volumizing Weft", href: "/collections/volumizing-weft", description: "Add fullness effortlessly" },
+  { title: "Clip-In", href: "/collections/clip-in", description: "Easy to apply, natural look" },
+  { title: "Weft", href: "/collections/weft", description: "Add fullness effortlessly" },
+  { title: "Ponytail", href: "/collections/ponytails", description: "Instant volume and length" },
   { title: "Fringes & Bangs", href: "/collections/fringes-bangs", description: "Transform your look instantly" },
 ]
 
+// 2. Professional - 包含 Tape-In, K-tips, Weft Extensions, Topper, Butterfly
 const proExtensions = [
-  { title: "Tape-In Extensions", href: "/collections/tape-in", description: "Professional grade tape-ins" },
-  { title: "Weft Extensions", href: "/collections/wefts", description: "Hand-tied and machine wefts" },
-  { title: "K-Tip Extensions", href: "/collections/k-tips", description: "Keratin bonded tips" },
-  { title: "I-Tip Extensions", href: "/collections/i-tips", description: "Individual strand application" },
-  { title: "Bulk Hair", href: "/collections/bulk-hair", description: "For custom applications" },
+  { title: "Tape-In", href: "/collections/tape-in", description: "Professional grade tape-ins" },
+  { title: "K-Tip Extensions", href: "/collections/k-tip-extensions", description: "Keratin bonded tips" },
+  { title: "Weft Extensions", href: "/collections/weft-extensions", description: "Hand-tied and machine wefts" },
+  { title: "Topper", href: "/collections/topper", description: "Hair loss solution" },
+  { title: "Butterfly Extensions", href: "/collections/butterfly-extensions", description: "Lightweight volume" },
 ]
 
+// 3. Hair Care
+const hairCare = [
+  { title: "Shampoo & Conditioner", href: "/collections/hair-care", description: "Sulfate-free formulas" },
+  { title: "Hair Masks", href: "/collections/hair-masks", description: "Deep conditioning treatments" },
+  { title: "Hair Oils", href: "/collections/hair-oils", description: "Leave-in treatments" },
+  { title: "Styling Products", href: "/collections/styling-products", description: "Heat protection & more" },
+]
+
+// 4. Accessories
+const accessories = [
+  { title: "Application Tools", href: "/collections/accessories", description: "Brushes, clips & more" },
+  { title: "Care Products", href: "/collections/care-products", description: "Extension care essentials" },
+  { title: "Bags & Cases", href: "/collections/bags-cases", description: "Storage solutions" },
+]
+
+// 5. Services
 const services = [
   { title: "Find a Stylist", href: "/find-stylist", description: "Locate certified professionals near you" },
-  { title: "Education & Certification", href: "/education", description: "Professional training programs" },
+  { title: "Education", href: "/education", description: "Professional training programs" },
   { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
-  { title: "Hair Care Guide", href: "/hair-care", description: "Maintain your extensions" },
+  { title: "Consultation", href: "/consultation", description: "Book a consultation" },
 ]
 
 export function Header() {
@@ -82,12 +99,13 @@ export function Header() {
               <nav className="flex flex-col gap-4 mt-8">
                 <MobileNavSection title="DIY Extensions" items={diyExtensions} />
                 <MobileNavSection title="Professional" items={proExtensions} />
+                <MobileNavSection title="Hair Care" items={hairCare} />
+                <Link href="/collections/accessories" className="py-2 text-lg font-medium hover:text-accent transition-colors">
+                  Accessories
+                </Link>
                 <MobileNavSection title="Services" items={services} />
                 <Link href="/about" className="py-2 text-lg font-medium hover:text-accent transition-colors">
                   About Us
-                </Link>
-                <Link href="/contact" className="py-2 text-lg font-medium hover:text-accent transition-colors">
-                  Contact
                 </Link>
               </nav>
             </SheetContent>
@@ -103,6 +121,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
+              {/* 1. DIY Extensions */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">DIY Extensions</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -115,6 +134,8 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              
+              {/* 2. Professional */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Professional</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -127,6 +148,31 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              
+              {/* 3. Hair Care */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">Hair Care</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                    {hairCare.map((item) => (
+                      <ListItem key={item.title} title={item.title} href={item.href}>
+                        {item.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              
+              {/* 4. Accessories */}
+              <NavigationMenuItem>
+                <Link href="/collections/accessories" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                    Accessories
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              
+              {/* 5. Services */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -139,6 +185,8 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              
+              {/* 6. About Us */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
