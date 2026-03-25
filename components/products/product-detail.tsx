@@ -338,21 +338,37 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="description" className="mt-8">
+          {product.productType.toLowerCase().includes('k-tip') ? (
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold mb-6">Premium K-Tip (Keratin) Hair Extensions</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Step into the latest trend with our high-quality keratin-tipped hair extensions. Riding the wave of contemporary hair fashion, these hair extensions are not just a style statement but a promise of excellence.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Ethically sourced and crafted from 100% genuine human hair, our hair extensions epitomise the pristine quality of virgin hair. Untainted by chemicals or dyes, the extensions preserve the hair's natural lustre and vitality. With meticulously aligned cuticles, experience zero shedding and a flawless, integrated appearance every time you wear them.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                The brilliance doesn't end there. Our keratin-tipped hair extensions offer the versatility every modern woman desires. Whether you're experimenting with colour, chemical treatments, or using heat tools, these extensions mirror the resilience and adaptability of natural hair.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
+              </p>
+            </div>
+            ) : (
             <div className="max-w-3xl">
               <p className="text-muted-foreground leading-relaxed">{product.description}</p>
             </div>
-          </TabsContent>
+            )}
 
-          <TabsContent value="howtouse" className="mt-8">
+          {product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl space-y-8">
-              <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
+              <h3 className="font-semibold text-xl">How to Apply K-Tip (Keratin) Hair Extensions</h3>
               
-              {/* How To Use Image */}
+              {/* K-Tip Application Image */}
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/images/how-to-use.png" 
-                  alt="How to Apply Clip-In Extensions" 
+                  src="https://cdn.shopify.com/s/files/1/0617/4493/9165/products/installmyhairextensions_8.jpg?v=1670534187" 
+                  alt="How to Apply K-Tip Extensions" 
                   className="w-full"
                 />
               </div>
@@ -363,9 +379,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   1
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Sectioning</h4>
+                  <h4 className="font-semibold text-lg mb-2">Preparation</h4>
                   <p className="text-muted-foreground">
-                    Use a rat-tail comb to make a horizontal part from mid-ear to mid-ear. Next, secure all hair above mid-ear into a high ponytail or with clips.
+                    Start with clean, dry hair. Section the hair into small parts, about 1/4-inch wide, starting from the bottom and working your way up. Ensure the natural hair is clean and free of oils or products near the roots.
                   </p>
                 </div>
               </div>
@@ -376,9 +392,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   2
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Create A Foundation</h4>
+                  <h4 className="font-semibold text-lg mb-2">Heat the Keratin Bond</h4>
                   <p className="text-muted-foreground">
-                    To create a secure foundation for the clips, gently backcomb the hair one inch from your scalp. You can also use dry shampoo or hair spray to create a more secure foundation.
+                    Using a hot fusion iron (typically 180-200°C), gently melt the pre-tipped keratin bond on the extension. Hold the iron for 3-5 seconds until the bond becomes slightly soft and pliable.
                   </p>
                 </div>
               </div>
@@ -389,9 +405,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   3
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Clip Them In</h4>
+                  <h4 className="font-semibold text-lg mb-2">Apply to Hair</h4>
                   <p className="text-muted-foreground">
-                    Choose a 2-clip or 3-clip weft and gently open each clip. Then, bring the clips into the foundation and close them. We recommend leaving a 1/2-1" perimeter of natural hair around your hairline for more comfort.
+                    Press the melted keratin tip onto a small section of natural hair, about 1/4-inch from the scalp. Hold for 5-10 seconds to allow the bond to cool and secure. The bond will harden as it cools.
                   </p>
                 </div>
               </div>
@@ -402,9 +418,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   4
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Repeat Your Sectioning</h4>
+                  <h4 className="font-semibold text-lg mb-2">Continue Sectioning</h4>
                   <p className="text-muted-foreground">
-                    As you move towards the top of your head, keep clipping in the wefts row by row. Separate each row with 1-3 inches of natural hair. Once you reach the widest section of your hair, use whichever wefts will fully cover the foundation.
+                    Repeat the process, working in rows from the bottom of the head upwards. Leave a 1/2-inch perimeter around the hairline for a natural look. Space each extension about 1/2-1 inch apart.
                   </p>
                 </div>
               </div>
@@ -415,131 +431,134 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   5
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Remaining Wefts</h4>
+                  <h4 className="font-semibold text-lg mb-2">Blend and Style</h4>
                   <p className="text-muted-foreground">
-                    Use the remaining 2-clip wefts on the sides of your head, placing them about four fingers above your ears.
+                    Once all extensions are applied, gently blend them with the natural hair using a brush or comb. Style as desired with heat tools. For best results and longevity, we recommend professional application.
                   </p>
                 </div>
               </div>
-            </div>
-          </TabsContent>
 
-          <TabsContent value="sizeguide" className="mt-8">
-            <div className="max-w-3xl space-y-8">
-              <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Seamless Clip-Ins */}
-                <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                    <img 
-                      src="/images/seamless-clip-ins.jpg" 
-                      alt="Seamless Clip-Ins" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Seamless Clip-Ins</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Our seamless clip-in wefts lay completely flat against your head for a natural, undetectable look.
-                  </p>
-                  
-                  {/* Size Chart */}
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b">
-                        <th className="text-left py-2">Length</th>
-                        <th className="text-right py-2">Weight</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b">
-                        <td className="py-2">16"</td>
-                        <td className="text-right">75-115g</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2">18"</td>
-                        <td className="text-right">75-125g</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2">20"</td>
-                        <td className="text-right">95-145g</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2">22"</td>
-                        <td className="text-right">115-155g</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Classic Clip-Ins */}
-                <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                    <img 
-                      src="/images/classic-clip-ins.png" 
-                      alt="Classic Clip-Ins" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Classic Clip-Ins</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Our classic clip-ins are perfect for beginners and easy to apply at home.
-                  </p>
-                  
-                  {/* Size Chart */}
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b">
-                        <th className="text-left py-2">Length</th>
-                        <th className="text-right py-2">Weight</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b">
-                        <td className="py-2">12"</td>
-                        <td className="text-right">70g</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2">14"</td>
-                        <td className="text-right">85g</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2">16"</td>
-                        <td className="text-right">100g</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2">18"</td>
-                        <td className="text-right">110g</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2">20"</td>
-                        <td className="text-right">120g</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* How to Measure */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="font-semibold text-lg mb-4">How to Measure</h4>
-                <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                  <li>Measure from the crown of your head to the ends of your hair</li>
-                  <li>Decide how long you want your extensions to be</li>
-                  <li>Choose the length that is closest to your desired look</li>
-                  <li>For added length, we recommend going one size up</li>
-                </ol>
-              </div>
-
-              {/* Contact for Help */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <p className="text-green-800 font-medium mb-2">Need help choosing?</p>
-                <p className="text-sm text-green-700">
-                  Contact us on WhatsApp for free colour matching: +86 13516946001
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
+                <p className="text-sm text-yellow-800">
+                  <strong>Important:</strong> K-Tip extensions typically last 3-6 months with proper care. Removal requires a special solvent or heat application by a professional stylist.
                 </p>
               </div>
             </div>
-          </TabsContent>
+            ) : (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
+              <div className="rounded-lg overflow-hidden">
+                <img src="/images/how-to-use.png" alt="How to Apply Clip-In Extensions" className="w-full" />
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Sectioning</h4>
+                  <p className="text-muted-foreground">Use a rat-tail comb to make a horizontal part from mid-ear to mid-ear. Secure all hair above mid-ear into a high ponytail or with clips.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Create A Foundation</h4>
+                  <p className="text-muted-foreground">Gently backcomb the hair one inch from your scalp. You can also use dry shampoo or hair spray to create a more secure foundation.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Clip Them In</h4>
+                  <p className="text-muted-foreground">Choose a 2-clip or 3-clip weft and gently open each clip. Bring the clips into the foundation and close them. Leave a 1/2-1" perimeter of natural hair around your hairline.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Repeat Your Sectioning</h4>
+                  <p className="text-muted-foreground">Keep clipping in the wefts row by row. Separate each row with 1-3 inches of natural hair.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Remaining Wefts</h4>
+                  <p className="text-muted-foreground">Use the remaining 2-clip wefts on the sides of your head, placing them about four fingers above your ears.</p>
+                </div>
+              </div>
+            </div>
+            )}
+
+          {product.productType.toLowerCase().includes('k-tip') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Standard vs Micro vs Nano K-Tip Extensions: What Type to Choose?</h3>
+              
+              <div className="rounded-lg overflow-hidden mb-6">
+                <img 
+                  src="https://iloveslavichair.com/image/catalog/blogs/nano-keratin-bonds-1.jpg" 
+                  alt="K-Tip Bond Types" 
+                  className="w-full"
+                />
+              </div>
+
+              <p className="text-muted-foreground">
+                To decide which type of keratin bond extensions is right for your hair, you need to consider the following factors:
+              </p>
+
+              <div className="space-y-6 mt-6">
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-lg mb-2">Your Own Hair Structure</h4>
+                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                    <li><strong>Standard bonds</strong> - Best for thick hair</li>
+                    <li><strong>Micro bonds</strong> - Suitable for fine-to-medium or medium hair</li>
+                    <li><strong>Nano bonds</strong> - Perfect for fine and very thin curls</li>
+                  </ul>
+                </div>
+
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-lg mb-2">What You Want to Achieve</h4>
+                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                    <li>To add <strong>thickness</strong>: Many experts recommend micro tips</li>
+                    <li>To achieve a <strong>natural look</strong> and hide the fact of using extensions: Micro bonds are ideal</li>
+                    <li>To increase density around the <strong>temples</strong>: Nano bonds (for thin hair) or micro bonds (for thicker hair)</li>
+                  </ul>
+                </div>
+
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-lg mb-2">Professional Technique</h4>
+                  <p className="text-muted-foreground">
+                    Some hair beauty professionals combine different keratin tip sizes: the standard ones are used in the back of the head while nano or micro bonds are used on the sides for a more natural finish.
+                  </p>
+                </div>
+
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-lg mb-2">Consult Your Stylist</h4>
+                  <p className="text-muted-foreground">
+                    Reading reviews from others might give you a better understanding and idea of what will work best for your hairstyle. Finally, consult your hairstylist!
+                  </p>
+                </div>
+              </div>
+            </div>
+            ) : (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="border rounded-lg p-4">
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="/images/seamless-clip-ins.jpg" alt="Seamless Clip-Ins" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">Seamless Clip-Ins</h4>
+                  <p className="text-muted-foreground">The most invisible wefts on the market, featuring a thin silicone strip that lies flat against the scalp. Perfect for fine hair.</p>
+                </div>
+                <div className="border rounded-lg p-4">
+                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="/images/classic-clip-ins.jpg" alt="Classic Clip-Ins" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">Classic Clip-Ins</h4>
+                  <p className="text-muted-foreground">Traditional clips with a fabric weft base. Durable and easy to apply at home. Great for adding volume.</p>
+                </div>
+              </div>
+            </div>
+            )}
 
           <TabsContent value="results" className="mt-8">
             <div className="max-w-3xl space-y-8">

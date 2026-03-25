@@ -15,11 +15,39 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'bellamihair.com',
+        hostname: '**.bellamihair.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.bellamihair.com',
+        hostname: '**.bohyme.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.donnabellahair.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn1.gstatic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.milkandblush.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.installmyhairextensions.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.foxyhairextensions.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.additionallengths.co.uk',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.vpfashion.com',
       },
     ],
   },

@@ -27,7 +27,7 @@ const categories = [
     featured: false,
   },
   {
-    title: "Weft Extensions",
+    title: "Nano Extensions",
     description: "Professional-grade quality",
     href: "/collections/wefts",
     image: "/images/category-wefts.jpg",
