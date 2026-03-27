@@ -88,7 +88,7 @@ export const products: Product[] = [
     images: [
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=800&fit=crop",
-      "/images/color-chart/02_Off_Black_1B.jpg",
+      "/images/color-chart/01_Jet_Black_1.jpg",
       "https://img-1.kwcdn.com/product/fancy/3f00a584-73c8-472f-9479-c05f58ae6af3.jpg?imageView2/2/w/800/q/70/format/avif",
       "https://iloveslavichair.com/image/cachewebp/catalog/blogs/standard-vs-micro-vs-nano-keratin-bond-size-755x422.webp"
     ],
