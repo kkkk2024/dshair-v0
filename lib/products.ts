@@ -2528,7 +2528,7 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
     )
   }
   // Special case for butterfly-weft -> match "butterfly" tag
-  if (collectionSlug === "butterfly-weft") {
+  if (collectionSlug === "butterfly-weft" || collectionSlug === "butterfly-extensions") {
     return products.filter(p => 
       p.category.toLowerCase().includes("butterfly") ||
       p.productType.toLowerCase().includes("butterfly") ||
