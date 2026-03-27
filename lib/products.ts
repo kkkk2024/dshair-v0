@@ -2496,6 +2496,13 @@ export const collections: Collection[] = [
     description: "Revolutionary butterfly weft extensions for natural volume and coverage",
     image: "/images/collection-butterfly.jpg",
   },
+  {
+    id: "12",
+    name: "Butterfly Extensions",
+    slug: "butterfly-extensions",
+    description: "Premium butterfly weft hair extensions",
+    image: "/images/collection-butterfly.jpg",
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {
