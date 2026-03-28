@@ -1,15 +1,24 @@
 "use client"
 
 import Link from "next/link"
-import { MapPin, GraduationCap, Palette, Phone } from "lucide-react"
+import { MapPin, GraduationCap, Palette, Phone, Building2 } from "lucide-react"
 
 const services = [
+  {
+    icon: Building2,
+    title: "Salon Partners",
+    description: "Manchester-based wholesale supply. Trade pricing, free colour kit, no minimum order. Apply for your trade account today.",
+    href: "/salon-partners",
+    cta: "Apply for Trade Account",
+    highlight: true,
+  },
   {
     icon: MapPin,
     title: "Find a Stylist",
     description: "Locate certified D.S HAIR & BEAUTY professionals in your area for expert installation.",
     href: "/find-stylist",
     cta: "Find Near Me",
+    highlight: false,
   },
   {
     icon: GraduationCap,
@@ -17,6 +26,7 @@ const services = [
     description: "Professional training courses to master the art of hair extensions application.",
     href: "/education",
     cta: "View Courses",
+    highlight: false,
   },
   {
     icon: Palette,
@@ -24,13 +34,7 @@ const services = [
     description: "Use our colour matching tool to find your perfect shade from our extensive range.",
     href: "/colour-match",
     cta: "Match My Colour",
-  },
-  {
-    icon: Phone,
-    title: "Book a Consultation",
-    description: "Get personalised advice from our hair experts via video call or in-person.",
-    href: "/consultation",
-    cta: "Book Now",
+    highlight: false,
   },
 ]
 
@@ -43,7 +47,7 @@ export function ServicesSection() {
             Expert Support & Services
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            {"We're here to help you every step of the way, from choosing the right extensions to professional installation."}
+            {"We're here to help you every step of the way — from choosing the right extensions to professional salon supply."}
           </p>
         </div>
 
@@ -52,16 +56,36 @@ export function ServicesSection() {
             <Link
               key={service.title}
               href={service.href}
-              className="group bg-card rounded-xl p-6 hover:shadow-lg transition-shadow"
+              className={`group rounded-xl p-6 transition-shadow hover:shadow-lg border ${
+                service.highlight
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-card border-border"
+              }`}
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div
+                className={`h-12 w-12 rounded-full flex items-center justify-center mb-4 transition-colors ${
+                  service.highlight
+                    ? "bg-primary-foreground/20 group-hover:bg-primary-foreground/30"
+                    : "bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground"
+                }`}
+              >
                 <service.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+              <h3 className={`font-semibold text-lg mb-2 ${service.highlight ? "" : ""}`}>
+                {service.title}
+              </h3>
+              <p
+                className={`text-sm mb-4 leading-relaxed ${
+                  service.highlight ? "text-primary-foreground/80" : "text-muted-foreground"
+                }`}
+              >
                 {service.description}
               </p>
-              <span className="text-sm font-medium text-accent group-hover:underline">
+              <span
+                className={`text-sm font-medium group-hover:underline ${
+                  service.highlight ? "text-primary-foreground" : "text-accent"
+                }`}
+              >
                 {service.cta} &rarr;
               </span>
             </Link>

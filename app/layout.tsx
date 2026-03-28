@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import './globals.css'
 
 const inter = Inter({ 
@@ -17,13 +18,19 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "D.S HAIR & BEAUTY | Professional Hair Extensions UK",
-  description: "World's #1 Brand for Professional and Do-It-Yourself Hair Extensions. Premium 100% Remy Human Hair. Based in Manchester, UK.",
-  keywords: ['hair extensions', 'clip-in hair', 'tape-in extensions', 'professional hair extensions', 'UK hair extensions', 'Manchester'],
+  title: "D.S HAIR & BEAUTY | Professional Hair Extensions Supplier Manchester UK",
+  description: "Manchester-based wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19 years industry experience.",
+  keywords: [
+    'hair extensions Manchester', 'wholesale hair extensions UK', 'hand tied weft supplier',
+    'balayage hair extensions wholesale', 'nano ring extensions Manchester',
+    'tape in extensions trade', 'professional hair extensions supplier UK',
+    'salon hair extensions wholesale', 'remy human hair extensions Manchester',
+    'hair extension supplier Manchester', 'trade hair extensions UK'
+  ],
   authors: [{ name: 'D.S HAIR & BEAUTY' }],
   openGraph: {
-    title: 'D.S HAIR & BEAUTY | Premium Hair Extensions UK',
-    description: "World's #1 Brand for Professional and Do-It-Yourself Hair Extensions",
+    title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
+    description: "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for professional salons. 19 years industry expertise.",
     type: 'website',
     locale: 'en_GB',
     siteName: 'D.S HAIR & BEAUTY',
@@ -49,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>

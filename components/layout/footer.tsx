@@ -24,10 +24,10 @@ const footerLinks = {
   ],
   about: [
     { title: "Our Story", href: "/about" },
+    { title: "Salon Partners", href: "/salon-partners" },
+    { title: "Blog", href: "/blog" },
     { title: "Careers", href: "/careers" },
     { title: "Press", href: "/press" },
-    { title: "Sustainability", href: "/sustainability" },
-    { title: "Salon Partners", href: "/salon-partners" },
   ],
   services: [
     { title: "Find a Stylist", href: "/find-stylist" },
