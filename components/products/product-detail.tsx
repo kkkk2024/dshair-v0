@@ -338,64 +338,67 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </TabsTrigger>
           </TabsList>
 
-          {product.productType.toLowerCase().includes('nano') ? (
-            <div className="max-w-3xl space-y-6">
-              <h2 className="text-2xl font-bold">Nano Ring Hair Extensions — The Most Invisible Method</h2>
+          <TabsContent value="description" className="mt-8">
+            {product.productType.toLowerCase().includes('nano') ? (
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">Nano Ring Hair Extensions — The Most Invisible Method</h2>
 
-              {/* Hero visual */}
-              <div className="rounded-xl overflow-hidden">
-                <img
-                  src="/images/nano/nano-main-02.jpg"
-                  alt="Nano Ring Hair Extensions — D.S HAIR & BEAUTY"
-                  className="w-full object-cover"
-                />
+                {/* Hero visual */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/nano/nano-main-02.jpg"
+                    alt="Nano Ring Hair Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover"
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  Nano Ring extensions use an ultra-small silicone-lined metal ring — roughly the size of a grain of rice — to bond each individual strand of 100% Remy human hair to a tiny section of your natural hair. No heat, no glue, no chemicals. Just pure, invisible volume and length.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Each pack contains <strong>50 strands × 1g</strong> — perfectly lightweight for even the finest hair. Because the nano ring sits flat against the scalp and blends seamlessly, it stays completely hidden when you wear your hair up, down or in any updo.
+                </p>
+
+                {/* Three-icon highlight strip */}
+                <div className="grid grid-cols-3 gap-4 mt-2">
+                  {[
+                    { icon: "🔗", title: "No Heat · No Glue", body: "Secured mechanically — zero chemical or thermal damage." },
+                    { icon: "✨", title: "Ultra Invisible", body: "Nano rings are 90% smaller than standard micro-rings." },
+                    { icon: "♻️", title: "Reusable Hair", body: "Hair strands can be reused 2–3 times with new rings." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              <p className="text-muted-foreground leading-relaxed">
-                Nano Ring extensions use an ultra-small silicone-lined metal ring — roughly the size of a grain of rice — to bond each individual strand of 100% Remy human hair to a tiny section of your natural hair. No heat, no glue, no chemicals. Just pure, invisible volume and length.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Each pack contains <strong>50 strands × 1g</strong> — perfectly lightweight for even the finest hair. Because the nano ring sits flat against the scalp and blends seamlessly, it stays completely hidden when you wear your hair up, down or in any updo.
-              </p>
-
-              {/* Three-icon highlight strip */}
-              <div className="grid grid-cols-3 gap-4 mt-2">
-                {[
-                  { icon: "🔗", title: "No Heat · No Glue", body: "Secured mechanically — zero chemical or thermal damage." },
-                  { icon: "✨", title: "Ultra Invisible", body: "Nano rings are 90% smaller than standard micro-rings." },
-                  { icon: "♻️", title: "Reusable Hair", body: "Hair strands can be reused 2–3 times with new rings." },
-                ].map((item) => (
-                  <div key={item.title} className="border rounded-xl p-4 text-center">
-                    <div className="text-3xl mb-2">{item.icon}</div>
-                    <div className="font-semibold text-sm mb-1">{item.title}</div>
-                    <div className="text-xs text-muted-foreground">{item.body}</div>
-                  </div>
-                ))}
+            ) : product.productType.toLowerCase().includes('k-tip') ? (
+              <div className="max-w-3xl">
+                <h2 className="text-2xl font-bold mb-6">Premium K-Tip (Keratin) Hair Extensions</h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Step into the latest trend with our high-quality keratin-tipped hair extensions. Riding the wave of contemporary hair fashion, these hair extensions are not just a style statement but a promise of excellence.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Ethically sourced and crafted from 100% genuine human hair, our hair extensions epitomise the pristine quality of virgin hair. Untainted by chemicals or dyes, the extensions preserve the hair's natural lustre and vitality. With meticulously aligned cuticles, experience zero shedding and a flawless, integrated appearance every time you wear them.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  The brilliance doesn't end there. Our keratin-tipped hair extensions offer the versatility every modern woman desires. Whether you're experimenting with colour, chemical treatments, or using heat tools, these extensions mirror the resilience and adaptability of natural hair.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
+                </p>
               </div>
-            </div>
-          ) : product.productType.toLowerCase().includes('k-tip') ? (
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-bold mb-6">Premium K-Tip (Keratin) Hair Extensions</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Step into the latest trend with our high-quality keratin-tipped hair extensions. Riding the wave of contemporary hair fashion, these hair extensions are not just a style statement but a promise of excellence.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Ethically sourced and crafted from 100% genuine human hair, our hair extensions epitomise the pristine quality of virgin hair. Untainted by chemicals or dyes, the extensions preserve the hair's natural lustre and vitality. With meticulously aligned cuticles, experience zero shedding and a flawless, integrated appearance every time you wear them.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                The brilliance doesn't end there. Our keratin-tipped hair extensions offer the versatility every modern woman desires. Whether you're experimenting with colour, chemical treatments, or using heat tools, these extensions mirror the resilience and adaptability of natural hair.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
-              </p>
-            </div>
             ) : (
-            <div className="max-w-3xl">
-              <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-            </div>
+              <div className="max-w-3xl">
+                <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+              </div>
             )}
+          </TabsContent>
 
-          {product.productType.toLowerCase().includes('nano') ? (
+          <TabsContent value="howtouse" className="mt-8">
+            {product.productType.toLowerCase().includes('nano') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">How to Apply Nano Ring Hair Extensions</h3>
 
@@ -590,8 +593,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
             </div>
             )}
+          </TabsContent>
 
-          {product.productType.toLowerCase().includes('nano') ? (
+          <TabsContent value="sizeguide" className="mt-8">
+            {product.productType.toLowerCase().includes('nano') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding Your Perfect Nano Ring Match</h3>
 
@@ -722,6 +727,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
             </div>
             )}
+          </TabsContent>
 
           <TabsContent value="results" className="mt-8">
             <div className="max-w-3xl space-y-8">
