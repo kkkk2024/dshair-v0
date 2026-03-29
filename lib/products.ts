@@ -3022,8 +3022,8 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
       p.tags.some(tag => tag.toLowerCase().includes("nano"))
     )
   }
-  // Special case for weft-extensions -> only weft, exclude butterfly
-  if (collectionSlug === "weft-extensions") {
+  // Special case for weft -> only weft, exclude butterfly
+  if (collectionSlug === "weft" || collectionSlug === "weft-extensions") {
     return products.filter(p =>
       (p.productType.toLowerCase().includes("weft") ||
        p.tags.some(tag => tag.toLowerCase().includes("weft"))) &&
