@@ -10,10 +10,12 @@ import { DualPathSection } from "@/components/home/dual-path-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { InstagramSection } from "@/components/home/instagram-section"
+import { OrganizationJsonLd } from "@/components/seo/json-ld"
 
 export default function HomePage() {
   return (
     <CartProvider>
+      <OrganizationJsonLd />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

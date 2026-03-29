@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { ProductDetail } from "@/components/products/product-detail"
 import { RelatedProducts } from "@/components/products/related-products"
 import { getProductBySlug, getRelatedProducts, products } from "@/lib/products"
+import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld"
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>
@@ -29,11 +30,14 @@ export async function generateMetadata({ params }: ProductPageProps) {
 
   return {
     title: `${product.name} | D.S HAIR & BEAUTY`,
-    description: product.shortDescription,
+    description: product.description,
     openGraph: {
-      title: product.name,
-      description: product.shortDescription,
-      images: [product.images[0]],
+      title: `${product.name} | D.S HAIR & BEAUTY`,
+      description: product.description,
+      images: product.images[0] ? [{ url: product.images[0], width: 800, height: 1000, alt: product.name }] : [],
+      type: 'website',
+      locale: 'en_GB',
+      siteName: 'D.S HAIR & BEAUTY',
     },
   }
 }
@@ -50,6 +54,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <CartProvider>
+      <ProductJsonLd product={product} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://www.dshairbeauty.co.uk' },
+          { name: product.category || 'Products', url: `https://www.dshairbeauty.co.uk/collections/all` },
+          { name: product.name, url: `https://www.dshairbeauty.co.uk/products/${product.slug}` },
+        ]}
+      />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
