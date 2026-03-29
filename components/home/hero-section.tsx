@@ -47,6 +47,12 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
+            <Button size="lg" variant="ghost" className="group" asChild>
+              <Link href="/color-chart">
+                Color Chart
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
 
           {/* Trust badges */}
