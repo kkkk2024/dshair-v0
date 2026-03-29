@@ -338,7 +338,42 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </TabsTrigger>
           </TabsList>
 
-          {product.productType.toLowerCase().includes('k-tip') ? (
+          {product.productType.toLowerCase().includes('nano') ? (
+            <div className="max-w-3xl space-y-6">
+              <h2 className="text-2xl font-bold">Nano Ring Hair Extensions — The Most Invisible Method</h2>
+
+              {/* Hero visual */}
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/nano/nano-main-02.jpg"
+                  alt="Nano Ring Hair Extensions — D.S HAIR & BEAUTY"
+                  className="w-full object-cover"
+                />
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Nano Ring extensions use an ultra-small silicone-lined metal ring — roughly the size of a grain of rice — to bond each individual strand of 100% Remy human hair to a tiny section of your natural hair. No heat, no glue, no chemicals. Just pure, invisible volume and length.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Each pack contains <strong>50 strands × 1g</strong> — perfectly lightweight for even the finest hair. Because the nano ring sits flat against the scalp and blends seamlessly, it stays completely hidden when you wear your hair up, down or in any updo.
+              </p>
+
+              {/* Three-icon highlight strip */}
+              <div className="grid grid-cols-3 gap-4 mt-2">
+                {[
+                  { icon: "🔗", title: "No Heat · No Glue", body: "Secured mechanically — zero chemical or thermal damage." },
+                  { icon: "✨", title: "Ultra Invisible", body: "Nano rings are 90% smaller than standard micro-rings." },
+                  { icon: "♻️", title: "Reusable Hair", body: "Hair strands can be reused 2–3 times with new rings." },
+                ].map((item) => (
+                  <div key={item.title} className="border rounded-xl p-4 text-center">
+                    <div className="text-3xl mb-2">{item.icon}</div>
+                    <div className="font-semibold text-sm mb-1">{item.title}</div>
+                    <div className="text-xs text-muted-foreground">{item.body}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl">
               <h2 className="text-2xl font-bold mb-6">Premium K-Tip (Keratin) Hair Extensions</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -360,7 +395,75 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
             )}
 
-          {product.productType.toLowerCase().includes('k-tip') ? (
+          {product.productType.toLowerCase().includes('nano') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply Nano Ring Hair Extensions</h3>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                <p className="text-sm text-amber-800">
+                  <strong>⚠️ Professional Installation Only.</strong> Nano Ring extensions must be fitted and removed by a certified hair extension stylist to protect your natural hair.
+                </p>
+              </div>
+
+              {/* Step-by-step diagram image */}
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/nano/nano-main-04.jpg"
+                  alt="Nano Ring Application Process"
+                  className="w-full object-cover"
+                />
+              </div>
+
+              {[
+                {
+                  n: 1,
+                  title: "Section the Hair",
+                  body: "Starting at the nape, create neat horizontal sections 1cm from the scalp — staying well clear of the hairline for a natural finish.",
+                },
+                {
+                  n: 2,
+                  title: "Thread the Nano Ring",
+                  body: "Thread a tiny silicone-lined nano ring onto a loop tool. Pull a small section (~1mm) of your natural hair through the ring.",
+                },
+                {
+                  n: 3,
+                  title: "Insert the Extension Strand",
+                  body: "Slide the nano-tipped extension strand into the ring alongside your natural hair.",
+                },
+                {
+                  n: 4,
+                  title: "Clamp Securely",
+                  body: "Using the nano-ring pliers, flatten the ring firmly. Give a gentle tug to confirm it will not slip.",
+                },
+                {
+                  n: 5,
+                  title: "Blend & Style",
+                  body: "Work row by row from nape to crown. Once complete, your stylist will trim and blend seamlessly — ready to wash, blow-dry and style.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">{step.title}</h4>
+                    <p className="text-muted-foreground">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">⏱ Installation time</div>
+                  <div className="text-muted-foreground">Full head: 3–5 hours</div>
+                </div>
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">🔄 Maintenance</div>
+                  <div className="text-muted-foreground">Move-up every 6–8 weeks</div>
+                </div>
+              </div>
+            </div>
+          ) : product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">How to Apply K-Tip (Keratin) Hair Extensions</h3>
               
@@ -488,7 +591,67 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
             )}
 
-          {product.productType.toLowerCase().includes('k-tip') ? (
+          {product.productType.toLowerCase().includes('nano') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding Your Perfect Nano Ring Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Ideal", desc: "Nano rings are the lightest attachment method — no extra weight on delicate strands. Invisible even when pulled back." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Great", desc: "Perfect balance of hold and invisibility. Most customers with medium hair choose 2–3 packs for full, natural-looking results." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "⚠️ Consider Weft", desc: "Nano rings can work, but installation takes longer. Your stylist may recommend weft or K-Tip instead for efficiency." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-green-700 mb-2">{item.verdict}</div>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* How many packs */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many packs do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add subtle volume", packs: "1 pack (50g)", strands: "50 strands" },
+                    { goal: "Noticeable fullness + length", packs: "2 packs (100g)", strands: "100 strands" },
+                    { goal: "Full transformation", packs: "3–4 packs (150–200g)", strands: "150–200 strands" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-3 px-5 py-3 text-sm">
+                      <span className="text-muted-foreground">{row.goal}</span>
+                      <span className="font-medium">{row.packs}</span>
+                      <span className="text-muted-foreground">{row.strands}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Length guide */}
+              <div>
+                <h4 className="font-semibold mb-3">Length Guide</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { len: '14"', effect: "Natural bob → lob" },
+                    { len: '18"', effect: "Shoulder → mid-back" },
+                    { len: '22"', effect: "Mid-back → waist" },
+                    { len: '26"', effect: "Waist length & beyond" },
+                  ].map((item) => (
+                    <div key={item.len} className="border rounded-xl p-3 text-center text-sm">
+                      <div className="text-xl font-bold mb-1">{item.len}</div>
+                      <div className="text-xs text-muted-foreground">{item.effect}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Not sure?</strong> WhatsApp us a photo of your hair — our team will recommend the perfect colour, length and quantity for free.
+              </div>
+            </div>
+          ) : product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Standard vs Micro vs Nano K-Tip Extensions: What Type to Choose?</h3>
               
@@ -563,36 +726,84 @@ export function ProductDetail({ product }: ProductDetailProps) {
           <TabsContent value="results" className="mt-8">
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Real Results</h3>
-              
-              {/* Before/After Image */}
-              <div className="rounded-lg overflow-hidden">
-                <img 
-                  src="/images/before-after.jpg" 
-                  alt="Before and After - D.S HAIR Clip-In Extensions" 
-                  className="w-full"
-                />
-              </div>
-              
-              {/* Customer Review */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="flex items-center gap-1 mb-3">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <blockquote className="text-lg italic mb-4">
-                  "Loves the clip ins and the service was great. I bought the 20". Hair is easy to work with and I am now wearing them daily. Love love love!!!"
-                </blockquote>
-                <p className="font-medium">— Amy</p>
-              </div>
+
+              {product.productType.toLowerCase().includes('nano') ? (
+                <>
+                  {/* Before/After images grid */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/nano/nano-main-05.jpg" alt="Nano Ring Extensions Result 1" className="w-full object-cover aspect-[3/4]" />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/nano/nano-main-06.jpg" alt="Nano Ring Extensions Result 2" className="w-full object-cover aspect-[3/4]" />
+                    </div>
+                  </div>
+
+                  {/* Key stats */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "6–12", unit: "months", label: "Average wear time" },
+                      { stat: "6–8", unit: "weeks", label: "Between move-ups" },
+                      { stat: "2–3×", unit: "reuse", label: "Hair strand lifespan" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-accent font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer quotes */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Sophie M.", text: "Had nano rings for 8 months now — still look brand new. My hairdresser can't believe they're extensions!", stars: 5 },
+                      { name: "Laura K.", text: "I have very fine hair and was worried about damage. These are completely invisible and so light. Finally found the perfect method.", stars: 5 },
+                      { name: "Chloe R.", text: "The colour match was spot on. Friends genuinely thought I'd grown my hair overnight. Worth every penny.", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Before/After Image */}
+                  <div className="rounded-lg overflow-hidden">
+                    <img
+                      src="/images/before-after.jpg"
+                      alt="Before and After - D.S HAIR Extensions"
+                      className="w-full"
+                    />
+                  </div>
+
+                  {/* Customer Review */}
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-center gap-1 mb-3">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <blockquote className="text-lg italic mb-4">
+                      "Loves the clip ins and the service was great. I bought the 20". Hair is easy to work with and I am now wearing them daily. Love love love!!!"
+                    </blockquote>
+                    <p className="font-medium">— Amy</p>
+                  </div>
+                </>
+              )}
 
               {/* More Reviews CTA */}
               <div className="text-center">
-                <p className="text-muted-foreground mb-4">
-                  See what our customers are saying
-                </p>
-                <a 
-                  href="#reviews" 
+                <p className="text-muted-foreground mb-4">See what our customers are saying</p>
+                <a
+                  href="#reviews"
                   className="inline-block border border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition-colors"
                 >
                   Read All Reviews
@@ -603,26 +814,97 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
           <TabsContent value="features" className="mt-8">
             <div className="max-w-3xl">
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2">
-                    <Check className="h-5 w-5 text-green-600 shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              {product.productType.toLowerCase().includes('nano') ? (
+                <div className="space-y-6">
+                  {/* Image */}
+                  <div className="rounded-xl overflow-hidden">
+                    <img src="/images/nano/nano-main-07.jpg" alt="Nano Ring Extension Features" className="w-full object-cover max-h-64" />
+                  </div>
+                  {/* Feature grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — cuticle-aligned for zero tangling",
+                      "Ultra-small silicone-lined nano ring — virtually invisible",
+                      "No heat, no glue, no chemicals — zero damage method",
+                      "50 strands × 1g per pack — ideal for fine & sensitive hair",
+                      "Wears 6–12 months with proper maintenance",
+                      "Can be washed, blow-dried, curled and straightened",
+                      "Hair strands are reusable 2–3 times",
+                      "Stays hidden in ponytails, buns and updos",
+                      "31 colour shades to match every natural tone",
+                      "Available in 14\" – 26\" lengths",
+                      "Professional removal — no breakage or pulling",
+                      "Maintenance move-up every 6–8 weeks",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {product.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-600 shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </TabsContent>
 
           <TabsContent value="faq" className="mt-8">
             <div className="max-w-3xl space-y-6">
               <h3 className="font-semibold text-xl">Frequently Asked Questions</h3>
-              
-              {/* FAQ Item 1 */}
-              <div className="border-b pb-4">
-                <h4 className="font-medium mb-2">Do I need to wash D.S HAIR clip-ins before wearing them?</h4>
-                <p className="text-muted-foreground">All clip-ins have a protective vitamin seal. Before wearing or installing them, it's necessary to wash the extensions.</p>
-              </div>
+
+              {product.productType.toLowerCase().includes('nano') ? (
+                <>
+                  {[
+                    {
+                      q: "What are Nano Ring extensions?",
+                      a: "Nano Ring extensions attach individual 1g strands of 100% Remy human hair using an ultra-small silicone-lined metal ring — no heat, no glue, no chemicals. The ring is mechanically clamped with specialist pliers, making it one of the safest and most invisible extension methods available.",
+                    },
+                    {
+                      q: "Are they suitable for fine or thin hair?",
+                      a: "Yes — this is the #1 recommended method for fine hair. Each nano ring is approximately 90% smaller than a standard micro-ring, so the attachment is barely detectable and places minimal weight on each strand.",
+                    },
+                    {
+                      q: "How long do Nano Ring extensions last?",
+                      a: "With proper care, 6 to 12 months. Every 6–8 weeks your stylist will perform a 'move-up' — sliding the rings up to account for natural hair growth. The human hair itself can be reused 2–3 times by replacing the rings.",
+                    },
+                    {
+                      q: "Will they damage my natural hair?",
+                      a: "When professionally installed and maintained, nano rings are one of the lowest-damage methods. No adhesive or heat is involved. Always have them fitted and removed by a certified extension stylist.",
+                    },
+                    {
+                      q: "How many packs do I need?",
+                      a: "It depends on your goal. For subtle volume: 1 pack (50g / 50 strands). For noticeable length and fullness: 2 packs (100g). For a full transformation: 3–4 packs (150–200g). Send us a WhatsApp photo and we'll advise for free.",
+                    },
+                    {
+                      q: "Can I wash, heat-style and colour them?",
+                      a: "Yes — all D.S HAIR nano extensions are 100% human hair. Wash with sulphate-free shampoo, use a heat protectant before styling, and brush from ends upward. We recommend avoiding bleach on pre-coloured shades.",
+                    },
+                    {
+                      q: "Can I wear them in a ponytail or updo?",
+                      a: "Absolutely. The nano ring sits flat and close to the scalp, making it completely undetectable even in high ponytails and braids — one of the biggest advantages over other extension types.",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {/* FAQ Item 1 */}
+                  <div className="border-b pb-4">
+                    <h4 className="font-medium mb-2">Do I need to wash D.S HAIR clip-ins before wearing them?</h4>
+                    <p className="text-muted-foreground">All clip-ins have a protective vitamin seal. Before wearing or installing them, it's necessary to wash the extensions.</p>
+                  </div>
 
               {/* FAQ Item 2 */}
               <div className="border-b pb-4">
@@ -659,8 +941,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <h4 className="font-medium mb-2">Can my D.S HAIR be dyed?</h4>
                 <p className="text-muted-foreground">Our extensions are 100% human hair that have gone through its own dyeing process, and although they were constructed to accept color, we do suggest getting a professional opinion by an experienced colorist. Dyeing may lead to shortening the lifespan of your D.S HAIR's and possibly cause damage if not done correctly. We also recommend not lightening or using any bleaching agents.</p>
                 <p className="text-muted-foreground mt-2">We do not recommend dying our Balayage or Ombre sets as they have been processed multiple times. Due to the processing they have gone through they do not take to dying well.</p>
-                <p className="text-muted-foreground mt-2">Please keep in mind, that if chosen to dye D.S HAIR, it is up to the customers discretion and done at your own risk. One of our fashionistas and fabulous YouTube beauty guru has a video on dying them, showing you how simple it is.</p>
+                <p className="text-muted-foreground mt-2">Please keep in mind, that if chosen to dye D.S HAIR, it is up to the customers discretion and done at your own risk.</p>
               </div>
+                </>
+              )}
             </div>
           </TabsContent>
 
