@@ -30,7 +30,7 @@ const diyExtensions = [
 const proExtensions = [
   { title: "Tape-In", href: "/collections/tape-in", description: "Professional grade tape-ins" },
   { title: "K-Tip Extensions", href: "/collections/k-tip-extensions", description: "Keratin bonded tips" },
-  { title: "Nano Extensions", href: "/collections/weft-extensions", description: "Hand-tied and machine wefts" },
+  { title: "Nano Extensions", href: "/collections/nano-extensions", description: "Nano ring extensions for fine hair" },
   { title: "Topper", href: "/collections/topper", description: "Hair loss solution" },
   { title: "Butterfly Extensions", href: "/collections/butterfly-extensions", description: "Lightweight volume" },
 ]
