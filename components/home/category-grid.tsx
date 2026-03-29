@@ -30,7 +30,7 @@ const categories = [
     title: "Nano Extensions",
     description: "Professional-grade quality",
     href: "/collections/nano-extensions",
-    image: "/images/category-wefts.jpg",
+    image: "/images/category-nano-extensions.jpg",
     featured: false,
   },
 ]
