@@ -2615,6 +2615,8 @@ export const products: Product[] = [
       "/images/color-chart-front/31_Platinum_Blonde_80.jpg", "/images/color-chart/31_Platinum_Blonde_80.jpg", "https://www.foxyhairextensions.net/wp-content/uploads/2024/02/New-shades-1-scaled.jpg", "https://www.additionallengths.co.uk/cdn/shop/files/Full_Weft_55_0036ae70-7891-4ce1-b6a8-63f494525dc4.jpg?height=1408&v=1729085077&width=1100", "https://www.vpfashion.com/media/catalog/product/cache/730028fce2d3fb3e70bdf76b1c05350a/h/t/htw-_.jpg"
     ], variants: [], inStock: true, badge: undefined, rating: 5.0, reviews: 0, colors: [{ name: "Platinum Blonde #80 Natural", hex: "#E5E4E2" }], lengths: ['14"', '16"', '18"', '20"', '22"', '24"', '26"', '28"'], slug: "ds-hair-human-hair-weft-platinum-blonde-80-natural", category: "Professional Extensions", features: ["100% Remy Human Hair", "Machine-made weft"], priceOnRequest: true },
 
+]
+
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find(p => p.slug === slug)
 }
