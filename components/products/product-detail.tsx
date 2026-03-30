@@ -375,20 +375,120 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
             ) : product.productType.toLowerCase().includes('k-tip') ? (
-              <div className="max-w-3xl">
-                <h2 className="text-2xl font-bold mb-6">Premium K-Tip (Keratin) Hair Extensions</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Step into the latest trend with our high-quality keratin-tipped hair extensions. Riding the wave of contemporary hair fashion, these hair extensions are not just a style statement but a promise of excellence.
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">K-Tip (Keratin Bond) Hair Extensions — The Gold Standard of Semi-Permanent Extensions</h2>
+
+                {/* Hero image */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="https://iloveslavichair.com/image/cachewebp/catalog/blogs/standard-vs-micro-vs-nano-keratin-bond-size-755x422.webp"
+                    alt="K-Tip Keratin Bond Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover max-h-80"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  K-Tip extensions — also known as Keratin Bond, Hot Fusion or Micro Bond extensions — are the <strong>gold standard of semi-permanent hair extensions</strong>. Each individual strand is pre-tipped with a medical-grade keratin polymer blend and fused to your natural hair using a precision hot-fusion iron at 180–200 °C. The bond cools to form a sleek, virtually invisible sleeve that moves, flexes and behaves exactly like your own hair.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Ethically sourced and crafted from 100% genuine human hair, our hair extensions epitomise the pristine quality of virgin hair. Untainted by chemicals or dyes, the extensions preserve the hair's natural lustre and vitality. With meticulously aligned cuticles, experience zero shedding and a flawless, integrated appearance every time you wear them.
+                <p className="text-muted-foreground leading-relaxed">
+                  All D.S HAIR K-Tips are crafted from <strong>100% double-drawn Remy human hair</strong> with perfectly aligned cuticles — zero matting, zero tangling. Backed by 19+ years of professional supply expertise, every strand is rigorously shed-tested before dispatch.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  The brilliance doesn't end there. Our keratin-tipped hair extensions offer the versatility every modern woman desires. Whether you're experimenting with colour, chemical treatments, or using heat tools, these extensions mirror the resilience and adaptability of natural hair.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
-                </p>
+
+                {/* How it works */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">How Keratin Bond Technology Works</div>
+                  <div className="px-5 py-4 space-y-3 text-sm text-muted-foreground">
+                    <div className="flex gap-3">
+                      <span className="text-xl">🔥</span>
+                      <p><strong className="text-foreground">Hot Fusion Bonding.</strong> A specialist wand heats the pre-tipped keratin bead to precisely 180–200 °C. The solid keratin softens and is moulded around a thin section of natural hair — about 1 cm from the scalp — forming a smooth, oval-shaped sleeve. As it cools in seconds, the bond locks permanently in place.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">💎</span>
+                      <p><strong className="text-foreground">Medical-Grade Keratin Formula.</strong> Our keratin blend is composed of pharmaceutical-grade polyamide fused with 5–15% purified keratin protein. Unlike old-fashioned hot glue bonds, this compound is completely residue-free, flexible when cool and dissolves cleanly with professional remover — protecting every strand of your natural hair.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">🧬</span>
+                      <p><strong className="text-foreground">Individual Strand Method.</strong> Each extension strand is bonded one at a time — typically 50–200 strands for a full head. This strand-by-strand placement allows the stylist to precisely control density, volume and colour placement with millimetre accuracy. No visible weft line, no telltale bulk.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bond types comparison */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Choose Your Bond Size</div>
+                  <div className="divide-y text-sm">
+                    {[
+                      { type: "Standard K-Tip", tag: "Classic Choice", weight: "~1g per strand", best: "Medium to thick hair", note: "Full-bodied keratin bead — maximum hold and longevity. Ideal for the nape and crown where hair is densest." },
+                      { type: "Micro K-Tip", tag: "Most Popular 🔥", weight: "~0.7g per strand", best: "Fine to medium hair", note: "Smaller bead = more invisible bond. The industry's bestseller for balanced density and natural movement. Perfect for highlights and colour blending." },
+                      { type: "Nano K-Tip", tag: "Blue Ocean Pick 💙", weight: "~0.5g per strand", best: "Fine & sensitive hair", note: "Ultra-micro bead — barely visible at the root. Designed for delicate hair around the temples and hairline. Zero tension, maximum comfort. Rapidly growing in UK salons." },
+                    ].map((row) => (
+                      <div key={row.type} className="px-5 py-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold">{row.type}</span>
+                          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">{row.tag}</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mb-1">{row.note}</p>
+                        <div className="flex gap-4 text-xs text-muted-foreground">
+                          <span>Bond weight: {row.weight}</span>
+                          <span>Best for: {row.best}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* K-tip vs Tape-In comparison */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">K-Tip vs Tape-In — Which Is Right for Your Client?</div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b bg-muted/30">
+                          <th className="text-left px-4 py-2 font-semibold">Feature</th>
+                          <th className="text-left px-4 py-2 font-semibold">K-Tip (Keratin Bond)</th>
+                          <th className="text-left px-4 py-2 font-semibold">Tape-In</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y text-muted-foreground">
+                        {[
+                          ["Longevity", "3–5 months", "6–8 weeks"],
+                          ["Installation time", "3–5 hours (full head)", "1–2 hours (full head)"],
+                          ["Maintenance visits", "Every 3–4 months", "Every 6–8 weeks"],
+                          ["Best hair type", "Medium to thick", "Fine to medium"],
+                          ["Styling freedom", "Full — updo, ponytail, braid", "High — but avoid heavy oils near bonds"],
+                          ["Reusability", "Hair reusable 2–3 cycles", "Tape reusable 2–3 times"],
+                          ["Client investment", "Higher upfront, lower long-term", "Lower upfront, more frequent"],
+                        ].map(([feature, ktip, tape]) => (
+                          <tr key={feature}>
+                            <td className="px-4 py-2 font-medium text-foreground">{feature}</td>
+                            <td className="px-4 py-2">{ktip}</td>
+                            <td className="px-4 py-2">{tape}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Three highlights */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: "🏆", title: "Longest-Lasting", body: "3–5 months per set — up to 3× longer than tape-ins. Fewer salon visits, better value over time." },
+                    { icon: "🪞", title: "Truly Invisible", body: "Individual strand bonding means no weft lines, no bulk — even in the most exposed updos and braids." },
+                    { icon: "🔄", title: "Reusable Hair", body: "The same Remy hair strands can be re-tipped and reinstalled 2–3 times — maximising your investment." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-900">
+                  <strong>💙 Why Salons Are Switching to Nano K-Tip:</strong> The ultra-micro nano bond is taking UK salons by storm — especially for clients with fine or colour-treated hair. It delivers the same 3–5 month longevity of standard K-tips with up to 40% less weight on each strand, virtually eliminating tension at the hairline. D.S HAIR nano strands are among the most requested items from our Manchester salon partners.
+                </div>
               </div>
             ) : product.productType.toLowerCase().includes('butterfly') ? (
               <div className="max-w-3xl space-y-6">
@@ -776,86 +876,98 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
           ) : product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl space-y-8">
-              <h3 className="font-semibold text-xl">How to Apply K-Tip (Keratin) Hair Extensions</h3>
-              
-              {/* K-Tip Application Image */}
-              <div className="rounded-lg overflow-hidden">
-                <img 
-                  src="https://cdn.shopify.com/s/files/1/0617/4493/9165/products/installmyhairextensions_8.jpg?v=1670534187" 
-                  alt="How to Apply K-Tip Extensions" 
-                  className="w-full"
-                />
-              </div>
-              
-              {/* Step 1 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
-                  1
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Preparation</h4>
-                  <p className="text-muted-foreground">
-                    Start with clean, dry hair. Section the hair into small parts, about 1/4-inch wide, starting from the bottom and working your way up. Ensure the natural hair is clean and free of oils or products near the roots.
-                  </p>
-                </div>
-              </div>
+              <h3 className="font-semibold text-xl">How to Install D.S HAIR K-Tip (Keratin Bond) Extensions</h3>
 
-              {/* Step 2 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
-                  2
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Heat the Keratin Bond</h4>
-                  <p className="text-muted-foreground">
-                    Using a hot fusion iron (typically 180-200°C), gently melt the pre-tipped keratin bond on the extension. Hold the iron for 3-5 seconds until the bond becomes slightly soft and pliable.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
-                  3
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Apply to Hair</h4>
-                  <p className="text-muted-foreground">
-                    Press the melted keratin tip onto a small section of natural hair, about 1/4-inch from the scalp. Hold for 5-10 seconds to allow the bond to cool and secure. The bond will harden as it cools.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
-                  4
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Continue Sectioning</h4>
-                  <p className="text-muted-foreground">
-                    Repeat the process, working in rows from the bottom of the head upwards. Leave a 1/2-inch perimeter around the hairline for a natural look. Space each extension about 1/2-1 inch apart.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
-                  5
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Blend and Style</h4>
-                  <p className="text-muted-foreground">
-                    Once all extensions are applied, gently blend them with the natural hair using a brush or comb. Style as desired with heat tools. For best results and longevity, we recommend professional application.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
-                <p className="text-sm text-yellow-800">
-                  <strong>Important:</strong> K-Tip extensions typically last 3-6 months with proper care. Removal requires a special solvent or heat application by a professional stylist.
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <p className="text-sm text-blue-900">
+                  <strong>⚠️ Professional Installation Required.</strong> K-Tip extensions must be fitted and removed by a certified hair extension stylist. The hot-fusion process requires specialist equipment and training — please do not attempt at home. D.S HAIR can help you connect with accredited stylists in your area.
                 </p>
+              </div>
+
+              {/* Installation steps */}
+              {[
+                {
+                  n: 1,
+                  title: "Prepare & Cleanse",
+                  body: "Client arrives with freshly washed, completely dry hair — free of all oils, conditioner or styling products near the roots. Any residue on the hair shaft can prevent the keratin from bonding correctly. The stylist performs a strand test to confirm hair is strong enough for fusion.",
+                },
+                {
+                  n: 2,
+                  title: "Section from the Nape",
+                  body: "Beginning at the nape, the stylist creates precise horizontal sections 1–1.5 cm from the scalp. Each sub-section for a single strand is roughly 0.5 cm wide. The perimeter hairline and temples are left clear (minimum 1 cm) — so the bonds remain concealed in every style.",
+                },
+                {
+                  n: 3,
+                  title: "Heat the Keratin Bond",
+                  body: "The hot-fusion wand is heated to 180–200 °C. The tip of the wand is held against the pre-tipped keratin bead for 3–5 seconds until the bond softens to a pliable, translucent state. Overheating is avoided — a quality wand maintains a consistent, controlled temperature throughout.",
+                },
+                {
+                  n: 4,
+                  title: "Fuse Bond to Natural Hair",
+                  body: "The softened keratin bead is immediately moulded around the base of the natural hair section — approximately 1 cm from the scalp. The stylist rolls it into a smooth, compact oval sleeve between gloved fingers for 5–8 seconds while it cools and hardens. A firm, clean bond should be completely formed within 15 seconds.",
+                },
+                {
+                  n: 5,
+                  title: "Work Row by Row",
+                  body: "The process is repeated strand by strand, row by row, working from nape to crown. Strands are staggered in a 'brick wall' pattern to prevent any visible sections or pressure points. Standard full head: 100–150 strands; micro/nano full head: 150–200 strands. Typical session: 3–5 hours.",
+                },
+                {
+                  n: 6,
+                  title: "Cut, Blend & Style",
+                  body: "Once all strands are bonded, the stylist performs a precision cut to blend the extensions with the client's natural length and shape. A final heat-styled blow-out ensures seamless integration — clients typically leave the salon with a finished look ready to wear.",
+                },
+                {
+                  n: 7,
+                  title: "Professional Removal",
+                  body: "At 3–4 months, the client returns for a move-up or removal. The stylist applies a professional keratin remover solution (isopropyl alcohol or ethyl acetate based) directly to each bond, softening it until it can be gently broken apart with flat-nosed pliers. The bond residue combs out cleanly — no cutting, no damage to natural hair.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">{step.title}</h4>
+                    <p className="text-muted-foreground">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Installation methods */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Installation Time & Maintenance Schedule</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x text-sm">
+                  <div className="px-5 py-4 space-y-3">
+                    <div className="font-semibold mb-2">⏱ Installation Time</div>
+                    {[
+                      { label: "Half head (50–80 strands)", time: "1.5–2.5 hrs" },
+                      { label: "Full head (100–150 strands)", time: "3–5 hrs" },
+                      { label: "Nano / micro full head (150–200)", time: "4–6 hrs" },
+                    ].map((row) => (
+                      <div key={row.label} className="flex justify-between text-muted-foreground">
+                        <span>{row.label}</span>
+                        <span className="font-medium text-foreground">{row.time}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="px-5 py-4 space-y-3">
+                    <div className="font-semibold mb-2">🔄 Maintenance Schedule</div>
+                    {[
+                      { label: "Check-in appointment", time: "4–6 weeks" },
+                      { label: "Move-up / reposition", time: "6–8 weeks" },
+                      { label: "Full removal & reinstall", time: "3–5 months" },
+                    ].map((row) => (
+                      <div key={row.label} className="flex justify-between text-muted-foreground">
+                        <span>{row.label}</span>
+                        <span className="font-medium text-foreground">{row.time}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900">
+                <strong>💡 Stylist Tip:</strong> Mixing bond sizes on the same head delivers the most natural result. Use standard bonds at the nape and crown for maximum hold; switch to micro or nano bonds at the temples, hairline and side partings for an ultra-fine, invisible finish. Most professional stylists achieve this mixed-size installation in the same appointment time.
               </div>
             </div>
             ) : product.productType.toLowerCase().includes('butterfly') ? (
@@ -1259,52 +1371,83 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
           ) : product.productType.toLowerCase().includes('k-tip') ? (
             <div className="max-w-3xl space-y-8">
-              <h3 className="font-semibold text-xl">Standard vs Micro vs Nano K-Tip Extensions: What Type to Choose?</h3>
-              
-              <div className="rounded-lg overflow-hidden mb-6">
-                <img 
-                  src="https://iloveslavichair.com/image/catalog/blogs/nano-keratin-bonds-1.jpg" 
-                  alt="K-Tip Bond Types" 
-                  className="w-full"
-                />
+              <h3 className="font-semibold text-xl">Finding Your Perfect K-Tip Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Nano K-Tip", tag: "Blue Ocean Pick", desc: "Nano bonds (0.5g) are virtually invisible at the root — zero tension at the temples and hairline. Perfect for clients who have never been able to wear semi-permanent extensions before. Rapidly becoming the UK salon standard for delicate hair." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Micro K-Tip", tag: "Most Popular", desc: "Micro bonds (0.7g) strike the ideal balance of hold and comfort. The industry bestseller — delivers a natural, full result for the widest range of clients. Ideal for highlights, colour blending and general volume." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "✅ Standard K-Tip", tag: "Maximum Hold", desc: "Standard bonds (1g) provide the strongest, most durable fusion for thick, coarse or high-density hair. Works exceptionally well at the nape and crown where hair is at its densest and most resilient." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-blue-700 mb-1">{item.verdict}</div>
+                    <span className="inline-block text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full mb-2">{item.tag}</span>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
               </div>
 
-              <p className="text-muted-foreground">
-                To decide which type of keratin bond extensions is right for your hair, you need to consider the following factors:
-              </p>
-
-              <div className="space-y-6 mt-6">
-                <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-2">Your Own Hair Structure</h4>
-                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                    <li><strong>Standard bonds</strong> - Best for thick hair</li>
-                    <li><strong>Micro bonds</strong> - Suitable for fine-to-medium or medium hair</li>
-                    <li><strong>Nano bonds</strong> - Perfect for fine and very thin curls</li>
-                  </ul>
+              {/* How many strands */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many strands do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add subtle volume (no length change)", strands: "50–80 strands", weight: "50–80g", rows: "2–3 rows" },
+                    { goal: "Volume + moderate length (2–4 inches)", strands: "100–120 strands", weight: "100–120g", rows: "3–4 rows" },
+                    { goal: "Full dramatic transformation", strands: "150–200 strands", weight: "150–200g", rows: "5–6 rows" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-4 px-5 py-3 text-sm gap-2">
+                      <div className="col-span-2 text-muted-foreground">{row.goal}</div>
+                      <div className="font-medium">{row.strands}</div>
+                      <div className="text-muted-foreground">{row.rows}</div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-2">What You Want to Achieve</h4>
-                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                    <li>To add <strong>thickness</strong>: Many experts recommend micro tips</li>
-                    <li>To achieve a <strong>natural look</strong> and hide the fact of using extensions: Micro bonds are ideal</li>
-                    <li>To increase density around the <strong>temples</strong>: Nano bonds (for thin hair) or micro bonds (for thicker hair)</li>
-                  </ul>
+              {/* Length guide */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">Length Guide</div>
+                <div className="divide-y text-sm">
+                  {[
+                    { length: '16" (40 cm)', look: "Shoulder length", best: "Natural volume boost; adds approx. 4–5 inches to a chin-length bob" },
+                    { length: '18" (45 cm)', look: "Below shoulder", best: "The most versatile length — works on most clients and blends beautifully" },
+                    { length: '20" (50 cm)', look: "Mid-back", best: "Striking length transformation; ideal for clients with naturally shoulder-length hair" },
+                    { length: '22" (55 cm)', look: "Long mid-back", best: "Statement length — popular for bridal and special occasion clients" },
+                    { length: '24–28" (60–70 cm)', look: "Lower back", best: "Ultra-dramatic; requires thicker natural hair for best integration" },
+                  ].map((row) => (
+                    <div key={row.length} className="grid grid-cols-3 px-5 py-3 gap-2">
+                      <div className="font-medium">{row.length}</div>
+                      <div className="text-muted-foreground">{row.look}</div>
+                      <div className="text-xs text-muted-foreground">{row.best}</div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-2">Professional Technique</h4>
-                  <p className="text-muted-foreground">
-                    Some hair beauty professionals combine different keratin tip sizes: the standard ones are used in the back of the head while nano or micro bonds are used on the sides for a more natural finish.
-                  </p>
+              {/* Pro mixing tip */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Pro Technique: Mixed Bond Sizing</div>
+                <div className="px-5 py-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  {[
+                    { zone: "🎯 Crown & Nape", bond: "Standard (1g)", reason: "Densest natural hair — maximum grip, strongest hold." },
+                    { zone: "💆 Mid-sides", bond: "Micro (0.7g)", reason: "Natural hair is finer here — lighter bond for comfort and natural movement." },
+                    { zone: "🌿 Temples & Hairline", bond: "Nano (0.5g)", reason: "Ultra-fine zone — nano bonds are invisible and completely tension-free." },
+                  ].map((item) => (
+                    <div key={item.zone} className="border rounded-lg p-3">
+                      <div className="font-semibold mb-1">{item.zone}</div>
+                      <div className="text-blue-700 font-medium text-xs mb-1">{item.bond}</div>
+                      <div className="text-muted-foreground text-xs">{item.reason}</div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-2">Consult Your Stylist</h4>
-                  <p className="text-muted-foreground">
-                    Reading reviews from others might give you a better understanding and idea of what will work best for your hairstyle. Finally, consult your hairstylist!
-                  </p>
-                </div>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-900">
+                💡 <strong>Not sure which bond size or length?</strong> WhatsApp us a photo of your hair — our team will recommend the perfect type, length and strand count for your client's specific hair type and goals, completely free.
               </div>
             </div>
             ) : product.productType.toLowerCase().includes('butterfly') ? (
@@ -1822,6 +1965,53 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </>
+              ) : product.productType.toLowerCase().includes('k-tip') ? (
+                <>
+                  {/* Before/After images */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/ktip/ktip-result-01.jpg" alt="K-Tip Extensions Result 1" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/ktip/ktip-result-02.jpg" alt="K-Tip Extensions Result 2" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                    </div>
+                  </div>
+
+                  {/* Stats bar */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "3–5", unit: "months", label: "Wear time per set" },
+                      { stat: "2–3×", unit: "reusable", label: "Hair strands reusable" },
+                      { stat: "3–5", unit: "hours", label: "Full head installation" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-blue-600 font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer reviews */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Charlotte R.", role: "Professional stylist, Manchester", text: "I've been ordering D.S HAIR nano K-tips for my salon for over a year and the feedback from clients is consistently incredible. The bonds are clean, the hair is thick and the colour range is unmatched. My fine-haired clients especially love how invisible the nano bonds are — they finally have a semi-permanent option that works for them.", stars: 5 },
+                      { name: "Emma T.", role: "Bridal client, Birmingham", text: "Had these for my wedding and they lasted through a full month of styling, beach days and dancing. Absolutely no slipping, no matting, nothing. The stylist used the micro bonds and you genuinely could not tell I was wearing extensions even in my updo. The most natural result I've ever had.", stars: 5 },
+                      { name: "Sophie W.", role: "Long-term extension wearer, London", text: "I switched from tape-ins to D.S HAIR K-tips 18 months ago and haven't looked back. The longevity is just incomparable — I get 4 full months out of each set, the hair reuses beautifully, and the cost-per-wear is much better than I expected. The quality of the Remy hair is something else.", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                        <p className="text-xs text-muted-foreground">{review.role}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
               ) : (
                 <>
                   {/* Before/After Image */}
@@ -1995,6 +2185,33 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   </div>
                   <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-sm text-emerald-900">
                     <strong>📎 D.S HAIR Quality Promise:</strong> Every clip-in set is individually inspected for hair weight, clip strength and cuticle alignment before dispatch. Our Invisible / Seamless range uses a premium ultra-flat base engineered for flawless concealment. Each set is shed-tested and weight-verified to our strict 19-year professional standard — so your clients receive consistent, salon-quality results every time.
+                  </div>
+                </div>
+              ) : product.productType.toLowerCase().includes('k-tip') ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — double-drawn, cuticle-aligned for zero tangling",
+                      "Available in Standard, Micro & Nano bond sizes for all hair types",
+                      "Nano K-Tip: ultra-micro 0.5g bond — virtually invisible at the hairline",
+                      "Medical-grade keratin polymer blend — no residue, no irritation",
+                      "Hot-fusion bonding at 180–200 °C — professional-grade equipment required",
+                      "3–5 months wear time with proper care — outlasts tape-ins by 3×",
+                      "Hair strands reusable 2–3 times — retip and reinstall for maximum value",
+                      "Individual strand method — zero visible weft lines, even in high updos",
+                      "Can be washed, blow-dried, curled and straightened like natural hair",
+                      "Safe for colour, highlights and chemical treatments (wait 2 weeks after bonding)",
+                      "31 colour shades + balayage/ombre options — matched to any natural tone",
+                      "Heat-safe up to 180°C with heat protectant — full styling freedom",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-900">
+                    <strong>💎 D.S HAIR Quality Promise:</strong> Every K-Tip strand is individually quality-checked for keratin bond consistency, hair weight and cuticle direction before dispatch. Our Nano K-Tips use the smallest, most refined bond beads available — each passing a tension-resistance test before leaving our facility. Backed by 19+ years of professional supply expertise and the trust of salon stylists across the UK.
                   </div>
                 </div>
               ) : (
@@ -2207,6 +2424,48 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     },
                   ].map((item) => (
                     <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : product.productType.toLowerCase().includes('k-tip') ? (
+                <>
+                  {[
+                    {
+                      q: "What is a K-Tip (Keratin Bond) hair extension?",
+                      a: "K-Tip extensions are individual strands of 100% Remy human hair with a pre-tipped keratin polymer bead at the root end. A certified stylist uses a hot-fusion wand at 180–200 °C to soften the bead and mould it around a small section of your natural hair, forming a smooth, sleek bond that is virtually invisible. Unlike old hot-glue extensions, modern keratin bonds are residue-free, flexible and dissolve cleanly with professional remover.",
+                    },
+                    {
+                      q: "What sizes of K-Tip bonds does D.S HAIR offer, and which should I choose?",
+                      a: "We offer three bond sizes: Standard (1g) — ideal for thick or medium-thick hair at the nape and crown; Micro (0.7g) — the most popular choice for medium hair, offering the best balance of hold and invisibility; and Nano (0.5g) — our blue-ocean recommendation for fine, delicate or colour-treated hair, especially around the temples and hairline. Many stylists use a mix of all three sizes in one head for the most natural, comfortable result.",
+                    },
+                    {
+                      q: "How long do K-Tip extensions last?",
+                      a: "With proper care, K-Tip extensions typically last 3–5 months per set — significantly longer than tape-ins (6–8 weeks). Your stylist will perform a 'move-up' appointment every 6–8 weeks as your natural hair grows, repositioning the bonds closer to the scalp. The same Remy hair strands can be re-tipped and reinstalled 2–3 times, making them highly cost-effective over time.",
+                    },
+                    {
+                      q: "K-Tip vs Tape-In — which method is better for fine hair?",
+                      a: "Both methods work on fine hair, but with key differences. Tape-ins use flat 4cm wefts that sandwich a thin slice of hair — they are quicker to install (1–2 hours) and more affordable upfront, but need replacing every 6–8 weeks. K-Tip nano bonds are the superior choice for very fine or sensitive hair: each 0.5g bead is barely visible and places minimal weight on individual strands, lasting 3–5 months. The choice depends on the client's budget, maintenance tolerance and hair density. For salon clients who want the most natural, longest-lasting result, nano K-tips are increasingly the first choice.",
+                    },
+                    {
+                      q: "Will K-Tip extensions damage my natural hair?",
+                      a: "When professionally installed, maintained and removed, K-Tip extensions are considered a low-damage method. The keratin bond distributes weight across multiple natural hairs and does not use adhesive chemicals in contact with the scalp. The key risks — tension alopecia and breakage — only arise from incorrect installation (bonds too close to the scalp or too heavy for the hair) or improper removal. Always use a certified extension stylist.",
+                    },
+                    {
+                      q: "Can I colour, curl or straighten K-Tip extensions?",
+                      a: "Yes — 100% Remy human hair accepts heat styling up to 180°C and most colour services. We recommend waiting at least 2 weeks after installation before colouring (to allow bonds to fully set). For bleaching or lightening, always consult an experienced colourist — some chemical processes can weaken the keratin bond. Day-to-day heat styling (curling wand, straighteners, blow-dry) is completely safe with heat protectant applied.",
+                    },
+                    {
+                      q: "How do I care for K-Tip extensions day to day?",
+                      a: "Use a sulphate-free, bond-safe shampoo and conditioner — avoid applying conditioner directly to the bonds. Wash gently in a downward motion (never circular, which causes tangling). Sleep with hair in a loose braid and use a silk pillowcase. Brush from ends to roots with a loop brush daily. Avoid heavy oils, serums or leave-in conditioners near the bond area — product build-up weakens the keratin over time.",
+                    },
+                    {
+                      q: "How are K-Tip extensions removed, and can they be reused?",
+                      a: "Removal must be done by a professional stylist. A keratin bond remover solution (isopropyl alcohol or ethyl acetate based) is applied directly to each bond, making it brittle. The stylist then gently cracks the bond with flat-nosed pliers — the keratin crumbles away from the hair, causing zero cutting or damage to the natural strand. The Remy hair on each extension can then be re-tipped with fresh keratin and reinstalled 2–3 times, saving significant cost compared to buying new sets.",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b last:border-b-0 pb-4">
                       <h4 className="font-medium mb-2">{item.q}</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
                     </div>
