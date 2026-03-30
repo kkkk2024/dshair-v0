@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -11,6 +12,23 @@ import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { InstagramSection } from "@/components/home/instagram-section"
 import { OrganizationJsonLd } from "@/components/seo/json-ld"
+
+export const metadata: Metadata = {
+  title: "Professional Hair Extensions UK | Wholesale Supplier | D.S HAIR & BEAUTY",
+  description:
+    "UK's trusted wholesale hair extension supplier. 100% Remy human hair — K-Tip, Tape-In, Nano Ring, Weft & Clip-In. Trade pricing for professional salons. 19 years expertise. Based in Manchester.",
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk",
+  },
+  openGraph: {
+    title: "Professional Hair Extensions UK | Wholesale Supplier | D.S HAIR & BEAUTY",
+    description:
+      "UK's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for salons. 19 years expertise.",
+    url: "https://www.dshairbeauty.co.uk",
+    locale: "en_GB",
+    siteName: "D.S HAIR & BEAUTY",
+  },
+}
 
 export default function HomePage() {
   return (
