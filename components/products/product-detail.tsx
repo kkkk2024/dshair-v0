@@ -23,6 +23,16 @@ const TAPE_RESULT_IMAGES = [
   "/images/tape/tape-result-09.jpg",
 ]
 
+const KTIP_RESULT_IMAGES = [
+  "/images/ktip/ktip-result-03.jpg",
+  "/images/ktip/ktip-result-04.jpg",
+  "/images/ktip/ktip-result-05.jpg",
+  "/images/ktip/ktip-result-06.jpg",
+  "/images/ktip/ktip-result-07.jpg",
+  "/images/ktip/ktip-result-08.jpg",
+  "/images/ktip/ktip-result-09.jpg",
+]
+
 export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
@@ -30,8 +40,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [quantity, setQuantity] = useState(1)
 
   // For tape-in products, append shared result photos to the image gallery
+  // For k-tip products, keep only first 2 original images then append 7 new result photos
   const displayImages = product.productType.toLowerCase().includes('tape')
     ? [...product.images, ...TAPE_RESULT_IMAGES]
+    : product.productType.toLowerCase().includes('k-tip')
+    ? [...product.images.slice(0, 2), ...KTIP_RESULT_IMAGES]
     : product.images
 
   const formatPrice = (price: number) => {
@@ -2004,13 +2017,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </>
               ) : product.productType.toLowerCase().includes('k-tip') ? (
                 <>
-                  {/* Before/After images */}
-                  <div className="grid grid-cols-2 gap-3">
+                  {/* Real results — 3 photos in one row */}
+                  <div className="grid grid-cols-3 gap-3">
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/ktip/ktip-result-01.jpg" alt="K-Tip Extensions Result 1" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                      <img src="/images/ktip/ktip-result-03.jpg" alt="K-Tip Extensions Result 1" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/ktip/ktip-result-02.jpg" alt="K-Tip Extensions Result 2" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                      <img src="/images/ktip/ktip-result-08.jpg" alt="K-Tip Extensions Result 2" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/ktip/ktip-result-09.jpg" alt="K-Tip Extensions Result 3" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
                     </div>
                   </div>
 
