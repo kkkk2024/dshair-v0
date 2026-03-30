@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.dshairbeauty.co.uk'),
   title: {
     default: "D.S HAIR & BEAUTY | Professional Hair Extensions Supplier Manchester UK",
-    template: "%s | D.S HAIR & BEAUTY",
   },
   description: "Manchester-based wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19 years industry experience.",
   keywords: [
