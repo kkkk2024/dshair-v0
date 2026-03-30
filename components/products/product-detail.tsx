@@ -1846,6 +1846,40 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </>
               ) : product.productType.toLowerCase().includes('tape') ? (
                 <>
+                  {/* Photo gallery — 9 images */}
+                  <div className="grid grid-cols-3 gap-3">
+                    {/* Row 1 */}
+                    <div className="rounded-xl overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                      <span className="text-xs text-muted-foreground">Photo 1</span>
+                    </div>
+                    <div className="rounded-xl overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                      <span className="text-xs text-muted-foreground">Photo 2</span>
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-03.jpg" alt="Tape-In Extensions Result 3" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    {/* Row 2 */}
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-04.jpg" alt="Tape-In Extensions Result 4" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-05.jpg" alt="Tape-In Extensions Result 5" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-06.jpg" alt="Tape-In Extensions Result 6" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    {/* Row 3 */}
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-07.jpg" alt="Tape-In Extensions Result 7" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-08.jpg" alt="Tape-In Extensions Result 8" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-09.jpg" alt="Tape-In Extensions Result 9" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                    </div>
+                  </div>
+
                   {/* Stats bar */}
                   <div className="grid grid-cols-3 gap-4 text-center">
                     {[
