@@ -390,6 +390,68 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
                 </p>
               </div>
+            ) : product.productType.toLowerCase().includes('weft') ? (
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">Weft Hair Extensions — Salon's Most Versatile Method</h2>
+
+                {/* Hero image */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/weft/weft-hero.jpg"
+                    alt="Weft Hair Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover max-h-80"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  Weft extensions are the gold standard in professional salons worldwide. A single continuous curtain of 100% Remy human hair is sewn, braided or beaded onto your natural hair — delivering instant volume, length and density that lasts <strong>6–12 months</strong> with proper maintenance.
+                </p>
+
+                {/* Weft type comparison */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Which Weft Type Is Right for You?</div>
+                  <div className="divide-y text-sm">
+                    {[
+                      { type: "Genius Weft ✨ NEW", tag: "Best Seller", thickness: "0.5–1 mm", cut: "✅ Trimmable", best: "Fine to medium hair", note: "Ultra-thin, invisible — the hottest upgrade in top salons" },
+                      { type: "Hand-Tied Weft", tag: "Premium", thickness: "1–1.2 mm", cut: "❌ Not trimmable", best: "Fine & delicate hair", note: "Handcrafted, featherlight — ultimate comfort & longevity" },
+                      { type: "Machine Weft", tag: "Classic", thickness: "1.5–2 mm", cut: "✅ At marked points", best: "Thick & coarse hair", note: "Most durable, ideal for high-volume transformations" },
+                    ].map((row) => (
+                      <div key={row.type} className="px-5 py-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold">{row.type}</span>
+                          <span className="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">{row.tag}</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mb-1">{row.note}</p>
+                        <div className="flex gap-4 text-xs text-muted-foreground">
+                          <span>Thickness: {row.thickness}</span>
+                          <span>Cut-to-fit: {row.cut}</span>
+                          <span>Best for: {row.best}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Three highlights */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: "🪡", title: "No Glue · No Heat", body: "Attached by beads, sewing or tape — zero thermal or chemical damage." },
+                    { icon: "🌊", title: "Seamless Blend", body: "Lies flat against the scalp. Invisible in ponytails, braids and updos." },
+                    { icon: "♻️", title: "Reusable & Sustainable", body: "Hair rows can be reinstalled 2–3 times; just replace the beads or thread." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900">
+                  <strong>🔥 Salon Insider:</strong> Genius Weft is rapidly replacing Hand-Tied Weft in top UK salons. It installs faster, can be trimmed to any width, and delivers the same ultra-flat invisible finish — at a more accessible price point for clients.
+                </div>
+              </div>
             ) : (
               <div className="max-w-3xl">
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
@@ -550,6 +612,88 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </p>
               </div>
             </div>
+            ) : product.productType.toLowerCase().includes('weft') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Install Weft Hair Extensions</h3>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                <p className="text-sm text-amber-800">
+                  <strong>⚠️ Professional Installation Required.</strong> Weft extensions must be fitted and maintained by a certified hair extension stylist. Improper installation can cause breakage.
+                </p>
+              </div>
+
+              {/* Installation method selector */}
+              <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                {[
+                  { icon: "📿", method: "Bead & Sew", time: "2–3 hrs", hold: "8–12 weeks" },
+                  { icon: "🧵", method: "Sew-In Cornrow", time: "3–4 hrs", hold: "6–8 weeks" },
+                  { icon: "🩹", method: "Tape / Skin Weft", time: "45 mins", hold: "6–8 weeks" },
+                ].map((m) => (
+                  <div key={m.method} className="border rounded-xl p-3">
+                    <div className="text-2xl mb-1">{m.icon}</div>
+                    <div className="font-semibold mb-1">{m.method}</div>
+                    <div className="text-xs text-muted-foreground">Install: {m.time}</div>
+                    <div className="text-xs text-muted-foreground">Lasts: {m.hold}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-semibold text-lg">Step-by-Step: Bead & Sew Method (Most Popular)</h4>
+
+              {[
+                {
+                  n: 1,
+                  title: "Prepare & Section",
+                  body: "Start with freshly washed, blow-dried hair. Create a clean horizontal parting 1cm from the nape — this will be your first row. Pin all hair above the parting out of the way.",
+                },
+                {
+                  n: 2,
+                  title: "Create the Anchor Braid",
+                  body: "Along the parting, create a slim horizontal braid (or micro-braid anchor points). This anchors each bead securely and protects your natural hair from tension.",
+                },
+                {
+                  n: 3,
+                  title: "Thread the Beads",
+                  body: "Slide silicone-lined micro-beads onto the anchor braid at even intervals (approx. 1–2 cm apart). Use a loop tool to pull the braid through each bead before clamping flat with pliers.",
+                },
+                {
+                  n: 4,
+                  title: "Attach the Weft",
+                  body: "Lay the weft along the row of beads. Using a curved needle and strong thread, sew the weft onto the beads with tight, even stitches. For Genius Weft — trim the weft to the exact row width before sewing for a seamless finish.",
+                },
+                {
+                  n: 5,
+                  title: "Build Up the Rows",
+                  body: "Release the next section (approx. 2–3 cm above), repeat the process. Work row by row from nape to crown. Typically 3–5 rows for a full head result.",
+                },
+                {
+                  n: 6,
+                  title: "Blend & Finish",
+                  body: "Once all rows are secure, blend your natural hair over the wefts. Trim and layer to seamlessly integrate the extensions. Style as desired — curl, straighten or blowout.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1">{step.title}</h4>
+                    <p className="text-muted-foreground text-sm">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">⏱ Full head install</div>
+                  <div className="text-muted-foreground">2–4 hours depending on hair density</div>
+                </div>
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">🔄 Move-up frequency</div>
+                  <div className="text-muted-foreground">Every 6–8 weeks as hair grows</div>
+                </div>
+              </div>
+            </div>
             ) : (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
@@ -706,6 +850,77 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
             </div>
+            ) : product.productType.toLowerCase().includes('weft') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding Your Perfect Weft Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Genius Weft", desc: "The ultra-thin 0.5mm base sits virtually flat — no bulk, no lumps. Genius Weft is the top recommendation for fine-haired clients in UK salons right now." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Genius or Hand-Tied", desc: "Either works beautifully. Genius Weft offers faster installs and cost savings; Hand-Tied gives that handcrafted, buttery-soft feel your clients will love." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "✅ Machine Weft", desc: "Machine wefts have the density and weight to blend with thick natural hair. They're also the most cost-effective for high-volume transformations." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-green-700 mb-2">{item.verdict}</div>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* How many packs */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many packs / grams do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add volume only (no length)", weight: "100–150g", rows: "2–3 rows" },
+                    { goal: "Volume + moderate length", weight: "150–200g", rows: "3–4 rows" },
+                    { goal: "Full dramatic transformation", weight: "200–250g", rows: "4–5 rows" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-3 px-5 py-3 text-sm">
+                      <span className="text-muted-foreground">{row.goal}</span>
+                      <span className="font-medium">{row.weight}</span>
+                      <span className="text-muted-foreground">{row.rows}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Length guide */}
+              <div>
+                <h4 className="font-semibold mb-3">Length Guide</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { len: '14"', effect: "Bob → shoulder length" },
+                    { len: '18"', effect: "Shoulder → mid-back" },
+                    { len: '22"', effect: "Mid-back → waist" },
+                    { len: '26"', effect: "Waist length & beyond" },
+                  ].map((item) => (
+                    <div key={item.len} className="border rounded-xl p-3 text-center text-sm">
+                      <div className="text-xl font-bold mb-1">{item.len}</div>
+                      <div className="text-xs text-muted-foreground">{item.effect}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Genius Weft callout */}
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                <div className="font-semibold mb-2">🔥 Why Salons Are Switching to Genius Weft</div>
+                <ul className="text-sm text-amber-900 space-y-1">
+                  <li>✅ Can be trimmed to any width — no wastage, perfect fit every time</li>
+                  <li>✅ 0.5mm ultra-thin base — flatter than Hand-Tied, undetectable in high ponytails</li>
+                  <li>✅ 20–22g per row — more hair per pack, better value for clients</li>
+                  <li>✅ No "return hairs" — won't scratch or irritate sensitive scalps</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Not sure which weft type suits your client?</strong> WhatsApp us a photo — we'll advise on the perfect match, weight and length for free.
+              </div>
+            </div>
             ) : (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
@@ -775,6 +990,43 @@ export function ProductDetail({ product }: ProductDetailProps) {
                         </div>
                         <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
                         <p className="font-medium text-sm">— {review.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : product.productType.toLowerCase().includes('weft') ? (
+                <>
+                  {/* Stats bar */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "6–12", unit: "months", label: "Average wear time" },
+                      { stat: "6–8", unit: "weeks", label: "Between move-ups" },
+                      { stat: "2–3×", unit: "reuse", label: "Weft can be reinstalled" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-accent font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer reviews */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Jessica T.", role: "Hair Extension Stylist, Manchester", text: "I've been using these wefts on my clients for 6 months. The Genius Weft in particular is incredible — trims cleanly, lays so flat. My fine-haired clients are obsessed.", stars: 5 },
+                      { name: "Emma W.", role: "Salon Client, London", text: "Had the Hand-Tied wefts installed 4 months ago. Still feel like new hair. My stylist was amazed by how little shedding there's been. Worth every penny.", stars: 5 },
+                      { name: "Rachel B.", role: "Salon Client, Birmingham", text: "The colour match was perfect straight out of the pack. So natural-looking — even my mum didn't notice until I told her!", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                        <p className="text-xs text-muted-foreground">{review.role}</p>
                       </div>
                     ))}
                   </div>
@@ -849,6 +1101,30 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </div>
+              ) : product.productType.toLowerCase().includes('weft') ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — cuticle-aligned for zero tangling",
+                      "Available in Genius Weft, Hand-Tied & Machine Weft styles",
+                      "Genius Weft: 0.5mm ultra-thin base — thinner than Hand-Tied",
+                      "Genius Weft is trimmable — cut to any width without shedding",
+                      "No heat, no glue — attached by beads, thread or tape",
+                      "Wears 6–12 months with professional maintenance",
+                      "Can be washed, blow-dried, curled and straightened",
+                      "Weft rows are reusable 2–3 times — just replace beads/thread",
+                      "Lies flat against scalp — invisible in updos and ponytails",
+                      "31 colour shades to match every natural tone",
+                      "Available in 14\" – 26\" lengths",
+                      "Move-up appointment every 6–8 weeks to account for hair growth",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ) : (
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {product.features.map((feature) => (
@@ -896,6 +1172,48 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     {
                       q: "Can I wear them in a ponytail or updo?",
                       a: "Absolutely. The nano ring sits flat and close to the scalp, making it completely undetectable even in high ponytails and braids — one of the biggest advantages over other extension types.",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : product.productType.toLowerCase().includes('weft') ? (
+                <>
+                  {[
+                    {
+                      q: "What are weft extensions?",
+                      a: "Weft extensions are a continuous row of 100% Remy human hair attached to a thin base (weft). The entire row is secured to your natural hair using beads, sewing or tape. It's the professional salon standard worldwide.",
+                    },
+                    {
+                      q: "What's the difference between Genius, Hand-Tied and Machine weft?",
+                      a: "Genius Weft (0.5–1mm) is ultra-thin, trimmable and perfect for fine hair. Hand-Tied (1–1.2mm) is handcrafted, premium quality, and untrimmable. Machine Weft (1.5–2mm) is the classic option, most durable, ideal for thick hair. Choose based on your hair type and budget.",
+                    },
+                    {
+                      q: "Are they suitable for fine or thin hair?",
+                      a: "Yes — especially with Genius Weft, which is 90% thinner than Machine Weft and sits virtually flat on the scalp. Hand-Tied is also excellent for fine hair. Avoid Machine Weft if you have very delicate hair.",
+                    },
+                    {
+                      q: "How long do weft extensions last?",
+                      a: "With proper care, 6 to 12 months. Every 6–8 weeks you'll need a 'move-up' appointment — your stylist slides the beads/threads up to account for natural hair growth. The weft row can be reinstalled 2–3 times by replacing the beads or re-sewing.",
+                    },
+                    {
+                      q: "Will they damage my natural hair?",
+                      a: "When professionally installed and maintained, weft extensions cause minimal damage. The beading method distributes tension evenly. Always have them fitted and removed by a certified extension stylist — never DIY removal.",
+                    },
+                    {
+                      q: "How many packs do I need?",
+                      a: "It depends on your goal and hair type. Fine hair: 100–150g (2–3 rows). Medium hair: 150–200g (3–4 rows). Thick hair: 200–250g (4–5 rows). Message us a photo and we'll recommend the perfect weight.",
+                    },
+                    {
+                      q: "Can I wash, heat-style and colour them?",
+                      a: "Yes — all D.S HAIR wefts are 100% human hair. Wash 1–2 times weekly with sulphate-free shampoo. Always use heat protectant. For colouring, consult a pro. We recommend avoiding bleach on pre-coloured shades.",
+                    },
+                    {
+                      q: "Can I wear them in a ponytail or updo?",
+                      a: "Absolutely — especially with Genius Weft. The beads sit flat and close to the scalp, making them undetectable in high ponytails, braids and buns. One of the biggest perks of weft over clip-ins!",
                     },
                   ].map((item) => (
                     <div key={item.q} className="border-b pb-5">
