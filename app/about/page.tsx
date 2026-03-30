@@ -95,7 +95,7 @@ export default function AboutPage() {
                   <Button size="lg" asChild>
                     <Link href="/salon-partners">Become a Salon Partner</Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black" asChild>
+                  <Button size="lg" variant="outline" className="border-white text-white bg-black/30 hover:bg-white hover:text-black" asChild>
                     <Link href="/contact">Get in Touch</Link>
                   </Button>
                 </div>

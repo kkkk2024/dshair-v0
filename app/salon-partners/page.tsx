@@ -157,7 +157,7 @@ export default function SalonPartnersPage() {
                   <Button size="lg" asChild>
                     <a href="#apply">Apply for Trade Account</a>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black" asChild>
+                  <Button size="lg" variant="outline" className="border-white text-white bg-black/30 hover:bg-white hover:text-black" asChild>
                     <a
                       href="https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extension%20supply."
                       target="_blank"

@@ -78,7 +78,7 @@ export const products: Product[] = [
     shortDescription: "Individual strand application",
     vendor: "D.S HAIR & BEAUTY",
     productType: "I-Tip Extensions",
-    type: "professional",
+    type: "diy", // moved out of professional collection per client request
     tags: ["i-tip", "new"],
     price: 149,
     originalPrice: undefined,
