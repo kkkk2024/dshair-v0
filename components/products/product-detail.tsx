@@ -615,6 +615,89 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   <strong>🔥 Salon Insider:</strong> Genius Weft is rapidly replacing Hand-Tied Weft in top UK salons. It installs faster, can be trimmed to any width, and delivers the same ultra-flat invisible finish — at a more accessible price point for clients.
                 </div>
               </div>
+            ) : product.productType.toLowerCase().includes('clip') ? (
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">Clip-In Hair Extensions — The Most Effortless Way to Transform Your Look</h2>
+
+                {/* Hero image */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/clip/clip-hero.jpg"
+                    alt="Clip-In Hair Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover max-h-80"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  Clip-In extensions are the world's most popular at-home extension method — and for good reason. A set of wefts fitted with precision snap-close clips attaches to your natural hair in minutes, with zero commitment, zero damage and zero salon visit required. Wear them today. Remove them tonight. Style them again tomorrow.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  All D.S HAIR clip-ins are crafted from <strong>100% double-drawn Remy human hair</strong>, hand-selected for consistent density root to tip. Our 19+ years of professional supply expertise means every set is rigorously weight-checked and shed-tested before dispatch.
+                </p>
+
+                {/* How it works */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">How Clip-In Extensions Work</div>
+                  <div className="px-5 py-4 space-y-3 text-sm text-muted-foreground">
+                    <div className="flex gap-3">
+                      <span className="text-xl">📎</span>
+                      <p><strong className="text-foreground">Snap-Close Pressure Clips.</strong> Each weft features silicone-lined pressure clips that grip your natural hair without glue, heat or chemicals. The silicone lining protects the hair shaft and prevents slipping — your style stays put all day.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">🪡</span>
+                      <p><strong className="text-foreground">Layered Row System.</strong> A full set typically includes 7–9 wefts of varying widths (1-clip to 4-clip). Each row is clipped into a horizontal section, working from nape to crown. Layering the wefts creates seamless, natural-looking volume and length.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">✨</span>
+                      <p><strong className="text-foreground">No Commitment, No Damage.</strong> Unlike semi-permanent methods, clip-ins are fully removable — attach in 5–10 minutes, remove just as fast. Proper application causes zero damage to your natural hair. Perfect for special occasions, everyday wear or testing a new length before committing.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Clip-In types */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Choose Your Clip-In Style</div>
+                  <div className="divide-y text-sm">
+                    {[
+                      { type: "Invisible / Seamless Clip-In", tag: "Blue Ocean Pick", base: "Thin silicone strip", best: "Fine to medium hair", note: "Ultra-flat silicone or PU base mimics the scalp — hair lies completely flat with zero visible weft line. Milk & Blush's best-seller and a fast-growing favourite in UK salons. Ideal for clients who wear their hair up." },
+                      { type: "Classic Clip-In Weft", tag: "Most Popular", base: "Fabric/cotton weft", best: "All hair types", note: "The trusted everyday workhorse. Durable cotton weft base, strong clips, consistent density. The choice for those wanting reliable volume and length at home — no experience required." },
+                      { type: "Clip-In Filler / Topper", tag: "Precision Volume", base: "Narrow weft", best: "Thinning areas, crown", note: "Designed for targeted coverage — temples, crown, parting line or hairline. Half the width of a standard weft, perfect for adding fullness exactly where it is needed most." },
+                    ].map((row) => (
+                      <div key={row.type} className="px-5 py-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold">{row.type}</span>
+                          <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">{row.tag}</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mb-1">{row.note}</p>
+                        <div className="flex gap-4 text-xs text-muted-foreground">
+                          <span>Base: {row.base}</span>
+                          <span>Best for: {row.best}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Three highlights */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: "⏱️", title: "5-Minute Style", body: "Attach a full set in under 10 minutes. No salon appointment, no waiting — instant length and volume on demand." },
+                    { icon: "🫧", title: "Zero Damage", body: "Silicone-lined clips grip without pulling. Proper technique = zero breakage to natural hair. Safe for daily wear." },
+                    { icon: "🔁", title: "Lasts 6–12 Months", body: "With proper care, a quality set of Remy clip-ins can be worn hundreds of times. Cost-per-wear is exceptionally low." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-sm text-emerald-900">
+                  <strong>✨ Why Clients Love Clip-Ins:</strong> Instant results, total flexibility and zero salon commitment. Clip-ins are the #1 entry point for new extension clients — and with D.S HAIR's 100% Remy quality and 31 colour shades, finding the perfect seamless match has never been easier. Backed by 19 years of professional expertise.
+                </div>
+              </div>
             ) : (
               <div className="max-w-3xl">
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
@@ -1021,47 +1104,94 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
             </div>
-            ) : (
+            ) : product.productType.toLowerCase().includes('clip') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">How to Apply D.S HAIR Clip-In Extensions</h3>
-              <div className="rounded-lg overflow-hidden">
-                <img src="/images/how-to-use.png" alt="How to Apply Clip-In Extensions" className="w-full" />
+
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+                <p className="text-sm text-emerald-800">
+                  <strong>✅ At-Home Friendly.</strong> Clip-ins are the only extension method you can safely apply yourself at home. Follow these steps for a seamless, natural-looking result every time. For Invisible / Seamless Clip-Ins, the same steps apply — the flat base makes them even easier to conceal.
+                </p>
               </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Sectioning</h4>
-                  <p className="text-muted-foreground">Use a rat-tail comb to make a horizontal part from mid-ear to mid-ear. Secure all hair above mid-ear into a high ponytail or with clips.</p>
+
+              {/* Method selector */}
+              <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                {[
+                  { icon: "🪄", method: "Invisible Clip-In", time: "5–10 mins", wear: "1 day–daily" },
+                  { icon: "📎", method: "Classic Clip-In", time: "5–10 mins", wear: "1 day–daily" },
+                  { icon: "🔹", method: "Clip-In Filler", time: "2–3 mins", wear: "Targeted areas" },
+                ].map((m) => (
+                  <div key={m.method} className="border rounded-xl p-3">
+                    <div className="text-2xl mb-1">{m.icon}</div>
+                    <div className="font-semibold mb-1">{m.method}</div>
+                    <div className="text-xs text-muted-foreground">Apply: {m.time}</div>
+                    <div className="text-xs text-muted-foreground">Wear: {m.wear}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Step-by-step */}
+              {[
+                {
+                  n: 1,
+                  title: "Prepare Your Hair",
+                  body: "Start with clean, dry, product-free hair. Blow-dry straight for the smoothest blend. Avoid heavy leave-ins or serums near the roots — these can cause clips to slip throughout the day. Fine hair tip: a light mist of dry shampoo or hairspray at the roots creates extra texture for the clips to grip.",
+                },
+                {
+                  n: 2,
+                  title: "Create Your First Section",
+                  body: "Using a tail comb, create a clean horizontal parting from ear to ear at the nape. Clip or tie all hair above the parting neatly out of the way. The section should be wide enough to cover the full width of your largest weft (typically 8–9 cm).",
+                },
+                {
+                  n: 3,
+                  title: "Backcomb for Grip (Optional)",
+                  body: "For longer-lasting hold, lightly backcomb the roots of the exposed section — just 1–2 cm at the scalp. This creates texture for the clip teeth to anchor into without any damage. This step is especially helpful for fine or silky hair.",
+                },
+                {
+                  n: 4,
+                  title: "Open, Place & Snap Closed",
+                  body: "Open all clips on the weft. Position the weft against your scalp at the parting line, centred horizontally. Press each clip firmly downward into the hair section until you hear/feel a snap. Start with the centre clip, then the outer clips — this prevents the weft from shifting. For Invisible Clip-Ins, ensure the flat silicone base is face-down against the scalp.",
+                },
+                {
+                  n: 5,
+                  title: "Build Row by Row",
+                  body: "Release 3–4 cm of hair above the first section. Create another parting, then attach the next weft. Repeat working upward — typically 3–5 rows for a full head. Use narrower 1-clip and 2-clip wefts at the temples and sides. Leave 4–5 cm of natural hair at the very top so it falls naturally over all the wefts.",
+                },
+                {
+                  n: 6,
+                  title: "Blend & Style",
+                  body: "Let down the top section and brush through gently from mid-shaft to ends. Blend using a curling iron or straightener — curling both your natural hair and the extensions together creates the most seamless finish. A final light mist of shine spray pulls everything together.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold">{step.n}</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">{step.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Time cards */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">⏱ Full set application</div>
+                  <div className="text-muted-foreground">5–10 minutes once practised</div>
+                </div>
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">🔄 Daily removal</div>
+                  <div className="text-muted-foreground">Remove nightly — do not sleep in clip-ins</div>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Create A Foundation</h4>
-                  <p className="text-muted-foreground">Gently backcomb the hair one inch from your scalp. You can also use dry shampoo or hair spray to create a more secure foundation.</p>
-                </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Pro Tip:</strong> For Invisible Clip-Ins, the silicone base should sit flush against your scalp with no visible ridge. If you can see the weft edge, the section is too thin — add a little more natural hair over the top. Many stylists recommend starting with the seamless style at the crown where visibility is highest.
               </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Clip Them In</h4>
-                  <p className="text-muted-foreground">Choose a 2-clip or 3-clip weft and gently open each clip. Bring the clips into the foundation and close them. Leave a 1/2-1" perimeter of natural hair around your hairline.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Repeat Your Sectioning</h4>
-                  <p className="text-muted-foreground">Keep clipping in the wefts row by row. Separate each row with 1-3 inches of natural hair.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Remaining Wefts</h4>
-                  <p className="text-muted-foreground">Use the remaining 2-clip wefts on the sides of your head, placing them about four fingers above your ears.</p>
-                </div>
-              </div>
+            </div>
+            ) : (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply Extensions</h3>
+              <p className="text-muted-foreground">Contact us for application guidance for your specific product type.</p>
             </div>
             )}
           </TabsContent>
@@ -1388,6 +1518,79 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 💡 <strong>Not sure which weft type suits your client?</strong> WhatsApp us a photo — we'll advise on the perfect match, weight and length for free.
               </div>
             </div>
+            ) : product.productType.toLowerCase().includes('clip') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding Your Perfect Clip-In Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Invisible Clip-In", desc: "The ultra-flat silicone or PU base lies flush against the scalp with zero visible weft line — even in the finest ponytail. Invisible Clip-Ins are the best-in-class solution for adding volume to delicate hair without any obvious attachment points." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Seamless or Classic", desc: "Medium hair is the most forgiving. Invisible Clip-Ins give a premium undetectable finish; Classic Clip-Ins offer reliable hold with great volume at a more accessible price. Either works beautifully for daily wear." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "✅ Classic Clip-In", desc: "Thick hair provides excellent natural coverage for the weft base — classic clip-ins with stronger clips are the practical choice. Multiple rows deliver dramatic volume and length that blends naturally." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-emerald-700 mb-2">{item.verdict}</div>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* How many pieces */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many pieces / grams do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add subtle volume (no length)", weight: "80–100g (5–7 pieces)", look: "Everyday fullness" },
+                    { goal: "Volume + moderate length gain", weight: "120–160g (7–9 pieces)", look: "Noticeable transformation" },
+                    { goal: "Full glamour transformation", weight: "160–220g (9–10 pieces)", look: "Maximum impact" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-3 px-5 py-3 text-sm">
+                      <span className="text-muted-foreground">{row.goal}</span>
+                      <span className="font-medium">{row.weight}</span>
+                      <span className="text-muted-foreground">{row.look}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Length guide */}
+              <div>
+                <h4 className="font-semibold mb-3">Length Guide</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { len: '14"', effect: "Chin to collarbone" },
+                    { len: '16"', effect: "Shoulder length" },
+                    { len: '18"', effect: "Collar bone / mid-back" },
+                    { len: '20"', effect: "Mid-back" },
+                    { len: '22"', effect: "Lower back" },
+                    { len: '24"', effect: "Waist length" },
+                  ].map((item) => (
+                    <div key={item.len} className="border rounded-xl p-3 text-center text-sm">
+                      <div className="text-xl font-bold mb-1">{item.len}</div>
+                      <div className="text-xs text-muted-foreground">{item.effect}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3">💡 Extension length is measured from the weft base. Your starting hair length affects the final result — the longer your natural hair, the closer the extension will blend to the stated length.</p>
+              </div>
+
+              {/* Clip-In style callout */}
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5">
+                <div className="font-semibold mb-2">📎 Which Clip-In Style is Right for You?</div>
+                <div className="space-y-2 text-sm text-emerald-900">
+                  <div className="flex gap-2"><span>✅</span><span><strong>Invisible / Seamless Clip-In:</strong> Fine hair, visible partings, wearing hair up regularly, special occasions — the most undetectable result</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Classic Clip-In Set:</strong> Everyday volume and length, all hair types, first-time extension wearers — reliable, easy and beautiful</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Clip-In Filler / Topper:</strong> Crown thinning, sparse temples, hairline coverage or mixing with a semi-permanent set for targeted density</span></div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Not sure how many pieces you need?</strong> WhatsApp us a photo in natural light — our D.S HAIR extension specialists will recommend the perfect set weight, length and style for free, drawing on 19 years of professional experience.
+              </div>
+            </div>
             ) : (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
@@ -1572,6 +1775,53 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </>
+              ) : product.productType.toLowerCase().includes('clip') ? (
+                <>
+                  {/* Before/After images */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/clip/clip-result-01.jpg" alt="Clip-In Extensions Result 1" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                    </div>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/clip/clip-result-02.jpg" alt="Clip-In Extensions Result 2" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                    </div>
+                  </div>
+
+                  {/* Stats bar */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "6–12", unit: "months", label: "Set lifespan (with care)" },
+                      { stat: "5–10", unit: "minutes", label: "Average application time" },
+                      { stat: "0", unit: "damage", label: "Zero chemical or heat bond" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-emerald-600 font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer reviews */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Amy L.", role: "Daily wearer, Manchester", text: "Loves the clip ins and the service was great. I bought the 20\" Invisible set. Hair is easy to work with and I am now wearing them daily. You literally cannot see the weft line — even when I pull it into a ponytail. Love love love!!!", stars: 5 },
+                      { name: "Sarah K.", role: "First-time extension user, London", text: "I was worried they would look fake but the colour match was perfect. The seamless base is incredible — no visible tracks, no bulk. My friends were shocked when I told them. Will be ordering more shades!", stars: 5 },
+                      { name: "Olivia M.", role: "Special occasions wearer, Leeds", text: "The quality is genuinely outstanding. I've tried cheaper brands before and the difference is night and day — these are thick, shiny, and tangle-free even after styling. Worth every penny for the Remy quality.", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                        <p className="text-xs text-muted-foreground">{review.role}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
               ) : (
                 <>
                   {/* Before/After Image */}
@@ -1718,6 +1968,33 @@ export function ProductDetail({ product }: ProductDetailProps) {
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
+                  </div>
+                </div>
+              ) : product.productType.toLowerCase().includes('clip') ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — double-drawn, cuticle-aligned for zero tangling",
+                      "Available in Invisible (seamless), Classic & Clip-In Filler styles",
+                      "Invisible Clip-In: ultra-flat silicone/PU base — zero visible weft line",
+                      "Silicone-lined pressure clips — grip without slipping, zero chemical bond",
+                      "No heat, no glue, no chemicals — zero damage to natural hair",
+                      "Wears 6–12 months with proper care — hundreds of wears per set",
+                      "Can be washed, blow-dried, curled and straightened like natural hair",
+                      "Full set applied in 5–10 minutes — no salon visit required",
+                      "Invisible in ponytails, updos and braids — especially Seamless style",
+                      "31 colour shades + balayage/ombre options for every natural tone",
+                      "Remove nightly — zero long-term commitment, total flexibility",
+                      "Heat-safe up to 180°C — style freely with heat protectant applied",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-sm text-emerald-900">
+                    <strong>📎 D.S HAIR Quality Promise:</strong> Every clip-in set is individually inspected for hair weight, clip strength and cuticle alignment before dispatch. Our Invisible / Seamless range uses a premium ultra-flat base engineered for flawless concealment. Each set is shed-tested and weight-verified to our strict 19-year professional standard — so your clients receive consistent, salon-quality results every time.
                   </div>
                 </div>
               ) : (
@@ -1885,6 +2162,48 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     {
                       q: "Can I wear them in a ponytail or updo?",
                       a: "Absolutely — especially with Genius Weft. The beads sit flat and close to the scalp, making them undetectable in high ponytails, braids and buns. One of the biggest perks of weft over clip-ins!",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : product.productType.toLowerCase().includes('clip') ? (
+                <>
+                  {[
+                    {
+                      q: "What types of clip-in extensions does D.S HAIR offer?",
+                      a: "We offer three clip-in styles: Invisible / Seamless Clip-Ins (ultra-flat silicone or PU base, zero visible weft line — our blue-ocean pick), Classic Clip-In Wefts (durable cotton base, strong clips, suitable for all hair types), and Clip-In Fillers / Toppers (narrow wefts for targeted volume at temples, crown and hairline). All are 100% double-drawn Remy human hair.",
+                    },
+                    {
+                      q: "What are Invisible / Seamless Clip-Ins and why are they special?",
+                      a: "Invisible Clip-Ins feature an ultra-thin flat silicone or polyurethane base that mimics the scalp — the weft base itself disappears against the skin, so hair appears to grow directly from it. Unlike standard clip-ins where the fabric weft can create a visible ridge, seamless clip-ins lie completely flat. This makes them undetectable even in fine hair, ponytails and updos. They are the fastest-growing clip-in category in UK salons and our top recommendation for fine-haired clients.",
+                    },
+                    {
+                      q: "Are clip-in extensions suitable for fine or thin hair?",
+                      a: "Yes — particularly our Invisible / Seamless Clip-Ins. The ultra-flat base places minimal weight per section and creates no visible bump. Key tips for fine hair: use slightly thinner sections per weft, apply dry shampoo to roots for extra grip, and choose 80–120g rather than a heavy full set. Clip-In Fillers are also ideal for targeted crown or hairline density.",
+                    },
+                    {
+                      q: "How long do clip-in extensions last?",
+                      a: "With proper care, a quality set of D.S HAIR Remy clip-ins lasts 6–12 months of regular wear. Unlike semi-permanent methods, there is no 'removal' appointment — just clip out nightly and store properly. Key care factors: wash only when needed (every 15–20 wears), brush gently from ends upward, store in the provided pouch, and avoid heat above 180°C without a protectant.",
+                    },
+                    {
+                      q: "Do clip-in extensions damage natural hair?",
+                      a: "When applied correctly, clip-ins cause zero damage to natural hair. The silicone-lined clips grip without pulling or cutting the hair shaft. The key rules: never clip into the same section repeatedly without moving the row slightly; don't sleep in them; don't clip into the very front hairline; and use the correct weight for your hair density (over-loading fine hair puts unnecessary tension on the roots).",
+                    },
+                    {
+                      q: "How do I care for D.S HAIR clip-in extensions?",
+                      a: "Wash with a sulphate-free shampoo only when needed — typically every 15–20 wears. Do not scrub; gently work the shampoo through the weft. Rinse thoroughly, apply a lightweight conditioner from mid-shaft to ends (not the weft base or clips), and air dry flat or hang on an extension holder. Apply a heat protectant before any hot tool styling (max 180°C). Brush from ends upward with a loop brush. Store in a dry, dust-free pouch or box.",
+                    },
+                    {
+                      q: "Can I wear clip-ins in a ponytail, updo or braid?",
+                      a: "Yes — with the right style. Invisible / Seamless Clip-Ins are specifically designed for this: the flat base conceals completely when the hair is pulled back. With classic clip-ins, position the wefts slightly lower than you would wear the ponytail, so the upper natural hair fully covers them. Clip-In Fillers at the crown are also undetectable in high ponytails.",
+                    },
+                    {
+                      q: "Can I heat-style, wash or colour D.S HAIR clip-ins?",
+                      a: "All D.S HAIR clip-ins are 100% human hair — they can be washed, blow-dried, curled and straightened just like your natural hair. Always apply a heat protectant and keep tools below 180°C to preserve the hair's integrity. For colouring: toning down is possible with professional help; bleaching or lightening pre-coloured shades is not recommended as it significantly shortens the lifespan.",
                     },
                   ].map((item) => (
                     <div key={item.q} className="border-b pb-5">
