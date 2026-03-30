@@ -13,27 +13,21 @@ const footerLinks = {
     { title: "Professional Extensions", href: "/collections/professional" },
     { title: "Hair Care", href: "/collections/hair-care" },
     { title: "Accessories", href: "/collections/accessories" },
-    { title: "Gift Cards", href: "/gift-cards" },
   ],
   help: [
     { title: "Contact Us", href: "/contact" },
     { title: "FAQs", href: "/faqs" },
     { title: "Shipping & Returns", href: "/shipping-returns" },
-    { title: "Track Order", href: "/track-order" },
-    { title: "Size Guide", href: "/size-guide" },
+    { title: "Colour Match", href: "/colour-match" },
   ],
   about: [
     { title: "Our Story", href: "/about" },
     { title: "Salon Partners", href: "/salon-partners" },
     { title: "Blog", href: "/blog" },
-    { title: "Careers", href: "/careers" },
-    { title: "Press", href: "/press" },
   ],
   services: [
     { title: "Find a Stylist", href: "/find-stylist" },
-    { title: "Education", href: "/education" },
     { title: "Colour Match", href: "/colour-match" },
-    { title: "Book Consultation", href: "/consultation" },
   ],
 }
 

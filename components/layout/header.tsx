@@ -26,36 +26,30 @@ const diyExtensions = [
   { title: "Fringes & Bangs", href: "/collections/fringes-bangs", description: "Transform your look instantly" },
 ]
 
-// 2. Professional - 包含 Tape-In, K-tips, Weft Extensions, Topper, Butterfly
+// 2. Professional - 包含 Tape-In, K-tips, Weft Extensions, Butterfly
 const proExtensions = [
   { title: "Tape-In", href: "/collections/tape-in", description: "Professional grade tape-ins" },
   { title: "K-Tip Extensions", href: "/collections/k-tip-extensions", description: "Keratin bonded tips" },
   { title: "Nano Extensions", href: "/collections/nano-extensions", description: "Nano ring extensions for fine hair" },
-  { title: "Topper", href: "/collections/topper", description: "Hair loss solution" },
-  { title: "Butterfly Extensions", href: "/collections/butterfly-extensions", description: "Lightweight volume" },
+  { title: "Butterfly Weft", href: "/collections/butterfly-weft", description: "Lightweight volume" },
 ]
 
 // 3. Hair Care
 const hairCare = [
-  { title: "Shampoo & Conditioner", href: "/collections/hair-care", description: "Sulfate-free formulas" },
-  { title: "Hair Masks", href: "/collections/hair-masks", description: "Deep conditioning treatments" },
-  { title: "Hair Oils", href: "/collections/hair-oils", description: "Leave-in treatments" },
-  { title: "Styling Products", href: "/collections/styling-products", description: "Heat protection & more" },
+  { title: "All Hair Care", href: "/collections/hair-care", description: "Sulfate-free formulas" },
+  { title: "Care Products", href: "/collections/care-products", description: "Extension care essentials" },
 ]
 
 // 4. Accessories
 const accessories = [
-  { title: "Application Tools", href: "/collections/accessories", description: "Brushes, clips & more" },
+  { title: "Accessories", href: "/collections/accessories", description: "Brushes, clips & more" },
   { title: "Care Products", href: "/collections/care-products", description: "Extension care essentials" },
-  { title: "Bags & Cases", href: "/collections/bags-cases", description: "Storage solutions" },
 ]
 
 // 5. Services
 const services = [
   { title: "Find a Stylist", href: "/find-stylist", description: "Locate certified professionals near you" },
-  { title: "Education", href: "/education", description: "Professional training programs" },
   { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
-  { title: "Consultation", href: "/consultation", description: "Book a consultation" },
 ]
 
 export function Header() {

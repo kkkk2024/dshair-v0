@@ -3022,7 +3022,7 @@ export const collections: Collection[] = [
   },
 
   {
-    id: "9",
+    id: "13",
     name: "Fringes & Bangs",
     slug: "fringes-bangs",
     description: "Transform your look with our premium fringe pieces",
