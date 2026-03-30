@@ -19,7 +19,48 @@ async function fetchProducts() {
   }
 }
 
-// Fallback static products if API fails
+// Featured products with REAL IMAGES - hardcoded for hero section
+// Using actual product photos from desktop
+const featuredProducts = [
+  {
+    id: "featured-1",
+    name: "Invisible Tape-In",
+    price: 159,
+    image: "/images/featured/invisible-tape-in.jpg",
+    badge: "Blue Ocean Pick",
+    rating: 4.9,
+    reviews: 1847,
+    colors: 28,
+    slug: "tape-in",
+    href: "/collections/tape-in", // links to collection page
+  },
+  {
+    id: "featured-2",
+    name: "K-Tip Extensions",
+    price: 189,
+    image: "/images/featured/k-tip-extension.jpg",
+    badge: "Professional Fave",
+    rating: 4.8,
+    reviews: 2156,
+    colors: 32,
+    slug: "k-tip-extensions",
+    href: "/collections/k-tip-extensions",
+  },
+  {
+    id: "featured-3",
+    name: "Nano Extensions",
+    price: 179,
+    image: "/images/featured/nano-extension.jpg",
+    badge: "Fine Hair Solution",
+    rating: 4.9,
+    reviews: 1287,
+    colors: 24,
+    slug: "nano-extensions",
+    href: "/collections/nano-extensions",
+  },
+]
+
+// API-sourced products (fills 4th slot dynamically)
 const fallbackProducts = [
   {
     id: "1",
@@ -32,6 +73,7 @@ const fallbackProducts = [
     reviews: 2847,
     colors: 24,
     slug: "silk-seam-clip-in",
+    href: "/products/silk-seam-clip-in",
   },
   {
     id: "2",
@@ -43,6 +85,7 @@ const fallbackProducts = [
     reviews: 1923,
     colors: 32,
     slug: "classic-clip-in",
+    href: "/products/classic-clip-in",
   },
   {
     id: "3",
@@ -54,6 +97,7 @@ const fallbackProducts = [
     reviews: 856,
     colors: 18,
     slug: "wrap-ponytail",
+    href: "/products/wrap-ponytail",
   },
   {
     id: "4",
@@ -65,11 +109,12 @@ const fallbackProducts = [
     reviews: 1247,
     colors: 28,
     slug: "professional-tape-in",
+    href: "/products/professional-tape-in",
   },
 ]
 
 export function FeaturedProducts() {
-  const [products, setProducts] = useState(fallbackProducts)
+  const [apiProducts, setApiProducts] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -86,14 +131,21 @@ export function FeaturedProducts() {
           reviews: Math.floor(Math.random() * 500) + 100,
           colors: p.variants?.length || 10,
           slug: p.handle,
+          href: `/products/${p.handle}`,
         }))
-        setProducts(mapped)
+        setApiProducts(mapped)
       }
       setLoading(false)
     }).catch(() => {
       setLoading(false)
     })
   }, [])
+
+  // Build display products: 3 hardcoded real-image products + 1 from API
+  const displayProducts = [
+    ...featuredProducts,
+    ...(apiProducts.length > 0 ? apiProducts.slice(0, 1) : fallbackProducts.slice(0, 1)),
+  ]
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-GB", {
@@ -120,8 +172,8 @@ export function FeaturedProducts() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product: any) => (
-            <Link key={product.id} href={`/products/${product.slug}`} className="group">
+          {displayProducts.map((product: any) => (
+            <Link key={product.id} href={product.href || `/products/${product.slug}`} className="group">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-muted mb-4">
                 <Image
                   src={product.image}
