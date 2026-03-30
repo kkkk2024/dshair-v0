@@ -2954,7 +2954,7 @@ export const collections: Collection[] = [
     id: "1",
     name: "All Products",
     slug: "all",
-    description: "Browse our complete collection of premium hair extensions",
+    description: "Shop the UK's most trusted wholesale hair extension collection. 100% Remy human hair — K-Tip, Tape-In, Weft, Clip-In & Nano. Professional trade pricing. 19 years supplying UK salons.",
     image: "/images/collection-all.jpg",
   },
 
@@ -2962,7 +2962,7 @@ export const collections: Collection[] = [
     id: "2",
     name: "DIY Extensions",
     slug: "diy",
-    description: "Professional-quality extensions you can apply at home",
+    description: "Professional-quality hair extensions for DIY application at home. 100% Remy human hair clip-ins and tape-ins with step-by-step guides. Instant transformation — no salon appointment needed.",
     image: "/images/collection-diy.jpg",
   },
 
@@ -2970,7 +2970,7 @@ export const collections: Collection[] = [
     id: "3",
     name: "Professional Extensions",
     slug: "professional",
-    description: "Salon-grade extensions for professional stylists",
+    description: "Salon-grade hair extensions for professional stylists. Keratin bonds, nano rings, tape-in & weft — all 100% Remy human hair. Trade accounts available. Same-day UK shipping.",
     image: "/images/collection-professional.jpg",
   },
 
@@ -2978,7 +2978,7 @@ export const collections: Collection[] = [
     id: "4",
     name: "Clip-In Extensions",
     slug: "clip-in",
-    description: "Easy clip-in application for instant transformation",
+    description: "Premium clip-in hair extensions in 100% Remy human hair. Invisible seamless clips for zero damage. 40+ colours, 16\"–26\" lengths. UK stock with free colour matching service.",
     image: "/images/collection-clipin.jpg",
   },
 
@@ -2986,7 +2986,7 @@ export const collections: Collection[] = [
     id: "5",
     name: "Tape-In Extensions",
     slug: "tape-in",
-    description: "Seamless tape-in extensions for a natural look",
+    description: "Seamless tape-in hair extensions for a natural look. Ultra-thin invisible PU base, pre-taped for fast application. 100% Remy human hair. Perfect for fine hair. UK salon wholesale available.",
     image: "/images/collection-tapein.jpg",
   },
 
@@ -2994,7 +2994,7 @@ export const collections: Collection[] = [
     id: "6",
     name: "Ponytails",
     slug: "ponytails",
-    description: "Instant volume and length with our premium ponytails",
+    description: "Instant transformation with our premium human hair ponytail extensions. Wrap-around and clip-in styles. 100% Remy human hair in 40+ colours. Same-day UK dispatch.",
     image: "/images/collection-ponytail.jpg",
   },
 
@@ -3002,7 +3002,7 @@ export const collections: Collection[] = [
     id: "8",
     name: "Weft Extensions",
     slug: "weft",
-    description: "Premium weft extensions for maximum volume",
+    description: "Hand-tied weft and machine weft extensions in 100% Remy human hair. Butterfly weft, Genius weft & super weft available. Professional wholesale pricing for UK salons.",
     image: "/images/collection-weft.jpg",
   },
 
@@ -3010,14 +3010,14 @@ export const collections: Collection[] = [
     id: "9",
     name: "K-Tip Extensions",
     slug: "k-tip-extensions",
-    description: "Premium keratin-tipped hair extensions",
+    description: "Professional K-Tip hair extensions (keratin bond). 100% Remy human hair in 50+ shades including balayage and rooted. 0.5g–1g bond options for fine to thick hair. UK salon wholesale supplier.",
     image: "/images/collection-ktip.jpg",
   },
   {
     id: "10",
     name: "Nano Extensions",
     slug: "nano-extensions",
-    description: "Nano ring hair extensions for fine hair",
+    description: "Nano ring hair extensions — the UK's most requested method for fine hair. Ultra-tiny 0.5g bonds, 100% Remy human hair. Less damage, more natural. Professional trade pricing available.",
     image: "/images/collection-ktip.jpg",
   },
 
@@ -3025,7 +3025,7 @@ export const collections: Collection[] = [
     id: "13",
     name: "Fringes & Bangs",
     slug: "fringes-bangs",
-    description: "Transform your look with our premium fringe pieces",
+    description: "Transform your look instantly with our premium fringe and bang extensions. 100% Remy human hair in blunt cut, choppy and wispy styles. 20+ colours. UK stockist.",
     image: "/images/collection-fringes.jpg",
   },
 
@@ -3033,7 +3033,7 @@ export const collections: Collection[] = [
     id: "7",
     name: "Hair Care",
     slug: "hair-care",
-    description: "Premium hair care products to maintain your extensions",
+    description: "Professional hair extension aftercare products. Sulfate-free shampoos, extension-safe brushes, leave-in conditioners and bond maintenance. Designed for tape-in, K-Tip and weft extensions.",
     image: "/images/collection-haircare.jpg",
   },
 
@@ -3041,7 +3041,7 @@ export const collections: Collection[] = [
     id: "11",
     name: "Butterfly Weft Extensions",
     slug: "butterfly-weft",
-    description: "Revolutionary butterfly weft extensions for natural volume and coverage",
+    description: "Revolutionary butterfly weft extensions — the UK's salon favourite for natural volume. Ultra-thin 0.5mm base, trimmable design. 100% Remy human hair. Professional trade pricing available.",
     image: "/images/collection-butterfly.jpg",
   },
 
@@ -3049,7 +3049,7 @@ export const collections: Collection[] = [
     id: "12",
     name: "Butterfly Extensions",
     slug: "butterfly-extensions",
-    description: "Premium butterfly weft hair extensions",
+    description: "Premium butterfly weft hair extensions — ultra-thin 0.5mm base for a seamless, natural finish. 100% Remy human hair in 50+ shades. UK's leading wholesale supplier for professional salons.",
     image: "/images/collection-butterfly.jpg",
   },
 

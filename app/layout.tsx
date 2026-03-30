@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
+import { OrganizationJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
 
 const inter = Inter({ 
@@ -89,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="font-sans antialiased">
+        <OrganizationJsonLd />
         {children}
         <WhatsAppButton />
         <Analytics />

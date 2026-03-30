@@ -29,10 +29,13 @@ export async function generateMetadata({ params }: ProductPageProps) {
   }
 
   return {
-    title: `${product.name} | D.S HAIR & BEAUTY`,
+    title: `${product.name} | Remy Human Hair | D.S HAIR & BEAUTY`,
     description: product.description,
+    alternates: {
+      canonical: `https://www.dshairbeauty.co.uk/products/${product.slug}`,
+    },
     openGraph: {
-      title: `${product.name} | D.S HAIR & BEAUTY`,
+      title: `${product.name} | D.S HAIR & BEAUTY UK`,
       description: product.description,
       images: product.images[0] ? [{ url: product.images[0], width: 800, height: 1000, alt: product.name }] : [],
       type: 'website',

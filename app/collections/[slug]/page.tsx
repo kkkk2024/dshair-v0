@@ -21,16 +21,43 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: CollectionPageProps) {
   const { slug } = await params
   const collection = getCollectionBySlug(slug)
-  
+
   if (!collection) {
     return {
       title: "Collection Not Found | D.S HAIR & BEAUTY",
     }
   }
 
+  // SEO-optimised titles per collection
+  const titleMap: Record<string, string> = {
+    'all': 'Hair Extensions Wholesale UK | 100% Remy Human Hair | D.S HAIR & BEAUTY',
+    'diy': 'DIY Hair Extensions | Clip-In & Tape-In | D.S HAIR & BEAUTY',
+    'professional': 'Professional Hair Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
+    'clip-in': 'Clip-In Hair Extensions UK | 100% Remy Human Hair | D.S HAIR & BEAUTY',
+    'tape-in': 'Tape-In Hair Extensions UK | Invisible Seamless | D.S HAIR & BEAUTY',
+    'ponytails': 'Hair Ponytail Extensions | Human Hair | D.S HAIR & BEAUTY',
+    'weft': 'Weft Hair Extensions UK | Hand-Tied & Machine | D.S HAIR & BEAUTY',
+    'k-tip-extensions': 'K-Tip Hair Extensions UK | Keratin Bond | D.S HAIR & BEAUTY',
+    'nano-extensions': 'Nano Ring Hair Extensions UK | Fine Hair | D.S HAIR & BEAUTY',
+    'fringes-bangs': 'Hair Fringes & Bangs Extensions | Human Hair | D.S HAIR & BEAUTY',
+    'hair-care': 'Hair Extension Care Products UK | Sulfate-Free | D.S HAIR & BEAUTY',
+    'butterfly-weft': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
+    'butterfly-extensions': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
+  }
+
   return {
-    title: `${collection.name} | D.S HAIR & BEAUTY`,
+    title: titleMap[slug] || `${collection.name} | D.S HAIR & BEAUTY`,
     description: collection.description,
+    alternates: {
+      canonical: `https://www.dshairbeauty.co.uk/collections/${slug}`,
+    },
+    openGraph: {
+      title: titleMap[slug] || `${collection.name} | D.S HAIR & BEAUTY`,
+      description: collection.description,
+      url: `https://www.dshairbeauty.co.uk/collections/${slug}`,
+      locale: 'en_GB',
+      siteName: 'D.S HAIR & BEAUTY',
+    },
   }
 }
 

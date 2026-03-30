@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /account/
+Disallow: /_next/
+Disallow: /admin/
+
+# AI/Chat crawlers — allow them to help with discovery
+# Disallowing AI crawlers may hurt visibility in AI search (Google SGE, Perplexity, etc.)
+
+Host: https://www.dshairbeauty.co.uk
+Sitemap: https://www.dshairbeauty.co.uk/sitemap.xml
