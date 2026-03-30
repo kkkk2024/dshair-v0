@@ -470,6 +470,89 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   <strong>✨ Why Stylists Choose Butterfly Weft:</strong> The flexible base installs faster, blends more naturally and requires fewer adjustments than traditional wefts — giving stylists more efficiency and clients a more luxurious result. Once experienced, most salons never go back.
                 </div>
               </div>
+            ) : product.productType.toLowerCase().includes('tape') ? (
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">Tape-In Hair Extensions — The Salon Favourite for Invisible Length</h2>
+
+                {/* Hero image */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/tape/tape-hero.jpg"
+                    alt="Tape-In Hair Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover max-h-80"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  Tape-In extensions are one of the fastest, flattest and most comfortable semi-permanent methods available today. Ultra-thin polyurethane (PU) wefts — pre-coated with medical-grade adhesive — are sandwiched around a thin slice of your natural hair, lying completely flat against the scalp. The result is a seamless, virtually undetectable finish that your clients will love to live in.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  All D.S HAIR tape-ins are crafted from <strong>100% double-drawn Remy human hair</strong>, hand-selected for consistent density from root to tip. Backed by 19+ years of professional supply expertise, every weft is rigorously tested before dispatch.
+                </p>
+
+                {/* How it works */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">How Tape-In Extensions Work</div>
+                  <div className="px-5 py-4 space-y-3 text-sm text-muted-foreground">
+                    <div className="flex gap-3">
+                      <span className="text-xl">🩹</span>
+                      <p><strong className="text-foreground">Sandwich Bonding.</strong> Each tab consists of two ultra-thin PU wefts coated with skin-safe adhesive. A 2–3mm slice of natural hair is sandwiched between the two tabs and pressed firmly together — no heat, no chemicals, no damage to the hair shaft.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">🪄</span>
+                      <p><strong className="text-foreground">Micro-Thin Profile.</strong> The polyurethane base is only 0.5–1mm thick — one of the flattest profiles of any extension method. It lies flush against the scalp, making it virtually invisible even when the hair is pinned up.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">♻️</span>
+                      <p><strong className="text-foreground">Re-tapeable & Reusable.</strong> When the hair grows out (every 6–8 weeks), a tape remover solution dissolves the bond cleanly. Fresh adhesive tabs are applied and the same weft re-installed — the hair itself can be reused 2–3 times, making this a cost-effective investment.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tape-In types */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Choose Your Tape-In Style</div>
+                  <div className="divide-y text-sm">
+                    {[
+                      { type: "Invisible / Seamless Tape-In", tag: "Blue Ocean Pick", thickness: "~0.5 mm", best: "Fine to medium hair", note: "Skin-tone polyurethane base mimics the scalp — hair appears to grow directly from the tab. The most undetectable tape-in on the market and a growing favourite in UK salons." },
+                      { type: "Standard Tape-In Weft", tag: "Most Popular", thickness: "~0.8 mm", best: "All hair types", note: "The classic, trusted salon choice. Fast to apply, reliable hold, excellent volume. Perfect for clients wanting a quick full-head transformation." },
+                      { type: "Mini Tape-In", tag: "Precision Fit", thickness: "~0.5 mm", best: "Fine hair, hairline work", note: "Half the width of a standard tab — designed for temples, hairlines and sparse areas where precision placement is key." },
+                    ].map((row) => (
+                      <div key={row.type} className="px-5 py-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold">{row.type}</span>
+                          <span className="text-xs bg-rose-100 text-rose-800 px-2 py-0.5 rounded-full">{row.tag}</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mb-1">{row.note}</p>
+                        <div className="flex gap-4 text-xs text-muted-foreground">
+                          <span>Base thickness: {row.thickness}</span>
+                          <span>Best for: {row.best}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Three highlights */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: "👁️", title: "Invisible Finish", body: "0.5mm ultra-flat PU base lies flush against the scalp. Undetectable in ponytails, braids and updos." },
+                    { icon: "⚡", title: "Fast Application", body: "A full head (40–60 tabs) installed in under 90 minutes — the quickest professional extension method." },
+                    { icon: "♻️", title: "Re-tapeable Hair", body: "Quality Remy wefts last 6–12 months with proper care — re-tape every 6–8 weeks and reuse the hair 2–3 times." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-sm text-rose-900">
+                  <strong>✨ Why Salons Love Tape-Ins:</strong> Fastest application of any semi-permanent method, minimal tool investment, immediate natural results — and clients return every 6–8 weeks for a move-up. A reliable income stream and a high client-satisfaction service. D.S HAIR tapes are trusted by salons across the UK backed by 19 years of quality assurance.
+                </div>
+              </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
               <div className="max-w-3xl space-y-6">
                 <h2 className="text-2xl font-bold">Weft Hair Extensions — Salon's Most Versatile Method</h2>
@@ -771,6 +854,89 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
                 💡 <strong>Stylist Tip:</strong> The Butterfly Weft's flexible base means it naturally follows the head's curve — spend less time forcing the weft to lie flat, and more time perfecting the blend. Many stylists report 20–30% faster installation compared to standard wefts.
+              </div>
+            </div>
+            ) : product.productType.toLowerCase().includes('tape') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply Tape-In Hair Extensions</h3>
+
+              <div className="bg-rose-50 border border-rose-200 rounded-xl p-4">
+                <p className="text-sm text-rose-800">
+                  <strong>⚠️ Professional Installation Recommended.</strong> While tape-ins are the most straightforward semi-permanent method, we strongly recommend professional fitting for the best bond, longest wear and zero risk to your natural hair.
+                </p>
+              </div>
+
+              {/* Installation method selector */}
+              <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                {[
+                  { icon: "🩹", method: "Standard Tape-In", time: "60–90 mins", hold: "6–8 weeks" },
+                  { icon: "👁️", method: "Invisible Tape-In", time: "60–90 mins", hold: "6–8 weeks" },
+                  { icon: "🔹", method: "Mini Tape-In", time: "30–45 mins", hold: "6–8 weeks" },
+                ].map((m) => (
+                  <div key={m.method} className="border rounded-xl p-3">
+                    <div className="text-2xl mb-1">{m.icon}</div>
+                    <div className="font-semibold mb-1">{m.method}</div>
+                    <div className="text-xs text-muted-foreground">Install: {m.time}</div>
+                    <div className="text-xs text-muted-foreground">Lasts: {m.hold}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Step-by-step */}
+              {[
+                {
+                  n: 1,
+                  title: "Prepare the Hair",
+                  body: "Wash with a sulphate-free shampoo and blow-dry completely straight. Do NOT use conditioner at the roots — any oil or silicone residue will weaken the tape bond. Hair must be 100% dry and product-free before starting.",
+                },
+                {
+                  n: 2,
+                  title: "Create Your First Section",
+                  body: "Starting at the nape, use a tail comb to create a clean horizontal parting approximately 1cm from the hairline. Clip the upper hair neatly out of the way. The section should be thin enough to hide the tab — roughly 2–3mm of hair.",
+                },
+                {
+                  n: 3,
+                  title: "Apply the First Tab (Below)",
+                  body: "Peel the protective film from one tape-in weft. Slide it under the section, adhesive side up, positioning the tape edge approximately 0.5cm from the scalp — never right at the root. Press firmly for 10–15 seconds.",
+                },
+                {
+                  n: 4,
+                  title: "Sandwich & Press",
+                  body: "Take a second matching weft, peel the film, and place it directly on top of the same section — adhesive side down, sandwiching your natural hair between the two tabs. Press together firmly for 30 seconds. Use flat-jaw pliers or a bond tool for extra pressure if available.",
+                },
+                {
+                  n: 5,
+                  title: "Work Upward, Blend & Finish",
+                  body: "Move upward row by row, leaving 2–3cm between each row to allow natural movement. Complete the installation from nape to occipital bone, then from ear to ear. Once finished, flat-iron lightly over the bonds to activate the heat-sensitive adhesive for a stronger hold. Trim and blend to shape.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">{step.title}</h4>
+                    <p className="text-muted-foreground">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Time & maintenance cards */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="border rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold mb-1">60–90</div>
+                  <div className="text-xs text-rose-600 font-medium">minutes</div>
+                  <div className="text-xs text-muted-foreground mt-1">Full head application time</div>
+                </div>
+                <div className="border rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold mb-1">6–8</div>
+                  <div className="text-xs text-rose-600 font-medium">weeks</div>
+                  <div className="text-xs text-muted-foreground mt-1">Between re-tape appointments</div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Stylist Tip:</strong> For Invisible Tape-Ins, match the PU base tone to the client's scalp before applying — this is the key to a truly undetectable result. Most stylists report tape-ins are 40–50% faster to apply than weft installations, making them an excellent high-turnover service.
               </div>
             </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
@@ -1081,6 +1247,76 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 💡 <strong>Not sure which style suits your client?</strong> WhatsApp us a photo — our team of extension specialists will advise on the perfect Butterfly Weft type, weight and length for free.
               </div>
             </div>
+            ) : product.productType.toLowerCase().includes('tape') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding Your Perfect Tape-In Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Invisible Tape-In", desc: "The ultra-thin skin-tone PU base is featherlight and virtually invisible — perfect for delicate strands. Invisible Tape-Ins add volume without any visible tabs, even in the finest ponytail." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Standard or Invisible", desc: "Standard tape-ins provide reliable hold and excellent volume for medium hair. For clients who want zero visibility, upgrade to Invisible Tape-Ins for a skin-matching seamless finish." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "✅ Standard Tape-In", desc: "Standard tape-ins with a slightly thicker PU base give the grip needed for dense hair. Multiple rows ensure seamless blending. Very thick hair clients may pair with weft extensions for maximum density." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-rose-700 mb-2">{item.verdict}</div>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* How many tabs */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many tabs / packs do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add volume only (no length)", tabs: "20–30 tabs (50g)", rows: "2–3 rows" },
+                    { goal: "Volume + moderate length gain", tabs: "30–40 tabs (75g)", rows: "3–4 rows" },
+                    { goal: "Full length transformation", tabs: "40–60 tabs (100–150g)", rows: "4–5 rows" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-3 px-5 py-3 text-sm">
+                      <span className="text-muted-foreground">{row.goal}</span>
+                      <span className="font-medium">{row.tabs}</span>
+                      <span className="text-muted-foreground">{row.rows}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Length guide */}
+              <div>
+                <h4 className="font-semibold mb-3">Length Guide</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { len: '16"', effect: "Shoulder length" },
+                    { len: '18"', effect: "Collar bone" },
+                    { len: '20"', effect: "Mid-back" },
+                    { len: '22"', effect: "Lower back" },
+                  ].map((item) => (
+                    <div key={item.len} className="border rounded-xl p-3 text-center text-sm">
+                      <div className="text-xl font-bold mb-1">{item.len}</div>
+                      <div className="text-xs text-muted-foreground">{item.effect}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tape-In style callout */}
+              <div className="bg-rose-50 border border-rose-200 rounded-xl p-5">
+                <div className="font-semibold mb-2">🩹 Which Tape-In Style is Right for Your Client?</div>
+                <div className="space-y-2 text-sm text-rose-900">
+                  <div className="flex gap-2"><span>✅</span><span><strong>Invisible Tape-In:</strong> Fine hair, high-visibility areas, clients who wear their hair up regularly — the most undetectable result</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Standard Tape-In:</strong> The versatile workhorse — works for all hair types, fastest to apply, most popular in salons</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Mini Tape-In:</strong> Temples, hairlines, sparse patches — half-width precision placement where standard tabs are too wide</span></div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Not sure how many tabs your client needs?</strong> WhatsApp us a photo — our D.S HAIR extension specialists will recommend the perfect tab count, weight and length for free, based on 19 years of professional experience.
+              </div>
+            </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding Your Perfect Weft Match</h3>
@@ -1262,6 +1498,43 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </>
+              ) : product.productType.toLowerCase().includes('tape') ? (
+                <>
+                  {/* Stats bar */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "6–12", unit: "months", label: "Hair lifespan (re-taped)" },
+                      { stat: "6–8", unit: "weeks", label: "Between re-tape appointments" },
+                      { stat: "2–3×", unit: "reuse", label: "Weft re-tapeable lifespan" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-rose-600 font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer reviews */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Emily R.", role: "Senior Stylist, Manchester Salon", text: "Tape-ins from D.S Hair are genuinely the fastest way to give a client a full transformation. 40 tabs in under 90 minutes — and the Invisible range is completely undetectable even on my finest-haired clients. Quality is consistently excellent.", stars: 5 },
+                      { name: "Jessica T.", role: "Salon Client, Birmingham", text: "I have really fine hair and was nervous about extensions. The Invisible Tape-Ins are absolutely seamless — my friends had no idea! I've had them 8 weeks now and they still look immaculate. Will 100% reorder.", stars: 5 },
+                      { name: "Hannah B.", role: "Salon Client, London", text: "The colour match was spot on first time — D.S Hair's team recommended the perfect shade from a photo. They lay completely flat and feel like my own hair. The quality is far better than previous brands I've tried.", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                        <p className="text-xs text-muted-foreground">{review.role}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
               ) : product.productType.toLowerCase().includes('weft') ? (
                 <>
                   {/* Stats bar */}
@@ -1396,6 +1669,33 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     <strong>🦋 D.S HAIR Quality Promise:</strong> Every Butterfly Weft batch undergoes strict quality control — consistent hair weight per row, even density distribution from root to tip, and rigorous shed-test before dispatch. We supply professional stylists across the UK with the confidence that comes from 19+ years in the industry.
                   </div>
                 </div>
+              ) : product.productType.toLowerCase().includes('tape') ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — double-drawn, cuticle-aligned for zero tangling",
+                      "Available in Standard, Invisible (skin-tone PU) & Mini Tape-In styles",
+                      "Invisible Tape-In: ultra-thin 0.5mm skin-match base — zero visible tabs",
+                      "Medical-grade adhesive — skin-safe, sweat-resistant, chlorine-resistant",
+                      "No heat, no glue fusion — zero thermal damage to natural hair shaft",
+                      "Wears 6–12 months with professional re-tape maintenance",
+                      "Re-tapeable 2–3 times — replace the adhesive tabs, reuse the hair",
+                      "Can be washed, blow-dried, curled and straightened like natural hair",
+                      "Full head applied in 60–90 minutes — fastest professional method",
+                      "Invisible in ponytails, updos and braids — even in the finest hair",
+                      "31 colour shades to match every natural tone precisely",
+                      "Re-tape appointment every 6–8 weeks for a salon-perfect result",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-sm text-rose-900">
+                    <strong>🩹 D.S HAIR Quality Promise:</strong> Every tape-in batch is individually inspected for adhesive coverage, hair density and cuticle alignment before dispatch. Our Invisible Tape-In range uses a premium skin-tone PU base engineered for flawless scalp concealment. Trusted by professional salons across the UK — backed by 19+ years of hair extension expertise.
+                  </div>
+                </div>
               ) : product.productType.toLowerCase().includes('weft') ? (
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -1505,6 +1805,44 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     {
                       q: "Can I wear Butterfly Weft in a ponytail or updo?",
                       a: "Absolutely — this is one of Butterfly Weft's strongest advantages. The flexible, ultra-flat base lies close to the scalp and conforms to the head's curves, making it virtually undetectable in high ponytails, braids, buns and other updos. Even the Super Weft version is invisible under the most demanding professional styling.",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : product.productType.toLowerCase().includes('tape') ? (
+                <>
+                  {[
+                    {
+                      q: "What are Tape-In extensions and how do they work?",
+                      a: "Tape-In extensions use ultra-thin polyurethane (PU) wefts pre-coated with medical-grade adhesive. A small slice of your natural hair is sandwiched between two weft tabs — no heat, no fusion chemicals. The bond lies completely flat against the scalp, creating a natural, seamless finish. They're one of the fastest and most comfortable semi-permanent extension methods available.",
+                    },
+                    {
+                      q: "What is the difference between Invisible Tape-Ins and standard Tape-Ins?",
+                      a: "Invisible (Seamless) Tape-Ins use a skin-tone matched PU base that mimics the colour and texture of the scalp — the tab itself disappears against the skin, so hair appears to grow directly from it. Standard Tape-Ins have a slightly thicker, more uniform base and offer excellent hold for all hair types. For maximum invisibility — especially in fine hair or when worn up — Invisible Tape-Ins are the premium choice.",
+                    },
+                    {
+                      q: "Are Tape-In extensions suitable for fine or thin hair?",
+                      a: "Yes — particularly our Invisible Tape-Ins. The ultra-thin 0.5mm PU base places minimal weight on each section of hair, and the skin-tone match ensures zero visible tab in even the finest hair. We recommend taking slightly thinner sections per tab for fine-haired clients to avoid any visible parting.",
+                    },
+                    {
+                      q: "How long do Tape-In extensions last?",
+                      a: "The adhesive bond typically lasts 6–8 weeks, after which a re-tape appointment is needed (your natural hair grows and the tab moves away from the scalp). The hair weft itself, with proper care, can be re-taped and reused 2–3 times — meaning the initial hair investment lasts 6–12 months or more.",
+                    },
+                    {
+                      q: "Will Tape-In extensions damage my natural hair?",
+                      a: "When correctly installed and removed by a professional, tape-ins cause no damage to the hair shaft. The adhesive bonds to the surface of the hair — there is no heat or chemical penetration. Damage only occurs from improper DIY removal (never pull — always use a professional remover solution) or applying tabs too close to the root.",
+                    },
+                    {
+                      q: "How do I care for Tape-In extensions?",
+                      a: "Wash with sulphate-free shampoo — avoid conditioner or oil products at the roots, as these weaken the adhesive. Blow-dry thoroughly (never leave tape bonds damp for extended periods). Use heat protectant before styling. Brush gently from ends upward with a loop brush. Avoid heavy oil-based products near the bonds. Sleep in a loose plait to prevent matting.",
+                    },
+                    {
+                      q: "Can I wear Tape-Ins in a ponytail or updo?",
+                      a: "Yes — this is one of tape-ins' greatest strengths. Because the base is ultra-flat, the tabs lie flush against the scalp and are completely concealed in ponytails, updos, braids and buns. Invisible Tape-Ins are particularly undetectable as the skin-tone base blends with the scalp when the hair is pulled back.",
                     },
                   ].map((item) => (
                     <div key={item.q} className="border-b pb-5">
