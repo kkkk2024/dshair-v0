@@ -13,11 +13,26 @@ interface ProductDetailProps {
   product: Product
 }
 
+const TAPE_RESULT_IMAGES = [
+  "/images/tape/tape-result-03.jpg",
+  "/images/tape/tape-result-04.jpg",
+  "/images/tape/tape-result-05.jpg",
+  "/images/tape/tape-result-06.jpg",
+  "/images/tape/tape-result-07.jpg",
+  "/images/tape/tape-result-08.jpg",
+  "/images/tape/tape-result-09.jpg",
+]
+
 export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedLength, setSelectedLength] = useState(product.lengths[0])
   const [quantity, setQuantity] = useState(1)
+
+  // For tape-in products, append shared result photos to the image gallery
+  const displayImages = product.productType.toLowerCase().includes('tape')
+    ? [...product.images, ...TAPE_RESULT_IMAGES]
+    : product.images
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-GB", {
@@ -55,7 +70,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         <div className="flex flex-col-reverse md:flex-row gap-4">
           {/* Thumbnails */}
           <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-y-auto">
-            {product.images.map((image, index) => (
+            {displayImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
@@ -71,7 +86,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {/* Main Image */}
           <div className="relative flex-1 aspect-square md:aspect-[3/4] rounded-xl overflow-hidden bg-muted">
             <Image
-              src={product.images[selectedImage]}
+              src={displayImages[selectedImage]}
               alt={product.name}
               fill
               className="object-cover"
@@ -1846,37 +1861,25 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </>
               ) : product.productType.toLowerCase().includes('tape') ? (
                 <>
-                  {/* Photo gallery — 9 images */}
+                  {/* Photo gallery — 6 images (2 rows × 3) */}
                   <div className="grid grid-cols-3 gap-3">
-                    {/* Row 1 */}
-                    <div className="rounded-xl overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
-                      <span className="text-xs text-muted-foreground">Photo 1</span>
-                    </div>
-                    <div className="rounded-xl overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
-                      <span className="text-xs text-muted-foreground">Photo 2</span>
+                    <div className="rounded-xl overflow-hidden">
+                      <img src="/images/tape/tape-result-04.jpg" alt="Tape-In Extensions Result 1" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-03.jpg" alt="Tape-In Extensions Result 3" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    {/* Row 2 */}
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-04.jpg" alt="Tape-In Extensions Result 4" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                      <img src="/images/tape/tape-result-05.jpg" alt="Tape-In Extensions Result 2" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-05.jpg" alt="Tape-In Extensions Result 5" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                      <img src="/images/tape/tape-result-06.jpg" alt="Tape-In Extensions Result 3" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-06.jpg" alt="Tape-In Extensions Result 6" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    {/* Row 3 */}
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-07.jpg" alt="Tape-In Extensions Result 7" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                      <img src="/images/tape/tape-result-07.jpg" alt="Tape-In Extensions Result 4" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-08.jpg" alt="Tape-In Extensions Result 8" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                      <img src="/images/tape/tape-result-08.jpg" alt="Tape-In Extensions Result 5" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                     <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-09.jpg" alt="Tape-In Extensions Result 9" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                      <img src="/images/tape/tape-result-09.jpg" alt="Tape-In Extensions Result 6" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
                     </div>
                   </div>
 
