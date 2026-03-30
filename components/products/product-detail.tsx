@@ -390,6 +390,86 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   For the perfect fusion, it's essential to apply our hair extensions with a specialised hot fusion iron. To ensure the best results and longevity, we strongly recommend professional fitting by a certified hair expert. Embrace the beauty and versatility of our keratin-tipped extensions and redefine your hair game!
                 </p>
               </div>
+            ) : product.productType.toLowerCase().includes('butterfly') ? (
+              <div className="max-w-3xl space-y-6">
+                <h2 className="text-2xl font-bold">Butterfly Weft Extensions — The Next Generation of Invisible Hair</h2>
+
+                {/* Hero image */}
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src="/images/butterfly/butterfly-hero.jpg"
+                    alt="Butterfly Weft Extensions — D.S HAIR & BEAUTY"
+                    className="w-full object-cover max-h-80"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  Butterfly Weft is the evolution of modern weft technology — engineered for superior softness, invisible integration and outstanding durability. Crafted from <strong>100% Remy human hair</strong> with a uniquely flexible, ultra-flat base, Butterfly Weft lies naturally against the scalp and feels like it simply grows from within. Trusted by professional stylists in the UK's most prestigious salons.
+                </p>
+
+                {/* How it works */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">How Butterfly Weft Works</div>
+                  <div className="px-5 py-4 space-y-3 text-sm text-muted-foreground">
+                    <div className="flex gap-3">
+                      <span className="text-xl">🦋</span>
+                      <p><strong className="text-foreground">Zero Return Hair Technology.</strong> Every strand is loop-anchored in a single direction — eliminating the short, scratchy return hairs found in traditional machine wefts. The result: a weft that sits flush against the scalp with <em>zero irritation</em>.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">✂️</span>
+                      <p><strong className="text-foreground">Trimmable, Sealed Edges.</strong> The reinforced PU edge is precision-sealed, meaning you can cut Butterfly Weft to any width without a single hair coming loose. Perfect customisation for every client's head shape — no wastage, no mess.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl">🌊</span>
+                      <p><strong className="text-foreground">Flexible-Base Design.</strong> Unlike stiffer wefts, the Butterfly base is engineered to flex and curve with the natural contour of the head — hugging the nape, temples and crown seamlessly. Clients describe it as hair that "melts into" their own.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Butterfly Weft types */}
+                <div className="border rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">Choose Your Butterfly Weft Style</div>
+                  <div className="divide-y text-sm">
+                    {[
+                      { type: "Half Flat Butterfly Weft", tag: "Most Popular", thickness: "~0.8 mm", best: "Fine to medium hair", note: "The perfect balance — slim, flexible and forgiving. Ideal first Butterfly Weft for most clients." },
+                      { type: "Full Flat Butterfly Weft", tag: "Maximum Volume", thickness: "~1.0 mm", best: "Medium to thick hair", note: "Slightly denser construction for clients who need dramatic volume — still flexes beautifully against the scalp." },
+                      { type: "Super Weft (Injected)", tag: "Ultra Premium", thickness: "~0.6 mm", best: "Fine & sensitive hair", note: "Hair injected directly into the base — virtually weightless. Invisible in even the finest of ponytails and updos." },
+                    ].map((row) => (
+                      <div key={row.type} className="px-5 py-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold">{row.type}</span>
+                          <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">{row.tag}</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mb-1">{row.note}</p>
+                        <div className="flex gap-4 text-xs text-muted-foreground">
+                          <span>Base thickness: {row.thickness}</span>
+                          <span>Best for: {row.best}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Three highlights */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: "🦋", title: "Zero Return Hair", body: "No short scratchy hairs at the base — comfortable even on sensitive scalps 24/7." },
+                    { icon: "🪞", title: "Invisible Finish", body: "Flexible base curves with your head shape. Undetectable in high ponytails, braids and updos." },
+                    { icon: "✂️", title: "Cut to Perfection", body: "Trimmable sealed edges — customise the exact width for every client without any shedding." },
+                  ].map((item) => (
+                    <div key={item.title} className="border rounded-xl p-4 text-center">
+                      <div className="text-3xl mb-2">{item.icon}</div>
+                      <div className="font-semibold text-sm mb-1">{item.title}</div>
+                      <div className="text-xs text-muted-foreground">{item.body}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 text-sm text-purple-900">
+                  <strong>✨ Why Stylists Choose Butterfly Weft:</strong> The flexible base installs faster, blends more naturally and requires fewer adjustments than traditional wefts — giving stylists more efficiency and clients a more luxurious result. Once experienced, most salons never go back.
+                </div>
+              </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
               <div className="max-w-3xl space-y-6">
                 <h2 className="text-2xl font-bold">Weft Hair Extensions — Salon's Most Versatile Method</h2>
@@ -610,6 +690,87 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <p className="text-sm text-yellow-800">
                   <strong>Important:</strong> K-Tip extensions typically last 3-6 months with proper care. Removal requires a special solvent or heat application by a professional stylist.
                 </p>
+              </div>
+            </div>
+            ) : product.productType.toLowerCase().includes('butterfly') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Install Butterfly Weft Extensions</h3>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
+                <p className="text-sm text-purple-800">
+                  <strong>⚠️ Professional Installation Required.</strong> Butterfly Weft extensions must be fitted and maintained by a certified hair extension stylist for the best, safest result. The flexible base means installation is faster than standard wefts — but precision sectioning is key.
+                </p>
+              </div>
+
+              {/* Installation method selector */}
+              <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                {[
+                  { icon: "📿", method: "Bead & Sew", time: "1.5–2.5 hrs", hold: "8–12 weeks" },
+                  { icon: "🧵", method: "Sew-In Cornrow", time: "2–3 hrs", hold: "6–8 weeks" },
+                  { icon: "🩹", method: "Invisible / Skin Weft", time: "45–60 mins", hold: "4–6 weeks" },
+                ].map((m) => (
+                  <div key={m.method} className="border rounded-xl p-3">
+                    <div className="text-2xl mb-1">{m.icon}</div>
+                    <div className="font-semibold mb-1">{m.method}</div>
+                    <div className="text-xs text-muted-foreground">Install: {m.time}</div>
+                    <div className="text-xs text-muted-foreground">Lasts: {m.hold}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-semibold text-lg">Step-by-Step: Bead & Sew Method (Recommended for Butterfly Weft)</h4>
+
+              {[
+                {
+                  n: 1,
+                  title: "Prepare & Section",
+                  body: "Start with freshly washed, fully blow-dried hair — no product at the roots. Create a clean horizontal parting 1cm from the nape. Pin all hair above neatly out of the way. Precise sectioning is the foundation of an invisible result.",
+                },
+                {
+                  n: 2,
+                  title: "Create the Anchor Braid",
+                  body: "Braid a slim cornrow anchor along the parting — keep it tight but not too tense. With Butterfly Weft's flexible base, the anchor braid doesn't need to be perfectly rigid; the weft will conform to any slight curve naturally.",
+                },
+                {
+                  n: 3,
+                  title: "Thread & Clamp the Micro-Beads",
+                  body: "Slide silicone-lined micro-beads onto the anchor braid at 1–2 cm intervals. Pull the braid through each bead using a loop tool and clamp flat with pliers. The silicone lining protects the natural hair from metal friction.",
+                },
+                {
+                  n: 4,
+                  title: "Trim & Attach the Butterfly Weft",
+                  body: "Measure the Butterfly Weft against the row width. Use sharp scissors to trim the sealed edge to the exact length — no fraying, no shed hairs. Lay the weft against the beads and sew in place with tight, even stitches using a curved needle and strong thread.",
+                },
+                {
+                  n: 5,
+                  title: "Repeat, Blend & Finish",
+                  body: "Release the next section 2–3 cm above and repeat. Work from nape to crown — typically 3–4 rows for a full head. Once all rows are secure, blend your natural hair over the wefts, then cut, layer and style. The flexible Butterfly base will naturally contour to the head, giving a seamless, salon-perfect finish.",
+                },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1">{step.title}</h4>
+                    <p className="text-muted-foreground text-sm">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">⏱ Full head install</div>
+                  <div className="text-muted-foreground">1.5–3 hours (faster than standard wefts)</div>
+                </div>
+                <div className="border rounded-xl p-4 text-sm">
+                  <div className="font-semibold mb-1">🔄 Move-up frequency</div>
+                  <div className="text-muted-foreground">Every 6–8 weeks as hair grows</div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Stylist Tip:</strong> The Butterfly Weft's flexible base means it naturally follows the head's curve — spend less time forcing the weft to lie flat, and more time perfecting the blend. Many stylists report 20–30% faster installation compared to standard wefts.
               </div>
             </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
@@ -850,6 +1011,76 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
             </div>
+            ) : product.productType.toLowerCase().includes('butterfly') ? (
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">Finding Your Perfect Butterfly Weft Match</h3>
+
+              {/* Hair type guide */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Fine / Thin Hair", icon: "🌿", verdict: "✅ Super Weft", desc: "The injected Super Weft (0.6mm) is made for delicate strands — featherlight, zero-tension, virtually weightless. Invisible even in the finest high ponytail." },
+                  { label: "Medium Hair", icon: "💆", verdict: "✅ Half Flat", desc: "Half Flat Butterfly Weft is the go-to for medium hair. Flexible enough to contour the head perfectly, with just the right density for a naturally full look." },
+                  { label: "Thick / Coarse Hair", icon: "💪", verdict: "✅ Full Flat", desc: "Full Flat Butterfly Weft provides the density needed to blend seamlessly with thicker natural hair — still flatter and more comfortable than machine weft." },
+                ].map((item) => (
+                  <div key={item.label} className="border rounded-xl p-4">
+                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <div className="font-semibold mb-1">{item.label}</div>
+                    <div className="text-xs font-medium text-purple-700 mb-2">{item.verdict}</div>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* How many packs */}
+              <div className="border rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold">How many packs / grams do I need?</div>
+                <div className="divide-y">
+                  {[
+                    { goal: "Add volume only (no extra length)", weight: "100–150g", rows: "2–3 rows" },
+                    { goal: "Volume + moderate length gain", weight: "150–200g", rows: "3–4 rows" },
+                    { goal: "Full dramatic transformation", weight: "200–250g", rows: "4–5 rows" },
+                  ].map((row) => (
+                    <div key={row.goal} className="grid grid-cols-3 px-5 py-3 text-sm">
+                      <span className="text-muted-foreground">{row.goal}</span>
+                      <span className="font-medium">{row.weight}</span>
+                      <span className="text-muted-foreground">{row.rows}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Length guide */}
+              <div>
+                <h4 className="font-semibold mb-3">Length Guide</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { len: '16"', effect: "Shoulder length" },
+                    { len: '20"', effect: "Mid-back" },
+                    { len: '24"', effect: "Waist length" },
+                    { len: '28"', effect: "Hip length & beyond" },
+                  ].map((item) => (
+                    <div key={item.len} className="border rounded-xl p-3 text-center text-sm">
+                      <div className="text-xl font-bold mb-1">{item.len}</div>
+                      <div className="text-xs text-muted-foreground">{item.effect}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Butterfly Weft style callout */}
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                <div className="font-semibold mb-2">🦋 Which Butterfly Weft Style is Right for Your Client?</div>
+                <div className="space-y-2 text-sm text-purple-900">
+                  <div className="flex gap-2"><span>✅</span><span><strong>Super Weft (Injected):</strong> Fine/sensitive hair, high-visibility areas (temples, parting line) — the most invisible option available</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Half Flat:</strong> The versatile everyday choice — works for 80% of clients, fastest to install</span></div>
+                  <div className="flex gap-2"><span>✅</span><span><strong>Full Flat:</strong> Clients wanting maximum volume, or those with naturally thick hair who need more density per row</span></div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
+                💡 <strong>Not sure which style suits your client?</strong> WhatsApp us a photo — our team of extension specialists will advise on the perfect Butterfly Weft type, weight and length for free.
+              </div>
+            </div>
             ) : product.productType.toLowerCase().includes('weft') ? (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding Your Perfect Weft Match</h3>
@@ -994,6 +1225,43 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </>
+              ) : product.productType.toLowerCase().includes('butterfly') ? (
+                <>
+                  {/* Stats bar */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { stat: "6–12", unit: "months", label: "Average wear time" },
+                      { stat: "6–8", unit: "weeks", label: "Between move-ups" },
+                      { stat: "2–3×", unit: "reuse", label: "Weft can be reinstalled" },
+                    ].map((item) => (
+                      <div key={item.label} className="border rounded-xl py-4 px-2">
+                        <div className="text-2xl font-bold">{item.stat}</div>
+                        <div className="text-xs text-purple-600 font-medium">{item.unit}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Customer reviews */}
+                  <div className="space-y-4">
+                    {[
+                      { name: "Charlotte H.", role: "Senior Hair Extension Stylist, Manchester", text: "Butterfly Weft has completely changed how I work. The flexible base means it just molds to the head shape — I'm spending 20 minutes less per client and the results look even more natural. My clients are obsessed.", stars: 5 },
+                      { name: "Isabelle F.", role: "Salon Client, London", text: "I have very fine hair and was always afraid of weft extensions looking bulky. The Super Weft version is genuinely invisible — even with my hair in a ponytail. I've had them 5 months and they still look brand new.", stars: 5 },
+                      { name: "Sophie L.", role: "Salon Client, Leeds", text: "The colour match from D.S Hair was perfect on the first order. The weft feels so soft and natural — honestly couldn't tell where my own hair ended and the extensions began. Absolutely worth the investment.", stars: 5 },
+                    ].map((review) => (
+                      <div key={review.name} className="bg-gray-50 rounded-xl p-5">
+                        <div className="flex items-center gap-1 mb-2">
+                          {Array.from({ length: review.stars }).map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <blockquote className="italic text-sm mb-2">"{review.text}"</blockquote>
+                        <p className="font-medium text-sm">— {review.name}</p>
+                        <p className="text-xs text-muted-foreground">{review.role}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
               ) : product.productType.toLowerCase().includes('weft') ? (
                 <>
                   {/* Stats bar */}
@@ -1101,6 +1369,33 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     ))}
                   </div>
                 </div>
+              ) : product.productType.toLowerCase().includes('butterfly') ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "100% Remy human hair — double-drawn, cuticle-aligned for zero tangling",
+                      "Available in Half Flat, Full Flat & Super Weft (Injected) styles",
+                      "Zero return hair technology — no short hairs at the base, no scalp irritation",
+                      "Flexible PU base contours naturally to the head — no stiff, rigid feel",
+                      "Trimmable sealed edges — cut to any width without a single shed hair",
+                      "No heat, no glue — attached by beads, cornrow sewing or skin weft tape",
+                      "Wears 6–12 months with professional maintenance",
+                      "Can be washed, blow-dried, curled and straightened like natural hair",
+                      "Weft rows reusable 2–3 times — just replace beads or re-sew",
+                      "Invisible in high ponytails, braids and updos — even in fine hair",
+                      "31 colour shades to match every natural tone precisely",
+                      "Move-up appointment every 6–8 weeks to account for natural hair growth",
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-purple-600 shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 text-sm text-purple-900">
+                    <strong>🦋 D.S HAIR Quality Promise:</strong> Every Butterfly Weft batch undergoes strict quality control — consistent hair weight per row, even density distribution from root to tip, and rigorous shed-test before dispatch. We supply professional stylists across the UK with the confidence that comes from 19+ years in the industry.
+                  </div>
+                </div>
               ) : product.productType.toLowerCase().includes('weft') ? (
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -1172,6 +1467,44 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     {
                       q: "Can I wear them in a ponytail or updo?",
                       a: "Absolutely. The nano ring sits flat and close to the scalp, making it completely undetectable even in high ponytails and braids — one of the biggest advantages over other extension types.",
+                    },
+                  ].map((item) => (
+                    <div key={item.q} className="border-b pb-5">
+                      <h4 className="font-medium mb-2">{item.q}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </>
+              ) : product.productType.toLowerCase().includes('butterfly') ? (
+                <>
+                  {[
+                    {
+                      q: "What is Butterfly Weft and how is it different from standard weft?",
+                      a: "Butterfly Weft is an advanced weft extension with a uniquely flexible, ultra-flat PU base. Unlike standard machine weft, it has zero return hairs at the base (no short, scratchy hairs), can be trimmed to any width without shedding, and features a flexible design that naturally contours to the shape of the head. The result is a softer, more invisible and more comfortable extension experience.",
+                    },
+                    {
+                      q: "What are the differences between Half Flat, Full Flat and Super Weft?",
+                      a: "Half Flat (~0.8mm base) is the most versatile option — ideal for most hair types and the fastest to install. Full Flat (~1.0mm) has a slightly denser construction, great for clients needing maximum volume. Super Weft / Injected (~0.6mm) has hair injected directly into the base for the most invisible, featherlight result — the top choice for very fine hair and high-visibility areas like partings and temples.",
+                    },
+                    {
+                      q: "Is Butterfly Weft suitable for fine or thin hair?",
+                      a: "Yes — especially the Super Weft (Injected) version. Its 0.6mm base is virtually weightless and sits perfectly flat, making it ideal for fine or delicate hair. The zero return hair design also means no irritation or scalp discomfort, which is a common concern for fine-haired clients.",
+                    },
+                    {
+                      q: "How long does Butterfly Weft last?",
+                      a: "With professional maintenance, 6 to 12 months. Every 6–8 weeks, your stylist will perform a move-up appointment — adjusting the weft to account for natural hair growth. The weft itself can be reinstalled 2–3 times by replacing beads or re-sewing, making it an excellent long-term investment.",
+                    },
+                    {
+                      q: "Will Butterfly Weft damage my natural hair?",
+                      a: "When professionally installed and maintained, Butterfly Weft is one of the gentlest extension methods available. The zero return hair design eliminates root friction, and the flexible base distributes tension evenly across the row. Always have them fitted, maintained and removed by a certified hair extension stylist.",
+                    },
+                    {
+                      q: "Can I wash, heat-style and colour Butterfly Weft extensions?",
+                      a: "Yes — all D.S HAIR Butterfly Weft extensions are 100% human hair. Wash 1–2 times weekly with sulphate-free shampoo, use heat protectant before blow-drying or styling, and brush gently from ends upward. For colouring, always consult your stylist; we recommend avoiding bleach on pre-coloured shades to preserve the hair's integrity.",
+                    },
+                    {
+                      q: "Can I wear Butterfly Weft in a ponytail or updo?",
+                      a: "Absolutely — this is one of Butterfly Weft's strongest advantages. The flexible, ultra-flat base lies close to the scalp and conforms to the head's curves, making it virtually undetectable in high ponytails, braids, buns and other updos. Even the Super Weft version is invisible under the most demanding professional styling.",
                     },
                   ].map((item) => (
                     <div key={item.q} className="border-b pb-5">
