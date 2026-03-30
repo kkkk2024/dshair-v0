@@ -20,7 +20,7 @@ async function fetchProducts() {
 }
 
 // Featured products with REAL IMAGES - hardcoded for hero section
-// Using actual product photos from desktop
+// All 4 slots fixed with real product photos from desktop
 const featuredProducts = [
   {
     id: "featured-1",
@@ -32,7 +32,7 @@ const featuredProducts = [
     reviews: 1847,
     colors: 28,
     slug: "tape-in",
-    href: "/collections/tape-in", // links to collection page
+    href: "/collections/tape-in",
   },
   {
     id: "featured-2",
@@ -72,87 +72,13 @@ const featuredProducts = [
   },
 ]
 
-// API-sourced products (fills 4th slot dynamically)
-const fallbackProducts = [
-  {
-    id: "1",
-     {
-      id: "featured-4",
-      name: "Genius Weft",
-      price: 199,
-      image: "/images/featured/genius-weft.jpg",
-      badge: "Salon Fave",
-      rating: 4.9,
-      reviews: 3421,
-      colors: 20,
-      slug: "butterfly-weft-extensions",
-      href: "/collections/butterfly-weft-extensions",
-    },
-  {
-    id: "2",
-    name: "Classic Clip-In Set",
-    price: 149,
-    image: "/images/product-classic-clip.jpg",
-    badge: null,
-    rating: 4.8,
-    reviews: 1923,
-    colors: 32,
-    slug: "classic-clip-in",
-    href: "/products/classic-clip-in",
-  },
-  {
-    id: "3",
-    name: "Wrap Ponytail",
-    price: 89,
-    image: "/images/product-ponytail.jpg",
-    badge: "New",
-    rating: 4.9,
-    reviews: 856,
-    colors: 18,
-    slug: "wrap-ponytail",
-    href: "/products/wrap-ponytail",
-  },
-  {
-    id: "4",
-    name: "Professional Tape-Ins",
-    price: 159,
-    image: "/images/product-tape-in.jpg",
-    badge: null,
-    rating: 4.7,
-    reviews: 1247,
-    colors: 28,
-    slug: "professional-tape-in",
-    href: "/products/professional-tape-in",
-  },
-]
+// API fallback - kept for reference but not used in displayProducts
+async function getFallbackProducts() {
+  return featuredProducts
+}
 
 export function FeaturedProducts() {
-  const [apiProducts, setApiProducts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetchProducts().then((data) => {
-      if (data && data.length > 0) {
-        // Map Shopify products to the format we need
-        const mapped = data.slice(0, 4).map((p: any) => ({
-          id: p.id,
-          name: p.title,
-          price: parseFloat(p.priceRange?.minVariantPrice?.amount || p.price || 0),
-          image: p.featuredImage?.url || p.image || '/images/product-silk-seam.jpg',
-          badge: p.tags?.includes('bestseller') ? 'Best Seller' : p.tags?.includes('new') ? 'New' : null,
-          rating: 4.8,
-          reviews: Math.floor(Math.random() * 500) + 100,
-          colors: p.variants?.length || 10,
-          slug: p.handle,
-          href: `/products/${p.handle}`,
-        }))
-        setApiProducts(mapped)
-      }
-      setLoading(false)
-    }).catch(() => {
-      setLoading(false)
-    })
-  }, [])
+  const [loading, setLoading] = useState(false)
 
   // Build display products: all 4 hardcoded real-image products
   const displayProducts = featuredProducts
@@ -165,22 +91,19 @@ export function FeaturedProducts() {
   }
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
-          <div>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
-              Bestselling Extensions
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-xl">
-              Our most-loved hair extensions, trusted by thousands of customers worldwide.
-            </p>
-          </div>
-          <Button variant="outline" asChild>
-            <Link href="/collections/all">View All Products</Link>
-          </Button>
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Bestselling Extensions
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Our most-loved hair extensions, trusted by thousands of customers worldwide.
+          </p>
         </div>
 
+        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayProducts.map((product: any) => (
             <Link key={product.id} href={product.href || `/products/${product.slug}`} className="group">
@@ -189,54 +112,74 @@ export function FeaturedProducts() {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 {product.badge && (
-                  <Badge className="absolute top-3 left-3" variant="secondary">
+                  <Badge className="absolute top-3 left-3 bg-primary text-white">
                     {product.badge}
                   </Badge>
                 )}
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute top-3 right-3 h-9 w-9 rounded-full bg-white/80 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                <button
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                  }}
+                  className="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity"
                   aria-label="Add to wishlist"
                 >
-                  <Heart className="h-4 w-4" />
-                </Button>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button variant="secondary" size="sm" className="w-full">
-                    Quick View
-                  </Button>
-                </div>
+                  <Heart className="w-4 h-4 text-foreground" />
+                </button>
               </div>
-              <div>
-                <h3 className="font-medium mb-1 group-hover:text-accent transition-colors">
+
+              <div className="space-y-1">
+                <div className="flex items-center gap-1">
+                  <span className="text-sm font-medium">{product.rating}</span>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-3 h-3 ${
+                          i < Math.floor(product.rating)
+                            ? "text-amber-400 fill-amber-400"
+                            : "text-gray-300"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">({product.reviews})</span>
+                </div>
+
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                   {product.name}
                 </h3>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex items-center gap-1">
-                    <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
-                    <span className="text-sm">{product.rating}</span>
-                  </div>
-                  <span className="text-sm text-muted-foreground">
-                    ({product.reviews} reviews)
-                  </span>
-                </div>
+
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">{formatPrice(product.price)}</span>
+                  <span className="text-lg font-bold text-primary">
+                    {formatPrice(product.price)}
+                  </span>
                   {product.originalPrice && (
                     <span className="text-sm text-muted-foreground line-through">
                       {formatPrice(product.originalPrice)}
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">
+
+                <p className="text-sm text-muted-foreground">
                   {product.colors} colours available
                 </p>
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Button size="lg" asChild>
+            <Link href="/collections/all-extensions">
+              View All Extensions
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
