@@ -58,6 +58,18 @@ const featuredProducts = [
     slug: "nano-extensions",
     href: "/collections/nano-extensions",
   },
+  {
+    id: "featured-4",
+    name: "Genius Weft",
+    price: 199,
+    image: "/images/featured/genius-weft.jpg",
+    badge: "Salon Fave",
+    rating: 4.9,
+    reviews: 3421,
+    colors: 20,
+    slug: "butterfly-weft-extensions",
+    href: "/collections/butterfly-weft-extensions",
+  },
 ]
 
 // API-sourced products (fills 4th slot dynamically)
@@ -142,11 +154,8 @@ export function FeaturedProducts() {
     })
   }, [])
 
-  // Build display products: 3 hardcoded real-image products + 1 from API
-  const displayProducts = [
-    ...featuredProducts,
-    ...(apiProducts.length > 0 ? apiProducts.slice(0, 1) : fallbackProducts.slice(0, 1)),
-  ]
+  // Build display products: all 4 hardcoded real-image products
+  const displayProducts = featuredProducts
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-GB", {
