@@ -32,9 +32,19 @@ export function OrganizationJsonLd() {
           name: 'United Kingdom',
         },
         telephone: '+44-7780-480868',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+44-7780-480868',
+          contactType: 'customer service',
+          availableLanguage: ['English'],
+          optionFor: 'WhatsApp',
+        },
         email: 'info@dshairbeauty.co.uk',
         sameAs: [
           'https://www.instagram.com/d.shairbeauty',
+          'https://uk.pinterest.com/dshairbeautyuk',
+          'https://www.tiktok.com/@d.shairbeauty',
+          'https://www.facebook.com/D.SHairBeauty',
         ],
         foundingDate: '2006',
         numberOfEmployees: {

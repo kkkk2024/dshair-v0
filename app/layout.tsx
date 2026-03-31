@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
     description: "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for professional salons.",
-    site: '@dshairbeauty',
-    creator: '@dshairbeauty',
+    site: '@d.shairbeauty',
+    creator: '@d.shairbeauty',
   },
   icons: {
     icon: '/favicon.ico',
