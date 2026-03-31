@@ -34,7 +34,7 @@ export function OrganizationJsonLd() {
         telephone: '+44-7780-480868',
         email: 'info@dshairbeauty.co.uk',
         sameAs: [
-          'https://www.instagram.com/dshairbeauty',
+          'https://www.instagram.com/d.shairbeauty',
         ],
         foundingDate: '2006',
         numberOfEmployees: {

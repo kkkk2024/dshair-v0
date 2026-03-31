@@ -25,13 +25,13 @@ export function InstagramSection() {
             Tag @dshairbeauty for a chance to be featured
           </p>
           <Link
-            href="https://instagram.com/dshairbeauty"
+            href="https://instagram.com/d.shairbeauty"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent hover:underline"
           >
             <Instagram className="h-5 w-5" />
-            @dshairbeauty
+            @d.shairbeauty
           </Link>
         </div>
 
@@ -39,7 +39,7 @@ export function InstagramSection() {
           {instagramPosts.map((post) => (
             <Link
               key={post.id}
-              href="https://instagram.com/dshairbeauty"
+              href="https://instagram.com/d.shairbeauty"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative aspect-square overflow-hidden rounded-lg"
