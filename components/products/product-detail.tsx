@@ -826,6 +826,184 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   <strong>✨ Why Clients Love Clip-Ins:</strong> Instant results, total flexibility and zero salon commitment. Clip-ins are the #1 entry point for new extension clients — and with D.S HAIR's 100% Remy quality and 31 colour shades, finding the perfect seamless match has never been easier. Backed by 19 years of professional expertise.
                 </div>
               </div>
+            ) : product.tags.some(t => t.includes('topper')) ? (
+              /* ─── Hair Topper Description ─────────────────────────────────── */
+              <div className="max-w-3xl space-y-8">
+                {/* Hero Section */}
+                <div className="rounded-xl overflow-hidden bg-gradient-to-br from-[#FDF8F0] to-[#F5EDE6] p-6 md:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#4A1942] flex items-center justify-center shrink-0">
+                      <span className="text-2xl">✨</span>
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-bold text-[#4A1942] mb-2">
+                        {product.name} — Professional Crown Coverage
+                      </h2>
+                      <p className="text-sm text-[#6B3A6E] leading-relaxed">
+                        {product.description}
+                      </p>
+                    </div>
+                  </div>
+                  {/* Quick stats */}
+                  <div className="grid grid-cols-3 gap-4 mt-6 text-center">
+                    <div className="bg-white/70 rounded-lg p-3">
+                      <div className="text-lg font-bold text-[#4A1942]">30+</div>
+                      <div className="text-xs text-[#6B3A6E]">Colours Available</div>
+                    </div>
+                    <div className="bg-white/70 rounded-lg p-3">
+                      <div className="text-lg font-bold text-[#4A1942]">12–22"</div>
+                      <div className="text-xs text-[#6B3A6E]">Hair Lengths</div>
+                    </div>
+                    <div className="bg-white/70 rounded-lg p-3">
+                      <div className="text-lg font-bold text-[#4A1942]">100%</div>
+                      <div className="text-xs text-[#6B3A6E]">Remy Human Hair</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Base Type Comparison — Visual Chart */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-[#4A1942] text-white px-5 py-3 font-semibold text-sm">
+                    Which Base Is Right For Your Client? — Compare All Three
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b bg-muted/30">
+                          <th className="text-left px-4 py-3 font-semibold w-1/5">Base Type</th>
+                          <th className="text-left px-4 py-3 font-semibold">Best For</th>
+                          <th className="text-left px-4 py-3 font-semibold">Natural Look</th>
+                          <th className="text-left px-4 py-3 font-semibold">Breathability</th>
+                          <th className="text-left px-4 py-3 font-semibold">Durability</th>
+                          <th className="text-left px-4 py-3 font-semibold">Best Use</th>
+                          <th className="text-left px-4 py-3 font-semibold">Price Point</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y text-muted-foreground">
+                        {/* Silk Base */}
+                        <tr className={product.tags.includes('silk-base') ? 'bg-[#FDF8F0]' : ''}>
+                          <td className="px-4 py-3">
+                            <div className="font-semibold text-[#4A1942]">Silk Base ⭐</div>
+                            <div className="text-xs text-muted-foreground">Hand-tied lace</div>
+                            {product.tags.includes('silk-base') && (
+                              <span className="inline-block mt-1 text-xs bg-[#4A1942] text-white px-2 py-0.5 rounded-full">This Product</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-3">Clients who prioritise the most realistic scalp and parting</td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★★</span></td>
+                          <td className="px-4 py-3">★★★☆☆</td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★★</span></td>
+                          <td className="px-4 py-3">Crown thinning, parting visibility, premium clients</td>
+                          <td className="px-4 py-3">£149–£220</td>
+                        </tr>
+                        {/* Mono Top */}
+                        <tr className={product.tags.includes('mono-top') ? 'bg-[#FDF8F0]' : ''}>
+                          <td className="px-4 py-3">
+                            <div className="font-semibold text-[#4A1942]">Mono Top</div>
+                            <div className="text-xs text-muted-foreground">Monofilament</div>
+                            {product.tags.includes('mono-top') && (
+                              <span className="inline-block mt-1 text-xs bg-[#4A1942] text-white px-2 py-0.5 rounded-full">This Product</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-3">Clients who want versatility — any parting direction</td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★☆</span></td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★☆</span></td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★☆</span></td>
+                          <td className="px-4 py-3">Free parting, breathable comfort, everyday wear</td>
+                          <td className="px-4 py-3">£119–£169</td>
+                        </tr>
+                        {/* Mesh Base */}
+                        <tr className={product.tags.includes('mesh-base') ? 'bg-[#FDF8F0]' : ''}>
+                          <td className="px-4 py-3">
+                            <div className="font-semibold text-[#4A1942]">Mesh Base</div>
+                            <div className="text-xs text-muted-foreground">Open lace mesh</div>
+                            {product.tags.includes('mesh-base') && (
+                              <span className="inline-block mt-1 text-xs bg-[#4A1942] text-white px-2 py-0.5 rounded-full">This Product</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-3">Clients who wear a topper daily, sensitive scalp, hot climates</td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★☆☆</span></td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★★★</span></td>
+                          <td className="px-4 py-3"><span className="text-green-600 font-semibold">★★★☆☆</span></td>
+                          <td className="px-4 py-3">Everyday comfort, maximum airflow, fast blending</td>
+                          <td className="px-4 py-3">£99–£139</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Salon Value Block */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-black text-white px-5 py-3 font-semibold text-sm">
+                    💼 Salon Professional Insights — What Your Clients Need to Know
+                  </div>
+                  <div className="px-5 py-4 space-y-4 text-sm text-muted-foreground">
+                    <div className="flex gap-3">
+                      <span className="text-xl shrink-0">📏</span>
+                      <p><strong className="text-foreground">Base Size Matters.</strong> Choosing the right base size is the most important decision. Small (4"×5") covers a localised thinning spot; Medium (5"×6") handles general crown thinning; Large (6"×7") is ideal for more advanced thinning across the top; XL (7"×8") provides full top coverage. Always assess the client's scalp in natural light before recommending.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl shrink-0">🎨</span>
+                      <p><strong className="text-foreground">Colour Matching Rule.</strong> Always match to the client's mid-lengths and ends — NOT the roots. If the client has multi-tonal hair, consider ordering two shades to blend together. Our 30+ colour range covers every common UK salon shade. Free colour swatches are available for trade customers.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl shrink-0">✂️</span>
+                      <p><strong className="text-foreground">Cutting & Blending.</strong> The topper should always be cut and layered by a stylist to blend with the client's natural hair. Cut it before fitting to frame the face; layer it after fitting for seamless integration. This service is a premium upsell opportunity — charge £20–£40 for a topper cut-in.</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-xl shrink-0">💷</span>
+                      <p><strong className="text-foreground">Retail Pricing for Salons.</strong> Recommend a retail price of 1.8–2.2× your wholesale cost. For example: a Silk Base bought at £89 can be retailed at £159–£196. Topper application and styling services add another £30–£80 per appointment. These are high-margin products with minimal wastage.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* How to Apply — Steps */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div className="bg-[#4A1942] text-white px-5 py-3 font-semibold text-sm">
+                    How to Apply a Hair Topper — Step by Step
+                  </div>
+                  <div className="px-5 py-4 space-y-4 text-sm">
+                    {[
+                      { step: "01", title: "Assess & Prepare", body: "Identify the thinning area. Part the hair to expose the crown or affected zone. Ensure the client's natural hair is clean, dry, and free of heavy styling products." },
+                      { step: "02", title: "Select & Position", body: "Place the topper over the thinning area. Ensure the base covers the entire affected zone with a 1–2cm margin. Check that the hairline or front edge sits naturally against the scalp." },
+                      { step: "03", title: "Secure with Clips", body: "Open the pressure clips and position them on the client's natural hair around the base perimeter. Close each clip firmly — silicone lining prevents slipping. For Mesh Base, an optional adhesive strip can be used at the front edge." },
+                      { step: "04", title: "Blend & Style", body: "Comb the topper hair gently into the client's natural hair. Use a curling wand or straightener to blend textures. Cut and layer the topper to frame the face. Finish with a lightweight serum." },
+                    ].map((item) => (
+                      <div key={item.step} className="flex gap-4">
+                        <div className="w-8 h-8 rounded-full bg-[#4A1942] text-white flex items-center justify-center shrink-0 text-sm font-bold">
+                          {item.step}
+                        </div>
+                        <div>
+                          <div className="font-semibold text-foreground mb-1">{item.title}</div>
+                          <div className="text-muted-foreground text-xs">{item.body}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Trade CTA */}
+                <div className="bg-gradient-to-r from-[#4A1942] to-[#6B3A6E] text-white rounded-xl p-6 text-sm">
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">🏭</span>
+                    <div>
+                      <h3 className="font-bold text-base mb-1">Trade & Wholesale Pricing Available</h3>
+                      <p className="text-white/80 leading-relaxed mb-3">
+                        Salons and stylists across the UK and EU trust D.S Hair & Beauty for premium hair toppers at competitive wholesale prices. Contact us for a trade account — bulk orders, custom colours, and bespoke sizing available.
+                      </p>
+                      <div className="flex gap-3">
+                        <a href={`https://wa.me/8613516946001?text=${encodeURIComponent('Hi D.S Hair & Beauty, I am interested in trade / wholesale pricing for hair toppers. Please send me your trade price list.')}`} target="_blank" rel="noopener noreferrer" className="bg-white text-[#4A1942] font-semibold text-xs px-4 py-2 rounded-lg hover:bg-white/90 transition-colors">
+                          WhatsApp Trade Team →
+                        </a>
+                        <Link href="/colour-match" className="border border-white/40 text-white font-medium text-xs px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">
+                          Order Free Colour Swatches →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="max-w-3xl">
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
@@ -1326,6 +1504,84 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               <div className="bg-gray-50 rounded-xl p-4 text-sm text-muted-foreground">
                 💡 <strong>Pro Tip:</strong> For Invisible Clip-Ins, the silicone base should sit flush against your scalp with no visible ridge. If you can see the weft edge, the section is too thin — add a little more natural hair over the top. Many stylists recommend starting with the seamless style at the crown where visibility is highest.
+              </div>
+            </div>
+            ) : product.tags.some(t => t.includes('topper')) ? (
+            /* ─── Hair Topper How To Use ─────────────────────────────── */
+            <div className="max-w-3xl space-y-8">
+              <h3 className="font-semibold text-xl">How to Apply & Fit a Hair Topper</h3>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                <p className="text-sm text-amber-800">
+                  <strong>✨ DIY or Professional — Both Work.</strong> Unlike tape-in or K-tip extensions, hair toppers can be applied by the client at home without any professional training. Stylists can also apply in salon as a paid service (£20–£40 recommended). Either way, the process takes under 5 minutes.
+                </p>
+              </div>
+
+              {/* Visual — application steps */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { n: "1", title: "Assess", body: "Identify the thinning area. Part hair to expose the zone." },
+                  { n: "2", title: "Position", body: "Place topper base over the affected area with 1–2cm margin." },
+                  { n: "3", title: "Secure", body: "Open clips, position on natural hair, snap shut firmly." },
+                  { n: "4", title: "Blend", body: "Comb, cut and style to blend with natural hair." },
+                ].map((step) => (
+                  <div key={step.n} className="text-center border rounded-xl p-4">
+                    <div className="w-10 h-10 bg-[#4A1942] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">{step.n}</div>
+                    <div className="font-semibold text-sm mb-1">{step.title}</div>
+                    <div className="text-xs text-muted-foreground">{step.body}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Base Size Guide */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-[#4A1942] text-white px-5 py-3 font-semibold text-sm">
+                  📏 How to Choose the Right Base Size
+                </div>
+                <div className="divide-y text-sm text-muted-foreground">
+                  {[
+                    { size: "Small — 4\" × 5\"", best: "Isolated thinning spot or small crown area", hair: "50g", ideal: "Early-stage thinning, small coverage area" },
+                    { size: "Medium — 5\" × 6\"", best: "General crown thinning, average head size", hair: "70g", ideal: "Most clients — the most common choice" },
+                    { size: "Large — 6\" × 7\"", best: "Advanced thinning, wider crown coverage", hair: "90g", ideal: "More significant thinning, full top coverage" },
+                    { size: "XL — 7\" × 8\"", best: "Extensive thinning, nearly full head coverage", hair: "120g", ideal: "Severe thinning, alopecia clients" },
+                  ].map((row) => (
+                    <div key={row.size} className="px-5 py-3 flex flex-wrap items-center gap-4">
+                      <div className="font-semibold text-[#4A1942] min-w-[160px]">{row.size}</div>
+                      <div className="flex-1 text-xs">{row.best}</div>
+                      <div className="text-xs bg-muted px-2 py-1 rounded">{row.hair}</div>
+                      <div className="text-xs text-muted-foreground italic min-w-[160px]">{row.ideal}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Aftercare */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold text-sm">
+                  🧴 Client Aftercare — What to Tell Your Clients
+                </div>
+                <div className="px-5 py-4 space-y-3 text-sm text-muted-foreground">
+                  <div className="flex gap-3">
+                    <span className="text-xl shrink-0">🚿</span>
+                    <p><strong className="text-foreground">Washing:</strong> Use sulfate-free, extension-safe shampoo. Avoid applying conditioner near the base or clips. Wash every 2–3 days for daily wear, weekly for occasional use.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-xl shrink-0">🧴</span>
+                    <p><strong className="text-foreground">Styling:</strong> Heat-friendly up to 180–200°C. Always use a heat protection spray. For best results, curl or straighten the topper hair and natural hair together for a seamless blend.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-xl shrink-0">🌙</span>
+                    <p><strong className="text-foreground">Night Care:</strong> For clip-in toppers: remove before bed, store flat or on a wig stand. For bonded toppers: tie hair loosely in a low ponytail or braid before sleep.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-xl shrink-0">✂️</span>
+                    <p><strong className="text-foreground">Maintenance:</strong> Return to your stylist every 6–8 weeks for repositioning (bonded styles). Clip-in toppers last 4–8 months before the hair needs replacing; clips can be swapped individually.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#FDF8F0] border border-amber-200 rounded-xl p-4 text-sm text-[#6B3A6E]">
+                💡 <strong>Salon Upsell Tip:</strong> Offer a "Topper Styling Service" at £25–£40 — this includes application, cutting, blending, and a mini blow-dry. This transforms a product sale into a premium service experience and builds client loyalty.
               </div>
             </div>
             ) : (
