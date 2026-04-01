@@ -13,6 +13,16 @@ export const metadata = {
 
 const posts = [
   {
+    slug: "hair-topper-guide",
+    title: "Hair Toppers: The UK Salon's Most Underrated Revenue Stream",
+    excerpt:
+      "Complete guide to hair toppers — silk base vs mono top vs mesh base, who needs them, how to apply in 4 steps, and why every UK salon should stock them.",
+    category: "Product Guide",
+    readTime: "10 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+  },
+  {
     slug: "hand-tied-weft-guide",
     title: "What is Hand-Tied Weft? The Complete Salon Guide for 2025",
     excerpt:
