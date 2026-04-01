@@ -23,6 +23,86 @@ const posts = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
   },
   {
+    slug: "clip-in-extensions-guide",
+    title: "Clip-In Extensions: Instant Volume, Zero Commitment",
+    excerpt:
+      "The complete guide to clip-in hair extensions for UK salons — how to fit, blend, care for, and when to recommend clip-ins. 100% Remy human hair, instant results.",
+    category: "Product Guide",
+    readTime: "8 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+  },
+  {
+    slug: "weft-extensions-guide",
+    title: "Weft Extensions: The Professional's Choice",
+    excerpt:
+      "Hand-tied vs machine-made, weft extensions deliver maximum volume and length with fewer installation points. Here's what every UK salon needs to know.",
+    category: "Product Guide",
+    readTime: "9 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+  },
+  {
+    slug: "ponytail-extensions-guide",
+    title: "Ponytail Extensions: One Clip, Total Transformation",
+    excerpt:
+      "Instant length and volume for ponytails, buns, and braided styles. The secret weapon of professional salons — and how to add it to your offering.",
+    category: "Product Guide",
+    readTime: "6 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+  },
+  {
+    slug: "fringes-bangs-extensions-guide",
+    title: "Fringes & Bangs Extensions: The Finishing Touch",
+    excerpt:
+      "Instant face-framing colour, volume, and style without a long-term commitment. How every UK salon can add fringe extensions to their offering.",
+    category: "Product Guide",
+    readTime: "6 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+  },
+  {
+    slug: "tape-in-extensions-guide",
+    title: "Tape-In Extensions: The UK's Favourite Method",
+    excerpt:
+      "Invisible application, seamless finish, easy maintenance. Tape-ins dominate UK salons for good reason — and this is everything you need to know.",
+    category: "Product Guide",
+    readTime: "10 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+  },
+  {
+    slug: "k-tip-extensions-guide",
+    title: "K-Tip Extensions: The Premium Long-Term Solution",
+    excerpt:
+      "The gold standard for natural-looking, long-lasting extensions. K-tips command the highest revenue of any method — here's what UK salon professionals need to know.",
+    category: "Product Guide",
+    readTime: "9 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+  },
+  {
+    slug: "nano-ring-extensions-guide",
+    title: "Nano Ring Extensions: Virtually Invisible. Zero Heat.",
+    excerpt:
+      "The smallest bonds of any extension method — up to 90% smaller than micro-beads. Perfect for fine-haired clients. Here's what UK salon professionals need to know.",
+    category: "Product Guide",
+    readTime: "8 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+  },
+  {
+    slug: "butterfly-extensions-guide",
+    title: "Butterfly Weft Extensions: The Industry Game-Changer",
+    excerpt:
+      "Ultra-thin 0.5mm base that is completely undetectable. Butterfly wefts have transformed how UK salons approach volume and length — here's the complete guide.",
+    category: "Product Guide",
+    readTime: "8 min read",
+    date: "March 2025",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+  },
+  {
     slug: "hand-tied-weft-guide",
     title: "What is Hand-Tied Weft? The Complete Salon Guide for 2025",
     excerpt:

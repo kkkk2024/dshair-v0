@@ -81,30 +81,81 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         <main className="flex-1">
           <CollectionHeader collection={collection} productCount={products.length} />
 
-          {/* Hair Topper Guide Banner */}
-          {slug === "hair-toppers" && (
-            <div className="bg-[#FDF8F0] border-y border-amber-200">
-              <div className="container px-4 md:px-6 py-5">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#4A1942] flex items-center justify-center shrink-0">
-                      <BookOpen className="h-6 w-6 text-white" />
+          {/* ── Salon Guide Banner (per collection) ── */}
+          {(() => {
+            const BANNERS: Record<string, { guideUrl: string; headline: string; subtext: string }> = {
+              "hair-toppers": {
+                guideUrl: "/blog/hair-topper-guide",
+                headline: "Not sure which topper is right for your client?",
+                subtext: "Complete guide: silk vs mono vs mesh base, application steps & salon tips",
+              },
+              "clip-in-extensions": {
+                guideUrl: "/blog/clip-in-extensions-guide",
+                headline: "New to clip-in extensions?",
+                subtext: "Read our complete guide: how to fit, blend, colour-match & care for clip-in sets",
+              },
+              "weft-extensions": {
+                guideUrl: "/blog/weft-extensions-guide",
+                headline: "Hand-tied or machine weft — which is right for your client?",
+                subtext: "Complete guide: application methods, pricing, maintenance cycle & salon revenue tips",
+              },
+              "ponytails": {
+                guideUrl: "/blog/ponytail-extensions-guide",
+                headline: "Ponytail extensions — your salon\'s secret revenue weapon",
+                subtext: "Read our guide: 5 ways to style, colour-match & upsell ponytail extensions",
+              },
+              "fringes-bangs": {
+                guideUrl: "/blog/fringes-bangs-extensions-guide",
+                headline: "Fringe extensions — the most underrated salon product",
+                subtext: "Complete guide: face-framing colour, volume techniques & client recommendations",
+              },
+              "tape-in-extensions": {
+                guideUrl: "/blog/tape-in-extensions-guide",
+                headline: "Tape-in extensions — the UK's most popular method",
+                subtext: "Complete guide: invisible application, aftercare & how to maximise salon revenue",
+              },
+              "k-tip-extensions": {
+                guideUrl: "/blog/k-tip-extensions-guide",
+                headline: "K-tip extensions — the premium long-term solution",
+                subtext: "Complete guide: keratin bonds, maintenance & how to charge premium prices",
+              },
+              "nano-ring-extensions": {
+                guideUrl: "/blog/nano-ring-extensions-guide",
+                headline: "Nano ring extensions — ultra-invisible for fine hair",
+                subtext: "Complete guide: 3mm bonds, no-heat application & fine hair specialist tips",
+              },
+              "butterfly-extensions": {
+                guideUrl: "/blog/butterfly-extensions-guide",
+                headline: "Butterfly weft — the industry game-changer",
+                subtext: "Complete guide: 0.5mm ultra-thin base, seamless finish & salon pricing guide",
+              },
+            }
+            const banner = BANNERS[slug]
+            if (!banner) return null
+            return (
+              <div className="bg-[#FDF8F0] border-y border-amber-200">
+                <div className="container px-4 md:px-6 py-5">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-[#4A1942] flex items-center justify-center shrink-0">
+                        <BookOpen className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#4A1942] text-sm">{banner.headline}</p>
+                        <p className="text-xs text-[#6B3A6E]">{banner.subtext}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-[#4A1942] text-sm">Not sure which topper is right for your client?</p>
-                      <p className="text-xs text-[#6B3A6E]">Read our complete guide: silk vs mono vs mesh base, application steps & salon tips</p>
-                    </div>
+                    <Link
+                      href={banner.guideUrl}
+                      className="inline-flex items-center gap-2 bg-[#4A1942] hover:bg-[#3a1434] text-white text-sm font-medium px-5 py-2.5 rounded-lg shrink-0 transition-colors"
+                    >
+                      Read the Guide <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </div>
-                  <Link
-                    href="/blog/hair-topper-guide"
-                    className="inline-flex items-center gap-2 bg-[#4A1942] hover:bg-[#3a1434] text-white text-sm font-medium px-5 py-2.5 rounded-lg shrink-0 transition-colors"
-                  >
-                    Read the Guide <ArrowRight className="h-4 w-4" />
-                  </Link>
                 </div>
               </div>
-            </div>
-          )}
+            )
+          })()}
 
           <div className="container px-4 md:px-6 py-8">
             <div className="flex flex-col lg:flex-row gap-8">
