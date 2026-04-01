@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import Link from "next/link"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -7,6 +8,7 @@ import { ProductGrid } from "@/components/products/product-grid"
 import { ProductFilters } from "@/components/products/product-filters"
 import { CollectionHeader } from "@/components/products/collection-header"
 import { getProductsByCollection, getCollectionBySlug, collections } from "@/lib/products"
+import { BookOpen, ArrowRight } from "lucide-react"
 
 interface CollectionPageProps {
   params: Promise<{ slug: string }>
@@ -78,7 +80,32 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         <Header />
         <main className="flex-1">
           <CollectionHeader collection={collection} productCount={products.length} />
-          
+
+          {/* Hair Topper Guide Banner */}
+          {slug === "hair-toppers" && (
+            <div className="bg-[#FDF8F0] border-y border-amber-200">
+              <div className="container px-4 md:px-6 py-5">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#4A1942] flex items-center justify-center shrink-0">
+                      <BookOpen className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[#4A1942] text-sm">Not sure which topper is right for your client?</p>
+                      <p className="text-xs text-[#6B3A6E]">Read our complete guide: silk vs mono vs mesh base, application steps & salon tips</p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/blog/hair-topper-guide"
+                    className="inline-flex items-center gap-2 bg-[#4A1942] hover:bg-[#3a1434] text-white text-sm font-medium px-5 py-2.5 rounded-lg shrink-0 transition-colors"
+                  >
+                    Read the Guide <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="container px-4 md:px-6 py-8">
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Sidebar filters */}
