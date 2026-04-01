@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: CollectionPageProps) {
     'hair-care': 'Hair Extension Care Products UK | Sulfate-Free | D.S HAIR & BEAUTY',
     'butterfly-weft': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
     'butterfly-extensions': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
+    'hair-toppers': 'Hair Toppers UK | Thinning Hair Solutions | D.S HAIR & BEAUTY',
   }
 
   return {

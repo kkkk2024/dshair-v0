@@ -2925,6 +2925,130 @@ export const products: Product[] = [
       "/images/color-chart-front/31_Platinum_Blonde_80.jpg", "/images/color-chart/31_Platinum_Blonde_80.jpg", "https://www.foxyhairextensions.net/wp-content/uploads/2024/02/New-shades-1-scaled.jpg", "https://www.additionallengths.co.uk/cdn/shop/files/Full_Weft_55_0036ae70-7891-4ce1-b6a8-63f494525dc4.jpg?height=1408&v=1729085077&width=1100", "https://www.vpfashion.com/media/catalog/product/cache/730028fce2d3fb3e70bdf76b1c05350a/h/t/htw-_.jpg"
     ], variants: [], inStock: true, badge: undefined, rating: 5.0, reviews: 0, colors: [{ name: "Platinum Blonde #80 Natural", hex: "#E5E4E2" }], lengths: ['14"', '16"', '18"', '20"', '22"', '24"', '26"', '28"'], slug: "ds-hair-human-hair-weft-platinum-blonde-80-natural", category: "Professional Extensions", features: ["100% Remy Human Hair", "Machine-made weft"], priceOnRequest: true },
 
+  // ─── Hair Toppers ───────────────────────────────────────────
+  {
+    id: "topper-1",
+    handle: "silk-base-hair-topper",
+    name: "Silk Base Hair Topper",
+    title: "Silk Base Hair Topper — Most Natural Look",
+    description: "Our premium silk base hair topper delivers the most natural-looking part line in the industry. 100% hand-tied Remy human hair on a silk (lace) base — virtually undetectable at the crown. Ideal for clients experiencing thinning at the top of the head. Available in 30+ colours, 12\"–20\" lengths.",
+    shortDescription: "Premium silk base for undetectable crown coverage",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Hair Topper",
+    type: "professional",
+    tags: ["hair-topper", "silk-base", "crown-coverage", "thinning-hair"],
+    price: 0,
+    currencyCode: "GBP",
+    image: getPlaceholderImage("Silk Topper", "silk-topper"),
+    images: [getPlaceholderImage("Silk Topper", "silk-topper")],
+    variants: [],
+    inStock: true,
+    badge: "Most Popular",
+    rating: 4.9,
+    reviews: 312,
+    colors: [
+      { name: "Jet Black #1", hex: "#0D0D0D" },
+      { name: "Dark Brown #2", hex: "#2D1810" },
+      { name: "Medium Brown #4", hex: "#4A2314" },
+      { name: "Chestnut #8", hex: "#6B3A14" },
+      { name: "Dark Blonde #16", hex: "#8B6914" },
+      { name: "Ash Brown #10", hex: "#5C4A3A" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches", "20 inches"],
+    slug: "silk-base-hair-topper",
+    category: "Hair Toppers",
+    features: [
+      "100% hand-tied silk base",
+      "Most natural part-line available",
+      "Zero visibility scalp coverage",
+      "Pressure clips for secure hold",
+      "100% Remy human hair",
+      "Can be cut and customised",
+    ],
+    priceOnRequest: true,
+  },
+
+  {
+    id: "topper-2",
+    handle: "mono-top-hair-topper",
+    name: "Mono Top Hair Topper",
+    title: "Mono Top Hair Topper — Breathable & Comfortable",
+    description: "The monofilament topper combines a breathable mono base with hand-tied hair at the parting area. Perfect for clients who want excellent ventilation and a natural-looking centre or side part. 100% Remy human hair, 30+ colours.",
+    shortDescription: "Breathable mono base with natural parting",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Hair Topper",
+    type: "professional",
+    tags: ["hair-topper", "mono-top", "breathable", "parting"],
+    price: 0,
+    currencyCode: "GBP",
+    image: getPlaceholderImage("Mono Topper", "mono-topper"),
+    images: [getPlaceholderImage("Mono Topper", "mono-topper")],
+    variants: [],
+    inStock: true,
+    badge: "Best Value",
+    rating: 4.8,
+    reviews: 198,
+    colors: [
+      { name: "Jet Black #1", hex: "#0D0D0D" },
+      { name: "Dark Brown #2", hex: "#2D1810" },
+      { name: "Medium Brown #4", hex: "#4A2314" },
+      { name: "Chestnut #8", hex: "#6B3A14" },
+      { name: "Ash Brown #10", hex: "#5C4A3A" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches"],
+    slug: "mono-top-hair-topper",
+    category: "Hair Toppers",
+    features: [
+      "Monofilament base — breathable",
+      "Natural centre or side part",
+      "Lightweight and comfortable",
+      "Pressure clip attachment",
+      "100% Remy human hair",
+      "Available in 25+ colours",
+    ],
+    priceOnRequest: true,
+  },
+
+  {
+    id: "topper-3",
+    handle: "mesh-base-hair-topper",
+    name: "Mesh Base Hair Topper",
+    title: "Mesh Base Hair Topper — Lightweight & Secure",
+    description: "Ultra-lightweight open lace mesh base. The mesh construction means maximum airflow to the scalp — ideal for clients who wear toppers daily. Fastest blending of all base types. 100% Remy human hair, available in 30+ colours.",
+    shortDescription: "Ultra-lightweight mesh for everyday wear",
+    vendor: "D.S HAIR & BEAUTY",
+    productType: "Hair Topper",
+    type: "professional",
+    tags: ["hair-topper", "mesh-base", "lightweight", "everyday"],
+    price: 0,
+    currencyCode: "GBP",
+    image: getPlaceholderImage("Mesh Topper", "mesh-topper"),
+    images: [getPlaceholderImage("Mesh Topper", "mesh-topper")],
+    variants: [],
+    inStock: true,
+    badge: "Lightweight",
+    rating: 4.7,
+    reviews: 156,
+    colors: [
+      { name: "Jet Black #1", hex: "#0D0D0D" },
+      { name: "Dark Brown #2", hex: "#2D1810" },
+      { name: "Medium Brown #4", hex: "#4A2314" },
+      { name: "Light Brown #12", hex: "#7A4A2A" },
+    ],
+    lengths: ["12 inches", "14 inches", "16 inches", "18 inches"],
+    slug: "mesh-base-hair-topper",
+    category: "Hair Toppers",
+    features: [
+      "Open lace mesh base",
+      "Maximum scalp ventilation",
+      "Fastest blend of all bases",
+      "Ultra-lightweight",
+      "100% Remy human hair",
+      "Clip-in application",
+    ],
+    priceOnRequest: true,
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
@@ -3053,6 +3177,14 @@ export const collections: Collection[] = [
     image: "/images/collection-butterfly.jpg",
   },
 
+  {
+    id: "14",
+    name: "Hair Toppers",
+    slug: "hair-toppers",
+    description: "Professional hair toppers and top pieces for thinning hair. Silk base, monofilament & mesh options. 100% Remy human hair. The UK's #1 wholesale supplier for salons — trade pricing available.",
+    image: "/images/collection-toppers.jpg",
+  },
+
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {
@@ -3099,6 +3231,14 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
       p.category.toLowerCase().includes("butterfly") ||
       p.productType.toLowerCase().includes("butterfly") ||
       p.tags.some(tag => tag.toLowerCase().includes("butterfly"))
+    )
+  }
+  // Special case for hair-toppers -> match "Hair Toppers" category
+  if (collectionSlug === "hair-toppers") {
+    return products.filter(p => 
+      p.category === "Hair Toppers" ||
+      p.productType.toLowerCase().includes("hair topper") ||
+      p.tags.some(tag => tag.toLowerCase().includes("hair-topper"))
     )
   }
   // Check both category and productType for matching
