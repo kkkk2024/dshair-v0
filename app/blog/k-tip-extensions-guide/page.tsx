@@ -199,10 +199,10 @@ export default function KTipExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "What tips do you have for matching K-tip extension colours for clients with grey hair?", a: "Grey hair requires matching to the CLIENT's natural tone — not their grey coverage needs. For clients going grey who want to maintain their length, blend grey-matching extensions with their remaining natural colour. For clients covering grey entirely, match the pre-grey tone. Always take photos in natural light and use your colour swatches. Some stylists order two-tone sets (root + silver) for a natural grey coverage effect." },
+                  { q: "Can K-tip extensions be applied by clients themselves, or do they need a professional?", a: "Professional application is STRONGLY recommended. K-tip application requires a heat tool (200–230°C) to melt the keratin bond, precise sectioning, and trained technique to avoid damage. Incorrect DIY application causes matting, traction alopecia, and irreversible damage. This makes K-tip extensions a premium salon-exclusive service — clients must return to you for application, fills, and removal." },
+                  { q: "How durable are keratin bonds, and what causes them to fail?", a: "Well-applied keratin bonds are extremely durable — the bond can last 4–6 months with proper care. Bonds fail due to: excessive heat exposure (saunas, hot tools at the bond), oil-based products dissolving the keratin, mechanical stress from tight hairstyles, or improper application temperature. Educating clients on aftercare dramatically reduces bond failure rates and callbacks." },
+                  { q: "How do I charge premium prices for K-tip extension services?", a: "K-tip extensions are the most premium semi-permanent method. Justify higher prices with: consultation and colour-matching service, premium Remy human hair quality, professional-grade application time (2–4 hours), long-lasting results (4–6 months), and a comprehensive aftercare plan. Offer K-tip installs as a 'luxury experience' including champagne, a styling session, and a take-home aftercare kit." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

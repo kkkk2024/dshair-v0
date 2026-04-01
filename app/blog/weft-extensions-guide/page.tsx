@@ -199,10 +199,10 @@ export default function WeftExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "What's the difference between hand-tied weft and machine weft extensions?", a: "Hand-tied wefts are individually hand-sewn, making them ultra-thin (2–3mm) and flexible — ideal for fine hair and invisible braiding. Machine wefts are machine-sewn, slightly thicker (3–5mm), and more durable — better for thicker hair and clients who want maximum volume. Hand-tied wefts command higher prices and deliver a more premium result, making them more profitable for salons." },
+                  { q: "How many rows of weft extensions does a full head require?", a: "For most clients, 2–3 rows of weft provides excellent coverage and volume. Fine or thin hair may only need 2 rows; clients wanting dramatic volume or thickness may need 3–4 rows. Always assess the client's natural density and their desired outcome. Conservative installs build trust; overloading causes discomfort and damage." },
+                  { q: "Can weft extensions be cut or customised during installation?", a: "Absolutely — this is standard practice. You can cut wefts along the track to create custom shapes for the nape, around the ears, or for a graduated effect. Never cut the hair strands themselves; only cut the track. For invisible finishes, seal the cut edge with a small drop of adhesive or heat-weld to prevent fraying." },
+                  { q: "How often should clients return for weft maintenance?", a: "Weft extensions typically require repositioning every 6–8 weeks as natural hair grows out. The weft track is moved up and re-attached to new sections. With proper care, Remy human hair wefts can last 4–6 months before needing replacement. Schedule clients on a 6–8 week rotation to maintain healthy hair and consistent revenue." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

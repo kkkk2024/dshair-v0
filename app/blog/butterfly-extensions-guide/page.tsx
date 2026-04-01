@@ -199,10 +199,10 @@ export default function ButterflyExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "Why is the 0.5mm ultra-thin base a game-changer for clients with fine hair?", a: "Standard weft bases are 2–3mm thick, which creates bulk and discomfort when sewn or glued in. The 0.5mm butterfly base is so thin it lies completely flat against the scalp — undetectable even under short layers or updos. This makes it safe for clients with fine hair who were previously told they couldn't wear weft extensions. It also reduces heat retention and itching that clients associate with traditional wefts." },
+                  { q: "How is butterfly weft installation different from standard hand-tied wefts?", a: "Butterfly weft installation uses a unique fold-over technique where the weft is folded and micro-beaded directly onto the hair in a single pass — no braiding, no sewing, no heat. This makes it faster (2–3 hours for a full head vs. 4–5 hours for traditional hand-tied), more comfortable, and more affordable for clients while maintaining premium results." },
+                  { q: "Can butterfly wefts be used for clients who want volume without length?", a: "Absolutely. Many clients with shorter hair (above shoulder length) want VOLUME as their primary goal, not length. Butterfly wefts are ideal for this: they add body, thickness, and bounce without drastically changing hair length. Style the weft to blend with the natural cut for a natural thickness boost. This opens butterfly wefts to a much wider client base beyond just length-seekers." },
+                  { q: "How do I price butterfly weft installations competitively and profitably?", a: "Butterfly wefts command premium pricing because the results rival hand-tied wefts at a more accessible price point. Price by time (2–3 hours) plus the cost of hair. For a full head, total cost to client typically ranges from £350–£600+ depending on hair length and gram weight. Offer fill packages (6–8 week returns) as a separate revenue stream — this builds a loyal client base with predictable appointments." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

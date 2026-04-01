@@ -199,10 +199,10 @@ export default function PonytailExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "How long does a ponytail extension last with proper care?", a: "With daily wear and gentle handling, a quality Remy human hair ponytail extension typically lasts 3–6 months. The hair itself can last longer if cared for properly, but the construction (the loop or grip mechanism) wears out with daily use. Advise clients to remove and store it carefully each night to maximise lifespan." },
+                  { q: "Can I colour-match a ponytail extension to match highlighted hair?", a: "Yes — but the approach matters. For multi-tonal hair, match to the DOMINANT colour at the roots. You can also customise by purchasing a base colour and having a Colourist blend lowlights or highlights into the extension. We recommend consulting with your colour specialist to create a seamless match for your client's unique hair." },
+                  { q: "What's the best way to upsell ponytail extensions in salon?", a: "Position ponytail extensions as an instant transformation tool for special occasions, daily volume, or transitional haircuts. Show clients the before-and-after difference. Offer a styling service — curl, sleek straight, or braided — to demonstrate versatility. Many clients who are nervous about commitment extensions love ponytails as a gateway product." },
+                  { q: "How do I attach a ponytail extension for the most secure hold?", a: "For maximum security, create two low ponytails and feed the extension through both, then wrap and pin. For thick hair, backcomb the natural ponytail and position the extension underneath before securing. For updos, thread the extension through a French twist or braided bun. Always use hidden pins and strong hair ties to ensure all-day hold." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

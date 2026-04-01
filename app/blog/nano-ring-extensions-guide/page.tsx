@@ -199,10 +199,10 @@ export default function NanoRingExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "Why are nano ring extensions considered the most invisible option?", a: "Nano rings are the smallest extension bonds available — approximately 3mm in diameter compared to 4–5mm for micro rings. This makes them virtually undetectable even on very thin or fine hair. They lie flat against the scalp and can be hidden under short layers. For clients with fine hair who want extensions but are concerned about visibility, nano rings are the best recommendation." },
+                  { q: "How soon can clients return for a nano ring fill appointment?", a: "Nano ring fills are typically needed every 6–8 weeks as the natural hair grows. During a fill, new sections are added with fresh rings in the new growth area while some of the older rings are removed and recycled (if the hair is still in good condition). A typical fill takes 1–2 hours. Schedule fills in advance to maintain the client's appointment calendar." },
+                  { q: "What's the difference between nano rings and micro rings for my clients?", a: "Nano rings (3mm) are smaller and more discreet — ideal for fine to medium hair, short haircuts, or clients who want the most invisible result. Micro rings (4–5mm) are slightly more visible but faster to apply and can hold more hair per section — better for medium to thick hair or clients needing maximum volume. Both methods are heat-free, making them safer than keratin bonds for fine hair." },
+                  { q: "How do I care for nano ring extensions during the aftercare consultation?", a: "Show clients how to brush gently from ends to roots using a specialist extension brush. Advise against sleeping with wet hair and recommend a silk pillowcase to reduce friction. Remind clients to avoid oil-based products near the bonds. With proper aftercare, nano ring extensions last 3–6 months and clients typically need 3–4 fills per set — creating consistent salon revenue." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

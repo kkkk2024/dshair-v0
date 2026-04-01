@@ -199,10 +199,10 @@ export default function ClipInExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "What gram weight should I recommend for different hair types?", a: "For fine or thin hair, suggest 100–140g sets. For medium density, 160–180g works well. For thick or voluminous hair, recommend 200g+. Overloading fine hair causes discomfort and traction; under-selling to thick hair means poor blending. Always assess your client's natural hair density before fitting." },
+                  { q: "How do I colour-match clip-ins for clients with highlights or balayage?", a: "Match clip-ins to the client's ROOT colour (not the mid-lengths or ends), as that's what shows at the attachment points. For highlighted hair, we recommend ordering two sets: one in the root tone and one in the highlighted tone, then layering them together. This creates the most natural blend. Our 31-colour range covers all common UK salon shades." },
+                  { q: "How long do quality Remy human hair clip-ins typically last?", a: "With proper care — washing with sulfate-free products, storing flat, and avoiding heat damage — premium Remy human hair clip-ins can last 6–12 months. This makes them an excellent value for clients who want salon-quality results at home. Non-Remy or low-quality hair typically degrades within 2–3 months, becoming tangled and losing shine." },
+                  { q: "What's the best way to blend clip-in extensions with natural hair?", a: "Start by sectioning hair horizontally 2–3 inches from the crown. Backcomb the root area lightly to create grip. Position clip-ins from ear to ear, leaving the top layer loose. Tease and blend the transition zone. Use a curling wand or straightener to blend textures. Always curl or wave the extensions AFTER fitting, not before." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

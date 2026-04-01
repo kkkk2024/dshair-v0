@@ -199,10 +199,10 @@ export default function FringesBangsExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "What's the most common mistake when fitting fringe extensions?", a: "Choosing the wrong length. Fringe extensions that are too long tangle with the rest of the hair and look unnatural. The ideal length extends just past the brow or sits at cheekbone level for styling versatility. Always ask clients how they prefer to wear their fringe before ordering, and recommend cutting them in salon after fitting for a bespoke finish." },
+                  { q: "Can fringe extensions work on very short or very long hair?", a: "For short hair (above shoulder length), fringe extensions create an instant 'lob' or bob illusion — very popular. For very long hair, fringe extensions add face-framing volume without bulk. The key is matching the texture and wave pattern: straight fringe extensions on curly hair will look disconnected. Always recommend texture-matching." },
+                  { q: "How do I colour-match fringe extensions for ombré or balayage clients?", a: "Match to the ROOT colour for a natural blend at the part line. For clients with ombré or balayage, you can order two pieces in different colours and have them colour-crafted together, or advise the client that the fringe will be a solid colour contrasting with their dimensional mid-lengths. Many stylists now sell fringe pieces as a separate customisation add-on." },
+                  { q: "What's the best way to upsell fringe extensions in salon?", a: "Fringe extensions are an underused upsell. Position them as a low-commitment way to try a new look. Offer fringe cuts as a combo service — fitting plus styling. For clients considering a full set of extensions, fringe pieces are an affordable entry point that often leads to full installs. They also reduce the need for frequent fringe trims between appointments." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">

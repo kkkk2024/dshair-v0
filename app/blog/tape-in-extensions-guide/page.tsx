@@ -199,10 +199,10 @@ export default function TapeInExtensionsGuide() {
 
               <div className="space-y-4 mb-12">
                 {[
-                  { q: "__FAQ_Q1__", a: "__FAQ_A1__" },
-                  { q: "__FAQ_Q2__", a: "__FAQ_A2__" },
-                  { q: "__FAQ_Q3__", a: "__FAQ_A3__" },
-                  { q: "__FAQ_Q4__", a: "__FAQ_A4__" },
+                  { q: "How long do tape-in extensions last before they need to be removed?", a: "Tape-in extensions typically last 6–8 weeks before needing repositioning. The adhesive weakens with exposure to heat, products, and natural scalp oils. With Remy human hair tape-ins and proper aftercare (avoiding oily products at the root, using sulfate-free shampoo), some clients get up to 10 weeks. Always book the repositioning appointment in advance to maintain continuous revenue." },
+                  { q: "Can tape-in extensions be reapplied after removal, or do they need replacing?", a: "Yes — if the hair is in good condition, the tapes can be replaced. Remove with tape-in adhesive remover, clean the hair weft, and apply fresh tape tabs. This can be done 2–3 times before the weft needs replacing. This makes tape-ins cost-effective: clients only buy the hair once but pay for multiple application services over 6–12 months." },
+                  { q: "What aftercare products should clients use with tape-in extensions?", a: "Recommend sulfate-free, paraben-free shampoo and conditioner — never conditioning shampoos near the adhesive. Advise clients to avoid applying conditioner or serums directly on the tapes. Use a special extension-safe brush and avoid aggressive towel drying. A weekly deep-conditioning treatment on the mid-lengths and ends (never the roots) keeps the hair healthy and justifies recommending your salon retail products." },
+                  { q: "How do tape-in extensions compare to other methods in terms of salon profitability?", a: "Tape-ins offer excellent profitability: the application is relatively fast (45–60 minutes for a full head), making more appointments possible per day. The consumables (tape tabs, adhesive remover) are low-cost. With repositioning appointments every 6–8 weeks, you build predictable recurring revenue. The client also saves on product cost over time vs. clip-ins." },
                 ].map(({ q, a }) => (
                   <details key={q} className="group bg-white border border-amber-100 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-[#4A1942] list-none">
