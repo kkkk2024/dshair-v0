@@ -89,12 +89,12 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
                 headline: "Not sure which topper is right for your client?",
                 subtext: "Complete guide: silk vs mono vs mesh base, application steps & salon tips",
               },
-              "clip-in-extensions": {
+              "clip-in": {
                 guideUrl: "/blog/clip-in-extensions-guide",
                 headline: "New to clip-in extensions?",
                 subtext: "Read our complete guide: how to fit, blend, colour-match & care for clip-in sets",
               },
-              "weft-extensions": {
+              "weft": {
                 guideUrl: "/blog/weft-extensions-guide",
                 headline: "Hand-tied or machine weft — which is right for your client?",
                 subtext: "Complete guide: application methods, pricing, maintenance cycle & salon revenue tips",
@@ -109,7 +109,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
                 headline: "Fringe extensions — the most underrated salon product",
                 subtext: "Complete guide: face-framing colour, volume techniques & client recommendations",
               },
-              "tape-in-extensions": {
+              "tape-in": {
                 guideUrl: "/blog/tape-in-extensions-guide",
                 headline: "Tape-in extensions — the UK's most popular method",
                 subtext: "Complete guide: invisible application, aftercare & how to maximise salon revenue",
@@ -119,10 +119,15 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
                 headline: "K-tip extensions — the premium long-term solution",
                 subtext: "Complete guide: keratin bonds, maintenance & how to charge premium prices",
               },
-              "nano-ring-extensions": {
+              "nano-extensions": {
                 guideUrl: "/blog/nano-ring-extensions-guide",
                 headline: "Nano ring extensions — ultra-invisible for fine hair",
                 subtext: "Complete guide: 3mm bonds, no-heat application & fine hair specialist tips",
+              },
+              "butterfly-weft": {
+                guideUrl: "/blog/butterfly-extensions-guide",
+                headline: "Butterfly weft — the industry game-changer",
+                subtext: "Complete guide: 0.5mm ultra-thin base, seamless finish & salon pricing guide",
               },
               "butterfly-extensions": {
                 guideUrl: "/blog/butterfly-extensions-guide",
