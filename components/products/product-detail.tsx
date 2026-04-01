@@ -2018,6 +2018,141 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 💡 <strong>Not sure how many pieces you need?</strong> WhatsApp us a photo in natural light — our D.S HAIR extension specialists will recommend the perfect set weight, length and style for free, drawing on 19 years of professional experience.
               </div>
             </div>
+            ) : product.tags.some(t => t.includes('topper')) ? (
+            /* ─── Hair Topper Size Guide ─────────────────────────────────── */
+            <div className="max-w-3xl space-y-8">
+              <div className="rounded-xl overflow-hidden bg-gradient-to-br from-[#FDF8F0] to-[#F5EDE6] p-6">
+                <h3 className="font-bold text-[#4A1942] text-xl mb-2">Finding the Perfect Hair Topper for Your Client</h3>
+                <p className="text-sm text-[#6B3A6E] leading-relaxed">
+                  Not sure which base type or size to recommend? Use this guide to match your client's thinning pattern, lifestyle and budget to the ideal hair topper solution. As a trade customer, you can also <a href="https://wa.me/8613516946001" className="underline font-medium">WhatsApp our team</a> for personalised recommendations.
+                </p>
+              </div>
+
+              {/* Step 1: Base Type Decision */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-[#4A1942] text-white px-5 py-3 font-semibold text-sm">
+                  Step 1 — Choose the Right Base Type
+                </div>
+                <div className="divide-y text-sm">
+                  {[
+                    { base: "Silk Base ⭐", best: "Premium salon clients who prioritise the most realistic scalp and parting — zero visible base", icon: "✨", shade: "Most Natural Look", durability: "★★★★★", breathable: "★★★☆☆", ideal: "Crown thinning, parting visibility, special occasions, high-net-worth clients" },
+                    { base: "Mono Top", best: "Clients who want the flexibility to part anywhere on the scalp", icon: "🔄", shade: "Natural + Versatile", durability: "★★★★☆", breathable: "★★★★☆", ideal: "Free parting, everyday wear, alopecia, clients who change their parting regularly" },
+                    { base: "Mesh Base", best: "Clients who wear a topper daily in warm climates or with sensitive scalps", icon: "💨", shade: "Natural + Lightest", durability: "★★★☆☆", breathable: "★★★★★", ideal: "Daily wear, hot climates, sensitive scalp, fast morning routine, active lifestyle" },
+                  ].map((row) => (
+                    <div key={row.base} className="p-5">
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="text-2xl shrink-0">{row.icon}</span>
+                        <div>
+                          <div className="font-semibold text-[#4A1942]">{row.base}</div>
+                          <div className="text-xs text-muted-foreground italic">{row.shade} · Durability {row.durability} · Breathability {row.breathable}</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-muted-foreground ml-9">{row.best}</div>
+                      <div className="mt-2 ml-9 text-xs"><strong>Ideal for:</strong> <span className="text-[#6B3A6E]">{row.ideal}</span></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 2: Base Size Guide */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-black text-white px-5 py-3 font-semibold text-sm">
+                  Step 2 — Choose the Right Base Size
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b bg-muted/30">
+                        <th className="text-left px-4 py-3 font-semibold">Size</th>
+                        <th className="text-left px-4 py-3 font-semibold">Dimensions</th>
+                        <th className="text-left px-4 py-3 font-semibold">Coverage</th>
+                        <th className="text-left px-4 py-3 font-semibold">Hair Weight</th>
+                        <th className="text-left px-4 py-3 font-semibold">Ideal For</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y text-muted-foreground">
+                      {[
+                        { size: "Small", dims: '4" × 5"', cover: "Isolated spot", weight: "50g", ideal: "Early-stage thinning, small crown patch, temples" },
+                        { size: "Medium", dims: '5" × 6"', cover: "Crown area", weight: "70g", ideal: "General crown thinning — most common choice" },
+                        { size: "Large", dims: '6" × 7"', cover: "Full top", weight: "90g", ideal: "Advanced thinning, wider coverage area" },
+                        { size: "XL", dims: '7" × 8"', cover: "Nearly full head", weight: "120g", ideal: "Severe thinning, alopecia, near-full top coverage" },
+                      ].map((row) => (
+                        <tr key={row.size} className="hover:bg-muted/20">
+                          <td className="px-4 py-3 font-semibold text-[#4A1942]">{row.size}</td>
+                          <td className="px-4 py-3">{row.dims}</td>
+                          <td className="px-4 py-3">{row.cover}</td>
+                          <td className="px-4 py-3"><span className="bg-muted px-2 py-0.5 rounded text-xs">{row.weight}</span></td>
+                          <td className="px-4 py-3 text-xs">{row.ideal}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Step 3: Length Guide */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-[#4A1942] text-white px-5 py-3 font-semibold text-sm">
+                  Step 3 — Choose the Right Length
+                </div>
+                <div className="px-5 py-4">
+                  <p className="text-xs text-muted-foreground mb-4">Topper length should complement — not overpower — the client's existing hair. Always match to their mid-lengths and ends.</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {[
+                      { len: '12"', effect: "Subtle coverage, natural blend" },
+                      { len: '14"', effect: "Bob length, minimal added length" },
+                      { len: '16"', effect: "Shoulder length, noticeable volume" },
+                      { len: '18"', effect: "Mid-back, dramatic transformation" },
+                      { len: '20"', effect: "Long, full glamour look" },
+                      { len: '22"', effect: "Extra-long, maximum impact" },
+                    ].map((item) => (
+                      <div key={item.len} className="border rounded-xl p-3 text-center">
+                        <div className="text-lg font-bold text-[#4A1942]">{item.len}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{item.effect}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Hair Loss Stage Guide */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 font-semibold text-sm text-amber-900">
+                  Step 4 — Match to Your Client's Hair Loss Stage (Savin Scale Reference)
+                </div>
+                <div className="divide-y text-xs text-muted-foreground">
+                  {[
+                    { stage: "Stage 1–2", topper: "Small (4\"×5\")", base: "Silk Base or Mono Top", tip: "Early thinning — a small topper is often all that's needed" },
+                    { stage: "Stage 3", topper: "Medium (5\"×6\")", base: "Silk Base for parting / Mono Top for free parting", tip: "Visible crown thinning — moderate coverage required" },
+                    { stage: "Stage 4–5", topper: "Large (6\"×7\") or XL (7\"×8\")", base: "Mono Top or Mesh Base", tip: "Advanced thinning — larger base for full coverage" },
+                    { stage: "Stage 6+", topper: "XL or 2 × Medium", base: "Mesh Base for breathability, Mono Top for blending", tip: "Consider a full wig or combination approach" },
+                  ].map((row) => (
+                    <div key={row.stage} className="grid grid-cols-4 items-start gap-4 px-5 py-3">
+                      <div className="font-semibold text-amber-800">{row.stage}</div>
+                      <div>{row.topper}</div>
+                      <div>{row.base}</div>
+                      <div className="italic">{row.tip}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Trade CTA */}
+              <div className="bg-gradient-to-r from-[#4A1942] to-[#6B3A6E] text-white rounded-xl p-5 text-sm">
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl shrink-0">📞</span>
+                  <div>
+                    <h3 className="font-bold text-base mb-1">Unsure? Let Our Team Help — Free Trade Consultations</h3>
+                    <p className="text-white/80 leading-relaxed mb-3">
+                      Send us a photo of your client's scalp in natural light via WhatsApp. Our D.S HAIR trade specialists will recommend the ideal base type, size, colour and length — at no cost. We respond within the same working day.
+                    </p>
+                    <a href="https://wa.me/8613516946001?text=Hi%20D.S%20Hair%2C%20I%20need%20a%20recommendation%20for%20a%20hair%20topper%20client.%20Can%20you%20help%3F" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-[#4A1942] font-semibold text-xs px-4 py-2 rounded-lg hover:bg-white/90 transition-colors">
+                      WhatsApp Trade Team →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             ) : (
             <div className="max-w-3xl space-y-8">
               <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
