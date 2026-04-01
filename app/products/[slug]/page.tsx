@@ -7,6 +7,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { ProductDetail } from "@/components/products/product-detail"
 import { RelatedProducts } from "@/components/products/related-products"
 import { getProductBySlug, getRelatedProducts, products } from "@/lib/products"
+import { TAG_FAQS } from "@/lib/product-faqs"
+import { ProductFaqAccordion } from "@/components/products/product-faq-accordion"
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld"
 import { BookOpen, ArrowRight } from "lucide-react"
 
@@ -115,6 +117,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const matchedTag = product.tags.find((tag) => TAG_BANNERS[tag])
   const banner = matchedTag ? TAG_BANNERS[matchedTag] : null
 
+  const matchedFaqs = matchedTag ? (TAG_FAQS[matchedTag] || []) : []
+
   return (
     <CartProvider>
       <ProductJsonLd product={product} />
@@ -152,6 +156,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
             </div>
           )}
+
+          {/* ── Collapsible FAQ Section (shown when product has matching FAQs) ── */}
+          {matchedFaqs.length > 0 && (
+            <ProductFaqAccordion faqs={matchedFaqs} />
+          )}
+
           <ProductDetail product={product} />
           {relatedProducts.length > 0 && (
             <RelatedProducts products={relatedProducts} />
