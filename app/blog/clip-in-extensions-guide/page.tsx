@@ -162,7 +162,7 @@ export default function ClipInExtensionsGuide() {
                   {[
                     "Always match clip-in colour to the mid-lengths and ends — not the roots. Roots are often darker due to sun exposure.",
                     "Offer a free fitting session with every clip-in purchase. It builds trust and opens the door to upselling other services.",
-                    "Stock 3 length options (16", 18", 20") in your most popular 8-10 shades. This covers 90% of client needs.",
+                    "Stock 3 length options (16\", 18\", 20\") in your most popular 8-10 shades. This covers 90% of client needs.",
                     "Show clients how to blend their natural hair over the clips using a tail comb. Seamless blending is the key to a natural look.",
                     "Recommend heat styling with protection spray. Remy human hair clip-ins can be curled and straightened just like natural hair.",
                   ].map((tip) => (
