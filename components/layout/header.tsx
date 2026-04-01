@@ -26,12 +26,13 @@ const diyExtensions = [
   { title: "Fringes & Bangs", href: "/collections/fringes-bangs", description: "Transform your look instantly" },
 ]
 
-// 2. Professional - 包含 Tape-In, K-tips, Weft Extensions, Butterfly
+// 2. Professional - 包含 Tape-In, K-tips, Nano, Butterfly, Hair Toppers
 const proExtensions = [
   { title: "Tape-In", href: "/collections/tape-in", description: "Professional grade tape-ins" },
   { title: "K-Tip Extensions", href: "/collections/k-tip-extensions", description: "Keratin bonded tips" },
   { title: "Nano Extensions", href: "/collections/nano-extensions", description: "Nano ring extensions for fine hair" },
   { title: "Butterfly Weft", href: "/collections/butterfly-weft", description: "Lightweight volume" },
+  { title: "Hair Toppers", href: "/collections/hair-toppers", description: "Thinning hair solutions" },
 ]
 
 // 3. Hair Care
