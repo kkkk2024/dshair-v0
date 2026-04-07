@@ -29,6 +29,12 @@ const footerLinks = {
     { title: "Find a Stylist", href: "/find-stylist" },
     { title: "Colour Match", href: "/colour-match" },
   ],
+  salons: [
+    { title: "Wholesale Enquiry", href: "/contact?type=wholesale" },
+    { title: "Trade Account", href: "/salon-partners" },
+    { title: "Free Colour Kit", href: "/colour-match" },
+    { title: "Contact → WhatsApp", href: contactInfo.whatsapp, external: true },
+  ],
 }
 
 export function Footer() {
@@ -95,7 +101,7 @@ export function Footer() {
 
       {/* Main footer content */}
       <div className="container px-4 md:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link href="/" className="inline-block mb-4">
@@ -177,6 +183,26 @@ export function Footer() {
                   <Link href={link.href} className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     {link.title}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* For Salons - B2B Section */}
+          <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
+            <h4 className="font-semibold mb-4 text-accent">For Salons</h4>
+            <ul className="space-y-3">
+              {footerLinks.salons.map((link) => (
+                <li key={link.title}>
+                  {link.external ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-1">
+                      {link.title}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                      {link.title}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
