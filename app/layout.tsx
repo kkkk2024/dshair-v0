@@ -105,6 +105,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 `
           }}
         />
+        {/* Pinterest Domain Verification */}
+        <meta name="p:domain_verify" content="dcc4d0abd5f7405c205b0872574efb47"/>
       </head>
       <body className="font-sans antialiased">
         <OrganizationJsonLd />
