@@ -36,16 +36,16 @@ export interface Product {
 const getPlaceholderImage = (name: string, slug: string) => 
   `https://placehold.co/600x800/e8d5c4/8b7355?text=${encodeURIComponent(name)}`
 
-// Hair Topper 8-color palette with swatch images (matching dscaro.com color codes: #1B, #2, #10, #21, #23R, #24R, #624, Vanilla)
+// Hair Topper 8-color palette with swatch images (from 女士假发真发颜色 folder)
 export const HAIR_TOPPER_COLORS = [
-  { name: "Off Black", hex: "#1B0F0A", image: "/images/color-chart-front/02_Off_Black_1B.jpg" },
-  { name: "Natural Black", hex: "#0D0D0D", image: "/images/color-chart-front/03_Dark_Brown_2.jpg" },
-  { name: "Truffle Brown", hex: "#4A3A2A", image: "/images/color-chart-front/09_Ash_Brown_10.jpg" },
-  { name: "Espresso Brown", hex: "#3D2317", image: "/images/color-chart-front/21_Ash_Bronde_Strawberry_Blonde_21_27.jpg" },
-  { name: "Mousse Brown", hex: "#5C4033", image: "/images/color-chart-front/23_Ash_Brown_Honey_Blonde_8_20_24_60.jpg" },
-  { name: "Dark Caramel", hex: "#6B3A14", image: "/images/color-chart-front/24_Caramel_Blonde_18_46.jpg" },
-  { name: "Dusty Ash Brown", hex: "#5C4A3A", image: "/images/color-chart-front/22_Ash_Brown_Ash_Blonde_8_60.jpg" },
-  { name: "Vanilla Butter Blonde", hex: "#D4B896", image: "/images/color-chart-front/28_Butter_Blonde_P10_16_60.jpg" },
+  { name: "Off Black", hex: "#1A0F0A", image: "/images/hair-topper-colors/1B-off-black.webp" },
+  { name: "Natural Black", hex: "#0D0D0D", image: "/images/hair-topper-colors/2-natural-black.webp" },
+  { name: "Truffle Brown", hex: "#3D2317", image: "/images/hair-topper-colors/10-truffle-brown.webp" },
+  { name: "Espresso Brown", hex: "#2D1810", image: "/images/hair-topper-colors/21-espresso-brown.webp" },
+  { name: "Mousse Brown", hex: "#4A2314", image: "/images/hair-topper-colors/23R-mousse-brown.webp" },
+  { name: "Dark Caramel", hex: "#6B3A14", image: "/images/hair-topper-colors/24R-dark-caramel.webp" },
+  { name: "Dusty Ash Brown", hex: "#5C4A3A", image: "/images/hair-topper-colors/624-dusty-ash-brown.webp" },
+  { name: "Vanilla Butter Blonde", hex: "#D4B896", image: "/images/hair-topper-colors/vanilla-butter-blonde.webp" },
 ]
 
 export const products: Product[] = [
