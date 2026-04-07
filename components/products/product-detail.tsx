@@ -3,10 +3,11 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Star, Heart, Share2, Minus, Plus, Check, ChevronRight, Truck, RefreshCw, Shield, MessageCircle, Mail } from "lucide-react"
+import { Star, Heart, Share2, Minus, Plus, Check, ChevronRight, Truck, RefreshCw, Shield, MessageCircle, Mail, Palette } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Product, contactInfo } from "@/lib/products"
 
 interface ProductDetailProps {
@@ -38,6 +39,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedLength, setSelectedLength] = useState(product.lengths[0])
   const [quantity, setQuantity] = useState(1)
+  const [colorModalOpen, setColorModalOpen] = useState(false)
 
   // For tape-in products, append shared result photos to the image gallery
   // For k-tip products, keep only first 2 original images then append 7 new result photos
@@ -179,45 +181,38 @@ export function ProductDetail({ product }: ProductDetailProps) {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
               <span className="font-medium">Colour: {selectedColor.name}</span>
-              <Link href="/colour-match" className="text-sm text-accent hover:underline">
-                Find your shade
-              </Link>
+              <button
+                onClick={() => setColorModalOpen(true)}
+                className="flex items-center gap-1.5 text-sm text-accent hover:underline"
+              >
+                <Palette className="h-4 w-4" />
+                View all colours
+              </button>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {product.colors.map((color) => (
-                <button
-                  key={color.name}
-                  onClick={() => setSelectedColor(color)}
-                  className={`relative h-10 w-10 md:h-12 md:w-12 rounded-lg overflow-hidden border-2 transition-all shadow-sm ${
-                    selectedColor.name === color.name
-                      ? "border-primary ring-2 ring-primary/30 scale-110"
-                      : "border-transparent hover:border-muted-foreground/30 hover:scale-105"
-                  }`}
-                  title={color.name}
-                  aria-label={`Select colour ${color.name}`}
-                >
-                  {color.image ? (
-                    <Image
-                      src={color.image}
-                      alt={color.name}
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
-                  ) : (
-                    <div
-                      className="w-full h-full"
-                      style={{ backgroundColor: color.hex }}
-                    />
-                  )}
-                  {selectedColor.name === color.name && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <Check className="h-4 w-4 md:h-5 md:w-5 text-white drop-shadow-md" />
-                    </div>
-                  )}
-                </button>
-              ))}
-            </div>
+            {/* Current selected color preview */}
+            <button
+              onClick={() => setColorModalOpen(true)}
+              className="flex items-center gap-3 p-2 rounded-lg border hover:bg-secondary/50 transition-colors"
+            >
+              {selectedColor.image ? (
+                <div className="relative h-12 w-12 rounded-md overflow-hidden shadow-sm">
+                  <Image
+                    src={selectedColor.image}
+                    alt={selectedColor.name}
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="h-12 w-12 rounded-md shadow-sm"
+                  style={{ backgroundColor: selectedColor.hex }}
+                />
+              )}
+              <span className="text-sm font-medium">{selectedColor.name}</span>
+              <ChevronRight className="h-4 w-4 text-muted-foreground ml-auto" />
+            </button>
           </div>
 
           {/* Length Selection */}
@@ -3011,6 +3006,67 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </div>
           </TabsContent>
         </Tabs>
+
+        {/* Color Selection Modal */}
+        <Dialog open={colorModalOpen} onOpenChange={setColorModalOpen}>
+          <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <Palette className="h-5 w-5" />
+                Select Your Colour
+              </DialogTitle>
+              <DialogDescription>
+                Click on a colour swatch to view and select. All colours available for this product.
+              </DialogDescription>
+            </DialogHeader>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+              {product.colors.map((color) => (
+                <button
+                  key={color.name}
+                  onClick={() => {
+                    setSelectedColor(color)
+                    setColorModalOpen(false)
+                  }}
+                  className={`group flex flex-col items-center gap-2 p-3 rounded-lg border-2 transition-all ${
+                    selectedColor.name === color.name
+                      ? "border-primary bg-primary/5 shadow-md"
+                      : "border-transparent hover:border-muted-foreground/30 hover:bg-secondary/50"
+                    }`}
+                  >
+                    <div className="relative h-24 w-24 rounded-lg overflow-hidden shadow-sm">
+                      {color.image ? (
+                        <Image
+                          src={color.image}
+                          alt={color.name}
+                          fill
+                          className="object-cover"
+                          sizes="96px"
+                        />
+                      ) : (
+                        <div
+                          className="w-full h-full"
+                          style={{ backgroundColor: color.hex }}
+                        />
+                      )}
+                      {selectedColor.name === color.name && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Check className="h-8 w-8 text-white drop-shadow-md" />
+                        </div>
+                      )}
+                    </div>
+                    <span className="text-sm font-medium text-center">{color.name}</span>
+                  </button>
+                ))}
+            </div>
+            
+            <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+              <p className="text-sm text-muted-foreground text-center">
+                Need help choosing? <Link href="/colour-match" className="text-accent hover:underline" onClick={() => setColorModalOpen(false)}>Visit our colour matching guide</Link> or <Link href="/contact" className="text-accent hover:underline" onClick={() => setColorModalOpen(false)}>contact us</Link> for personalized advice.
+              </p>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   )
