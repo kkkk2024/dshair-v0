@@ -2980,7 +2980,7 @@ export const products: Product[] = [
     badge: "Best Seller",
     rating: 4.9,
     reviews: 87,
-    ],
+    colors: [...HAIR_TOPPER_COLORS],
     lengths: ["14\" (35cm)", "16\" (40cm)", "18\" (45cm)"],
     slug: "ds-hair-top-01-mono-top-human-hair-topper",
     category: "Hair Toppers",
