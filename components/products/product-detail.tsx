@@ -188,17 +188,32 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <button
                   key={color.name}
                   onClick={() => setSelectedColor(color)}
-                  className={`relative h-8 w-8 rounded-full border-2 transition-all ${
+                  className={`relative h-10 w-10 md:h-12 md:w-12 rounded-lg overflow-hidden border-2 transition-all shadow-sm ${
                     selectedColor.name === color.name
-                      ? "border-primary ring-2 ring-primary/20"
-                      : "border-transparent hover:border-muted-foreground/30"
+                      ? "border-primary ring-2 ring-primary/30 scale-110"
+                      : "border-transparent hover:border-muted-foreground/30 hover:scale-105"
                   }`}
-                  style={{ backgroundColor: color.hex }}
                   title={color.name}
                   aria-label={`Select colour ${color.name}`}
                 >
+                  {color.image ? (
+                    <Image
+                      src={color.image}
+                      alt={color.name}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                  )}
                   {selectedColor.name === color.name && (
-                    <Check className="absolute inset-0 m-auto h-4 w-4 text-white drop-shadow-md" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                      <Check className="h-4 w-4 md:h-5 md:w-5 text-white drop-shadow-md" />
+                    </div>
                   )}
                 </button>
               ))}
