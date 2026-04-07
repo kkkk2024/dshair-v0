@@ -119,6 +119,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <p className="text-sm text-muted-foreground mb-1">
               {product.type === "diy" ? "DIY Extensions" : "Professional Extensions"}
             </p>
+            {product.sku && (
+              <p className="text-xs text-muted-foreground mb-1 font-mono">
+                SKU: {product.sku}
+              </p>
+            )}
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium mb-2">
               {product.name}
             </h1>

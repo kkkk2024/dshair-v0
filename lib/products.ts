@@ -29,6 +29,7 @@ export interface Product {
   category: string
   features: string[]
   priceOnRequest?: boolean
+  sku?: string
 }
 
 // Placeholder image helper
@@ -3177,6 +3178,7 @@ export const products: Product[] = [
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
     priceOnRequest: false,
+    sku: "DS-HAIR-TOP-01",
   },
 
 ]

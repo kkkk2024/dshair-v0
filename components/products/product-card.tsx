@@ -74,6 +74,11 @@ export function ProductCard({ product }: ProductCardProps) {
         <h3 className="font-medium mb-1 group-hover:text-accent transition-colors line-clamp-1">
           {product.name}
         </h3>
+        {product.sku && (
+          <p className="text-xs text-muted-foreground font-mono mb-1">
+            {product.sku}
+          </p>
+        )}
         <p className="text-sm text-muted-foreground mb-2 line-clamp-1">
           {product.shortDescription}
         </p>
