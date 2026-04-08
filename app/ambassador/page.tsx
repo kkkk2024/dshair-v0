@@ -161,6 +161,39 @@ const faqs = [
 export default function AmbassadorPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [applied, setApplied] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleAmbassadorSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name"),
+      salonName: formData.get("salon_name"),
+      location: formData.get("location"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      referralCount: formData.get("referral_count"),
+      notes: formData.get("notes"),
+      isAmbassador: true,
+    }
+
+    try {
+      const response = await fetch("/api/salon-partners", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) throw new Error("Failed to submit")
+      setApplied(true)
+    } catch (err) {
+      alert("Failed to submit. Please try again or contact us via WhatsApp.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <CartProvider>
@@ -405,36 +438,36 @@ export default function AmbassadorPage() {
                   </div>
                 ) : (
                   <form
-                    onSubmit={(e) => { e.preventDefault(); setApplied(true); }}
+                    onSubmit={handleAmbassadorSubmit}
                     className="bg-card rounded-2xl p-6 md:p-8 border space-y-5"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">Your Name *</label>
-                        <Input placeholder="First & Last Name" required />
+                        <Input name="name" placeholder="First & Last Name" required />
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-1.5">Salon Name *</label>
-                        <Input placeholder="e.g. The Hair Studio" required />
+                        <Input name="salon_name" placeholder="e.g. The Hair Studio" required />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">Email Address *</label>
-                        <Input type="email" placeholder="you@yoursalon.co.uk" required />
+                        <Input name="email" type="email" placeholder="you@yoursalon.co.uk" required />
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-1.5">WhatsApp / Phone *</label>
-                        <Input type="tel" placeholder="+44 7xxx xxxxxx" required />
+                        <Input name="phone" type="tel" placeholder="+44 7xxx xxxxxx" required />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">Salon Location *</label>
-                      <Input placeholder="e.g. Didsbury, Manchester" required />
+                      <Input name="location" placeholder="e.g. Didsbury, Manchester" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">How many salons/stylists could you potentially refer?</label>
-                      <select className="w-full rounded-md border px-3 py-2 text-sm bg-background">
+                      <select name="referral_count" className="w-full rounded-md border px-3 py-2 text-sm bg-background">
                         <option value="">Select range</option>
                         <option value="1-5">1-5</option>
                         <option value="5-20">5-20</option>
@@ -445,12 +478,13 @@ export default function AmbassadorPage() {
                     <div>
                       <label className="block text-sm font-medium mb-1.5">Anything else?</label>
                       <Textarea
+                        name="notes"
                         placeholder="Tell us about your salon network or any questions..."
                         rows={3}
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full">
-                      Apply for Trade Account & Ambassador Programme
+                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Apply for Trade Account & Ambassador Programme"}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
                       Prefer to chat first?{" "}

@@ -46,6 +46,12 @@ const benefits = [
     title: "Priority Access to New Stock",
     description: "Partners get first access to new hand-tied wefts, balayage blends, and seasonal colours before general release.",
   },
+  {
+    icon: Users,
+    title: "Ambassador Programme",
+    description: "Refer other salons and earn commission. Bronze, Silver, and Gold tiers with increasing rewards.",
+    highlight: true,
+  },
 ]
 
 const products = [
@@ -117,10 +123,33 @@ export default function SalonPartnersPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1200))
-    setLoading(false)
-    setSubmitted(true)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name"),
+      salonName: formData.get("salon_name"),
+      location: formData.get("location"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      methods: formData.getAll("methods"),
+      monthlySpend: formData.get("monthly_spend"),
+      notes: formData.get("notes"),
+    }
+
+    try {
+      const response = await fetch("/api/salon-partners", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) throw new Error("Failed to submit")
+      setSubmitted(true)
+    } catch (err) {
+      alert("Failed to submit. Please try again or contact us via WhatsApp.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -202,12 +231,17 @@ export default function SalonPartnersPage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((b) => (
-                  <div key={b.title} className="bg-card rounded-xl p-6 border hover:shadow-md transition-shadow">
+                  <div key={b.title} className={`bg-card rounded-xl p-6 border hover:shadow-md transition-shadow ${b.highlight ? 'ring-2 ring-primary bg-primary/5' : ''}`}>
                     <div className="h-11 w-11 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <b.icon className="h-5 w-5 text-primary" />
                     </div>
                     <h3 className="font-semibold text-lg mb-2">{b.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{b.description}</p>
+                    {b.highlight && (
+                      <Button size="sm" variant="outline" className="w-full" asChild>
+                        <Link href="/ambassador">Learn More →</Link>
+                      </Button>
+                    )}
                   </div>
                 ))}
               </div>
