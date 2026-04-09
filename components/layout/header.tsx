@@ -102,6 +102,9 @@ export function Header() {
                 <Link href="/about" className="py-2 text-lg font-medium hover:text-accent transition-colors">
                   About Us
                 </Link>
+                <Link href="/why-choose-us" className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
+                  Why Choose Us
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -195,6 +198,15 @@ export function Header() {
                 <Link href="/salon-partners" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                     Salon Partners
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* 7b. Why Choose Us */}
+              <NavigationMenuItem>
+                <Link href="/why-choose-us" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-primary">
+                    Why Choose Us
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

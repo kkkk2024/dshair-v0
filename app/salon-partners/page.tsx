@@ -133,6 +133,9 @@ export default function SalonPartnersPage() {
       phone: formData.get("phone"),
       methods: formData.getAll("methods"),
       monthlySpend: formData.get("monthly_spend"),
+      currentSupplier: formData.get("current_supplier"),
+      howFoundUs: formData.get("how_found_us"),
+      instagram: formData.get("instagram"),
       notes: formData.get("notes"),
     }
 
@@ -390,11 +393,47 @@ export default function SalonPartnersPage() {
                         <option value="over-5000">Over £5,000</option>
                       </select>
                     </div>
+                    <div className="border-t pt-4">
+                      <p className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wide">Help us serve you better</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium mb-1.5">Current Supplier</label>
+                          <Input
+                            name="current_supplier"
+                            placeholder="e.g. Gold Hair / Great Lengths / None yet"
+                          />
+                          <p className="text-xs text-muted-foreground mt-1">Helps us understand your current setup</p>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium mb-1.5">How did you find us?</label>
+                          <select
+                            name="how_found_us"
+                            className="w-full rounded-md border px-3 py-2 text-sm bg-background"
+                          >
+                            <option value="">Select one</option>
+                            <option value="google">Google Search</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="referral">Word of Mouth / Referral</option>
+                            <option value="trade-show">Trade Show / Event</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="mt-4">
+                        <label className="block text-sm font-medium mb-1.5">Salon Instagram (optional)</label>
+                        <Input
+                          name="instagram"
+                          placeholder="@yoursalon"
+                        />
+                        <p className="text-xs text-muted-foreground mt-1">We will follow you back — let's connect</p>
+                      </div>
+                    </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">Anything else you would like us to know?</label>
                       <Textarea
                         name="notes"
-                        placeholder="Current supplier, specific product needs, questions about our range..."
+                        placeholder="Questions, specific needs, or anything you want us to know..."
                         rows={3}
                       />
                     </div>

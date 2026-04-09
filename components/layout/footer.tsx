@@ -23,6 +23,7 @@ const footerLinks = {
   about: [
     { title: "Our Story", href: "/about" },
     { title: "Salon Partners", href: "/salon-partners" },
+    { title: "Why Choose Us", href: "/why-choose-us" },
     { title: "Blog", href: "/blog" },
   ],
   services: [

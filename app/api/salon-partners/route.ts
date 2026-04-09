@@ -14,6 +14,9 @@ export async function POST(request: Request) {
       phone, 
       methods = [], 
       monthlySpend, 
+      currentSupplier,
+      howFoundUs,
+      instagram,
       notes,
       isAmbassador = false
     } = body;
@@ -85,6 +88,20 @@ export async function POST(request: Request) {
                 <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">Monthly Spend</td>
                 <td style="padding: 12px; border-bottom: 1px solid #ddd;">${monthlySpend || 'Not specified'}</td>
               </tr>
+              <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">Current Supplier</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;">${currentSupplier || 'Not specified'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">How Found Us</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;">${howFoundUs || 'Not specified'}</td>
+              </tr>
+              ${instagram ? `
+              <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">Instagram</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;"><a href="https://instagram.com/${instagram.replace('@','')}">${instagram}</a></td>
+              </tr>
+              ` : ''}
               ${notes ? `
               <tr>
                 <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">Notes</td>

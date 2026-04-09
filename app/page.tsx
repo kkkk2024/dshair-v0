@@ -5,6 +5,7 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { HeroSection } from "@/components/home/hero-section"
 import { BrandValues } from "@/components/home/brand-values"
+import { SalonTrustSection } from "@/components/home/salon-trust-section"
 import { CategoryGrid } from "@/components/home/category-grid"
 import { FeaturedProducts } from "@/components/home/featured-products"
 import { DualPathSection } from "@/components/home/dual-path-section"
@@ -39,6 +40,7 @@ export default function HomePage() {
         <main className="flex-1">
           <HeroSection />
           <BrandValues />
+          <SalonTrustSection />
           <CategoryGrid />
           <FeaturedProducts />
           <DualPathSection />
