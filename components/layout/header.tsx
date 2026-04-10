@@ -47,10 +47,12 @@ const accessories = [
   { title: "Storage", href: "/collections/storage", description: "Extension storage bags & cases" },
 ]
 
-// 5. Services
+// 5. Services — 共4个二级类目
 const services = [
   { title: "Find a Stylist", href: "/find-stylist", description: "Locate certified professionals near you" },
   { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
+  { title: "Solutions", href: "/solutions", description: "Complete hair extension packages & bundles for salons" },
+  { title: "Resources", href: "/resources", description: "Expert guides, industry insights & product knowledge" },
 ]
 
 export function Header() {
@@ -177,7 +179,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[650px]">
                     {services.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
