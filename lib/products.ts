@@ -3767,6 +3767,42 @@ export const collections: Collection[] = [
     image: "/images/toppers/collection-hero.jpg",
   },
 
+  {
+    id: "tool-009",
+    handle: "titanium-black-pro-tool-kit",
+    name: "Titanium Black Pro Tool Kit (5-in-1)",
+    title: "Titanium Black Pro Tool Kit (5-in-1)",
+    description: "Premium 5-in-1 titanium black hair extension tool kit designed for professional stylists. Features a sleek matte black titanium-coated finish that resists rust and corrosion. Complete set includes: Micro Ring Closure Plier (for secure micro ring closure), Safety Removal Blade (with protective teeth to prevent scalp damage), Parting Needle (for precise hair sectioning), Mini Scale (EU-compliant for weight verification), and a premium velvet storage pouch. The ultimate professional toolkit for discerning UK and European salons. Compatible with all major extension methods including micro ring, keratin tip, and weft applications.",
+    shortDescription: "Premium 5-in-1 titanium black tool kit for professional stylists",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    type: "professional",
+    tags: ["titanium", "black", "pro tool kit", "removal tool", "salon tool", "premium", "extension tool", "kit"],
+    price: 55,
+    originalPrice: 78,
+    currencyCode: "GBP",
+    image: "/images/tools/titanium-black-kit.jpg",
+    images: ["/images/tools/titanium-black-kit.jpg", "/images/tools/titanium-black-kit-open.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [],
+    lengths: [],
+    slug: "titanium-black-pro-tool-kit",
+    category: "Extension Tools",
+    features: [
+      "Matte black titanium-coated finish",
+      "5 essential tools in one kit",
+      "Safety removal blade with protective teeth",
+      "EU-compliant mini scale included",
+      "Premium velvet storage pouch",
+      "Suitable for all extension methods"
+    ],
+    sku: "DS-TOOL-009",
+  },
+
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {
@@ -3841,22 +3877,36 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
       )
     )
   }
-  // Extension Tools: installation tools (pliers, scissors, clips, kit)
+  // Extension Tools: installation tools (pliers, scissors, sectioning clips, kits)
   if (collectionSlug === "extension-tools") {
-    return products.filter(p =>
-      p.productType.toLowerCase().includes("tool") ||
-      p.productType.toLowerCase().includes("plie") ||
-      p.productType.toLowerCase().includes("scissor") ||
-      p.productType.toLowerCase().includes("clip") ||
-      p.productType.toLowerCase().includes("kit") ||
-      p.tags.some(tag =>
-        tag.toLowerCase().includes("tool") ||
-        tag.toLowerCase().includes("plie") ||
-        tag.toLowerCase().includes("scissor") ||
-        tag.toLowerCase().includes("clip") ||
-        tag.toLowerCase().includes("kit")
-      )
-    )
+    return products.filter(p => {
+      const type = p.productType.toLowerCase()
+      const category = p.category.toLowerCase()
+      // Match only actual tools: extension tool, plier, scissors, sectioning clip, kit
+      // Exclude: clip-in (wig), hair-extensions with clip
+      const isTool = 
+        type === "hair extension tools" ||
+        type === "extension tools" ||
+        type.includes("extension tool") ||
+        type.includes("plier") ||
+        type.includes("scissor") ||
+        type.includes("sectioning clip") ||
+        (type.includes("kit") && !type.includes("clip-in")) ||
+        category.includes("extension tools")
+      // Also check tags for "tool" but exclude clip-in products
+      const hasToolTag = p.tags.some(tag => {
+        const t = tag.toLowerCase()
+        return (
+          t === "tool" ||
+          t.includes("extension tool") ||
+          t.includes("plier") ||
+          t.includes("scissor") ||
+          (t.includes("kit") && !t.includes("clip-in")) ||
+          t.includes("sectioning clip")
+        )
+      })
+      return isTool || hasToolTag
+    })
   }
   // Heated Styling: heated brushes, styling tools
   if (collectionSlug === "heated-styling") {
