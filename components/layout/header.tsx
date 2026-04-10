@@ -35,16 +35,16 @@ const proExtensions = [
   { title: "Hair Toppers", href: "/collections/hair-toppers", description: "Thinning hair solutions" },
 ]
 
-// 3. Hair Care
+// 3. Hair Care — Extension Care (二级类目)
 const hairCare = [
-  { title: "All Hair Care", href: "/collections/hair-care", description: "Sulfate-free formulas" },
-  { title: "Care Products", href: "/collections/care-products", description: "Extension care essentials" },
+  { title: "Extension Care", href: "/collections/extension-care", description: "Shampoo, conditioner, masks & brushes" },
 ]
 
-// 4. Accessories
+// 4. Accessories — Extension Tools / Heated Styling / Storage (二级类目)
 const accessories = [
-  { title: "Accessories", href: "/collections/accessories", description: "Brushes, clips & more" },
-  { title: "Care Products", href: "/collections/care-products", description: "Extension care essentials" },
+  { title: "Extension Tools", href: "/collections/extension-tools", description: "Pliers, scissors, clips & installation kits" },
+  { title: "Heated Styling", href: "/collections/heated-styling", description: "Heated brushes, paddles & styling tools" },
+  { title: "Storage", href: "/collections/storage", description: "Extension storage bags & cases" },
 ]
 
 // 5. Services
@@ -95,9 +95,7 @@ export function Header() {
                 <MobileNavSection title="DIY Extensions" items={diyExtensions} />
                 <MobileNavSection title="Professional" items={proExtensions} />
                 <MobileNavSection title="Hair Care" items={hairCare} />
-                <Link href="/collections/accessories" className="py-2 text-lg font-medium hover:text-accent transition-colors">
-                  Accessories
-                </Link>
+                <MobileNavSection title="Accessories" items={accessories} />
                 <MobileNavSection title="Services" items={services} />
                 <Link href="/about" className="py-2 text-lg font-medium hover:text-accent transition-colors">
                   About Us
@@ -151,7 +149,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Hair Care</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[550px]">
                     {hairCare.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
@@ -160,14 +158,19 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
+
               {/* 4. Accessories */}
               <NavigationMenuItem>
-                <Link href="/collections/accessories" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    Accessories
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger className="bg-transparent">Accessories</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
+                    {accessories.map((item) => (
+                      <ListItem key={item.title} title={item.title} href={item.href}>
+                        {item.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               
               {/* 5. Services */}

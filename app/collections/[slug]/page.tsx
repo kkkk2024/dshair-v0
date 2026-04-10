@@ -46,6 +46,10 @@ export async function generateMetadata({ params }: CollectionPageProps) {
     'butterfly-weft': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
     'butterfly-extensions': 'Butterfly Weft Extensions UK | Salon Wholesale | D.S HAIR & BEAUTY',
     'hair-toppers': 'Hair Toppers UK | Thinning Hair Solutions | D.S HAIR & BEAUTY',
+    'extension-care': 'Hair Extension Care Products UK | Sulfate-Free Shampoo & Conditioner | D.S HAIR & BEAUTY',
+    'extension-tools': 'Hair Extension Tools UK | Salon Installation Kits & Pliers | D.S HAIR & BEAUTY',
+    'heated-styling': 'Professional Heated Brushes UK | Salon Styling Tools | D.S HAIR & BEAUTY',
+    'storage': 'Hair Extension Storage Bags & Cases UK | Velvet Organiser | D.S HAIR & BEAUTY',
   }
 
   return {

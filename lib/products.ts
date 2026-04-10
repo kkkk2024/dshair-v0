@@ -3712,6 +3712,38 @@ export const collections: Collection[] = [
   },
 
   {
+    id: "7a",
+    name: "Extension Care",
+    slug: "extension-care",
+    description: "Sulfate-free shampoos, deep conditioners, hair masks, detangling brushes and tape remover — everything your clients need to keep their extensions looking salon-fresh. Pair with our hair extensions for the complete service.",
+    image: "/images/collection-haircare.jpg",
+  },
+
+  {
+    id: "15",
+    name: "Extension Tools",
+    slug: "extension-tools",
+    description: "Professional installation tools for salons: tape-in pliers, K-Tip/nano ring kits, loop brushes, sectioning clips, keratin glue sticks and complete starter kits. Trusted by UK stylists.",
+    image: "/images/collection-tools.jpg",
+  },
+
+  {
+    id: "16",
+    name: "Heated Styling",
+    slug: "heated-styling",
+    description: "Professional heated brushes, ionic paddle brushes and cordless styling tools for salons. Extension-safe temperatures, fast heat-up and salon-grade results. Perfect for restyling hair extensions.",
+    image: "/images/collection-heated.jpg",
+  },
+
+  {
+    id: "17",
+    name: "Storage",
+    slug: "storage",
+    description: "Premium velvet and satin extension storage bags and cases. Keep hair extensions and tools organised, protected and in perfect condition between appointments.",
+    image: "/images/collection-storage.jpg",
+  },
+
+  {
     id: "11",
     name: "Butterfly Weft Extensions",
     slug: "butterfly-weft",
@@ -3789,6 +3821,70 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
       p.category === "Hair Toppers" ||
       p.productType.toLowerCase().includes("hair topper") ||
       p.tags.some(tag => tag.toLowerCase().includes("hair-topper"))
+    )
+  }
+  // Extension Care: care products (shampoo, conditioner, mask, brush, tape remover)
+  if (collectionSlug === "extension-care") {
+    return products.filter(p =>
+      p.productType.toLowerCase().includes("care") ||
+      p.productType.toLowerCase().includes("shampoo") ||
+      p.productType.toLowerCase().includes("conditioner") ||
+      p.productType.toLowerCase().includes("brush") ||
+      p.productType.toLowerCase().includes("mask") ||
+      p.productType.toLowerCase().includes("remover") ||
+      p.tags.some(tag =>
+        tag.toLowerCase().includes("care") ||
+        tag.toLowerCase().includes("shampoo") ||
+        tag.toLowerCase().includes("conditioner") ||
+        tag.toLowerCase().includes("brush") ||
+        tag.toLowerCase().includes("mask")
+      )
+    )
+  }
+  // Extension Tools: installation tools (pliers, scissors, clips, kit)
+  if (collectionSlug === "extension-tools") {
+    return products.filter(p =>
+      p.productType.toLowerCase().includes("tool") ||
+      p.productType.toLowerCase().includes("plie") ||
+      p.productType.toLowerCase().includes("scissor") ||
+      p.productType.toLowerCase().includes("clip") ||
+      p.productType.toLowerCase().includes("kit") ||
+      p.tags.some(tag =>
+        tag.toLowerCase().includes("tool") ||
+        tag.toLowerCase().includes("plie") ||
+        tag.toLowerCase().includes("scissor") ||
+        tag.toLowerCase().includes("clip") ||
+        tag.toLowerCase().includes("kit")
+      )
+    )
+  }
+  // Heated Styling: heated brushes, styling tools
+  if (collectionSlug === "heated-styling") {
+    return products.filter(p =>
+      p.productType.toLowerCase().includes("heated") ||
+      p.productType.toLowerCase().includes("brush") ||
+      p.productType.toLowerCase().includes("styling") ||
+      p.productType.toLowerCase().includes("paddle") ||
+      p.tags.some(tag =>
+        tag.toLowerCase().includes("heated") ||
+        tag.toLowerCase().includes("brush") ||
+        tag.toLowerCase().includes("styling")
+      )
+    )
+  }
+  // Storage: extension bags, cases, pouches
+  if (collectionSlug === "storage") {
+    return products.filter(p =>
+      p.productType.toLowerCase().includes("storage") ||
+      p.productType.toLowerCase().includes("pouch") ||
+      p.productType.toLowerCase().includes("bag") ||
+      p.productType.toLowerCase().includes("case") ||
+      p.tags.some(tag =>
+        tag.toLowerCase().includes("storage") ||
+        tag.toLowerCase().includes("pouch") ||
+        tag.toLowerCase().includes("bag") ||
+        tag.toLowerCase().includes("case")
+      )
     )
   }
   // Check both category and productType for matching
