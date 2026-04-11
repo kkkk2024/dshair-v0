@@ -3740,6 +3740,45 @@ export const products: Product[] = [
     sku: "DS-TOOL-005",
   },
 
+  {
+    id: "tool-009",
+    handle: "hair-extensions-tool-kit",
+    name: "Hair Extensions Tool Kit",
+    title: "Hair Extensions Tool Kit",
+    description: "Essential hair extension application tool kit, portable and lightweight. Ergonomic design with tools that fit perfectly in your hand for excellent control and comfort during use. Complete kit includes everything you need for professional hair extension applications.",
+    shortDescription: "Complete tool kit for hair extension applications - portable & ergonomic",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    category: "Extension Tools",
+    type: "professional",
+    tags: ["tool kit", "extension tools", "professional", "starter kit"],
+    price: 19.99,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/products/hair-extension-tool-kit.jpg",
+    images: ["/images/products/hair-extension-tool-kit.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [{ name: "Silver/Black", hex: "#808080" }],
+    lengths: ["One Size"],
+    slug: "hair-extensions-tool-kit",
+    features: [
+      "Highly portable and lightweight",
+      "Ergonomic design for comfortable grip",
+      "Excellent control during use",
+      "Includes: 3x Curved Needles",
+      "Includes: Threader",
+      "Includes: Pliers",
+      "Includes: 10x Clips",
+      "Includes: Scissors",
+      "Everything needed for professional extension applications"
+    ],
+    sku: "DS-TOOL-009",
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
