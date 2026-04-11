@@ -3823,6 +3823,46 @@ export const products: Product[] = [
     sku: "DS-TOOL-010",
   },
 
+  {
+    id: "tool-011",
+    handle: "hair-extension-clips",
+    name: "Hair Extension Clips x10",
+    title: "Hair Extension Clips x10 - Silicone Non-Slip",
+    description: "Professional hair extension clips x10 pack with silicone non-slip design. Perfect for creating DIY clip-in hair extensions or hair accessories. These clips are gentle on hair and help prevent sliding. Suitable for both professional salon use and home applications.",
+    shortDescription: "Pack of 10 professional hair extension clips with silicone anti-slip design",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    category: "Extension Tools",
+    type: "professional",
+    tags: ["clips", "extension tools", "clip-in", "DIY"],
+    price: 4.99,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/products/hair-extension-clips-01.jpg",
+    images: ["/images/products/hair-extension-clips-01.jpg"],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [
+      { name: "Black", hex: "#000000" },
+      { name: "Brown", hex: "#8B4513" },
+      { name: "Beige", hex: "#F5F5DC" }
+    ],
+    lengths: ["One Size"],
+    slug: "hair-extension-clips",
+    features: [
+      "Pack of 10 clips",
+      "Silicone non-slip design prevents sliding",
+      "Ideal for DIY clip-in hair extensions",
+      "Gentle on hair, no damage",
+      "Suitable for various hair thicknesses",
+      "Reusable and durable"
+    ],
+    sku: "DS-TOOL-011",
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
