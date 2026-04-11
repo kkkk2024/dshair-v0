@@ -47,12 +47,15 @@ const accessories = [
   { title: "Storage", href: "/collections/storage", description: "Extension storage bags & cases" },
 ]
 
-// 5. Services — 共4个二级类目
+// 5. Services — 共7个二级类目
 const services = [
   { title: "Find a Stylist", href: "/find-stylist", description: "Locate certified professionals near you" },
   { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
   { title: "Solutions", href: "/solutions", description: "Complete hair extension packages & bundles for salons" },
   { title: "Resources", href: "/resources", description: "Expert guides, industry insights & product knowledge" },
+  { title: "Salon Partners", href: "/salon-partners", description: "Wholesale pricing for professional salons" },
+  { title: "Ambassador", href: "/ambassador", description: "Join our ambassador programme" },
+  { title: "Academy", href: "/academy", description: "Professional training & certification" },
 ]
 
 export function Header() {
@@ -111,7 +114,7 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl font-semibold tracking-tight">
+            <span className="font-serif text-lg md:text-xl font-semibold tracking-tight whitespace-nowrap">
               D.S HAIR & BEAUTY
             </span>
           </Link>
@@ -198,16 +201,7 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
 
-              {/* 7. Salon Partners */}
-              <NavigationMenuItem>
-                <Link href="/salon-partners" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    Salon Partners
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              {/* 7b. Why Choose Us */}
+              {/* 7. Why Choose Us */}
               <NavigationMenuItem>
                 <Link href="/why-choose-us" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-primary">
@@ -216,25 +210,7 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
 
-              {/* 8. Ambassador */}
-              <NavigationMenuItem>
-                <Link href="/ambassador" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    Ambassador ⭐
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              {/* 9. Academy */}
-              <NavigationMenuItem>
-                <Link href="/academy" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    Academy 🎓
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              {/* 9. About Us */}
+              {/* 8. About Us */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
