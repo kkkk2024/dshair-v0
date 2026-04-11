@@ -3779,6 +3779,50 @@ export const products: Product[] = [
     sku: "DS-TOOL-009",
   },
 
+  {
+    id: "tool-010",
+    handle: "nano-ring-plier",
+    name: "Stainless Steel Nano Ring Plier",
+    title: "Stainless Steel Nano Ring Plier",
+    description: "Professional-grade stainless steel nano ring plier for hair extension installation. Durable, rust-resistant, and precisely engineered for comfortable grip and easy operation. Essential tool for nano ring and micro bead hair extension applications.",
+    shortDescription: "Professional stainless steel nano ring plier for hair extension applications",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    category: "Extension Tools",
+    type: "professional",
+    tags: ["plier", "nano ring", "micro bead", "extension tool"],
+    price: 4.5,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/products/nano-ring-plier-01.jpg",
+    images: [
+      "/images/products/nano-ring-plier-01.jpg",
+      "/images/products/nano-ring-plier-02.jpg",
+      "/images/products/nano-ring-plier-03.jpg",
+      "/images/products/nano-ring-plier-04.jpg",
+      "/images/products/nano-ring-plier-05.jpg",
+      "/images/products/nano-ring-plier-06.jpg",
+      "/images/products/nano-ring-plier-07.jpg",
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [{ name: "Silver", hex: "#C0C0C0" }],
+    lengths: ["One Size"],
+    slug: "nano-ring-plier",
+    features: [
+      "Premium stainless steel construction",
+      "Rust and corrosion resistant",
+      "Professional-grade precision",
+      "Comfortable ergonomic grip",
+      "Perfect for nano ring and micro bead applications",
+      "Durable and long-lasting"
+    ],
+    sku: "DS-TOOL-010",
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
