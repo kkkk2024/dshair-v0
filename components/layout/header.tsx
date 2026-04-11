@@ -125,8 +125,8 @@ export function Header() {
               {/* 1. DIY Extensions */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">DIY Extensions</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {diyExtensions.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
@@ -139,8 +139,8 @@ export function Header() {
               {/* 2. Professional */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Professional</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {proExtensions.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
@@ -153,8 +153,8 @@ export function Header() {
               {/* 3. Hair Care */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Hair Care</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[550px]">
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-1 lg:w-[550px]">
                     {hairCare.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
@@ -167,8 +167,8 @@ export function Header() {
               {/* 4. Accessories */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Accessories</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-3 lg:w-[600px]">
                     {accessories.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
@@ -181,8 +181,8 @@ export function Header() {
               {/* 5. Services */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[650px]">
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     {services.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
