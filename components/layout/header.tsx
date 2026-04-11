@@ -225,6 +225,15 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
 
+              {/* 9. Academy */}
+              <NavigationMenuItem>
+                <Link href="/academy" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                    Academy 🎓
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
               {/* 9. About Us */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
