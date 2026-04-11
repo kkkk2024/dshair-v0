@@ -3863,6 +3863,45 @@ export const products: Product[] = [
     sku: "DS-TOOL-011",
   },
 
+  {
+    id: "tool-012",
+    handle: "nano-tip-plier",
+    name: "Nano Tip Plier Tool",
+    title: "Nano Tip Plier Tool - Professional Hair Extension Installation & Removal",
+    description: "Professional nano tip plier tool designed for installing and removing nano ring/nano tip hair extensions. Features precision tips for easy application and comfortable grip handle. Essential tool for professional nano ring extension applications.",
+    shortDescription: "Professional nano tip plier for nano ring/tip hair extension installation and removal",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    category: "Extension Tools",
+    type: "professional",
+    tags: ["plier", "nano tip", "nano ring", "extension tool", "professional"],
+    price: 15.99,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/products/nano-tip-plier-01.jpg",
+    images: [
+      "/images/products/nano-tip-plier-01.jpg",
+      "/images/products/nano-tip-plier-02.jpg"
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [{ name: "Silver", hex: "#C0C0C0" }],
+    lengths: ["One Size"],
+    slug: "nano-tip-plier",
+    features: [
+      "5.5 inch professional length",
+      "Precision tips for accurate application",
+      "Comfortable grip handle",
+      "Suitable for nano ring and nano tip extensions",
+      "Perfect for installation and removal",
+      "Durable stainless steel construction"
+    ],
+    sku: "DS-TOOL-012",
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
