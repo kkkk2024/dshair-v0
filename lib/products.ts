@@ -3902,6 +3902,54 @@ export const products: Product[] = [
     sku: "DS-TOOL-012",
   },
 
+  {
+    id: "tool-013",
+    handle: "nano-rings-500",
+    name: "Nano Rings x500",
+    title: "Nano Rings x500 - Silicone Lined for Extra Grip",
+    description: "Professional nano rings x500 pack with silicone lining for extra grip. These nano rings are designed for nano tip hair extension applications. The silicone interior provides superior hold and prevents slipping. Each pack contains 500 nano rings in various colors to match different hair shades.",
+    shortDescription: "Pack of 500 professional nano rings with silicone lining for superior hold",
+    vendor: "D.S Hair Beauty",
+    productType: "Hair Extension Tools",
+    category: "Extension Tools",
+    type: "professional",
+    tags: ["nano rings", "nano tip", "extension tools", "beads"],
+    price: 19.99,
+    originalPrice: undefined,
+    currencyCode: "GBP",
+    image: "/images/products/nano-rings-brown.jpg",
+    images: [
+      "/images/products/nano-rings-black.jpg",
+      "/images/products/nano-rings-darkbrown.jpg",
+      "/images/products/nano-rings-brown.jpg",
+      "/images/products/nano-rings-darkblonde.jpg",
+      "/images/products/nano-rings-blonde.jpg"
+    ],
+    variants: [],
+    inStock: true,
+    badge: "New",
+    rating: 5.0,
+    reviews: 0,
+    colors: [
+      { name: "Black", hex: "#000000" },
+      { name: "Dark Brown", hex: "#3B2F2F" },
+      { name: "Brown", hex: "#8B4513" },
+      { name: "Dark Blonde", hex: "#C19A6B" },
+      { name: "Blonde", hex: "#F5DEB3" }
+    ],
+    lengths: ["One Size"],
+    slug: "nano-rings-500",
+    features: [
+      "Pack of 500 nano rings",
+      "Silicone lining for extra grip",
+      "Prevents slipping during wear",
+      "Available in 5 colors",
+      "Perfect for nano tip extensions",
+      "Professional grade quality"
+    ],
+    sku: "DS-TOOL-013",
+  },
+
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
