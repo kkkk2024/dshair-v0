@@ -13,6 +13,16 @@ export const metadata = {
 
 const posts = [
   {
+    slug: "manchester-colour-collection-2026",
+    title: "The Manchester Edit: 2026 Colour Collection — The Shades Every Salon Needs",
+    excerpt:
+      "From Icy Manchester platinum to Cinnamon Copper — the definitive 2026 colour guide curated for Manchester salons. Discover the 5 shades your clients are already asking for.",
+    category: "Colour Trend",
+    readTime: "6 min read",
+    date: "April 2026",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+  },
+  {
     slug: "hair-topper-guide",
     title: "Hair Toppers: The UK Salon's Most Underrated Revenue Stream",
     excerpt:
