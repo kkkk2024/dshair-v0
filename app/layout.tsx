@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: {
     default: "D.S HAIR & BEAUTY | Professional Hair Extensions Supplier Manchester UK",
   },
-  description: "Manchester-based wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19 years industry experience.",
+  description: "Manchester-based wholesale hair extension supplier. 100% Remy human hair — K-Tip, Tape-In, Nano Ring, Hand-Tied Weft, Butterfly Weft, Clip-In & Hair Toppers. Trade pricing for professional salons. 19 years industry experience. UK & EU shipping.",
   keywords: [
     'hair extensions Manchester', 'wholesale hair extensions UK', 'hand tied weft supplier',
     'balayage hair extensions wholesale', 'nano ring extensions Manchester',
