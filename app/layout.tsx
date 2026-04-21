@@ -21,9 +21,9 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dshairbeauty.co.uk'),
   title: {
-    default: "D.S HAIR & BEAUTY | Professional Hair Extensions Supplier Manchester UK",
+    default: "Trade Hair Extension Supplier UK | Wholesale for Salons | D.S Hair Beauty",
   },
-  description: "Manchester-based wholesale hair extension supplier. 100% Remy human hair — K-Tip, Tape-In, Nano Ring, Hand-Tied Weft, Butterfly Weft, Clip-In & Hair Toppers. Trade pricing for professional salons. 19 years industry experience. UK & EU shipping.",
+  description: "UK's trusted trade supplier of 100% Remy human hair extensions for salons. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Manchester-based with nationwide delivery.",
   keywords: [
     'hair extensions Manchester', 'wholesale hair extensions UK', 'hand tied weft supplier',
     'balayage hair extensions wholesale', 'nano ring extensions Manchester',

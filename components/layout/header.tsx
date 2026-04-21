@@ -53,7 +53,8 @@ const services = [
   { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
   { title: "Solutions", href: "/solutions", description: "Complete hair extension packages & bundles for salons" },
   { title: "Resources", href: "/resources", description: "Expert guides, industry insights & product knowledge" },
-  { title: "Salon Partners", href: "/salon-partners", description: "Wholesale pricing for professional salons" },
+  { title: "Trade Wholesale", href: "/trade-wholesale", description: "Wholesale hair extensions for UK salons" },
+  { title: "Salon Partners", href: "/salon-partners", description: "Salon partner programme & benefits" },
   { title: "Ambassador", href: "/ambassador", description: "Join our ambassador programme" },
   { title: "Academy", href: "/academy", description: "Professional training & certification" },
 ]
