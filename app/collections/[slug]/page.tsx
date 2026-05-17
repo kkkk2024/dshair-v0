@@ -51,16 +51,38 @@ export async function generateMetadata({ params }: CollectionPageProps) {
     'heated-styling': 'Professional Heated Brushes UK | Salon Styling Tools | D.S HAIR & BEAUTY',
     'storage': 'Hair Extension Storage Bags & Cases UK | Velvet Organiser | D.S HAIR & BEAUTY',
   }
+  // SEO-optimised meta descriptions per collection
+  const descriptionMap: Record<string, string> = {
+    'all': "Shop 100% Remy human hair extensions wholesale for salons. Clip-in, tape-in, weft & more. Free UK delivery, trade pricing available.",
+    'diy': "Premium DIY hair extensions for home use. Salon-quality clip-in & tape-in sets in 50+ shades. Free UK delivery, 30-day returns.",
+    'professional': "Professional hair extensions for salons & stylists. Wholesale pricing, bulk orders, trade accounts. Expert support & free UK delivery.",
+    'clip-in': "Salon-quality clip-in hair extensions in 50+ shades. 100% Remy human hair, easy at-home application. Free UK delivery & 30-day returns.",
+    'tape-in': "Ultra-thin seamless tape hair extensions for salons & stylists. Heat-friendly bonds, invisible application. Wholesale pricing, free UK delivery over £50.",
+    'ponytails': "Human hair ponytail extensions in 30+ styles. Instant length & volume, no appointment needed. 100% Remy hair, free UK delivery.",
+    'weft': "Weft hair extensions for salons: hand-tied & machine weft. Premium Remy hair, seamless bulk pricing. Free UK delivery for trade orders.",
+    'k-tip-extensions': "K-tip keratin hair extensions for a premium long-term look. Heat-friendly, no tape or glue. Professional salon wholesale pricing.",
+    'nano-extensions': "Nano ring hair extensions — ultra-invisible bonds for fine hair. No heat, no glue, 100% Remy hair. Salon wholesale available.",
+    'fringes-bangs': "Hair fringe & bang extensions: instant face-framing colour & volume. 100% Remy human hair, easy to apply at home or in salon.",
+    'hair-care': "Prolong your hair extensions with salon-recommended care products. Sulfate-free shampoo, conditioner, brushes & more. Free UK delivery over £30.",
+    'butterfly-weft': "Butterfly weft extensions — the ultra-thin 0.5mm industry game-changer. Seamless finish for salons. Wholesale pricing, free UK delivery.",
+    'butterfly-extensions': "Butterfly weft extensions — the ultra-thin 0.5mm industry game-changer. Seamless finish for salons. Wholesale pricing, free UK delivery.",
+    'hair-toppers': "Hair toppers for thinning hair: silk, mono & mesh base options. Non-surgical hair loss solution. Salon wholesale & retail available.",
+    'extension-care': "Hair extension care products: sulfate-free shampoo, conditioner, brushes & detangling combs. Extend extension life by up to 6 months.",
+    'extension-tools': "Professional hair extension installation tools: pliers, micro rings, heat tongs & removal kits. Salon-grade quality, free UK delivery.",
+    'heated-styling': "Professional heated styling brushes & tools for hair extensions. Salon-grade heat protection, compatible with all Remy hair types.",
+    'storage': "Hair extension storage bags & velvet organisers. Keep extensions tangle-free & protected. Premium quality, free UK delivery.",
+  }
+
 
   return {
     title: titleMap[slug] || `${collection.name} | D.S HAIR & BEAUTY`,
-    description: collection.description,
+    description: descriptionMap[slug] || collection.description,
     alternates: {
       canonical: `https://www.dshairbeauty.co.uk/collections/${slug}`,
     },
     openGraph: {
       title: titleMap[slug] || `${collection.name} | D.S HAIR & BEAUTY`,
-      description: collection.description,
+      description: descriptionMap[slug] || collection.description,
       url: `https://www.dshairbeauty.co.uk/collections/${slug}`,
       locale: 'en_GB',
       siteName: 'D.S HAIR & BEAUTY',

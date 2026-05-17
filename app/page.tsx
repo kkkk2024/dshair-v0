@@ -15,14 +15,14 @@ import { InstagramSection } from "@/components/home/instagram-section"
 import { OrganizationJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
-  title: "Trade Hair Extension Supplier UK | Wholesale for Salons | D.S Hair Beauty",
+  title: "Hair Extensions Manchester | Premium Salon-Grade Quality | D.S Hair Beauty",
   description:
-    "UK's trusted trade supplier of 100% Remy human hair extensions for salons. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Manchester-based with nationwide delivery.",
+    "100% Remy human hair extensions for salons & stylists in Manchester. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Free UK delivery, 30-day returns.",
   alternates: {
     canonical: "https://www.dshairbeauty.co.uk",
   },
   openGraph: {
-    title: "Professional Hair Extensions UK | Wholesale Supplier | D.S HAIR & BEAUTY",
+    title: "Hair Extensions Manchester | Premium Salon-Grade | D.S Hair Beauty",
     description:
       "UK's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for salons. 19 years expertise.",
     url: "https://www.dshairbeauty.co.uk",
