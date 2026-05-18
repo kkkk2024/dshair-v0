@@ -12,6 +12,38 @@ export const metadata = {
 }
 
 const posts = [
+  // ===== 2026年5月新增文章 =====
+  {
+    slug: "remy-vs-nonremy-hair-guide",
+    title: "Remy Hair vs Non-Remy Hair: What's the Difference? (2026 Guide)",
+    excerpt:
+      "Not all human hair extensions are created equal. Learn the critical differences between Remy and Non-Remy hair — and why 100% Remy human hair is the only choice for professional salons.",
+    category: "Education",
+    readTime: "7 min read",
+    date: "May 2026",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+  },
+  {
+    slug: "hair-extension-aftercare-guide",
+    title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons",
+    excerpt:
+      "Professional aftercare advice for hand-tied weft, nano ring, tape-in, and K-tip extensions. Help your UK salon clients keep their hair extensions looking flawless for longer.",
+    category: "Aftercare",
+    readTime: "9 min read",
+    date: "May 2026",
+    image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+  },
+  {
+    slug: "best-extensions-fine-hair-uk",
+    title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026",
+    excerpt:
+      "Struggling to find hair extensions that blend with thin or fine hair? Discover the best methods for UK clients — nano rings, hand-tied weft, and tape-ins that are virtually invisible.",
+    category: "Fine Hair",
+    readTime: "8 min read",
+    date: "May 2026",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+  },
+  // ===== 原有文章 =====
   {
     slug: "manchester-colour-collection-2026",
     title: "The Manchester Edit: 2026 Colour Collection — The Shades Every Salon Needs",
