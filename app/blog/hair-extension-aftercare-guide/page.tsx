@@ -9,6 +9,25 @@ import { ArrowLeft, Clock, Sparkles, Droplets, Scissors, Calendar } from "lucide
 export const metadata = {
   title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons | D.S HAIR & BEAUTY",
   description: "Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months. Includes product recommendations for UK clients.",
+  openGraph: {
+    title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons | D.S HAIR & BEAUTY",
+    description: "Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months.",
+    url: "https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide",
+    siteName: "D.S HAIR & BEAUTY",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Hair extension aftercare guide for UK salons",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide",
+  },
 }
 
 export default function HairExtensionAftercareGuide() {
@@ -17,6 +36,22 @@ export default function HairExtensionAftercareGuide() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Hair Extension Aftercare: Complete Guide for UK Clients & Salons",
+                "description": "Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months.",
+                "url": "https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+                "publisher": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">

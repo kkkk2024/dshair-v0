@@ -57,12 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/salon-partners`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${BASE_URL}/solutions`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -106,23 +100,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog post pages
+  // Blog post pages (all 21 posts on disk)
   const blogPosts = [
     'balayage-extensions-salon-guide',
+    'best-extensions-fine-hair-uk',
     'butterfly-extensions-guide',
     'clip-in-extensions-guide',
     'fringes-bangs-extensions-guide',
+    'hair-extension-aftercare-guide',
     'hair-extension-methods-comparison',
+    'hair-extension-types-guide',
     'hair-topper-guide',
     'hand-tied-weft-guide',
+    'how-to-choose-hair-extension-supplier',
     'k-tip-extensions-guide',
     'manchester-colour-collection-2026',
     'manchester-hair-extension-supplier',
     'nano-ring-extensions-guide',
     'ponytail-extensions-guide',
+    'remy-vs-nonremy-hair-guide',
     'tape-in-extensions-guide',
     'trade-vs-diy-extensions',
     'weft-extensions-guide',
+    'wholesale-hair-extensions-uk',
   ]
   const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,

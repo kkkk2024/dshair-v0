@@ -9,6 +9,25 @@ import { ArrowLeft, Clock, Sparkles, CheckCircle, XCircle } from "lucide-react"
 export const metadata = {
   title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
   description: "Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons, and how to spot the difference before you buy.",
+  openGraph: {
+    title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
+    description: "Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons, and how to spot the difference before you buy.",
+    url: "https://www.dshairbeauty.co.uk/blog/remy-vs-nonremy-hair-guide",
+    siteName: "D.S HAIR & BEAUTY",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Remy vs Non-Remy hair extensions comparison",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/remy-vs-nonremy-hair-guide",
+  },
 }
 
 export default function RemyVsNonRemyGuide() {
@@ -17,6 +36,22 @@ export default function RemyVsNonRemyGuide() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Remy Hair vs Non-Remy Hair: What's the Difference?",
+                "description": "Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons.",
+                "url": "https://www.dshairbeauty.co.uk/blog/remy-vs-nonremy-hair-guide",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+                "publisher": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">

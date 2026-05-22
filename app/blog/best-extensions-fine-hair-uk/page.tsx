@@ -9,6 +9,25 @@ import { ArrowLeft, Clock, Sparkles, ThumbsUp, Users } from "lucide-react"
 export const metadata = {
   title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026 | D.S HAIR & BEAUTY",
   description: "Struggling with thin or fine hair? Discover the best hair extension methods for fine hair in the UK. Tape-in, nano ring, and lightweight weft options compared by our experts.",
+  openGraph: {
+    title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026 | D.S HAIR & BEAUTY",
+    description: "Struggling with thin or fine hair? Discover the best hair extension methods for fine hair in the UK — tape-in, nano ring, and lightweight weft.",
+    url: "https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk",
+    siteName: "D.S HAIR & BEAUTY",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Best hair extensions for fine hair UK guide",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk",
+  },
 }
 
 export default function FineHairExtensionsGuide() {
@@ -17,6 +36,22 @@ export default function FineHairExtensionsGuide() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Best Hair Extensions for Fine Hair UK: Expert Guide 2026",
+                "description": "Struggling with thin or fine hair? Discover the best hair extension methods for fine hair in the UK — tape-in, nano ring, and lightweight weft.",
+                "url": "https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+                "publisher": { "@type": "Organization", "name": "D.S HAIR & BEAUTY" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">

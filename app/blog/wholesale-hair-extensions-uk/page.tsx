@@ -10,6 +10,25 @@ export const metadata = {
   title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
   description:
     "Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, how to qualify as a trade buyer, and what to look for in a UK wholesale supplier.",
+  openGraph: {
+    title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
+    description: "Buy hair extensions wholesale in the UK with confidence. Learn about trade pricing, minimum orders, and how to qualify as a trade buyer.",
+    url: "https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk",
+    siteName: "D.S Hair Beauty",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Wholesale hair extensions UK guide for salon owners",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk",
+  },
 }
 
 export default function WholesaleHairExtensionsUK() {
@@ -18,6 +37,22 @@ export default function WholesaleHairExtensionsUK() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying",
+                "description": "Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, and how to qualify as a trade buyer.",
+                "url": "https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
+                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">

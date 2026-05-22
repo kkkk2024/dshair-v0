@@ -10,6 +10,25 @@ export const metadata = {
   title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
   description:
     "Choosing the right trade hair extension supplier can make or break your salon business. Learn the key factors to evaluate suppliers, spot red flags, and find a UK partner you can rely on.",
+  openGraph: {
+    title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
+    description: "Learn the key factors to evaluate hair extension suppliers, spot red flags, and find a reliable UK trade partner for your salon.",
+    url: "https://www.dshairbeauty.co.uk/blog/how-to-choose-hair-extension-supplier",
+    siteName: "D.S Hair Beauty",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "How to choose a hair extension supplier for your salon",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/how-to-choose-hair-extension-supplier",
+  },
 }
 
 export default function HowToChooseHairExtensionSupplier() {
@@ -18,6 +37,22 @@ export default function HowToChooseHairExtensionSupplier() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "How to Choose a Hair Extension Supplier for Your Salon",
+                "description": "Choosing the right trade hair extension supplier can make or break your salon business. Learn the key factors to evaluate suppliers and spot red flags.",
+                "url": "https://www.dshairbeauty.co.uk/blog/how-to-choose-hair-extension-supplier",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
+                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">

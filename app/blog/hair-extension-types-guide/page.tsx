@@ -10,6 +10,25 @@ export const metadata = {
   title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
   description:
     "The complete guide to hair extension types for salon professionals. Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, best uses, and client suitability.",
+  openGraph: {
+    title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
+    description: "Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, and best uses for salon professionals.",
+    url: "https://www.dshairbeauty.co.uk/blog/hair-extension-types-guide",
+    siteName: "D.S Hair Beauty",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Hair extension types explained for salon professionals",
+      },
+    ],
+    type: "article" as const,
+    publishedTime: "2026-05-01",
+  },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog/hair-extension-types-guide",
+  },
 }
 
 export default function HairExtensionTypesGuide() {
@@ -18,6 +37,22 @@ export default function HairExtensionTypesGuide() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
+          {/* ── JSON-LD ───────────────────────────── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Hair Extension Types Explained: A Complete Guide for Salon Professionals",
+                "description": "Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, best uses, and client suitability.",
+                "url": "https://www.dshairbeauty.co.uk/blog/hair-extension-types-guide",
+                "datePublished": "2026-05-01",
+                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
+                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
+              })
+            }}
+          />
 
           {/* ── Hero ─────────────────────────────────── */}
           <section className="relative bg-[#4A1942] text-white overflow-hidden">
