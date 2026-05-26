@@ -215,7 +215,10 @@ export function Footer() {
       <div className="border-t border-primary-foreground/20">
         <div className="container px-4 md:px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
-            <p>© {new Date().getFullYear()} D.S HAIR & BEAUTY. All rights reserved.</p>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p>© {new Date().getFullYear()} D.S HAIR & BEAUTY. All rights reserved.</p>
+              <p className="text-xs">A trading brand of Kangde Health Technology Co., Ltd.</p>
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="hover:text-primary-foreground transition-colors">
                 Privacy Policy
