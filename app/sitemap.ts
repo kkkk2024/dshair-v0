@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { products, collections } from '@/lib/products'
+import { seoPages } from '@/lib/seo-pages'
 
 const BASE_URL = 'https://www.dshairbeauty.co.uk'
 
@@ -131,6 +132,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const salonSeoPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
+    url: `${BASE_URL}/uk-salon-hair-extensions/${page.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: page.intent === 'GEO' ? 0.72 : 0.78,
+  }))
+
   // Collection pages
   const collectionPages: MetadataRoute.Sitemap = collections.map((collection) => ({
     url: `${BASE_URL}/collections/${collection.slug}`,
@@ -147,5 +155,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...collectionPages, ...productPages, ...blogPostPages]
+  return [...staticPages, ...collectionPages, ...productPages, ...blogPostPages, ...salonSeoPages]
 }

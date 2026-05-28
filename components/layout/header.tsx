@@ -54,6 +54,7 @@ const services = [
   { title: "Solutions", href: "/solutions", description: "Complete hair extension packages & bundles for salons" },
   { title: "Resources", href: "/resources", description: "Expert guides, industry insights & product knowledge" },
   { title: "Trade Wholesale", href: "/trade-wholesale", description: "Wholesale hair extensions for UK salons" },
+  { title: "Wholesale UK SEO Hub", href: "/uk-salon-hair-extensions/hair-extensions-wholesale-uk", description: "UK salon wholesale and city pages" },
   { title: "Salon Partners", href: "/salon-partners", description: "Salon partner programme & benefits" },
   { title: "Ambassador", href: "/ambassador", description: "Join our ambassador programme" },
   { title: "Academy", href: "/academy", description: "Professional training & certification" },

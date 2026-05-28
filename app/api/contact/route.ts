@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -17,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     // Check if RESEND_API_KEY is configured
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_placeholder') {
+    if (!process.env.RESEND_API_KEY) {
       // For demo: just log and return success without sending email
       console.log('Contact form submission (demo mode):', { firstName, lastName, email, message });
       return NextResponse.json({ 
@@ -25,6 +23,8 @@ export async function POST(request: Request) {
         message: 'Demo mode - email not sent. Configure RESEND_API_KEY to enable.' 
       });
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Send email using Resend
     const data = await resend.emails.send({

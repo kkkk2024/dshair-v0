@@ -32,6 +32,8 @@ const footerLinks = {
   ],
   salons: [
     { title: "Wholesale Enquiry", href: "/contact?type=wholesale" },
+    { title: "Wholesale Hair Extensions UK", href: "/uk-salon-hair-extensions/hair-extensions-wholesale-uk" },
+    { title: "Manchester Supplier", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
     { title: "Trade Account", href: "/salon-partners" },
     { title: "Free Colour Kit", href: "/colour-match" },
     { title: "Contact → WhatsApp", href: contactInfo.whatsapp, external: true },
