@@ -17,12 +17,12 @@ const contactCards = [
   {
     icon: MessageCircle,
     title: "WhatsApp / WeChat",
-    content: "+86 135 1694 6001",
+    content: "Available for registered salon partners",
     description: "Fastest response — typically within 2 hours",
     action: {
-      label: "Chat on WhatsApp",
-      href: "https://wa.me/8613516946001?text=Hi%20D.S%20HAIR%20%26%20BEAUTY!%20I%27m%20interested%20in%20wholesale%20hair%20extensions%20for%20my%20salon.",
-      external: true,
+      label: "Apply for Trade Account",
+      href: "/salon-partners",
+      external: false,
     },
     highlight: true,
   },
@@ -91,14 +91,10 @@ export default function ContactPage() {
                   className="bg-green-500 hover:bg-green-600 text-white flex-shrink-0"
                   asChild
                 >
-                  <a
-                    href="https://wa.me/8613516946001?text=Hi%20D.S%20HAIR%20%26%20BEAUTY!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27m%20interested%20in%20your%20wholesale%20hair%20extension%20supply."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="/salon-partners">
                     <MessageCircle className="h-4 w-4 mr-2" />
-                    WhatsApp Us Now
-                  </a>
+                    Apply for Trade Account
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -167,7 +163,7 @@ export default function ContactPage() {
 
                 {/* Right: Form */}
                 <div>
-                  <h2 className="font-serif text-2xl md:text-3xl font-medium mb-8">Send Us a Message</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl font-medium mb-8">Send Us an Enquiry</h2>
                   <ContactForm />
                 </div>
 

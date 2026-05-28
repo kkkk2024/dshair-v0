@@ -92,11 +92,20 @@ export function ProductCard({ product }: ProductCardProps) {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="font-semibold">{formatPrice(product.price)}</span>
-          {product.originalPrice && (
-            <span className="text-sm text-muted-foreground line-through">
-              {formatPrice(product.originalPrice)}
-            </span>
+          {product.priceOnRequest || product.price === 0 ? (
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-accent">Trade Price</span>
+              <span className="text-xs text-muted-foreground">Apply for access →</span>
+            </div>
+          ) : (
+            <>
+              <span className="font-semibold">{formatPrice(product.price)}</span>
+              {product.originalPrice && (
+                <span className="text-sm text-muted-foreground line-through">
+                  {formatPrice(product.originalPrice)}
+                </span>
+              )}
+            </>
           )}
         </div>
         <p className="text-xs text-muted-foreground mt-1">

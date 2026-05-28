@@ -109,7 +109,7 @@ export function Footer() {
               <span className="font-serif text-xl font-semibold">D.S HAIR & BEAUTY</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
-              {"World's #1 Brand for Professional and Do-It-Yourself Hair Extensions. Premium 100% Remy Human Hair."}
+              Premium 100% Remy Human Hair Extensions. Trusted by 500+ salons across UK & EU. Manchester-based wholesale supplier with 19+ years of industry experience.
             </p>
             <div className="flex gap-4">
               <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram" className="hover:text-accent transition-colors">
@@ -217,7 +217,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
             <div className="flex flex-col items-center md:items-start gap-1">
               <p>© {new Date().getFullYear()} D.S HAIR & BEAUTY. All rights reserved.</p>
-              <p className="text-xs">A trading brand of Kangde Health Technology Co., Ltd.</p>
+              <p className="text-xs">A trading brand of Kangde Health Technology Co., Ltd. — B2B wholesale supplier for professional salons.</p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="hover:text-primary-foreground transition-colors">

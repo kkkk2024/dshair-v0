@@ -4263,10 +4263,10 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
 // Social links
 export const socialLinks = {
   instagram: "https://instagram.com/d.shairbeauty",
-  facebook: "https://facebook.com/d.shairbeauty",
+  facebook: "https://facebook.com/D.SHairBeauty",
   youtube: "https://youtube.com/@dshairbeauty",
   tiktok: "https://tiktok.com/@d.shairbeauty",
-  pinterest: "https://pinterest.com/dshairbeautyuk",
+  pinterest: "https://uk.pinterest.com/dshairbeautyuk",
   linkedin: "https://linkedin.com/company/dshairbeauty",
   twitter: "https://twitter.com/dshairbeauty",
 }
@@ -4278,4 +4278,7 @@ export const contactInfo = {
   whatsappNumber: "+86 13516946001",
   company: "D.S HAIR & BEAUTY",
   address: "Manchester, UK",
+  // B2B-focused: primary CTA is salon registration, not direct WhatsApp
+  primaryCta: "/salon-partners",
+  primaryCtaLabel: "Apply for Trade Account",
 }

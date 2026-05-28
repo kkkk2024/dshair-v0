@@ -155,8 +155,8 @@ export function FeaturedProducts() {
                 </h3>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-primary">
-                    {formatPrice(product.price)}
+                  <span className="text-lg font-bold text-accent">
+                    Trade Price
                   </span>
                   {product.originalPrice && (
                     <span className="text-sm text-muted-foreground line-through">

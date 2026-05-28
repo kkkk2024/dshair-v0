@@ -150,11 +150,49 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className="flex items-center gap-3 mb-6">
-            {product.priceOnRequest ? (
-              // Show WhatsApp button for price on request products
-              <div className="flex flex-col gap-2">
-                <span className="text-2xl font-semibold text-accent">Price on Request</span>
-                <span className="text-sm text-muted-foreground">Contact us for pricing via WhatsApp</span>
+            {product.priceOnRequest || product.price === 0 ? (
+              // B2B Trade Price — gated behind salon partner registration
+              <div className="w-full">
+                <div className="flex flex-col gap-3 p-5 bg-accent/5 rounded-xl border border-accent/20">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span className="text-xl font-semibold text-accent">Trade Exclusive Pricing</span>
+                      <p className="text-sm text-muted-foreground mt-0.5">
+                        Wholesale pricing available for registered salon partners
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button className="flex-1" asChild>
+                      <Link href="/salon-partners">
+                        <svg className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        Apply for Trade Account
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a
+                        href={`https://wa.me/8613516946001?text=${encodeURIComponent(`Hi D.S HAIR & BEAUTY! I'm a salon owner interested in trade pricing for: ${product.name}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <MessageCircle className="h-4 w-4 mr-2" />
+                        Enquire via WhatsApp
+                      </a>
+                    </Button>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 text-center text-xs text-muted-foreground pt-2 border-t border-accent/10">
+                    <span>✅ No minimum order</span>
+                    <span>✅ 24h dispatch</span>
+                    <span>✅ Free colour match</span>
+                  </div>
+                </div>
               </div>
             ) : (
               <>

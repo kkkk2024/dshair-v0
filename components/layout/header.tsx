@@ -83,7 +83,7 @@ export function Header() {
     <>
       {/* Top announcement bar - Updated */}
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <p>🇬🇧 UK Stockist | 100% Remy Human Hair | 20+ Years Industry Experience | Free Colour Matching</p>
+        <p>UK Stockist | 100% Remy Human Hair | 19+ Years Industry Experience | Free Colour Matching for Salons</p>
       </div>
 
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

@@ -20,7 +20,7 @@ export function OrganizationJsonLd() {
           height: 100,
         },
         description:
-          'Manchester-based wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19 years industry experience.',
+          'Manchester-based B2B wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19+ years industry experience.',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Manchester',
@@ -111,6 +111,10 @@ interface ProductJsonLdProps {
 export function ProductJsonLd({ product }: ProductJsonLdProps) {
   const productUrl = `${BASE_URL}/products/${product.slug}`
 
+  // For B2B products with priceOnRequest, use AggregateOffer with price range
+  // instead of showing £0 which harms SEO
+  const isTradeProduct = product.price === 0
+
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -122,19 +126,36 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
       '@type': 'Brand',
       name: product.vendor || 'D.S HAIR & BEAUTY',
     },
-    offers: {
-      '@type': 'Offer',
-      url: productUrl,
-      priceCurrency: product.currencyCode || 'GBP',
-      price: product.price,
-      availability: product.inStock
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'D.S HAIR & BEAUTY',
-      },
-    },
+    offers: isTradeProduct
+      ? {
+          '@type': 'AggregateOffer',
+          url: productUrl,
+          priceCurrency: product.currencyCode || 'GBP',
+          lowPrice: '49',
+          highPrice: '299',
+          offerCount: '7',
+          availability: product.inStock
+            ? 'https://schema.org/InStock'
+            : 'https://schema.org/OutOfStock',
+          seller: {
+            '@type': 'Organization',
+            name: 'D.S HAIR & BEAUTY',
+          },
+          description: 'Trade pricing available for registered salon partners. Apply for access.',
+        }
+      : {
+          '@type': 'Offer',
+          url: productUrl,
+          priceCurrency: product.currencyCode || 'GBP',
+          price: product.price,
+          availability: product.inStock
+            ? 'https://schema.org/InStock'
+            : 'https://schema.org/OutOfStock',
+          seller: {
+            '@type': 'Organization',
+            name: 'D.S HAIR & BEAUTY',
+          },
+        },
     ...(product.reviews > 0 && {
       aggregateRating: {
         '@type': 'AggregateRating',
