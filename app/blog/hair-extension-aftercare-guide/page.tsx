@@ -72,10 +72,10 @@ export default function HairExtensionAftercareGuide() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <Link href="/collections/hair-care">Shop Aftercare Products</Link>
+                  <Link href="/collections/extension-care">Shop Aftercare Products</Link>
                 </Button>
                 <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                  <Link href="/collections/clip-in-extensions">Shop Clip-Ins</Link>
+                  <Link href="/collections/clip-in">Shop Clip-Ins</Link>
                 </Button>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function HairExtensionAftercareGuide() {
               </div>
               <div className="text-center mb-8">
                 <Button className="bg-[#4A1942] hover:bg-[#3a1335] text-white" asChild>
-                  <Link href="/collections/hair-care">Shop All Aftercare Products</Link>
+                  <Link href="/collections/extension-care">Shop All Aftercare Products</Link>
                 </Button>
               </div>
 
@@ -303,7 +303,7 @@ export default function HairExtensionAftercareGuide() {
                     <Link href="/trade-wholesale">Open Trade Account</Link>
                   </Button>
                   <Button variant="outline" className="border-white/40 text-white hover:bg-white/10" asChild>
-                    <Link href="/collections/hair-care">Shop Aftercare Range</Link>
+                    <Link href="/collections/extension-care">Shop Aftercare Range</Link>
                   </Button>
                 </div>
               </div>

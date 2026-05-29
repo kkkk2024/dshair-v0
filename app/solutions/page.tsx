@@ -40,7 +40,7 @@ const extensionPackages = [
     includes: ["Balayage Hand-Tied Wefts", "Balayage Tape-Ins", "Blending Brushes", "Toning Serum", "Colour-Protect Shampoo"],
     level: "All Levels",
     price: "From £320 trade",
-    href: "/collections/butterfly-weft",
+    href: "/collections/butterfly-extensions",
     tag: "Trending",
   },
   {

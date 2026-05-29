@@ -245,7 +245,7 @@ export default function WholesaleHairExtensionsUK() {
                     <Link href="/salon-partners">Open a Trade Account →</Link>
                   </Button>
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                    <Link href="/collections/tape-in-extensions">Browse Products</Link>
+                    <Link href="/collections/tape-in">Browse Products</Link>
                   </Button>
                 </div>
               </div>

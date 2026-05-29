@@ -8,9 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/account/',
           '/_next/',
-          '/admin/',
         ],
       },
     ],

@@ -3,6 +3,45 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/collections/hair-care',
+        destination: '/collections/extension-care',
+        permanent: true,
+      },
+      {
+        source: '/collections/butterfly-weft',
+        destination: '/collections/butterfly-extensions',
+        permanent: true,
+      },
+      {
+        source: '/collections/all-extensions',
+        destination: '/collections/all',
+        permanent: true,
+      },
+      {
+        source: '/collections/tape-in-extensions',
+        destination: '/collections/tape-in',
+        permanent: true,
+      },
+      {
+        source: '/collections/clip-in-extensions',
+        destination: '/collections/clip-in',
+        permanent: true,
+      },
+      {
+        source: '/collections/nano-ring-extensions',
+        destination: '/collections/nano-extensions',
+        permanent: true,
+      },
+      {
+        source: '/collections/weft-extensions',
+        destination: '/collections/weft',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       {

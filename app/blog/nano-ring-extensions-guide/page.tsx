@@ -37,7 +37,7 @@ export default function NanoRingExtensionsGuide() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <Link href="/collections/nano-ring-extensions">Shop Now</Link>
+                  <Link href="/collections/nano-extensions">Shop Now</Link>
                 </Button>
                 <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                   <Link href="/salon-partners">Trade Account</Link>
@@ -184,7 +184,7 @@ export default function NanoRingExtensionsGuide() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                    <Link href="/collections/nano-ring-extensions">Browse Collection</Link>
+                    <Link href="/collections/nano-extensions">Browse Collection</Link>
                   </Button>
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <a href="https://wa.me/8613516946001?text=Hi!%20I'm%20interested%20in%20wholesale%20pricing." target="_blank" rel="noopener noreferrer">

@@ -76,7 +76,7 @@ export default function HairExtensionTypesGuide() {
                   <Link href="/salon-partners">Shop Wholesale</Link>
                 </Button>
                 <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                  <Link href="/collections/tape-in-extensions">Browse All Ranges</Link>
+                  <Link href="/collections/tape-in">Browse All Ranges</Link>
                 </Button>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function HairExtensionTypesGuide() {
                     <Link href="/salon-partners">Open a Trade Account →</Link>
                   </Button>
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                    <Link href="/collections/tape-in-extensions">Browse All Products</Link>
+                    <Link href="/collections/tape-in">Browse All Products</Link>
                   </Button>
                 </div>
               </div>

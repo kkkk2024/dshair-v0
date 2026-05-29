@@ -176,7 +176,7 @@ export function FeaturedProducts() {
         {/* View All Button */}
         <div className="text-center mt-12">
           <Button size="lg" asChild>
-            <Link href="/collections/all-extensions">
+            <Link href="/collections/all">
               View All Extensions
             </Link>
           </Button>

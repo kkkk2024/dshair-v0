@@ -4056,14 +4056,6 @@ export const collections: Collection[] = [
 
   {
     id: "7",
-    name: "Hair Care",
-    slug: "hair-care",
-    description: "Professional hair extension aftercare products. Sulfate-free shampoos, extension-safe brushes, leave-in conditioners and bond maintenance. Designed for tape-in, K-Tip and weft extensions.",
-    image: "/images/collection-haircare.jpg",
-  },
-
-  {
-    id: "7a",
     name: "Extension Care",
     slug: "extension-care",
     description: "Sulfate-free shampoos, deep conditioners, hair masks, detangling brushes and tape remover — everything your clients need to keep their extensions looking salon-fresh. Pair with our hair extensions for the complete service.",
@@ -4096,14 +4088,6 @@ export const collections: Collection[] = [
 
   {
     id: "11",
-    name: "Butterfly Weft Extensions",
-    slug: "butterfly-weft",
-    description: "Revolutionary butterfly weft extensions — the UK's salon favourite for natural volume. Ultra-thin 0.5mm base, trimmable design. 100% Remy human hair. Professional trade pricing available.",
-    image: "/images/collection-butterfly.jpg",
-  },
-
-  {
-    id: "12",
     name: "Butterfly Extensions",
     slug: "butterfly-extensions",
     description: "Premium butterfly weft hair extensions — ultra-thin 0.5mm base for a seamless, natural finish. 100% Remy human hair in 50+ shades. UK's leading wholesale supplier for professional salons.",

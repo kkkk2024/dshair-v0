@@ -72,7 +72,7 @@ export default function FineHairExtensionsGuide() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <Link href="/collections/tape-in-extensions">Shop Tape-In Extensions</Link>
+                  <Link href="/collections/tape-in">Shop Tape-In Extensions</Link>
                 </Button>
                 <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                   <Link href="/collections/nano-extensions">Shop Nano Ring Extensions</Link>
@@ -319,7 +319,7 @@ export default function FineHairExtensionsGuide() {
                     <span className="text-xs text-green-700">Salon-favourite for fine hair</span>
                   </div>
                   <Button className="w-full bg-[#4A1942] hover:bg-[#3a1335] text-white" asChild>
-                    <Link href="/collections/tape-in-extensions">Shop Tape-In</Link>
+                    <Link href="/collections/tape-in">Shop Tape-In</Link>
                   </Button>
                 </div>
                 <div className="bg-white border rounded-xl p-5 hover:shadow-lg transition-shadow">
@@ -379,7 +379,7 @@ export default function FineHairExtensionsGuide() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <Link href="/collections/tape-in-extensions">Tape-In Extensions</Link>
+                  <Link href="/collections/tape-in">Tape-In Extensions</Link>
                 </Button>
                 <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
                   <Link href="/collections/nano-extensions">Nano Ring Extensions</Link>
