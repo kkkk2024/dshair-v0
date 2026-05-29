@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
-import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2 } from "lucide-react"
+import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2, Globe } from "lucide-react"
 
 export const metadata = {
   title: "About Us | D.S HAIR & BEAUTY — Factory-Direct Hair Extension Manufacturer",
@@ -233,6 +233,67 @@ export default function AboutPage() {
                     <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Global Reach */}
+          <section className="py-16 md:py-24 bg-secondary">
+            <div className="container px-4 md:px-6">
+              <div className="text-center mb-12">
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
+                  Trusted Across the UK and Beyond
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  From independent salons to international distributors — our reach keeps growing.
+                </p>
+              </div>
+
+              {/* Stats Row */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto text-center">
+                {[
+                  { stat: "500+", label: "Salon Partners" },
+                  { stat: "15+", label: "Countries Served" },
+                  { stat: "50,000+", label: "Wefts Shipped Annually" },
+                  { stat: "98%", label: "Client Retention Rate" },
+                ].map((item) => (
+                  <div key={item.label} className="bg-card rounded-xl p-6 border">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{item.stat}</div>
+                    <div className="text-sm text-muted-foreground">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Client Distribution */}
+              <div className="max-w-3xl mx-auto mb-8">
+                <h3 className="font-semibold text-lg text-center mb-4">Client Distribution</h3>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    "United Kingdom", "Ireland", "France", "Germany", "Netherlands",
+                    "Belgium", "Spain", "Italy", "Sweden", "Norway",
+                    "Denmark", "Australia", "USA", "Canada", "UAE",
+                  ].map((country) => (
+                    <span key={country} className="inline-block bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full">
+                      {country}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Partner Types */}
+              <div className="max-w-3xl mx-auto">
+                <h3 className="font-semibold text-lg text-center mb-4">Partner Types</h3>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    "Independent Salons", "Salon Chains", "Mobile Hairdressers",
+                    "Hair Extension Specialists", "Beauty Schools",
+                    "Wholesale Distributors", "Online Retailers",
+                  ].map((type) => (
+                    <span key={type} className="inline-block bg-card border text-muted-foreground text-xs px-3 py-1.5 rounded-full">
+                      {type}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

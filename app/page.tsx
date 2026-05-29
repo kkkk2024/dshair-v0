@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { HeroSection } from "@/components/home/hero-section"
 import { BrandValues } from "@/components/home/brand-values"
 import { SalonTrustSection } from "@/components/home/salon-trust-section"
+import { TrustBadgesSection } from "@/components/home/trust-badges"
 import { CategoryGrid } from "@/components/home/category-grid"
 import { FeaturedProducts } from "@/components/home/featured-products"
 import { DualPathSection } from "@/components/home/dual-path-section"
@@ -41,6 +42,7 @@ export default function HomePage() {
           <HeroSection />
           <BrandValues />
           <SalonTrustSection />
+          <TrustBadgesSection />
           <CategoryGrid />
           <FeaturedProducts />
           <DualPathSection />

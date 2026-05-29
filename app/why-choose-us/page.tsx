@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import {
   ShieldCheck, Clock, Users, MessageCircle,
   Factory, Truck, Star, CheckCircle2, ArrowRight,
-  Download, FileText, BookOpen
+  Download, FileText, BookOpen, ClipboardCheck
 } from "lucide-react"
 import {
   Accordion,
@@ -72,6 +72,47 @@ const promises = [
     icon: Truck,
     title: "Manchester Warehouse. UK-Wide Delivery.",
     description: "UK-warehoused stock in Manchester for fast UK delivery. No cross-continental wait times — factory-direct quality, locally stocked.",
+  },
+]
+
+const manufacturingExcellence = [
+  {
+    icon: Factory,
+    title: "Sourcing & Raw Materials",
+    points: [
+      "We source 100% Remy human hair directly from temple donors in India and Southeast Asia",
+      "Single-donor ponytails ensure cuticle alignment — no silicone coating needed",
+      "Each batch is lab-tested for authenticity before production",
+    ],
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Manufacturing Process",
+    points: [
+      "In-house production facility in China with 150+ skilled technicians",
+      "Each weft is hand-tied by experienced artisans (5+ years average tenure)",
+      "Double-drawn process removes short hairs for uniform thickness",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Control",
+    points: [
+      "7-point quality inspection at every production stage",
+      "Shedding test: <5% hair loss after 100 brush strokes",
+      "Colour fastness test: 40+ wash cycles without fading",
+      "Tangle test: comb-through simulation for 500+ passes",
+    ],
+  },
+  {
+    icon: Truck,
+    title: "UK Warehousing & Distribution",
+    points: [
+      "Manchester-based warehouse for same-day dispatch (order before 2 PM)",
+      "24-hour delivery to most UK postcodes",
+      "All stock undergoes UK arrival inspection before shelving",
+      "Climate-controlled storage maintains hair quality",
+    ],
   },
 ]
 
@@ -220,6 +261,38 @@ export default function WhyChooseUsPage() {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Manufacturing Excellence */}
+          <section className="py-16 md:py-24 bg-secondary">
+            <div className="container px-4 md:px-6">
+              <div className="text-center mb-12">
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
+                  From Our Factory to Your Salon Floor
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  Four manufacturing pillars that ensure every weft meets our standards — and your clients' expectations.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                {manufacturingExcellence.map((item) => (
+                  <div key={item.title} className="bg-card rounded-xl p-6 border hover:shadow-md transition-shadow">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                      <item.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-3">{item.title}</h3>
+                    <ul className="space-y-2">
+                      {item.points.map((point, i) => (
+                        <li key={i} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
+                          <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
