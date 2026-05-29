@@ -123,13 +123,13 @@ export default function TradeWholesaleClient() {
               <div className="max-w-2xl text-white">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-1.5 mb-6">
                   <Store className="h-4 w-4" />
-                  <span className="text-sm font-medium">Wholesale / Trade</span>
+                  <span className="text-sm font-medium">Salon Supply Partner</span>
                 </div>
                 <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
-                  Wholesale Hair Extensions for UK Salons
+                  Your Salon&apos;s Supply Chain, Simplified
                 </h1>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  100% Remy human hair. 19 years of expertise. Trusted by stylists across the UK.
+                  Factory-direct Remy hair extensions for professional UK salons. One partner, every product type, zero middlemen. Join 500+ salons who stock with us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild className="bg-white text-black hover:bg-white/90">

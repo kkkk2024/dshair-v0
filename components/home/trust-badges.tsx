@@ -1,27 +1,27 @@
 "use client"
 
-import { ShieldCheck, MapPin, ThumbsUp, Verified } from "lucide-react"
+import { ShieldCheck, MapPin, Factory, Truck, Palette, BadgeCheck } from "lucide-react"
 
 const trustBadges = [
   {
+    icon: Factory,
+    title: "Manufacturer-Direct",
+    description: "No distributors, no middlemen. Your salon buys straight from our factory — maximising your margins.",
+  },
+  {
     icon: ShieldCheck,
-    title: "100% Remy Guaranteed",
-    description: "Every strand cuticle-aligned, double-drawn, quality-checked before dispatch.",
+    title: "100% Remy 12A Grade",
+    description: "Every strand cuticle-aligned, double-drawn, salon-standard quality. We don't sell the cheap stuff.",
   },
   {
-    icon: Verified,
-    title: "UK Trading Standards Compliant",
-    description: "Fully compliant with UK regulations. Paperwork and traceability on every batch.",
+    icon: Truck,
+    title: "UK Warehouse Stock",
+    description: "Popular lines stocked in Manchester. Dispatch within 1-2 business days for your salon.",
   },
   {
-    icon: MapPin,
-    title: "Manchester Stockist",
-    description: "Local warehouse in Manchester. Same-day dispatch for orders before 2 PM.",
-  },
-  {
-    icon: ThumbsUp,
+    icon: Palette,
     title: "Free Colour Matching",
-    description: "Free on-site colour matching for Manchester salons. Virtual matching UK-wide via WhatsApp.",
+    description: "On-site matching for Manchester salons. Virtual matching UK-wide via WhatsApp. Your formula, perfectly matched.",
   },
 ]
 
@@ -31,10 +31,10 @@ export function TrustBadgesSection() {
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-            Our Quality, Recognised
+            Partner With the Manufacturer
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            The certifications and guarantees that give salons confidence to partner with us.
+            Why buy from a distributor when you can go direct? Your salon deserves factory pricing, factory quality, and a partner who understands your business.
           </p>
         </div>
 

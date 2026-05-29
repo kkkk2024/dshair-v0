@@ -10,7 +10,8 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { contactInfo } from "@/lib/products"
 import {
   Calculator, ChevronRight, ChevronLeft, MessageCircle,
-  Package, Clock, Award, Shield, CheckCircle2, ArrowRight
+  Package, Clock, Award, Shield, Factory, Star, ArrowRight,
+  Truck, BadgeCheck
 } from "lucide-react"
 import Link from "next/link"
 
@@ -18,23 +19,84 @@ import Link from "next/link"
 
 type ExtensionType = "tape-in" | "nano-ring" | "k-tip" | "clip-in" | "machine-weft" | "butterfly-weft"
 
+interface PriceScale {
+  [length: string]: number // price per base unit (pack) in GBP
+}
+
 interface ExtensionOption {
   id: ExtensionType
   name: string
   badge?: string
   description: string
-  basePricePerUnit: number // price per base unit (25g for most, 50g for weft)
-  baseUnit: string // "25g" or "50g"
+  factoryPriceScale: PriceScale
+  packUnit: string // "per 20pcs pack" / "per 100pcs" / "per set"
+  packDescription: string
   collectionLink: string
+  isCustomQuote: boolean
 }
 
 const extensionTypes: ExtensionOption[] = [
-  { id: "tape-in", name: "Tape-In Extensions", badge: "Most Popular", description: "Flat, discreet adhesive tabs for seamless blending", basePricePerUnit: 50, baseUnit: "25g", collectionLink: "/collections/tape-in" },
-  { id: "nano-ring", name: "Nano Ring Extensions", description: "Ultra-discreet micro rings, ideal for fine hair", basePricePerUnit: 55, baseUnit: "25g", collectionLink: "/collections/nano-extensions" },
-  { id: "k-tip", name: "K-Tip / I-Tip Extensions", description: "Keratin-bonded tips for a secure, long-lasting hold", basePricePerUnit: 62, baseUnit: "25g", collectionLink: "/collections/k-tip-extensions" },
-  { id: "clip-in", name: "Clip-In Extensions", description: "Instant clip-on sets, no tools required", basePricePerUnit: 45, baseUnit: "25g", collectionLink: "/collections/clip-in" },
-  { id: "machine-weft", name: "Weft Extensions (Machine)", description: "Machine-sewn wefts for full-head volume", basePricePerUnit: 75, baseUnit: "50g", collectionLink: "/collections/weft" },
-  { id: "butterfly-weft", name: "Butterfly Weft (Hand-Tied)", description: "Hand-tied wefts with ultra-thin, flexible bases", basePricePerUnit: 100, baseUnit: "50g", collectionLink: "/collections/butterfly-weft" },
+  {
+    id: "tape-in",
+    name: "Tape-In Extensions",
+    badge: "Most Popular",
+    description: "Factory-direct 100% Remy tape-in extensions. Salon standard 12A grade. 20pcs per pack.",
+    factoryPriceScale: { "16": 16.60, "18": 19.20, "20": 25.80, "22": 28.90, "24": 32.00, "26": 35.00 },
+    packUnit: "per 20pcs pack",
+    packDescription: "20 pieces (10 sandwiches) per pack — 4cm×1cm, 2-2.5g per piece",
+    collectionLink: "/collections/tape-in",
+    isCustomQuote: false,
+  },
+  {
+    id: "nano-ring",
+    name: "Nano Ring Extensions",
+    description: "Ultra-discreet nano ring extensions. 12A Remy grade, 0.75g/pc — ideal for fine hair clients.",
+    factoryPriceScale: { "16": 25.40, "18": 30.80, "20": 36.20, "22": 40.80, "24": 46.20, "26": 47.00 },
+    packUnit: "per 100pcs",
+    packDescription: "100 pieces per pack — 0.75g each, salon standard quality",
+    collectionLink: "/collections/nano-extensions",
+    isCustomQuote: false,
+  },
+  {
+    id: "k-tip",
+    name: "K-Tip / Pre-Tipped",
+    description: "Keratin-bonded pre-tipped extensions for secure, long-lasting salon application.",
+    factoryPriceScale: {},
+    packUnit: "",
+    packDescription: "",
+    collectionLink: "/collections/k-tip-extensions",
+    isCustomQuote: true,
+  },
+  {
+    id: "clip-in",
+    name: "Clip-In Extension Sets",
+    description: "Ready-to-wear clip-in sets. Multiple weft pieces per set for full-head coverage.",
+    factoryPriceScale: {},
+    packUnit: "",
+    packDescription: "",
+    collectionLink: "/collections/clip-in",
+    isCustomQuote: true,
+  },
+  {
+    id: "machine-weft",
+    name: "Machine Weft (Bulk)",
+    description: "Machine-sewn wefts for salon volume work. Sold by weight — ideal for colour technicians.",
+    factoryPriceScale: {},
+    packUnit: "",
+    packDescription: "",
+    collectionLink: "/collections/weft",
+    isCustomQuote: true,
+  },
+  {
+    id: "butterfly-weft",
+    name: "Butterfly Weft (Hand-Tied)",
+    description: "Premium hand-tied wefts with ultra-thin, flexible bases. Lightweight and invisible.",
+    factoryPriceScale: {},
+    packUnit: "",
+    packDescription: "",
+    collectionLink: "/collections/butterfly-weft",
+    isCustomQuote: true,
+  },
 ]
 
 const lengths = [
@@ -46,19 +108,12 @@ const lengths = [
   { value: "26", label: '26"' },
 ]
 
-const colorRanges = [
-  { id: "natural", name: "Natural Shades", description: "1B - 4: Deep browns and blacks", colors: ["#1a0f0a", "#2d1810", "#3d2317", "#4a2314"] },
-  { id: "medium", name: "Medium Shades", description: "6 - 10: Medium browns and blondes", colors: ["#6b4423", "#8b6914", "#a08050", "#c4a87a"] },
-  { id: "fashion", name: "Fashion & Balayage", description: "Highlights, ombre & creative tones", colors: ["#d4b896", "#c98b6f", "#e8c89e", "#f5deb3"] },
-]
-
-const quantityOptions = [
-  { value: 25, label: "25g", discount: 0 },
-  { value: 50, label: "50g", discount: 5 },
-  { value: 100, label: "100g", discount: 10 },
-  { value: 200, label: "200g", discount: 10 },
-  { value: 500, label: "500g", discount: 15 },
-  { value: 1000, label: "1kg", discount: 15 },
+const quantityTiers = [
+  { value: 1, label: "1 Pack (Trial)", packs: 1, discount: 0, note: "Perfect for sampling" },
+  { value: 5, label: "5 Packs", packs: 5, discount: 5, note: "Popular salon starter" },
+  { value: 10, label: "10 Packs", packs: 10, discount: 8, note: "Regular salon order" },
+  { value: 20, label: "20 Packs", packs: 20, discount: 10, note: "Best value" },
+  { value: 50, label: "50+ Packs", packs: 50, discount: 12, note: "Bulk salon supply" },
 ]
 
 // --- Price Calculation ---
@@ -66,15 +121,17 @@ const quantityOptions = [
 function calculatePrice(
   extension: ExtensionOption,
   lengthInch: string,
-  quantityG: number
-): { total: number; perGram: number; discountPercent: number } {
-  const lengthMultiplier = 1 + (parseInt(lengthInch) - 16) * 0.05
-  const quantityDiscount = quantityOptions.find(q => q.value === quantityG)?.discount ?? 0
-  const baseMultiplier = quantityG / parseInt(extension.baseUnit)
-  const rawTotal = extension.basePricePerUnit * baseMultiplier * lengthMultiplier
-  const total = rawTotal * (1 - quantityDiscount / 100)
-  const perGram = total / quantityG
-  return { total: Math.round(total * 100) / 100, perGram: Math.round(perGram * 100) / 100, discountPercent: quantityDiscount }
+  packs: number,
+): { packPrice: number; total: number; discountPercent: number; unitLabel: string } {
+  const unitPrice = extension.factoryPriceScale[lengthInch] ?? 0
+  const tier = quantityTiers.find(q => q.packs === packs) ?? quantityTiers[0]
+  const total = unitPrice * packs * (1 - tier.discount / 100)
+  return {
+    packPrice: Math.round(unitPrice * 100) / 100,
+    total: Math.round(total * 100) / 100,
+    discountPercent: tier.discount,
+    unitLabel: extension.packUnit,
+  }
 }
 
 // --- CountUp Animation Hook ---
@@ -109,24 +166,28 @@ function useCountUp(target: number, duration = 600, shouldRun = false) {
 
 const faqs = [
   {
-    q: "What is the minimum order quantity (MOQ)?",
-    a: "Our minimum order is 25g for most extension types. However, volume discounts start at 50g (5% off), with bigger savings at 100g (10% off) and 500g+ (15% off). There is no upper limit on order size."
+    q: "Are these the exact prices I'll pay as a salon?",
+    a: "The calculator shows estimated factory-direct trade prices based on our 2025 quotation sheets for 12A Remy grade. Exact pricing depends on your salon's order volume, colour selection, and any custom requirements. Contact us on WhatsApp for a personalised salon quote — typically we respond within minutes during UK business hours."
   },
   {
-    q: "Do prices vary by colour range?",
-    a: "Natural shades (1B-4) and medium shades (6-10) are priced at standard rates. Fashion colours, balayage and custom blends may carry a small premium depending on the complexity of the colour work."
+    q: "What's the difference between 10A, 12A, and Top Grade?",
+    a: "12A (100% Remy human hair) is our recommended salon standard — cuticles aligned, minimal shedding, 3-6 month lifespan with proper care. Top Grade offers even finer quality for high-end salon clients. 10A is a budget option we don't actively recommend for professional salons."
   },
   {
-    q: "How do trade account discounts work?",
-    a: "Trade Account holders receive an additional 5% off all wholesale prices on top of volume discounts. To apply, visit our Trade Wholesale page or contact us via WhatsApp. Accounts are typically approved within 24 hours."
+    q: "Do you offer trade accounts with net-30 terms?",
+    a: "Yes. Established salon partners with consistent order history can apply for trade credit terms. New salons typically start with proforma invoice payment, with trade terms available after your first 2-3 orders. Visit our Trade Wholesale page or WhatsApp us to discuss."
   },
   {
-    q: "Are these prices including VAT?",
-    a: "Prices shown are exclusive of VAT. As a B2B wholesale supplier, VAT is handled according to your business status. Please contact our team for VAT-specific queries."
+    q: "What about custom colours and blending?",
+    a: "We custom-colour to your salon's specifications. Light colours (blondes, highlights) carry an 18-20% premium. Fashion colours and balayage blends are quoted per project. Send us your colour formula and we'll match it exactly."
   },
   {
-    q: "How quickly can I receive my order?",
-    a: "We hold UK stock for our most popular lines, with dispatch available within 1-2 business days. Speciality colours or larger orders may take 5-7 business days. Express shipping is available on request."
+    q: "How quickly can I stock my salon?",
+    a: "We hold UK warehouse stock for popular lines — dispatch within 1-2 business days. Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
+  },
+  {
+    q: "What's your MOQ for salon accounts?",
+    a: "We have no strict MOQ for new salon partners. You can start with a single trial pack to evaluate quality. Volume discounts kick in at 5 packs. There's no upper limit — we supply salons ordering 50+ packs monthly."
   },
 ]
 
@@ -170,21 +231,22 @@ export default function TradePriceCalculatorClient() {
   const [step, setStep] = useState(1)
   const [selectedType, setSelectedType] = useState<ExtensionType | null>(null)
   const [selectedLength, setSelectedLength] = useState("20")
-  const [selectedColor, setSelectedColor] = useState("natural")
-  const [selectedQuantity, setSelectedQuantity] = useState(100)
+  const [selectedPacks, setSelectedPacks] = useState(5)
   const [showResult, setShowResult] = useState(false)
 
   const currentExtension = extensionTypes.find(e => e.id === selectedType)
-  const priceResult = currentExtension ? calculatePrice(currentExtension, selectedLength, selectedQuantity) : null
+  const priceResult = currentExtension && !currentExtension.isCustomQuote
+    ? calculatePrice(currentExtension, selectedLength, selectedPacks)
+    : null
   const animatedTotal = useCountUp(priceResult?.total ?? 0, 600, showResult)
-  const animatedPerGram = useCountUp(priceResult?.perGram ?? 0, 600, showResult)
+  const animatedPackPrice = useCountUp(priceResult?.packPrice ?? 0, 600, showResult)
 
   const handleNext = useCallback(() => {
-    if (step === 4) {
+    if (step === 3) {
       setShowResult(true)
       return
     }
-    setStep(s => Math.min(s + 1, 4))
+    setStep(s => Math.min(s + 1, 3))
   }, [step])
 
   const handleBack = useCallback(() => {
@@ -197,8 +259,7 @@ export default function TradePriceCalculatorClient() {
     setStep(1)
     setSelectedType(null)
     setSelectedLength("20")
-    setSelectedColor("natural")
-    setSelectedQuantity(100)
+    setSelectedPacks(5)
   }
 
   const canProceed = () => {
@@ -206,31 +267,33 @@ export default function TradePriceCalculatorClient() {
       case 1: return selectedType !== null
       case 2: return true
       case 3: return true
-      case 4: return true
       default: return false
     }
   }
 
-  const stepTitles = ["Select Extension Type", "Choose Length", "Choose Colour Range", "Choose Quantity"]
+  const stepTitles = ["Select Extension Type", "Choose Length", "Choose Order Quantity"]
 
   return (
     <CartProvider>
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section — Salon Supplier Positioning */}
         <section className="relative bg-primary text-primary-foreground py-16 md:py-24">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_40%,oklch(0.55_0.12_25),transparent_60%)]" />
           <div className="container px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
-                <Calculator className="w-4 h-4" />
-                <span>Wholesale Pricing Tool</span>
+              <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4">
+                <Factory className="w-4 h-4" />
+                <span>Factory-Direct Salon Supply</span>
               </div>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4">
-                Trade Price Calculator
+                Salon Trade Pricing
               </h1>
-              <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-                Estimate your wholesale costs in 30 seconds. Transparent pricing, volume discounts, and no hidden fees.
+              <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-2">
+                Direct from our factory to your salon chair.
+              </p>
+              <p className="text-sm md:text-base opacity-75 max-w-xl mx-auto">
+                Transparent, volume-based pricing for professional salons. No middlemen, no retail markup.
               </p>
             </div>
           </div>
@@ -241,7 +304,7 @@ export default function TradePriceCalculatorClient() {
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               {/* Step Indicator */}
-              <StepIndicator current={showResult ? 5 : step} total={4} />
+              <StepIndicator current={showResult ? 4 : step} total={3} />
 
               {/* Step Title */}
               {!showResult && (
@@ -270,113 +333,118 @@ export default function TradePriceCalculatorClient() {
                       )}
                       <h3 className="font-medium text-sm md:text-base mb-1">{ext.name}</h3>
                       <p className="text-xs text-muted-foreground leading-relaxed">{ext.description}</p>
-                      <p className="text-sm font-semibold text-accent mt-3">
-                        From ~{`\u00A3`}{ext.basePricePerUnit}/{ext.baseUnit}
-                      </p>
+                      {ext.isCustomQuote ? (
+                        <p className="text-sm font-semibold text-accent mt-3">
+                          Custom Quote
+                        </p>
+                      ) : (
+                        <p className="text-sm font-semibold text-accent mt-3">
+                          From £{Object.values(ext.factoryPriceScale)[0]?.toFixed(0)} {ext.packUnit}
+                        </p>
+                      )}
                     </button>
                   ))}
                 </div>
               )}
 
               {/* Step 2: Length */}
-              {step === 2 && !showResult && (
+              {step === 2 && !showResult && currentExtension && (
                 <div className="flex flex-col items-center animate-in fade-in duration-300">
-                  <p className="text-muted-foreground text-center mb-6 max-w-md">
-                    Longer extensions require more raw material and carry a slight price premium per inch.
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-3">
-                    {lengths.map(l => (
-                      <button
-                        key={l.value}
-                        onClick={() => setSelectedLength(l.value)}
-                        className={`px-6 py-3 rounded-lg border-2 font-medium transition-all duration-200 ${
-                          selectedLength === l.value
-                            ? "border-accent bg-accent text-accent-foreground"
-                            : "border-border bg-card hover:border-accent/50"
-                        }`}
-                      >
-                        {l.label}
-                      </button>
-                    ))}
-                  </div>
-                  {currentExtension && (
-                    <p className="mt-6 text-sm text-muted-foreground">
-                      Length {selectedLength}&quot; selected for {currentExtension.name}
-                    </p>
+                  {currentExtension.isCustomQuote ? (
+                    <div className="text-center max-w-md">
+                      <div className="p-8 bg-amber-50 border border-amber-200 rounded-xl mb-6">
+                        <Star className="w-10 h-10 text-amber-500 mx-auto mb-3" />
+                        <h3 className="font-semibold text-lg mb-2">Custom Quote Required</h3>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          {currentExtension.name} pricing varies significantly by specification. 
+                          Contact us directly for your salon&apos;s custom quote — we typically respond within minutes.
+                        </p>
+                        <Button
+                          className="gap-2 w-full"
+                          onClick={() =>
+                            openWhatsApp(
+                              `Hi! I'd like a salon quote for ${currentExtension.name}. My salon is based in [your location]. Can you send me trade pricing?`
+                            )
+                          }
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          Get Quote via WhatsApp
+                        </Button>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Or go back and select Tape-In or Nano Ring for instant pricing estimates.
+                      </p>
+                    </div>
+                  ) : (
+                    <>
+                      <p className="text-muted-foreground text-center mb-6 max-w-md">
+                        Longer lengths use more raw material. Our prices scale transparently with length.
+                      </p>
+                      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 w-full max-w-2xl">
+                        {lengths.map(l => (
+                          <button
+                            key={l.value}
+                            onClick={() => setSelectedLength(l.value)}
+                            className={`px-4 py-4 rounded-lg border-2 font-medium transition-all duration-200 text-center ${
+                              selectedLength === l.value
+                                ? "border-accent bg-accent text-accent-foreground"
+                                : "border-border bg-card hover:border-accent/50"
+                            }`}
+                          >
+                            <span className="block text-lg">{l.label}</span>
+                            <span className="block text-xs mt-1 opacity-70">
+                              £{currentExtension.factoryPriceScale[l.value]?.toFixed(0)}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                      <p className="mt-4 text-xs text-muted-foreground text-center">
+                        {currentExtension.packDescription}
+                      </p>
+                    </>
                   )}
                 </div>
               )}
 
-              {/* Step 3: Colour Range */}
-              {step === 3 && !showResult && (
+              {/* Step 3: Quantity */}
+              {step === 3 && !showResult && currentExtension && !currentExtension.isCustomQuote && (
                 <div className="flex flex-col items-center animate-in fade-in duration-300">
                   <p className="text-muted-foreground text-center mb-6 max-w-md">
-                    Select the colour range that best matches your salon&apos;s requirements. Pricing may vary slightly by colour complexity.
+                    Larger orders earn better pricing. Most salon partners start with 5 packs and scale up.
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-2xl">
-                    {colorRanges.map(c => (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full max-w-2xl">
+                    {quantityTiers.map(q => (
                       <button
-                        key={c.id}
-                        onClick={() => setSelectedColor(c.id)}
-                        className={`p-5 rounded-lg border-2 text-left transition-all duration-200 hover:shadow-md ${
-                          selectedColor === c.id
+                        key={q.value}
+                        onClick={() => setSelectedPacks(q.packs)}
+                        className={`relative px-5 py-4 rounded-lg border-2 text-left transition-all duration-200 ${
+                          selectedPacks === q.packs
                             ? "border-accent bg-accent/5 shadow-md"
                             : "border-border bg-card hover:border-accent/50"
                         }`}
                       >
-                        <div className="flex gap-1.5 mb-3">
-                          {c.colors.map((hex, i) => (
-                            <span
-                              key={i}
-                              className="w-6 h-6 rounded-full border border-border"
-                              style={{ backgroundColor: hex }}
-                            />
-                          ))}
+                        <div className="flex justify-between items-start mb-1">
+                          <span className="font-medium text-sm">{q.label}</span>
+                          {q.discount > 0 && (
+                            <span className="text-xs font-semibold text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full">
+                              -{q.discount}%
+                            </span>
+                          )}
                         </div>
-                        <h3 className="font-medium text-sm mb-1">{c.name}</h3>
-                        <p className="text-xs text-muted-foreground">{c.description}</p>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Step 4: Quantity */}
-              {step === 4 && !showResult && (
-                <div className="flex flex-col items-center animate-in fade-in duration-300">
-                  <p className="text-muted-foreground text-center mb-6 max-w-md">
-                    Volume discounts are applied automatically. Larger orders receive bigger savings.
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-3">
-                    {quantityOptions.map(q => (
-                      <button
-                        key={q.value}
-                        onClick={() => setSelectedQuantity(q.value)}
-                        className={`relative px-5 py-3 rounded-lg border-2 font-medium transition-all duration-200 ${
-                          selectedQuantity === q.value
-                            ? "border-accent bg-accent text-accent-foreground"
-                            : "border-border bg-card hover:border-accent/50"
-                        }`}
-                      >
-                        {q.label}
-                        {q.discount > 0 && (
-                          <span className="absolute -top-2 -right-2 text-[10px] font-semibold bg-green-100 text-green-800 px-1.5 py-0.5 rounded-full">
-                            {q.discount}% off
-                          </span>
-                        )}
+                        <p className="text-xs text-muted-foreground">{q.note}</p>
                       </button>
                     ))}
                   </div>
                   <div className="mt-6 p-4 bg-secondary/50 rounded-lg text-sm text-center max-w-md">
                     {(() => {
-                      const qo = quantityOptions.find(q => q.value === selectedQuantity)
-                      return qo?.discount ? (
+                      const qt = quantityTiers.find(q => q.packs === selectedPacks)
+                      return qt?.discount ? (
                         <span className="text-green-700 font-medium">
-                          You qualify for {qo.discount}% volume discount on this order
+                          {qt.discount}% volume discount applied — £{currentExtension.factoryPriceScale[selectedLength]?.toFixed(2)} → £{(currentExtension.factoryPriceScale[selectedLength] * (1 - qt.discount / 100)).toFixed(2)}/{currentExtension.packUnit}
                         </span>
                       ) : (
                         <span className="text-muted-foreground">
-                          Volume discounts start at 50g (5% off). Consider ordering more for better pricing.
+                          Starter pack at standard rate. Volume discounts from 5 packs.
                         </span>
                       )
                     })()}
@@ -384,19 +452,33 @@ export default function TradePriceCalculatorClient() {
                 </div>
               )}
 
+              {/* Skip step 3 for custom quote types */}
+              {step === 3 && !showResult && currentExtension?.isCustomQuote && handleStartOver && (
+                <div className="flex justify-center">
+                  {(() => { handleStartOver(); return null })()}
+                </div>
+              )}
+
               {/* Result Display */}
               {showResult && priceResult && currentExtension && (
                 <div className="animate-in fade-in duration-500">
                   <div className="bg-card border-2 border-accent/30 rounded-xl p-6 md:p-8 max-w-lg mx-auto text-center shadow-lg">
-                    <h2 className="font-serif text-2xl md:text-3xl mb-2">Your Estimated Price</h2>
+                    <div className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 text-xs text-amber-700 mb-3">
+                      <Factory className="w-3 h-3" />
+                      Factory-Direct Estimate
+                    </div>
+                    <h2 className="font-serif text-2xl md:text-3xl mb-2">Your Trade Price Estimate</h2>
                     <p className="text-sm text-muted-foreground mb-6">
-                      {currentExtension.name} &middot; {selectedLength}&quot; &middot; {quantityOptions.find(q => q.value === selectedQuantity)?.label} &middot; {colorRanges.find(c => c.id === selectedColor)?.name}
+                      {currentExtension.name} &middot; {selectedLength}&quot; &middot; {selectedPacks} pack{selectedPacks > 1 ? "s" : ""}
                     </p>
 
                     <div className="mb-6">
-                      <span className="text-sm text-muted-foreground">Estimated Wholesale Total</span>
+                      <span className="text-sm text-muted-foreground">Estimated Order Total</span>
                       <p className="text-5xl md:text-6xl font-serif font-bold text-accent">
                         &pound;{animatedTotal.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        (£{animatedPackPrice.toFixed(2)} {currentExtension.packUnit})
                       </p>
                       {priceResult.discountPercent > 0 && (
                         <p className="text-sm text-green-600 mt-1">
@@ -405,46 +487,69 @@ export default function TradePriceCalculatorClient() {
                       )}
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 mb-6 text-left bg-secondary/50 rounded-lg p-4">
+                    <div className="grid grid-cols-3 gap-4 mb-6 text-left bg-secondary/50 rounded-lg p-4">
                       <div>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Price per Gram</span>
-                        <p className="font-semibold">&pound;{animatedPerGram.toFixed(2)}/g</p>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Pack Price</span>
+                        <p className="font-semibold">&pound;{animatedPackPrice.toFixed(2)}</p>
                       </div>
                       <div>
                         <span className="text-xs text-muted-foreground uppercase tracking-wide">Quantity</span>
-                        <p className="font-semibold">{quantityOptions.find(q => q.value === selectedQuantity)?.label}</p>
+                        <p className="font-semibold">{selectedPacks} {selectedPacks === 1 ? "Pack" : "Packs"}</p>
+                      </div>
+                      <div>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Grade</span>
+                        <p className="font-semibold">12A Remy</p>
                       </div>
                     </div>
 
-                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-6 text-sm text-amber-800">
-                      <strong>Trade Account holders get extra 5% off</strong> all wholesale prices.{" "}
-                      <Link href="/trade-wholesale" className="underline font-medium">Apply now &rarr;</Link>
+                    {/* Hook: Trade Account */}
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-sm text-amber-800 text-left">
+                      <strong className="block mb-1">Not your final price.</strong>
+                      This is an estimate based on our standard trade rates. Your salon&apos;s actual price depends on:
+                      <ul className="list-disc pl-4 mt-1 space-y-0.5 text-xs">
+                        <li>Colour selection (light colours +18-20%)</li>
+                        <li>Consistent order volume (recurring discounts)</li>
+                        <li>Trade account status (additional 5% off)</li>
+                      </ul>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <div className="flex flex-col gap-3">
                       <Button
                         size="lg"
-                        className="gap-2"
+                        className="gap-2 w-full"
                         onClick={() =>
                           openWhatsApp(
-                            `Hi! I'd like an exact quote for:\n- ${currentExtension.name}\n- Length: ${selectedLength}"\n- Colour: ${colorRanges.find(c => c.id === selectedColor)?.name}\n- Quantity: ${quantityOptions.find(q => q.value === selectedQuantity)?.label}\n\nRef: Trade Price Calculator`
+                            `Hi! I'd like an exact salon trade quote:\n\n- ${currentExtension.name}\n- Length: ${selectedLength}"\n- Quantity: ${selectedPacks} packs\n- My salon is based in [location]\n\nCould you send me your best trade pricing?`
                           )
                         }
                       >
                         <MessageCircle className="w-4 h-4" />
-                        Request Exact Quote
+                        Get Your Salon&apos;s Exact Quote
                       </Button>
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="gap-2"
-                        asChild
-                      >
-                        <Link href="/trade-wholesale">
-                          Apply for Trade Account
-                          <ArrowRight className="w-4 h-4" />
-                        </Link>
-                      </Button>
+                      <div className="grid grid-cols-2 gap-3">
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="gap-1.5 text-sm w-full"
+                          asChild
+                        >
+                          <Link href="/trade-wholesale">
+                            <BadgeCheck className="w-4 h-4" />
+                            Open Trade Account
+                          </Link>
+                        </Button>
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="gap-1.5 text-sm w-full"
+                          asChild
+                        >
+                          <Link href={currentExtension.collectionLink}>
+                            <Package className="w-4 h-4" />
+                            View Products
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
 
@@ -476,7 +581,7 @@ export default function TradePriceCalculatorClient() {
                     disabled={!canProceed()}
                     className="gap-2"
                   >
-                    {step === 4 ? "Calculate Price" : "Next"}
+                    {step === 3 ? "Calculate Price" : "Next"}
                     <ChevronRight className="w-4 h-4" />
                   </Button>
                 </div>
@@ -485,15 +590,15 @@ export default function TradePriceCalculatorClient() {
           </div>
         </section>
 
-        {/* Trust Bar */}
+        {/* Trust Bar — Salon Supplier */}
         <section className="bg-secondary py-10">
           <div className="container px-4 md:px-6">
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
               {[
-                { icon: Clock, label: "19+ Years" },
-                { icon: Package, label: "500+ Salons Served" },
-                { icon: Shield, label: "100% Remy" },
-                { icon: Award, label: "UK Stock" },
+                { icon: Factory, label: "Factory-Direct" },
+                { icon: Truck, label: "UK Warehouse Stock" },
+                { icon: BadgeCheck, label: "100% Remy 12A Grade" },
+                { icon: Star, label: "19+ Years Experience" },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2 text-primary">
                   <Icon className="w-5 h-5" />
@@ -508,9 +613,12 @@ export default function TradePriceCalculatorClient() {
         <section className="py-16 md:py-20">
           <div className="container px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-center mb-10">
-                Frequently Asked Questions
+              <h2 className="font-serif text-3xl md:text-4xl text-center mb-4">
+                Salon Partner FAQs
               </h2>
+              <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">
+                Everything you need to know about becoming a D.S Hair Beauty salon partner.
+              </p>
               <Accordion type="single" collapsible className="space-y-2">
                 {faqs.map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="border rounded-lg px-4">
@@ -523,24 +631,40 @@ export default function TradePriceCalculatorClient() {
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* Final CTA — One-Stop Salon Supply */}
         <section className="bg-primary text-primary-foreground py-16 md:py-20">
           <div className="container px-4 md:px-6 text-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4">
+              <Factory className="w-4 h-4" />
+              <span>Your Salon&apos;s Supply Partner</span>
+            </div>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">
-              Ready to order?
+              From our factory to your salon
             </h2>
-            <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
-              Speak to our UK team for an exact quote, custom orders, or to set up your trade account.
+            <p className="text-lg opacity-90 mb-6 max-w-xl mx-auto">
+              We supply hundreds of UK salons with premium hair extensions at factory-direct prices. No middlemen, no retail markup — just quality you can trust.
             </p>
-            <Button
-              size="lg"
-              variant="outline"
-              className="gap-2 border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => openWhatsApp("Hi! I'd like to discuss a wholesale order for my salon.")}
-            >
-              <MessageCircle className="w-5 h-5" />
-              Chat on WhatsApp
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2 border-white text-white hover:bg-white hover:text-primary"
+                onClick={() => openWhatsApp("Hi! I run a salon and I'm interested in becoming a D.S Hair Beauty stockist. Can you send me your trade pricing and MOQ?")}
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat on WhatsApp
+              </Button>
+              <Button
+                size="lg"
+                className="gap-2 bg-white text-primary hover:bg-white/90"
+                asChild
+              >
+                <Link href="/trade-wholesale">
+                  Open Trade Account
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
