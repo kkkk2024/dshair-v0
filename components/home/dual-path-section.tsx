@@ -89,7 +89,7 @@ export function DualPathSection() {
                 Professional Extensions
               </h3>
               <p className="text-white/80 mb-4 max-w-md">
-                Trade pricing. Local Manchester supply. Free colour matching kit. No minimum order to start.
+                Factory-direct pricing. UK-warehoused stock in Manchester. Free colour matching kit. No minimum order to start.
               </p>
               <ul className="text-white/70 text-sm mb-6 flex flex-wrap gap-x-6 gap-y-2">
                 <li className="flex items-center gap-2">
@@ -136,9 +136,9 @@ export function DualPathSection() {
         <div className="mt-8 rounded-2xl bg-primary/5 border border-primary/10 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-1">Manchester Salons — We Are Local</h3>
+              <h3 className="font-semibold text-lg mb-1">Manchester Warehouse — Fast UK Delivery</h3>
               <p className="text-muted-foreground text-sm max-w-xl">
-                19 years of hair extension expertise. Direct factory relationships. Free colour matching kit with your first trade order. Same or next-day supply across Greater Manchester.
+                19 years of hair extension expertise. Direct factory relationships. Free colour matching kit with your first trade order. Stock held in Manchester for fast UK delivery.
               </p>
             </div>
             <Button size="lg" className="flex-shrink-0" asChild>

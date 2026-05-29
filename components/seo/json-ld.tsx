@@ -9,7 +9,7 @@ export function OrganizationJsonLd() {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'LocalBusiness'],
+        '@type': ['Organization'],
         '@id': `${BASE_URL}/#organization`,
         name: 'D.S HAIR & BEAUTY',
         url: BASE_URL,
@@ -20,24 +20,10 @@ export function OrganizationJsonLd() {
           height: 100,
         },
         description:
-          'Manchester-based B2B wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in. Trade pricing for professional salons. 19+ years industry experience.',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Manchester',
-          addressRegion: 'Greater Manchester',
-          addressCountry: 'GB',
-        },
+          'China-based manufacturer of 100% Remy human hair extensions. UK-warehoused stock in Manchester for fast salon supply. Trade pricing for professional salons. 19+ years industry experience.',
         areaServed: {
           '@type': 'Country',
           name: 'United Kingdom',
-        },
-        telephone: '+44-7780-480868',
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+44-7780-480868',
-          contactType: 'customer service',
-          availableLanguage: ['English'],
-          optionFor: 'WhatsApp',
         },
         email: 'info@dshairbeauty.co.uk',
         sameAs: [

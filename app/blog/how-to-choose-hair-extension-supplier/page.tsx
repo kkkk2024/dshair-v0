@@ -219,7 +219,7 @@ export default function HowToChooseHairExtensionSupplier() {
                 <li><strong>Regulatory confidence</strong> — UK-based suppliers comply with UK trading standards and product safety regulations</li>
               </ul>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                D.S Hair Beauty is a Manchester-based supplier with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions from UK-held stock, with trade accounts, no minimum order quantities, and direct support.
+                D.S Hair Beauty is a factory-direct manufacturer with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions from UK-warehoused stock, with trade accounts, no minimum order quantities, and direct manufacturer support.
               </p>
 
               {/* ── CTA Box ─────────────────────────────── */}

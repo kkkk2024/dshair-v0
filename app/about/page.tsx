@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2 } from "lucide-react"
 
 export const metadata = {
-  title: "About Us | D.S HAIR & BEAUTY – Manchester's Premier Hair Extension Supplier",
+  title: "About Us | D.S HAIR & BEAUTY — Factory-Direct Hair Extension Manufacturer",
   description:
-    "19 years of hair extension expertise. D.S HAIR & BEAUTY is Manchester's trusted wholesale supplier of 100% Remy human hair extensions for professional salons.",
+    "19 years of hair extension expertise. D.S HAIR & BEAUTY is a China-based manufacturer supplying 100% Remy human hair extensions direct to professional salons — UK-warehoused stock in Manchester.",
 }
 
 const values = [
@@ -28,9 +28,9 @@ const values = [
   },
   {
     icon: Truck,
-    title: "Manchester-Based, Fast Supply",
+    title: "Manchester Warehouse — Fast UK Supply",
     description:
-      "We are local. Same-day or next-day supply for Manchester salons. No waiting weeks for stock from overseas.",
+      "UK-warehoused stock for fast delivery. No waiting weeks for stock from overseas — we hold inventory in Manchester for quick salon fulfilment.",
   },
   {
     icon: Users,
@@ -58,8 +58,8 @@ const timeline = [
   },
   {
     year: "2026",
-    title: "Manchester Salon Partner Launch",
-    desc: "Opened our Manchester hub. Now supplying hand-tied wefts, balayage extensions, and professional consumables to salons across the Northwest.",
+    title: "UK Warehouse Operations",
+    desc: "Established UK-warehoused stock in Manchester. Now supplying hand-tied wefts, balayage extensions, and professional consumables with fast delivery to salons across the UK.",
   },
 ]
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
                   { stat: "19+", label: "Years in the Industry" },
                   { stat: "100%", label: "Remy Human Hair" },
                   { stat: "50+", label: "Colours & Lengths" },
-                  { stat: "24hr", label: "Manchester Delivery" },
+                  { stat: "24hr", label: "Fast UK Delivery" },
                 ].map((item) => (
                   <div key={item.label}>
                     <div className="text-3xl md:text-4xl font-bold mb-1">{item.stat}</div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                     <p className="text-white font-semibold text-lg">D.S HAIR & BEAUTY</p>
-                    <p className="text-white/70 text-sm">Manchester, United Kingdom</p>
+                    <p className="text-white/70 text-sm">Manchester Warehouse, United Kingdom</p>
                   </div>
                 </div>
                 <div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      D.S HAIR & BEAUTY was founded by a hair industry specialist with over 19 years of experience in Remy human hair sourcing and export. Having spent nearly two decades working directly with China&apos;s leading hair manufacturers and supplying to UK markets, our founder saw a clear gap: Manchester&apos;s professional salons needed a local, reliable, and truly knowledgeable supplier.
+                      D.S HAIR & BEAUTY was founded by a hair industry specialist with over 19 years of experience in Remy human hair sourcing and export. Having spent nearly two decades working directly with China&apos;s leading hair manufacturers and supplying to UK markets, our founder saw a clear gap: UK&apos;s professional salons needed an honest, factory-direct supplier who could offer manufacturer pricing with UK-warehoused stock for fast delivery without the middleman markup.
                     </p>
                     <p>
                       Most suppliers are middlemen. We are not. Our direct factory relationships mean you get better quality, more consistent colour matching, and faster supply — at trade prices that make your salon business more profitable.
@@ -159,7 +159,7 @@ export default function AboutPage() {
                       "Direct factory relationships in China",
                       "Specialist in hand-tied & tape-in wefts",
                       "Free colour matching for every salon",
-                      "Manchester local, next-day supply",
+                      "UK-warehoused, next-day delivery",
                       "Custom balayage & colour blending",
                       "Professional consumables included",
                     ].map((point) => (
@@ -180,7 +180,7 @@ export default function AboutPage() {
               <div className="text-center mb-12">
                 <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Our Journey</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  From a small export operation to Manchester&apos;s go-to professional hair extension supplier.
+                  From a small export operation to a factory-direct supplier serving professional UK salons.
                 </p>
               </div>
               <div className="relative max-w-3xl mx-auto">
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 Ready to Partner With Us?
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-                Join Manchester&apos;s growing network of salons working with DS Hair & Beauty. Apply for your trade account today — free colour matching kit included with your first order.
+                Join the growing network of salons working with DS Hair & Beauty. Apply for your trade account today — free colour matching kit included with your first order.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>

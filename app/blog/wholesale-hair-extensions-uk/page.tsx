@@ -215,7 +215,7 @@ export default function WholesaleHairExtensionsUK() {
               {/* ── What DSB Offers ─────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">What D.S Hair Beauty Offers to UK Trade Buyers</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                D.S Hair Beauty is a Manchester-based wholesale hair extension supplier with 19 years of experience supplying UK salons. We are hair professionals ourselves — so we understand what salon owners and stylists actually need.
+                D.S Hair Beauty is a factory-direct wholesale hair extension supplier with 19 years of experience supplying UK salons. We are hair professionals ourselves — so we understand what salon owners and stylists actually need. UK-warehoused stock for fast delivery.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 We supply the following at trade prices to registered UK salons and stylists:

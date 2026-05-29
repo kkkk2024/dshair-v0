@@ -28,8 +28,8 @@ const benefits = [
   },
   {
     icon: Truck,
-    title: "Same/Next-Day Manchester Supply",
-    description: "We are local. No waiting weeks for stock. Fast turnaround keeps your clients on schedule.",
+    title: "Fast UK Delivery from Manchester",
+    description: "Factory-direct quality with UK-warehoused stock in Manchester. Fast turnaround keeps your clients on schedule — no waiting weeks for overseas shipments.",
   },
   {
     icon: Palette,
@@ -183,7 +183,7 @@ export default function SalonPartnersPage() {
                   Your Local Hair Extension Supplier. Trade Prices. No Minimums.
                 </h1>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  Join Manchester&apos;s growing network of professional salons. Get wholesale pricing on 100% Remy human hair extensions — with same or next-day local supply.
+                  Join the growing network of professional salons. Get factory-direct wholesale pricing on 100% Remy human hair extensions — UK-warehoused stock for fast delivery.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild>

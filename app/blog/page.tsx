@@ -176,9 +176,9 @@ const posts = [
   },
   {
     slug: "manchester-hair-extension-supplier",
-    title: "Why Manchester Salons Are Switching to Local Hair Extension Suppliers",
+    title: "Why UK Salons Are Choosing Factory-Direct Hair Extension Suppliers",
     excerpt:
-      "Faster supply, better colour matching, and direct factory quality — why more Manchester salons are choosing a local wholesale partner over large distributors.",
+      "Faster supply, better colour matching, and manufacturer pricing — why more UK salons are cutting out distributors and going directly to the source.",
     category: "Business",
     readTime: "6 min read",
     date: "February 2025",

@@ -31,7 +31,7 @@ export function WhatsAppButton() {
       >
         <MessageCircle className="h-7 w-7" />
         <span className="absolute right-16 bg-gray-900 text-white text-sm rounded-lg px-3 py-1.5 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Chat on WhatsApp
+          Factory-direct WhatsApp
         </span>
         <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-30" />
       </button>

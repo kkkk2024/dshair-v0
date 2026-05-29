@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 export const metadata = {
   title: "Contact Us | D.S HAIR & BEAUTY",
   description:
-    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. Manchester-based hair extension supplier for professional salons.",
+    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. Factory-direct hair extension manufacturer. UK-warehoused stock in Manchester for professional salons.",
 }
 
 const contactCards = [

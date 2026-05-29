@@ -63,9 +63,9 @@ export default function TradeWholesaleClient() {
     },
     {
       icon: MapPin,
-      title: "Manchester-Based",
+      title: "UK-Warehoused Stock",
       description:
-        "Local support, fast dispatch. Same-day or next-day delivery across the UK. No long waits, no overseas delays.",
+        "Inventory held in Manchester for fast dispatch. Factory-direct quality with quick UK delivery. No cross-continental wait times.",
     },
     {
       icon: BadgeCheck,

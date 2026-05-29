@@ -4277,7 +4277,9 @@ export const contactInfo = {
   whatsapp: "https://wa.me/8613516946001",
   whatsappNumber: "+86 13516946001",
   company: "D.S HAIR & BEAUTY",
-  address: "Manchester, UK",
+  whatsappLabel: "Factory-direct WhatsApp",
+  address: "Manchester Warehouse, UK",
+  tagline: "China-Based Manufacturer. UK Warehouse.",
   // B2B-focused: primary CTA is salon registration, not direct WhatsApp
   primaryCta: "/salon-partners",
   primaryCtaLabel: "Apply for Trade Account",

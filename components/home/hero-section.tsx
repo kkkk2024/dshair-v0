@@ -64,7 +64,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-green-500" />
-              Manchester-Based, Fast Supply
+              Manchester Warehouse — Fast UK Supply
             </div>
           </div>
         </div>

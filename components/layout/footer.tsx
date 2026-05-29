@@ -111,7 +111,7 @@ export function Footer() {
               <span className="font-serif text-xl font-semibold">D.S HAIR & BEAUTY</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
-              Premium 100% Remy Human Hair Extensions. Trusted by 500+ salons across UK & EU. Manchester-based wholesale supplier with 19+ years of industry experience.
+              Premium 100% Remy Human Hair Extensions. Trusted by 500+ salons across UK & EU. China-based manufacturer with UK-warehoused stock in Manchester. Factory-direct quality with 19+ years of industry experience.
             </p>
             <div className="flex gap-4">
               <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram" className="hover:text-accent transition-colors">
@@ -219,7 +219,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
             <div className="flex flex-col items-center md:items-start gap-1">
               <p>© {new Date().getFullYear()} D.S HAIR & BEAUTY. All rights reserved.</p>
-              <p className="text-xs">A trading brand of Kangde (HK) Jiankang Technology Limited. — B2B wholesale supplier for professional salons.</p>
+              <p className="text-xs">A trading brand of Kangde (HK) Jiankang Technology Limited. — B2B manufacturer-direct supply for professional salons.</p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="hover:text-primary-foreground transition-colors">
@@ -233,7 +233,7 @@ export function Footer() {
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs">Manchester, UK</span>
+              <span className="text-xs">Manchester Warehouse, UK</span>
               <span className="text-xs">|</span>
               <a href={`mailto:${contactInfo.email}`} className="text-xs hover:text-accent transition-colors">{contactInfo.email}</a>
             </div>

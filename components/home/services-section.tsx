@@ -7,7 +7,7 @@ const services = [
   {
     icon: Building2,
     title: "Salon Partners",
-    description: "Manchester-based wholesale supply. Trade pricing, free colour kit, no minimum order. Apply for your trade account today.",
+    description: "China-based manufacturer with UK-warehoused stock. Trade pricing, free colour kit, no minimum order. Apply for your trade account today.",
     href: "/salon-partners",
     cta: "Apply for Trade Account",
     highlight: true,

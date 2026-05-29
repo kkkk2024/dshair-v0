@@ -70,8 +70,8 @@ const promises = [
   },
   {
     icon: Truck,
-    title: "Manchester-Based. UK-Wide Reach.",
-    description: "Same-day and next-day delivery across Manchester. Fast, reliable shipping across the UK. No cross-continental wait times.",
+    title: "Manchester Warehouse. UK-Wide Delivery.",
+    description: "UK-warehoused stock in Manchester for fast UK delivery. No cross-continental wait times — factory-direct quality, locally stocked.",
   },
 ]
 
