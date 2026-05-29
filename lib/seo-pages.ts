@@ -23,9 +23,9 @@ export const seoPages: SeoPage[] = [
     h1: "Hair Extensions Wholesale UK",
     metaTitle: "Hair Extensions Wholesale UK for Salons | D.S Hair Beauty",
     metaDescription:
-      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Manchester-based supplier with trade account support and colour matching.",
+      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Factory-direct supplier with UK-warehoused stock, trade account support and colour matching.",
     intro:
-      "D.S Hair Beauty supplies professional salons and stylists with 100% Remy human hair extensions, trade account support and practical wholesale ordering from our Manchester base.",
+      "D.S Hair Beauty supplies professional salons and stylists with 100% Remy human hair extensions, trade account support and practical wholesale ordering from UK-warehoused stock.",
     sections: [
       {
         heading: "Wholesale supply built for salon buyers",
@@ -43,7 +43,7 @@ export const seoPages: SeoPage[] = [
     bullets: [
       "100% Remy human hair extension options",
       "Trade account route for salon and stylist buyers",
-      "Manchester-based support for UK and EU customers",
+      "UK-warehoused support for UK and EU customers",
       "Colour matching help before ordering",
       "Professional categories for multiple extension methods",
     ],
@@ -76,16 +76,16 @@ export const seoPages: SeoPage[] = [
     title: "Hair Extension Supplier Manchester",
     keyword: "hair extension supplier manchester",
     intent: "GEO",
-    h1: "Hair Extension Supplier Manchester",
-    metaTitle: "Hair Extension Supplier Manchester | D.S Hair Beauty",
+    h1: "Hair Extension Supplier — UK-Warehoused in Manchester",
+    metaTitle: "Factory-Direct Hair Extension Supplier Manchester | D.S Hair Beauty",
     metaDescription:
-      "Manchester-based hair extension supplier for salons, stylists and trade buyers across the UK and Europe.",
+      "Factory-direct hair extension manufacturer with UK-warehoused stock in Manchester. Serving salons, stylists and trade buyers across the UK with trade pricing and colour support.",
     intro:
-      "For Manchester salons and stylists, D.S Hair Beauty offers professional hair extension supply, colour support and trade account access from a UK-focused base.",
+      "D.S Hair Beauty is a factory-direct manufacturer. Our UK-warehoused stock in Manchester means salons get fast delivery with manufacturer pricing — no middleman markup.",
     sections: [
       {
-        heading: "Local supply for Manchester salons",
-        body: "Manchester salons need dependable stock, fast communication and professional hair extension options that can be used across multiple client services. This page supports local search demand and routes qualified buyers into trade account enquiries.",
+        heading: "Factory-direct supply. UK-warehoused in Manchester.",
+        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources directly from China's leading Remy hair manufacturers. Stock is held in Manchester for fast UK delivery — so you get factory-direct quality with local fulfilment speed.",
       },
       {
         heading: "Professional product range",
@@ -93,11 +93,12 @@ export const seoPages: SeoPage[] = [
       },
       {
         heading: "Trade support beyond product listings",
-        body: "The goal is not only to sell hair. It is to support salon buyers with colour matching, product selection and a straightforward route to trade pricing.",
+        body: "The goal is not only to sell hair. It is to support salon buyers with colour matching, product selection and a straightforward route to trade pricing at manufacturer rates.",
       },
     ],
     bullets: [
-      "Manchester-focused supplier positioning",
+      "Factory-direct manufacturer pricing",
+      "UK-warehoused stock in Manchester",
       "Trade account pathway for salons",
       "Professional extension methods and aftercare",
       "Colour matching and WhatsApp support",
@@ -105,9 +106,9 @@ export const seoPages: SeoPage[] = [
     ],
     faqs: [
       {
-        question: "Are you based in Manchester?",
+        question: "Where is your stock held?",
         answer:
-          "D.S Hair Beauty uses Manchester-based positioning and support for UK salon buyers. Contact the team for current fulfilment and delivery details.",
+          "Our stock is warehoused in Manchester, UK. We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK delivery.",
       },
       {
         question: "Can Manchester salons open a trade account?",
@@ -117,7 +118,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Do you only supply Manchester?",
         answer:
-          "No. The site serves UK and EU salon buyers, with Manchester used as a strong local relevance signal.",
+          "No. We supply salons across the UK and EU from our UK-warehoused stock, with fast delivery nationwide.",
       },
     ],
     internalLinks: [
@@ -125,7 +126,7 @@ export const seoPages: SeoPage[] = [
       { label: "Explore professional extensions", href: "/collections/tape-in" },
       { label: "Contact the team", href: "/contact" },
     ],
-    cta: "Request Manchester Trade Support",
+    cta: "Request Trade Pricing",
   },
   {
     slug: "hair-extensions-for-salons-uk",

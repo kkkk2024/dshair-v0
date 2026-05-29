@@ -41,8 +41,8 @@ const contactCards = [
   {
     icon: MapPin,
     title: "Location",
-    content: "Manchester, UK",
-    description: "Serving salons across Greater Manchester & Northwest England",
+    content: "Manchester Warehouse, UK",
+    description: "UK-warehoused stock. Fast delivery across the UK.",
     action: null,
     highlight: false,
   },
