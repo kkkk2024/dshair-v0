@@ -78,6 +78,7 @@ export default function ManchesterSupplierPage() {
               <h3>4. A Real Business Relationship</h3>
               <p>
                 When your usual 20-inch balayage weft is running low, you message your supplier directly. With a factory-direct partner, you are talking to the people who control production — not a sales rep who files a ticket with a warehouse. That kind of relationship makes your salon business more reliable.
+              </p>
 
               <h2>What UK Salon Owners Are Saying</h2>
               <blockquote>
