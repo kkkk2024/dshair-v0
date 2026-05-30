@@ -12,6 +12,7 @@ import { DualPathSection } from "@/components/home/dual-path-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { InstagramSection } from "@/components/home/instagram-section"
+import { QuickQuoteSection } from "@/components/home/quick-quote-section"
 import { OrganizationJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default function HomePage() {
           <ServicesSection />
           <TestimonialsSection />
           <InstagramSection />
+          <QuickQuoteSection />
         </main>
         <Footer />
         <CartDrawer />

@@ -8,6 +8,15 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { Label } from "@/components/ui/label"
 import {
   CheckCircle2, Package, MapPin, BadgeCheck,
   MessageCircle, Store, Scissors,
@@ -18,6 +27,15 @@ import Image from "next/image"
 export default function TradeWholesaleClient() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [methods, setMethods] = useState<string[]>([])
+  const [monthlySpend, setMonthlySpend] = useState("")
+  const [howFoundUs, setHowFoundUs] = useState("")
+
+  const toggleMethod = (method: string) => {
+    setMethods(prev =>
+      prev.includes(method) ? prev.filter(m => m !== method) : [...prev, method]
+    )
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -27,7 +45,14 @@ export default function TradeWholesaleClient() {
     const data = {
       name: formData.get("name"),
       salonName: formData.get("salon_name"),
+      location: formData.get("location"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
+      methods,
+      monthlySpend,
+      currentSupplier: formData.get("current_supplier"),
+      howFoundUs,
+      instagram: formData.get("instagram"),
       message: formData.get("message"),
       source: "trade-wholesale-page",
     }
@@ -333,28 +358,120 @@ export default function TradeWholesaleClient() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
+                    {/* Row 1: Name + Salon Name */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Your Name *</label>
-                        <Input name="name" placeholder="First & Last Name" required />
+                        <Label htmlFor="name" className="block text-sm font-medium mb-1.5">Your Name *</Label>
+                        <Input id="name" name="name" placeholder="First & Last Name" required />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Salon Name *</label>
-                        <Input name="salon_name" placeholder="e.g. The Hair Studio" required />
+                        <Label htmlFor="salon_name" className="block text-sm font-medium mb-1.5">Salon Name *</Label>
+                        <Input id="salon_name" name="salon_name" placeholder="e.g. The Hair Studio" required />
                       </div>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-1.5">Email Address *</label>
-                      <Input name="email" type="email" placeholder="you@yoursalon.co.uk" required />
+
+                    {/* Row 2: Email + Phone */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="email" className="block text-sm font-medium mb-1.5">Email Address *</Label>
+                        <Input id="email" name="email" type="email" placeholder="you@yoursalon.co.uk" required />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone" className="block text-sm font-medium mb-1.5">Phone / WhatsApp *</Label>
+                        <Input id="phone" name="phone" type="tel" placeholder="+44 7xxx xxx xxx" required />
+                      </div>
                     </div>
+
+                    {/* Row 3: Location + Current Supplier */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="location" className="block text-sm font-medium mb-1.5">Salon Location / City</Label>
+                        <Input id="location" name="location" placeholder="e.g. Manchester" />
+                      </div>
+                      <div>
+                        <Label htmlFor="current_supplier" className="block text-sm font-medium mb-1.5">Current Supplier (optional)</Label>
+                        <Input id="current_supplier" name="current_supplier" placeholder="e.g. Hairtalk, Balmain..." />
+                      </div>
+                    </div>
+
+                    {/* Extension Methods - Checkbox Group */}
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Message (optional)</label>
+                      <Label className="block text-sm font-medium mb-2">Extension Methods You Offer</Label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {[
+                          "Tape-In",
+                          "K-Tip",
+                          "Weft",
+                          "Butterfly Weft",
+                          "Hair Toppers",
+                          "Nano Ring",
+                        ].map((method) => (
+                          <label
+                            key={method}
+                            className="flex items-center gap-2 text-sm rounded-lg border px-3 py-2 cursor-pointer hover:bg-muted/50 transition-colors has-data-[state=checked]:bg-primary/5 has-data-[state=checked]:border-primary"
+                          >
+                            <Checkbox
+                              checked={methods.includes(method)}
+                              onCheckedChange={() => toggleMethod(method)}
+                            />
+                            {method}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Monthly Spend + How Found Us */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <Label className="block text-sm font-medium mb-1.5">Monthly Spend on Hair</Label>
+                        <Select value={monthlySpend} onValueChange={setMonthlySpend}>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select monthly spend..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Under £200">Under £200</SelectItem>
+                            <SelectItem value="£200–£500">£200–£500</SelectItem>
+                            <SelectItem value="£500–£1000">£500–£1000</SelectItem>
+                            <SelectItem value="Over £1000">Over £1000</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div>
+                        <Label className="block text-sm font-medium mb-1.5">How Did You Find Us?</Label>
+                        <Select value={howFoundUs} onValueChange={setHowFoundUs}>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select an option..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Google">Google</SelectItem>
+                            <SelectItem value="Instagram">Instagram</SelectItem>
+                            <SelectItem value="TikTok">TikTok</SelectItem>
+                            <SelectItem value="Word of Mouth">Word of Mouth</SelectItem>
+                            <SelectItem value="Trade Show">Trade Show</SelectItem>
+                            <SelectItem value="Other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+
+                    {/* Instagram Handle */}
+                    <div>
+                      <Label htmlFor="instagram" className="block text-sm font-medium mb-1.5">Instagram Handle (optional)</Label>
+                      <Input id="instagram" name="instagram" placeholder="@your_salon" />
+                    </div>
+
+                    {/* Message */}
+                    <div>
+                      <Label htmlFor="message" className="block text-sm font-medium mb-1.5">Message (optional)</Label>
                       <Textarea
+                        id="message"
                         name="message"
-                        placeholder="Tell us about your salon, the extension methods you offer, or any questions you have..."
-                        rows={4}
+                        placeholder="Tell us about your salon, your clients, or any questions..."
+                        rows={3}
                       />
                     </div>
+
+                    {/* Submit */}
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? "Submitting..." : "Open My Trade Account"}
                     </Button>

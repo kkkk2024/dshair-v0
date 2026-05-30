@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  const { Resend } = require('resend');
+  return new Resend(process.env.RESEND_API_KEY || 're_placeholder');
+}
 
 export async function POST(request: Request) {
   try {
@@ -44,7 +46,7 @@ export async function POST(request: Request) {
     const methodsList = Array.isArray(methods) ? methods.join(', ') : methods;
 
     // Send email notification
-    const data = await resend.emails.send({
+    const data = await getResend().emails.send({
       from: 'D.S HAIR & BEAUTY <onboarding@resend.dev>',
       to: [process.env.CONTACT_EMAIL || 'caro@dshairbeauty.co.uk'],
       subject: `🎉 New ${applicationType}: ${salonName}`,

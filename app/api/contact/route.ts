@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
+function getResend() {
+  const { Resend } = require('resend');
+  return new Resend(process.env.RESEND_API_KEY || 're_placeholder');
+}
 
 export async function POST(request: Request) {
   try {
@@ -27,7 +29,7 @@ export async function POST(request: Request) {
     }
 
     // Send email using Resend
-    const data = await resend.emails.send({
+    const data = await getResend().emails.send({
       from: 'D.S HAIR & BEAUTY <onboarding@resend.dev>',
       to: ['caro@dshairbeauty.co.uk'],
       subject: `New Contact Form Submission: ${subject || 'General Enquiry'}`,
