@@ -21,35 +21,31 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dshairbeauty.co.uk'),
   title: {
-    default: "Trade Hair Extension Supplier UK | B2B Wholesale for Salons | D.S Hair Beauty",
+    default: "Trade Hair Extension Supplier UK | Wholesale for Salons | D.S Hair Beauty",
   },
-  description: "China-based manufacturer of 100% Remy human hair extensions. UK-warehoused stock in Manchester for fast salon supply. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Trade pricing — apply for access. 19+ years industry experience.",
+  description: "UK's trusted trade supplier of 100% Remy human hair extensions for salons. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Manchester-based with nationwide delivery. 19 years expertise.",
   keywords: [
-    'hair extensions wholesale UK', 'trade hair extensions supplier', 'salon hair extensions wholesale',
-    'hand tied weft supplier', 'balayage hair extensions wholesale', 'nano ring extensions trade',
-    'tape in extensions wholesale', 'professional hair extensions supplier UK',
-    'remy human hair extensions trade', 'hair extension manufacturer UK', 'B2B hair extensions UK',
-    'wholesale hair supplier UK', 'factory direct hair extensions UK',
+    'hair extensions Manchester', 'wholesale hair extensions UK', 'hand tied weft supplier',
+    'balayage hair extensions wholesale', 'nano ring extensions Manchester',
+    'tape in extensions trade', 'professional hair extensions supplier UK',
+    'salon hair extensions wholesale', 'remy human hair extensions Manchester',
+    'hair extension supplier Manchester', 'trade hair extensions UK',
+    'human hair extensions wholesale', 'salon supplier Manchester',
   ],
   authors: [{ name: 'D.S HAIR & BEAUTY', url: 'https://www.dshairbeauty.co.uk' }],
   creator: 'D.S HAIR & BEAUTY',
   publisher: 'D.S HAIR & BEAUTY',
-  alternates: {
-    canonical: 'https://www.dshairbeauty.co.uk',
-  },
   openGraph: {
-    title: 'D.S HAIR & BEAUTY | Hair Extension Manufacturer — UK Warehouse Supply',
-    description: "Factory-direct Remy human hair extensions. UK-warehoused stock in Manchester. Trade pricing for professional salons. 19 years industry expertise.",
+    title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
+    description: "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for professional salons. 19 years industry expertise.",
     type: 'website',
-    url: 'https://www.dshairbeauty.co.uk',
     locale: 'en_GB',
     siteName: 'D.S HAIR & BEAUTY',
-    // opengraph-image.tsx auto-generates the image
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'D.S HAIR & BEAUTY | Hair Extension Manufacturer — UK Warehouse Supply',
-    description: "Factory-direct Remy human hair extensions. UK-warehoused stock. Trade pricing for salons.",
+    title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
+    description: "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for professional salons.",
     site: '@d.shairbeauty',
     creator: '@d.shairbeauty',
   },
@@ -58,8 +54,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   verification: {
-    // Add Google Search Console verification token when available
-    // google: 'your-verification-token',
+    google: 'dshairbeauty-co-uk',  // GSC verification — update with actual meta tag value from Search Console
   },
   robots: {
     index: true,

@@ -1,14 +1,40 @@
-import { Header } from "@/components/layout/header"
+import type { Metadata } from "next"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import Link from "next/link"
 import { ArrowRight, Clock } from "lucide-react"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Hair Extension Blog | DS Hair Beauty Manchester",
   description:
     "Expert guides on hand-tied weft, balayage extensions, nano ring, tape-in, and everything professional salons need to know. From Manchester's leading hair extension supplier.",
+  keywords: [
+    "hair extensions blog",
+    "tape in extensions guide",
+    "hand tied weft tutorial",
+    "hair toppers guide",
+    "balayage hair extensions",
+    "nano ring extensions",
+    "hair extension aftercare",
+    "remy hair vs non-remy",
+  ],
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/blog",
+  },
+  openGraph: {
+    title: "Hair Extension Blog | DS Hair Beauty",
+    description: "Expert hair extension guides for UK salons. Tips, tutorials and industry insights.",
+    type: "article",
+    url: "https://www.dshairbeauty.co.uk/blog",
+    locale: "en_GB",
+    siteName: "D.S HAIR & BEAUTY",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hair Extension Blog | DS Hair Beauty",
+    description: "Expert hair extension guides for UK salons.",
+  },
 }
 
 const posts = [
@@ -20,7 +46,7 @@ const posts = [
       "Not all human hair extensions are created equal. Learn the critical differences between Remy and Non-Remy hair — and why 100% Remy human hair is the only choice for professional salons.",
     category: "Education",
     readTime: "7 min read",
-    date: "May 2026",
+    date: "2026-05-15",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
   {
@@ -30,7 +56,7 @@ const posts = [
       "Professional aftercare advice for hand-tied weft, nano ring, tape-in, and K-tip extensions. Help your UK salon clients keep their hair extensions looking flawless for longer.",
     category: "Aftercare",
     readTime: "9 min read",
-    date: "May 2026",
+    date: "2026-05-01",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
   },
   {
@@ -40,10 +66,10 @@ const posts = [
       "Struggling to find hair extensions that blend with thin or fine hair? Discover the best methods for UK clients — nano rings, hand-tied weft, and tape-ins that are virtually invisible.",
     category: "Fine Hair",
     readTime: "8 min read",
-    date: "May 2026",
+    date: "2026-05-10",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
   },
-  // ===== 原有文章 =====
+  // ===== 2025年文章 =====
   {
     slug: "manchester-colour-collection-2026",
     title: "The Manchester Edit: 2026 Colour Collection — The Shades Every Salon Needs",
@@ -51,7 +77,7 @@ const posts = [
       "From Icy Manchester platinum to Cinnamon Copper — the definitive 2026 colour guide curated for Manchester salons. Discover the 5 shades your clients are already asking for.",
     category: "Colour Trend",
     readTime: "6 min read",
-    date: "April 2026",
+    date: "2026-04-20",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
   {
@@ -61,7 +87,7 @@ const posts = [
       "Complete guide to hair toppers — silk base vs mono top vs mesh base, who needs them, how to apply in 4 steps, and why every UK salon should stock them.",
     category: "Product Guide",
     readTime: "10 min read",
-    date: "March 2025",
+    date: "2025-03-15",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
   },
   {
@@ -71,7 +97,7 @@ const posts = [
       "The complete guide to clip-in hair extensions for UK salons — how to fit, blend, care for, and when to recommend clip-ins. 100% Remy human hair, instant results.",
     category: "Product Guide",
     readTime: "8 min read",
-    date: "March 2025",
+    date: "2025-03-10",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
   },
   {
@@ -81,7 +107,7 @@ const posts = [
       "Hand-tied vs machine-made, weft extensions deliver maximum volume and length with fewer installation points. Here's what every UK salon needs to know.",
     category: "Product Guide",
     readTime: "9 min read",
-    date: "March 2025",
+    date: "2025-03-08",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
   {
@@ -91,8 +117,8 @@ const posts = [
       "Instant length and volume for ponytails, buns, and braided styles. The secret weapon of professional salons — and how to add it to your offering.",
     category: "Product Guide",
     readTime: "6 min read",
-    date: "March 2025",
-    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    date: "2025-03-05",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
   },
   {
     slug: "fringes-bangs-extensions-guide",
@@ -101,8 +127,8 @@ const posts = [
       "Instant face-framing colour, volume, and style without a long-term commitment. How every UK salon can add fringe extensions to their offering.",
     category: "Product Guide",
     readTime: "6 min read",
-    date: "March 2025",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+    date: "2025-03-03",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
   {
     slug: "tape-in-extensions-guide",
@@ -111,7 +137,7 @@ const posts = [
       "Invisible application, seamless finish, easy maintenance. Tape-ins dominate UK salons for good reason — and this is everything you need to know.",
     category: "Product Guide",
     readTime: "10 min read",
-    date: "March 2025",
+    date: "2025-03-01",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
   },
   {
@@ -121,7 +147,7 @@ const posts = [
       "The gold standard for natural-looking, long-lasting extensions. K-tips command the highest revenue of any method — here's what UK salon professionals need to know.",
     category: "Product Guide",
     readTime: "9 min read",
-    date: "March 2025",
+    date: "2025-02-28",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
   },
   {
@@ -131,7 +157,7 @@ const posts = [
       "The smallest bonds of any extension method — up to 90% smaller than micro-beads. Perfect for fine-haired clients. Here's what UK salon professionals need to know.",
     category: "Product Guide",
     readTime: "8 min read",
-    date: "March 2025",
+    date: "2025-02-25",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
   },
   {
@@ -141,7 +167,7 @@ const posts = [
       "Ultra-thin 0.5mm base that is completely undetectable. Butterfly wefts have transformed how UK salons approach volume and length — here's the complete guide.",
     category: "Product Guide",
     readTime: "8 min read",
-    date: "March 2025",
+    date: "2025-02-20",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
   {
@@ -151,7 +177,7 @@ const posts = [
       "Hand-tied weft is the fastest growing extension method in UK professional salons. Here is everything you need to know — application, care, and why your clients will love it.",
     category: "Product Guide",
     readTime: "8 min read",
-    date: "March 2025",
+    date: "2025-02-15",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
   },
   {
@@ -161,7 +187,7 @@ const posts = [
       "Over 70% of Manchester salon clients request balayage colour — but standard extensions do not blend. Here is how to solve it with pre-coloured balayage weft.",
     category: "Technique",
     readTime: "7 min read",
-    date: "March 2025",
+    date: "2025-02-10",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
   },
   {
@@ -171,17 +197,17 @@ const posts = [
       "Hand-tied weft, nano ring, tape-in, K-tip — each method suits a different client. This guide helps you recommend the right technique every time.",
     category: "Education",
     readTime: "10 min read",
-    date: "February 2025",
+    date: "2025-02-05",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
   },
   {
     slug: "manchester-hair-extension-supplier",
-    title: "Why UK Salons Are Choosing Factory-Direct Hair Extension Suppliers",
+    title: "Why Manchester Salons Are Switching to Local Hair Extension Suppliers",
     excerpt:
-      "Faster supply, better colour matching, and manufacturer pricing — why more UK salons are cutting out distributors and going directly to the source.",
+      "Faster supply, better colour matching, and direct factory quality — why more Manchester salons are choosing a local wholesale partner over large distributors.",
     category: "Business",
     readTime: "6 min read",
-    date: "February 2025",
+    date: "2025-01-20",
     image: "https://images.unsplash.com/photo-1470259078422-826894b933aa?w=800&q=80",
   },
   {
@@ -191,16 +217,72 @@ const posts = [
       "Not all extensions are made equal. Here is why professional trade-grade Remy human hair delivers better results, better retention, and better client satisfaction.",
     category: "Business",
     readTime: "5 min read",
-    date: "January 2025",
+    date: "2025-01-10",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
   },
 ]
+
+// Blog JSON-LD component (server-side)
+function BlogPageJsonLd({ posts }: { posts: typeof posts }) {
+  const baseUrl = "https://www.dshairbeauty.co.uk"
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": `${baseUrl}/blog#blog`,
+        name: "Hair Extension Blog | DS Hair Beauty",
+        description:
+          "Expert guides on hair extensions for UK professional salons. Hand-tied weft, tape-in, nano ring, aftercare and more.",
+        url: `${baseUrl}/blog`,
+        publisher: {
+          "@id": `${baseUrl}/#organization`,
+        },
+        blogPost: posts.map((post) => ({
+          "@type": "BlogPosting",
+          "@id": `${baseUrl}/blog/${post.slug}#article`,
+          headline: post.title,
+          description: post.excerpt,
+          url: `${baseUrl}/blog/${post.slug}`,
+          datePublished: post.date,
+          author: {
+            "@type": "Organization",
+            name: "D.S HAIR & BEAUTY",
+          },
+          publisher: {
+            "@id": `${baseUrl}/#organization`,
+          },
+          image: post.image,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${baseUrl}/blog#post-list`,
+        name: "DS Hair Beauty Blog Posts",
+        itemListElement: posts.map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${baseUrl}/blog/${post.slug}`,
+          name: post.title,
+        })),
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
 
 export default function BlogPage() {
   return (
     <CartProvider>
       <div className="flex min-h-screen flex-col">
         <Header />
+        <BlogPageJsonLd posts={posts} />
         <main className="flex-1">
           {/* Header */}
           <section className="bg-secondary py-16 md:py-20">
@@ -216,6 +298,7 @@ export default function BlogPage() {
           {/* Posts Grid */}
           <section className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
+              <h2 className="sr-only">Latest Articles</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post, i) => (
                   <Link
@@ -238,7 +321,7 @@ export default function BlogPage() {
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                        <span>{post.date}</span>
+                        <span>{new Date(post.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</span>
                         <span>·</span>
                         <span className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
