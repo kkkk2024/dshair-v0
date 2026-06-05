@@ -83,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="en" data-build="20260605-v3" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
         {/* TikTok Pixel */}
         <script
