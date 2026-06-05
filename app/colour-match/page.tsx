@@ -6,11 +6,22 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "Colour Match Service | D.S Hair & Beauty – Find Your Perfect Shade",
   description:
     "Can't decide? Upload a photo or send us a WhatsApp message — our colour specialists will match your perfect human hair extension shade in under 2 hours.",
+  alternates: {
+    canonical: 'https://www.dshairbeauty.co.uk/colour-match',
+  },
+  openGraph: {
+    title: 'Colour Match Service | D.S Hair & Beauty',
+    description: 'Find your perfect hair extension shade. Free colour matching by specialists.',
+    url: 'https://www.dshairbeauty.co.uk/colour-match',
+    type: 'website',
+    locale: 'en_GB',
+  },
 }
 
 export default function ColourMatchPage() {

@@ -5,12 +5,24 @@ import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
-import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2, Globe } from "lucide-react"
+import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2 } from "lucide-react"
+import { FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
-  title: "About Us | D.S HAIR & BEAUTY — Factory-Direct Hair Extension Manufacturer",
+  title: "About Us | D.S HAIR & BEAUTY – Manchester's Premier Hair Extension Supplier",
   description:
-    "19 years of hair extension expertise. D.S HAIR & BEAUTY is a China-based manufacturer supplying 100% Remy human hair extensions direct to professional salons — UK-warehoused stock in Manchester.",
+    "19 years of hair extension expertise. D.S HAIR & BEAUTY is Manchester's trusted wholesale supplier of 100% Remy human hair extensions for professional salons.",
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/about",
+  },
+  openGraph: {
+    title: "About Us | D.S HAIR & BEAUTY",
+    description: "19 years of hair extension expertise. Manchester's trusted wholesale supplier of 100% Remy human hair extensions for professional salons.",
+    url: "https://www.dshairbeauty.co.uk/about",
+    type: "website",
+    locale: "en_GB",
+    siteName: "D.S HAIR & BEAUTY",
+  },
 }
 
 const values = [
@@ -28,9 +40,9 @@ const values = [
   },
   {
     icon: Truck,
-    title: "Manchester Warehouse — Fast UK Supply",
+    title: "Manchester-Based, Fast Supply",
     description:
-      "UK-warehoused stock for fast delivery. No waiting weeks for stock from overseas — we hold inventory in Manchester for quick salon fulfilment.",
+      "We are local. Same-day or next-day supply for Manchester salons. No waiting weeks for stock from overseas.",
   },
   {
     icon: Users,
@@ -58,17 +70,27 @@ const timeline = [
   },
   {
     year: "2026",
-    title: "UK Warehouse Operations",
-    desc: "Established UK-warehoused stock in Manchester. Now supplying hand-tied wefts, balayage extensions, and professional consumables with fast delivery to salons across the UK.",
+    title: "Manchester Salon Partner Launch",
+    desc: "Opened our Manchester hub. Now supplying hand-tied wefts, balayage extensions, and professional consumables to salons across the Northwest.",
   },
 ]
 
 export default function AboutPage() {
+  const companyFaqs = [
+    { question: "How long has D.S HAIR & BEAUTY been in business?", answer: "Our founder has been in the hair extension industry since 2007 — nearly 20 years of experience sourcing and supplying Remy human hair. D.S HAIR & BEAUTY was formally launched as a dedicated UK brand in 2022, combining decades of supply chain expertise with a professional salon-first approach." },
+    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester hub serves salons across the Northwest and the entire UK with same-day and next-day delivery for in-stock items." },
+    { question: "What makes D.S HAIR different from other UK suppliers?", answer: "Three things set us apart: (1) we own the production — no middlemen means better prices, (2) we have 19 years of direct factory relationships in China's hair manufacturing heartland, and (3) we answer within 2 hours — not a ticketing system, a real person who knows your account." },
+    { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free colour matching consultations for Manchester salons, priority stock access, and dedicated account management. Apply through our Salon Partners page." },
+    { question: "Is your hair ethically sourced?", answer: "Yes. All our hair is 100% Remy human hair, ethically sourced from trusted manufacturers with full supply chain traceability. Every batch is quality-checked before it leaves our facility. We never use synthetic blends or non-Remy hair." },
+  ]
+
   return (
     <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
+      <>
+        <FaqJsonLd faqs={companyFaqs} />
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
 
           {/* Hero Section */}
           <section className="relative h-[520px] md:h-[620px] flex items-center">
@@ -111,7 +133,7 @@ export default function AboutPage() {
                   { stat: "19+", label: "Years in the Industry" },
                   { stat: "100%", label: "Remy Human Hair" },
                   { stat: "50+", label: "Colours & Lengths" },
-                  { stat: "24hr", label: "Fast UK Delivery" },
+                  { stat: "24hr", label: "Manchester Delivery" },
                 ].map((item) => (
                   <div key={item.label}>
                     <div className="text-3xl md:text-4xl font-bold mb-1">{item.stat}</div>
@@ -135,7 +157,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                     <p className="text-white font-semibold text-lg">D.S HAIR & BEAUTY</p>
-                    <p className="text-white/70 text-sm">Manchester Warehouse, United Kingdom</p>
+                    <p className="text-white/70 text-sm">Manchester, United Kingdom</p>
                   </div>
                 </div>
                 <div>
@@ -145,7 +167,7 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      D.S HAIR & BEAUTY was founded by a hair industry specialist with over 19 years of experience in Remy human hair sourcing and export. Having spent nearly two decades working directly with China&apos;s leading hair manufacturers and supplying to UK markets, our founder saw a clear gap: UK&apos;s professional salons needed an honest, factory-direct supplier who could offer manufacturer pricing with UK-warehoused stock for fast delivery without the middleman markup.
+                      D.S HAIR & BEAUTY was founded by a hair industry specialist with over 19 years of experience in Remy human hair sourcing and export. Having spent nearly two decades working directly with China&apos;s leading hair manufacturers and supplying to UK markets, our founder saw a clear gap: Manchester&apos;s professional salons needed a local, reliable, and truly knowledgeable supplier.
                     </p>
                     <p>
                       Most suppliers are middlemen. We are not. Our direct factory relationships mean you get better quality, more consistent colour matching, and faster supply — at trade prices that make your salon business more profitable.
@@ -159,7 +181,7 @@ export default function AboutPage() {
                       "Direct factory relationships in China",
                       "Specialist in hand-tied & tape-in wefts",
                       "Free colour matching for every salon",
-                      "UK-warehoused, next-day delivery",
+                      "Manchester local, next-day supply",
                       "Custom balayage & colour blending",
                       "Professional consumables included",
                     ].map((point) => (
@@ -180,7 +202,7 @@ export default function AboutPage() {
               <div className="text-center mb-12">
                 <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Our Journey</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  From a small export operation to a factory-direct supplier serving professional UK salons.
+                  From a small export operation to Manchester&apos;s go-to professional hair extension supplier.
                 </p>
               </div>
               <div className="relative max-w-3xl mx-auto">
@@ -237,67 +259,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Global Reach */}
-          <section className="py-16 md:py-24 bg-secondary">
-            <div className="container px-4 md:px-6">
-              <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-                  Trusted Across the UK and Beyond
-                </h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  From independent salons to international distributors — our reach keeps growing.
-                </p>
-              </div>
-
-              {/* Stats Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto text-center">
-                {[
-                  { stat: "500+", label: "Salon Partners" },
-                  { stat: "15+", label: "Countries Served" },
-                  { stat: "50,000+", label: "Wefts Shipped Annually" },
-                  { stat: "98%", label: "Client Retention Rate" },
-                ].map((item) => (
-                  <div key={item.label} className="bg-card rounded-xl p-6 border">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{item.stat}</div>
-                    <div className="text-sm text-muted-foreground">{item.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Client Distribution */}
-              <div className="max-w-3xl mx-auto mb-8">
-                <h3 className="font-semibold text-lg text-center mb-4">Client Distribution</h3>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {[
-                    "United Kingdom", "Ireland", "France", "Germany", "Netherlands",
-                    "Belgium", "Spain", "Italy", "Sweden", "Norway",
-                    "Denmark", "Australia", "USA", "Canada", "UAE",
-                  ].map((country) => (
-                    <span key={country} className="inline-block bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full">
-                      {country}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Partner Types */}
-              <div className="max-w-3xl mx-auto">
-                <h3 className="font-semibold text-lg text-center mb-4">Partner Types</h3>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {[
-                    "Independent Salons", "Salon Chains", "Mobile Hairdressers",
-                    "Hair Extension Specialists", "Beauty Schools",
-                    "Wholesale Distributors", "Online Retailers",
-                  ].map((type) => (
-                    <span key={type} className="inline-block bg-card border text-muted-foreground text-xs px-3 py-1.5 rounded-full">
-                      {type}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Testimonial */}
           <section className="py-16 md:py-20 bg-secondary">
             <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center">
@@ -320,7 +281,7 @@ export default function AboutPage() {
                 Ready to Partner With Us?
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-                Join the growing network of salons working with DS Hair & Beauty. Apply for your trade account today — free colour matching kit included with your first order.
+                Join Manchester&apos;s growing network of salons working with DS Hair & Beauty. Apply for your trade account today — free colour matching kit included with your first order.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
@@ -337,6 +298,7 @@ export default function AboutPage() {
         <Footer />
         <CartDrawer />
       </div>
+      </>
     </CartProvider>
   )
 }

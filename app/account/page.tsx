@@ -7,7 +7,9 @@ import { AuthTabs } from "@/components/auth/auth-tabs"
 export const metadata = {
   title: "Account | D.S HAIR & BEAUTY",
   description: "Sign in or create an account to manage your orders, wishlist, and more.",
-  robots: { index: false, follow: false },
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/account",
+  },
 }
 
 export default function AccountPage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -6,23 +7,42 @@ import { ContactForm } from "@/components/contact/contact-form"
 import { Mail, MapPin, Clock, MessageCircle, Building2 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { LocalBusinessJsonLd } from "@/components/seo/json-ld"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact Us | D.S HAIR & BEAUTY",
   description:
-    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. Factory-direct hair extension manufacturer. UK-warehoused stock in Manchester for professional salons.",
+    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. UK hair extension supplier for professional salons.",
+  keywords: [
+    "contact hair extensions supplier",
+    "hair extension supplier Manchester contact",
+    "wholesale hair extensions contact",
+    "D.S Hair Beauty contact",
+    "hair extensions UK phone",
+    "salon hair extensions supplier email",
+  ],
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/contact",
+  },
+  openGraph: {
+    title: "Contact Us | D.S HAIR & BEAUTY",
+    description: "Contact D.S Hair Beauty — UK hair extension supplier. WhatsApp, email, or form.",
+    url: "https://www.dshairbeauty.co.uk/contact",
+    type: "website",
+    locale: "en_GB",
+  },
 }
 
 const contactCards = [
   {
     icon: MessageCircle,
     title: "WhatsApp / WeChat",
-    content: "Available for registered salon partners",
+    content: "+86 135 1694 6001",
     description: "Fastest response — typically within 2 hours",
     action: {
-      label: "Apply for Trade Account",
-      href: "/salon-partners",
-      external: false,
+      label: "Chat on WhatsApp",
+      href: "https://wa.me/8613516946001?text=Hi%20D.S%20HAIR%20%26%20BEAUTY!%20I%27m%20interested%20in%20wholesale%20hair%20extensions%20for%20my%20salon.",
+      external: true,
     },
     highlight: true,
   },
@@ -41,8 +61,8 @@ const contactCards = [
   {
     icon: MapPin,
     title: "Location",
-    content: "Manchester Warehouse, UK",
-    description: "UK-warehoused stock. Fast delivery across the UK.",
+    content: "Manchester, UK",
+    description: "Serving salons across Greater Manchester & Northwest England",
     action: null,
     highlight: false,
   },
@@ -61,8 +81,8 @@ export default function ContactPage() {
     <CartProvider>
       <div className="min-h-screen flex flex-col">
         <Header />
+        <LocalBusinessJsonLd />
         <main className="flex-1">
-
           {/* Page Header */}
           <section className="bg-secondary py-16 md:py-20">
             <div className="container px-4 md:px-6 text-center max-w-2xl mx-auto">
@@ -91,10 +111,14 @@ export default function ContactPage() {
                   className="bg-green-500 hover:bg-green-600 text-white flex-shrink-0"
                   asChild
                 >
-                  <Link href="/salon-partners">
+                  <a
+                    href="https://wa.me/8613516946001?text=Hi%20D.S%20HAIR%20%26%20BEAUTY!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27m%20interested%20in%20your%20wholesale%20hair%20extension%20supply."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <MessageCircle className="h-4 w-4 mr-2" />
-                    Apply for Trade Account
-                  </Link>
+                    WhatsApp Us Now
+                  </a>
                 </Button>
               </div>
             </div>
@@ -163,7 +187,7 @@ export default function ContactPage() {
 
                 {/* Right: Form */}
                 <div>
-                  <h2 className="font-serif text-2xl md:text-3xl font-medium mb-8">Send Us an Enquiry</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl font-medium mb-8">Send Us a Message</h2>
                   <ContactForm />
                 </div>
 
