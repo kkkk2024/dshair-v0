@@ -19,6 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  // FORCE_REBUILD: 1780652147
   metadataBase: new URL('https://www.dshairbeauty.co.uk'),
   title: {
     default: "Trade Hair Extension Supplier UK | Wholesale for Salons | D.S Hair Beauty",
