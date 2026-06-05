@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'D.S HAIR & BEAUTY', url: 'https://www.dshairbeauty.co.uk' }],
   creator: 'D.S HAIR & BEAUTY',
+  applicationName: 'D.S HAIR & BEAUTY',
   publisher: 'D.S HAIR & BEAUTY',
   openGraph: {
     title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
