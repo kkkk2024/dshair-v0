@@ -1,3 +1,4 @@
+/* Build cache invalidated: FORCE_FULL_REBUILD */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
