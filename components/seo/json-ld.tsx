@@ -292,6 +292,32 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
         '@type': 'Organization',
         name: 'D.S HAIR & BEAUTY',
       },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org.ReturnByMail',
+        returnFees: 'https://schema.org/freeReturn',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'GB',
+        },
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: product.price >= 50 ? '0' : '4.99',
+          currency: 'GBP',
+        },
+        handlingTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 1,
+          maxValue: 3,
+          unitCode: 'DAY',
+        },
+      },
     },
     ...(product.reviews > 0 && {
       aggregateRating: {
@@ -331,7 +357,7 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: item.url.startsWith('http') ? item.url : `${BASE_URL}${item.url}`,
     })),
   }
 
