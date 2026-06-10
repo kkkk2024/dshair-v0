@@ -60,9 +60,9 @@ export const products: Product[] = [
     productType: "Ponytails",
     type: "diy",
     tags: ["ponytail", "new", "diy", "wrap-ponytail"],
-    price: 89,
+    price: 23,
     originalPrice: undefined,
-    currencyCode: "GBP",
+    currencyCode: "USD",
     image: "/images/ponytails/dsp-01/dsp-01-1.webp",
     images: [
       "/images/ponytails/dsp-01/dsp-01-1.webp",
@@ -70,7 +70,12 @@ export const products: Product[] = [
       "/images/ponytails/dsp-01/dsp-01-3.jpg",
       "/images/ponytails/dsp-01/dsp-01-4.webp",
     ],
-    variants: [],
+    variants: [
+      { id: "dsp-01-18", title: "18 inch", weight: "75g–95g", price: 23, priceMax: 30, currencyCode: "USD" },
+      { id: "dsp-01-20", title: "20 inch", weight: "100g–120g", price: 35, priceMax: 48, currencyCode: "USD" },
+      { id: "dsp-01-22", title: "22 inch", weight: "110g–130g", price: 48, priceMax: 58, currencyCode: "USD" },
+      { id: "dsp-01-24", title: "24 inch", weight: "120g–140g", price: 48, priceMax: 68, currencyCode: "USD" },
+    ],
     inStock: true,
     badge: "New",
     rating: 4.9,
@@ -81,7 +86,12 @@ export const products: Product[] = [
       { name: "Medium Brown", hex: "#6b4423" },
       { name: "Bronzed Blonde & Platinum Highlights", hex: "#c8a96e" },
     ],
-    lengths: ["12 inches – 75g", "16 inches – 100g", "22 inches – 130g", "26 inches – 150g"],
+    lengths: [
+      "18 inch – 75g–95g – US$23–US$30",
+      "20 inch – 100g–120g – US$35–US$48",
+      "22 inch – 110g–130g – US$48–US$58",
+      "24 inch – 120g–140g – US$48–US$68",
+    ],
     slug: "wrap-ponytail",
     category: "DIY Extensions",
     features: [
@@ -89,7 +99,7 @@ export const products: Product[] = [
       "Velcro base + wrap-around strand for a seamless, secure hold",
       "No clips or glue — zero damage to natural hair",
       "Instant length and volume in minutes",
-      "Available in 12\", 16\", 22\" and 26\" lengths",
+      "Available in 18\", 20\", 22\" and 24\" lengths",
     ],
   },
 
