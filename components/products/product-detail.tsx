@@ -194,6 +194,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   </div>
                 </div>
               </div>
+            ) : product.priceMax && product.priceMax !== product.price ? (
+              <>
+                <span className="text-2xl font-semibold">
+                  {formatPrice(product.price)} – {formatPrice(product.priceMax)}
+                </span>
+              </>
             ) : (
               <>
                 <span className="text-2xl font-semibold">{formatPrice(product.price)}</span>

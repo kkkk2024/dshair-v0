@@ -15,6 +15,7 @@ export interface Product {
   tags: string[]
   price: number
   originalPrice?: number
+  priceMax?: number
   currencyCode: string
   image: string
   images: string[]
@@ -2996,7 +2997,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-01-hero.jpg",
     images: [
@@ -3046,7 +3047,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-02-hero.jpg",
     images: [
@@ -3096,7 +3097,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "npu-perimeter", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-03-hero.jpg",
     images: [
@@ -3148,7 +3149,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "silk-top", "lace-topper", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-04-hero.jpg",
     images: [
@@ -3201,7 +3202,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-05-hero.jpg",
     images: [
@@ -3255,7 +3256,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-06-hero.jpg",
     images: [
@@ -3309,7 +3310,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "french-lace", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-07-hero.jpg",
     images: [
@@ -3363,7 +3364,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "open-weft", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-08-hero.jpg",
     images: [
@@ -3417,7 +3418,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "french-lace", "npu", "ds-top", "remy-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-09-hero.jpg",
     images: [
@@ -3469,7 +3470,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-10-hero.jpg",
     images: [
@@ -3526,7 +3527,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "mono-top", "lace-topper", "ds-top", "indian-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-11-hero.jpg",
     images: [
@@ -3582,7 +3583,7 @@ export const products: Product[] = [
     type: "professional",
     tags: ["hair-topper", "pu-base", "small-topper", "ds-top", "virgin-hair"],
     price: 35,
-    originalPrice: 205,
+    priceMax: 205,
     currencyCode: "GBP",
     image: "/images/toppers/ds-top-12-hero.jpg",
     images: [

@@ -97,6 +97,12 @@ export function ProductCard({ product }: ProductCardProps) {
               <span className="font-semibold text-accent">Trade Price</span>
               <span className="text-xs text-muted-foreground">Apply for access →</span>
             </div>
+          ) : product.priceMax && product.priceMax !== product.price ? (
+            <>
+              <span className="font-semibold">
+                {formatPrice(product.price)} – {formatPrice(product.priceMax)}
+              </span>
+            </>
           ) : (
             <>
               <span className="font-semibold">{formatPrice(product.price)}</span>
