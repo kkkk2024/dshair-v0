@@ -192,7 +192,7 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "jet-black", "black", "new"],
-    price: 0, // Price on request - show WhatsApp
+    price: 35,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/01_Jet_Black_1.jpg",
@@ -211,7 +211,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-jet-black-1",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true, // Custom field for WhatsApp pricing
   },
 
   {
@@ -225,7 +224,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "off-black", "black", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/02_Off_Black_1B.jpg",
@@ -244,7 +244,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-off-black-1b",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -258,7 +257,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "dark-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/03_Dark_Brown_2.jpg",
@@ -277,7 +277,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-brown-2",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -291,7 +290,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "walnut-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/04_Walnut_Brown_3.jpg",
@@ -310,7 +310,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-walnut-brown-3",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -324,7 +323,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "chocolate-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/05_Chocolate_Brown_4.jpg",
@@ -343,7 +343,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-chocolate-brown-4",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -357,7 +356,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "dark-brown", "chestnut-brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/06_Dark_Brown_Chestnut_Brown_2_6.jpg",
@@ -376,7 +376,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-brown-chestnut-brown-2-6-balayage",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -390,7 +389,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "chestnut-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/07_Chestnut_Brown_6.jpg",
@@ -409,7 +409,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-chestnut-brown-6",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -423,7 +422,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "almond-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/08_Almond_Brown_8.jpg",
@@ -442,7 +442,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-almond-brown-8",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -456,7 +455,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "ash-brown", "brown", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/09_Ash_Brown_10.jpg",
@@ -475,7 +475,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-ash-brown-10",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -489,7 +488,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "dark-brown", "dirty-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/10_Dark_Brown_Dirty_Blonde_2_18.jpg",
@@ -508,7 +508,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-brown-dirty-blonde-2-18-balayage",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -522,7 +521,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "dark-maple-brown", "auburn", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/11_Dark_Maple_Brown_530.jpg",
@@ -541,7 +541,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-maple-brown-530",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -555,7 +554,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "dark-brown", "dirty-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/12_Walnut_Brown_Ash_Blonde_3_60.jpg",
@@ -574,7 +574,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-brown-dirty-blonde-2-18",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -588,7 +587,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "rooted", "walnut-brown", "ash-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/13_Dark_Honey_Cocoa.jpg",
@@ -607,7 +607,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-walnut-brown-ash-blonde-3-60-rooted",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -621,7 +620,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "mochachino", "dirty-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/14_Mochachino_Chocolate_Dark_Honey.jpg",
@@ -640,7 +640,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-mochachino-brown-dirty-blonde-2-18",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -654,7 +653,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "highlight", "honey-cocoa", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/15_Dirty_Brunette.jpg",
@@ -673,7 +673,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dark-honey-cocoa-highlight",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -687,7 +686,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "rooted", "highlight", "mochachino", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/16_Honey_Comb.jpg",
@@ -706,7 +706,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-mochachino-chocolate-dark-honey-rooted",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -720,7 +719,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "highlight", "dirty-brunette", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/17_Vanilla_Latte_8_18_60.jpg",
@@ -739,7 +739,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-dirty-brunette-highlight",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -753,7 +752,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "highlight", "honey-comb", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/18_Pearl_Blonde_10_88.jpg",
@@ -772,7 +772,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-honey-comb-highlight",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -786,7 +785,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "highlight", "vanilla-latte", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/19_Mulberry_Wine_510.jpg",
@@ -805,7 +805,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-vanilla-latte-highlight-8-18-60",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -819,7 +818,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "highlight", "pearl-blonde", "rooted", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/20_Spiced_Crimson_570.jpg",
@@ -838,7 +838,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-pearl-blonde-10-88-rooted",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -852,7 +851,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "mulberry-wine", "red", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/21_Ash_Bronde_Strawberry_Blonde_21_27.jpg",
@@ -871,7 +871,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-mulberry-wine-510",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -885,7 +884,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "spiced-crimson", "red", "auburn", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/22_Ash_Brown_Ash_Blonde_8_60.jpg",
@@ -904,7 +904,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-spiced-crimson-570",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -918,7 +917,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "ombre", "ash-bronde", "strawberry-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/23_Ash_Brown_Honey_Blonde_8_20_24_60.jpg",
@@ -937,7 +937,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-ash-bronde-strawberry-blonde-ombre",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -951,7 +950,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "ash-brown", "ash-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/24_Caramel_Blonde_18_46.jpg",
@@ -970,7 +970,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-ash-brown-ash-blonde-8-60-balayage",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -984,7 +983,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "rooted", "ash-brown", "honey-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/25_White_Mocha.jpg",
@@ -1003,7 +1003,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-ash-brown-honey-blonde-8-20-24-60-rooted",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1017,7 +1016,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "marble", "caramel-blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/26_Beach_Blonde_613.jpg",
@@ -1036,7 +1036,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-caramel-blonde-18-46-marble",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1050,7 +1049,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "white-mocha", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/27_Bronzed_Caramel_6_18_8_60.jpg",
@@ -1069,7 +1069,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-white-mocha-balayage",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1083,7 +1082,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "beach-blonde", "blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/28_Butter_Blonde_P10_16_60.jpg",
@@ -1102,7 +1102,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-beach-blonde-613",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1116,7 +1115,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "marble", "bronzed-caramel", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/29_Golden_Hour_Blonde.jpg",
@@ -1135,7 +1135,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-bronzed-caramel-6-18-8-60-marble",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1149,7 +1148,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "butter-blonde", "blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/30_Dirty_Blonde_18.jpg",
@@ -1168,7 +1168,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-butter-blonde-p10-16-60",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   {
@@ -1182,7 +1181,8 @@ export const products: Product[] = [
     productType: "Clip-In Extensions",
     type: "diy",
     tags: ["clip-in", "balayage", "golden-hour", "blonde", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/31_Platinum_Blonde_80.jpg",
@@ -1201,7 +1201,6 @@ export const products: Product[] = [
     slug: "ds-hair-clip-in-golden-hour-blonde-balayage",
     category: "DIY Extensions",
     features: ["100% Remy Human Hair", "Seamless clip technology", "Reusable and durable", "Natural look and feel", "Multiple lengths available"],
-    priceOnRequest: true,
   },
 
   { id: "ktip-1", handle: "ds-hair-k-tips-jet-black-1", name: "D.S HAIR K-Tips, Jet Black #1", title: "D.S HAIR K-Tips, Jet Black #1", description: "Transform your look with D.S HAIR premium K-Tip (Keratin Tip) hair extensions. Our K-Tip extensions are crafted from the finest 100% Remy human hair, featuring pre-tipped keratin bonds for seamless fusion with your natural hair. Applied using a specialist hot fusion iron at 180-200°C, each strand bonds individually for a completely natural, long-lasting result. Available in 31 shades and lengths from 16\"-28\". Must be fitted and removed by a certified hair extension stylist.", shortDescription: "100% Remy human hair · Keratin bond · Hot fusion · Individual strand method", vendor: "D.S HAIR & BEAUTY", productType: "K-Tip Extensions", type: "professional", tags: ["k-tip", "keratin", "professional", "new"], price: 0, originalPrice: undefined, currencyCode: "GBP", image: "/images/color-chart-front/01_Jet_Black_1.jpg", images: [
@@ -1773,7 +1772,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/01_Jet_Black_1.jpg",
@@ -1790,7 +1790,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-jet-black-1",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1804,7 +1803,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/02_Off_Black_1B.jpg",
@@ -1821,7 +1821,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-off-black-1b",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1835,7 +1834,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/03_Dark_Brown_2.jpg",
@@ -1852,7 +1852,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dark-brown-2",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1866,7 +1865,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/04_Walnut_Brown_3.jpg",
@@ -1883,7 +1883,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-walnut-brown-3",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1897,7 +1896,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/05_Chocolate_Brown_4.jpg",
@@ -1914,7 +1914,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-chocolate-brown-4",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1928,7 +1927,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/06_Dark_Brown_Chestnut_Brown_2_6.jpg",
@@ -1945,7 +1945,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dark-brown-chestnut-brown-2-6-balayage",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1959,7 +1958,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/07_Chestnut_Brown_6.jpg",
@@ -1976,7 +1976,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-chestnut-brown-6",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -1990,7 +1989,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/08_Almond_Brown_8.jpg",
@@ -2007,7 +2007,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-almond-brown-8",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2021,7 +2020,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/09_Ash_Brown_10.jpg",
@@ -2038,7 +2038,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-ash-brown-10",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2052,7 +2051,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/10_Dark_Brown_Dirty_Blonde_2_18.jpg",
@@ -2069,7 +2069,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dark-brown-dirty-blonde-2-18-balayage",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2083,7 +2082,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/11_Dark_Maple_Brown_530.jpg",
@@ -2100,7 +2100,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dark-maple-brown-530",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2114,7 +2113,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/12_Walnut_Brown_Ash_Blonde_3_60.jpg",
@@ -2131,7 +2131,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-walnut-brown-ash-blonde-3-60-rooted",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2145,7 +2144,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/14_Mochachino_Chocolate_Dark_Honey.jpg",
@@ -2162,7 +2162,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-mochachino-brown-dirty-blonde-2-18",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2176,7 +2175,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/13_Dark_Honey_Cocoa.jpg",
@@ -2193,7 +2193,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dark-honey-cocoa-highlight",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2207,7 +2206,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/14_Mochachino_Chocolate_Dark_Honey.jpg",
@@ -2224,7 +2224,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-mochachino-chocolate-dark-honey-rooted",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2238,7 +2237,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/15_Dirty_Brunette.jpg",
@@ -2255,7 +2255,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dirty-brunette-highlight",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2269,7 +2268,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/16_Honey_Comb.jpg",
@@ -2286,7 +2286,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-honey-comb-highlight",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2300,7 +2299,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/17_Vanilla_Latte_8_18_60.jpg",
@@ -2317,7 +2317,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-vanilla-latte-highlight-8-18-60",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2331,7 +2330,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/18_Pearl_Blonde_10_88.jpg",
@@ -2348,7 +2348,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-pearl-blonde-10-88-rooted",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2362,7 +2361,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/19_Mulberry_Wine_510.jpg",
@@ -2379,7 +2379,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-mulberry-wine-510",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2393,7 +2392,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/20_Spiced_Crimson_570.jpg",
@@ -2410,7 +2410,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-spiced-crimson-570",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2424,7 +2423,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/21_Ash_Bronde_Strawberry_Blonde_21_27.jpg",
@@ -2441,7 +2441,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-ash-bronde-strawberry-blonde-ombre",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2455,7 +2454,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/22_Ash_Brown_Ash_Blonde_8_60.jpg",
@@ -2472,7 +2472,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-ash-brown-ash-blonde-8-60-balayage",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2486,7 +2485,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/23_Ash_Brown_Honey_Blonde_8_20_24_60.jpg",
@@ -2503,7 +2503,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-ash-brown-honey-blonde-8-20-24-60-rooted",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2517,7 +2516,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/24_Caramel_Blonde_18_46.jpg",
@@ -2534,7 +2534,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-caramel-blonde-18-46-marble",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2548,7 +2547,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/25_White_Mocha.jpg",
@@ -2565,7 +2565,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-white-mocha-balayage",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2579,7 +2578,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/26_Beach_Blonde_613.jpg",
@@ -2596,7 +2596,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-beach-blonde-613",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2610,7 +2609,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/27_Bronzed_Caramel_6_18_8_60.jpg",
@@ -2627,7 +2627,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-bronzed-caramel-6-18-8-60-marble",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2641,7 +2640,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/28_Butter_Blonde_P10_16_60.jpg",
@@ -2658,7 +2658,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-butter-blonde-p10-16-60",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2672,7 +2671,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/29_Golden_Hour_Blonde.jpg",
@@ -2689,7 +2689,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-golden-hour-blonde-balayage",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   {
@@ -2703,7 +2702,8 @@ export const products: Product[] = [
     productType: "Butterfly Weft Extensions",
     type: "professional",
     tags: ["butterfly", "weft", "professional", "new"],
-    price: 0,
+    price: 35,
+    priceMax: 205,
     originalPrice: undefined,
     currencyCode: "GBP",
     image: "/images/color-chart-front/30_Dirty_Blonde_18.jpg",
@@ -2720,7 +2720,6 @@ export const products: Product[] = [
     slug: "ds-hair-butterfly-extensions-dirty-blonde-18",
     category: "Professional Extensions",
     features: ["100% Remy Human Hair", "Butterfly weft design", "Half Flat, Full Flat & Super Wefts available", "Multiple lengths available (16\"-28\")", "Professional use recommended"],
-    priceOnRequest: true,
   },
 
   { id: "tape-1", handle: "ds-hair-tape-in-jet-black-1", name: "D.S HAIR Tape-In, Jet Black #1", title: "D.S HAIR Tape-In, Jet Black #1", description: "Premium tape-in hair extensions.", shortDescription: "Premium tape-in hair extensions", vendor: "D.S HAIR & BEAUTY", productType: "Tape-In Extensions", type: "professional", tags: ["tape-in", "jet-black"], price: 0, originalPrice: undefined, currencyCode: "GBP", image: "/images/color-chart-front/01_Jet_Black_1.jpg", images: [
@@ -2996,9 +2995,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
-    price: 218,
-    originalPrice: 278,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-01-hero.jpg",
     images: [
       "/images/toppers/ds-top-01-hero.jpg",
@@ -3032,7 +3031,6 @@ export const products: Product[] = [
     baseSize: "7\" X 8\" (13cm X 10cm)",
     hairWeight: "130g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-01",
   },
 
@@ -3047,9 +3045,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
-    price: 153,
-    originalPrice: 178,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-02-hero.jpg",
     images: [
       "/images/toppers/ds-top-02-hero.jpg",
@@ -3083,7 +3081,6 @@ export const products: Product[] = [
     baseSize: "5\" X 3\" (13cm X 8cm)",
     hairWeight: "80g",
     baseCoverage: "Crown + Hairline",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-02",
   },
 
@@ -3098,9 +3095,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "npu-perimeter", "ds-top", "indian-hair"],
-    price: 213,
-    originalPrice: 238,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-03-hero.jpg",
     images: [
       "/images/toppers/ds-top-03-hero.jpg",
@@ -3136,7 +3133,6 @@ export const products: Product[] = [
     baseSize: "7.5\" X 8\" (19cm X 20cm)",
     hairWeight: "90g",
     baseCoverage: "Full Crown",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-03",
   },
 
@@ -3151,9 +3147,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "silk-top", "lace-topper", "ds-top", "indian-hair"],
-    price: 138,
-    originalPrice: 158,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-04-hero.jpg",
     images: [
       "/images/toppers/ds-top-04-hero.jpg",
@@ -3190,7 +3186,6 @@ export const products: Product[] = [
     baseSize: "6\" X 6\" (15cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-04",
   },
 
@@ -3205,9 +3200,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
-    price: 138,
-    originalPrice: 158,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-05-hero.jpg",
     images: [
       "/images/toppers/ds-top-05-hero.jpg",
@@ -3245,7 +3240,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6.5\" (13cm X 16.5cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-05",
   },
 
@@ -3260,9 +3254,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "hand-tied", "indian-hair"],
-    price: 143,
-    originalPrice: 168,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-06-hero.jpg",
     images: [
       "/images/toppers/ds-top-06-hero.jpg",
@@ -3300,7 +3294,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6\" (13cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-06",
   },
 
@@ -3315,9 +3308,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "french-lace", "ds-top", "indian-hair"],
-    price: 143,
-    originalPrice: 168,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-07-hero.jpg",
     images: [
       "/images/toppers/ds-top-07-hero.jpg",
@@ -3355,7 +3348,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6\" (13cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-07",
   },
 
@@ -3370,9 +3362,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "open-weft", "ds-top", "indian-hair"],
-    price: 138,
-    originalPrice: 158,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-08-hero.jpg",
     images: [
       "/images/toppers/ds-top-08-hero.jpg",
@@ -3410,7 +3402,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6\" (13cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-08",
   },
 
@@ -3425,9 +3416,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "french-lace", "npu", "ds-top", "remy-hair"],
-    price: 148,
-    originalPrice: 168,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-09-hero.jpg",
     images: [
       "/images/toppers/ds-top-09-hero.jpg",
@@ -3463,7 +3454,6 @@ export const products: Product[] = [
     baseSize: "6\" X 7\" (15cm X 18cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-09",
   },
 
@@ -3478,9 +3468,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "ds-top", "indian-hair"],
-    price: 148,
-    originalPrice: 168,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-10-hero.jpg",
     images: [
       "/images/toppers/ds-top-10-hero.jpg",
@@ -3521,7 +3511,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6\" (13cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-10",
   },
 
@@ -3536,9 +3525,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "mono-top", "lace-topper", "ds-top", "indian-hair"],
-    price: 148,
-    originalPrice: 168,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-11-hero.jpg",
     images: [
       "/images/toppers/ds-top-11-hero.jpg",
@@ -3578,7 +3567,6 @@ export const products: Product[] = [
     baseSize: "5\" X 6\" (13cm X 15cm)",
     hairWeight: "90g",
     baseCoverage: "Crown + Parting",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-11",
   },
 
@@ -3593,9 +3581,9 @@ export const products: Product[] = [
     productType: "Hair Topper",
     type: "professional",
     tags: ["hair-topper", "pu-base", "small-topper", "ds-top", "virgin-hair"],
-    price: 193,
-    originalPrice: 218,
-    currencyCode: "USD",
+    price: 35,
+    originalPrice: 205,
+    currencyCode: "GBP",
     image: "/images/toppers/ds-top-12-hero.jpg",
     images: [
       "/images/toppers/ds-top-12-hero.jpg",
@@ -3628,7 +3616,6 @@ export const products: Product[] = [
     baseSize: "4.75\" X 2\" (12cm X 5cm)",
     hairWeight: "90g",
     baseCoverage: "Parting + Crown (Small)",
-    priceOnRequest: false,
     sku: "DS-HAIR-TOP-12",
   },
 
