@@ -36,16 +36,20 @@ export interface Product {
 const getPlaceholderImage = (name: string, slug: string) => 
   `https://placehold.co/600x800/e8d5c4/8b7355?text=${encodeURIComponent(name)}`
 
-// Hair Topper 8-color palette with swatch images (from 女士假发真发颜色 folder)
+// Hair Topper 12-color palette with swatch images (from Colour Chart No.2 Named Colours)
 export const HAIR_TOPPER_COLORS = [
-  { name: "Off Black", hex: "#1A0F0A", image: "/images/hair-topper-colors/1B-off-black.webp" },
-  { name: "Natural Black", hex: "#0D0D0D", image: "/images/hair-topper-colors/2-natural-black.webp" },
-  { name: "Truffle Brown", hex: "#3D2317", image: "/images/hair-topper-colors/10-truffle-brown.webp" },
-  { name: "Espresso Brown", hex: "#2D1810", image: "/images/hair-topper-colors/21-espresso-brown.webp" },
-  { name: "Mousse Brown", hex: "#4A2314", image: "/images/hair-topper-colors/23R-mousse-brown.webp" },
-  { name: "Dark Caramel", hex: "#6B3A14", image: "/images/hair-topper-colors/24R-dark-caramel.webp" },
-  { name: "Dusty Ash Brown", hex: "#5C4A3A", image: "/images/hair-topper-colors/624-dusty-ash-brown.webp" },
-  { name: "Vanilla Butter Blonde", hex: "#D4B896", image: "/images/hair-topper-colors/vanilla-butter-blonde.webp" },
+  { name: "Ash Blonde",      hex: "#c0b0a0", image: "/images/color-chart-no2/18_Ash_Blonde.jpg" },
+  { name: "Auburn",          hex: "#8e3a2b", image: "/images/color-chart-no2/19_Auburn.jpg" },
+  { name: "Bamboo",          hex: "#997a52", image: "/images/color-chart-no2/20_Bamboo.jpg" },
+  { name: "Cacao Melt",      hex: "#362215", image: "/images/color-chart-no2/21_Cacao_Melt.jpg" },
+  { name: "Cacao",           hex: "#4a3020", image: "/images/color-chart-no2/22_Cacao.jpg" },
+  { name: "Honey Melt",      hex: "#c99a4a", image: "/images/color-chart-no2/23_Honey_Melt.jpg" },
+  { name: "Melted Cream",    hex: "#e8d5b0", image: "/images/color-chart-no2/24_Melted_Cream.jpg" },
+  { name: "Midnight",        hex: "#1c1a1a", image: "/images/color-chart-no2/25_Midnight.jpg" },
+  { name: "Sand",            hex: "#c8b89a", image: "/images/color-chart-no2/26_Sand.jpg" },
+  { name: "Toasty Blonde",   hex: "#c89352", image: "/images/color-chart-no2/27_Toasty_Blonde.jpg" },
+  { name: "Toasty",          hex: "#b0763a", image: "/images/color-chart-no2/28_Toasty.jpg" },
+  { name: "Vanilla",         hex: "#ece0c6", image: "/images/color-chart-no2/29_Vanilla.jpg" },
 ]
 
 export const products: Product[] = [
