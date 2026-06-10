@@ -19,6 +19,8 @@ const footerLinks = {
     { title: "FAQs", href: "/faqs" },
     { title: "Shipping & Returns", href: "/shipping-returns" },
     { title: "Colour Match", href: "/colour-match" },
+    { title: "Colour Chart No.1", href: "/color-chart" },
+    { title: "Colour Chart No.2", href: "/color-chart-no2" },
   ],
   about: [
     { title: "Our Story", href: "/about" },

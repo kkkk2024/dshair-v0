@@ -140,6 +140,11 @@ export default function ColourMatchPage() {
                     Download PDF Colour Chart
                   </Button>
                 </a>
+                <Link href="/color-chart-no2">
+                  <Button variant="outline" size="lg">
+                    View Colour Chart No.2 — 29 Premium Shades
+                  </Button>
+                </Link>
               </div>
             </div>
           </section>

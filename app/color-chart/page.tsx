@@ -74,6 +74,18 @@ export default function ColorChartPage() {
         </div>
       </section>
 
+      {/* Link to No.2 Chart */}
+      <section className="container px-4 md:px-6 pb-8 text-center">
+        <div className="bg-muted/30 rounded-2xl p-6 max-w-lg mx-auto">
+          <p className="text-muted-foreground mb-3">Looking for more shades?</p>
+          <Link href="/color-chart-no2">
+            <Button variant="outline" size="lg">
+              Browse Colour Chart No.2 — 29 Premium Shades
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="container px-4 md:px-6 pb-20 text-center">
         <h2 className="font-serif text-2xl md:text-3xl font-medium mb-4">
