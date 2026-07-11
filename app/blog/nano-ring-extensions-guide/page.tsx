@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Nano Ring Hair Extensions Guide: The Smallest, Most Discrete Method | D.S HAIR & BEAUTY",
   description: "Complete guide to nano ring (nano link) hair extensions for UK salons. Ultra-small bonds for fine hair, virtually invisible, no heat, no glue.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/nano-ring-extensions-guide' },
+  openGraph: { title: 'Nano Ring Hair Extensions Guide: The Smallest, Most Discrete Method | D.S HAIR & BEAUTY', description: 'Complete guide to nano ring hair extensions for UK salons. Ultra-small bonds for fine hair, virtually invisible.', url: 'https://www.dshairbeauty.co.uk/blog/nano-ring-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function NanoRingExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Nano Ring Hair Extensions Guide: The Smallest, Most Discrete Method" description="Complete guide to nano ring hair extensions for UK salons. Ultra-small bonds for fine hair, virtually invisible, no heat, no glue." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-nano-ring-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/nano-ring-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

@@ -6,9 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Droplets, Scissors, Calendar } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons | D.S HAIR & BEAUTY",
   description: "Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months. Includes product recommendations for UK clients.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide' },
   openGraph: {
     title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons | D.S HAIR & BEAUTY",
     description: "Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months.",
@@ -33,6 +36,7 @@ export const metadata = {
 export default function HairExtensionAftercareGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Hair Extension Aftercare: Complete Guide for UK Clients & Salons" description="Expert hair extension aftercare guide. Learn how to wash, brush, sleep, and maintain your extensions so they last up to 24 months." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-hair-extension-aftercare-guide.png" url="https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Balayage Hair Extensions: The Complete Salon Guide | DS Hair Beauty Manchester",
-  description:
-    "Why balayage extensions are essential for Manchester salons, how pre-coloured balayage weft works, and where to source trade-grade balayage extensions in the UK.",
+  description: "Why balayage extensions are essential for Manchester salons, how pre-coloured balayage weft works, and where to source trade-grade balayage extensions in the UK.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide' },
+  openGraph: { title: 'Balayage Hair Extensions: The Complete Salon Guide | DS Hair Beauty Manchester', description: 'Why balayage extensions are essential for Manchester salons and where to source trade-grade balayage extensions in the UK.', url: 'https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function BalayageExtensionsPage() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Balayage Hair Extensions: The Complete Salon Guide" description="Why balayage extensions are essential for Manchester salons, how pre-coloured balayage weft works, and where to source trade-grade balayage extensions." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-balayage-extensions-salon-guide.png" url="https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

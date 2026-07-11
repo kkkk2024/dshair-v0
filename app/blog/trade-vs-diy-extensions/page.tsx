@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Trade Hair Extensions vs DIY: What Salon Owners Need to Know | DS Hair Beauty",
-  description:
-    "Why professional trade-grade Remy hair extensions deliver better results than DIY retail products — and how to explain the difference to your salon clients.",
+  description: "Why professional trade-grade Remy hair extensions deliver better results than DIY retail products — and how to explain the difference to your salon clients.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions' },
+  openGraph: { title: 'Trade Hair Extensions vs DIY: What Salon Owners Need to Know | DS Hair Beauty', description: 'Why professional trade-grade Remy hair extensions deliver better results than DIY retail products.', url: 'https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function TradeVsDiyPage() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Trade Hair Extensions vs DIY: What Salon Owners Need to Know" description="Why professional trade-grade Remy hair extensions deliver better results than DIY retail products." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-trade-vs-diy-extensions.png" url="https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

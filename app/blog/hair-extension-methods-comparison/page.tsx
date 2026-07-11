@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Hair Extension Methods Compared: Which is Right for Your Clients? | DS Hair Beauty",
-  description:
-    "Hand-tied weft, nano ring, tape-in, K-tip — a professional comparison of every major extension method. Help your salon clients choose the right technique every time.",
+  description: "Hand-tied weft, nano ring, tape-in, K-tip — a professional comparison of every major extension method. Help your salon clients choose the right technique every time.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/hair-extension-methods-comparison' },
+  openGraph: { title: 'Hair Extension Methods Compared: Which is Right for Your Clients? | DS Hair Beauty', description: 'Professional comparison of every major extension method for salon clients.', url: 'https://www.dshairbeauty.co.uk/blog/hair-extension-methods-comparison', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function MethodsComparisonPage() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Hair Extension Methods Compared: Which is Right for Your Clients?" description="Hand-tied weft, nano ring, tape-in, K-tip — a professional comparison of every major extension method." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-hair-extension-methods-comparison.png" url="https://www.dshairbeauty.co.uk/blog/hair-extension-methods-comparison" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

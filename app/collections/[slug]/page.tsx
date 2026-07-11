@@ -9,6 +9,165 @@ import { ProductFilters } from "@/components/products/product-filters"
 import { CollectionHeader } from "@/components/products/collection-header"
 import { getProductsByCollection, getCollectionBySlug, collections } from "@/lib/products"
 import { BookOpen, ArrowRight } from "lucide-react"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+
+// ─── FAQ data per collection (3 FAQs each) ───────────────────────────────
+const COLLECTION_FAQS: Record<string, { question: string; answer: string }[]> = {
+  'clip-in': [
+    {
+      question: 'How long do clip-in extensions last?',
+      answer: 'With proper care, our 100% Remy clip-in extensions last 6–12 months. They can be removed daily, making them the most low-commitment method for your clients.',
+    },
+    {
+      question: 'Can I colour-match clip-in extensions to my client\'s hair?',
+      answer: 'Yes. All D.S HAIR clip-in sets use double-drawn Remy hair that can be toned or coloured by a professional stylist. We also offer free colour-matching consultations for Manchester salons.',
+    },
+    {
+      question: 'What is the minimum order for clip-in sets?',
+      answer: 'Clip-in sets have no minimum order — order 1 set or 100. Trade accounts get preferential pricing and priority stock access.',
+    },
+  ],
+  'tape-in': [
+    {
+      question: 'How long do tape-in extensions stay in?',
+      answer: 'Tape-in extensions last 6–8 weeks per installation. The tape tabs are reusable — simply remove, clean, and re-tape for another 6–8 weeks of wear.',
+    },
+    {
+      question: 'Are tape-in extensions damaging to natural hair?',
+      answer: 'When installed and removed correctly by a trained stylist, tape-in extensions are one of the least damaging methods. They distribute weight evenly across the scalp.',
+    },
+    {
+      question: 'How many tape-in pieces do I need for a full head?',
+      answer: 'A full head typically requires 40–60 pieces (20–30 sandwiches). We supply tape-in packs in multiples of 10 for flexible salon ordering.',
+    },
+  ],
+  'ponytails': [
+    {
+      question: 'Can ponytail extensions be worn daily?',
+      answer: 'Yes. Our human hair ponytail extensions are designed for daily wear. The integrated comb and clip system keeps them secure all day.',
+    },
+    {
+      question: 'How do I colour-match a ponytail extension?',
+      answer: 'Send us a photo on WhatsApp and we will match it precisely. All ponytail extensions use 100% Remy human hair and can also be toned by your stylist.',
+    },
+    {
+      question: 'Do you supply ponytail extensions for salon retail?',
+      answer: 'Absolutely. Ponytail extensions are a high-margin retail item for salons. Contact us to set up a trade account with wholesale pricing.',
+    },
+  ],
+  'weft': [
+    {
+      question: 'What is the difference between hand-tied and machine weft?',
+      answer: 'Hand-tied wefts are thinner, more flexible, and lie completely flat against the scalp — invisible even in fine hair. Machine wefts are slightly thicker but more durable for high-volume work.',
+    },
+    {
+      question: 'How long does a weft installation take?',
+      answer: 'A full head hand-tied weft installation takes 2–3 hours for an experienced stylist. The result is seamless — no bonds, no tape, just flat wefts sewn into a client\'s natural hair.',
+    },
+    {
+      question: 'Can weft extensions be reused?',
+      answer: 'Yes. Hand-tied wefts are designed for multiple installs. Remove carefully, trim any loose hairs, and reinstall. With proper care, a set lasts 9–12 months.',
+    },
+  ],
+  'k-tip-extensions': [
+    {
+      question: 'How long do K-tip (keratin bond) extensions last?',
+      answer: 'K-tip extensions are the longest-lasting method — 3–5 months with proper care. The keratin bonds are heat-fused to natural hair, creating a completely seamless look.',
+    },
+    {
+      question: 'Are K-tip extensions suitable for fine hair?',
+      answer: 'Yes, but nano rings are better for very fine hair. K-tips work best for medium-to-thick hair. The bond size is approximately 3mm — discreet but not as small as nano rings.',
+    },
+    {
+      question: 'Can K-tip extensions be removed without damage?',
+      answer: 'Yes. Use a keratin bond remover solution and the correct pliers. We supply bond remover and application tools to all trade account holders.',
+    },
+  ],
+  'nano-extensions': [
+    {
+      question: 'What makes nano rings better for fine hair?',
+      answer: 'Nano rings are the smallest hair extension attachment — just 2–3mm. They lie completely flat and are virtually invisible, even on very fine or thinning hair.',
+    },
+    {
+      question: 'How long do nano ring extensions last?',
+      answer: 'Nano ring extensions last 8–12 weeks before maintenance is needed. The rings are non-damaging and can be reapplied with new hair when needed.',
+    },
+    {
+      question: 'Do you supply a nano ring application kit?',
+      answer: 'Yes. We supply complete nano ring tool kits including pliers, sectioning clips, and loop tools. Available to all trade account holders at wholesale pricing.',
+    },
+  ],
+  'fringes-bangs': [
+    {
+      question: 'Can fringe extensions be cut to fit my client\'s face shape?',
+      answer: 'Yes. All fringe extensions use 100% Remy human hair and can be cut, styled, and coloured by a professional stylist to perfectly frame your client\'s face.',
+    },
+    {
+      question: 'How do fringe extensions attach?',
+      answer: 'Most fringe extensions use small combs or clips that slide discreetly into the client\'s natural hair. They take under 2 minutes to fit — perfect for same-day transformations.',
+    },
+    {
+      question: 'Do you offer fringe extensions for thinning hair on top?',
+      answer: 'Yes. Our hair toppers (also in our range) are specifically designed for thinning crowns. Fringe extensions can also help camouflage hairline recession when cut by a skilled stylist.',
+    },
+  ],
+  'hair-care': [
+    {
+      question: 'What shampoo should I recommend for hair extensions?',
+      answer: 'Use sulfate-free, paraben-free shampoo and conditioner. Sulfates dry out the hair and weaken bonds/tapes. We supply a full aftercare range designed specifically for Remy human hair extensions.',
+    },
+    {
+      question: 'Can my clients heat-style hair extensions?',
+      answer: 'Yes. All D.S HAIR extensions are 100% Remy human hair and can be heat-styled up to 180°C. We recommend a heat-protectant spray to maximise longevity.',
+    },
+    {
+      question: 'How often should extensions be washed?',
+      answer: '2–3 times per week is ideal. Over-washing can dry out the hair. Always use cool-to-warm water (never hot) and gently pat dry — never rub.',
+    },
+  ],
+  'butterfly-weft': [
+    {
+      question: 'What is a butterfly weft?',
+      answer: 'Butterfly weft is the newest innovation in weft extensions — a 0.5mm ultra-flat base that lies completely invisible against the scalp. No bumps, no ridges, no tell-tale weft lines.',
+    },
+    {
+      question: 'How is butterfly weft different from hand-tied weft?',
+      answer: 'Butterfly weft is even flatter than hand-tied — the base is machine-pressed to 0.5mm vs 1–2mm for hand-tied. It also has a "wing" design that allows for easier installation and a more secure fit.',
+    },
+    {
+      question: 'Can butterfly wefts be cut to any size?',
+      answer: 'Yes. Unlike hand-tied wefts that must not be cut, butterfly wefts can be cut to any width without unravelling. This makes them ideal for partial installs and custom fitting.',
+    },
+  ],
+  'hair-toppers': [
+    {
+      question: 'What hair loss conditions are hair toppers suitable for?',
+      answer: 'Hair toppers work best for thinning crowns, part-line widening, and early-to-mid-stage hair loss. They clip in securely and blend with existing hair for a completely natural look.',
+    },
+    {
+      question: 'How is a hair topper different from a wig?',
+      answer: 'A topper covers only the crown/part area, not the full head. It is lighter, more breathable, and blends with your client\'s natural hair — perfect for thinning rather than total hair loss.',
+    },
+    {
+      question: 'Can hair toppers be washed and styled like normal hair?',
+      answer: 'Yes. All D.S HAIR toppers use 100% Remy human hair. They can be washed, heat-styled, and coloured just like natural hair. Properly cared for, a topper lasts 6–12 months.',
+    },
+  ],
+  'extension-tools': [
+    {
+      question: 'What tools do I need for a complete extension service?',
+      answer: 'Essential tools vary by method: pliers (nano/K-tip), tape tabs (tape-in), thread and needle (weft), and a heat fusion tool (K-tip). We supply complete tool kits for all methods.',
+    },
+    {
+      question: 'Do you offer tool kits for salon start-up?',
+      answer: 'Yes. Our Salon Start-Up Tool Kit includes pliers, sectioning clips, loop tools, bond remover, and a professional storage case. Available exclusively to trade account holders.',
+    },
+    {
+      question: 'Are your tools compatible with other brands\' extensions?',
+      answer: 'Yes. Our pliers and tools are universally compatible with standard nano rings, micro rings, and K-tip bonds. The only brand-specific item is our tape tab adhesive (which is also available separately).',
+    },
+  ],
+}
 
 interface CollectionPageProps {
   params: Promise<{ slug: string }>
@@ -87,6 +246,12 @@ export async function generateMetadata({ params }: CollectionPageProps) {
       locale: 'en_GB',
       siteName: 'D.S HAIR & BEAUTY',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: titleMap[slug] || `${collection.name} | D.S HAIR & BEAUTY`,
+      description: collection.description,
+      images: [`https://www.dshairbeauty.co.uk/og-collection-${slug}.png`],
+    },
   }
 }
 
@@ -102,10 +267,19 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
 
   return (
     <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          <CollectionHeader collection={collection} productCount={products.length} />
+      <>
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Home", url: "https://www.dshairbeauty.co.uk" },
+            { name: "Collections", url: "https://www.dshairbeauty.co.uk/collections/all" },
+            { name: collection.name, url: `https://www.dshairbeauty.co.uk/collections/${slug}` },
+          ]}
+        />
+        {COLLECTION_FAQS[slug] && <FaqJsonLd faqs={COLLECTION_FAQS[slug]} />}
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <CollectionHeader collection={collection} productCount={products.length} />
 
           {/* ── Salon Guide Banner (per collection) ── */}
           {(() => {
@@ -205,6 +379,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         <Footer />
         <CartDrawer />
       </div>
+      </>
     </CartProvider>
   )
 }

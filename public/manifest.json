@@ -1,0 +1,26 @@
+{
+  "name": "D.S Hair Beauty — Wholesale Hair Extensions UK",
+  "short_name": "D.S Hair Beauty",
+  "description": "UK's trusted wholesale hair extension supplier. 100% Remy human hair extensions for professional salons. Tape-In, K-Tip, Nano Ring, Weft, Butterfly Weft & Toppers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A1942",
+  "orientation": "portrait-primary",
+  "lang": "en-GB",
+  "scope": "/",
+  "categories": ["beauty", "shopping", "business"],
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-light-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

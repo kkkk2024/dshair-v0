@@ -6,9 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, CheckCircle, XCircle } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
   description: "Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons, and how to spot the difference before you buy.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/remy-vs-nonremy-hair-guide' },
   openGraph: {
     title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
     description: "Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons, and how to spot the difference before you buy.",
@@ -33,6 +36,7 @@ export const metadata = {
 export default function RemyVsNonRemyGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Remy Hair vs Non-Remy Hair: What's the Difference?" description="Remy vs non-Remy hair extensions explained. Learn why 100% Remy human hair is worth the investment for UK salons." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-remy-vs-nonremy-hair-guide.png" url="https://www.dshairbeauty.co.uk/blog/remy-vs-nonremy-hair-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

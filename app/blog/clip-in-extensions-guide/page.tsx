@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Clip-In Hair Extensions Guide: Instant Length & Volume in Minutes | D.S HAIR & BEAUTY",
   description: "Complete guide to clip-in hair extensions for UK salons. How to fit, blend, and sell clip-ins to clients. 100% Remy human hair, instant results.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/clip-in-extensions-guide' },
+  openGraph: { title: 'Clip-In Hair Extensions Guide: Instant Length & Volume in Minutes | D.S HAIR & BEAUTY', description: 'Complete guide to clip-in hair extensions for UK salons. How to fit, blend, and sell clip-ins.', url: 'https://www.dshairbeauty.co.uk/blog/clip-in-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function ClipInExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Clip-In Hair Extensions Guide: Instant Length & Volume in Minutes" description="Complete guide to clip-in hair extensions for UK salons. How to fit, blend, and sell clip-ins to clients." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-clip-in-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/clip-in-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

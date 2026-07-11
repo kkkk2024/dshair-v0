@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "K-Tip Hair Extensions Guide: Keratin Bond Excellence | D.S HAIR & BEAUTY",
   description: "Complete guide to K-tip (keratin tip) hair extensions for UK salons. Longest-lasting method, most natural result, highest revenue per appointments.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/k-tip-extensions-guide' },
+  openGraph: { title: 'K-Tip Hair Extensions Guide: Keratin Bond Excellence | D.S HAIR & BEAUTY', description: 'Complete guide to K-tip hair extensions for UK salons. Longest-lasting method, most natural result.', url: 'https://www.dshairbeauty.co.uk/blog/k-tip-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function KTipExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="K-Tip Hair Extensions Guide: Keratin Bond Excellence" description="Complete guide to K-tip hair extensions for UK salons. Longest-lasting method, most natural result, highest revenue per appointments." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-k-tip-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/k-tip-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

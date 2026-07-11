@@ -6,9 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, ThumbsUp, Users } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026 | D.S HAIR & BEAUTY",
   description: "Struggling with thin or fine hair? Discover the best hair extension methods for fine hair in the UK. Tape-in, nano ring, and lightweight weft options compared by our experts.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk' },
   openGraph: {
     title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026 | D.S HAIR & BEAUTY",
     description: "Struggling with thin or fine hair? Discover the best hair extension methods for fine hair in the UK — tape-in, nano ring, and lightweight weft.",
@@ -33,6 +36,7 @@ export const metadata = {
 export default function FineHairExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Best Hair Extensions for Fine Hair UK: Expert Guide 2026" description="Discover the best hair extension methods for fine hair in the UK. Tape-in, nano ring, and lightweight weft options compared." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-best-extensions-fine-hair-uk.png" url="https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

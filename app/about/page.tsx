@@ -6,11 +6,23 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import { Award, ShieldCheck, Truck, Users, Star, CheckCircle2 } from "lucide-react"
+import { FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "About Us | D.S HAIR & BEAUTY – Manchester's Premier Hair Extension Supplier",
   description:
     "19 years of hair extension expertise. D.S HAIR & BEAUTY is Manchester's trusted wholesale supplier of 100% Remy human hair extensions for professional salons.",
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/about",
+  },
+  openGraph: {
+    title: "About Us | D.S HAIR & BEAUTY",
+    description: "19 years of hair extension expertise. Manchester's trusted wholesale supplier of 100% Remy human hair extensions for professional salons.",
+    url: "https://www.dshairbeauty.co.uk/about",
+    type: "website",
+    locale: "en_GB",
+    siteName: "D.S HAIR & BEAUTY",
+  },
 }
 
 const values = [
@@ -64,11 +76,21 @@ const timeline = [
 ]
 
 export default function AboutPage() {
+  const companyFaqs = [
+    { question: "How long has D.S HAIR & BEAUTY been in business?", answer: "Our founder has been in the hair extension industry since 2007 — nearly 20 years of experience sourcing and supplying Remy human hair. D.S HAIR & BEAUTY was formally launched as a dedicated UK brand in 2022, combining decades of supply chain expertise with a professional salon-first approach." },
+    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester hub serves salons across the Northwest and the entire UK with same-day and next-day delivery for in-stock items." },
+    { question: "What makes D.S HAIR different from other UK suppliers?", answer: "Three things set us apart: (1) we own the production — no middlemen means better prices, (2) we have 19 years of direct factory relationships in China's hair manufacturing heartland, and (3) we answer within 2 hours — not a ticketing system, a real person who knows your account." },
+    { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free colour matching consultations for Manchester salons, priority stock access, and dedicated account management. Apply through our Salon Partners page." },
+    { question: "Is your hair ethically sourced?", answer: "Yes. All our hair is 100% Remy human hair, ethically sourced from trusted manufacturers with full supply chain traceability. Every batch is quality-checked before it leaves our facility. We never use synthetic blends or non-Remy hair." },
+  ]
+
   return (
     <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
+      <>
+        <FaqJsonLd faqs={companyFaqs} />
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
 
           {/* Hero Section */}
           <section className="relative h-[520px] md:h-[620px] flex items-center">
@@ -276,6 +298,7 @@ export default function AboutPage() {
         <Footer />
         <CartDrawer />
       </div>
+      </>
     </CartProvider>
   )
 }

@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Palette } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "2026 Manchester Colour Collection: The Shades Every Salon Needs | D.S HAIR & BEAUTY",
-  description:
-    "The definitive 2026 colour guide for Manchester salons. From Icy Manchester platinum to Cinnamon Copper — discover the shades your clients are asking for, curated by D.S Hair Beauty.",
+  description: "The definitive 2026 colour guide for Manchester salons. From Icy Manchester platinum to Cinnamon Copper — discover the shades your clients are asking for, curated by D.S Hair Beauty.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026' },
+  openGraph: { title: '2026 Manchester Colour Collection: The Shades Every Salon Needs | D.S HAIR & BEAUTY', description: 'The definitive 2026 colour guide for Manchester salons. Discover the shades your clients are asking for.', url: 'https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function ManchesterColourCollection2026() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="2026 Manchester Colour Collection: The Shades Every Salon Needs" description="The definitive 2026 colour guide for Manchester salons. From Icy Manchester platinum to Cinnamon Copper." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-manchester-colour-collection-2026.png" url="https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

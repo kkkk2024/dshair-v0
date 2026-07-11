@@ -6,15 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "What is Hand-Tied Weft Hair Extensions? Complete Guide 2025 | DS Hair Beauty",
-  description:
-    "Hand-tied weft explained — what it is, why salons prefer it, how to apply it, and where to source trade-grade hand-tied weft in Manchester. Expert guide from DS Hair Beauty.",
+  description: "Hand-tied weft explained — what it is, why salons prefer it, how to apply it, and where to source trade-grade hand-tied weft in Manchester. Expert guide from DS Hair Beauty.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide' },
+  openGraph: { title: 'What is Hand-Tied Weft Hair Extensions? Complete Guide 2025 | DS Hair Beauty', description: 'Hand-tied weft explained — what it is, why salons prefer it, how to apply it, and where to source trade-grade hand-tied weft in Manchester.', url: 'https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function HandTiedWeftPage() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="What is Hand-Tied Weft Hair Extensions? Complete Guide" description="Hand-tied weft explained — what it is, why salons prefer it, how to apply it, and where to source trade-grade hand-tied weft in Manchester." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-hand-tied-weft-guide.png" url="https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

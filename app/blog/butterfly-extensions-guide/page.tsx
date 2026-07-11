@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Butterfly Weft Extensions Guide: Ultra-Thin Seamless Volume | D.S HAIR & BEAUTY",
   description: "Complete guide to butterfly weft hair extensions for UK salons. The ultra-thin 0.5mm base revolutionised the extension industry. Seamless, lightweight, professional.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/butterfly-extensions-guide' },
+  openGraph: { title: 'Butterfly Weft Extensions Guide: Ultra-Thin Seamless Volume | D.S HAIR & BEAUTY', description: 'Complete guide to butterfly weft hair extensions for UK salons. Ultra-thin 0.5mm base.', url: 'https://www.dshairbeauty.co.uk/blog/butterfly-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function ButterflyExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Butterfly Weft Extensions Guide: Ultra-Thin Seamless Volume" description="Complete guide to butterfly weft hair extensions for UK salons. The ultra-thin 0.5mm base revolutionised the extension industry." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-butterfly-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/butterfly-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, Clock, Users, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
-  description:
-    "The complete guide to hair extension types for salon professionals. Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, best uses, and client suitability.",
+  description: "The complete guide to hair extension types for salon professionals. Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, best uses, and client suitability.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/hair-extension-types-guide' },
   openGraph: {
     title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
     description: "Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions — pros, cons, and best uses for salon professionals.",
@@ -34,6 +36,7 @@ export const metadata = {
 export default function HairExtensionTypesGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Hair Extension Types Explained: A Complete Guide for Salon Professionals" description="The complete guide to hair extension types for salon professionals. Compare tape-in, K-tip, weft, butterfly weft, and clip-in extensions." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-hair-extension-types-guide.png" url="https://www.dshairbeauty.co.uk/blog/hair-extension-types-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

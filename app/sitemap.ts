@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { products, collections } from '@/lib/products'
+import { cities } from '@/lib/city-data'
 
 const BASE_URL = 'https://www.dshairbeauty.co.uk'
 
@@ -98,7 +99,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/trade-wholesale`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
+
+  // City-specific landing pages for local SEO
+  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${BASE_URL}/cities/${city.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
 
   // Blog post pages (all 21 posts on disk)
   const blogPosts = [
@@ -147,5 +162,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...collectionPages, ...productPages, ...blogPostPages]
+  return [...staticPages, ...cityPages, ...collectionPages, ...productPages, ...blogPostPages]
 }

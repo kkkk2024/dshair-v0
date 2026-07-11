@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -6,11 +7,30 @@ import { ContactForm } from "@/components/contact/contact-form"
 import { Mail, MapPin, Clock, MessageCircle, Building2 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { LocalBusinessJsonLd } from "@/components/seo/json-ld"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact Us | D.S HAIR & BEAUTY",
   description:
-    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. Manchester-based hair extension supplier for professional salons.",
+    "Get in touch with D.S HAIR & BEAUTY. WhatsApp, email or enquiry form — we respond within 24 hours. UK hair extension supplier for professional salons.",
+  keywords: [
+    "contact hair extensions supplier",
+    "hair extension supplier Manchester contact",
+    "wholesale hair extensions contact",
+    "D.S Hair Beauty contact",
+    "hair extensions UK phone",
+    "salon hair extensions supplier email",
+  ],
+  alternates: {
+    canonical: "https://www.dshairbeauty.co.uk/contact",
+  },
+  openGraph: {
+    title: "Contact Us | D.S HAIR & BEAUTY",
+    description: "Contact D.S Hair Beauty — UK hair extension supplier. WhatsApp, email, or form.",
+    url: "https://www.dshairbeauty.co.uk/contact",
+    type: "website",
+    locale: "en_GB",
+  },
 }
 
 const contactCards = [
@@ -61,8 +81,8 @@ export default function ContactPage() {
     <CartProvider>
       <div className="min-h-screen flex flex-col">
         <Header />
+        <LocalBusinessJsonLd />
         <main className="flex-1">
-
           {/* Page Header */}
           <section className="bg-secondary py-16 md:py-20">
             <div className="container px-4 md:px-6 text-center max-w-2xl mx-auto">

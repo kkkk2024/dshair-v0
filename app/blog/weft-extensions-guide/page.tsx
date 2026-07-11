@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Weft Hair Extensions Guide: Hand-Tied vs Machine | D.S HAIR & BEAUTY",
   description: "Complete guide to weft hair extensions for UK salons. Hand-tied vs machine weft explained. How to apply, price, and source wholesale.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/weft-extensions-guide' },
+  openGraph: { title: 'Weft Hair Extensions Guide: Hand-Tied vs Machine | D.S HAIR & BEAUTY', description: 'Complete guide to weft hair extensions for UK salons. Hand-tied vs machine weft explained.', url: 'https://www.dshairbeauty.co.uk/blog/weft-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function WeftExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Weft Hair Extensions Guide: Hand-Tied vs Machine" description="Complete guide to weft hair extensions for UK salons. Hand-tied vs machine weft explained. How to apply, price, and source wholesale." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-weft-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/weft-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

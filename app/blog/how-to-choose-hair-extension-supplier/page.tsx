@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, XCircle, Phone } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
-  description:
-    "Choosing the right trade hair extension supplier can make or break your salon business. Learn the key factors to evaluate suppliers, spot red flags, and find a UK partner you can rely on.",
+  description: "Choosing the right trade hair extension supplier can make or break your salon business. Learn the key factors to evaluate suppliers, spot red flags, and find a UK partner you can rely on.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/how-to-choose-hair-extension-supplier' },
   openGraph: {
     title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
     description: "Learn the key factors to evaluate hair extension suppliers, spot red flags, and find a reliable UK trade partner for your salon.",
@@ -34,6 +36,7 @@ export const metadata = {
 export default function HowToChooseHairExtensionSupplier() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="How to Choose a Hair Extension Supplier for Your Salon" description="Choosing the right trade hair extension supplier can make or break your salon business. Learn the key factors to evaluate suppliers." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-how-to-choose-hair-extension-supplier.png" url="https://www.dshairbeauty.co.uk/blog/how-to-choose-hair-extension-supplier" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

@@ -211,6 +211,37 @@ export function Footer() {
         </div>
       </div>
 
+      {/* City SEO links */}
+      <div className="border-t border-primary-foreground/20">
+        <div className="container px-4 md:px-6 py-6">
+          <p className="text-xs text-primary-foreground/50 mb-3">Hair Extensions by City in the UK:</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {[
+              { name: "Manchester", href: "/cities/manchester" },
+              { name: "London", href: "/cities/london" },
+              { name: "Birmingham", href: "/cities/birmingham" },
+              { name: "Liverpool", href: "/cities/liverpool" },
+              { name: "Leeds", href: "/cities/leeds" },
+              { name: "Sheffield", href: "/cities/sheffield" },
+              { name: "Bristol", href: "/cities/bristol" },
+              { name: "Edinburgh", href: "/cities/edinburgh" },
+              { name: "Glasgow", href: "/cities/glasgow" },
+              { name: "Cardiff", href: "/cities/cardiff" },
+              { name: "Nottingham", href: "/cities/nottingham" },
+              { name: "Newcastle", href: "/cities/newcastle" },
+            ].map((city) => (
+              <Link
+                key={city.name}
+                href={city.href}
+                className="text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                {city.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-primary-foreground/20">
         <div className="container px-4 md:px-6 py-6">

@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
-  description:
-    "Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, how to qualify as a trade buyer, and what to look for in a UK wholesale supplier.",
+  description: "Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, how to qualify as a trade buyer, and what to look for in a UK wholesale supplier.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk' },
   openGraph: {
     title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
     description: "Buy hair extensions wholesale in the UK with confidence. Learn about trade pricing, minimum orders, and how to qualify as a trade buyer.",
@@ -34,6 +36,7 @@ export const metadata = {
 export default function WholesaleHairExtensionsUK() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying" description="Buy hair extensions wholesale in the UK with confidence. Covers trade pricing, minimum orders, and how to qualify as a trade buyer." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-wholesale-hair-extensions-uk.png" url="https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

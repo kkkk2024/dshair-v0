@@ -5,15 +5,35 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
+import { ArticleJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "Tape-In Hair Extensions Guide: Invisible Seamless Installation | D.S HAIR & BEAUTY",
   description: "Complete guide to tape-in hair extensions for UK salons. Invisible application, seamless finish, easy maintenance. The UK's most popular professional extension method.",
+  alternates: {
+    canonical: 'https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide',
+  },
+  openGraph: {
+    title: 'Tape-In Hair Extensions Guide: Invisible Seamless Installation | D.S HAIR & BEAUTY',
+    description: 'Complete guide to tape-in hair extensions for UK salons. Invisible application, seamless finish, easy maintenance.',
+    url: 'https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide',
+    locale: 'en_GB',
+    siteName: 'D.S HAIR & BEAUTY',
+    type: 'article',
+  },
 }
 
 export default function TapeInExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd
+        title="Tape-In Hair Extensions Guide: Invisible Seamless Installation"
+        description="Complete guide to tape-in hair extensions for UK salons. Invisible application, seamless finish, easy maintenance."
+        author="D.S HAIR & BEAUTY"
+        datePublished="2026-05-01"
+        image="https://www.dshairbeauty.co.uk/og-blog-tape-in-extensions-guide.png"
+        url="https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide"
+      />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

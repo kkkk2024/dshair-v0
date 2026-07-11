@@ -43,8 +43,8 @@ const featuredProducts = [
     rating: 4.8,
     reviews: 2156,
     colors: 32,
-    slug: "k-tip-extensions",
-    href: "/collections/k-tip-extensions",
+    slug: "i-tip-extensions",
+    href: "/products/i-tip-extensions",
   },
   {
     id: "featured-3",
@@ -67,8 +67,8 @@ const featuredProducts = [
     rating: 4.9,
     reviews: 3421,
     colors: 20,
-    slug: "butterfly-weft-extensions",
-    href: "/collections/butterfly-weft-extensions",
+    slug: "ds-hair-butterfly-extensions-jet-black-1",
+    href: "/products/ds-hair-butterfly-extensions-jet-black-1",
   },
 ]
 
@@ -176,7 +176,7 @@ export function FeaturedProducts() {
         {/* View All Button */}
         <div className="text-center mt-12">
           <Button size="lg" asChild>
-            <Link href="/collections/all-extensions">
+            <Link href="/collections/all">
               View All Extensions
             </Link>
           </Button>

@@ -1,29 +1,16 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import { OrganizationJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const cormorant = Cormorant_Garamond({ 
-  subsets: ["latin"],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-cormorant',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dshairbeauty.co.uk'),
   title: {
     default: "Trade Hair Extension Supplier UK | Wholesale for Salons | D.S Hair Beauty",
+    template: "%s | D.S Hair Beauty",
   },
-  description: "UK's trusted trade supplier of 100% Remy human hair extensions for salons. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Manchester-based with nationwide delivery.",
+  description: "UK's trusted trade supplier of 100% Remy human hair extensions for salons. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Manchester-based with nationwide delivery. 19 years expertise.",
   keywords: [
     'hair extensions Manchester', 'wholesale hair extensions UK', 'hand tied weft supplier',
     'balayage hair extensions wholesale', 'nano ring extensions Manchester',
@@ -31,21 +18,28 @@ export const metadata: Metadata = {
     'salon hair extensions wholesale', 'remy human hair extensions Manchester',
     'hair extension supplier Manchester', 'trade hair extensions UK',
     'human hair extensions wholesale', 'salon supplier Manchester',
+    'hair extensions London', 'hair extensions Birmingham', 'hair extensions Liverpool',
+    'hair extensions Leeds', 'hair extensions UK', 'hair extension supplier UK',
+    'butterfly weft extensions', 'K-tip extensions UK', 'clip-in extensions UK',
+    'hair toppers UK', 'Remy hair extensions wholesale', 'salon hair extension supply',
   ],
   authors: [{ name: 'D.S HAIR & BEAUTY', url: 'https://www.dshairbeauty.co.uk' }],
   creator: 'D.S HAIR & BEAUTY',
   publisher: 'D.S HAIR & BEAUTY',
-  alternates: {
-    canonical: 'https://www.dshairbeauty.co.uk',
-  },
   openGraph: {
     title: 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester',
     description: "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair. Trade pricing for professional salons. 19 years industry expertise.",
     type: 'website',
-    url: 'https://www.dshairbeauty.co.uk',
     locale: 'en_GB',
     siteName: 'D.S HAIR & BEAUTY',
-    // opengraph-image.tsx auto-generates the image
+    images: [
+      {
+        url: '/apple-icon.png',
+        width: 180,
+        height: 180,
+        alt: 'D.S Hair & Beauty — Wholesale Hair Extension Supplier',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -59,8 +53,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   verification: {
-    // Add Google Search Console verification token when available
-    // google: 'your-verification-token',
+    google: 'dshairbeauty-co-uk',  // GSC verification — update with actual meta tag value from Search Console
   },
   robots: {
     index: true,
@@ -72,6 +65,14 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: 'https://www.dshairbeauty.co.uk',
+  },
+  category: 'Beauty & Personal Care',
+  other: {
+    'msvalidate.01': '', // Bing verification — add value from Bing Webmaster Tools
+    'theme-color': '#4A1942',
   },
 }
 
@@ -87,8 +88,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="en">
       <head>
+        {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
         {/* TikTok Pixel */}
         <script
           dangerouslySetInnerHTML={{
@@ -107,6 +112,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         />
         {/* Pinterest Domain Verification */}
         <meta name="p:domain_verify" content="dcc4d0abd5f7405c205b0872574efb47"/>
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json"/>
+        {/* AI Crawler Hints */}
+        <meta name="ai-content" content="This website provides information about wholesale hair extensions for professional UK salons. See /llms.txt for AI-readable summary."/>
       </head>
       <body className="font-sans antialiased">
         <OrganizationJsonLd />

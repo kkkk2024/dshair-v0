@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
+import { ArticleJsonLd } from "@/components/seo/json-ld"
+
 export const metadata = {
   title: "Hair Fringe & Bangs Extensions Guide | D.S HAIR & BEAUTY",
   description: "Complete guide to fringe and bangs hair extensions for UK salons. Add face-framing colour, volume, and style without commitment. 100% Remy human hair.",
+  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide' },
+  openGraph: { title: 'Hair Fringe & Bangs Extensions Guide | D.S HAIR & BEAUTY', description: 'Complete guide to fringe and bangs hair extensions for UK salons. Add face-framing colour, volume, and style.', url: 'https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
 }
 
 export default function FringesBangsExtensionsGuide() {
   return (
     <CartProvider>
+      <ArticleJsonLd title="Hair Fringe & Bangs Extensions Guide" description="Complete guide to fringe and bangs hair extensions for UK salons. Add face-framing colour, volume, and style without commitment." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-fringes-bangs-extensions-guide.png" url="https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
