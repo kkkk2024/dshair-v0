@@ -1,9 +1,5 @@
 import { NextResponse } from 'next/server';
-
-function getResend() {
-  const { Resend } = require('resend');
-  return new Resend(process.env.RESEND_API_KEY || 're_placeholder');
-}
+import { Resend } from 'resend';
 
 export async function POST(request: Request) {
   try {
@@ -19,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     // Check if RESEND_API_KEY is configured
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_placeholder') {
+    if (!process.env.RESEND_API_KEY) {
       // For demo: just log and return success without sending email
       console.log('Contact form submission (demo mode):', { firstName, lastName, email, message });
       return NextResponse.json({ 
@@ -28,8 +24,10 @@ export async function POST(request: Request) {
       });
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     // Send email using Resend
-    const data = await getResend().emails.send({
+    const data = await resend.emails.send({
       from: 'D.S HAIR & BEAUTY <onboarding@resend.dev>',
       to: ['caro@dshairbeauty.co.uk'],
       subject: `New Contact Form Submission: ${subject || 'General Enquiry'}`,

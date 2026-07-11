@@ -6,19 +6,15 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
-import { ArticleJsonLd } from "@/components/seo/json-ld"
-
 export const metadata = {
-  title: "Why Manchester Salons Choose a Local Hair Extension Supplier | DS Hair Beauty",
-  description: "Faster supply, better colour matching, and direct Remy quality — why Manchester's top extension salons are switching to local wholesale suppliers. DS Hair Beauty Manchester.",
-  alternates: { canonical: 'https://www.dshairbeauty.co.uk/blog/manchester-hair-extension-supplier' },
-  openGraph: { title: 'Why Manchester Salons Choose a Local Hair Extension Supplier | DS Hair Beauty', description: 'Why Manchester salons are switching to local wholesale suppliers for better supply, colour matching, and direct Remy quality.', url: 'https://www.dshairbeauty.co.uk/blog/manchester-hair-extension-supplier', locale: 'en_GB', siteName: 'D.S HAIR & BEAUTY', type: 'article' },
+  title: "Why UK Salons Are Choosing Factory-Direct Hair Extension Suppliers | DS Hair Beauty",
+  description:
+    "Faster supply, better pricing, and direct Remy quality — why UK's top extension salons are cutting out distributors and going factory-direct. DS Hair Beauty.",
 }
 
 export default function ManchesterSupplierPage() {
   return (
     <CartProvider>
-      <ArticleJsonLd title="Why Manchester Salons Choose a Local Hair Extension Supplier" description="Faster supply, better colour matching, and direct Remy quality — why Manchester salons are switching to local wholesale suppliers." author="D.S HAIR & BEAUTY" datePublished="2026-05-01" image="https://www.dshairbeauty.co.uk/og-blog-manchester-hair-extension-supplier.png" url="https://www.dshairbeauty.co.uk/blog/manchester-hair-extension-supplier" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
@@ -34,7 +30,7 @@ export default function ManchesterSupplierPage() {
             </div>
 
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6 leading-tight">
-              Why Manchester Salons Are Switching to Local Hair Extension Suppliers
+              Why UK Salons Are Choosing Factory-Direct Hair Extension Suppliers
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -62,48 +58,48 @@ export default function ManchesterSupplierPage() {
                 <li><strong>Middleman pricing:</strong> You pay distributor margins on top of importer margins</li>
               </ul>
 
-              <h2>What a Local Manchester Supplier Changes</h2>
+              <h2>What a Factory-Direct Supplier Changes</h2>
 
-              <h3>1. Same or Next-Day Supply</h3>
+              <h3>1. Manufacturer Pricing — No Middleman Markup</h3>
               <p>
-                When a client calls to book a full head of hand-tied weft, you need to know your stock will arrive before their appointment — not three weeks later. A Manchester-based supplier with local stock means you can commit to bookings with confidence.
+                When you buy from a factory-direct supplier, you are paying manufacturer prices — not distributor markup on top of importer markup. For a busy salon ordering weekly, the savings are significant. D.S HAIR & BEAUTY sources directly from China&apos;s leading Remy hair manufacturers and holds stock in Manchester for fast UK delivery.
               </p>
 
-              <h3>2. In-Person Colour Matching</h3>
+              <h3>2. UK-Warehoused Stock, Fast Delivery</h3>
               <p>
-                Colour accuracy is the number one reason for client dissatisfaction with hair extensions. A local supplier can visit your salon, assess your clients in person, and match colour under real lighting conditions. No more guessing from shade charts.
+                Our inventory is held in Manchester — so when you need hand-tied weft for a client booking, it ships from the UK, not from a factory in Guangzhou. No cross-continental wait times. Factory-direct quality, locally stocked.
               </p>
 
-              <h3>3. Direct Factory Quality</h3>
+              <h3>3. Real Quality Control</h3>
               <p>
-                DS Hair & Beauty sources directly from China&apos;s leading Remy human hair manufacturers — the same factories that supply major international brands. By cutting out national distributors, you get factory-grade quality at better prices.
+                We inspect every batch at source. 100% Remy human hair with cuticle alignment — because we work directly with the factories, not through three layers of intermediaries who have never seen the product.
               </p>
 
               <h3>4. A Real Business Relationship</h3>
               <p>
-                When your usual 20-inch balayage weft is running low, you call your supplier. With a local partner, that supplier picks up the phone, knows your salon, and gets you what you need. That kind of relationship takes years to build with a distant distributor — and it is available from day one with a local partner.
+                When your usual 20-inch balayage weft is running low, you message your supplier directly. With a factory-direct partner, you are talking to the people who control production — not a sales rep who files a ticket with a warehouse. That kind of relationship makes your salon business more reliable.
               </p>
 
-              <h2>What Manchester Salon Owners Are Saying</h2>
+              <h2>What UK Salon Owners Are Saying</h2>
               <blockquote>
-                <p>&ldquo;I wasted two years ordering from a big distributor. The colour was never right and I was always waiting on stock. Switching to a local supplier changed my business completely — I can take same-week bookings again.&rdquo;</p>
-                <footer>— Hair Extension Specialist, Didsbury Manchester</footer>
+                <p>&ldquo;I wasted two years ordering from a big distributor. The colour was never right and I was always waiting on stock. Switching to a factory-direct supplier changed my business completely — better pricing, better quality, and I can take same-week bookings again.&rdquo;</p>
+                <footer>— Hair Extension Specialist, UK</footer>
               </blockquote>
 
-              <h2>How to Evaluate a Local Supplier</h2>
-              <p>Not all local suppliers are equal. When choosing a wholesale partner, ask:</p>
+              <h2>How to Evaluate a Factory-Direct Supplier</h2>
+              <p>Not all suppliers are equal. When choosing a wholesale partner, ask:</p>
               <ul>
-                <li>Can you provide a free colour matching consultation?</li>
-                <li>What is your typical turnaround for Manchester delivery?</li>
+                <li>Do you source directly from manufacturers — or are you a middleman?</li>
+                <li>Do you hold stock in the UK for fast delivery?</li>
                 <li>Are your products 100% Remy human hair with cuticle alignment?</li>
                 <li>What is your minimum order quantity?</li>
                 <li>Do you offer hand-tied weft and balayage blends?</li>
               </ul>
 
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
-                <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Manchester&apos;s Local Hair Extension Supplier</h3>
+                <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Factory-Direct. UK-Warehoused.</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  19 years of industry experience. Direct factory sourcing. Same/next-day Manchester supply. Free colour matching kit with your first trade order. No minimum order to start.
+                  19 years of industry experience. Direct factory sourcing. UK-warehoused stock in Manchester for fast delivery. Free colour matching kit with your first trade order. No minimum order to start.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { products, collections } from '@/lib/products'
 import { cities } from '@/lib/city-data'
+import { seoPages } from '@/lib/seo-pages'
 
 const BASE_URL = 'https://www.dshairbeauty.co.uk'
 
@@ -102,8 +103,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/trade-wholesale`,
       lastModified: now,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/trade-price-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/extension-specs`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ]
 
@@ -146,6 +159,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const salonSeoPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
+    url: `${BASE_URL}/uk-salon-hair-extensions/${page.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: page.intent === 'GEO' ? 0.72 : 0.78,
+  }))
+
   // Collection pages
   const collectionPages: MetadataRoute.Sitemap = collections.map((collection) => ({
     url: `${BASE_URL}/collections/${collection.slug}`,
@@ -162,5 +182,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...cityPages, ...collectionPages, ...productPages, ...blogPostPages]
+  return [...staticPages, ...cityPages, ...collectionPages, ...productPages, ...blogPostPages, ...salonSeoPages]
 }

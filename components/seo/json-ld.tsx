@@ -292,6 +292,32 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
         '@type': 'Organization',
         name: 'D.S HAIR & BEAUTY',
       },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'GB',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org.ReturnByMail',
+        returnFees: 'https://schema.org/freeReturn',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'GB',
+        },
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: product.price >= 50 ? '0' : '4.99',
+          currency: 'GBP',
+        },
+        handlingTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 1,
+          maxValue: 3,
+          unitCode: 'DAY',
+        },
+      },
     },
     ...(product.reviews > 0 && {
       aggregateRating: {
@@ -331,7 +357,7 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: item.url.startsWith('http') ? item.url : `${BASE_URL}${item.url}`,
     })),
   }
 
@@ -462,62 +488,13 @@ export function ServiceJsonLd() {
       '@type': 'OfferCatalog',
       name: 'Hair Extension Services',
       itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Wholesale Tape-In Hair Extensions Supply',
-            description: 'Factory-direct wholesale tape-in hair extensions for UK salons. 100% Remy human hair, reusable, 6-8 weeks wear.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Wholesale K-Tip / Keratin Bond Extensions Supply',
-            description: 'Factory-direct wholesale K-tip keratin bond extensions. Long-lasting, natural-looking, 3-6 months wear.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Wholesale Nano Ring Extensions Supply',
-            description: 'Factory-direct wholesale nano ring extensions. Virtually invisible, perfect for fine hair.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Wholesale Hand-Tied Weft Extensions Supply',
-            description: 'Factory-direct wholesale hand-tied weft extensions. Ultra-flat lay, maximum volume.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Wholesale Butterfly Weft Extensions Supply',
-            description: 'Factory-direct wholesale butterfly weft extensions. 0.5mm ultra-thin base, completely undetectable.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Free Colour Matching Service',
-            description: 'Free specialist hair extension colour matching via WhatsApp or photo upload. Response within 2 hours.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Salon Trade Account Program',
-            description: 'Exclusive wholesale pricing, priority stock access, and dedicated support for professional UK salons.',
-          },
-        },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wholesale Tape-In Hair Extensions Supply', description: 'Factory-direct wholesale tape-in hair extensions for UK salons. 100% Remy human hair, reusable, 6-8 weeks wear.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wholesale K-Tip / Keratin Bond Extensions Supply', description: 'Factory-direct wholesale K-tip keratin bond extensions. Long-lasting, natural-looking, 3-6 months wear.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wholesale Nano Ring Extensions Supply', description: 'Factory-direct wholesale nano ring extensions. Virtually invisible, perfect for fine hair.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wholesale Hand-Tied Weft Extensions Supply', description: 'Factory-direct wholesale hand-tied weft extensions. Ultra-flat lay, maximum volume.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wholesale Butterfly Weft Extensions Supply', description: 'Factory-direct wholesale butterfly weft extensions. 0.5mm ultra-thin base, completely undetectable.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Free Colour Matching Service', description: 'Free specialist hair extension colour matching via WhatsApp or photo upload. Response within 2 hours.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Salon Trade Account Program', description: 'Exclusive wholesale pricing, priority stock access, and dedicated support for professional UK salons.' } },
       ],
     },
   }
@@ -547,28 +524,14 @@ export function ReviewJsonLd() {
     review: [
       {
         '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Manchester Salon Owner',
-        },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: 'Manchester Salon Owner' },
         reviewBody: 'Best wholesale hair extension supplier in Manchester. Factory-direct pricing, same-day dispatch, and the quality is consistently excellent. Our clients love the Remy hair.',
       },
       {
         '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'London Hair Stylist',
-        },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: 'London Hair Stylist' },
         reviewBody: 'We switched to D.S Hair Beauty for our London salon and never looked back. Next-day delivery, incredible quality, and the colour matching service is spot on.',
       },
     ],

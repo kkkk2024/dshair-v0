@@ -1,9 +1,5 @@
 import { NextResponse } from 'next/server';
-
-function getResend() {
-  const { Resend } = require('resend');
-  return new Resend(process.env.RESEND_API_KEY || 're_placeholder');
-}
+import { Resend } from 'resend';
 
 export async function POST(request: Request) {
   try {
@@ -38,11 +34,13 @@ export async function POST(request: Request) {
       });
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const methodsList = Array.isArray(methods) ? methods.join(', ') : methods;
     const instagramHandle = instagram ? instagram.replace('@', '') : null;
 
     // Send email notification
-    const data = await getResend().emails.send({
+    const data = await resend.emails.send({
       from: 'D.S HAIR & BEAUTY <onboarding@resend.dev>',
       to: [process.env.CONTACT_EMAIL || 'caro@dshairbeauty.co.uk'],
       subject: `✨ New Stylist Application: ${salonName} — ${location || 'Location TBC'}`,
