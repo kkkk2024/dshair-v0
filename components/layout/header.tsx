@@ -40,8 +40,9 @@ const hairCare = [
   { title: "Extension Care", href: "/collections/extension-care", description: "Shampoo, conditioner, masks & brushes" },
 ]
 
-// 4. Accessories — Extension Tools / Heated Styling / Storage (二级类目)
+// 4. Accessories — Salon Supplies / Extension Tools / Heated Styling / Storage (二级类目)
 const accessories = [
+  { title: "Salon Supplies", href: "/salon-supplies", description: "Nano rings, tape tabs, clips & consumables" },
   { title: "Extension Tools", href: "/collections/extension-tools", description: "Pliers, scissors, clips & installation kits" },
   { title: "Heated Styling", href: "/collections/heated-styling", description: "Heated brushes, paddles & styling tools" },
   { title: "Storage", href: "/collections/storage", description: "Extension storage bags & cases" },
@@ -172,7 +173,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">Accessories</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
-                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-3 lg:w-[600px]">
+                  <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {accessories.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}>
                         {item.description}
