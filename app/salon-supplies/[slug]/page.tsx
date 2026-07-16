@@ -104,7 +104,7 @@ export default async function SalonConsumablePage({ params }: ProductPageProps) 
                       <div className="space-y-2">
                         <div className="flex items-baseline gap-3">
                           <span className="text-4xl font-bold text-green-600">FREE</span>
-                          <span className="text-muted-foreground text-sm">+ £2.95 postage</span>
+                          <span className="text-muted-foreground text-sm">+ £4.00 postage</span>
                         </div>
                         <p className="text-sm text-muted-foreground">One per salon. Limited time offer.</p>
                       </div>
@@ -225,7 +225,7 @@ export default async function SalonConsumablePage({ params }: ProductPageProps) 
             <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center space-y-4">
               <h3 className="font-serif text-xl font-medium">Want to try before buying?</h3>
               <p className="text-sm text-muted-foreground">
-                Claim your free sample pack. Test our quality in your own salon — just cover £2.95 postage.
+                Claim your free sample pack. Test our quality in your own salon — just cover £4.00 postage.
               </p>
               <Link href="/salon-supplies/free-sample-pack">
                 <Button variant="outline" className="rounded-full">

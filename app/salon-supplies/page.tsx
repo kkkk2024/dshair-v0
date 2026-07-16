@@ -114,7 +114,7 @@ export default function SalonSuppliesPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-amber-900">Try Before You Buy</h3>
-                      <p className="text-sm text-amber-700">Get a free sample pack delivered. Nano rings, clips & tool — just cover £2.95 postage.</p>
+                      <p className="text-sm text-amber-700">Get a free sample pack delivered. Nano rings, clips & tool — just cover £4.00 postage.</p>
                     </div>
                   </div>
                   <Link href={`/salon-supplies/${samplePack.slug}`}>
