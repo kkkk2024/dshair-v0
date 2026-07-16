@@ -312,12 +312,11 @@ function ProductCard({
   return (
     <div className="group bg-background rounded-2xl border hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col">
       {/* Image */}
-      <Link href={`${basePath}/${product.slug}`} className="relative aspect-square bg-muted/50 overflow-hidden block">
+      <Link href={`${basePath}/${product.slug}`} className="relative aspect-square bg-muted/50 overflow-hidden block w-full">
         <img
           src={product.image}
           alt={product.name}
           className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
         />
         {product.badge && (
           <span className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${
