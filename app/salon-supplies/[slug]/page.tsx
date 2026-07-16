@@ -74,9 +74,10 @@ export default async function SalonConsumablePage({ params }: ProductPageProps) 
                 {/* Left – Image */}
                 <div className="relative">
                   <div className="aspect-square bg-muted/30 rounded-2xl overflow-hidden border">
-                    <div
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ backgroundImage: `url(${product.image})` }}
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   {product.badge && (
