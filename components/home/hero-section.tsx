@@ -32,20 +32,20 @@ export function HeroSection() {
             <span className="text-primary">Supply Partner.</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-            We supply premium 100% Remy human hair extensions to professional salons across the UK — <strong className="text-foreground">direct from our factory to your salon chair.</strong> 19 years of manufacturing, 0 middlemen.
+            We supply premium 100% Remy human hair extensions to professional salons across the UK & EU — <strong className="text-foreground">direct from our factory to your salon chair, with private label options.</strong> 19 years of manufacturing, 0 middlemen.
           </p>
           
           {/* Dual CTA — Salon-Focused */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" className="group" asChild>
-              <Link href="/trade-price-calculator">
-                See Your Trade Price
+              <Link href="/trade-wholesale">
+                Apply for Trade Account
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="group" asChild>
-              <Link href="/trade-wholesale">
-                Become a Stockist
+              <Link href="/switch-trade-supplier">
+                Switch Your Trade Supplier
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -55,15 +55,15 @@ export function HeroSection() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-amber-500" />
-              500+ UK Salons Supplied
+              50+ UK & EU Salons Onboard
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-amber-500" />
-              Free Colour Matching
+              Digital Colour Matching
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-amber-500" />
-              UK Warehouse — Fast Dispatch
+              Express Shipping to the UK (3–5 days)
             </div>
           </div>
         </div>

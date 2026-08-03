@@ -33,7 +33,8 @@ const footerLinks = {
   salons: [
     { title: "Wholesale Enquiry", href: "/contact?type=wholesale" },
     { title: "Trade Account", href: "/salon-partners" },
-    { title: "Free Colour Kit", href: "/colour-match" },
+    { title: "Switch Your Trade Supplier", href: "/switch-trade-supplier" },
+    { title: "Trade Price Calculator", href: "/trade-price-calculator" },
     { title: "Contact → WhatsApp", href: contactInfo.whatsapp, external: true },
   ],
 }
@@ -64,9 +65,9 @@ export function Footer() {
         <div className="container px-4 md:px-6 py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-serif text-2xl md:text-3xl mb-2">Join Our Community</h3>
+              <h3 className="font-serif text-2xl md:text-3xl mb-2">Trade Updates for Salons</h3>
               <p className="text-primary-foreground/80">
-                Subscribe for exclusive offers, hair tips, and be the first to know about new arrivals.
+                Get trade pricing, new stock alerts, and private-label news — built for salon owners, not consumers.
               </p>
             </div>
             <form onSubmit={handleSubscribe} className="flex w-full md:w-auto gap-2">
@@ -102,14 +103,14 @@ export function Footer() {
 
       {/* Main footer content */}
       <div className="container px-4 md:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link href="/" className="inline-block mb-4">
               <span className="font-serif text-xl font-semibold">D.S HAIR & BEAUTY</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
-              {"World's #1 Brand for Professional and Do-It-Yourself Hair Extensions. Premium 100% Remy Human Hair."}
+              {"Factory-direct trade supplier of 100% Remy human hair extensions for UK & EU salons. Backed by 19 years of manufacturing. Our production arm: wigexporter.com."}
             </p>
             <div className="flex gap-4">
               <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram" className="hover:text-accent transition-colors">
@@ -208,6 +209,23 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Manufacturing - dual-site loop */}
+          <div>
+            <h4 className="font-semibold mb-4">Manufacturing</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  wigexporter.com &#8599;
+                </a>
+              </li>
+              <li>
+                <Link href="/switch-trade-supplier" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Why Manufacturer-Direct
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -231,7 +249,9 @@ export function Footer() {
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs">Manchester, UK</span>
+              <span className="text-xs">Manchester, UK · UK &amp; EU Salon Trade · UK Warehouse Preparing</span>
+              <span className="text-xs">|</span>
+              <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-accent transition-colors">Manufacturing: wigexporter.com &#8599;</a>
               <span className="text-xs">|</span>
               <a href={`mailto:${contactInfo.email}`} className="text-xs hover:text-accent transition-colors">{contactInfo.email}</a>
             </div>

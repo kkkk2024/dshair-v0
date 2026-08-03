@@ -5,7 +5,7 @@ import SalonPartnersClient from "./salon-partners-client"
 export const metadata: Metadata = {
   title: "Salon Partner Programme | Wholesale Hair Extensions | D.S Hair Beauty",
   description:
-    "Join 500+ UK salons as a D.S Hair Beauty partner. Get trade pricing, free colour matching kits, dedicated support, and same-day dispatch on 100% Remy human hair extensions.",
+    "Join 50+ UK & EU salons as a D.S Hair Beauty partner. Get trade pricing, a free digital colour catalogue, dedicated support, and express factory-direct shipping (3–5 days) on 100% Remy human hair extensions.",
   keywords: [
     "salon partner programme",
     "wholesale hair extensions UK",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Salon Partner Programme | D.S Hair Beauty',
-    description: 'Join 500+ UK salons. Trade pricing, free colour matching, same-day dispatch.',
+    description: 'Join 50+ UK & EU salons. Trade pricing, free digital colour catalogue, express factory-direct shipping.',
     url: 'https://www.dshairbeauty.co.uk/salon-partners',
     type: 'website',
     locale: 'en_GB',

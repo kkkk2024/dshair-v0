@@ -63,9 +63,9 @@ export default function TradeWholesaleClient() {
     },
     {
       icon: MapPin,
-      title: "UK-Warehoused Stock",
+      title: "UK-Warehoused & Factory-Direct",
       description:
-        "Inventory held in Manchester for fast dispatch. Factory-direct quality with quick UK delivery. No cross-continental wait times.",
+        "Selected best-sellers held in Manchester for fast dispatch; the full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
     },
     {
       icon: BadgeCheck,
@@ -76,11 +76,11 @@ export default function TradeWholesaleClient() {
   ]
 
   const productRange = [
-    { type: "Tape-In", minimum: "10 sets", leadTime: "Same day dispatch" },
-    { type: "K-Tip", minimum: "50 grams", leadTime: "1–2 days" },
-    { type: "Weft", minimum: "3 pieces", leadTime: "Same day dispatch" },
-    { type: "Butterfly Weft", minimum: "3 pieces", leadTime: "Same day dispatch" },
-    { type: "Hair Toppers", minimum: "1 piece", leadTime: "Same day dispatch" },
+    { type: "Tape-In", minimum: "10 sets", leadTime: "Express 3–5 days" },
+    { type: "K-Tip", minimum: "50 grams", leadTime: "Express 3–5 days" },
+    { type: "Weft", minimum: "3 pieces", leadTime: "Express 3–5 days" },
+    { type: "Butterfly Weft", minimum: "3 pieces", leadTime: "Express 3–5 days" },
+    { type: "Hair Toppers", minimum: "1 piece", leadTime: "Express 3–5 days" },
   ]
 
   const steps = [
@@ -129,7 +129,7 @@ export default function TradeWholesaleClient() {
                   Your Salon&apos;s Supply Chain, Simplified
                 </h1>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  Factory-direct Remy hair extensions for professional UK salons. One partner, every product type, zero middlemen. Join 500+ salons who stock with us.
+                  Factory-direct Remy hair extensions for professional UK & EU salons. One partner, every product type, zero middlemen. Join 50+ UK & EU salons who stock with us — with private label options.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild className="bg-white text-black hover:bg-white/90">
@@ -162,7 +162,7 @@ export default function TradeWholesaleClient() {
                 {[
                   { stat: "19+", label: "Years Industry Experience" },
                   { stat: "100%", label: "Remy Human Hair" },
-                  { stat: "Next Day", label: "UK-Wide Delivery" },
+                  { stat: "3–5 Days", label: "Express UK Shipping" },
                   { stat: "No Min.", label: "First Order Required" },
                 ].map((item) => (
                   <div key={item.label}>
@@ -286,8 +286,8 @@ export default function TradeWholesaleClient() {
                 </div>
                 <div>
                   <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="font-semibold mb-1">Same Day Dispatch</div>
-                  <p className="text-sm text-muted-foreground">Order before 3pm, ships today</p>
+                  <div className="font-semibold mb-1">Express Shipping</div>
+                  <p className="text-sm text-muted-foreground">Ships in 3–5 days via DHL/UPS</p>
                 </div>
               </div>
             </div>

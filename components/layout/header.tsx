@@ -87,7 +87,7 @@ export function Header() {
     <>
       {/* Top announcement bar - Updated */}
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <p>UK Stockist | 100% Remy Human Hair | 19+ Years Industry Experience | Free Colour Matching for Salons</p>
+        <p>Trade Supplier for UK &amp; EU Salons | Factory-Direct Pricing | Private Label Available | 19+ Years Manufacturing</p>
       </div>
 
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -113,6 +113,9 @@ export function Header() {
                 <Link href="/why-choose-us" className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
                   Why Choose Us
                 </Link>
+                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="py-2 text-lg font-medium hover:text-accent transition-colors">
+                  Manufacturing &#8599;
+                </a>
               </nav>
             </SheetContent>
           </Sheet>
@@ -223,6 +226,18 @@ export function Header() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
+              {/* 9. Manufacturing (external) */}
+              <NavigationMenuItem>
+                <a
+                  href="https://wigexporter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  Manufacturing &#8599;
+                </a>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -241,6 +256,19 @@ export function Header() {
                 <User className="h-5 w-5" />
               </Button>
             </Link>
+            <Link href="/trade-wholesale">
+              <Button variant="default" size="sm" className="hidden sm:inline-flex">
+                Trade Enquiry
+              </Button>
+            </Link>
+            <a
+              href="https://wigexporter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-1 text-sm font-medium hover:text-accent transition-colors"
+            >
+              Manufacturing &#8599;
+            </a>
             <Button
               variant="ghost"
               size="icon"
@@ -270,7 +298,7 @@ export function Header() {
             <form onSubmit={handleSearch} className="w-full max-w-2xl">
               <input
                 type="text"
-                placeholder="Search for products..."
+                placeholder="Search trade products & methods..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full text-2xl md:text-4xl bg-transparent border-b-2 border-foreground py-4 focus:outline-none placeholder:text-muted-foreground"
@@ -279,7 +307,7 @@ export function Header() {
               <div className="mt-8">
                 <p className="text-sm text-muted-foreground mb-4">Popular Searches</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Clip-In Extensions", "Tape-Ins", "Ponytails", "Blonde", "Brunette"].map((term) => (
+                  {["Tape-In Trade", "Private Label", "Switch Trade Supplier", "Nano Rings", "Balayage Weft"].map((term) => (
                     <Button 
                       key={term} 
                       variant="outline" 

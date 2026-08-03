@@ -23,18 +23,18 @@ const benefits = [
   },
   {
     icon: Gift,
-    title: "Free Colour Matching Kit",
-    description: "Every new salon partner receives a professional colour matching kit — worth £45, completely free.",
+    title: "Free Digital Colour Catalogue",
+    description: "Every new salon partner receives our full digital colour catalogue — 40+ shades, completely free, accessible instantly.",
   },
   {
     icon: Truck,
-    title: "Same/Next-Day Manchester Supply",
-    description: "We are local. No waiting weeks for stock. Fast turnaround keeps your clients on schedule.",
+    title: "UK Stock + Express Factory-Direct",
+    description: "Selected lines held in Manchester for fast dispatch, plus factory-direct express (3–5 days) for the full range. No waiting weeks for stock.",
   },
   {
     icon: Palette,
     title: "Custom Colour Matching",
-    description: "Our specialist will visit your salon for a free in-person colour consultation. We match your clients precisely.",
+    description: "Our specialist provides a free digital colour-matching consultation. We match your clients precisely, remotely or on request.",
   },
   {
     icon: Users,
@@ -70,7 +70,7 @@ const products = [
   {
     name: "Nano Ring Extensions",
     tag: "Best Seller",
-    description: "No heat, no glue. The most popular professional method in Manchester salons.",
+    description: "No heat, no glue. One of the most popular professional methods for salons.",
     price: "From £X/pack trade",
   },
   {
@@ -107,7 +107,7 @@ const steps = [
   {
     num: "03",
     title: "Receive Your Welcome Kit",
-    desc: "Your free colour matching kit ships with your first order. We can also arrange a free salon visit in Manchester.",
+    desc: "Your digital colour catalogue and tailored trade pricing are sent right away, with a dedicated WhatsApp contact for ongoing support.",
   },
   {
     num: "04",
@@ -177,13 +177,13 @@ export default function SalonPartnersPage() {
               <div className="max-w-2xl text-white">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-1.5 mb-6">
                   <Building2 className="h-4 w-4" />
-                  <span className="text-sm font-medium">Manchester Salon Partner Programme</span>
+                  <span className="text-sm font-medium">Salon Partner Programme</span>
                 </div>
                 <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
-                  Your Local Hair Extension Supplier. Trade Prices. No Minimums.
+                  Your Trade Hair Extension Supplier. Trade Prices. No Minimums.
                 </h1>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  Join Manchester&apos;s growing network of professional salons. Get wholesale pricing on 100% Remy human hair extensions — with same or next-day local supply.
+                  Join our growing UK &amp; EU network of professional salons. Get wholesale pricing on 100% Remy human hair extensions — with express factory-direct supply (3–5 days) and select UK-stocked lines.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild>
@@ -211,8 +211,8 @@ export default function SalonPartnersPage() {
                 {[
                   { stat: "19+", label: "Years Supply Experience" },
                   { stat: "£0", label: "Minimum First Order" },
-                  { stat: "24hr", label: "Manchester Delivery" },
-                  { stat: "Free", label: "Colour Matching Kit" },
+                  { stat: "3–5 Days", label: "Express UK Shipping" },
+                  { stat: "Free", label: "Digital Colour Catalogue" },
                 ].map((item) => (
                   <div key={item.label}>
                     <div className="text-2xl md:text-3xl font-bold">{item.stat}</div>
