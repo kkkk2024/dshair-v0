@@ -1,7 +1,10 @@
-// JSON-LD Structured Data Components for SEO
-// Supports: Organization, LocalBusiness, Product, BreadcrumbList, WebSite, FAQ, Article
+// JSON-LD Structured Data Components for SEO / GEO
+// Supports: Organization, LocalBusiness, Product, BreadcrumbList, WebSite, FAQ, Article, Person
 
 const BASE_URL = 'https://www.dshairbeauty.co.uk'
+
+export const AUTHOR_ID = `${BASE_URL}/about/caro-chen#author`
+export const AUTHOR_NAME = 'Caro Chen'
 
 // ─── Organisation / Local Business (for homepage) ──────────────────────────
 export function OrganizationJsonLd() {
@@ -158,6 +161,39 @@ export function OrganizationJsonLd() {
           'query-input': 'required name=search_term_string',
         },
       },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
+// ─── Author / Person JSON-LD (E-E-A-T + GEO entity) ────────────────────
+export function AuthorJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': AUTHOR_ID,
+    name: AUTHOR_NAME,
+    jobTitle: 'Founder & Trade Director',
+    description:
+      '19 years in hair extension manufacturing. Helps 50+ UK & EU salons build profitable extension services through factory-direct trade supply and private label.',
+    url: `${BASE_URL}/about/caro-chen`,
+    worksFor: { '@id': `${BASE_URL}/#organization` },
+    knowsAbout: [
+      'Hair Extensions',
+      'Wholesale Hair Supply',
+      'Salon Trade',
+      'Private Label Manufacturing',
+      'Remy Human Hair',
+    ],
+    sameAs: [
+      'https://www.instagram.com/d.shairbeauty',
+      'https://wigexporter.com',
     ],
   }
 
@@ -375,7 +411,8 @@ export function FaqJsonLd({ faqs }: { faqs: FaqItem[] }) {
 interface ArticleJsonLdProps {
   title: string
   description: string
-  author: string
+  author?: string
+  authorUrl?: string
   datePublished: string
   dateModified?: string
   image: string
@@ -385,7 +422,8 @@ interface ArticleJsonLdProps {
 export function ArticleJsonLd({
   title,
   description,
-  author,
+  author = AUTHOR_NAME,
+  authorUrl,
   datePublished,
   dateModified,
   image,
@@ -396,10 +434,9 @@ export function ArticleJsonLd({
     '@type': 'Article',
     headline: title,
     description,
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
+    author: authorUrl
+      ? { '@type': 'Person', '@id': `${authorUrl}#author`, name: author }
+      : { '@type': 'Person', '@id': AUTHOR_ID, name: author },
     datePublished,
     dateModified: dateModified ?? datePublished,
     image: [image],
