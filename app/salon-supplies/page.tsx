@@ -91,7 +91,7 @@ export default function SalonSuppliesPage() {
                 {[
                   { icon: Truck, text: "Free UK Delivery" },
                   { icon: ShieldCheck, text: "Quality Guaranteed" },
-                  { icon: Package, text: "Next-Day Dispatch" },
+                  { icon: Package, text: "Express 3–5 Day Dispatch" },
                   { icon: Tag, text: "Factory-Direct Prices" },
                 ].map((item) => (
                   <div key={item.text} className="flex flex-col items-center gap-2">
@@ -184,7 +184,7 @@ export default function SalonSuppliesPage() {
                 {[
                   {
                     icon: "💰",
-                    title: "Save 30-60% vs Beauty Works",
+                    title: "Save 30-60% vs High-Street Brands",
                     desc: "Same quality nano rings and tape tabs — at less than half the price of premium brands. Your profit margin is our priority.",
                   },
                   {
@@ -199,8 +199,8 @@ export default function SalonSuppliesPage() {
                   },
                   {
                     icon: "🚚",
-                    title: "Next-Day Dispatch",
-                    desc: "Orders before 2 PM ship the same day. UK-wide delivery. Your supplies when you need them.",
+                    title: "Express Dispatch",
+                    desc: "Orders ship via express (3–5 days), UK-wide. Your supplies when you need them.",
                   },
                   {
                     icon: "✅",
@@ -233,7 +233,7 @@ export default function SalonSuppliesPage() {
                 {[
                   {
                     q: "How quickly will I receive my order?",
-                    a: "Orders placed before 2 PM are dispatched the same day. UK delivery typically takes 1-2 working days with Royal Mail 1st Class. Express next-day delivery is available at checkout.",
+                    a: "Orders ship via express (3–5 days) across the UK. Selected UK-warehoused lines dispatch faster. Tracked delivery on every order.",
                   },
                   {
                     q: "What if I am unhappy with the quality?",

@@ -63,9 +63,9 @@ export function SalonTrustSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[
             { num: "19+", label: "Years in Business" },
-            { num: "500+", label: "UK & EU Salons Served" },
+            { num: "50+", label: "UK & EU Salons Served" },
             { num: "100%", label: "Remy Human Hair" },
-            { num: "24h", label: "Dispatch Guarantee" },
+            { num: "3–5d", label: "Express Delivery" },
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl font-bold text-primary mb-1">{stat.num}</div>

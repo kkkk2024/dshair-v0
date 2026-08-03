@@ -189,8 +189,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   </div>
                   <div className="grid grid-cols-3 gap-3 text-center text-xs text-muted-foreground pt-2 border-t border-accent/10">
                     <span>✅ No minimum order</span>
-                    <span>✅ 24h dispatch</span>
-                    <span>✅ Free colour match</span>
+                    <span>✅ Express 3–5 day dispatch</span>
+                    <span>✅ Free digital colour match</span>
                   </div>
                 </div>
               </div>

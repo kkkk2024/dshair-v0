@@ -183,7 +183,7 @@ const faqs = [
   },
   {
     q: "How quickly can I stock my salon?",
-    a: "We hold UK warehouse stock for popular lines — dispatch within 1-2 business days. Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
+    a: "Selected lines are UK-warehoused (preparing) with dispatch in 1-2 business days; the full range ships factory-direct via express (3–5 days). Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
   },
   {
     q: "What's your MOQ for salon accounts?",
@@ -596,7 +596,7 @@ export default function TradePriceCalculatorClient() {
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
               {[
                 { icon: Factory, label: "Factory-Direct" },
-                { icon: Truck, label: "UK Warehouse Stock" },
+                { icon: Truck, label: "UK & Factory Stock" },
                 { icon: BadgeCheck, label: "100% Remy 12A Grade" },
                 { icon: Star, label: "19+ Years Experience" },
               ].map(({ icon: Icon, label }) => (

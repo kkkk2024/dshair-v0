@@ -65,7 +65,7 @@ export default function ManchesterSupplierPage() {
                 When you buy from a factory-direct supplier, you are paying manufacturer prices — not distributor markup on top of importer markup. For a busy salon ordering weekly, the savings are significant. D.S HAIR & BEAUTY sources directly from China&apos;s leading Remy hair manufacturers and holds stock in Manchester for fast UK delivery.
               </p>
 
-              <h3>2. UK-Warehoused Stock, Fast Delivery</h3>
+              <h3>2. Selected UK Stock + Express Shipping</h3>
               <p>
                 Our inventory is held in Manchester — so when you need hand-tied weft for a client booking, it ships from the UK, not from a factory in Guangzhou. No cross-continental wait times. Factory-direct quality, locally stocked.
               </p>
@@ -97,9 +97,9 @@ export default function ManchesterSupplierPage() {
               </ul>
 
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
-                <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Factory-Direct. UK-Warehoused.</h3>
+                <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Factory-Direct. UK &amp; EU Trade.</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  19 years of industry experience. Direct factory sourcing. UK-warehoused stock in Manchester for fast delivery. Free colour matching kit with your first trade order. No minimum order to start.
+                  19 years of industry experience. Direct factory sourcing. Selected UK-warehoused lines (preparing) + factory-direct express 3–5 day shipping. Free digital colour catalogue with your first trade order. No minimum order to start.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>

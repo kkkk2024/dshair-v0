@@ -40,15 +40,15 @@ const values = [
   },
   {
     icon: Truck,
-    title: "Manchester-Based, Fast Supply",
+    title: "Factory-Direct, Express Supply",
     description:
-      "We are local. Same-day or next-day supply for Manchester salons. No waiting weeks for stock from overseas.",
+      "We serve salons across the UK & EU with factory-direct pricing. Selected UK-warehoused lines (preparing) + express 3–5 day shipping on the full range.",
   },
   {
     icon: Users,
     title: "Salon Partner Programme",
     description:
-      "Join our growing network of professional salons across Manchester and the Northwest. Trade pricing, free colour matching kit, and dedicated support.",
+      "Join our growing network of professional salons across the UK & EU. Trade pricing, free digital colour catalogue, and dedicated support.",
   },
 ]
 
@@ -71,16 +71,16 @@ const timeline = [
   {
     year: "2026",
     title: "Manchester Salon Partner Launch",
-    desc: "Opened our Manchester hub. Now supplying hand-tied wefts, balayage extensions, and professional consumables to salons across the Northwest.",
+    desc: "Launched our Manchester-based salon partner programme, supplying hand-tied wefts, balayage extensions, and professional consumables to salons across the UK & EU.",
   },
 ]
 
 export default function AboutPage() {
   const companyFaqs = [
     { question: "How long has D.S HAIR & BEAUTY been in business?", answer: "Our founder has been in the hair extension industry since 2007 — nearly 20 years of experience sourcing and supplying Remy human hair. D.S HAIR & BEAUTY was formally launched as a dedicated UK brand in 2022, combining decades of supply chain expertise with a professional salon-first approach." },
-    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester hub serves salons across the Northwest and the entire UK with same-day and next-day delivery for in-stock items." },
+    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester base serves salons across the UK & EU with selected UK-warehoused lines (preparing) plus factory-direct express 3–5 day shipping on the full range." },
     { question: "What makes D.S HAIR different from other UK suppliers?", answer: "Three things set us apart: (1) we own the production — no middlemen means better prices, (2) we have 19 years of direct factory relationships in China's hair manufacturing heartland, and (3) we answer within 2 hours — not a ticketing system, a real person who knows your account." },
-    { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free colour matching consultations for Manchester salons, priority stock access, and dedicated account management. Apply through our Salon Partners page." },
+    { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free digital colour matching for UK & EU salons, priority express dispatch, and dedicated account management. Apply through our Salon Partners page." },
     { question: "Is your hair ethically sourced?", answer: "Yes. All our hair is 100% Remy human hair, ethically sourced from trusted manufacturers with full supply chain traceability. Every batch is quality-checked before it leaves our facility. We never use synthetic blends or non-Remy hair." },
   ]
 
@@ -133,7 +133,7 @@ export default function AboutPage() {
                   { stat: "19+", label: "Years in the Industry" },
                   { stat: "100%", label: "Remy Human Hair" },
                   { stat: "50+", label: "Colours & Lengths" },
-                  { stat: "24hr", label: "Manchester Delivery" },
+                  { stat: "3–5d", label: "Express Delivery" },
                 ].map((item) => (
                   <div key={item.label}>
                     <div className="text-3xl md:text-4xl font-bold mb-1">{item.stat}</div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
                       "Direct factory relationships in China",
                       "Specialist in hand-tied & tape-in wefts",
                       "Free colour matching for every salon",
-                      "Manchester local, next-day supply",
+                      "Factory-direct express supply",
                       "Custom balayage & colour blending",
                       "Professional consumables included",
                     ].map((point) => (
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 ))}
               </div>
               <blockquote className="font-serif text-xl md:text-2xl text-foreground leading-relaxed mb-6">
-                &ldquo;The hand-tied wefts from DS Hair are honestly the best I&apos;ve worked with in 10 years. The colour matching is spot on and delivery is always next day. My clients love the results.&rdquo;
+                &ldquo;The hand-tied wefts from DS Hair are honestly the best I&apos;ve worked with in 10 years. The colour matching is spot on and delivery is always fast and reliable. My clients love the results.&rdquo;
               </blockquote>
               <p className="text-muted-foreground font-medium">— Hair Extension Specialist, Manchester</p>
             </div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
                 Ready to Partner With Us?
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-                Join Manchester&apos;s growing network of salons working with DS Hair & Beauty. Apply for your trade account today — free colour matching kit included with your first order.
+                Join our growing network of UK & EU salons working with DS Hair & Beauty. Apply for your trade account today — free digital colour catalogue included with your first order.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>

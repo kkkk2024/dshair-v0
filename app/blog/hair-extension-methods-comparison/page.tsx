@@ -245,7 +245,7 @@ export default function MethodsComparisonPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Trade Supply for Every Method</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free colour matching kit, and UK-warehoused stock. Apply for your trade account to access wholesale pricing.
+                  DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free digital colour catalogue, and selected UK-warehoused lines + express 3–5 day shipping. Apply for your trade account to access wholesale pricing.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild><Link href="/salon-partners">Apply for Trade Account</Link></Button>

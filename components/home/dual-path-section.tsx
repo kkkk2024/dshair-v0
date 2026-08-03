@@ -79,7 +79,7 @@ export function DualPathSection() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-white/20 backdrop-blur text-white text-xs font-medium px-2.5 py-1 rounded-full flex items-center gap-1.5">
                   <Building2 className="h-3 w-3" />
-                  Manchester Salon Supplier
+                  UK & EU Salon Supplier
                 </span>
               </div>
               <span className="text-white/70 text-sm font-medium tracking-wider uppercase mb-2">
@@ -89,7 +89,7 @@ export function DualPathSection() {
                 Professional Extensions
               </h3>
               <p className="text-white/80 mb-4 max-w-md">
-                Factory-direct pricing. UK-warehoused stock in Manchester. Free colour matching kit. No minimum order to start.
+                Factory-direct pricing. Selected UK-warehoused lines + full range express 3–5 days. Free digital colour catalogue. No minimum order to start.
               </p>
               <ul className="text-white/70 text-sm mb-6 flex flex-wrap gap-x-6 gap-y-2">
                 <li className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export function DualPathSection() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-green-400" />
-                  Next-day delivery
+                  Express 3–5 day delivery
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3">
@@ -136,9 +136,9 @@ export function DualPathSection() {
         <div className="mt-8 rounded-2xl bg-primary/5 border border-primary/10 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-1">Manchester Warehouse — Fast UK Delivery</h3>
+              <h3 className="font-semibold text-lg mb-1">UK-Warehoused &amp; Factory-Direct</h3>
               <p className="text-muted-foreground text-sm max-w-xl">
-                19 years of hair extension expertise. Direct factory relationships. Free colour matching kit with your first trade order. Stock held in Manchester for fast UK delivery.
+                19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. Selected UK-warehoused lines + express factory-direct 3–5 day delivery.
               </p>
             </div>
             <Button size="lg" className="flex-shrink-0" asChild>

@@ -175,7 +175,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Are you a salon owner?</h3>
                         <p className="text-sm text-primary-foreground/80 mb-3">
-                          Apply for a trade account and get wholesale pricing, free colour matching kit, and dedicated support.
+                          Apply for a trade account and get wholesale pricing, free digital colour catalogue, and dedicated support.
                         </p>
                         <Button variant="secondary" size="sm" asChild>
                           <Link href="/salon-partners">Apply for Trade Account →</Link>

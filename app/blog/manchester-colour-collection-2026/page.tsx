@@ -306,7 +306,7 @@ export default function ManchesterColourCollection2026() {
                   Every shade in our 2026 collection is crafted with 19 years of expertise behind every strand.
                 </h3>
                 <p className="text-white/70 mb-8 max-w-xl mx-auto">
-                  Manchester stock. Next-day delivery. This isn&apos;t just hair. This is your signature.
+                  Selected UK stock (preparing). Express 3–5 day delivery. This isn&apos;t just hair. This is your signature.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>

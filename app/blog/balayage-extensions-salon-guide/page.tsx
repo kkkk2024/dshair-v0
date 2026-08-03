@@ -247,7 +247,7 @@ export default function BalayageExtensionsPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Get Trade Pricing on Balayage Extensions</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to Manchester salons and across the Northwest. Free colour matching kit with your first trade order. UK-warehoused stock for same or next-day supply. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.
+                  DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to Manchester salons and across the Northwest. Free digital colour catalogue with your first trade order. Selected UK-warehoused lines + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>

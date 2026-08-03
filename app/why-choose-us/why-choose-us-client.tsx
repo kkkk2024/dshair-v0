@@ -32,8 +32,8 @@ const comparisons = [
     them: "New brands come and go. When they disappear, you are left holding stock your clients cannot reorder.",
   },
   {
-    title: "Same/next-day Manchester delivery",
-    us: "We are based in Manchester. Orders placed before 2pm ship the same day.",
+    title: "Fast express UK & EU delivery",
+    us: "We are based in Manchester. Orders ship factory-direct via express (3–5 days), with selected UK-warehoused lines dispatching even faster.",
     them: "Imports from China take 2–4 weeks. If a colour is wrong, you wait another month.",
   },
   {
@@ -71,8 +71,8 @@ const promises = [
   },
   {
     icon: Truck,
-    title: "Manchester-Based. UK-Wide Reach.",
-    description: "Same-day and next-day delivery across Manchester. Fast, reliable shipping across the UK. No cross-continental wait times.",
+    title: "Factory-Direct. UK & EU Reach.",
+    description: "Express 3–5 day shipping across the UK & EU. Fast, reliable delivery from our factory to your salon. No cross-continental wait times.",
   },
 ]
 
@@ -80,7 +80,7 @@ export default function WhyChooseUsPage() {
   const supplierFaqs = [
     { question: "What is the minimum order quantity?", answer: "There is no minimum order pressure. Order as little or as much as you need. For most methods, a full head set is 100g, but we supply per pack so you can order exactly what your client needs." },
     { question: "What are your payment terms?", answer: "We offer flexible payment options for registered trade accounts. Standard terms are prepayment or 30-day net for approved accounts. Contact us to discuss terms suited to your salon's needs." },
-    { question: "How long does delivery take?", answer: "Manchester same-day / next-day delivery for in-stock items. UK-wide standard delivery is 1-3 business days. Colour-matched or custom orders typically 3-5 business days." },
+    { question: "How long does delivery take?", answer: "Express 3–5 day shipping across the UK & EU, with selected UK-warehoused lines dispatching faster. Colour-matched or custom orders typically 3–5 business days." },
     { question: "What is your return / exchange policy for trade orders?", answer: "We accept exchanges for manufacturing defects within 14 days. Cut or altered hair cannot be returned. If a colour match is wrong due to our error, we cover the replacement cost." },
     { question: "Do you offer colour matching visits?", answer: "Yes - free on-site colour consultation for salons in Greater Manchester. For other regions, we offer virtual colour matching via WhatsApp or email with photos." },
     { question: "Can I order samples before committing to a full order?", answer: "Absolutely. We offer sample packs for all methods. Contact us via the trade account form and we will send you a sample set at trade pricing." },
@@ -262,7 +262,7 @@ export default function WhyChooseUsPage() {
                     },
                     {
                       q: "How long does delivery take?",
-                      a: "Manchester same-day / next-day delivery for in-stock items. UK-wide standard delivery is 1–3 business days. Colour-matched or custom orders typically 3–5 business days.",
+                      a: "Express 3–5 day shipping across the UK & EU, with selected UK-warehoused lines dispatching faster. Colour-matched or custom orders typically 3–5 business days.",
                     },
                     {
                       q: "What is your return / exchange policy for trade orders?",

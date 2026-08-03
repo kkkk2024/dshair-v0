@@ -21,7 +21,7 @@ export function OrganizationJsonLd() {
         },
         image: `${BASE_URL}/apple-icon.png`,
         description:
-          "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Same-day dispatch for UK orders.",
+          "UK & EU's trusted factory-direct wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Express 3–5 day shipping for UK & EU orders.",
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Manchester',
@@ -185,7 +185,7 @@ export function LocalBusinessJsonLd() {
     },
     image: `${BASE_URL}/apple-icon.png`,
     description:
-      "Manchester's trusted wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Same-day dispatch for UK orders.",
+      "UK & EU's trusted factory-direct wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Express 3–5 day shipping for UK & EU orders.",
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Manchester',

@@ -15,13 +15,13 @@ const trustBadges = [
   },
   {
     icon: Truck,
-    title: "UK Warehouse Stock",
-    description: "Popular lines stocked in Manchester. Dispatch within 1-2 business days for your salon.",
+    title: "UK & Factory Stock",
+    description: "Selected lines UK-warehoused (preparing) + full range factory-direct. Express 3–5 day delivery via DHL/UPS.",
   },
   {
     icon: Palette,
-    title: "Free Colour Matching",
-    description: "On-site matching for Manchester salons. Virtual matching UK-wide via WhatsApp. Your formula, perfectly matched.",
+    title: "Free Digital Colour Match",
+    description: "Free digital colour catalogue + WhatsApp matching with our specialists. Match your client in minutes, anywhere in the UK & EU.",
   },
 ]
 

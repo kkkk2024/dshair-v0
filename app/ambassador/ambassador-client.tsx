@@ -72,7 +72,7 @@ const tiers = [
       "Everything in Silver",
       "15% discount on orders",
       "Dedicated account manager",
-      "Free colour matching kit",
+      "Free digital colour catalogue",
       "Featured on our website",
       "Invitation to annual event",
       "8% commission on referrals",

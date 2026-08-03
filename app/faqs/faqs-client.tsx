@@ -30,15 +30,15 @@ const categories = [
       },
       {
         q: "How do I find my perfect colour match?",
-        a: "We offer two ways: 1) Browse our 31-shade colour chart above — order a free colour matching kit to compare in person. 2) Send us a WhatsApp photo of your hair in natural daylight and our colour specialist will match you within 2 hours — free of charge.",
+        a: "We offer two ways: 1) Browse our 31-shade colour chart above — order a free digital colour catalogue to compare shades. 2) Send us a WhatsApp photo of your hair in natural daylight and our colour specialist will match you within 2 hours — free of charge.",
       },
       {
         q: "Do you offer trade / wholesale pricing for salons?",
-        a: "Yes. We have a dedicated Salon Partner Programme with trade pricing, no minimum order, free colour matching kits and priority Manchester delivery. Apply online — we respond within 24 hours with your personalised price list.",
+        a: "Yes. We have a dedicated Salon Partner Programme with trade pricing, no minimum order, free digital colour catalogue and priority express delivery. Apply online — we respond within 24 hours with your personalised price list.",
       },
       {
         q: "What is your shipping and returns policy?",
-        a: "Free UK delivery on orders over £175. Same-day dispatch for orders placed before 2pm. International shipping available. Returns accepted within 30 days for unused items in original packaging. See our full shipping & returns page for details.",
+        a: "Free UK delivery on orders over £175, shipped via express (3–5 days). International shipping available. Returns accepted within 30 days for unused items in original packaging. See our full shipping & returns page for details.",
       },
       {
         q: "Can I colour or bleach D.S HAIR extensions?",

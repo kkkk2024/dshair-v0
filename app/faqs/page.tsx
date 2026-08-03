@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: 'Do you offer trade / wholesale pricing for salons?',
-    answer: 'Yes. We have a dedicated Salon Partner Programme with trade pricing, no minimum order, free colour matching kits and priority Manchester delivery.',
+    answer: 'Yes. We have a dedicated Salon Partner Programme with trade pricing, no minimum order, free digital colour catalogue and priority express delivery.',
   },
   {
     question: 'How do I find my perfect colour match?',
@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     question: 'What is your shipping and returns policy?',
-    answer: 'Free UK delivery on orders over £175. Same-day dispatch for orders placed before 2pm. Returns accepted within 30 days for unused items.',
+    answer: 'Free UK delivery on orders over £175, shipped via express (3–5 days). Returns accepted within 30 days for unused items.',
   },
 ]
 

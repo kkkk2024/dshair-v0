@@ -7,7 +7,7 @@ const services = [
   {
     icon: Building2,
     title: "Salon Partners",
-    description: "China-based manufacturer with UK-warehoused stock. Trade pricing, free colour kit, no minimum order. Apply for your trade account today.",
+    description: "Factory-direct manufacturer serving UK & EU salons. Trade pricing, free digital colour catalogue, no minimum order. Apply for your trade account today.",
     href: "/salon-partners",
     cta: "Apply for Trade Account",
     highlight: true,

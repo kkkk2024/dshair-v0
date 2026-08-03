@@ -195,7 +195,7 @@ export default function TradeVsDiyPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Ready to Upgrade Your Salon Supply?</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies trade-grade 100% Remy human hair extensions to professional salons across Manchester and the Northwest. UK-warehoused stock, trade pricing, and free colour matching kit with your first order. Apply for your trade account today.
+                  DS Hair & Beauty supplies trade-grade 100% Remy human hair extensions to professional salons across Manchester and the Northwest. Selected UK-warehoused lines + express 3–5 day shipping, trade pricing, and free digital colour catalogue with your first order. Apply for your trade account today.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild><Link href="/salon-partners">Apply for Trade Account</Link></Button>
