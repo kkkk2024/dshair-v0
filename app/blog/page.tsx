@@ -7,25 +7,27 @@ import Link from "next/link"
 import { ArrowRight, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Hair Extension Blog | DS Hair Beauty Manchester",
+  title: "Hair Extension Blog | Trade Guides & Salon Business Tips | DS Hair Beauty",
   description:
-    "Expert guides on hand-tied weft, balayage extensions, nano ring, tape-in, and everything professional salons need to know. From Manchester's leading hair extension supplier.",
+    "Expert B2B guides for UK salon owners — wholesale pricing, private label, profit margins, trade accounts, supplier selection, and how to start selling hair extensions in your salon.",
   keywords: [
-    "hair extensions blog",
-    "tape in extensions guide",
-    "hand tied weft tutorial",
-    "hair toppers guide",
-    "balayage hair extensions",
-    "nano ring extensions",
-    "hair extension aftercare",
-    "remy hair vs non-remy",
+    "hair extensions blog UK",
+    "wholesale hair extensions guide",
+    "salon trade account",
+    "private label hair extensions",
+    "hair extension profit margin",
+    "hair extension stockist UK",
+    "how to start selling hair extensions",
+    "trade hair extensions UK",
+    "salon business tips",
+    "factory direct hair supplier",
   ],
   alternates: {
     canonical: "https://www.dshairbeauty.co.uk/blog",
   },
   openGraph: {
-    title: "Hair Extension Blog | DS Hair Beauty",
-    description: "Expert hair extension guides for UK salons. Tips, tutorials and industry insights.",
+    title: "Hair Extension Blog | B2B Trade Guides for UK Salons | DS Hair Beauty",
+    description: "B2B guides for UK salon owners — wholesale pricing, private label, profit margins, trade accounts, and supplier selection.",
     type: "article",
     url: "https://www.dshairbeauty.co.uk/blog",
     locale: "en_GB",
@@ -33,12 +35,95 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hair Extension Blog | DS Hair Beauty",
-    description: "Expert hair extension guides for UK salons.",
+    title: "Hair Extension Blog | B2B Trade Guides for UK Salons",
+    description: "Wholesale pricing, private label, profit margins — expert guides for salon owners.",
   },
 }
 
 const posts = [
+  // ===== 2026年8月 — B2B Salon Trade 系列 =====
+  {
+    slug: "private-label-hair-extensions-uk",
+    title: "Private Label Hair Extensions UK: Complete Guide for Salons & Brands",
+    excerpt:
+      "How to launch your own hair extension brand with private label manufacturing. Custom packaging, colour rings, lead times, MOQs, and cost breakdowns — everything you need to build a profitable private label line.",
+    category: "Business",
+    readTime: "12 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+  },
+  {
+    slug: "hair-extension-profit-margin-guide",
+    title: "Hair Extension Profit Margins: What Salon Owners Actually Make in 2026",
+    excerpt:
+      "Real numbers on hair extension profit margins by method — tape-in, K-tip, nano ring, weft. Trade vs retail pricing, markup formulas, and the 5 most common margin mistakes UK salons make.",
+    category: "Business",
+    readTime: "10 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+  },
+  {
+    slug: "hair-extensions-trade-account",
+    title: "Hair Extensions Trade Account: What UK Salons Need to Know Before Signing",
+    excerpt:
+      "Not all trade accounts are created equal. Learn what to look for in a hair extension supplier trade account — pricing tiers, MOQs, credit terms, support quality, and red flags that signal a bad fit.",
+    category: "Business",
+    readTime: "9 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+  },
+  {
+    slug: "salon-hair-extension-stockist-uk",
+    title: "Salon Hair Extension Stockist UK: How to Choose Your Supplier in 2026",
+    excerpt:
+      "A practical framework for choosing a hair extension stockist as a UK salon owner. Compare factory-direct vs distributor vs wholesale marketplace models, with a checklist for vetting suppliers.",
+    category: "Business",
+    readTime: "11 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+  },
+  {
+    slug: "how-to-start-selling-hair-extensions-salon",
+    title: "How to Start Selling Hair Extensions in Your Salon: Step-by-Step Guide",
+    excerpt:
+      "Complete roadmap for adding hair extensions to your salon service menu. From training and certification to supplier selection, pricing strategy, marketing, and building a loyal extension client base.",
+    category: "Business",
+    readTime: "13 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+  },
+  // ===== 2026年8月升级 — Wholesale 指南 =====
+  {
+    slug: "wholesale-hair-extensions-uk",
+    title: "Wholesale Hair Extensions UK: Trade Pricing & Supplier Guide for Salons",
+    excerpt:
+      "Everything UK salon owners need to know about buying hair extensions at wholesale prices. Factory-direct vs distributor, MOQ realities, quality tiers, and how to negotiate better trade pricing.",
+    category: "Business",
+    readTime: "10 min read",
+    date: "2026-08-03",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+  },
+  // ===== 更早的游离文章 =====
+  {
+    slug: "how-to-choose-hair-extension-supplier",
+    title: "How to Choose a Hair Extension Supplier: The Salon Owner's Checklist",
+    excerpt:
+      "Choosing the right hair extension supplier can make or break your salon's extension service. Here is a practical checklist covering quality, consistency, reliability, and trade support.",
+    category: "Education",
+    readTime: "8 min read",
+    date: "2026-06-01",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
+  },
+  {
+    slug: "hair-extension-types-guide",
+    title: "Hair Extension Types Explained: A Complete Guide for UK Salons",
+    excerpt:
+      "From clip-ins to hand-tied weft — every hair extension method explained with pros, cons, ideal client profiles, and typical price points. The reference guide every UK salon stylist needs.",
+    category: "Education",
+    readTime: "15 min read",
+    date: "2026-05-20",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+  },
   // ===== 2026年5月新增文章 =====
   {
     slug: "remy-vs-nonremy-hair-guide",
