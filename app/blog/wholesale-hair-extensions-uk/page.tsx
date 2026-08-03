@@ -5,6 +5,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react"
+import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
@@ -37,21 +38,38 @@ export default function WholesaleHairExtensionsUK() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          {/* ── JSON-LD ───────────────────────────── */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "headline": "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying",
-                "description": "Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, and how to qualify as a trade buyer.",
-                "url": "https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk",
-                "datePublished": "2026-05-01",
-                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
-                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
-              })
-            }}
+          {/* ── JSON-LD (GEO: Article + FAQ) ──────── */}
+          <ArticleJsonLd
+            title="Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying"
+            description="Buy hair extensions wholesale in the UK with confidence. This guide covers trade pricing, minimum orders, how to qualify as a trade buyer, and what to look for in a UK wholesale supplier."
+            authorUrl="https://www.dshairbeauty.co.uk/about/caro-chen"
+            datePublished="2026-05-01"
+            image="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
+            url="https://www.dshairbeauty.co.uk/blog/wholesale-hair-extensions-uk"
+          />
+          <FaqJsonLd
+            faqs={[
+              {
+                question: "What does wholesale mean for hair extensions?",
+                answer:
+                  "Wholesale means buying directly from a supplier or manufacturer at trade prices rather than full retail. Trade buyers — salons, stylists, and boutiques — typically pay 30–60% less per unit and gain priority stock, colour advice, and account support.",
+              },
+              {
+                question: "Is there a minimum order for wholesale hair extensions?",
+                answer:
+                  "It varies by supplier. Large distributors often require 10–50 units per product; specialist trade suppliers may ask for 1–5. D.S Hair Beauty has no minimum order quantity, so salons of any size pay trade prices from the first weft.",
+              },
+              {
+                question: "How fast is wholesale delivery in the UK?",
+                answer:
+                  "Selected UK-warehoused lines are preparing, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS). This lets salons reorder as needed without holding large stock.",
+              },
+              {
+                question: "What should I look for in a UK wholesale supplier?",
+                answer:
+                  "100% Remy human hair as standard, 40+ colour options, no minimum order, trade accounts with clear terms, direct contact support, and free samples before commitment. Avoid suppliers who cannot show consistent grade across batches.",
+              },
+            ]}
           />
 
           {/* ── Hero ─────────────────────────────────── */}
@@ -96,6 +114,12 @@ export default function WholesaleHairExtensionsUK() {
           </div>
 
           <article className="max-w-4xl mx-auto px-4 md:px-6 py-16">
+            <div className="flex items-center gap-3 mb-8 p-4 bg-[#FDF8F0] border border-amber-100 rounded-xl not-prose">
+              <div className="w-10 h-10 rounded-full bg-[#4A1942] text-white flex items-center justify-center font-medium text-sm shrink-0">CC</div>
+              <p className="text-sm text-[#6B3A6E]">
+                Written by <Link href="/about/caro-chen" className="text-[#4A1942] font-semibold underline">Caro Chen</Link>, Founder &amp; Trade Director at D.S Hair &amp; Beauty · 19 years in hair extension manufacturing
+              </p>
+            </div>
 
             <div className="prose prose-lg max-w-none">
 
@@ -142,7 +166,7 @@ export default function WholesaleHairExtensionsUK() {
 
               <h3 className="font-serif text-2xl font-medium mt-8 mb-4 text-[#4A1942]">Faster, More Reliable Restocking</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Wholesale suppliers who hold UK stock can dispatch within 24–48 hours. This means you can reorder as needed without maintaining large amounts of excess inventory — reducing your cash tied up in stock while keeping your service slots full.
+                Suppliers with UK-warehoused lines can dispatch the fastest; for the broader range, factory-direct express shipping delivers in 3–5 days. This means you can reorder as needed without maintaining large amounts of excess inventory — reducing your cash tied up in stock while keeping your service slots full.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Many UK trade suppliers also offer standing order arrangements, where new stock arrives on a scheduled cycle automatically — so you never run out of popular shades or lengths for your most loyal clients.
@@ -204,7 +228,7 @@ export default function WholesaleHairExtensionsUK() {
               </p>
               <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground mb-8">
                 <li><strong>100% Remy human hair as standard</strong> — not a premium upgrade at an inflated price</li>
-                <li><strong>UK-held stock</strong> — avoids customs delays, import duty, and unpredictable shipping</li>
+                <li><strong>Selected UK-warehoused lines + express 3–5 day factory-direct shipping</strong> — avoids long customs delays while keeping a wide range available</li>
                 <li><strong>40+ colour options</strong> — including balayage, ombre, and rooted shades that UK clients demand</li>
                 <li><strong>No minimum order</strong> — accessible for all salon sizes and specialist stylists</li>
                 <li><strong>Trade accounts with net-30 terms</strong> — helps with cash flow management</li>
@@ -247,6 +271,27 @@ export default function WholesaleHairExtensionsUK() {
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <Link href="/collections/tape-in">Browse Products</Link>
                   </Button>
+                </div>
+              </div>
+
+              {/* ── FAQ ─────────────────────────────────── */}
+              <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Frequently Asked Questions</h2>
+              <div className="not-prose space-y-4 mb-12">
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">What does wholesale mean for hair extensions?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Wholesale means buying directly from a supplier or manufacturer at trade prices rather than full retail. Trade buyers typically pay 30–60% less per unit and gain priority stock, colour advice, and account support.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">Is there a minimum order for wholesale hair extensions?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">It varies by supplier. Large distributors often require 10–50 units per product; specialist trade suppliers may ask for 1–5. D.S Hair Beauty has no minimum order quantity.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">How fast is wholesale delivery in the UK?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Selected UK-warehoused lines are preparing, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS).</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">What should I look for in a UK wholesale supplier?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">100% Remy human hair as standard, 40+ colour options, no minimum order, trade accounts with clear terms, direct contact support, and free samples before commitment.</p>
                 </div>
               </div>
 

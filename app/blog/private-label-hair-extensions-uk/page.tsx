@@ -5,6 +5,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Package, Palette, TrendingUp, Users, Globe } from "lucide-react"
+import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "Private Label Hair Extensions UK: How to Build Your Own Brand in 2026 | D.S Hair Beauty",
@@ -37,21 +38,38 @@ export default function PrivateLabelHairExtensionsUK() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          {/* ── JSON-LD ───────────────────────────── */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "headline": "Private Label Hair Extensions UK: How to Build Your Own Brand in 2026",
-                "description": "Launch your own hair extension brand with private label manufacturing. Factory-direct pricing, custom packaging, and full brand support for UK salons.",
-                "url": "https://www.dshairbeauty.co.uk/blog/private-label-hair-extensions-uk",
-                "datePublished": "2026-08-03",
-                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
-                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
-              })
-            }}
+          {/* ── JSON-LD (GEO: Article + FAQ) ──────── */}
+          <ArticleJsonLd
+            title="Private Label Hair Extensions UK: How to Build Your Own Brand in 2026"
+            description="Launch your own hair extension brand with private label manufacturing. Learn how UK salons build branded extension lines with factory-direct pricing, custom packaging, and 19+ years of manufacturing expertise. No minimum order."
+            authorUrl="https://www.dshairbeauty.co.uk/about/caro-chen"
+            datePublished="2026-08-03"
+            image="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"
+            url="https://www.dshairbeauty.co.uk/blog/private-label-hair-extensions-uk"
+          />
+          <FaqJsonLd
+            faqs={[
+              {
+                question: "What is private label hair extensions?",
+                answer:
+                  "Private label means the manufacturer makes the hair and ships it under your salon's own brand — your name, your packaging, your shade set. You control the brand; the factory handles production. It differs from a standard trade account, where you resell the supplier's branded product.",
+              },
+              {
+                question: "Is there a minimum order for private label?",
+                answer:
+                  "It depends on the customization. Custom packaging and branded boxes usually carry a small setup batch; plain private label with your label can start very low. D.S Hair Beauty supports private label for salons with steady volume and offers trade pricing with no minimum order on standard lines.",
+              },
+              {
+                question: "How long does private label take?",
+                answer:
+                  "Standard private label (your label on existing shades) can ship with the normal express 3–5 day factory-direct lead time. Fully custom packaging or bespoke shade development adds production time — typically a few weeks for the first batch.",
+              },
+              {
+                question: "Can a small salon do private label?",
+                answer:
+                  "Yes, once you have steady reorder volume. Many of our 50+ partner salons started on a trade account, learned which shades and methods their clients buy, then moved to private label. You do not need to begin with branding — start with demand.",
+              },
+            ]}
           />
 
           {/* ── Hero ─────────────────────────────────── */}
@@ -96,6 +114,12 @@ export default function PrivateLabelHairExtensionsUK() {
           </div>
 
           <article className="max-w-4xl mx-auto px-4 md:px-6 py-16">
+            <div className="flex items-center gap-3 mb-8 p-4 bg-[#FDF8F0] border border-amber-100 rounded-xl not-prose">
+              <div className="w-10 h-10 rounded-full bg-[#4A1942] text-white flex items-center justify-center font-medium text-sm shrink-0">CC</div>
+              <p className="text-sm text-[#6B3A6E]">
+                Written by <Link href="/about/caro-chen" className="text-[#4A1942] font-semibold underline">Caro Chen</Link>, Founder &amp; Trade Director at D.S Hair &amp; Beauty · 19 years in hair extension manufacturing
+              </p>
+            </div>
 
             <div className="prose prose-lg max-w-none">
 
@@ -256,6 +280,27 @@ export default function PrivateLabelHairExtensionsUK() {
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <Link href="https://www.wigexporter.com" target="_blank" rel="noopener noreferrer">Visit Manufacturing Site ↗</Link>
                   </Button>
+                </div>
+              </div>
+
+              {/* ── FAQ ─────────────────────────────────── */}
+              <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Frequently Asked Questions</h2>
+              <div className="not-prose space-y-4 mb-12">
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">What is private label hair extensions?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Private label means the manufacturer makes the hair and ships it under your salon&apos;s own brand — your name, your packaging, your shade set. You control the brand; the factory handles production.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">Is there a minimum order for private label?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Custom packaging usually carries a small setup batch; plain private label with your label can start very low. D.S Hair Beauty supports private label for salons with steady volume and offers no-minimum trade pricing on standard lines.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">How long does private label take?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Standard private label ships with the normal express 3–5 day factory-direct lead time. Fully custom packaging or bespoke shade development adds a few weeks for the first batch.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">Can a small salon do private label?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Yes, once you have steady reorder volume. Many of our 50+ partner salons started on a trade account, then moved to private label. You do not need to begin with branding — start with demand.</p>
                 </div>
               </div>
 

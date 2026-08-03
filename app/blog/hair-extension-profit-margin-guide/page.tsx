@@ -5,6 +5,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Calculator, TrendingUp, PoundSterling, BarChart3 } from "lucide-react"
+import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata = {
   title: "Hair Extension Profit Margin Guide for UK Salons: Real Numbers for 2026 | D.S Hair Beauty",
@@ -37,21 +38,38 @@ export default function HairExtensionProfitMarginGuide() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          {/* ── JSON-LD ───────────────────────────── */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "headline": "Hair Extension Profit Margin Guide for UK Salons: Real Numbers for 2026",
-                "description": "Real margin breakdowns by extension method. Trade vs retail pricing compared. Calculator-ready formulas for UK salon owners.",
-                "url": "https://www.dshairbeauty.co.uk/blog/hair-extension-profit-margin-guide",
-                "datePublished": "2026-08-03",
-                "author": { "@type": "Organization", "name": "D.S Hair Beauty" },
-                "publisher": { "@type": "Organization", "name": "D.S Hair Beauty" },
-              })
-            }}
+          {/* ── JSON-LD (GEO: Article + FAQ) ──────── */}
+          <ArticleJsonLd
+            title="Hair Extension Profit Margin Guide for UK Salons: Real Numbers for 2026"
+            description="Real margin breakdowns by extension method. Trade vs retail pricing compared. Calculator-ready formulas for UK salon owners."
+            authorUrl="https://www.dshairbeauty.co.uk/about/caro-chen"
+            datePublished="2026-08-03"
+            image="https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=1200&q=80"
+            url="https://www.dshairbeauty.co.uk/blog/hair-extension-profit-margin-guide"
+          />
+          <FaqJsonLd
+            faqs={[
+              {
+                question: "What is a typical hair extension margin for a salon?",
+                answer:
+                  "For a salon buying at trade and charging for both hair and application, product margins typically run 50–80% and total service margins (hair + application) 60–82%. The same client on a retail brand might leave only 26–49% once the brand's suggested price is paid.",
+              },
+              {
+                question: "How do I calculate extension margin?",
+                answer:
+                  "Margin % = (client price − your trade cost) ÷ client price. Charge the hair and the application separately. Example: tape-in hair costs you £60 trade, application is £180, client pays £240 for hair + £180 service = £420. Margin = (420 − 240) ÷ 420 = 43% on the combined, with the hair alone at 75%.",
+              },
+              {
+                question: "Which method has the best margin?",
+                answer:
+                  "Hand-tied weft and tape-in tend to carry the strongest combined margins because re-order cycles are frequent and trade cost is low relative to service fees. K-tip and nano ring are higher-ticket per application. The 'best' method is the one your clients actually re-order.",
+              },
+              {
+                question: "Does buying wholesale really change my margin?",
+                answer:
+                  "Yes — wholesale (trade) pricing runs 30–60% below retail. On the same client and same service, moving from a retail brand to a no-minimum trade supplier can lift your margin from the high-20s% to the high-70s%. That difference is the gap between a side service and a profit centre.",
+              },
+            ]}
           />
 
           {/* ── Hero ─────────────────────────────────── */}
@@ -96,6 +114,12 @@ export default function HairExtensionProfitMarginGuide() {
           </div>
 
           <article className="max-w-4xl mx-auto px-4 md:px-6 py-16">
+            <div className="flex items-center gap-3 mb-8 p-4 bg-[#FDF8F0] border border-amber-100 rounded-xl not-prose">
+              <div className="w-10 h-10 rounded-full bg-[#4A1942] text-white flex items-center justify-center font-medium text-sm shrink-0">CC</div>
+              <p className="text-sm text-[#6B3A6E]">
+                Written by <Link href="/about/caro-chen" className="text-[#4A1942] font-semibold underline">Caro Chen</Link>, Founder &amp; Trade Director at D.S Hair &amp; Beauty · 19 years in hair extension manufacturing
+              </p>
+            </div>
 
             <div className="prose prose-lg max-w-none">
 
@@ -278,6 +302,27 @@ export default function HairExtensionProfitMarginGuide() {
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <Link href="/trade-price-calculator">Try Margin Calculator</Link>
                   </Button>
+                </div>
+              </div>
+
+              {/* ── FAQ ─────────────────────────────────── */}
+              <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Frequently Asked Questions</h2>
+              <div className="not-prose space-y-4 mb-12">
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">What is a typical hair extension margin for a salon?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">For a salon buying at trade and charging for both hair and application, product margins typically run 50–80% and total service margins 60–82%. The same client on a retail brand might leave only 26–49%.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">How do I calculate extension margin?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Margin % = (client price − your trade cost) ÷ client price. Charge the hair and the application separately. Example: tape-in hair costs you £60 trade, application £180, client pays £420 total. Margin = (420 − 240) ÷ 420 = 43% combined, hair alone 75%.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">Which method has the best margin?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Hand-tied weft and tape-in carry the strongest combined margins due to frequent re-orders and low trade cost. K-tip and nano ring are higher-ticket per application. The best method is the one your clients re-order.</p>
+                </div>
+                <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
+                  <p className="font-semibold text-[#4A1942] mb-2">Does buying wholesale really change my margin?</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Yes — wholesale pricing runs 30–60% below retail. On the same client and service, moving from a retail brand to a no-minimum trade supplier can lift margin from the high-20s% to the high-70s%.</p>
                 </div>
               </div>
 

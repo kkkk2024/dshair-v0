@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
-import { OrganizationJsonLd } from '@/components/seo/json-ld'
+import { OrganizationJsonLd, AuthorJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
 
 const inter = Inter({ 
@@ -106,6 +106,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       </head>
       <body className="font-sans antialiased">
         <OrganizationJsonLd />
+        <AuthorJsonLd />
         {children}
         <WhatsAppButton />
         <Analytics />
