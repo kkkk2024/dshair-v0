@@ -9,6 +9,9 @@ import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "
 export const metadata = {
   title: "Ponytail Hair Extensions Guide: Instant Glam Ponytails | D.S HAIR & BEAUTY",
   description: "Complete guide to ponytail hair extensions for UK salons. Instant length and volume for ponytails, buns, and braided styles. 100% Remy human hair.",
+  robots: {
+    index: false,
+  },
 }
 
 export default function PonytailExtensionsGuide() {
