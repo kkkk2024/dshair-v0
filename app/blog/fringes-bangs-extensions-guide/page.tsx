@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide" },
@@ -229,6 +230,7 @@ export default function FringesBangsExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="fringes-bangs-extensions-guide" />
         <RelatedGuides slug="fringes-bangs-extensions-guide" />
         <Footer />
         <CartDrawer />

@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide" },
@@ -226,6 +227,7 @@ export default function TapeInExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="tape-in-extensions-guide" />
         <RelatedGuides slug="tape-in-extensions-guide" />
         <Footer />
         <CartDrawer />

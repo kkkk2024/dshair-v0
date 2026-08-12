@@ -9,6 +9,7 @@ import { ArrowLeft, CheckCircle, ArrowRight, Package, Palette, TrendingUp, Users
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Private Label Hair Extensions UK: How to Build Your Own Brand in 2026 | D.S Hair Beauty",
@@ -325,6 +326,7 @@ export default function PrivateLabelHairExtensionsUK() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="private-label-hair-extensions-uk" />
         <RelatedGuides slug="private-label-hair-extensions-uk" />
         <Footer />
         <CartDrawer />

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, CheckCircle, XCircle } from "lucide-react"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
@@ -239,6 +240,7 @@ export default function RemyVsNonRemyGuide() {
 
           </article>
         </main>
+        <BlogFaqSection slug="remy-vs-nonremy-hair-guide" />
         <RelatedGuides slug="remy-vs-nonremy-hair-guide" />
         <Footer />
         <CartDrawer />

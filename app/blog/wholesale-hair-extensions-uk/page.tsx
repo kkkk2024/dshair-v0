@@ -9,6 +9,7 @@ import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
@@ -316,6 +317,7 @@ export default function WholesaleHairExtensionsUK() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="wholesale-hair-extensions-uk" />
         <RelatedGuides slug="wholesale-hair-extensions-uk" />
         <Footer />
         <CartDrawer />

@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/k-tip-extensions-guide" },
@@ -226,6 +227,7 @@ export default function KTipExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="k-tip-extensions-guide" />
         <RelatedGuides slug="k-tip-extensions-guide" />
         <Footer />
         <CartDrawer />

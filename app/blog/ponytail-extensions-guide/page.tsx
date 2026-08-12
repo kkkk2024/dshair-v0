@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/ponytail-extensions-guide" },
@@ -229,6 +230,7 @@ export default function PonytailExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="ponytail-extensions-guide" />
         <RelatedGuides slug="ponytail-extensions-guide" />
         <Footer />
         <CartDrawer />

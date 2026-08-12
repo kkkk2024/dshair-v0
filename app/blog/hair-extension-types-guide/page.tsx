@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle, Clock, Users, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
@@ -309,6 +310,7 @@ export default function HairExtensionTypesGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="hair-extension-types-guide" />
         <RelatedGuides slug="hair-extension-types-guide" />
         <Footer />
         <CartDrawer />

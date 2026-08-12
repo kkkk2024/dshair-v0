@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/weft-extensions-guide" },
@@ -231,6 +232,7 @@ export default function WeftExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="weft-extensions-guide" />
         <RelatedGuides slug="weft-extensions-guide" />
         <Footer />
         <CartDrawer />

@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/nano-ring-extensions-guide" },
@@ -226,6 +227,7 @@ export default function NanoRingExtensionsGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="nano-ring-extensions-guide" />
         <RelatedGuides slug="nano-ring-extensions-guide" />
         <Footer />
         <CartDrawer />

@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide" },
@@ -242,6 +243,7 @@ export default function HandTiedWeftPage() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="hand-tied-weft-guide" />
         <RelatedGuides slug="hand-tied-weft-guide" />
         <Footer />
         <CartDrawer />

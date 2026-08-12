@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions" },
@@ -215,6 +216,7 @@ export default function TradeVsDiyPage() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="trade-vs-diy-extensions" />
         <RelatedGuides slug="trade-vs-diy-extensions" />
         <Footer />
         <CartDrawer />

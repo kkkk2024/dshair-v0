@@ -31,6 +31,28 @@ export const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    faqs: [
+      {
+        question: "What is private label for hair extensions?",
+        answer: "Private label means extensions are made and packed under your salon's own brand — your logo, your colour ring, your packaging. A manufacturing partner handles production and quality; you own the brand, the pricing, and the client relationship. It lets salons move from reselling someone else's name to building an asset they control.",
+      },
+      {
+        question: "How much does it cost to start a private label hair extension line?",
+        answer: "Startup cost is driven by the initial sample order and branding rather than large tooling fees. A sensible first order is sized to your client base so you are not sitting on stock. Because you set the retail price and keep the margin, the line typically pays back through repeat take-home re-orders rather than a single upfront outlay.",
+      },
+      {
+        question: "What is a typical private label MOQ?",
+        answer: "Minimum order quantities vary by method and packaging, but a good manufacturing partner helps you size a starting order to your actual client demand — often a small sample run first, then ongoing replenishment. Avoid suppliers that force a large MOQ before you have validated demand with your own clients.",
+      },
+      {
+        question: "How long does private label production take?",
+        answer: "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. Our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
+      },
+      {
+        question: "Can a small salon start a private label line?",
+        answer: "Yes. Many of the salon brands we have helped started as a single-chair independent with one well-chosen sample order. Private label scales with you — start small, prove demand with your existing clients, then expand the range as re-orders build.",
+      },
+    ],
   },
   {
     slug: "hair-extension-profit-margin-guide",
@@ -41,6 +63,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    faqs: [
+      {
+        question: "What is the average profit margin on hair extensions?",
+        answer: "Salon net margins typically sit at 8–15% of turnover overall, but extension services and take-home re-orders carry higher margin than many colour services because the hair is a recurring product line. Aim for at least 10% net, with 12–15% as a strong target for a salon with a healthy extension or retail line.",
+      },
+      {
+        question: "Which hair extension method is most profitable for salons?",
+        answer: "Tape-in and nano ring offer fast application (more appointments per day) and a 6–8 week move-up cycle, making them highly profitable and predictable. K-tip and hand-tied weft command premium prices and longer wear, so they are the highest-ticket. The most profitable salons blend a fast-turn method with a premium one.",
+      },
+      {
+        question: "How do salons price extensions for profit?",
+        answer: "Use cost-plus as a baseline: recover the hair at a transparent 2.5–4× markup plus a timed application fee. Layer value-based pricing on premium methods. Always price the hair as its own line so you keep the recurring re-order margin instead of folding it into the service price at cost.",
+      },
+      {
+        question: "What erodes salon extension margins?",
+        answer: "The usual leaks are flat 'plus £X' uplifts that ignore application time, giving the hair away inside the service price, no rebooking of the move-up, and discounting premium methods. Closing these lifts profit per client without raising headline prices.",
+      },
+    ],
   },
   {
     slug: "hair-extensions-trade-account",
@@ -51,6 +91,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    faqs: [
+      {
+        question: "What is a hair extension trade account?",
+        answer: "A trade account gives verified salons and stylists access to professional (trade) pricing, priority support, and often training and colour-matching help. It is the standard way professional salons and technicians source extensions rather than buying retail.",
+      },
+      {
+        question: "Do I need a trade account to buy salon extensions?",
+        answer: "You do not strictly need one, but without trade pricing you pay retail and your margin shrinks. A trade account also usually unlocks MOQ flexibility, faster replenishment, and support that protects your service quality — all of which matter once extensions are a real revenue line.",
+      },
+      {
+        question: "What should I look for in a trade account?",
+        answer: "Look for transparent pricing tiers, reasonable MOQs, reliable lead times, genuine 100% Remy human hair, and real support (training, colour matching, returns). Red flags include vague quality claims, no MOQ clarity, and pressure to buy large stock upfront.",
+      },
+      {
+        question: "Are trade accounts worth it for small salons?",
+        answer: "Yes, if you sell or plan to sell extensions. Even a single trained stylist can open a whole new revenue line, and trade pricing is what makes the margin work. Start with a supplier that supports small starting orders rather than forcing volume.",
+      },
+    ],
   },
   {
     slug: "salon-hair-extension-stockist-uk",
@@ -61,6 +119,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "11 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+    faqs: [
+      {
+        question: "What is a hair extension stockist?",
+        answer: "A stockist is a reseller that holds extension inventory and sells it on, often under the supplier's brand. Salons buy from a stockist for convenience and faster local access, though usually at a higher unit cost than buying closer to the source.",
+      },
+      {
+        question: "Should my salon buy from a stockist or direct from a factory?",
+        answer: "If you need small quantities and instant availability, a stockist is convenient. If you want better margin, private-label options, and a direct relationship, buying factory-direct (or via a trade account with a manufacturer) is usually stronger long term. Many salons start with a stockist and move direct as volume grows.",
+      },
+      {
+        question: "How do I choose a reliable extension stockist?",
+        answer: "Check that they supply 100% Remy human hair consistently, publish lead times, and can colour-match. Ask for references from other salons. A reliable stockist protects your service result; an inconsistent one damages your reputation with clients.",
+      },
+      {
+        question: "What is the difference between a stockist and a distributor?",
+        answer: "Both resell supplier product, but distributors typically operate at larger volumes with wider geographic coverage, while a stockist may be a local salon-supplies shop. For a salon, the practical difference is price, MOQ, and how quickly you can replenish.",
+      },
+    ],
   },
   {
     slug: "how-to-start-selling-hair-extensions-salon",
@@ -71,6 +147,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "13 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    faqs: [
+      {
+        question: "How do I start selling hair extensions in my salon?",
+        answer: "Start with one or two methods your team can master (tape-in and nano ring are common entry points), get proper training, choose a reliable trade supplier, set clear pricing, and build a consultation + rebooking routine. A step-by-step roadmap is in our in-salon extension guide.",
+      },
+      {
+        question: "Do I need special training to offer extensions?",
+        answer: "Yes — methods like K-tip, nano, tape-in and weft require accredited training for safe, good-looking results. Clip-in and hair toppers need far less. Train at least one stylist properly before promoting the service; poor application is the fastest way to lose extension clients.",
+      },
+      {
+        question: "What is the best extension method to start with?",
+        answer: "Tape-in and nano ring are popular starting points: they are versatile, relatively fast to learn and apply, and suit most clients. They also create a 6–8 week maintenance cycle that builds recurring revenue from the first client.",
+      },
+      {
+        question: "How much does it cost to start an extension service?",
+        answer: "Costs are mostly training, a starter hair order, and application tools — not large fit-out. Because clients re-order and return for move-ups, the service funds itself quickly. Most salons recover setup cost within the first few clients.",
+      },
+    ],
   },
   // ===== 2026年8月升级 — Wholesale 指南 =====
   {
@@ -82,6 +176,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+    faqs: [
+      {
+        question: "What does wholesale mean for hair extensions?",
+        answer: "Wholesale means buying extensions in volume at trade pricing rather than single retail units. For salons it usually means a trade account or a bulk order that lowers your per-unit cost and improves margin on every service and re-order.",
+      },
+      {
+        question: "Is it cheaper to buy extensions wholesale?",
+        answer: "Generally yes — wholesale or factory-direct trade pricing is lower than retail. The saving only realises if your MOQ matches your actual demand, so size your order to client volume rather than buying the largest discount tier and sitting on stock.",
+      },
+      {
+        question: "What is a realistic wholesale MOQ?",
+        answer: "It varies by supplier and method. A good partner offers flexible starting quantities and grows with you. Be wary of anyone insisting on a Very large minimum before you have validated demand with your own clients.",
+      },
+      {
+        question: "Factory-direct vs wholesale distributor — which is better?",
+        answer: "Factory-direct (or a manufacturer's trade programme) usually gives the best margin and private-label options; distributors add convenience and local stock at a higher unit cost. Many salons use a manufacturer trade account as the primary source and a local distributor for urgent top-ups.",
+      },
+    ],
   },
   {
     slug: "grow-profitable-hair-salon-uk",
@@ -130,6 +242,118 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // ===== 2026年8月 — 沙龙业务支撑文 (Salon Business cluster) =====
+  {
+    slug: "salon-extension-pricing-guide",
+    title: "How to Price Hair Extension Services in Your Salon",
+    excerpt:
+      "A practical UK pricing framework for salon extension services: cost-plus vs value-based models, method-by-method price bands, and an upsell ladder that lifts every ticket.",
+    category: "Business",
+    readTime: "11 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    faqs: [
+      {
+        question: "How should a salon price hair extension services in the UK?",
+        answer:
+          "Use cost-plus as your baseline: recover the hair at a transparent 2.5–4× markup plus a timed application fee for the stylist's hours. Layer value-based pricing on premium, long-wear methods (K-tip, hand-tied weft, bridal) where clients pay for the transformation, not just the cost. Always price the hair as its own line so you keep the recurring re-order margin.",
+      },
+      {
+        question: "What is a good profit margin on hair extension services?",
+        answer:
+          "Aim for a net salon margin of at least 10%, with 12–15% as a strong target. Extension services help because the hair re-order and the 6–8 week move-up cycle create recurring, high-margin revenue. Below 8% net leaves no buffer for rent rises or quiet seasons.",
+      },
+      {
+        question: "Should hair extensions be priced separately from the application?",
+        answer:
+          "Yes. Pricing the hair as a separate line (recovered at a retail-style multiplier) and the application as a timed service fee protects your margin and makes the value of your skill visible to the client. Bundling the hair into the service price at cost forfeits the recurring re-order profit.",
+      },
+      {
+        question: "How much should I charge for tape-in vs K-tip extensions?",
+        answer:
+          "Typical UK full-head install bands including hair: tape-in £200–£400, nano ring £250–£450, K-tip £350–£650, hand-tied/butterfly weft £350–£600, clip-in £90–£220 (sold, not fitted). Move-ups and take-home re-orders recur every 6–12 weeks. Check these against your own hair cost and local wage/rent base.",
+      },
+      {
+        question: "How do I price a private label extension line?",
+        answer:
+          "With private label you set the retail price and keep the margin — the manufacturing partner supplies under your brand. Price using the same cost-plus logic but with your own brand markup; because clients re-order by your name, the margin stays with your salon. See our private label guide for MOQs and launch steps.",
+      },
+    ],
+  },
+  {
+    slug: "salon-retail-attachment-guide",
+    title: "How to Increase Your Salon's Retail Attach Rate",
+    excerpt:
+      "A practical UK guide to lifting salon retail attach rate to 25–35%: the checkout conversation, bundling, merchandising, staff incentives, and why extension aftercare is your highest-margin retail engine.",
+    category: "Business",
+    readTime: "10 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+    faqs: [
+      {
+        question: "What is a good retail attach rate for a hair salon?",
+        answer:
+          "A healthy UK salon sits at 25–35% — meaning a quarter to a third of appointments leave with a take-home product. Under 10% is common for service-only salons but leaves most of the available margin on the table. Retail is the highest-margin revenue a salon earns because it adds no chair time.",
+      },
+      {
+        question: "How do I increase my salon's retail attach rate?",
+        answer:
+          "Make the recommendation at the basin and styling chair, not at the till — frame it around the client's result ('shall I add the aftercare kit so they last longer?'). Bundle treatment + take-home, merchandise at eye level by the mirror, set a monthly team target with a small bonus, and track attach % weekly. Extension aftercare is the easiest sale because clients need it by definition.",
+      },
+      {
+        question: "What should a salon sell at the checkout?",
+        answer:
+          "Sulphate-free shampoo and conditioner, a loop/extension brush, a silk pillowcase, and a take-home top-up of the client's method. For extension clients these are not optional — they protect the result and drive the re-order. Build a kit into every install so attach rate rises automatically.",
+      },
+      {
+        question: "Why is extension aftercare good for retail sales?",
+        answer:
+          "Extension clients require aftercare by definition — sulphate-free products, a specialist brush, and a silk pillowcase. That makes the retail recommendation natural rather than pushy, and the products run out every 4–8 weeks, creating predictable repeat purchases. A private label line turns that into a brand asset you own.",
+      },
+      {
+        question: "Should my salon start a private label retail line?",
+        answer:
+          "If you already sell take-home products and have a loyal client base, private label is often the next high-leverage step: you set the retail price, clients re-order by your name, and the margin stays with your salon. Start with a small, well-chosen sample order and grow into a full line.",
+      },
+    ],
+  },
+  {
+    slug: "salon-client-retention-rebooking-guide",
+    title: "Salon Client Retention & Rebooking: Fill Your Columns",
+    excerpt:
+      "A practical UK guide to salon client retention and rebooking: the cost of lost clients, the front-desk rebooking script, recall flows, and why the 6–8 week extension cycle is your retention engine.",
+    category: "Business",
+    readTime: "10 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    faqs: [
+      {
+        question: "Why is client retention important for a salon?",
+        answer:
+          "Acquiring a new client can cost 5–7× more than keeping an existing one, and a client who returns every 6–8 weeks is worth far more over a year than a single visit won through marketing. Retention compounds: full columns need less ad spend, and recurring clients stabilise cash flow.",
+      },
+      {
+        question: "When should a salon rebook a client?",
+        answer:
+          "Before they leave the chair, while the result is fresh and they are happy. A simple 'shall I put the same slot in the diary so it's protected?' books the next visit at the highest-converting moment. Make rebooking the default, not the exception, and target a 60%+ rebooking rate.",
+      },
+      {
+        question: "How do extensions improve client retention?",
+        answer:
+          "Extensions create a built-in 6–8 week maintenance cycle (move-ups and re-orders), so clients return on a rhythm without being chased. Because they invest in your specific method and aftercare, switching cost is higher — they are in a relationship, not a one-off transaction. Tape-in and nano return every 6–8 weeks; K-tip and weft every 8–12.",
+      },
+      {
+        question: "What is a good salon rebooking rate?",
+        answer:
+          "Aim to rebook 60%+ of clients before they leave, and retain 50%+ of extension clients on their 6–8 week cycle. Track these monthly alongside a win-back flow for anyone who lapses past 10 weeks — a single 'we missed you' nudge recovers far more than a new-client ad.",
+      },
+      {
+        question: "How do I win back lapsed salon clients?",
+        answer:
+          "Run a win-back flow at around 10 weeks: a friendly SMS, email, or personal WhatsApp to your top clients offering to rebook. Keep it relationship-led, not discount-led. Most lapsed clients simply forgot or drifted — a timely, low-pressure nudge brings a high proportion back.",
+      },
+    ],
+  },
   // ===== 更早的游离文章 =====
   {
     slug: "how-to-choose-hair-extension-supplier",
@@ -140,6 +364,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     date: "2026-06-01",
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
+    faqs: [
+      {
+        question: "How do I choose a hair extension supplier?",
+        answer: "Prioritise consistent 100% Remy human hair, transparent MOQs and lead times, real training and colour-matching support, and verifiable references from other salons. Quality consistency matters more than the lowest headline price.",
+      },
+      {
+        question: "What questions should I ask a supplier?",
+        answer: "Ask: is the hair 100% Remy and cuticle-aligned? What are the true MOQ and lead times? Do you offer colour matching and training? What is the returns policy? Can you support a private label line later? Their answers reveal whether they are a manufacturing partner or just a reseller.",
+      },
+      {
+        question: "What are red flags when choosing a supplier?",
+        answer: "Vague quality claims, no sample policy, unclear lead times, pressure to buy huge stock, and inability to colour-match are all warning signs. So is a price that is dramatically below the market for 'Remy' hair — it usually is not genuinely Remy.",
+      },
+      {
+        question: "Should I prioritise price or quality?",
+        answer: "Quality first. Inconsistent or non-Remy hair causes tangling, poor blending, and client complaints that cost you far more than the saving. A reliable Remy human hair supplier protects your reputation and your re-order revenue.",
+      },
+    ],
   },
   {
     slug: "hair-extension-types-guide",
@@ -150,6 +392,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "15 min read",
     date: "2026-05-20",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+    faqs: [
+      {
+        question: "What are the main types of hair extensions?",
+        answer: "The main professional types are tape-in, K-tip (keratin bond), nano ring / I-tip, hand-tied and machine weft, butterfly weft, clip-in, hair toppers, and ponytails / fringes. Each suits different hair types, budgets, and client goals.",
+      },
+      {
+        question: "Which extension type is best for beginners?",
+        answer: "For salons, tape-in and nano ring are the most approachable to learn and apply, and they suit most clients. For clients wanting to self-apply at home, clip-ins and toppers are the easiest entry point with zero professional training required.",
+      },
+      {
+        question: "What is the difference between temporary and semi-permanent extensions?",
+        answer: "Temporary methods (clip-in, ponytail, fringe) are removed daily and need no salon visit. Semi-permanent methods (tape-in, nano, K-tip, weft) are applied by a stylist and worn for weeks with move-ups — they create recurring salon revenue.",
+      },
+      {
+        question: "How do I choose an extension type for my client?",
+        answer: "Match to hair type, lifestyle, and budget: fine hair suits nano or hand-tied weft; clients wanting zero commitment suit clip-ins; those wanting long wear suit K-tip or weft. Our method comparison guide walks through the trade-offs.",
+      },
+    ],
   },
   // ===== 2026年5月新增文章 =====
   {
@@ -161,6 +421,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     date: "2026-05-15",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    faqs: [
+      {
+        question: "What is the difference between Remy and non-Remy hair?",
+        answer: "Remy hair has its cuticles intact and aligned in one direction, which prevents tangling and keeps the hair smooth and long-lasting. Non-Remy hair has cuticles stripped or mixed, so it tangles, matts, and degrades quickly — even if it looks fine at first.",
+      },
+      {
+        question: "Why is Remy hair more expensive?",
+        answer: "Remy hair is sourced and processed to preserve the cuticle alignment, which is more labour-intensive and yields a far longer-lasting product. The higher cost is justified by client satisfaction, fewer complaints, and better re-order rates for salons.",
+      },
+      {
+        question: "How can I tell if hair is genuinely Remy?",
+        answer: "Genuine Remy hair stays smooth and tangle-free after washing and wear, blends naturally, and holds style. Be skeptical of very cheap 'Remy' claims, and ask suppliers for provenance and a sample you can wash and test before committing.",
+      },
+      {
+        question: "Is non-Remy hair ever acceptable?",
+        answer: "For professional salon use, no — non-Remy tangles and damages a salon's reputation. It may appear in very low-cost DIY products, but salons should standardise on 100% Remy human hair to protect results and re-bookings.",
+      },
+    ],
   },
   {
     slug: "hair-extension-aftercare-guide",
@@ -171,6 +449,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     date: "2026-05-01",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+    faqs: [
+      {
+        question: "How do I care for hair extensions?",
+        answer: "Use sulphate-free shampoo and conditioner, a specialist loop brush, and avoid oily products near bonds or tapes. Sleep with hair loosely tied or on a silk pillowcase, and follow the method's maintenance schedule (move-ups every 6–12 weeks).",
+      },
+      {
+        question: "What products should extension clients use?",
+        answer: "Sulphate-free shampoo and conditioner, a loop/extension brush, a silk pillowcase, and a leave-in or heat-protectant as needed. Selling the right aftercare kit at the appointment protects the result and drives a high-margin retail re-order.",
+      },
+      {
+        question: "How often should extensions be maintained?",
+        answer: "Tape-in and nano typically need a move-up every 6–8 weeks; K-tip and weft every 8–12 weeks as natural hair grows. Booking these in advance keeps columns full and builds predictable recurring revenue.",
+      },
+      {
+        question: "Can clients wash and heat-style extensions?",
+        answer: "Yes — 100% Remy human hair extensions can be washed, conditioned, and heat-styled like natural hair. Recommend sulphate-free products and heat protection, and avoid oil-based products near bonds or adhesive.",
+      },
+    ],
   },
   {
     slug: "best-extensions-fine-hair-uk",
@@ -181,6 +477,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     date: "2026-05-10",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+    faqs: [
+      {
+        question: "What are the best extensions for fine hair?",
+        answer: "Nano rings, hand-tied weft (and the ultra-thin butterfly weft), and tape-ins are the most flattering for fine or thin hair because they are small, flat, and discreet. Avoid heavy methods that pull on already-delicate strands.",
+      },
+      {
+        question: "Are tape-in extensions good for thin hair?",
+        answer: "Yes, when applied correctly with the right weight. Tape-ins lie flat and distribute tension well, but fine hair needs a conservative gram weight and careful placement to avoid stress on the natural hair.",
+      },
+      {
+        question: "Will extensions damage fine hair?",
+        answer: "Any method can cause damage if applied or maintained poorly. For fine hair, choose a low-tension method (nano, hand-tied/butterfly weft, tape-in), use the correct weight, and follow a proper move-up schedule. A trained stylist is essential.",
+      },
+      {
+        question: "What weight of extensions suits fine hair?",
+        answer: "Fine hair suits lighter sets — typically 100–140g for clip-ins, and fewer weft rows or smaller bond counts for semi-permanent methods. Overloading fine hair causes discomfort and traction; a conservative install builds trust and healthy growth.",
+      },
+    ],
   },
   // ===== 2025年文章 =====
   {
@@ -192,6 +506,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     date: "2026-04-20",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    faqs: [
+      {
+        question: "What are the top hair extension colours for 2026?",
+        answer: "For 2026, the shades clients ask for most are dimensional balayage blends, cool icy blondes, warm cinnamon coppers, and natural brunettes with subtle highlights. A curated 5-shade edit covers the majority of UK salon demand.",
+      },
+      {
+        question: "What is the Manchester Edit colour collection?",
+        answer: "The Manchester Edit is a 2026 colour collection curated for Manchester salons — a focused set of the five shades clients request most, from Icy Manchester platinum to Cinnamon Copper, designed to simplify stock decisions for busy salons.",
+      },
+      {
+        question: "How do I choose extension shades for my salon?",
+        answer: "Stock the shades your clients actually request, plus balayage blends for dimensional looks. A 31-shade chart and free colour-matching help you cover most clients without over-investing in slow-moving colours.",
+      },
+      {
+        question: "Are balayage extension shades popular in 2026?",
+        answer: "Yes — balayage and ombré blends are among the most requested looks, because they blend naturally with highlighted natural hair. Pre-coloured balayage weft saves in-salon colouring time and chemical exposure.",
+      },
+    ],
   },
   {
     slug: "hair-topper-guide",
@@ -532,6 +864,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     date: "2025-02-10",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+    faqs: [
+      {
+        question: "Can you get balayage hair extensions?",
+        answer: "Yes. Balayage and ombré extension shades are pre-coloured to mimic hand-painted highlights, so they blend with dimensional natural hair. Pre-coloured balayage weft is the easiest way to serve the 70%+ of clients who request balayage.",
+      },
+      {
+        question: "How do you blend balayage with extensions?",
+        answer: "Match the extension's root tone to the client's root colour and let the balayage blend do the dimensional work through the lengths. Pre-coloured balayage weft removes the need to in-salon colour, which saves time and avoids chemical damage to the hair.",
+      },
+      {
+        question: "What are balayage weft extensions?",
+        answer: "Balayage weft are weft extensions pre-coloured in a root-to-tip gradient. They give a seamless balayage finish when sewn or beaded in, and are popular because they look natural from day one without salon toning.",
+      },
+      {
+        question: "Are pre-coloured balayage extensions worth it?",
+        answer: "For salons, yes — they cut appointment time, remove chemical exposure and colour-correction risk, and give consistent results. Clients get a natural balayage blend immediately, and the salon avoids the variables of in-salon lightening.",
+      },
+    ],
   },
   {
     slug: "hair-extension-methods-comparison",
@@ -542,6 +892,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     date: "2025-02-05",
     image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+    faqs: [
+      {
+        question: "Which hair extension method is best?",
+        answer: "There is no single best method — it depends on hair type, lifestyle, and budget. Tape-in and nano suit most clients and are fast to apply; K-tip and weft suit those wanting long wear; clip-ins suit commitment-free volume. Match the method to the client.",
+      },
+      {
+        question: "What is the least damaging extension method?",
+        answer: "Low-tension, heat-free methods (nano ring, hand-tied/butterfly weft, tape-in) are gentlest when applied and maintained correctly. The 'least damaging' outcome depends most on a trained stylist, correct weight, and a proper move-up schedule.",
+      },
+      {
+        question: "How long does each extension method last?",
+        answer: "Tape-in and nano: 6–8 weeks between move-ups. K-tip and weft: 8–12 weeks. Clip-ins: removed daily but the hair lasts 6–12 months with care. The hair itself can last far longer than the wear cycle with proper aftercare.",
+      },
+      {
+        question: "Which method is most profitable for salons?",
+        answer: "Tape-in and nano offer fast application and a 6–8 week recurring cycle, making them highly profitable and predictable. K-tip and weft command premium prices for higher tickets. Most profitable salons run a fast method plus a premium one.",
+      },
+    ],
   },
   {
     slug: "manchester-hair-extension-supplier",
@@ -552,6 +920,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     date: "2025-01-20",
     image: "https://images.unsplash.com/photo-1470259078422-826894b933aa?w=800&q=80",
+    faqs: [
+      {
+        question: "Are there hair extension suppliers in Manchester?",
+        answer: "Yes — Manchester has trade suppliers serving salons across the North West, including factory-direct manufacturers offering 100% Remy human hair, trade pricing, and salon support. Many also ship nationwide with express delivery.",
+      },
+      {
+        question: "Why choose a local Manchester supplier?",
+        answer: "A local supplier can mean faster replenishments, easier colour matching, and a direct relationship with someone who understands the local market. For urgent top-ups, local stock eliminates wait time that costs you a sale.",
+      },
+      {
+        question: "Do Manchester salons get faster delivery?",
+        answer: "Often yes — local or UK-based stock reduces transit time versus overseas ordering. Even with factory-direct import, a UK partner with express (3–5 day) fulfilment keeps promises to clients.",
+      },
+      {
+        question: "What should Manchester salons look for in a supplier?",
+        answer: "The same as any UK salon: consistent 100% Remy human hair, transparent MOQs and lead times, colour-matching and training support, and verifiable references. Proximity is a bonus, not a substitute for quality.",
+      },
+    ],
   },
   {
     slug: "trade-vs-diy-extensions",
@@ -562,6 +948,24 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     date: "2025-01-10",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    faqs: [
+      {
+        question: "What is the difference between trade and DIY extensions?",
+        answer: "Trade (professional-grade) extensions are supplied to vetted salons and stylists at professional pricing with support and quality guarantees. DIY extensions are mass-market retail products, often lower grade, with no professional backing.",
+      },
+      {
+        question: "Why should salons use trade-grade extensions?",
+        answer: "Trade-grade 100% Remy human hair gives better blending, longer wear, and fewer client complaints — which protects your reputation and your re-order revenue. DIY-grade hair often tangles and reflects poorly on the salon that applied it.",
+      },
+      {
+        question: "Can clients apply extensions themselves?",
+        answer: "Some methods can — clip-ins and hair toppers are designed for self-application with no training. Semi-permanent methods (tape-in, nano, K-tip, weft) should be applied by a trained stylist to avoid damage and poor results.",
+      },
+      {
+        question: "Is trade hair better quality than DIY?",
+        answer: "Typically yes. Trade-grade hair is usually 100% Remy, cuticle-aligned, and consistency-checked, whereas DIY retail hair is often mixed grade and varies batch to batch. For a salon, the quality difference shows directly in client satisfaction.",
+      },
+    ],
   },
 ]
 

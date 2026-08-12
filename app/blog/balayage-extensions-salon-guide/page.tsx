@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide" },
@@ -269,6 +270,7 @@ export default function BalayageExtensionsPage() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="balayage-extensions-salon-guide" />
         <RelatedGuides slug="balayage-extensions-salon-guide" />
         <Footer />
         <CartDrawer />

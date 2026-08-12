@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hair-extension-methods-comparison" },
@@ -265,6 +266,7 @@ export default function MethodsComparisonPage() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="hair-extension-methods-comparison" />
         <RelatedGuides slug="hair-extension-methods-comparison" />
         <Footer />
         <CartDrawer />

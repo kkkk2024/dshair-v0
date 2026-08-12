@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, CheckCircle2, Users, TrendingDown, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hair-topper-guide" },
@@ -424,6 +425,7 @@ export default function HairTopperGuidePage() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="hair-topper-guide" />
         <RelatedGuides slug="hair-topper-guide" />
         <Footer />
         <CartDrawer />

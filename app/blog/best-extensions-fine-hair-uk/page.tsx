@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, ThumbsUp, Users } from "lucide-react"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Best Hair Extensions for Fine Hair UK: Expert Guide 2026 | D.S HAIR & BEAUTY",
@@ -398,6 +399,7 @@ export default function FineHairExtensionsGuide() {
 
           </article>
         </main>
+        <BlogFaqSection slug="best-extensions-fine-hair-uk" />
         <RelatedGuides slug="best-extensions-fine-hair-uk" />
         <Footer />
         <CartDrawer />

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Palette } from "lucide-react"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026" },
@@ -325,6 +326,7 @@ export default function ManchesterColourCollection2026() {
 
           </article>
         </main>
+        <BlogFaqSection slug="manchester-colour-collection-2026" />
         <RelatedGuides slug="manchester-colour-collection-2026" />
         <Footer />
         <CartDrawer />

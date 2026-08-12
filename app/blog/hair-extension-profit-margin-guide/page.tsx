@@ -9,6 +9,7 @@ import { ArrowLeft, CheckCircle, ArrowRight, Calculator, TrendingUp, PoundSterli
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "Hair Extension Profit Margin Guide for UK Salons: Real Numbers for 2026 | D.S Hair Beauty",
@@ -347,6 +348,7 @@ export default function HairExtensionProfitMarginGuide() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="hair-extension-profit-margin-guide" />
         <RelatedGuides slug="hair-extension-profit-margin-guide" />
         <Footer />
         <CartDrawer />

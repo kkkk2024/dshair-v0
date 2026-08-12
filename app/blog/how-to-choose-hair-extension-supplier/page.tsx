@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle, XCircle, Phone } from "lucide-react"
 import Image from "next/image"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
@@ -406,6 +407,7 @@ export default function HowToChooseHairExtensionSupplier() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="how-to-choose-hair-extension-supplier" />
         <RelatedGuides slug="how-to-choose-hair-extension-supplier" />
         <Footer />
         <CartDrawer />

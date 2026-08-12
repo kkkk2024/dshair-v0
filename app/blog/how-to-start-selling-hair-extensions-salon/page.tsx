@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, GraduationCap, Users, BadgePercent } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import { RelatedGuides } from "@/components/blog/related-guides"
+import { BlogFaqSection } from "@/components/blog/blog-faq-section"
 
 export const metadata = {
   title: "How to Start Selling Hair Extensions in Your Salon (Step-by-Step) | D.S Hair Beauty",
@@ -260,6 +261,7 @@ export default function HowToStartSellingHairExtensionsSalon() {
             </div>
           </article>
         </main>
+        <BlogFaqSection slug="how-to-start-selling-hair-extensions-salon" />
         <RelatedGuides slug="how-to-start-selling-hair-extensions-salon" />
         <Footer />
         <CartDrawer />
