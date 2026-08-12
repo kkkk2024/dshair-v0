@@ -328,6 +328,41 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
         '@type': 'Organization',
         name: 'D.S HAIR & BEAUTY',
       },
+      // Google Merchant Listings require both return-policy and shipping
+      // references on every Offer. Inline the policy/service objects with
+      // a URL pointer so the schema validates without extra round-trips.
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        name: 'D.S Hair & Beauty 30-Day Return Policy',
+        url: `${BASE_URL}/returns`,
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        name: 'UK Standard Delivery',
+        url: `${BASE_URL}/shipping`,
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'GB',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 1,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 3,
+            unitCode: 'DAY',
+          },
+        },
+      },
     },
     ...(product.reviews > 0 && {
       aggregateRating: {
@@ -359,6 +394,16 @@ interface BreadcrumbJsonLdProps {
   items: BreadcrumbItem[]
 }
 
+// Google BreadcrumbList spec requires `item` to be a fully-qualified URL.
+// Some callers pass relative paths (`/products/foo`); normalise them here
+// so we never ship invalid URLs to Search Console.
+function toAbsoluteUrl(url: string): string {
+  if (!url) return url
+  if (/^https?:\/\//i.test(url)) return url
+  const path = url.startsWith('/') ? url : `/${url}`
+  return `${BASE_URL}${path}`
+}
+
 export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
   const data = {
     '@context': 'https://schema.org',
@@ -367,7 +412,7 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: toAbsoluteUrl(item.url),
     })),
   }
 

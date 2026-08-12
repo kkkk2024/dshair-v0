@@ -229,8 +229,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <BreadcrumbJsonLd
         items={[
           { name: 'Home', url: 'https://www.dshairbeauty.co.uk' },
-          { name: product.category || 'Products', url: `/collections/all` },
-          { name: product.name, url: `/products/${product.slug}` },
+          { name: product.category || 'Products', url: 'https://www.dshairbeauty.co.uk/collections/all' },
+          { name: product.name, url: `https://www.dshairbeauty.co.uk/products/${product.slug}` },
         ]}
       />
       <div className="flex min-h-screen flex-col">
