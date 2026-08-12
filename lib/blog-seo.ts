@@ -354,6 +354,71 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // ===== 2026年8月 — 沙龙业务支撑文 (Salon Business cluster, 第二批) =====
+  {
+    slug: "salon-extension-training-sop",
+    title: "How to Train Your Salon Team on Hair Extensions: A Complete SOP",
+    excerpt:
+      "A practical SOP for training salon staff on hair extensions: method roadmap, certification checklist, quality control, and how to keep results consistent across every stylist.",
+    category: "Business",
+    readTime: "11 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    faqs: [
+      {
+        question: "Do salon staff need formal training to fit extensions?",
+        answer: "Yes — methods like K-tip, nano, tape-in and weft require proper training for safe, good-looking, long-lasting results. Clip-in and hair toppers need far less. Train at least one stylist properly and to a written standard before promoting the service; poor application is the fastest way to lose extension clients.",
+      },
+      {
+        question: "What is the best extension method to learn first?",
+        answer: "Tape-in and nano ring are the best starting points: versatile, relatively fast to learn and apply, and suitable for most clients. They also create a 6–8 week maintenance cycle that builds recurring revenue from the first client. Layer in K-tip and hand-tied weft once the team is consistent.",
+      },
+      {
+        question: "How long does it take to train a stylist on extensions?",
+        answer: "Most stylists reach a competent, supervised standard on tape-in and nano within a few focused training days plus practice on model heads, then need several live clients to build speed and confidence. Premium methods (K-tip, hand-tied weft) take longer. Use a certification checklist rather than a fixed timeline.",
+      },
+      {
+        question: "What should an extension SOP include?",
+        answer: "A salon extension SOP should cover the whole client journey: consultation and colour-match, prep and sectioning, method-specific application standards (e.g. placement and tension), blend and finish, and aftercare with a pre-booked move-up. Writing it down is what keeps results consistent across every stylist.",
+      },
+      {
+        question: "How do I keep extension results consistent across stylists?",
+        answer: "Standardise on a written SOP, certify stylists against a sign-off checklist before they take paying clients, require before/after photos for first installs, track gram weight and method per client, and run a 48-hour check-in. Consistent 100% Remy human hair matters too — technique cannot save inconsistent product.",
+      },
+    ],
+  },
+  {
+    slug: "salon-high-ticket-extensions",
+    title: "How to Sell High-Ticket Hair Extensions in Your Salon",
+    excerpt:
+      "A UK playbook for selling premium hair extensions: value-based consultation, premium methods (K-tip, hand-tied weft, bridal), experience design, and lifting your average ticket without discounting.",
+    category: "Business",
+    readTime: "11 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+    faqs: [
+      {
+        question: "What are high-ticket hair extensions?",
+        answer: "High-ticket means a higher average ticket per client — driven by premium methods (K-tip, hand-tied and butterfly weft, bridal), longer wear, and an upgraded experience — not by inflating the price of a basic fit. The lever is method mix and experience, so the same chair hours earn more.",
+      },
+      {
+        question: "Which extension methods command the highest price?",
+        answer: "K-tip (keratin bond), hand-tied weft, butterfly weft, and bespoke bridal work command the highest tickets because of the skill, wear time, and result they deliver. Tape-in and nano are the high-volume everyday methods; the premium stack is where margin per appointment is strongest.",
+      },
+      {
+        question: "How do I sell premium extensions without sounding pushy?",
+        answer: "Lead with the outcome, not a price list. Use a value-based consultation: ask what the client wants to feel, show before/after proof and a colour ring, then give a clear expert recommendation. Clients pay a premium for expertise and a result they can see — not for a hard sell.",
+      },
+      {
+        question: "How much can a salon charge for premium extensions?",
+        answer: "Typical UK full-head premium installs including hair run roughly £350–£650 for K-tip and £350–£600 for hand-tied or butterfly weft, with bridal bespoke work higher. Price on the transformation and bundle aftercare plus a pre-paid move-up rather than competing on the headline number.",
+      },
+      {
+        question: "Should I discount premium extension services?",
+        answer: "No. Discounting premium methods trains clients to wait for the next offer and signals the price was never real. Hold the line, bundle value (aftercare, check-in, move-up package) instead, and market to occasions like weddings and holidays where clients expect to invest.",
+      },
+    ],
+  },
   // ===== 更早的游离文章 =====
   {
     slug: "how-to-choose-hair-extension-supplier",
