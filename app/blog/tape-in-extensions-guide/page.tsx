@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide" },
@@ -94,13 +96,8 @@ export default function TapeInExtensionsGuide() {
               </p>
 
               {/* ── Hero Image ────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
-                  alt="Tape-in hair extensions professional application"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Tape-in hair extensions professional application" fill className="object-cover" />
               </div>
 
               {/* ── Who Is It For ─────────────────── */}
@@ -229,6 +226,7 @@ export default function TapeInExtensionsGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="tape-in-extensions-guide" />
         <Footer />
         <CartDrawer />
       </div>

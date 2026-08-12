@@ -183,7 +183,7 @@ const faqs = [
   },
   {
     q: "How quickly can I stock my salon?",
-    a: "Selected lines are UK-warehoused (preparing) with dispatch in 1-2 business days; the full range ships factory-direct via express (3–5 days). Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
+    a: "Selected lines are UK warehouse launching with express 3–5 day delivery; the full range ships factory-direct via express (3–5 days). Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
   },
   {
     q: "What's your MOQ for salon accounts?",

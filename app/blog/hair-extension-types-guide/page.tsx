@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, Clock, Users, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Hair Extension Types Explained: A Complete Guide for Salon Professionals | D.S Hair Beauty",
@@ -133,13 +135,8 @@ export default function HairExtensionTypesGuide() {
 
               {/* ── Tape-In ─────────────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-8 mb-6">Tape-In Hair Extensions — Pros, Cons & Best For</h2>
-              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
-                  alt="Tape-in hair extensions installed by a professional stylist"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Tape-in hair extensions installed by a professional stylist" fill className="object-cover" />
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 <strong>Tape-in extensions</strong> use pre-taped flat wefts of Remy human hair that are sandwiched between sections of the client's natural hair. The adhesive is heat-activated or pressure-sensitive and lays completely flat against the scalp.
@@ -161,13 +158,8 @@ export default function HairExtensionTypesGuide() {
 
               {/* ── K-Tip ──────────────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">K-Tip / Keratin Bond Extensions — Pros, Cons & Best For</h2>
-              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1200&q=80"
-                  alt="K-tip keratin bond hair extensions application"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1200&q=80" alt="K-tip keratin bond hair extensions application" fill className="object-cover" />
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 <strong>K-tip extensions</strong> (also called keratin bond or fusion extensions) attach individual weft tips to small sections of natural hair using a keratin adhesive that is melted and fused with a heat tool. Each tip is hand-placed for a completely custom, natural finish.
@@ -189,13 +181,8 @@ export default function HairExtensionTypesGuide() {
 
               {/* ── Weft ──────────────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Weft Hair Extensions — Pros, Cons & Best For</h2>
-              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
-                  alt="Hand-tied weft hair extensions for salon professionals"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Hand-tied weft hair extensions for salon professionals" fill className="object-cover" />
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 <strong>Weft extensions</strong> consist of continuous strips of hair stitched at the top into a seam. They are installed by sewing (braiding the weft into cornrows) or clipping onto a micro-bead braid. Machine-made wefts are the most affordable; hand-tied wefts are thinner and more luxurious.
@@ -217,13 +204,8 @@ export default function HairExtensionTypesGuide() {
 
               {/* ── Butterfly Weft ──────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Butterfly Weft — Pros, Cons & Best For</h2>
-              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"
-                  alt="Butterfly weft hair extensions for undetectable volume"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Butterfly weft hair extensions for undetectable volume" fill className="object-cover" />
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 <strong>Butterfly weft extensions</strong> are a newer innovation — a thin, flexible weft (approximately 0.5mm) with a unique layered cut that follows the natural flow of the hair. Unlike traditional wefts, butterfly wefts are designed to be sewn in without a braid in many cases, sitting flush against the head for a completely undetectable finish.
@@ -245,13 +227,8 @@ export default function HairExtensionTypesGuide() {
 
               {/* ── Clip-In ─────────────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">Clip-In Extensions — Pros, Cons & Best For</h2>
-              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1200&q=80"
-                  alt="Clip-in hair extensions for instant salon results"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-8 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1200&q=80" alt="Clip-in hair extensions for instant salon results" fill className="object-cover" />
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 <strong>Clip-in extensions</strong> are wefts of hair with sewn-in clips that the client can apply and remove themselves at home. While they are the most temporary option, they serve an important market — clients who want to trial extensions before committing, or who prefer not to have a permanent extension service.
@@ -332,6 +309,7 @@ export default function HairExtensionTypesGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hair-extension-types-guide" />
         <Footer />
         <CartDrawer />
       </div>

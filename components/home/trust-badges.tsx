@@ -16,7 +16,7 @@ const trustBadges = [
   {
     icon: Truck,
     title: "UK & Factory Stock",
-    description: "Selected lines UK-warehoused (preparing) + full range factory-direct. Express 3–5 day delivery via DHL/UPS.",
+    description: "Selected lines UK warehouse launching + full range factory-direct. Express 3–5 day delivery via DHL/UPS.",
   },
   {
     icon: Palette,

@@ -7,6 +7,7 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { salonConsumables, getSalonConsumableBySlug } from "@/lib/salon-consumables"
 import { ArrowLeft, ArrowRight, Check, Gift, Package, Truck, ShoppingBag, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>
@@ -73,11 +74,12 @@ export default async function SalonConsumablePage({ params }: ProductPageProps) 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 {/* Left – Image */}
                 <div className="relative">
-                  <div className="aspect-square bg-muted/30 rounded-2xl overflow-hidden border">
-                    <img
+                  <div className="relative aspect-square bg-muted/30 rounded-2xl overflow-hidden border">
+                    <Image
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover object-center"
+                      fill
+                      className="object-cover object-center"
                     />
                   </div>
                   {product.badge && (

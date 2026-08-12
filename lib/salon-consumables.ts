@@ -65,7 +65,7 @@ export const salonConsumables: SalonConsumable[] = [
       "Save vs buying items individually",
       "Professional-grade tools and supplies",
       "Perfect for new technicians and trainees",
-      "Next-day dispatch from UK stock",
+      "Express 3–5 day dispatch, factory-direct",
     ],
     whatIncluded: [
       "Nano Rings (Non-Silicone) 1000pc × 2",

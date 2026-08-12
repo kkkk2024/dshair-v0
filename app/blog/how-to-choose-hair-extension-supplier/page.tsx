@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, XCircle, Phone } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "How to Choose a Hair Extension Supplier for Your Salon | D.S Hair Beauty",
@@ -111,13 +113,8 @@ export default function HowToChooseHairExtensionSupplier() {
               </p>
 
               {/* ── Hero Image ──────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
-                  alt="Professional salon consultation for hair extensions"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Professional salon consultation for hair extensions" fill className="object-cover" />
               </div>
 
               {/* ── Key Factors ────────────────────────── */}
@@ -338,7 +335,7 @@ export default function HowToChooseHairExtensionSupplier() {
                 <li><strong>Regulatory confidence</strong> — UK-based suppliers comply with UK trading standards and product safety regulations</li>
               </ul>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                D.S Hair Beauty is a factory-direct manufacturer with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions via selected UK-warehoused lines + factory-direct express 3–5 day shipping, with trade accounts, no minimum order quantities, and direct manufacturer support.
+                D.S Hair Beauty is a factory-direct manufacturer with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions via UK warehouse launching + factory-direct express 3–5 day shipping, with trade accounts, no minimum order quantities, and direct manufacturer support.
               </p>
 
               {/* ── FAQ ─────────────────────────────────── */}
@@ -409,6 +406,7 @@ export default function HowToChooseHairExtensionSupplier() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="how-to-choose-hair-extension-supplier" />
         <Footer />
         <CartDrawer />
       </div>

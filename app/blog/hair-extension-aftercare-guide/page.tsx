@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Droplets, Scissors, Calendar } from "lucide-react"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Hair Extension Aftercare: Complete Guide for UK Clients & Salons | D.S HAIR & BEAUTY",
@@ -316,6 +317,7 @@ export default function HairExtensionAftercareGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hair-extension-aftercare-guide" />
         <Footer />
         <CartDrawer />
       </div>

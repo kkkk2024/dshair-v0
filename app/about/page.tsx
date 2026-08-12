@@ -42,7 +42,7 @@ const values = [
     icon: Truck,
     title: "Factory-Direct, Express Supply",
     description:
-      "We serve salons across the UK & EU with factory-direct pricing. Selected UK-warehoused lines (preparing) + express 3–5 day shipping on the full range.",
+      "We serve salons across the UK & EU with factory-direct pricing. Selected UK warehouse launching + express 3–5 day shipping on the full range.",
   },
   {
     icon: Users,
@@ -78,7 +78,7 @@ const timeline = [
 export default function AboutPage() {
   const companyFaqs = [
     { question: "How long has D.S HAIR & BEAUTY been in business?", answer: "Our founder has been in the hair extension industry since 2007 — nearly 20 years of experience sourcing and supplying Remy human hair. D.S HAIR & BEAUTY was formally launched as a dedicated UK brand in 2022, combining decades of supply chain expertise with a professional salon-first approach." },
-    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester base serves salons across the UK & EU with selected UK-warehoused lines (preparing) plus factory-direct express 3–5 day shipping on the full range." },
+    { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester base serves salons across the UK & EU with selected UK warehouse launching plus factory-direct express 3–5 day shipping on the full range." },
     { question: "What makes D.S HAIR different from other UK suppliers?", answer: "Three things set us apart: (1) we own the production — no middlemen means better prices, (2) we have 19 years of direct factory relationships in China's hair manufacturing heartland, and (3) we answer within 2 hours — not a ticketing system, a real person who knows your account." },
     { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free digital colour matching for UK & EU salons, priority express dispatch, and dedicated account management. Apply through our Salon Partners page." },
     { question: "Is your hair ethically sourced?", answer: "Yes. All our hair is 100% Remy human hair, ethically sourced from trusted manufacturers with full supply chain traceability. Every batch is quality-checked before it leaves our facility. We never use synthetic blends or non-Remy hair." },

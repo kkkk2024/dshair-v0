@@ -63,9 +63,9 @@ export default function TradeWholesaleClient() {
     },
     {
       icon: MapPin,
-      title: "UK-Warehoused & Factory-Direct",
+      title: "UK Warehouse Launching & Factory-Direct",
       description:
-        "Selected best-sellers held in Manchester for fast dispatch; the full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
+        "Our UK warehouse is launching. Until then the full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
     },
     {
       icon: BadgeCheck,

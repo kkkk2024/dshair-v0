@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Users, Package, BadgePercent, Truck } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Hair Extensions Trade Account: What It Is & How to Open One (UK Salons) | D.S Hair Beauty",
@@ -282,6 +283,7 @@ export default function HairExtensionsTradeAccount() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hair-extensions-trade-account" />
         <Footer />
         <CartDrawer />
       </div>

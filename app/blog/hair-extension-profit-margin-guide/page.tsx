@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Calculator, TrendingUp, PoundSterling, BarChart3 } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Hair Extension Profit Margin Guide for UK Salons: Real Numbers for 2026 | D.S Hair Beauty",
@@ -138,13 +140,8 @@ export default function HairExtensionProfitMarginGuide() {
               </p>
 
               {/* ── Hero Image ──────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
-                  alt="Salon owner reviewing hair extension pricing and margins"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Salon owner reviewing hair extension pricing and margins" fill className="object-cover" />
               </div>
 
               {/* ── Margin Breakdown By Method ────────────── */}
@@ -350,6 +347,7 @@ export default function HairExtensionProfitMarginGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hair-extension-profit-margin-guide" />
         <Footer />
         <CartDrawer />
       </div>

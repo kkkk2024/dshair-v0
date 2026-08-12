@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Palette } from "lucide-react"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026" },
@@ -324,6 +325,7 @@ export default function ManchesterColourCollection2026() {
 
           </article>
         </main>
+        <RelatedGuides slug="manchester-colour-collection-2026" />
         <Footer />
         <CartDrawer />
       </div>

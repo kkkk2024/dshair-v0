@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 const salonImages = [
   {
     src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80",
@@ -44,11 +46,12 @@ export function SalonTrustSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
           {salonImages.map((img, i) => (
             <div key={i} className="group relative overflow-hidden rounded-xl">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

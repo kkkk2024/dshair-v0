@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Package, BadgePercent, ClipboardList } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Salon Hair Extension Stockist UK: How to Stock & Resell Extensions | D.S Hair Beauty",
@@ -256,6 +257,7 @@ export default function SalonHairExtensionStockistUK() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="salon-hair-extension-stockist-uk" />
         <Footer />
         <CartDrawer />
       </div>

@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide" },
@@ -97,13 +99,8 @@ export default function FringesBangsExtensionsGuide() {
               </p>
 
               {/* ── Hero Image ────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"
-                  alt="Hair fringe extensions face framing style"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Hair fringe extensions face framing style" fill className="object-cover" />
               </div>
 
               {/* ── Who Is It For ─────────────────── */}
@@ -232,6 +229,7 @@ export default function FringesBangsExtensionsGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="fringes-bangs-extensions-guide" />
         <Footer />
         <CartDrawer />
       </div>

@@ -7,6 +7,7 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { BUNDLES, SINGLES, getSamplePack } from "@/lib/salon-consumables"
 import { Package, Tag, ShoppingBag, ArrowRight, Sparkles, Truck, ShieldCheck, Gift } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Salon Consumables & Hair Extension Tools | Wholesale Supplies UK | D.S Hair Beauty",
@@ -233,7 +234,7 @@ export default function SalonSuppliesPage() {
                 {[
                   {
                     q: "How quickly will I receive my order?",
-                    a: "Orders ship via express (3–5 days) across the UK. Selected UK-warehoused lines dispatch faster. Tracked delivery on every order.",
+                    a: "Orders ship via express (3–5 days) across the UK. UK warehouse launching — express 3–5 day delivery. Tracked delivery on every order.",
                   },
                   {
                     q: "What if I am unhappy with the quality?",
@@ -313,10 +314,11 @@ function ProductCard({
     <div className="group bg-background rounded-2xl border hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col">
       {/* Image */}
       <Link href={`${basePath}/${product.slug}`} className="relative aspect-square bg-muted/50 overflow-hidden block w-full">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
         {product.badge && (
           <span className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${

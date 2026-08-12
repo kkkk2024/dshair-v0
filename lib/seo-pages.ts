@@ -23,9 +23,9 @@ export const seoPages: SeoPage[] = [
     h1: "Hair Extensions Wholesale UK",
     metaTitle: "Hair Extensions Wholesale UK for Salons | D.S Hair Beauty",
     metaDescription:
-      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Factory-direct supplier with UK-warehoused stock, trade account support and colour matching.",
+      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Factory-direct supplier with UK warehouse launching, express 3–5 day delivery, trade account support and colour matching.",
     intro:
-      "D.S Hair Beauty supplies professional salons and stylists with 100% Remy human hair extensions, trade account support and practical wholesale ordering from UK-warehoused stock.",
+      "D.S Hair Beauty supplies professional salons and stylists with 100% Remy human hair extensions, trade account support and practical wholesale ordering with express 3–5 day factory-direct delivery.",
     sections: [
       {
         heading: "Wholesale supply built for salon buyers",
@@ -43,7 +43,7 @@ export const seoPages: SeoPage[] = [
     bullets: [
       "100% Remy human hair extension options",
       "Trade account route for salon and stylist buyers",
-      "UK-warehoused support for UK and EU customers",
+      "Express 3–5 day factory-direct delivery for UK and EU customers",
       "Colour matching help before ordering",
       "Professional categories for multiple extension methods",
     ],
@@ -76,16 +76,16 @@ export const seoPages: SeoPage[] = [
     title: "Hair Extension Supplier Manchester",
     keyword: "hair extension supplier manchester",
     intent: "GEO",
-    h1: "Hair Extension Supplier — UK-Warehoused in Manchester",
+    h1: "Hair Extension Supplier — UK Warehouse Launching",
     metaTitle: "Factory-Direct Hair Extension Supplier Manchester | D.S Hair Beauty",
     metaDescription:
-      "Factory-direct hair extension manufacturer with UK-warehoused stock in Manchester. Serving salons, stylists and trade buyers across the UK with trade pricing and colour support.",
+      "Factory-direct hair extension manufacturer with UK warehouse launching. Express 3–5 day delivery across the UK & EU, trade pricing and colour support.",
     intro:
-      "D.S Hair Beauty is a factory-direct manufacturer. Our UK-warehoused stock in Manchester means salons get fast delivery with manufacturer pricing — no middleman markup.",
+      "D.S Hair Beauty is a factory-direct manufacturer. Our UK warehouse is launching — salons get express 3–5 day factory-direct delivery with manufacturer pricing, no middleman markup.",
     sections: [
       {
-        heading: "Factory-direct supply. UK-warehoused in Manchester.",
-        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources directly from China's leading Remy hair manufacturers. Stock is held in Manchester for fast UK delivery — so you get factory-direct quality with local fulfilment speed.",
+        heading: "Factory-direct supply. UK warehouse launching.",
+        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources directly from China's leading Remy hair manufacturers. Orders ship factory-direct with express 3–5 day delivery — so you get factory-direct quality with fast UK fulfilment.",
       },
       {
         heading: "Professional product range",
@@ -98,7 +98,7 @@ export const seoPages: SeoPage[] = [
     ],
     bullets: [
       "Factory-direct manufacturer pricing",
-      "UK-warehoused stock in Manchester",
+      "UK warehouse launching — express 3–5 day factory-direct delivery",
       "Trade account pathway for salons",
       "Professional extension methods and aftercare",
       "Colour matching and WhatsApp support",
@@ -108,7 +108,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Where is your stock held?",
         answer:
-          "Our stock is warehoused in Manchester, UK. We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK delivery.",
+          "Our UK warehouse is launching. We source factory-direct from manufacturers in China — so you get manufacturer pricing with express 3–5 day UK delivery.",
       },
       {
         question: "Can Manchester salons open a trade account?",
@@ -118,7 +118,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Do you only supply Manchester?",
         answer:
-          "No. We supply salons across the UK and EU from our UK-warehoused stock, with fast delivery nationwide.",
+          "No. We supply salons across the UK and EU with express 3–5 day factory-direct delivery nationwide.",
       },
     ],
     internalLinks: [

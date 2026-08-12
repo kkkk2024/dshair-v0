@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/weft-extensions-guide" },
@@ -94,12 +96,12 @@ export default function WeftExtensionsGuide() {
               </p>
 
               {/* ── Hero Image ────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image
                   src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
                   alt="Weft hair extensions salon application"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
 
@@ -229,6 +231,7 @@ export default function WeftExtensionsGuide() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="weft-extensions-guide" />
         <Footer />
         <CartDrawer />
       </div>

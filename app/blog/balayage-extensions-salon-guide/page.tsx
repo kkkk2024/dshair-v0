@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide" },
@@ -40,13 +42,8 @@ export default function BalayageExtensionsPage() {
               Over 70% of Manchester extension clients request a balayage or highlighted look — but standard single-tone extensions simply do not blend. Pre-coloured balayage weft solves this, and it is transforming how salons work.
             </p>
 
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"
-                alt="Balayage hair extensions salon"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden mb-10 aspect-video">
+              <Image src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Balayage hair extensions salon" fill className="object-cover" />
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -250,7 +247,7 @@ export default function BalayageExtensionsPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Get Trade Pricing on Balayage Extensions</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to Manchester salons and across the Northwest. Free digital colour catalogue with your first trade order. Selected UK-warehoused lines + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.
+                  DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to Manchester salons and across the Northwest. Free digital colour catalogue with your first trade order. UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>
@@ -272,6 +269,7 @@ export default function BalayageExtensionsPage() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="balayage-extensions-salon-guide" />
         <Footer />
         <CartDrawer />
       </div>

@@ -84,7 +84,7 @@ export default function AcademyPage() {
                 <div className="text-center">
                   <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">In Partnership With</div>
                   <div className="text-2xl md:text-3xl font-serif font-semibold">D.S Hair & Beauty</div>
-                  <div className="text-sm text-muted-foreground mt-1">UK Stockist | Manchester</div>
+                  <div className="text-sm text-muted-foreground mt-1">UK Supplier | Manchester</div>
                 </div>
               </div>
             </div>

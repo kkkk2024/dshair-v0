@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/manchester-hair-extension-supplier" },
@@ -40,13 +42,8 @@ export default function ManchesterSupplierPage() {
               For years, most UK salons sourced hair extensions from large national distributors or direct from overseas. That is changing — and the reasons are clear.
             </p>
 
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1200&q=80"
-                alt="Manchester salon hair extension supply"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden mb-10 aspect-video">
+              <Image src="https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1200&q=80" alt="Manchester salon hair extension supply" fill className="object-cover" />
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -70,7 +67,7 @@ export default function ManchesterSupplierPage() {
 
               <h3>2. Selected UK Stock + Express Shipping</h3>
               <p>
-                Our inventory is held in Manchester — so when you need hand-tied weft for a client booking, it ships from the UK, not from a factory in Guangzhou. No cross-continental wait times. Factory-direct quality, locally stocked.
+                Our UK warehouse is launching — so when you need hand-tied weft for a client booking, it ships from the UK, not from a factory in Guangzhou. No cross-continental wait times. Factory-direct quality, locally stocked.
               </p>
 
               <h3>3. Real Quality Control</h3>
@@ -102,7 +99,7 @@ export default function ManchesterSupplierPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Factory-Direct. UK &amp; EU Trade.</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  19 years of industry experience. Direct factory sourcing. Selected UK-warehoused lines (preparing) + factory-direct express 3–5 day shipping. Free digital colour catalogue with your first trade order. No minimum order to start.
+                  19 years of industry experience. Direct factory sourcing. Selected UK warehouse launching + factory-direct express 3–5 day shipping. Free digital colour catalogue with your first trade order. No minimum order to start.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>
@@ -124,6 +121,7 @@ export default function ManchesterSupplierPage() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="manchester-hair-extension-supplier" />
         <Footer />
         <CartDrawer />
       </div>

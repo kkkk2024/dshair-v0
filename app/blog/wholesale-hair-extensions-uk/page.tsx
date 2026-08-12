@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Wholesale Hair Extensions UK: A Salon Owner's Guide to Trade Buying | D.S Hair Beauty",
@@ -64,7 +66,7 @@ export default function WholesaleHairExtensionsUK() {
               {
                 question: "How fast is wholesale delivery in the UK?",
                 answer:
-                  "Selected UK-warehoused lines are preparing, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS). This lets salons reorder as needed without holding large stock.",
+                  "Selected UK warehouse launching, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS). This lets salons reorder as needed without holding large stock.",
               },
               {
                 question: "What should I look for in a UK wholesale supplier?",
@@ -138,13 +140,8 @@ export default function WholesaleHairExtensionsUK() {
               </p>
 
               {/* ── Hero Image ──────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
-                  alt="Professional hair extension wholesale supply for UK salons"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Professional hair extension wholesale supply for UK salons" fill className="object-cover" />
               </div>
 
               {/* ── Benefits ───────────────────────────── */}
@@ -230,7 +227,7 @@ export default function WholesaleHairExtensionsUK() {
               </p>
               <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground mb-8">
                 <li><strong>100% Remy human hair as standard</strong> — not a premium upgrade at an inflated price</li>
-                <li><strong>Selected UK-warehoused lines + express 3–5 day factory-direct shipping</strong> — avoids long customs delays while keeping a wide range available</li>
+                <li><strong>UK warehouse launching + express 3–5 day factory-direct shipping</strong> — avoids long customs delays while keeping a wide range available</li>
                 <li><strong>40+ colour options</strong> — including balayage, ombre, and rooted shades that UK clients demand</li>
                 <li><strong>No minimum order</strong> — accessible for all salon sizes and specialist stylists</li>
                 <li><strong>Trade accounts with net-30 terms</strong> — helps with cash flow management</li>
@@ -241,7 +238,7 @@ export default function WholesaleHairExtensionsUK() {
               {/* ── What DSB Offers ─────────────────────── */}
               <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">What D.S Hair Beauty Offers to UK Trade Buyers</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                D.S Hair Beauty is a factory-direct wholesale hair extension supplier with 19 years of experience supplying UK salons. We are hair professionals ourselves — so we understand what salon owners and stylists actually need. Selected UK-warehoused lines (preparing) + factory-direct express 3–5 day shipping.
+                D.S Hair Beauty is a factory-direct wholesale hair extension supplier with 19 years of experience supplying UK salons. We are hair professionals ourselves — so we understand what salon owners and stylists actually need. Selected UK warehouse launching + factory-direct express 3–5 day shipping.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 We supply the following at trade prices to registered UK salons and stylists:
@@ -289,7 +286,7 @@ export default function WholesaleHairExtensionsUK() {
                 </div>
                 <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
                   <p className="font-semibold text-[#4A1942] mb-2">How fast is wholesale delivery in the UK?</p>
-                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Selected UK-warehoused lines are preparing, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS).</p>
+                  <p className="text-sm text-[#6B3A6E] leading-relaxed">Selected UK warehouse launching, with broader range shipped factory-direct via express courier in 3–5 days (DHL/UPS).</p>
                 </div>
                 <div className="border border-amber-100 rounded-xl p-5 bg-[#FDF8F0]">
                   <p className="font-semibold text-[#4A1942] mb-2">What should I look for in a UK wholesale supplier?</p>
@@ -319,6 +316,7 @@ export default function WholesaleHairExtensionsUK() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="wholesale-hair-extensions-uk" />
         <Footer />
         <CartDrawer />
       </div>

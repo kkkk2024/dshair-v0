@@ -6,6 +6,7 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import Link from "next/link"
 import { ArrowRight, Clock } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Hair Extension Blog | Trade Guides & Salon Business Tips | DS Hair Beauty",
@@ -129,11 +130,11 @@ export default function BlogPage() {
                     }`}
                   >
                     <div className={`relative ${i === 0 ? "aspect-[16/7]" : "aspect-[16/9]"} overflow-hidden`}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-medium px-2.5 py-1 rounded-full">
                         {post.category}

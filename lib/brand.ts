@@ -2,7 +2,7 @@
  * Centralized brand configuration for D.S HAIR & BEAUTY
  * Single source of truth for all brand messaging and contact info.
  * 
- * Brand positioning: China-based manufacturer with Manchester warehouse.
+ * Brand positioning: China-based manufacturer; UK warehouse launching (factory-direct express delivery).
  * +86 WhatsApp is factory-direct — not a trust issue but a strength.
  */
 
@@ -18,17 +18,17 @@ export function whatsappLink(message?: string): string {
 
 export const BRAND = {
   // Short descriptor for page titles / meta
-  tagline: 'China-Based Manufacturer. UK Warehouse.',
+  tagline: 'China-Based Manufacturer. UK Warehouse Launching.',
   // Full descriptor for meta descriptions
   descriptor:
-    'China-based manufacturer of 100% Remy human hair extensions. UK-warehoused stock in Manchester for fast salon supply. Trade pricing, factory-direct quality. 19+ years industry experience.',
+    'China-based manufacturer of 100% Remy human hair extensions. UK warehouse launching — express 3–5 day factory-direct delivery. Trade pricing, factory-direct quality. 19+ years industry experience.',
   // Footer / about summary
   footerSummary:
-    'Premium 100% Remy Human Hair Extensions. Trusted by 500+ salons across UK & EU. China-based manufacturer with UK-warehoused stock in Manchester. Factory-direct quality with 19+ years of industry experience.',
+    'Premium 100% Remy Human Hair Extensions. Trusted by 500+ salons across UK & EU. China-based manufacturer with UK warehouse launching. Express 3–5 day factory-direct delivery. Factory-direct quality with 19+ years of industry experience.',
   
   // Location descriptors (use these instead of "Manchester-based")
-  location: 'Manchester Warehouse — Fast UK Supply',
-  locationShort: 'Manchester Warehouse',
+  location: 'UK Warehouse Launching — Express 3–5 Day Delivery',
+  locationShort: 'UK Warehouse Launching',
   
   // WhatsApp positioning text
   whatsappLabel: 'Factory-direct WhatsApp',

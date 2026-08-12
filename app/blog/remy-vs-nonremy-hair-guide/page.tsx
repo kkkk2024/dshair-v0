@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, CheckCircle, XCircle } from "lucide-react"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Remy Hair vs Non-Remy Hair: What's the Difference? | D.S HAIR & BEAUTY",
@@ -238,6 +239,7 @@ export default function RemyVsNonRemyGuide() {
 
           </article>
         </main>
+        <RelatedGuides slug="remy-vs-nonremy-hair-guide" />
         <Footer />
         <CartDrawer />
       </div>

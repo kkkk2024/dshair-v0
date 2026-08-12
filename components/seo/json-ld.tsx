@@ -300,10 +300,34 @@ interface ProductJsonLdProps {
     vendor: string
     category: string
   }
+  // Real, config-driven ratings (Trustpilot). When present, these OVERRIDE
+  // the product.reviews fallback so we never emit a fabricated rating.
+  aggregateRating?: {
+    '@type': 'AggregateRating'
+    ratingValue: number
+    reviewCount: number
+    bestRating: number
+    worstRating: number
+  } | null
+  reviews?: object[] | null
 }
 
-export function ProductJsonLd({ product }: ProductJsonLdProps) {
+export function ProductJsonLd({ product, aggregateRating, reviews }: ProductJsonLdProps) {
   const productUrl = `${BASE_URL}/products/${product.slug}`
+
+  // Prefer real (config-driven) aggregate rating; otherwise only emit one if
+  // this specific product genuinely has first-party reviews.
+  const ratingBlock =
+    aggregateRating ||
+    (product.reviews > 0
+      ? {
+          '@type': 'AggregateRating' as const,
+          ratingValue: product.rating,
+          reviewCount: product.reviews,
+          bestRating: 5,
+          worstRating: 1,
+        }
+      : undefined)
 
   const data = {
     '@context': 'https://schema.org',
@@ -364,15 +388,8 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
         },
       },
     },
-    ...(product.reviews > 0 && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: product.rating,
-        reviewCount: product.reviews,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    }),
+    ...(ratingBlock && { aggregateRating: ratingBlock }),
+    ...(reviews && reviews.length > 0 && { review: reviews }),
     category: product.category,
   }
 

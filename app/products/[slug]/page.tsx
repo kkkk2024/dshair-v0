@@ -9,7 +9,9 @@ import { RelatedProducts } from "@/components/products/related-products"
 import { getProductBySlug, getRelatedProducts, products } from "@/lib/products"
 import { TAG_FAQS } from "@/lib/product-faqs"
 import { ProductFaqAccordion } from "@/components/products/product-faq-accordion"
-import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { ProductJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import { getProductAggregateRating, getProductReviews } from "@/lib/reviews"
+import { TrustpilotReviews } from "@/components/reviews/trustpilot-reviews"
 import { BookOpen, ArrowRight } from "lucide-react"
 
 interface ProductPageProps {
@@ -223,9 +225,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const matchedFaqs = matchedTag ? (TAG_FAQS[matchedTag] || []) : []
 
+  // Real reviews (Trustpilot) — undefined until connected in lib/reviews.ts.
+  const aggregateRating = getProductAggregateRating()
+  const productReviews = getProductReviews()
+
   return (
     <CartProvider>
-      <ProductJsonLd product={product} />
+      <ProductJsonLd product={product} aggregateRating={aggregateRating} reviews={productReviews} />
+      {matchedFaqs.length > 0 && (
+        <FaqJsonLd faqs={matchedFaqs.map((f) => ({ question: f.q, answer: f.a }))} />
+      )}
       <BreadcrumbJsonLd
         items={[
           { name: 'Home', url: 'https://www.dshairbeauty.co.uk' },
@@ -267,6 +276,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           )}
 
           <ProductDetail product={product} />
+          <TrustpilotReviews />
           {relatedProducts.length > 0 && (
             <RelatedProducts products={relatedProducts} />
           )}

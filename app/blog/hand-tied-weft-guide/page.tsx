@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide" },
@@ -43,13 +45,8 @@ export default function HandTiedWeftPage() {
             </p>
 
             {/* Hero Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
-                alt="Hand-tied weft hair extensions"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden mb-10 aspect-video">
+              <Image src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Hand-tied weft hair extensions" fill className="object-cover" />
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -222,7 +219,7 @@ export default function HandTiedWeftPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Manchester Salons: Get Trade Pricing on Hand-Tied Weft</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  D.S Hair & Beauty supplies hand-tied weft to professional salons across Manchester and the Northwest. Free digital colour catalogue with your first trade order. Selected UK-warehoused lines + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on double-drawn Remy hand-tied weft in 40+ shades.
+                  D.S Hair & Beauty supplies hand-tied weft to professional salons across Manchester and the Northwest. Free digital colour catalogue with your first trade order. UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on double-drawn Remy hand-tied weft in 40+ shades.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>
@@ -245,6 +242,7 @@ export default function HandTiedWeftPage() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hand-tied-weft-guide" />
         <Footer />
         <CartDrawer />
       </div>

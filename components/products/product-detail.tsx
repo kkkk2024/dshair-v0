@@ -426,9 +426,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero visual */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/images/nano/nano-main-02.jpg"
                     alt="Nano Ring Hair Extensions — D.S HAIR & BEAUTY"
+                    width={1433}
+                    height={1433}
                     className="w-full object-cover"
                   />
                 </div>
@@ -461,9 +463,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero image */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="https://iloveslavichair.com/image/cachewebp/catalog/blogs/standard-vs-micro-vs-nano-keratin-bond-size-755x422.webp"
                     alt="K-Tip Keratin Bond Extensions — D.S HAIR & BEAUTY"
+                    width={755}
+                    height={422}
+                    unoptimized
                     className="w-full object-cover max-h-80"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />
@@ -577,9 +582,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero image */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/images/butterfly/butterfly-hero.jpg"
                     alt="Butterfly Weft Extensions — D.S HAIR & BEAUTY"
+                    width={1200}
+                    height={800}
                     className="w-full object-cover max-h-80"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />
@@ -657,9 +664,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero image */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/images/tape/tape-hero.jpg"
                     alt="Tape-In Hair Extensions — D.S HAIR & BEAUTY"
+                    width={1200}
+                    height={800}
                     className="w-full object-cover max-h-80"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />
@@ -740,9 +749,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero image */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/images/weft/weft-hero.jpg"
                     alt="Weft Hair Extensions — D.S HAIR & BEAUTY"
+                    width={1200}
+                    height={800}
                     className="w-full object-cover max-h-80"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />
@@ -802,9 +813,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Hero image */}
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/images/clip/clip-hero.jpg"
                     alt="Clip-In Hair Extensions — D.S HAIR & BEAUTY"
+                    width={1200}
+                    height={800}
                     className="w-full object-cover max-h-80"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />
@@ -1075,14 +1088,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </p>
               </div>
 
-              {/* Step-by-step diagram image */}
-              <div className="rounded-xl overflow-hidden">
-                <img
-                  src="/images/nano/nano-main-04.jpg"
-                  alt="Nano Ring Application Process"
-                  className="w-full object-cover"
-                />
-              </div>
+                {/* Step-by-step diagram image */}
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/nano/nano-main-04.jpg"
+                    alt="Nano Ring Application Process"
+                    width={1080}
+                    height={1080}
+                    className="w-full object-cover"
+                  />
+                </div>
 
               {[
                 {
@@ -2211,16 +2226,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <h3 className="font-semibold text-xl">Finding the Perfect Fit</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                    <img src="/images/seamless-clip-ins.jpg" alt="Seamless Clip-Ins" className="w-full h-full object-cover" />
-                  </div>
+                                  <div className="relative aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                  <Image src="/images/seamless-clip-ins.jpg" alt="Seamless Clip-Ins" fill className="object-cover" />
+                </div>
                   <h4 className="font-semibold text-lg mb-2">Seamless Clip-Ins</h4>
                   <p className="text-muted-foreground">The most invisible wefts on the market, featuring a thin silicone strip that lies flat against the scalp. Perfect for fine hair.</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                    <img src="/images/classic-clip-ins.jpg" alt="Classic Clip-Ins" className="w-full h-full object-cover" />
-                  </div>
+                                  <div className="relative aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                  <Image src="/images/classic-clip-ins.jpg" alt="Classic Clip-Ins" fill className="object-cover" />
+                </div>
                   <h4 className="font-semibold text-lg mb-2">Classic Clip-Ins</h4>
                   <p className="text-muted-foreground">Traditional clips with a fabric weft base. Durable and easy to apply at home. Great for adding volume.</p>
                 </div>
@@ -2237,12 +2252,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <>
                   {/* Before/After images grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/nano/nano-main-05.jpg" alt="Nano Ring Extensions Result 1" className="w-full object-cover aspect-[3/4]" />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/nano/nano-main-06.jpg" alt="Nano Ring Extensions Result 2" className="w-full object-cover aspect-[3/4]" />
-                    </div>
+                                    <div className="aspect-[3/4] relative rounded-xl overflow-hidden">
+                  <Image src="/images/nano/nano-main-05.jpg" alt="Nano Ring Extensions Result 1" fill className="object-cover" />
+                </div>
+                                    <div className="aspect-[3/4] relative rounded-xl overflow-hidden">
+                  <Image src="/images/nano/nano-main-06.jpg" alt="Nano Ring Extensions Result 2" fill className="object-cover" />
+                </div>
                   </div>
 
                   {/* Key stats */}
@@ -2320,24 +2335,24 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <>
                   {/* Photo gallery — 6 images (2 rows × 3) */}
                   <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-04.jpg" alt="Tape-In Extensions Result 1" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-05.jpg" alt="Tape-In Extensions Result 2" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-06.jpg" alt="Tape-In Extensions Result 3" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-07.jpg" alt="Tape-In Extensions Result 4" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-08.jpg" alt="Tape-In Extensions Result 5" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/tape/tape-result-09.jpg" alt="Tape-In Extensions Result 6" className="w-full h-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
-                    </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-04.jpg" alt="Tape-In Extensions Result 1" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-05.jpg" alt="Tape-In Extensions Result 2" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-06.jpg" alt="Tape-In Extensions Result 3" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-07.jpg" alt="Tape-In Extensions Result 4" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-08.jpg" alt="Tape-In Extensions Result 5" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/tape/tape-result-09.jpg" alt="Tape-In Extensions Result 6" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none' }} />
+                </div>
                   </div>
 
                   {/* Stats bar */}
@@ -2416,12 +2431,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <>
                   {/* Before/After images */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/clip/clip-result-01.jpg" alt="Clip-In Extensions Result 1" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/clip/clip-result-02.jpg" alt="Clip-In Extensions Result 2" className="w-full object-cover aspect-[3/4]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                    </div>
+                                    <div className="aspect-[3/4] relative rounded-xl overflow-hidden">
+                  <Image src="/images/clip/clip-result-01.jpg" alt="Clip-In Extensions Result 1" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                </div>
+                                    <div className="aspect-[3/4] relative rounded-xl overflow-hidden">
+                  <Image src="/images/clip/clip-result-02.jpg" alt="Clip-In Extensions Result 2" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                </div>
                   </div>
 
                   {/* Stats bar */}
@@ -2463,15 +2478,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <>
                   {/* Real results — 3 photos in one row */}
                   <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/ktip/ktip-result-03.jpg" alt="K-Tip Extensions Result 1" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/ktip/ktip-result-08.jpg" alt="K-Tip Extensions Result 2" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                    </div>
-                    <div className="rounded-xl overflow-hidden">
-                      <img src="/images/ktip/ktip-result-09.jpg" alt="K-Tip Extensions Result 3" className="w-full object-cover aspect-square" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                    </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/ktip/ktip-result-03.jpg" alt="K-Tip Extensions Result 1" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/ktip/ktip-result-08.jpg" alt="K-Tip Extensions Result 2" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                </div>
+                                    <div className="aspect-square relative rounded-xl overflow-hidden">
+                  <Image src="/images/ktip/ktip-result-09.jpg" alt="K-Tip Extensions Result 3" fill className="object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                </div>
                   </div>
 
                   {/* Stats bar */}
@@ -2513,9 +2528,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <>
                   {/* Before/After Image */}
                   <div className="rounded-lg overflow-hidden">
-                    <img
+                    <Image
                       src="/images/before-after.jpg"
                       alt="Before and After - D.S HAIR Extensions"
+                      width={225}
+                      height={225}
                       className="w-full"
                     />
                   </div>
@@ -2553,9 +2570,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
               {product.productType.toLowerCase().includes('nano') ? (
                 <div className="space-y-6">
                   {/* Image */}
-                  <div className="rounded-xl overflow-hidden">
-                    <img src="/images/nano/nano-main-07.jpg" alt="Nano Ring Extension Features" className="w-full object-cover max-h-64" />
-                  </div>
+                                  <div className="relative rounded-xl overflow-hidden">
+                  <Image src="/images/nano/nano-main-07.jpg" alt="Nano Ring Extension Features" fill className="object-cover" />
+                </div>
                   {/* Feature grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {[

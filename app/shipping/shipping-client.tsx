@@ -23,7 +23,7 @@ export default function ShippingClient() {
                 Shipping &amp; Delivery
               </h1>
               <p className="mt-6 max-w-3xl text-lg text-white/80 leading-relaxed">
-                Fast, tracked delivery across the UK and worldwide. Same-day dispatch on stock
+                Fast, tracked delivery across the UK and worldwide. Fast dispatch; express 3–5 day delivery
                 orders placed before 2pm (UK time).
               </p>
             </div>
@@ -65,11 +65,11 @@ export default function ShippingClient() {
                   </li>
                   <li className="flex gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
-                    <span>Same-day dispatch on stock orders placed before 2pm</span>
+                    <span>Fast dispatch; express 3–5 day delivery orders placed before 2pm</span>
                   </li>
                   <li className="flex gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
-                    <span>Estimated transit: <strong>1–3 working days</strong></span>
+                    <span>Estimated transit: <strong>3–5 working days</strong></span>
                   </li>
                 </ul>
               </div>
@@ -79,7 +79,7 @@ export default function ShippingClient() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FDF8F0]">
                     <Clock className="h-5 w-5 text-[#4A1942]" />
                   </div>
-                  <h2 className="font-serif text-2xl text-[#4A1942]">UK Next-Day &amp; Saturday</h2>
+                  <h2 className="font-serif text-2xl text-[#4A1942]">UK Express (3–5 days) &amp; Saturday</h2>
                 </div>
                 <p className="mt-4 text-muted-foreground leading-7">
                   Need it tomorrow? Upgrade to next-working-day delivery at checkout.
@@ -144,7 +144,7 @@ export default function ShippingClient() {
                 <ul className="mt-6 space-y-3 text-sm">
                   <li className="flex gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
-                    <span>Same-day dispatch on all in-stock trade orders</span>
+                    <span>Fast dispatch on trade orders; express 3–5 day delivery</span>
                   </li>
                   <li className="flex gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
@@ -187,7 +187,7 @@ export default function ShippingClient() {
                   <h3 className="mt-2 font-serif text-xl text-[#4A1942]">Dispatched</h3>
                   <p className="mt-3 text-sm text-muted-foreground leading-6">
                     You'll receive a tracking link by email as soon as your order leaves our
-                    Manchester warehouse.
+                    manufacturing partner (UK warehouse launching).
                   </p>
                 </div>
               </div>

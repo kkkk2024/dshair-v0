@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hair-extension-methods-comparison" },
@@ -40,13 +42,8 @@ export default function MethodsComparisonPage() {
               Choosing the right extension method for each client is one of the most important skills a professional extension specialist can develop. This guide walks you through every major method.
             </p>
 
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1200&q=80"
-                alt="Hair extension methods comparison"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden mb-10 aspect-video">
+              <Image src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1200&q=80" alt="Hair extension methods comparison" fill className="object-cover" />
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -248,7 +245,7 @@ export default function MethodsComparisonPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Trade Supply for Every Method</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free digital colour catalogue, and selected UK-warehoused lines + express 3–5 day shipping. Apply for your trade account to access wholesale pricing.
+                  DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free digital colour catalogue, and UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild><Link href="/salon-partners">Apply for Trade Account</Link></Button>
@@ -268,6 +265,7 @@ export default function MethodsComparisonPage() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="hair-extension-methods-comparison" />
         <Footer />
         <CartDrawer />
       </div>

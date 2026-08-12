@@ -4,7 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 export const metadata: Metadata = {
   title: "Wholesale Hair Extensions for UK Salons | Trade Account | D.S Hair Beauty",
   description:
-    "Open a trade account with D.S Hair Beauty. 100% Remy human hair extensions at wholesale prices. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct with express UK shipping (3–5 days) and selected UK-warehoused lines.",
+    "Open a trade account with D.S Hair Beauty. 100% Remy human hair extensions at wholesale prices. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct with express UK shipping (3–5 days). UK warehouse launching.",
   keywords:
     "trade hair extension suppliers UK, wholesale hair extensions, hair extension wholesale UK, tape-in wholesale, salon hair supplier",
   alternates: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Wholesale Hair Extensions for UK Salons | D.S Hair Beauty',
-    description: 'Open a trade account. 100% Remy human hair at wholesale prices. Express UK shipping 3–5 days; selected lines UK-warehoused.',
+    description: 'Open a trade account. 100% Remy human hair at wholesale prices. Express UK shipping 3–5 days factory-direct. UK warehouse launching.',
     url: 'https://www.dshairbeauty.co.uk/trade-wholesale',
     type: 'website',
     locale: 'en_GB',

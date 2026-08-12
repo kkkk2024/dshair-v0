@@ -6,6 +6,8 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions" },
@@ -40,13 +42,8 @@ export default function TradeVsDiyPage() {
               Not all hair extensions are made equal — and the difference between trade-grade and DIY retail hair is more significant than most salon owners realise.
             </p>
 
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
-                alt="Trade vs DIY hair extensions comparison"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden mb-10 aspect-video">
+              <Image src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Trade vs DIY hair extensions comparison" fill className="object-cover" />
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -198,7 +195,7 @@ export default function TradeVsDiyPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">Ready to Upgrade Your Salon Supply?</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  DS Hair & Beauty supplies trade-grade 100% Remy human hair extensions to professional salons across Manchester and the Northwest. Selected UK-warehoused lines + express 3–5 day shipping, trade pricing, and free digital colour catalogue with your first order. Apply for your trade account today.
+                  DS Hair & Beauty supplies trade-grade 100% Remy human hair extensions to professional salons across Manchester and the Northwest. UK warehouse launching + express 3–5 day shipping, trade pricing, and free digital colour catalogue with your first order. Apply for your trade account today.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild><Link href="/salon-partners">Apply for Trade Account</Link></Button>
@@ -218,6 +215,7 @@ export default function TradeVsDiyPage() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="trade-vs-diy-extensions" />
         <Footer />
         <CartDrawer />
       </div>

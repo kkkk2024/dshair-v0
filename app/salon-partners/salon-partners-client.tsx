@@ -29,7 +29,7 @@ const benefits = [
   {
     icon: Truck,
     title: "UK Stock + Express Factory-Direct",
-    description: "Selected lines held in Manchester for fast dispatch, plus factory-direct express (3–5 days) for the full range. No waiting weeks for stock.",
+    description: "UK warehouse launching, plus factory-direct express (3–5 days) for the full range. No waiting weeks for stock.",
   },
   {
     icon: Palette,

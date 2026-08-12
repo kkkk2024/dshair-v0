@@ -89,7 +89,7 @@ export function DualPathSection() {
                 Professional Extensions
               </h3>
               <p className="text-white/80 mb-4 max-w-md">
-                Factory-direct pricing. Selected UK-warehoused lines + full range express 3–5 days. Free digital colour catalogue. No minimum order to start.
+                Factory-direct pricing. UK warehouse launching + full range express 3–5 days. Free digital colour catalogue. No minimum order to start.
               </p>
               <ul className="text-white/70 text-sm mb-6 flex flex-wrap gap-x-6 gap-y-2">
                 <li className="flex items-center gap-2">
@@ -136,9 +136,9 @@ export function DualPathSection() {
         <div className="mt-8 rounded-2xl bg-primary/5 border border-primary/10 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-1">UK-Warehoused &amp; Factory-Direct</h3>
+              <h3 className="font-semibold text-lg mb-1">UK Warehouse Launching &amp; Factory-Direct</h3>
               <p className="text-muted-foreground text-sm max-w-xl">
-                19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. Selected UK-warehoused lines + express factory-direct 3–5 day delivery.
+                19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. UK warehouse launching + express factory-direct 3–5 day delivery.
               </p>
             </div>
             <Button size="lg" className="flex-shrink-0" asChild>

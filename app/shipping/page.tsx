@@ -5,7 +5,7 @@ import ShippingClient from "./shipping-client"
 export const metadata: Metadata = {
   title: "Shipping & Delivery | D.S HAIR & BEAUTY",
   description:
-    "Shipping and delivery information for D.S Hair & Beauty. Free UK delivery on orders over £175. Same-day dispatch for orders placed before 2pm. International shipping available.",
+    "Shipping and delivery information for D.S Hair & Beauty. Free UK delivery on orders over £175. Fast dispatch on orders; express 3–5 day delivery. International shipping available.",
   keywords: [
     "shipping policy UK",
     "hair extension delivery",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Shipping & Delivery | D.S HAIR & BEAUTY",
-    description: "Free UK delivery on orders over £175. Same-day dispatch before 2pm.",
+    description: "Free UK delivery on orders over £175. Fast dispatch; express 3–5 day delivery.",
     url: "https://www.dshairbeauty.co.uk/shipping",
     type: "website",
     locale: "en_GB",

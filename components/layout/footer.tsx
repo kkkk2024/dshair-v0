@@ -250,7 +250,7 @@ export function Footer() {
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs">Manchester, UK · UK &amp; EU Salon Trade · UK Warehouse Preparing</span>
+              <span className="text-xs">Manchester, UK · UK &amp; EU Salon Trade · UK Warehouse Launching</span>
               <span className="text-xs">|</span>
               <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-accent transition-colors">Manufacturing: wigexporter.com &#8599;</a>
               <span className="text-xs">|</span>

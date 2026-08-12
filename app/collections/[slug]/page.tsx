@@ -160,6 +160,36 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
                 headline: "Butterfly weft — the industry game-changer",
                 subtext: "Complete guide: 0.5mm ultra-thin base, seamless finish & salon pricing guide",
               },
+              "all": {
+                guideUrl: "/blog/hair-extension-types-guide",
+                headline: "New to hair extensions?",
+                subtext: "Complete guide: every extension type explained for UK salons & clients",
+              },
+              "diy": {
+                guideUrl: "/blog/trade-vs-diy-extensions",
+                headline: "DIY or professional — which is right for your client?",
+                subtext: "Read our guide: trade vs DIY extensions, costs & results compared",
+              },
+              "professional": {
+                guideUrl: "/blog/wholesale-hair-extensions-uk",
+                headline: "Stocking professional extensions for your salon?",
+                subtext: "Read our guide: wholesale pricing, MOQs & building a profitable range",
+              },
+              "hair-care": {
+                guideUrl: "/blog/hair-extension-aftercare-guide",
+                headline: "Make extensions last longer for your clients",
+                subtext: "Complete aftercare guide: washing, brushing & prolonging extension life",
+              },
+              "extension-care": {
+                guideUrl: "/blog/hair-extension-aftercare-guide",
+                headline: "Make extensions last longer for your clients",
+                subtext: "Complete aftercare guide: washing, brushing & prolonging extension life",
+              },
+              "extension-tools": {
+                guideUrl: "/blog/hair-extension-methods-comparison",
+                headline: "Choosing the right method for each client",
+                subtext: "Read our guide: every extension method compared side by side",
+              },
             }
             const banner = BANNERS[slug]
             if (!banner) return null

@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, ArrowRight, Package, Palette, TrendingUp, Users, Globe } from "lucide-react"
 import { ArticleJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import Image from "next/image"
+import { RelatedGuides } from "@/components/blog/related-guides"
 
 export const metadata = {
   title: "Private Label Hair Extensions UK: How to Build Your Own Brand in 2026 | D.S Hair Beauty",
@@ -138,13 +140,8 @@ export default function PrivateLabelHairExtensionsUK() {
               </p>
 
               {/* ── Hero Image ──────────────────────────── */}
-              <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80"
-                  alt="Private label hair extensions branding for UK salons"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+                <Image src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Private label hair extensions branding for UK salons" fill className="object-cover" />
               </div>
 
               {/* ── Why Private Label Now ────────────────── */}
@@ -261,7 +258,7 @@ export default function PrivateLabelHairExtensionsUK() {
               <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground mb-8">
                 <li><strong>Factory-direct pricing</strong> — no intermediary between you and production</li>
                 <li><strong>Express shipping to the UK</strong> — 3–5 working days via DHL/UPS from our manufacturing base</li>
-                <li><strong>Selected UK-warehoused lines preparing</strong> — faster dispatch on popular items coming soon</li>
+                <li><strong>Selected UK warehouse launching</strong> — faster dispatch on popular items coming soon</li>
                 <li><strong>No minimum order quantity</strong> — start with a test batch, not a warehouse commitment</li>
                 <li><strong>Full customisation</strong> — your logo, your colours, your brand story</li>
                 <li><strong>19 years of R&D backing</strong> — we have already made the mistakes so you don't have to</li>
@@ -328,6 +325,7 @@ export default function PrivateLabelHairExtensionsUK() {
             </div>
           </article>
         </main>
+        <RelatedGuides slug="private-label-hair-extensions-uk" />
         <Footer />
         <CartDrawer />
       </div>
