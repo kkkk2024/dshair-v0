@@ -83,6 +83,53 @@ export const blogPosts: BlogPost[] = [
     date: "2026-08-03",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
   },
+  {
+    slug: "grow-profitable-hair-salon-uk",
+    title: "How to Grow a Profitable Hair Salon in the UK: Operations, Profit & Building Your Own Brand",
+    excerpt:
+      "A 19-years-in-the-trenches playbook for UK salon owners: raise profit margins, run efficient operations, and build your own hair extension brand with private label. Real frameworks and numbers.",
+    category: "Business",
+    readTime: "14 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    faqs: [
+      {
+        question: "How profitable is a hair salon in the UK?",
+        answer:
+          "A well-run UK salon typically nets around 8–15% of turnover. The gap between a struggling salon and a profitable one is usually operational discipline — rebooking, retail attach, and chair utilisation — rather than headline prices.",
+      },
+      {
+        question: "What profit margin should a hair salon aim for?",
+        answer:
+          "Aim for a net margin of at least 10%, with 12–15% as a strong target. Below 8% leaves almost no buffer for rent rises or quiet seasons; above 15% sustained usually means you have a real competitive edge, often a strong extension or retail line.",
+      },
+      {
+        question: "How can a salon increase profits without raising prices?",
+        answer:
+          "Close the leaks first: introduce a deposit or no-show policy, train the front desk to rebook before clients leave, set a retail attach-rate target of 25–35%, and add high-margin extension services. These lift profit per client without touching your menu prices.",
+      },
+      {
+        question: "Should my salon start its own hair extension brand?",
+        answer:
+          "If you already sell extensions and have a loyal client base, private label is often the highest-leverage next step. You keep the margin, own the client relationship, and differentiate from salons that only resell a supplier's name. Start with a small, well-chosen sample order.",
+      },
+      {
+        question: "What is private label for salons and how does it work?",
+        answer:
+          "Private label means extensions are made and packed under your salon's brand — your logo, your colour ring, your packaging. A manufacturing partner handles production and quality; you own the brand, the pricing, and the client relationship.",
+      },
+      {
+        question: "How long does it take to launch a private label hair extension line?",
+        answer:
+          "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. Our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
+      },
+      {
+        question: "How do I choose a hair extension manufacturing partner in the UK?",
+        answer:
+          "Look for proven industry experience, 100% Remy human hair as standard, transparent MOQs and lead times, and real training and colour-matching support. See our supplier checklist for the full questions to ask before you commit.",
+      },
+    ],
+  },
   // ===== 更早的游离文章 =====
   {
     slug: "how-to-choose-hair-extension-supplier",

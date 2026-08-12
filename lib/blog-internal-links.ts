@@ -68,12 +68,16 @@ export const BLOG_INTERNAL_LINKS: Record<string, BlogLinkMap> = {
     related: ["private-label-hair-extensions-uk", "hair-extensions-trade-account", "how-to-choose-hair-extension-supplier"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
+  "grow-profitable-hair-salon-uk": {
+    related: ["private-label-hair-extensions-uk", "hair-extension-profit-margin-guide", "how-to-start-selling-hair-extensions-salon"],
+    collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
+  },
   "private-label-hair-extensions-uk": {
-    related: ["wholesale-hair-extensions-uk", "how-to-start-selling-hair-extensions-salon", "hair-extension-profit-margin-guide"],
+    related: ["grow-profitable-hair-salon-uk", "wholesale-hair-extensions-uk", "hair-extension-profit-margin-guide"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "hair-extension-profit-margin-guide": {
-    related: ["private-label-hair-extensions-uk", "wholesale-hair-extensions-uk", "how-to-start-selling-hair-extensions-salon"],
+    related: ["grow-profitable-hair-salon-uk", "private-label-hair-extensions-uk", "wholesale-hair-extensions-uk"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "trade-vs-diy-extensions": {
@@ -93,7 +97,7 @@ export const BLOG_INTERNAL_LINKS: Record<string, BlogLinkMap> = {
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "how-to-start-selling-hair-extensions-salon": {
-    related: ["private-label-hair-extensions-uk", "hair-extension-profit-margin-guide", "wholesale-hair-extensions-uk"],
+    related: ["grow-profitable-hair-salon-uk", "private-label-hair-extensions-uk", "hair-extension-profit-margin-guide"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
 
