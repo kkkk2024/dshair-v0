@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/butterfly-extensions-guide" },
   title: "Butterfly Weft Extensions Guide: Ultra-Thin Seamless Volume | D.S HAIR & BEAUTY",
   description: "Complete guide to butterfly weft hair extensions for UK salons. The ultra-thin 0.5mm base revolutionised the extension industry. Seamless, lightweight, professional.",
 }
@@ -14,6 +16,7 @@ export const metadata = {
 export default function ButterflyExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="butterfly-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

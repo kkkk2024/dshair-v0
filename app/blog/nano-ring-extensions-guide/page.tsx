@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/nano-ring-extensions-guide" },
   title: "Nano Ring Hair Extensions Guide: The Smallest, Most Discrete Method | D.S HAIR & BEAUTY",
   description: "Complete guide to nano ring (nano link) hair extensions for UK salons. Ultra-small bonds for fine hair, virtually invisible, no heat, no glue.",
 }
@@ -14,6 +16,7 @@ export const metadata = {
 export default function NanoRingExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="nano-ring-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

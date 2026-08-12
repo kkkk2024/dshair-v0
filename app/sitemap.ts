@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { products, collections } from '@/lib/products'
 import { seoPages } from '@/lib/seo-pages'
+import { blogPosts } from '@/lib/blog-seo'
 
 const BASE_URL = 'https://www.dshairbeauty.co.uk'
 
@@ -28,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/about/caro-chen`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
       url: `${BASE_URL}/contact`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -44,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/salon-supplies`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/ambassador`,
@@ -131,32 +144,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog post pages (all 21 posts on disk)
-  const blogPosts = [
-    'balayage-extensions-salon-guide',
-    'best-extensions-fine-hair-uk',
-    'butterfly-extensions-guide',
-    'clip-in-extensions-guide',
-    'fringes-bangs-extensions-guide',
-    'hair-extension-aftercare-guide',
-    'hair-extension-methods-comparison',
-    'hair-extension-types-guide',
-    'hair-topper-guide',
-    'hand-tied-weft-guide',
-    'how-to-choose-hair-extension-supplier',
-    'k-tip-extensions-guide',
-    'manchester-colour-collection-2026',
-    'manchester-hair-extension-supplier',
-    'nano-ring-extensions-guide',
-    'ponytail-extensions-guide',
-    'remy-vs-nonremy-hair-guide',
-    'tape-in-extensions-guide',
-    'trade-vs-diy-extensions',
-    'weft-extensions-guide',
-    'wholesale-hair-extensions-uk',
-  ]
-  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
+  // Blog post pages — derived from the central blog data (lib/blog-seo) so new
+  // posts are auto-included and nothing is silently dropped from the sitemap.
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.6,

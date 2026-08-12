@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, Sparkles, Palette } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/manchester-colour-collection-2026" },
   title: "2026 Manchester Colour Collection: The Shades Every Salon Needs | D.S HAIR & BEAUTY",
   description:
     "The definitive 2026 colour guide for Manchester salons. From Icy Manchester platinum to Cinnamon Copper — discover the shades your clients are asking for, curated by D.S Hair Beauty.",
@@ -15,6 +17,7 @@ export const metadata = {
 export default function ManchesterColourCollection2026() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="manchester-colour-collection-2026" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

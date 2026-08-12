@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/k-tip-extensions-guide" },
   title: "K-Tip Hair Extensions Guide: Keratin Bond Excellence | D.S HAIR & BEAUTY",
   description: "Complete guide to K-tip (keratin tip) hair extensions for UK salons. Longest-lasting method, most natural result, highest revenue per appointments.",
 }
@@ -14,6 +16,7 @@ export const metadata = {
 export default function KTipExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="k-tip-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

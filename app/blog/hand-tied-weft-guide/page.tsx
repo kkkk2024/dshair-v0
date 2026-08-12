@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hand-tied-weft-guide" },
   title: "What is Hand-Tied Weft Hair Extensions? Complete Guide 2025 | DS Hair Beauty",
   description:
     "Hand-tied weft explained — what it is, why salons prefer it, how to apply it, and where to source trade-grade hand-tied weft in Manchester. Expert guide from DS Hair Beauty.",
@@ -15,6 +17,7 @@ export const metadata = {
 export default function HandTiedWeftPage() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="hand-tied-weft-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

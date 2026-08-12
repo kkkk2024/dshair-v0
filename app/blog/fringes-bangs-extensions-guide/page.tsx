@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/fringes-bangs-extensions-guide" },
   title: "Hair Fringe & Bangs Extensions Guide | D.S HAIR & BEAUTY",
   description: "Complete guide to fringe and bangs hair extensions for UK salons. Add face-framing colour, volume, and style without commitment. 100% Remy human hair.",
   robots: {
@@ -17,6 +19,7 @@ export const metadata = {
 export default function FringesBangsExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="fringes-bangs-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

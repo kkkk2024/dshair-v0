@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, CheckCircle2, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/hair-topper-guide" },
   title: "Hair Topper Guide: What Is It, Who Needs It & How to Apply | D.S HAIR & BEAUTY",
   description:
     "Complete guide to hair toppers for UK salons. Silk base vs mono top vs mesh base explained. Learn which clients need toppers, how to apply them, and how to source wholesale. From D.S Hair & Beauty — 19 years supplying UK salons.",
@@ -15,6 +17,7 @@ export const metadata = {
 export default function HairTopperGuidePage() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="hair-topper-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

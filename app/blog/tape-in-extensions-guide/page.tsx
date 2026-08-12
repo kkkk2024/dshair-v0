@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/tape-in-extensions-guide" },
   title: "Tape-In Hair Extensions Guide: Invisible Seamless Installation | D.S HAIR & BEAUTY",
   description: "Complete guide to tape-in hair extensions for UK salons. Invisible application, seamless finish, easy maintenance. The UK's most popular professional extension method.",
 }
@@ -14,6 +16,7 @@ export const metadata = {
 export default function TapeInExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="tape-in-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

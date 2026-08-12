@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/clip-in-extensions-guide" },
   title: "Clip-In Hair Extensions Guide: Instant Length & Volume in Minutes | D.S HAIR & BEAUTY",
   description: "Complete guide to clip-in hair extensions for UK salons. How to fit, blend, and sell clip-ins to clients. 100% Remy human hair, instant results.",
   robots: {
@@ -17,6 +19,7 @@ export const metadata = {
 export default function ClipInExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="clip-in-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

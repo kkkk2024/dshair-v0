@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/trade-vs-diy-extensions" },
   title: "Trade Hair Extensions vs DIY: What Salon Owners Need to Know | DS Hair Beauty",
   description:
     "Why professional trade-grade Remy hair extensions deliver better results than DIY retail products — and how to explain the difference to your salon clients.",
@@ -15,6 +17,7 @@ export const metadata = {
 export default function TradeVsDiyPage() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="trade-vs-diy-extensions" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

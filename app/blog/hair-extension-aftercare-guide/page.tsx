@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -36,6 +37,7 @@ export const metadata = {
 export default function HairExtensionAftercareGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="hair-extension-aftercare-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

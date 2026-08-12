@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle, Users, TrendingDown, Sparkles } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/ponytail-extensions-guide" },
   title: "Ponytail Hair Extensions Guide: Instant Glam Ponytails | D.S HAIR & BEAUTY",
   description: "Complete guide to ponytail hair extensions for UK salons. Instant length and volume for ponytails, buns, and braided styles. 100% Remy human hair.",
   robots: {
@@ -17,6 +19,7 @@ export const metadata = {
 export default function PonytailExtensionsGuide() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="ponytail-extensions-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

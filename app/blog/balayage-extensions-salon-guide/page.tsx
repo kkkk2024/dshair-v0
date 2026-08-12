@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { BlogJsonLd } from "@/components/seo/blog-jsonld"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
@@ -7,6 +8,7 @@ import Link from "next/link"
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "https://www.dshairbeauty.co.uk/blog/balayage-extensions-salon-guide" },
   title: "Balayage Hair Extensions: The Complete Salon Guide | DS Hair Beauty Manchester",
   description:
     "Why balayage extensions are essential for Manchester salons, how pre-coloured balayage weft works, and where to source trade-grade balayage extensions in the UK.",
@@ -15,6 +17,7 @@ export const metadata = {
 export default function BalayageExtensionsPage() {
   return (
     <CartProvider>
+      <BlogJsonLd slug="balayage-extensions-salon-guide" />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
