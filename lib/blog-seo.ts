@@ -419,6 +419,103 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // ===== 2026年8月 — 客户成长故事 (Client Stories cluster) =====
+  {
+    slug: "client-story-salon-growth-chain",
+    title: "From One Chair to Three: How a Leeds Salon Built a Chain",
+    excerpt:
+      "An anonymised client story: how a single-chair Leeds salon grew into a three-location business with extension systems, team training and a private label line.",
+    category: "Client Stories",
+    readTime: "9 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    faqs: [
+      {
+        question: "How long does it take to grow a salon into a chain?",
+        answer: "There is no fixed timeline, but the salons that scale do it in stages over several years: first build a recurring extension service and document the standard, then add a second chair and a trained stylist, then replicate the model at a second location. A third follows the same playbook. Growth comes from making good results repeatable, not from one big leap.",
+      },
+      {
+        question: "What role do hair extensions play in salon growth?",
+        answer: "Extensions create a built-in 6–8 week maintenance cycle (move-ups and re-orders), so clients return on a rhythm without being chased. That recurring revenue stabilises cash flow and lets an owner step back from the chair to run the business — which is what makes adding chairs and locations possible.",
+      },
+      {
+        question: "Can a small salon realistically open a second location?",
+        answer: "Yes, once the first site runs on systems rather than on the owner's presence. If results depend only on you, a second location multiplies problems. If you have a written SOP, a trained and certified team, and tracked metrics (rebooking, attach rate), the second site is a copy of a proven model — not a gamble.",
+      },
+      {
+        question: "How does a private label line help a growing salon?",
+        answer: "A private label line puts your salon's name on the hair and aftercare clients already love. They re-order by your brand, the margin stays with you rather than a reseller, and it adds a revenue line beyond chair hours. It also deepens loyalty: clients are in a relationship with your brand, not a product someone else owns.",
+      },
+      {
+        question: "What should a salon do first to grow?",
+        answer: "Build recurrence before scale: add an extension service with a 6–8 week cycle, write down your standard so you can train others, and track rebooking and retail attach weekly. A loyal, returning client base and a consistent team are the foundation every multi-location salon is built on.",
+      },
+    ],
+  },
+  {
+    slug: "client-story-private-label-brand",
+    title: "From No Brand to a Named Line: Building a Private Label",
+    excerpt:
+      "An anonymised client story: how a salon with no product brand launched its own private label extension and aftercare line — and kept the margin and the relationship with its clients.",
+    category: "Client Stories",
+    readTime: "9 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80",
+    faqs: [
+      {
+        question: "Can a small salon launch its own hair extension brand?",
+        answer: "Yes. Private label means a manufacturer supplies the hair and aftercare under your salon's name, packaging and colour story. You own the brand and set the retail price; you do not need to manufacture anything yourself. Most salons we work with start with a small, curated sample order rather than a large stock commitment.",
+      },
+      {
+        question: "What is the difference between private label and white label?",
+        answer: "White label is a generic product you resell under your name with minimal changes. Private label goes further: the shades, packaging, aftercare and re-order flow are built around your salon's identity. For a salon wanting a real brand clients recognise, private label is the stronger route.",
+      },
+      {
+        question: "How much stock does a private label line require to start?",
+        answer: "Far less than most owners expect. A sensible start is a small sample order — your best-selling shades plus one aftercare product — tested on your existing clients first. Because you are not buying a warehouse, the risk is low and you learn exactly what your clients re-order before expanding the line.",
+      },
+      {
+        question: "Do I need a large client base before launching a private label?",
+        answer: "No. If you already sell take-home products and have a loyal base, you have the demand — you are simply putting your name on it. Many salons launch the line to their existing clients first, prove the re-order behaviour, then grow. A large base helps, but it is not a prerequisite.",
+      },
+      {
+        question: "How long does it take to get a private label line ready?",
+        answer: "Typically a few weeks to a couple of months depending on the range and labelling. The fastest path is to start with a small curated set, agree shades and packaging, and run a first sample order. Consistency of the hair batch to batch is what lets the brand keep its promise — which is why the Remy, cuticle-aligned source matters more than the logo.",
+      },
+    ],
+  },
+  {
+    slug: "client-story-stylist-to-founder",
+    title: "From Chair Renter to Brand Founder: One Stylist's Path",
+    excerpt:
+      "An anonymised client story: how a freelance extension technician became a recognised brand founder with her own method, her own product line, and a training offer.",
+    category: "Client Stories",
+    readTime: "9 min read",
+    date: "2026-08-13",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80",
+    faqs: [
+      {
+        question: "Can a freelance stylist build a hair extension brand?",
+        answer: "Yes. The technicians who become brands do three things in order: document their method, put their name on a product line (via private label), and teach the method to others. None requires manufacturing hair — a supply partner handles that. What it requires is turning skill into something repeatable and ownable.",
+      },
+      {
+        question: "What does a stylist need to become a brand founder?",
+        answer: "Three ownable assets: a documented method (written down, not just in your hands), a product line under your name (private label), and authority (teaching or evidence that your method works). With those, you have a service, a product and an education income — three lines under one name.",
+      },
+      {
+        question: "How do I move from technician to educator?",
+        answer: "Document your method first — consultation, sectioning, tension, blend, aftercare. Once it is written, you can train newer technicians against it. Teaching is the fastest way to become 'the name' in your niche: authority compounds into bookings and product sales.",
+      },
+      {
+        question: "Do I need to manufacture hair to have my own brand?",
+        answer: "No. Private label lets you put your brand on consistent 100% Remy human hair without running a factory. You own the brand, the pricing and the client relationship; your supply partner owns the making. That split is exactly how most salon and technician brands are built.",
+      },
+      {
+        question: "How long does it take to build a recognised salon brand?",
+        answer: "It is a staged path, not an overnight one. Document the method first, add a private label line once you have a loyal base, then teach it. Each step builds on the last; most technicians reach a recognised, named brand over a few years of consistent work — far faster once the method is written down and the product carries their name.",
+      },
+    ],
+  },
   // ===== 更早的游离文章 =====
   {
     slug: "how-to-choose-hair-extension-supplier",

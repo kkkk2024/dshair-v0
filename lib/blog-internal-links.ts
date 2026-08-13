@@ -69,11 +69,11 @@ export const BLOG_INTERNAL_LINKS: Record<string, BlogLinkMap> = {
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "grow-profitable-hair-salon-uk": {
-    related: ["private-label-hair-extensions-uk", "salon-extension-pricing-guide", "salon-high-ticket-extensions"],
+    related: ["client-story-salon-growth-chain", "private-label-hair-extensions-uk", "salon-extension-pricing-guide"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "private-label-hair-extensions-uk": {
-    related: ["grow-profitable-hair-salon-uk", "salon-retail-attachment-guide", "hair-extension-profit-margin-guide"],
+    related: ["client-story-private-label-brand", "grow-profitable-hair-salon-uk", "salon-retail-attachment-guide"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "hair-extension-profit-margin-guide": {
@@ -115,11 +115,23 @@ export const BLOG_INTERNAL_LINKS: Record<string, BlogLinkMap> = {
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "salon-extension-training-sop": {
-    related: ["grow-profitable-hair-salon-uk", "salon-extension-pricing-guide", "how-to-start-selling-hair-extensions-salon"],
+    related: ["client-story-stylist-to-founder", "grow-profitable-hair-salon-uk", "salon-extension-pricing-guide"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "salon-high-ticket-extensions": {
     related: ["salon-extension-pricing-guide", "grow-profitable-hair-salon-uk", "private-label-hair-extensions-uk"],
+    collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
+  },
+  "client-story-salon-growth-chain": {
+    related: ["grow-profitable-hair-salon-uk", "salon-extension-training-sop", "salon-high-ticket-extensions"],
+    collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
+  },
+  "client-story-private-label-brand": {
+    related: ["private-label-hair-extensions-uk", "salon-retail-attachment-guide", "hair-extension-profit-margin-guide"],
+    collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
+  },
+  "client-story-stylist-to-founder": {
+    related: ["salon-extension-training-sop", "private-label-hair-extensions-uk", "grow-profitable-hair-salon-uk"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
 
