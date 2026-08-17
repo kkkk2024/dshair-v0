@@ -13,6 +13,7 @@ import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { InstagramSection } from "@/components/home/instagram-section"
 import { QuickQuoteSection } from "@/components/home/quick-quote-section"
+import { hreflangAlternates } from "@/lib/i18n/config"
 
 export const metadata: Metadata = {
   title: "Wholesale Hair Extensions UK | Trade Supplier for UK & EU Salons | D.S Hair Beauty",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     "Factory-direct trade supplier of 100% Remy human hair extensions for UK & EU salons. Tape-In, K-Tip, Hand-Tied Weft, Butterfly Weft & Toppers. Wholesale pricing, private label available.",
   alternates: {
     canonical: "https://www.dshairbeauty.co.uk",
+    languages: hreflangAlternates(),
   },
   openGraph: {
     title: "Trade Hair Extensions for UK & EU Salons | D.S Hair Beauty",

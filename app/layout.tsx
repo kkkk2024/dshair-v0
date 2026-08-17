@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import { OrganizationJsonLd, AuthorJsonLd } from '@/components/seo/json-ld'
+import { isLocale, dir as dirFor, defaultLocale } from '@/lib/i18n/config'
+import { LocaleProvider } from '@/lib/i18n'
 import './globals.css'
 
 const inter = Inter({ 
@@ -77,13 +80,18 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const h = await headers()
+  const localeHeader = h.get('x-locale') || defaultLocale
+  const locale = isLocale(localeHeader) ? localeHeader : defaultLocale
+  const direction = h.get('x-dir') || 'ltr'
+
   return (
-    <html lang="en" data-build="20260605-v3" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang={locale} dir={direction} data-build="20260605-v3" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
         {/* TikTok Pixel */}
         <script
@@ -105,11 +113,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <meta name="p:domain_verify" content="dcc4d0abd5f7405c205b0872574efb47"/>
       </head>
       <body className="font-sans antialiased">
-        <OrganizationJsonLd />
-        <AuthorJsonLd />
-        {children}
-        <WhatsAppButton />
-        <Analytics />
+        <LocaleProvider locale={locale}>
+          <OrganizationJsonLd />
+          <AuthorJsonLd />
+          {children}
+          <WhatsAppButton />
+          <Analytics />
+        </LocaleProvider>
       </body>
     </html>
   )

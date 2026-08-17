@@ -6,41 +6,11 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Instagram, Youtube, Twitter, Linkedin, MessageCircle, Check } from "lucide-react"
 import { socialLinks, contactInfo } from "@/lib/products"
-
-const footerLinks = {
-  shop: [
-    { title: "DIY Extensions", href: "/collections/diy" },
-    { title: "Professional Extensions", href: "/collections/professional" },
-    { title: "Hair Care", href: "/collections/hair-care" },
-    { title: "Accessories", href: "/collections/accessories" },
-  ],
-  help: [
-    { title: "Contact Us", href: "/contact" },
-    { title: "FAQs", href: "/faqs" },
-    { title: "Shipping", href: "/shipping" },
-    { title: "Returns", href: "/returns" },
-    { title: "Colour Match", href: "/colour-match" },
-  ],
-  about: [
-    { title: "Our Story", href: "/about" },
-    { title: "Salon Partners", href: "/salon-partners" },
-    { title: "Why Choose Us", href: "/why-choose-us" },
-    { title: "Blog", href: "/blog" },
-  ],
-  services: [
-    { title: "Find a Stylist", href: "/find-stylist" },
-    { title: "Colour Match", href: "/colour-match" },
-  ],
-  salons: [
-    { title: "Wholesale Enquiry", href: "/contact?type=wholesale" },
-    { title: "Trade Account", href: "/salon-partners" },
-    { title: "Switch Your Trade Supplier", href: "/switch-trade-supplier" },
-    { title: "Trade Price Calculator", href: "/trade-price-calculator" },
-    { title: "Contact → WhatsApp", href: contactInfo.whatsapp, external: true },
-  ],
-}
+import { useDict } from "@/lib/i18n"
 
 export function Footer() {
+  const d = useDict()
+  const f = d.ui.footer
   const [email, setEmail] = useState("")
   const [subscribed, setSubscribed] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -48,15 +18,46 @@ export function Footer() {
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email.trim()) return
-    
+
     setLoading(true)
-    
-    // Simulate subscription (in production, connect to newsletter service)
     setTimeout(() => {
       setSubscribed(true)
       setLoading(false)
       setEmail("")
     }, 1000)
+  }
+
+  const footerLinks = {
+    shop: [
+      { title: f.shopDiy, href: "/collections/diy" },
+      { title: f.shopPro, href: "/collections/professional" },
+      { title: f.shopHairCare, href: "/collections/hair-care" },
+      { title: f.shopAccessories, href: "/collections/accessories" },
+    ],
+    help: [
+      { title: f.helpContact, href: "/contact" },
+      { title: f.helpFaqs, href: "/faqs" },
+      { title: f.helpShipping, href: "/shipping" },
+      { title: f.helpReturns, href: "/returns" },
+      { title: f.helpColourMatch, href: "/colour-match" },
+    ],
+    about: [
+      { title: f.aboutStory, href: "/about" },
+      { title: f.aboutPartners, href: "/salon-partners" },
+      { title: f.aboutWhy, href: "/why-choose-us" },
+      { title: f.aboutBlog, href: "/blog" },
+    ],
+    services: [
+      { title: f.svcFindStylist, href: "/find-stylist" },
+      { title: f.svcColourMatch, href: "/colour-match" },
+    ],
+    salons: [
+      { title: f.forWholesale, href: "/contact?type=wholesale" },
+      { title: f.forTradeAccount, href: "/salon-partners" },
+      { title: f.forSwitch, href: "/switch-trade-supplier" },
+      { title: f.forCalculator, href: "/trade-price-calculator" },
+      { title: f.forWhatsApp, href: contactInfo.whatsapp, external: true },
+    ],
   }
 
   return (
@@ -66,34 +67,34 @@ export function Footer() {
         <div className="container px-4 md:px-6 py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-serif text-2xl md:text-3xl mb-2">Trade Updates for Salons</h3>
+              <h3 className="font-serif text-2xl md:text-3xl mb-2">{f.newsletterTitle}</h3>
               <p className="text-primary-foreground/80">
-                Get trade pricing, new stock alerts, and private-label news — built for salon owners, not consumers.
+                {f.newsletterDesc}
               </p>
             </div>
             <form onSubmit={handleSubscribe} className="flex w-full md:w-auto gap-2">
               {subscribed ? (
                 <div className="flex items-center gap-2 text-green-300 bg-green-900/30 px-4 py-2 rounded-lg">
                   <Check className="h-5 w-5" />
-                  <span>Thanks for subscribing!</span>
+                  <span>{f.thanks}</span>
                 </div>
               ) : (
                 <>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={f.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 min-w-[250px]"
                   />
-                  <Button 
-                    variant="secondary" 
+                  <Button
+                    variant="secondary"
                     className="whitespace-nowrap"
                     disabled={loading}
                     type="submit"
                   >
-                    {loading ? "Subscribing..." : "Subscribe"}
+                    {loading ? f.subscribing : f.subscribe}
                   </Button>
                 </>
               )}
@@ -111,7 +112,7 @@ export function Footer() {
               <span className="font-serif text-xl font-semibold">D.S HAIR & BEAUTY</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
-              {"Factory-direct trade supplier of 100% Remy human hair extensions for UK & EU salons. Backed by 19 years of manufacturing. Our production arm: wigexporter.com."}
+              {f.brandDesc}
             </p>
             <div className="flex gap-4">
               <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram" className="hover:text-accent transition-colors">
@@ -140,7 +141,7 @@ export function Footer() {
 
           {/* Links columns */}
           <div>
-            <h4 className="font-semibold mb-4">Shop</h4>
+            <h4 className="font-semibold mb-4">{f.colShop}</h4>
             <ul className="space-y-3">
               {footerLinks.shop.map((link) => (
                 <li key={link.title}>
@@ -153,7 +154,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Help</h4>
+            <h4 className="font-semibold mb-4">{f.colHelp}</h4>
             <ul className="space-y-3">
               {footerLinks.help.map((link) => (
                 <li key={link.title}>
@@ -166,7 +167,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">About</h4>
+            <h4 className="font-semibold mb-4">{f.colAbout}</h4>
             <ul className="space-y-3">
               {footerLinks.about.map((link) => (
                 <li key={link.title}>
@@ -179,7 +180,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">{f.colServices}</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.title}>
@@ -193,7 +194,7 @@ export function Footer() {
 
           {/* For Salons - B2B Section */}
           <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-            <h4 className="font-semibold mb-4 text-accent">For Salons</h4>
+            <h4 className="font-semibold mb-4 text-accent">{f.colForSalons}</h4>
             <ul className="space-y-3">
               {footerLinks.salons.map((link) => (
                 <li key={link.title}>
@@ -213,7 +214,7 @@ export function Footer() {
 
           {/* Manufacturing - dual-site loop */}
           <div>
-            <h4 className="font-semibold mb-4">Manufacturing</h4>
+            <h4 className="font-semibold mb-4">{f.colManufacturing}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
@@ -222,7 +223,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/switch-trade-supplier" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Why Manufacturer-Direct
+                  {f.manufWhyDirect}
                 </Link>
               </li>
             </ul>
@@ -235,24 +236,24 @@ export function Footer() {
         <div className="container px-4 md:px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
             <div className="flex flex-col items-center md:items-start gap-1">
-              <p>© {new Date().getFullYear()} D.S HAIR & BEAUTY. All rights reserved.</p>
-              <p className="text-xs">A trading brand of Kangde Health Technology Co., Ltd.</p>
+              <p>{f.copyright.replace('{year}', String(new Date().getFullYear()))}</p>
+              <p className="text-xs">{f.company}</p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="hover:text-primary-foreground transition-colors">
-                Privacy Policy
+                {f.privacy}
               </Link>
               <Link href="/terms" className="hover:text-primary-foreground transition-colors">
-                Terms of Service
+                {f.terms}
               </Link>
               <Link href="/cookies" className="hover:text-primary-foreground transition-colors">
-                Cookie Policy
+                {f.cookies}
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs">Manchester, UK · UK &amp; EU Salon Trade · UK Warehouse Launching</span>
+              <span className="text-xs">{f.location}</span>
               <span className="text-xs">|</span>
-              <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-accent transition-colors">Manufacturing: wigexporter.com &#8599;</a>
+              <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-accent transition-colors">{f.manufLabel} &#8599;</a>
               <span className="text-xs">|</span>
               <a href={`mailto:${contactInfo.email}`} className="text-xs hover:text-accent transition-colors">{contactInfo.email}</a>
             </div>

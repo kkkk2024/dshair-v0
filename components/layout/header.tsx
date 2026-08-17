@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { Menu, Search, ShoppingBag, User, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
@@ -15,63 +15,21 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import { products } from "@/lib/products"
-import { contactInfo } from "@/lib/products"
-
-// 1. DIY Extensions - 包含 Clip-In, Weft, Ponytail, Fringes & Bangs
-const diyExtensions = [
-  { title: "Clip-In", href: "/collections/clip-in", description: "Easy to apply, natural look" },
-  { title: "Weft", href: "/collections/weft", description: "Add fullness effortlessly" },
-  { title: "Ponytail", href: "/collections/ponytails", description: "Instant volume and length" },
-  { title: "Fringes & Bangs", href: "/collections/fringes-bangs", description: "Transform your look instantly" },
-]
-
-// 2. Professional - 包含 Tape-In, K-tips, Nano, Butterfly, Hair Toppers
-const proExtensions = [
-  { title: "Tape-In", href: "/collections/tape-in", description: "Professional grade tape-ins" },
-  { title: "K-Tip Extensions", href: "/collections/k-tip-extensions", description: "Keratin bonded tips" },
-  { title: "Nano Extensions", href: "/collections/nano-extensions", description: "Nano ring extensions for fine hair" },
-  { title: "Butterfly Weft", href: "/collections/butterfly-weft", description: "Lightweight volume" },
-  { title: "Hair Toppers", href: "/collections/hair-toppers", description: "Thinning hair solutions" },
-]
-
-// 3. Hair Care — Extension Care (二级类目)
-const hairCare = [
-  { title: "Extension Care", href: "/collections/extension-care", description: "Shampoo, conditioner, masks & brushes" },
-]
-
-// 4. Accessories — Salon Supplies / Extension Tools / Heated Styling / Storage (二级类目)
-const accessories = [
-  { title: "Salon Supplies", href: "/salon-supplies", description: "Nano rings, tape tabs, clips & consumables" },
-  { title: "Extension Tools", href: "/collections/extension-tools", description: "Pliers, scissors, clips & installation kits" },
-  { title: "Heated Styling", href: "/collections/heated-styling", description: "Heated brushes, paddles & styling tools" },
-  { title: "Storage", href: "/collections/storage", description: "Extension storage bags & cases" },
-]
-
-// 5. Services — 共7个二级类目
-const services = [
-  { title: "Find a Stylist", href: "/find-stylist", description: "Locate certified professionals near you" },
-  { title: "Colour Match", href: "/colour-match", description: "Find your perfect shade" },
-  { title: "Solutions", href: "/solutions", description: "Complete hair extension packages & bundles for salons" },
-  { title: "Resources", href: "/resources", description: "Expert guides, industry insights & product knowledge" },
-  { title: "Trade Wholesale", href: "/trade-wholesale", description: "Wholesale hair extensions for UK salons" },
-  { title: "Wholesale UK SEO Hub", href: "/uk-salon-hair-extensions/hair-extensions-wholesale-uk", description: "UK salon wholesale and city pages" },
-  { title: "Price Calculator", href: "/trade-price-calculator", description: "Estimate your wholesale costs in seconds" },
-  { title: "Extension Specs", href: "/extension-specs", description: "Compare every extension method side-by-side" },
-  { title: "Salon Partners", href: "/salon-partners", description: "Salon partner programme & benefits" },
-  { title: "Ambassador", href: "/ambassador", description: "Join our ambassador programme" },
-  { title: "Academy", href: "/academy", description: "Professional training & certification" },
-]
+import { products, contactInfo } from "@/lib/products"
+import { useLocale, useDict } from "@/lib/i18n"
+import { locales, localeNames } from "@/lib/i18n/config"
 
 export function Header() {
+  const d = useDict()
+  const locale = useLocale()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
   const router = useRouter()
+  const pathname = usePathname()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
-      // Search products and redirect to collection with filter
       router.push(`/collections/all?search=${encodeURIComponent(searchQuery)}`)
       setIsSearchOpen(false)
       setSearchQuery("")
@@ -83,11 +41,54 @@ export function Header() {
     window.open(`https://wa.me/8613516946001?text=${message}`, "_blank")
   }
 
+  // Build language switcher hrefs (v1: each language links to its own homepage)
+  const langHome = (l: string) => (l === "en" ? "/" : `/${l}`)
+
+  const diyExtensions = [
+    { title: d.nav.diyClipIn, href: "/collections/clip-in", description: d.nav.diyClipInDesc },
+    { title: d.nav.diyWeft, href: "/collections/weft", description: d.nav.diyWeftDesc },
+    { title: d.nav.diyPonytail, href: "/collections/ponytails", description: d.nav.diyPonytailDesc },
+    { title: d.nav.diyFringes, href: "/collections/fringes-bangs", description: d.nav.diyFringesDesc },
+  ]
+
+  const proExtensions = [
+    { title: d.nav.proTapeIn, href: "/collections/tape-in", description: d.nav.proTapeInDesc },
+    { title: d.nav.proKTip, href: "/collections/k-tip-extensions", description: d.nav.proKTipDesc },
+    { title: d.nav.proNano, href: "/collections/nano-extensions", description: d.nav.proNanoDesc },
+    { title: d.nav.proButterfly, href: "/collections/butterfly-weft", description: d.nav.proButterflyDesc },
+    { title: d.nav.proToppers, href: "/collections/hair-toppers", description: d.nav.proToppersDesc },
+  ]
+
+  const hairCare = [
+    { title: d.nav.careExtension, href: "/collections/extension-care", description: d.nav.careExtensionDesc },
+  ]
+
+  const accessories = [
+    { title: d.nav.accSalonSupplies, href: "/salon-supplies", description: d.nav.accSalonSuppliesDesc },
+    { title: d.nav.accTools, href: "/collections/extension-tools", description: d.nav.accToolsDesc },
+    { title: d.nav.accHeated, href: "/collections/heated-styling", description: d.nav.accHeatedDesc },
+    { title: d.nav.accStorage, href: "/collections/storage", description: d.nav.accStorageDesc },
+  ]
+
+  const services = [
+    { title: d.nav.svcFindStylist, href: "/find-stylist", description: d.nav.svcFindStylistDesc },
+    { title: d.nav.svcColourMatch, href: "/colour-match", description: d.nav.svcColourMatchDesc },
+    { title: d.nav.svcSolutions, href: "/solutions", description: d.nav.svcSolutionsDesc },
+    { title: d.nav.svcResources, href: "/resources", description: d.nav.svcResourcesDesc },
+    { title: d.nav.svcTradeWholesale, href: "/trade-wholesale", description: d.nav.svcTradeWholesaleDesc },
+    { title: d.nav.svcWholesaleHub, href: "/uk-salon-hair-extensions/hair-extensions-wholesale-uk", description: d.nav.svcWholesaleHubDesc },
+    { title: d.nav.svcCalculator, href: "/trade-price-calculator", description: d.nav.svcCalculatorDesc },
+    { title: d.nav.svcSpecs, href: "/extension-specs", description: d.nav.svcSpecsDesc },
+    { title: d.nav.svcSalonPartners, href: "/salon-partners", description: d.nav.svcSalonPartnersDesc },
+    { title: d.nav.svcAmbassador, href: "/ambassador", description: d.nav.svcAmbassadorDesc },
+    { title: d.nav.svcAcademy, href: "/academy", description: d.nav.svcAcademyDesc },
+  ]
+
   return (
     <>
-      {/* Top announcement bar - Updated */}
+
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <p>Trade Supplier for UK &amp; EU Salons | Factory-Direct Pricing | Private Label Available | 19+ Years Manufacturing</p>
+        <p>{d.ui.announcement}</p>
       </div>
 
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -102,26 +103,36 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[350px]">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
-                <MobileNavSection title="DIY Extensions" items={diyExtensions} />
-                <MobileNavSection title="Professional" items={proExtensions} />
-                <MobileNavSection title="Hair Care" items={hairCare} />
-                <MobileNavSection title="Accessories" items={accessories} />
-                <MobileNavSection title="Services" items={services} />
+                <MobileNavSection title={d.nav.diy} items={diyExtensions} />
+                <MobileNavSection title={d.nav.professional} items={proExtensions} />
+                <MobileNavSection title={d.nav.hairCare} items={hairCare} />
+                <MobileNavSection title={d.nav.accessories} items={accessories} />
+                <MobileNavSection title={d.nav.services} items={services} />
                 <Link href="/about" className="py-2 text-lg font-medium hover:text-accent transition-colors">
-                  About Us
+                  {d.nav.about}
                 </Link>
                 <Link href="/why-choose-us" className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
-                  Why Choose Us
+                  {d.nav.whyChooseUs}
                 </Link>
                 <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="py-2 text-lg font-medium hover:text-accent transition-colors">
-                  Manufacturing &#8599;
+                  {d.nav.manufacturing} &#8599;
                 </a>
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm font-medium mb-2">{localeNames[locale]}</p>
+                  <div className="flex flex-col gap-1">
+                    {locales.filter((l) => l !== locale).map((l) => (
+                      <Link key={l} href={langHome(l)} className="py-1 text-muted-foreground hover:text-foreground transition-colors">
+                        {localeNames[l]}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={langHome(locale)} className="flex items-center gap-2">
             <span className="font-serif text-lg md:text-xl font-semibold tracking-tight whitespace-nowrap">
               D.S HAIR & BEAUTY
             </span>
@@ -130,9 +141,8 @@ export function Header() {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
-              {/* 1. DIY Extensions */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">DIY Extensions</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">{d.nav.diy}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
                   <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {diyExtensions.map((item) => (
@@ -143,10 +153,9 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
-              {/* 2. Professional */}
+
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Professional</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">{d.nav.professional}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
                   <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {proExtensions.map((item) => (
@@ -157,10 +166,9 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
-              {/* 3. Hair Care */}
+
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Hair Care</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">{d.nav.hairCare}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
                   <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-1 lg:w-[550px]">
                     {hairCare.map((item) => (
@@ -172,9 +180,8 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* 4. Accessories */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Accessories</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">{d.nav.accessories}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
                   <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:w-[600px]">
                     {accessories.map((item) => (
@@ -185,10 +192,9 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
-              {/* 5. Services */}
+
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">{d.nav.services}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
                   <ul className="grid gap-2 p-4 w-[500px] grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     {services.map((item) => (
@@ -199,35 +205,31 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
-              {/* 6. Blog */}
+
               <NavigationMenuItem>
                 <Link href="/blog" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    Blog
+                    {d.nav.blog}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
-              {/* 7. Why Choose Us */}
               <NavigationMenuItem>
                 <Link href="/why-choose-us" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-primary">
-                    Why Choose Us
+                    {d.nav.whyChooseUs}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
-              {/* 8. About Us */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                    About Us
+                    {d.nav.about}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
-              {/* 9. Manufacturing (external) */}
               <NavigationMenuItem>
                 <a
                   href="https://wigexporter.com"
@@ -235,8 +237,27 @@ export function Header() {
                   rel="noopener noreferrer"
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Manufacturing &#8599;
+                  {d.nav.manufacturing} &#8599;
                 </a>
+              </NavigationMenuItem>
+
+              {/* Language switcher */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">{localeNames[locale]}</NavigationMenuTrigger>
+                <NavigationMenuContent className="!bg-background">
+                  <ul className="grid gap-1 p-2 w-[200px]">
+                    {locales.filter((l) => l !== locale).map((l) => (
+                      <li key={l}>
+                        <Link
+                          href={langHome(l)}
+                          className="block select-none rounded-md p-3 text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          {localeNames[l]}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -258,7 +279,7 @@ export function Header() {
             </Link>
             <Link href="/trade-wholesale">
               <Button variant="default" size="sm" className="hidden sm:inline-flex">
-                Trade Enquiry
+                {d.nav.tradeEnquiry}
               </Button>
             </Link>
             <a
@@ -267,7 +288,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-1 text-sm font-medium hover:text-accent transition-colors"
             >
-              Manufacturing &#8599;
+              {d.nav.manufacturing} &#8599;
             </a>
             <Button
               variant="ghost"
@@ -298,20 +319,20 @@ export function Header() {
             <form onSubmit={handleSearch} className="w-full max-w-2xl">
               <input
                 type="text"
-                placeholder="Search trade products & methods..."
+                placeholder={d.ui.nav.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full text-2xl md:text-4xl bg-transparent border-b-2 border-foreground py-4 focus:outline-none placeholder:text-muted-foreground"
                 autoFocus
               />
               <div className="mt-8">
-                <p className="text-sm text-muted-foreground mb-4">Popular Searches</p>
+                <p className="text-sm text-muted-foreground mb-4">{d.ui.nav.popularSearches}</p>
                 <div className="flex flex-wrap gap-2">
                   {["Tape-In Trade", "Private Label", "Switch Trade Supplier", "Nano Rings", "Balayage Weft"].map((term) => (
-                    <Button 
-                      key={term} 
-                      variant="outline" 
-                      size="sm" 
+                    <Button
+                      key={term}
+                      variant="outline"
+                      size="sm"
                       className="rounded-full"
                       type="button"
                       onClick={() => {
