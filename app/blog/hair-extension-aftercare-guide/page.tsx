@@ -32,7 +32,8 @@ export const metadata = {
     canonical: "https://www.dshairbeauty.co.uk/blog/hair-extension-aftercare-guide",
   },
   robots: {
-    index: false,
+    index: true,
+    follow: true,
   },
 }
 

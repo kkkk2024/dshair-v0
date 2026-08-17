@@ -32,7 +32,8 @@ export const metadata = {
     canonical: "https://www.dshairbeauty.co.uk/blog/best-extensions-fine-hair-uk",
   },
   robots: {
-    index: false,
+    index: true,
+    follow: true,
   },
 }
 

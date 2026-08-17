@@ -15,7 +15,8 @@ export const metadata = {
   title: "Clip-In Hair Extensions Guide: Instant Length & Volume in Minutes | D.S HAIR & BEAUTY",
   description: "Complete guide to clip-in hair extensions for UK salons. How to fit, blend, and sell clip-ins to clients. 100% Remy human hair, instant results.",
   robots: {
-    index: false,
+    index: true,
+    follow: true,
   },
 }
 

@@ -15,7 +15,8 @@ export const metadata = {
   title: "Hair Fringe & Bangs Extensions Guide | D.S HAIR & BEAUTY",
   description: "Complete guide to fringe and bangs hair extensions for UK salons. Add face-framing colour, volume, and style without commitment. 100% Remy human hair.",
   robots: {
-    index: false,
+    index: true,
+    follow: true,
   },
 }
 
