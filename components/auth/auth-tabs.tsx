@@ -10,8 +10,11 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { FieldGroup, Field, FieldLabel } from "@/components/ui/field"
+import { getAccountContent } from "@/lib/i18n/pages/account"
+import type { Locale } from "@/lib/i18n/config"
 
-export function AuthTabs() {
+export function AuthTabs({ locale = "en" }: { locale?: Locale }) {
+  const c = getAccountContent(locale)
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -32,42 +35,42 @@ export function AuthTabs() {
   return (
     <Tabs defaultValue="signin" className="w-full">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="signin">Sign In</TabsTrigger>
-        <TabsTrigger value="signup">Create Account</TabsTrigger>
+        <TabsTrigger value="signin">{c.tabSignIn}</TabsTrigger>
+        <TabsTrigger value="signup">{c.tabSignUp}</TabsTrigger>
       </TabsList>
 
       <TabsContent value="signin" className="mt-6">
         <form onSubmit={handleSignIn}>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor="signin-email">Email Address</FieldLabel>
+              <FieldLabel htmlFor="signin-email">{c.signinEmailLabel}</FieldLabel>
               <Input
                 id="signin-email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder={c.signinEmailPlaceholder}
                 required
               />
             </Field>
 
             <Field>
               <div className="flex items-center justify-between">
-                <FieldLabel htmlFor="signin-password">Password</FieldLabel>
+                <FieldLabel htmlFor="signin-password">{c.signinPasswordLabel}</FieldLabel>
                 <Link href="/forgot-password" className="text-sm text-accent hover:underline">
-                  Forgot password?
+                  {c.forgotPassword}
                 </Link>
               </div>
               <div className="relative">
                 <Input
                   id="signin-password"
                   type={showPassword ? "text" : "password"}
-                  placeholder="Enter your password"
+                  placeholder={c.signinPasswordPlaceholder}
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={showPassword ? c.hidePassword : c.showPassword}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
@@ -77,12 +80,12 @@ export function AuthTabs() {
             <div className="flex items-center gap-2">
               <Checkbox id="remember" />
               <Label htmlFor="remember" className="text-sm font-normal cursor-pointer">
-                Remember me
+                {c.rememberMe}
               </Label>
             </div>
 
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Signing in..." : "Sign In"}
+              {isLoading ? c.signingInBtn : c.signInBtn}
             </Button>
           </FieldGroup>
         </form>
@@ -93,7 +96,7 @@ export function AuthTabs() {
               <Separator />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
+              <span className="bg-background px-2 text-muted-foreground">{c.orContinueWith}</span>
             </div>
           </div>
 
@@ -122,45 +125,45 @@ export function AuthTabs() {
           <FieldGroup>
             <div className="grid grid-cols-2 gap-4">
               <Field>
-                <FieldLabel htmlFor="first-name">First Name</FieldLabel>
-                <Input id="first-name" placeholder="First name" required />
+                <FieldLabel htmlFor="first-name">{c.signupFirstNameLabel}</FieldLabel>
+                <Input id="first-name" placeholder={c.signupFirstNamePlaceholder} required />
               </Field>
               <Field>
-                <FieldLabel htmlFor="last-name">Last Name</FieldLabel>
-                <Input id="last-name" placeholder="Last name" required />
+                <FieldLabel htmlFor="last-name">{c.signupLastNameLabel}</FieldLabel>
+                <Input id="last-name" placeholder={c.signupLastNamePlaceholder} required />
               </Field>
             </div>
 
             <Field>
-              <FieldLabel htmlFor="signup-email">Email Address</FieldLabel>
+              <FieldLabel htmlFor="signup-email">{c.signupEmailLabel}</FieldLabel>
               <Input
                 id="signup-email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder={c.signupEmailPlaceholder}
                 required
               />
             </Field>
 
             <Field>
-              <FieldLabel htmlFor="signup-password">Password</FieldLabel>
+              <FieldLabel htmlFor="signup-password">{c.signupPasswordLabel}</FieldLabel>
               <div className="relative">
                 <Input
                   id="signup-password"
                   type={showPassword ? "text" : "password"}
-                  placeholder="Create a password"
+                  placeholder={c.signupPasswordPlaceholder}
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={showPassword ? c.hidePassword : c.showPassword}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
               <p className="text-xs text-muted-foreground mt-1">
-                Must be at least 8 characters
+                {c.passwordHint}
               </p>
             </Field>
 
@@ -169,10 +172,10 @@ export function AuthTabs() {
                 <Checkbox id="professional" className="mt-1" />
                 <div>
                   <Label htmlFor="professional" className="text-sm font-normal cursor-pointer">
-                    I am a professional hairstylist
+                    {c.proStylistLabel}
                   </Label>
                   <p className="text-xs text-muted-foreground">
-                    Get access to professional pricing and certification programs
+                    {c.proStylistHint}
                   </p>
                 </div>
               </div>
@@ -180,27 +183,27 @@ export function AuthTabs() {
               <div className="flex items-start gap-2">
                 <Checkbox id="newsletter" className="mt-1" defaultChecked />
                 <Label htmlFor="newsletter" className="text-sm font-normal cursor-pointer">
-                  Subscribe to our newsletter for exclusive offers and hair tips
+                  {c.newsletterLabel}
                 </Label>
               </div>
 
               <div className="flex items-start gap-2">
                 <Checkbox id="terms" className="mt-1" required />
                 <Label htmlFor="terms" className="text-sm font-normal cursor-pointer">
-                  I agree to the{" "}
+                  {c.termsPrefix}{" "}
                   <Link href="/terms" className="text-accent hover:underline">
-                    Terms of Service
+                    {c.termsOfService}
                   </Link>{" "}
-                  and{" "}
+                  {c.termsAnd}{" "}
                   <Link href="/privacy" className="text-accent hover:underline">
-                    Privacy Policy
+                    {c.privacyPolicy}
                   </Link>
                 </Label>
               </div>
             </div>
 
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Creating account..." : "Create Account"}
+              {isLoading ? c.creatingAccountBtn : c.createAccountBtn}
             </Button>
           </FieldGroup>
         </form>

@@ -1,0 +1,268 @@
+import type { Locale } from "../config"
+
+export interface AccountContent {
+  metaTitle: string
+  metaDescription: string
+  welcomeHeading: string
+  welcomeSubtitle: string
+  tabSignIn: string
+  tabSignUp: string
+  signinEmailLabel: string
+  signinEmailPlaceholder: string
+  signinPasswordLabel: string
+  forgotPassword: string
+  signinPasswordPlaceholder: string
+  showPassword: string
+  hidePassword: string
+  rememberMe: string
+  signInBtn: string
+  signingInBtn: string
+  orContinueWith: string
+  signupFirstNameLabel: string
+  signupFirstNamePlaceholder: string
+  signupLastNameLabel: string
+  signupLastNamePlaceholder: string
+  signupEmailLabel: string
+  signupEmailPlaceholder: string
+  signupPasswordLabel: string
+  signupPasswordPlaceholder: string
+  passwordHint: string
+  proStylistLabel: string
+  proStylistHint: string
+  newsletterLabel: string
+  termsPrefix: string
+  termsOfService: string
+  termsAnd: string
+  privacyPolicy: string
+  createAccountBtn: string
+  creatingAccountBtn: string
+}
+
+export const accountContent: Record<Locale, AccountContent> = {
+  en: {
+    metaTitle: "Account | D.S HAIR & BEAUTY",
+    metaDescription: "Sign in or create an account to manage your orders, wishlist, and more.",
+    welcomeHeading: "Welcome",
+    welcomeSubtitle: "Sign in to your account or create a new one",
+    tabSignIn: "Sign In",
+    tabSignUp: "Create Account",
+    signinEmailLabel: "Email Address",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "Password",
+    forgotPassword: "Forgot password?",
+    signinPasswordPlaceholder: "Enter your password",
+    showPassword: "Show password",
+    hidePassword: "Hide password",
+    rememberMe: "Remember me",
+    signInBtn: "Sign In",
+    signingInBtn: "Signing in...",
+    orContinueWith: "Or continue with",
+    signupFirstNameLabel: "First Name",
+    signupFirstNamePlaceholder: "First name",
+    signupLastNameLabel: "Last Name",
+    signupLastNamePlaceholder: "Last name",
+    signupEmailLabel: "Email Address",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "Password",
+    signupPasswordPlaceholder: "Create a password",
+    passwordHint: "Must be at least 8 characters",
+    proStylistLabel: "I am a professional hairstylist",
+    proStylistHint: "Get access to professional pricing and certification programs",
+    newsletterLabel: "Subscribe to our newsletter for exclusive offers and hair tips",
+    termsPrefix: "I agree to the",
+    termsOfService: "Terms of Service",
+    termsAnd: "and",
+    privacyPolicy: "Privacy Policy",
+    createAccountBtn: "Create Account",
+    creatingAccountBtn: "Creating account...",
+  },
+  de: {
+    metaTitle: "Konto | D.S HAIR & BEAUTY",
+    metaDescription: "Melden Sie sich an oder erstellen Sie ein Konto, um Ihre Bestellungen, Wunschliste und mehr zu verwalten.",
+    welcomeHeading: "Willkommen",
+    welcomeSubtitle: "Melden Sie sich in Ihrem Konto an oder erstellen Sie ein neues",
+    tabSignIn: "Anmelden",
+    tabSignUp: "Konto erstellen",
+    signinEmailLabel: "E-Mail-Adresse",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "Passwort",
+    forgotPassword: "Passwort vergessen?",
+    signinPasswordPlaceholder: "Geben Sie Ihr Passwort ein",
+    showPassword: "Passwort anzeigen",
+    hidePassword: "Passwort ausblenden",
+    rememberMe: "Angemeldet bleiben",
+    signInBtn: "Anmelden",
+    signingInBtn: "Anmeldung läuft...",
+    orContinueWith: "Oder fortfahren mit",
+    signupFirstNameLabel: "Vorname",
+    signupFirstNamePlaceholder: "Vorname",
+    signupLastNameLabel: "Nachname",
+    signupLastNamePlaceholder: "Nachname",
+    signupEmailLabel: "E-Mail-Adresse",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "Passwort",
+    signupPasswordPlaceholder: "Passwort erstellen",
+    passwordHint: "Muss mindestens 8 Zeichen lang sein",
+    proStylistLabel: "Ich bin professionelle(r) Friseur(in)",
+    proStylistHint: "Erhalten Sie Zugang zu professionellen Preisen und Zertifizierungsprogrammen",
+    newsletterLabel: "Abonnieren Sie unseren Newsletter für exklusive Angebote und Haarpflegetipps",
+    termsPrefix: "Ich stimme den",
+    termsOfService: "Allgemeinen Geschäftsbedingungen",
+    termsAnd: "und",
+    privacyPolicy: "Datenschutzrichtlinie",
+    createAccountBtn: "Konto erstellen",
+    creatingAccountBtn: "Konto wird erstellt...",
+  },
+  fr: {
+    metaTitle: "Compte | D.S HAIR & BEAUTY",
+    metaDescription: "Connectez-vous ou créez un compte pour gérer vos commandes, votre liste de souhaits et plus encore.",
+    welcomeHeading: "Bienvenue",
+    welcomeSubtitle: "Connectez-vous à votre compte ou créez-en un nouveau",
+    tabSignIn: "Se connecter",
+    tabSignUp: "Créer un compte",
+    signinEmailLabel: "Adresse e-mail",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "Mot de passe",
+    forgotPassword: "Mot de passe oublié ?",
+    signinPasswordPlaceholder: "Saisissez votre mot de passe",
+    showPassword: "Afficher le mot de passe",
+    hidePassword: "Masquer le mot de passe",
+    rememberMe: "Se souvenir de moi",
+    signInBtn: "Se connecter",
+    signingInBtn: "Connexion en cours...",
+    orContinueWith: "Ou continuer avec",
+    signupFirstNameLabel: "Prénom",
+    signupFirstNamePlaceholder: "Prénom",
+    signupLastNameLabel: "Nom",
+    signupLastNamePlaceholder: "Nom",
+    signupEmailLabel: "Adresse e-mail",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "Mot de passe",
+    signupPasswordPlaceholder: "Créer un mot de passe",
+    passwordHint: "Doit comporter au moins 8 caractères",
+    proStylistLabel: "Je suis coiffeur professionnel",
+    proStylistHint: "Accédez à des tarifs professionnels et à des programmes de certification",
+    newsletterLabel: "Abonnez-vous à notre newsletter pour des offres exclusives et des conseils capillaires",
+    termsPrefix: "J'accepte les",
+    termsOfService: "Conditions Générales d'Utilisation",
+    termsAnd: "et",
+    privacyPolicy: "Politique de Confidentialité",
+    createAccountBtn: "Créer un compte",
+    creatingAccountBtn: "Création du compte...",
+  },
+  ar: {
+    metaTitle: "الحساب | D.S HAIR & BEAUTY",
+    metaDescription: "سجّل الدخول أو أنشئ حساباً لإدارة طلباتك وقائمة أمنياتك والمزيد.",
+    welcomeHeading: "مرحباً",
+    welcomeSubtitle: "سجّل الدخول إلى حسابك أو أنشئ حساباً جديداً",
+    tabSignIn: "تسجيل الدخول",
+    tabSignUp: "إنشاء حساب",
+    signinEmailLabel: "البريد الإلكتروني",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "كلمة المرور",
+    forgotPassword: "هل نسيت كلمة المرور؟",
+    signinPasswordPlaceholder: "أدخل كلمة المرور",
+    showPassword: "إظهار كلمة المرور",
+    hidePassword: "إخفاء كلمة المرور",
+    rememberMe: "تذكرني",
+    signInBtn: "تسجيل الدخول",
+    signingInBtn: "جارٍ تسجيل الدخول...",
+    orContinueWith: "أو المتابعة باستخدام",
+    signupFirstNameLabel: "الاسم الأول",
+    signupFirstNamePlaceholder: "الاسم الأول",
+    signupLastNameLabel: "اسم العائلة",
+    signupLastNamePlaceholder: "اسم العائلة",
+    signupEmailLabel: "البريد الإلكتروني",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "كلمة المرور",
+    signupPasswordPlaceholder: "أنشئ كلمة مرور",
+    passwordHint: "يجب ألا تقل عن 8 أحرف",
+    proStylistLabel: "أنا مصفف شعر محترف",
+    proStylistHint: "احصل على أسعار مهنية وبرامج اعتماد مهنية",
+    newsletterLabel: "اشترك في نشرتنا البريدية للحصول على عروض حصرية ونصائح للعناية بالشعر",
+    termsPrefix: "أوافق على",
+    termsOfService: "شروط الخدمة",
+    termsAnd: "و",
+    privacyPolicy: "سياسة الخصوصية",
+    createAccountBtn: "إنشاء حساب",
+    creatingAccountBtn: "جارٍ إنشاء الحساب...",
+  },
+  sv: {
+    metaTitle: "Konto | D.S HAIR & BEAUTY",
+    metaDescription: "Logga in eller skapa ett konto för att hantera dina beställningar, önskelista och mer.",
+    welcomeHeading: "Välkommen",
+    welcomeSubtitle: "Logga in på ditt konto eller skapa ett nytt",
+    tabSignIn: "Logga in",
+    tabSignUp: "Skapa konto",
+    signinEmailLabel: "E-postadress",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "Lösenord",
+    forgotPassword: "Glömt lösenordet?",
+    signinPasswordPlaceholder: "Ange ditt lösenord",
+    showPassword: "Visa lösenord",
+    hidePassword: "Dölj lösenord",
+    rememberMe: "Kom ihåg mig",
+    signInBtn: "Logga in",
+    signingInBtn: "Loggar in...",
+    orContinueWith: "Eller fortsätt med",
+    signupFirstNameLabel: "Förnamn",
+    signupFirstNamePlaceholder: "Förnamn",
+    signupLastNameLabel: "Efternamn",
+    signupLastNamePlaceholder: "Efternamn",
+    signupEmailLabel: "E-postadress",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "Lösenord",
+    signupPasswordPlaceholder: "Skapa ett lösenord",
+    passwordHint: "Måste vara minst 8 tecken",
+    proStylistLabel: "Jag är en professionell frisör",
+    proStylistHint: "Få tillgång till professionella priser och certifieringsprogram",
+    newsletterLabel: "Prenumerera på vårt nyhetsbrev för exklusiva erbjudanden och hårtips",
+    termsPrefix: "Jag godkänner",
+    termsOfService: "Användarvillkoren",
+    termsAnd: "och",
+    privacyPolicy: "Integritetspolicyn",
+    createAccountBtn: "Skapa konto",
+    creatingAccountBtn: "Skapar konto...",
+  },
+  pl: {
+    metaTitle: "Konto | D.S HAIR & BEAUTY",
+    metaDescription: "Zaloguj się lub utwórz konto, aby zarządzać zamówieniami, listą życzeń i nie tylko.",
+    welcomeHeading: "Witaj",
+    welcomeSubtitle: "Zaloguj się na swoje konto lub utwórz nowe",
+    tabSignIn: "Zaloguj się",
+    tabSignUp: "Utwórz konto",
+    signinEmailLabel: "Adres e-mail",
+    signinEmailPlaceholder: "you@example.com",
+    signinPasswordLabel: "Hasło",
+    forgotPassword: "Zapomniałeś hasła?",
+    signinPasswordPlaceholder: "Wprowadź swoje hasło",
+    showPassword: "Pokaż hasło",
+    hidePassword: "Ukryj hasło",
+    rememberMe: "Zapamiętaj mnie",
+    signInBtn: "Zaloguj się",
+    signingInBtn: "Logowanie...",
+    orContinueWith: "Lub kontynuuj przez",
+    signupFirstNameLabel: "Imię",
+    signupFirstNamePlaceholder: "Imię",
+    signupLastNameLabel: "Nazwisko",
+    signupLastNamePlaceholder: "Nazwisko",
+    signupEmailLabel: "Adres e-mail",
+    signupEmailPlaceholder: "you@example.com",
+    signupPasswordLabel: "Hasło",
+    signupPasswordPlaceholder: "Utwórz hasło",
+    passwordHint: "Musi mieć co najmniej 8 znaków",
+    proStylistLabel: "Jestem profesjonalnym fryzjerem",
+    proStylistHint: "Uzyskaj dostęp do cen profesjonalnych i programów certyfikacji",
+    newsletterLabel: "Zapisz się do naszego newslettera, aby otrzymywać ekskluzywne oferty i porady dotyczące włosów",
+    termsPrefix: "Wyrażam zgodę na",
+    termsOfService: "Warunki Usługi",
+    termsAnd: "i",
+    privacyPolicy: "Politykę Prywatności",
+    createAccountBtn: "Utwórz konto",
+    creatingAccountBtn: "Tworzenie konta...",
+  },
+}
+
+export function getAccountContent(locale: Locale): AccountContent {
+  return accountContent[locale] ?? accountContent.en
+}

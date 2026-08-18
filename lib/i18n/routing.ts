@@ -24,6 +24,8 @@ export const translatedPages = new Set<string>([
   '/ambassador',
   '/resources',
   '/find-stylist',
+  '/account',
+  '/about/caro-chen',
 ])
 
 // Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>

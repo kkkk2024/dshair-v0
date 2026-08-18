@@ -1,14 +1,20 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { AuthTabs } from "@/components/auth/auth-tabs"
+import { getAccountContent } from "@/lib/i18n/pages/account"
+import { SITE_URL, hreflangAlternates } from "@/lib/i18n/config"
 
-export const metadata = {
-  title: "Account | D.S HAIR & BEAUTY",
-  description: "Sign in or create an account to manage your orders, wishlist, and more.",
+const c = getAccountContent("en")
+
+export const metadata: Metadata = {
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/account",
+    canonical: `${SITE_URL}/account`,
+    languages: hreflangAlternates("/account"),
   },
 }
 
@@ -22,13 +28,13 @@ export default function AccountPage() {
             <div className="max-w-md mx-auto">
               <div className="text-center mb-8">
                 <h1 className="font-serif text-3xl md:text-4xl font-medium mb-2">
-                  Welcome
+                  {c.welcomeHeading}
                 </h1>
                 <p className="text-muted-foreground">
-                  Sign in to your account or create a new one
+                  {c.welcomeSubtitle}
                 </p>
               </div>
-              <AuthTabs />
+              <AuthTabs locale="en" />
             </div>
           </div>
         </main>
