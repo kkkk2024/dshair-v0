@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import { OrganizationJsonLd, AuthorJsonLd } from '@/components/seo/json-ld'
 import { HtmlLangSync } from '@/components/layout/html-lang-sync'
+import { isLocale, defaultLocale, dir } from '@/lib/i18n/config'
 import './globals.css'
 
 const inter = Inter({
@@ -78,13 +79,17 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale?: string }>
 }>) {
+  const { locale } = await params
+  const activeLocale = isLocale(locale) && locale !== defaultLocale ? locale : defaultLocale
   return (
-    <html lang="en" dir="ltr" data-build="20260605-v3" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang={activeLocale} dir={dir(activeLocale)} data-build="20260605-v3" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
         {/* TikTok Pixel */}
         <script
