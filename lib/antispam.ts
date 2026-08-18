@@ -35,12 +35,15 @@ export function honeypotTriggered(body: Record<string, unknown>): boolean {
 }
 
 // ── 3. Submit-timing: a human needs more than MIN_SUBMIT_MS to fill ─
+// Frontend semantics: submitTime is the ELAPSED milliseconds since the form mounted
+// (formMountedAt = Date.now() at mount, submitTime = Date.now() - formMountedAt at submit).
+// So a real submit arrives with submitTime >= a few seconds; a bot's first POST
+// arrives with submitTime <= a few hundred ms.
 export const MIN_SUBMIT_MS = 5000
 
 export function isTooFast(submitTime: unknown): boolean {
-  if (typeof submitTime !== "number" || !submitTime) return false // fail-open
-  const elapsed = Date.now() - submitTime
-  return elapsed < MIN_SUBMIT_MS
+  if (typeof submitTime !== "number" || !Number.isFinite(submitTime)) return false // fail-open
+  return submitTime < MIN_SUBMIT_MS
 }
 
 // ── 4. Cloudflare Turnstile verify (fails open) ─────────────────────
