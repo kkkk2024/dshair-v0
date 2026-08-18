@@ -13,6 +13,7 @@ export const translatedPages = new Set<string>([
   '/salon-supplies',
   '/colour-match',
   '/color-chart',
+  '/faqs',
 ])
 
 // Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>
