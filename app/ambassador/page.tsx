@@ -1,25 +1,21 @@
 import type { Metadata } from "next"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import AmbassadorClient from "./ambassador-client"
+import { AmbassadorView } from "@/components/pages/ambassador-view"
+import { getAmbassadorContent } from "@/lib/i18n/pages/ambassador"
+import { SITE_URL, hreflangAlternates } from "@/lib/i18n/config"
+
+const c = getAmbassadorContent("en")
 
 export const metadata: Metadata = {
-  title: "Become a Hair Extension Brand Ambassador | D.S HAIR & BEAUTY",
-  description:
-    "Join the D.S HAIR ambassador programme. Earn commission, get free extensions, and grow your audience. Open to UK-based stylists, content creators & salon professionals.",
-  keywords: [
-    "hair extension ambassador",
-    "hair brand ambassador UK",
-    "extension influencer programme",
-    "salon ambassador",
-    "hair extension partnership",
-  ],
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/ambassador",
+    canonical: `${SITE_URL}/ambassador`,
+    languages: hreflangAlternates("/ambassador"),
   },
   openGraph: {
-    title: "Become a Hair Extension Brand Ambassador | D.S HAIR & BEAUTY",
-    description: "Join the D.S HAIR ambassador programme. Earn commission, get free extensions, and grow your audience.",
-    url: "https://www.dshairbeauty.co.uk/ambassador",
+    title: c.metaTitle,
+    description: c.metaDescription,
+    url: `${SITE_URL}/ambassador`,
     type: "website",
     locale: "en_GB",
     siteName: "D.S HAIR & BEAUTY",
@@ -27,15 +23,5 @@ export const metadata: Metadata = {
 }
 
 export default function AmbassadorPage() {
-  return (
-    <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-          { name: "Ambassador", url: "https://www.dshairbeauty.co.uk/ambassador" },
-        ]}
-      />
-      <AmbassadorClient />
-    </>
-  )
+  return <AmbassadorView locale="en" />
 }
