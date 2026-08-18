@@ -17,7 +17,7 @@ import {
 import { cn } from "@/lib/utils"
 import { products, contactInfo } from "@/lib/products"
 import { useLocale, useDict } from "@/lib/i18n"
-import { locales, localeNames } from "@/lib/i18n/config"
+import { locales, localeNames, type Locale } from "@/lib/i18n/config"
 
 export function Header() {
   const d = useDict()
@@ -140,8 +140,9 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
+          <div className="hidden lg:flex items-center gap-1">
+            <NavigationMenu>
+              <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent">{d.ui.nav.diy}</NavigationMenuTrigger>
                 <NavigationMenuContent className="!bg-background">
@@ -242,26 +243,12 @@ export function Header() {
                 </a>
               </NavigationMenuItem>
 
-              {/* Language switcher */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">{localeNames[locale]}</NavigationMenuTrigger>
-                <NavigationMenuContent className="!bg-background">
-                  <ul className="grid gap-1 p-2 w-[200px]">
-                    {locales.filter((l) => l !== locale).map((l) => (
-                      <li key={l}>
-                        <Link
-                          href={langHome(l)}
-                          className="block select-none rounded-md p-3 text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
-                        >
-                          {localeNames[l]}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+          {/* Desktop language switcher (custom hover dropdown; Radix viewport was unreliable at far right) */}
+          <LanguageDropdown locale={locale} />
+        </div>
 
           {/* Right side actions */}
           <div className="flex items-center gap-2">
@@ -352,6 +339,38 @@ export function Header() {
         </div>
       )}
     </>
+  )
+}
+
+function LanguageDropdown({ locale }: { locale: Locale }) {
+  const langHome = (l: string) => (l === "en" ? "/" : `/${l}`)
+
+  return (
+    <div className="relative group">
+      <button
+        type="button"
+        className="inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        {localeNames[locale]}
+        <ChevronDown className="ml-1 h-3 w-3 transition-transform group-hover:rotate-180" aria-hidden="true" />
+      </button>
+      <div className="absolute top-full right-0 mt-1.5 min-w-[160px] rounded-md border bg-popover text-popover-foreground shadow opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <ul className="py-1">
+          {locales.filter((l) => l !== locale).map((l) => (
+            <li key={l}>
+              <Link
+                href={langHome(l)}
+                className="block px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+              >
+                {localeNames[l]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   )
 }
 
