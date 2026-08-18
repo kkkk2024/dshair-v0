@@ -1,25 +1,21 @@
 import type { Metadata } from "next"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import ResourcesClient from "./resources-client"
+import { ResourcesView } from "@/components/pages/resources-view"
+import { getResourcesContent } from "@/lib/i18n/pages/resources"
+import { SITE_URL, hreflangAlternates } from "@/lib/i18n/config"
+
+const c = getResourcesContent("en")
 
 export const metadata: Metadata = {
-  title: "Hair Extension Resources & Guides | D.S HAIR & BEAUTY",
-  description:
-    "Free hair extension resources: installation guides, aftercare tips, colour-matching help, and salon business guides. Expert advice from 19 years in the industry.",
-  keywords: [
-    "hair extension guides",
-    "extension resources",
-    "hair extension aftercare",
-    "extension installation guide",
-    "salon resources UK",
-  ],
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/resources",
+    canonical: `${SITE_URL}/resources`,
+    languages: hreflangAlternates("/resources"),
   },
   openGraph: {
-    title: "Hair Extension Resources & Guides | D.S HAIR & BEAUTY",
-    description: "Free hair extension resources: installation guides, aftercare tips, colour-matching help, and salon business guides.",
-    url: "https://www.dshairbeauty.co.uk/resources",
+    title: c.metaTitle,
+    description: c.metaDescription,
+    url: `${SITE_URL}/resources`,
     type: "website",
     locale: "en_GB",
     siteName: "D.S HAIR & BEAUTY",
@@ -27,15 +23,5 @@ export const metadata: Metadata = {
 }
 
 export default function ResourcesPage() {
-  return (
-    <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-          { name: "Resources", url: "https://www.dshairbeauty.co.uk/resources" },
-        ]}
-      />
-      <ResourcesClient />
-    </>
-  )
+  return <ResourcesView locale="en" />
 }
