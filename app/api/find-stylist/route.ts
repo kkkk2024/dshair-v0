@@ -1,5 +1,12 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {
+  honeypotTriggered,
+  isTooFast,
+  isDisposableEmail,
+  tooLong,
+  verifyTurnstile,
+} from '@/lib/antispam';
 
 export async function POST(request: Request) {
   try {
@@ -15,15 +22,51 @@ export async function POST(request: Request) {
       methods = [],
       yearsExperience,
       about,
+      turnstileToken,
+      submitTime,
     } = body;
 
     // Validate required fields
-    if (!name || !email || !salonName) {
+    if (!name || !email || !salonName || !location || !phone) {
       return NextResponse.json(
-        { error: 'Name, email, and salon name are required' },
+        { error: 'Name, email, salon name, location and phone are required' },
         { status: 400 }
       );
     }
+
+    // ── Anti-spam hardening (all checks fail-open, see lib/antispam.ts) ──
+    if (honeypotTriggered(body)) {
+      return NextResponse.json({ success: true, message: 'ok' });
+    }
+    if (isTooFast(submitTime)) {
+      return NextResponse.json(
+        { error: 'Submission too fast. Please slow down and try again.' },
+        { status: 429 }
+      );
+    }
+    if (isDisposableEmail(email)) {
+      return NextResponse.json(
+        { error: 'Please use a real business or personal email address.' },
+        { status: 400 }
+      );
+    }
+    if (
+      tooLong(salonName, 200) ||
+      tooLong(location, 200) ||
+      tooLong(instagram, 200) ||
+      tooLong(website, 500) ||
+      tooLong(about, 2000)
+    ) {
+      return NextResponse.json({ error: 'Invalid input.' }, { status: 400 });
+    }
+    const turnstile = await verifyTurnstile(turnstileToken);
+    if (!turnstile.ok) {
+      return NextResponse.json(
+        { error: 'Verification failed. Please complete the challenge and retry.' },
+        { status: 403 }
+      );
+    }
+    // ──────────────────────────────────────────────────────────────────────
 
     // Check if RESEND_API_KEY is configured
     if (!process.env.RESEND_API_KEY) {

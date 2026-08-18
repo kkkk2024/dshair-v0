@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -14,6 +14,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 const tiers = [
   {
@@ -162,6 +163,8 @@ export default function AmbassadorPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [applied, setApplied] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const turnstileToken = useRef("")
+  const formMountedAt = useRef(Date.now())
 
   const handleAmbassadorSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -177,6 +180,8 @@ export default function AmbassadorPage() {
       referralCount: formData.get("referral_count"),
       notes: formData.get("notes"),
       isAmbassador: true,
+      turnstileToken: turnstileToken.current,
+      submitTime: formMountedAt.current,
     }
 
     try {
@@ -441,6 +446,7 @@ export default function AmbassadorPage() {
                     onSubmit={handleAmbassadorSubmit}
                     className="bg-card rounded-2xl p-6 md:p-8 border space-y-5"
                   >
+                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">Your Name *</label>
@@ -483,6 +489,7 @@ export default function AmbassadorPage() {
                         rows={3}
                       />
                     </div>
+                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? "Submitting..." : "Apply for Trade Account & Ambassador Programme"}
                     </Button>

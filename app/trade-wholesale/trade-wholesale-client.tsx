@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -15,6 +15,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { tradeWholesaleContent, type TradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
+import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 const WA_HREF =
   "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20the%20UK.%20I%27d%20like%20to%20open%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
@@ -23,6 +24,8 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const t = content.form
+  const turnstileToken = useRef("")
+  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -32,9 +35,13 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
     const data = {
       name: formData.get("name"),
       salonName: formData.get("salon_name"),
+      location: formData.get("location"),
+      phone: formData.get("phone"),
       email: formData.get("email"),
       message: formData.get("message"),
       source: "trade-wholesale-page",
+      turnstileToken: turnstileToken.current,
+      submitTime: formMountedAt.current,
     }
 
     try {
@@ -248,6 +255,7 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
+                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">{t.name}</label>
@@ -259,6 +267,14 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                       </div>
                     </div>
                     <div>
+                      <label className="block text-sm font-medium mb-1.5">Salon Location *</label>
+                      <Input name="location" placeholder="e.g. Didsbury, Manchester" required />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1.5">Phone / WhatsApp *</label>
+                      <Input name="phone" type="tel" placeholder="+44 7xxx xxxxxx" required />
+                    </div>
+                    <div>
                       <label className="block text-sm font-medium mb-1.5">{t.email}</label>
                       <Input name="email" type="email" placeholder={t.emailPh} required />
                     </div>
@@ -266,6 +282,7 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                       <label className="block text-sm font-medium mb-1.5">{t.message}</label>
                       <Textarea name="message" placeholder={t.messagePh} rows={4} />
                     </div>
+                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? t.submitting : t.submit}
                     </Button>

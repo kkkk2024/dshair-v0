@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -17,6 +17,7 @@ import Image from "next/image"
 import { localeHref } from "@/lib/i18n/routing"
 import type { Locale } from "@/lib/i18n/config"
 import { salonPartnerContent, type SalonPartnerContent } from "@/lib/i18n/pages/salon-partners"
+import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 const WA_HREF =
   "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extension%20supply."
@@ -27,6 +28,8 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const t = content.form
+  const turnstileToken = useRef("")
+  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -46,6 +49,8 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
       instagram: formData.get("instagram"),
       notes: formData.get("notes"),
       source: "salon-partners-page",
+      turnstileToken: turnstileToken.current,
+      submitTime: formMountedAt.current,
     }
 
     try {
@@ -255,6 +260,7 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
+                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">{t.name}</label>
@@ -338,6 +344,7 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
                         rows={3}
                       />
                     </div>
+                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? t.submitting : t.submit}
                     </Button>

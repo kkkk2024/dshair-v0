@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -13,12 +13,15 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { contactFormLabels, type ContactFormLabels } from "@/lib/i18n/pages/contact-form"
+import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
   const t = labels ?? contactFormLabels.en
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
+  const turnstileToken = useRef("")
+  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -34,6 +37,8 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
       subject: formData.get("subject"),
       orderNumber: formData.get("order-number"),
       message: formData.get("message"),
+      turnstileToken: turnstileToken.current,
+      submitTime: formMountedAt.current,
     }
 
     try {
@@ -77,6 +82,8 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border">
       <h2 className="font-semibold text-xl mb-6">{t.heading}</h2>
+
+      <HoneypotField />
 
       {error && (
         <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">{error}</div>
@@ -135,6 +142,8 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
             required
           />
         </Field>
+
+        <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
 
         <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? t.sending : t.submit}

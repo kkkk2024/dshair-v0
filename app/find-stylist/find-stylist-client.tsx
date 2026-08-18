@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -14,6 +14,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 const benefits = [
   {
@@ -58,6 +59,8 @@ const steps = [
 export default function FindStylistPage() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const turnstileToken = useRef("")
+  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -74,6 +77,8 @@ export default function FindStylistPage() {
       methods: formData.getAll("methods"),
       yearsExperience: formData.get("years_experience"),
       about: formData.get("about"),
+      turnstileToken: turnstileToken.current,
+      submitTime: formMountedAt.current,
     }
     try {
       const response = await fetch("/api/find-stylist", {
@@ -239,6 +244,7 @@ export default function FindStylistPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
+                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">Your Name *</label>
@@ -264,8 +270,8 @@ export default function FindStylistPage() {
                         <Input name="email" type="email" placeholder="you@yoursalon.co.uk" required />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Phone / WhatsApp</label>
-                        <Input name="phone" type="tel" placeholder="+44 7xxx xxxxxx" />
+                        <label className="block text-sm font-medium mb-1.5">Phone / WhatsApp *</label>
+                        <Input name="phone" type="tel" placeholder="+44 7xxx xxxxxx" required />
                       </div>
                     </div>
 
@@ -321,6 +327,7 @@ export default function FindStylistPage() {
                       />
                     </div>
 
+                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? "Submitting..." : "Submit Application"}
                     </Button>

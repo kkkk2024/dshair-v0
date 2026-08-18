@@ -1,5 +1,12 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {
+  honeypotTriggered,
+  isTooFast,
+  isDisposableEmail,
+  tooLong,
+  verifyTurnstile,
+} from '@/lib/antispam';
 
 export async function POST(request: Request) {
   try {
@@ -16,16 +23,57 @@ export async function POST(request: Request) {
       howFoundUs,
       instagram,
       notes,
-      isAmbassador = false
+      isAmbassador = false,
+      turnstileToken,
+      submitTime,
     } = body;
 
     // Validate required fields
-    if (!name || !email || !salonName) {
+    if (!name || !email || !salonName || !location || !phone) {
       return NextResponse.json(
-        { error: 'Name, email, and salon name are required' },
+        { error: 'Name, email, salon name, location and phone are required' },
         { status: 400 }
       );
     }
+
+    // ── Anti-spam hardening (all checks fail-open, see lib/antispam.ts) ──
+    // Honeypot: a real user never sees this field; silently drop bots.
+    if (honeypotTriggered(body)) {
+      return NextResponse.json({ success: true, message: 'ok' });
+    }
+    // Submit-time: humans cannot fill the form in under MIN_SUBMIT_MS.
+    if (isTooFast(submitTime)) {
+      return NextResponse.json(
+        { error: 'Submission too fast. Please slow down and try again.' },
+        { status: 429 }
+      );
+    }
+    // Disposable / throwaway email domains are almost always bots.
+    if (isDisposableEmail(email)) {
+      return NextResponse.json(
+        { error: 'Please use a real business or personal email address.' },
+        { status: 400 }
+      );
+    }
+    // Field-length caps (defence against oversized / injected payloads).
+    if (
+      tooLong(salonName, 200) ||
+      tooLong(location, 200) ||
+      tooLong(currentSupplier, 200) ||
+      tooLong(notes, 2000) ||
+      tooLong(howFoundUs, 200)
+    ) {
+      return NextResponse.json({ error: 'Invalid input.' }, { status: 400 });
+    }
+    // Cloudflare Turnstile — skipped automatically until TURNSTILE_SECRET_KEY is set.
+    const turnstile = await verifyTurnstile(turnstileToken);
+    if (!turnstile.ok) {
+      return NextResponse.json(
+        { error: 'Verification failed. Please complete the challenge and retry.' },
+        { status: 403 }
+      );
+    }
+    // ──────────────────────────────────────────────────────────────────────
 
     // Check if RESEND_API_KEY is configured
     if (!process.env.RESEND_API_KEY) {

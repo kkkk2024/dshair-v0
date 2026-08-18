@@ -1,10 +1,17 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {
+  honeypotTriggered,
+  isTooFast,
+  isDisposableEmail,
+  tooLong,
+  verifyTurnstile,
+} from '@/lib/antispam';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email, phone, subject, orderNumber, message } = body;
+    const { firstName, lastName, email, phone, subject, orderNumber, message, turnstileToken, submitTime } = body;
 
     // Validate required fields
     if (!email || !message) {
@@ -13,6 +20,34 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // ── Anti-spam hardening (all checks fail-open, see lib/antispam.ts) ──
+    if (honeypotTriggered(body)) {
+      return NextResponse.json({ success: true, message: 'ok' });
+    }
+    if (isTooFast(submitTime)) {
+      return NextResponse.json(
+        { error: 'Submission too fast. Please slow down and try again.' },
+        { status: 429 }
+      );
+    }
+    if (isDisposableEmail(email)) {
+      return NextResponse.json(
+        { error: 'Please use a real business or personal email address.' },
+        { status: 400 }
+      );
+    }
+    if (tooLong(message, 5000) || tooLong(subject, 200) || tooLong(orderNumber, 100)) {
+      return NextResponse.json({ error: 'Invalid input.' }, { status: 400 });
+    }
+    const turnstile = await verifyTurnstile(turnstileToken);
+    if (!turnstile.ok) {
+      return NextResponse.json(
+        { error: 'Verification failed. Please complete the challenge and retry.' },
+        { status: 403 }
+      );
+    }
+    // ──────────────────────────────────────────────────────────────────────
 
     // Check if RESEND_API_KEY is configured
     if (!process.env.RESEND_API_KEY) {
