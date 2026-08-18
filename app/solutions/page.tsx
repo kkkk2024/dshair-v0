@@ -1,25 +1,21 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import SolutionsClient from "./solutions-client"
+import { SolutionsView } from "@/components/pages/solutions-view"
+import { getSolutionsContent } from "@/lib/i18n/pages/solutions"
+import { SITE_URL } from "@/lib/i18n/config"
+
+const c = getSolutionsContent("en")
 
 export const metadata: Metadata = {
-  title: "Hair Extension Solutions for Salons & Stylists | D.S HAIR & BEAUTY",
-  description:
-    "Tailored hair extension solutions for salons: starter kits, bulk pricing, colour-match support, and training. Whether you're a solo stylist or a 10-chair salon, we've got you covered.",
-  keywords: [
-    "hair extension solutions",
-    "salon extension packages",
-    "stylist hair extension supply",
-    "salon starter kit",
-    "hair extension wholesale solutions",
-  ],
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/solutions",
+    canonical: `${SITE_URL}/solutions`,
   },
   openGraph: {
-    title: "Hair Extension Solutions for Salons & Stylists | D.S HAIR & BEAUTY",
-    description: "Tailored hair extension solutions for salons: starter kits, bulk pricing, colour-match support, and training.",
-    url: "https://www.dshairbeauty.co.uk/solutions",
+    title: c.metaTitle,
+    description: c.metaDescription,
+    url: `${SITE_URL}/solutions`,
     type: "website",
     locale: "en_GB",
     siteName: "D.S HAIR & BEAUTY",
@@ -31,11 +27,11 @@ export default function SolutionsPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-          { name: "Solutions", url: "https://www.dshairbeauty.co.uk/solutions" },
+          { name: "Home", url: SITE_URL },
+          { name: "Solutions", url: `${SITE_URL}/solutions` },
         ]}
       />
-      <SolutionsClient />
+      <SolutionsView locale="en" />
     </>
   )
 }

@@ -1,29 +1,24 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import SwitchTradeSupplierClient from "./switch-trade-supplier-client"
+import { SwitchTradeSupplierView } from "@/components/pages/switch-trade-supplier-view"
+import { getSwitchContent } from "@/lib/i18n/pages/switch-trade-supplier"
+import { SITE_URL } from "@/lib/i18n/config"
+
+const c = getSwitchContent("en")
 
 export const metadata: Metadata = {
-  title: "Switch Your Salon Supplier | Manufacturer-Direct Trade | D.S Hair & Beauty",
-  description:
-    "Move from a retail-brand supplier to a manufacturer-direct trade partner. Higher margins, private label options, and factory-direct 100% Remy human hair extensions for UK & EU salons.",
-  keywords: [
-    "switch salon supplier",
-    "salon supplier alternative",
-    "wholesale hair extensions UK",
-    "private label hair extensions salon",
-    "manufacturer direct hair extensions",
-    "salon hair extension supplier UK",
-  ],
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/switch-trade-supplier",
+    canonical: `${SITE_URL}/switch-trade-supplier`,
   },
   openGraph: {
-    title: "Switch Your Salon Supplier | D.S Hair & Beauty",
-    description:
-      "Manufacturer-direct hair extensions for salons. Higher margins and private label options.",
-    url: "https://www.dshairbeauty.co.uk/switch-trade-supplier",
+    title: c.metaTitle,
+    description: c.metaDescription,
+    url: `${SITE_URL}/switch-trade-supplier`,
     type: "website",
     locale: "en_GB",
+    siteName: "D.S HAIR & BEAUTY",
   },
 }
 
@@ -32,11 +27,11 @@ export default function SwitchTradeSupplierPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-          { name: "Switch Your Trade Supplier", url: "https://www.dshairbeauty.co.uk/switch-trade-supplier" },
+          { name: "Home", url: SITE_URL },
+          { name: "Switch Your Trade Supplier", url: `${SITE_URL}/switch-trade-supplier` },
         ]}
       />
-      <SwitchTradeSupplierClient />
+      <SwitchTradeSupplierView locale="en" />
     </>
   )
 }
