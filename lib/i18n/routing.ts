@@ -19,6 +19,7 @@ export const translatedPages = new Set<string>([
   '/solutions',
   '/switch-trade-supplier',
   '/trade-price-calculator',
+  '/extension-specs',
 ])
 
 // Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>

@@ -1,15 +1,20 @@
 import type { Metadata } from "next"
+import { ExtensionSpecsView } from "@/components/pages/extension-specs-view"
+import { getExtensionSpecsContent } from "@/lib/i18n/pages/extension-specs"
+import { SITE_URL } from "@/lib/i18n/config"
+import { hreflangAlternates } from "@/lib/i18n/routing"
+
+const c = getExtensionSpecsContent("en")
 
 export const metadata: Metadata = {
-  title: "Hair Extension Spec Library | D.S HAIR & BEAUTY",
-  description:
-    "Compare every hair extension method side-by-side. Technical specifications for Tape-In, Nano Ring, K-Tip, Clip-In, Weft and Butterfly Weft extensions. Professional salon reference guide.",
-  keywords:
-    "hair extension specifications, hair extension methods comparison, tape-in vs nano ring vs k-tip, hair extension installation time, hair extension lifespan, salon extension guide",
+  title: c.metaTitle,
+  description: c.metaDescription,
+  alternates: {
+    canonical: `${SITE_URL}/extension-specs`,
+    languages: hreflangAlternates("/extension-specs"),
+  },
 }
 
-import ExtensionSpecsClient from "./extension-specs-client"
-
 export default function ExtensionSpecsPage() {
-  return <ExtensionSpecsClient />
+  return <ExtensionSpecsView locale="en" />
 }
