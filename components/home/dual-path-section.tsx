@@ -4,17 +4,21 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Building2 } from "lucide-react"
+import { getHomeContent } from "@/lib/i18n/home"
+import { localeHref } from "@/lib/i18n/routing"
+import type { Locale } from "@/lib/i18n/config"
 
-export function DualPathSection() {
+export function DualPathSection({ locale }: { locale: Locale }) {
+  const c = getHomeContent(locale).dualPath
   return (
     <section className="py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
-            Choose Your Path
+            {c.title}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Whether you are looking to enhance your own look or supply your salon clients with the best, we have exactly what you need.
+            {c.subtitle}
           </p>
         </div>
 
@@ -24,7 +28,7 @@ export function DualPathSection() {
             <div className="relative aspect-[4/3] lg:aspect-[3/2]">
               <Image
                 src="/images/path-diy.jpg"
-                alt="DIY hair extensions for home use"
+                alt={c.diy.title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -32,43 +36,37 @@ export function DualPathSection() {
             </div>
             <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
               <span className="text-white/70 text-sm font-medium tracking-wider uppercase mb-2">
-                For You
+                {c.diy.eyebrow}
               </span>
               <h3 className="font-serif text-white text-2xl md:text-3xl lg:text-4xl mb-3">
-                DIY Extensions
+                {c.diy.title}
               </h3>
               <p className="text-white/80 mb-4 max-w-md">
-                Transform your look at home with our easy-to-apply clip-in extensions, ponytails, and more.
+                {c.diy.description}
               </p>
               <ul className="text-white/70 text-sm mb-6 flex flex-wrap gap-x-6 gap-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Easy application
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  No salon needed
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Reusable
-                </li>
+                {c.diy.checks.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-400" />
+                    {item}
+                  </li>
+                ))}
               </ul>
               <Button variant="secondary" className="w-fit group/btn" asChild>
-                <Link href="/collections/diy">
-                  Shop DIY Extensions
+                <Link href={localeHref('/collections/diy', locale)}>
+                  {c.diy.cta}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Professional Path — Upgraded */}
+          {/* Professional Path */}
           <div className="relative group overflow-hidden rounded-2xl">
             <div className="relative aspect-[4/3] lg:aspect-[3/2]">
               <Image
                 src="/images/path-pro.jpg"
-                alt="Professional hair extensions for salons Manchester"
+                alt={c.pro.title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -79,44 +77,30 @@ export function DualPathSection() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-white/20 backdrop-blur text-white text-xs font-medium px-2.5 py-1 rounded-full flex items-center gap-1.5">
                   <Building2 className="h-3 w-3" />
-                  UK & EU Salon Supplier
+                  {c.pro.badge}
                 </span>
               </div>
               <span className="text-white/70 text-sm font-medium tracking-wider uppercase mb-2">
-                For Salons & Stylists
+                {c.pro.eyebrow}
               </span>
               <h3 className="font-serif text-white text-2xl md:text-3xl lg:text-4xl mb-3">
-                Professional Extensions
+                {c.pro.title}
               </h3>
               <p className="text-white/80 mb-4 max-w-md">
-                Factory-direct pricing. UK warehouse launching + full range express 3–5 days. Free digital colour catalogue. No minimum order to start.
+                {c.pro.description}
               </p>
               <ul className="text-white/70 text-sm mb-6 flex flex-wrap gap-x-6 gap-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Hand-Tied Weft
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Balayage Weft
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Nano Ring / Tape-In
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Wholesale pricing
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-400" />
-                  Express 3–5 day delivery
-                </li>
+                {c.pro.checks.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-400" />
+                    {item}
+                  </li>
+                ))}
               </ul>
               <div className="flex flex-wrap gap-3">
                 <Button variant="secondary" className="group/btn" asChild>
-                  <Link href="/salon-partners">
-                    Apply for Trade Account
+                  <Link href={localeHref('/salon-partners', locale)}>
+                    {c.pro.ctaPrimary}
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                   </Link>
                 </Button>
@@ -125,7 +109,7 @@ export function DualPathSection() {
                   className="border-white/50 text-white hover:bg-white/20 hover:text-white"
                   asChild
                 >
-                  <Link href="/collections/professional">Browse Products</Link>
+                  <Link href={localeHref('/collections/professional', locale)}>{c.pro.ctaSecondary}</Link>
                 </Button>
               </div>
             </div>
@@ -136,14 +120,14 @@ export function DualPathSection() {
         <div className="mt-8 rounded-2xl bg-primary/5 border border-primary/10 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-1">UK Warehouse Launching &amp; Factory-Direct</h3>
+              <h3 className="font-semibold text-lg mb-1">{c.bottom.title}</h3>
               <p className="text-muted-foreground text-sm max-w-xl">
-                19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. UK warehouse launching + express factory-direct 3–5 day delivery.
+                {c.bottom.description}
               </p>
             </div>
             <Button size="lg" className="flex-shrink-0" asChild>
-              <Link href="/salon-partners">
-                Become a Partner →
+              <Link href={localeHref('/salon-partners', locale)}>
+                {c.bottom.cta}
               </Link>
             </Button>
           </div>

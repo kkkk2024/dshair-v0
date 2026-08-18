@@ -7,56 +7,61 @@ import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-
-const filterSections = [
-  {
-    id: "length",
-    name: "Length",
-    options: [
-      { value: "14", label: '14"' },
-      { value: "16", label: '16"' },
-      { value: "18", label: '18"' },
-      { value: "20", label: '20"' },
-      { value: "22", label: '22"' },
-      { value: "24", label: '24"' },
-      { value: "26", label: '26"' },
-    ],
-  },
-  {
-    id: "color-family",
-    name: "Colour Family",
-    options: [
-      { value: "black", label: "Black" },
-      { value: "brown", label: "Brown" },
-      { value: "blonde", label: "Blonde" },
-      { value: "red", label: "Red/Auburn" },
-      { value: "balayage", label: "Balayage" },
-      { value: "ombre", label: "Ombre" },
-      { value: "rooted", label: "Rooted" },
-    ],
-  },
-  {
-    id: "style",
-    name: "Style",
-    options: [
-      { value: "straight", label: "Straight" },
-      { value: "wavy", label: "Wavy" },
-      { value: "curly", label: "Curly" },
-    ],
-  },
-  {
-    id: "weight",
-    name: "Weight/Volume",
-    options: [
-      { value: "light", label: "Light (100-120g)" },
-      { value: "medium", label: "Medium (140-180g)" },
-      { value: "full", label: "Full (200-220g)" },
-      { value: "extra", label: "Extra Full (240g+)" },
-    ],
-  },
-]
+import { useLocale } from "@/lib/i18n"
+import { getShopUi } from "@/lib/i18n/shop"
 
 export function ProductFilters() {
+  const locale = useLocale()
+  const t = getShopUi(locale)
+
+  const filterSections = [
+    {
+      id: "length",
+      name: t.productFilters.sections.length,
+      options: [
+        { value: "14", label: '14"' },
+        { value: "16", label: '16"' },
+        { value: "18", label: '18"' },
+        { value: "20", label: '20"' },
+        { value: "22", label: '22"' },
+        { value: "24", label: '24"' },
+        { value: "26", label: '26"' },
+      ],
+    },
+    {
+      id: "color-family",
+      name: t.productFilters.sections.colorFamily,
+      options: [
+        { value: "black", label: t.productFilters.options.black },
+        { value: "brown", label: t.productFilters.options.brown },
+        { value: "blonde", label: t.productFilters.options.blonde },
+        { value: "red", label: t.productFilters.options.red },
+        { value: "balayage", label: t.productFilters.options.balayage },
+        { value: "ombre", label: t.productFilters.options.ombre },
+        { value: "rooted", label: t.productFilters.options.rooted },
+      ],
+    },
+    {
+      id: "style",
+      name: t.productFilters.sections.style,
+      options: [
+        { value: "straight", label: t.productFilters.options.straight },
+        { value: "wavy", label: t.productFilters.options.wavy },
+        { value: "curly", label: t.productFilters.options.curly },
+      ],
+    },
+    {
+      id: "weight",
+      name: t.productFilters.sections.weightVolume,
+      options: [
+        { value: "light", label: t.productFilters.options.light },
+        { value: "medium", label: t.productFilters.options.medium },
+        { value: "full", label: t.productFilters.options.full },
+        { value: "extra", label: t.productFilters.options.extra },
+      ],
+    },
+  ]
+
   const [openSections, setOpenSections] = useState<string[]>(["length", "color-family"])
   const [priceRange, setPriceRange] = useState([0, 300])
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({})
@@ -89,10 +94,10 @@ export function ProductFilters() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-lg">Filters</h2>
+        <h2 className="font-semibold text-lg">{t.productFilters.filters}</h2>
         {activeFilterCount > 0 && (
           <Button variant="ghost" size="sm" onClick={clearFilters}>
-            Clear All ({activeFilterCount})
+            {t.productFilters.clearAll(activeFilterCount)}
           </Button>
         )}
       </div>
@@ -103,7 +108,7 @@ export function ProductFilters() {
           onClick={() => toggleSection("price")}
           className="flex items-center justify-between w-full py-2 text-left font-medium"
         >
-          Price Range
+          {t.productFilters.priceRange}
           <ChevronDown
             className={cn("h-4 w-4 transition-transform", openSections.includes("price") && "rotate-180")}
           />
@@ -171,7 +176,7 @@ export function ProductFilters() {
         <div className="flex items-center gap-2">
           <Checkbox id="in-stock" />
           <Label htmlFor="in-stock" className="text-sm font-normal cursor-pointer">
-            In Stock Only
+            {t.productFilters.inStockOnly}
           </Label>
         </div>
       </div>

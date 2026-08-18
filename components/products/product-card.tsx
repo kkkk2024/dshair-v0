@@ -6,18 +6,27 @@ import { Heart, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Product } from "@/lib/products"
+import { useLocale } from "@/lib/i18n"
+import { getShopUi } from "@/lib/i18n/shop"
 
 interface ProductCardProps {
   product: Product
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const locale = useLocale()
+  const t = getShopUi(locale)
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency: "GBP",
     }).format(price)
   }
+
+  const lengthLabel = product.lengths.length > 1
+    ? `${product.lengths.length} ${t.productCard.lengths}`
+    : `${product.lengths[0]} ${t.productCard.length}`
 
   return (
     <Link href={`/products/${product.slug}`} className="group">
@@ -30,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
         />
         {product.badge && (
           <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">
-            {product.badge}
+            {product.badge === "New" ? t.productCard.new : product.badge}
           </Badge>
         )}
         <button
@@ -39,7 +48,7 @@ export function ProductCard({ product }: ProductCardProps) {
             e.preventDefault()
             // Add to wishlist logic
           }}
-          aria-label={`Add ${product.name} to wishlist`}
+          aria-label={t.productCard.wishlistAria(product.name)}
         >
           <Heart className="h-4 w-4" />
         </button>
@@ -65,7 +74,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
           <Button variant="secondary" className="w-full" size="sm">
-            Quick View
+            {t.productCard.quickView}
           </Button>
         </div>
       </div>
@@ -94,8 +103,8 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex items-center gap-2">
           {product.priceOnRequest || product.price === 0 ? (
             <div className="flex flex-col gap-1">
-              <span className="font-semibold text-accent">Trade Price</span>
-              <span className="text-xs text-muted-foreground">Apply for access →</span>
+              <span className="font-semibold text-accent">{t.productCard.tradePrice}</span>
+              <span className="text-xs text-muted-foreground">{t.productCard.applyForAccess}</span>
             </div>
           ) : (
             <>
@@ -109,7 +118,7 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
         <p className="text-xs text-muted-foreground mt-1">
-          {product.colors.length} colours · {product.lengths.length > 1 ? `${product.lengths.length} lengths` : product.lengths[0]}
+          {product.colors.length} {t.productCard.colours} · {lengthLabel}
         </p>
       </div>
     </Link>

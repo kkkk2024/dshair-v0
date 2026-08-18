@@ -12,12 +12,16 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Grid3X3, LayoutGrid } from "lucide-react"
+import { useLocale } from "@/lib/i18n"
+import { getShopUi } from "@/lib/i18n/shop"
 
 interface ProductGridProps {
   products: Product[]
 }
 
 export function ProductGrid({ products }: ProductGridProps) {
+  const locale = useLocale()
+  const t = getShopUi(locale)
   const [sortBy, setSortBy] = useState("featured")
   const [gridCols, setGridCols] = useState<3 | 4>(3)
 
@@ -41,20 +45,20 @@ export function ProductGrid({ products }: ProductGridProps) {
       {/* Toolbar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b">
         <p className="text-sm text-muted-foreground">
-          Showing {products.length} {products.length === 1 ? "product" : "products"}
+          {t.productGrid.showing(products.length)}
         </p>
         
         <div className="flex items-center gap-4">
           <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Sort by" />
+              <SelectValue placeholder={t.productGrid.sortBy} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="featured">Featured</SelectItem>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="price-low">Price: Low to High</SelectItem>
-              <SelectItem value="price-high">Price: High to Low</SelectItem>
-              <SelectItem value="rating">Top Rated</SelectItem>
+              <SelectItem value="featured">{t.productGrid.sortOptions.featured}</SelectItem>
+              <SelectItem value="newest">{t.productGrid.sortOptions.newest}</SelectItem>
+              <SelectItem value="price-low">{t.productGrid.sortOptions.priceLow}</SelectItem>
+              <SelectItem value="price-high">{t.productGrid.sortOptions.priceHigh}</SelectItem>
+              <SelectItem value="rating">{t.productGrid.sortOptions.rating}</SelectItem>
             </SelectContent>
           </Select>
 
@@ -84,9 +88,9 @@ export function ProductGrid({ products }: ProductGridProps) {
       {/* Product Grid */}
       {products.length === 0 ? (
         <div className="text-center py-16">
-          <p className="text-muted-foreground">No products found matching your criteria.</p>
+          <p className="text-muted-foreground">{t.collectionPage.noProducts}</p>
           <Button variant="outline" className="mt-4">
-            Clear Filters
+            {t.productFilters.clearAll(0)}
           </Button>
         </div>
       ) : (

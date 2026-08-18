@@ -1,6 +1,6 @@
 import { locales, defaultLocale, type Locale } from './config'
 
-// Pages that have been localized and exist under /[locale]/<page>
+// Static pages that have been localized and exist under /[locale]/<page>
 // Add a path here as soon as its localized version is deployed.
 export const translatedPages = new Set<string>([
   '/about',
@@ -8,7 +8,27 @@ export const translatedPages = new Set<string>([
   '/trade-wholesale',
   '/why-choose-us',
   '/salon-partners',
+  // Bare dynamic-index pages that DO have a localized /[locale]/<page> variant.
+  // (Sub-paths like /salon-supplies/<slug> are handled by translatedDynamicPrefixes.)
+  '/salon-supplies',
 ])
+
+// Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>
+// e.g. /collections/clip-in -> /de/collections/clip-in
+export const translatedDynamicPrefixes = new Set<string>([
+  '/collections/',
+  '/products/',
+  '/salon-supplies/',
+  '/uk-salon-hair-extensions/',
+  '/blog/',
+])
+
+function hasTranslatedPrefix(path: string): boolean {
+  for (const prefix of translatedDynamicPrefixes) {
+    if (path.startsWith(prefix)) return true
+  }
+  return false
+}
 
 // Returns the correct href for a given locale.
 // - English: unchanged (root path, e.g. /about)
@@ -19,6 +39,7 @@ export function localeHref(href: string, locale: Locale): string {
   const path = href.startsWith('/') ? href : `/${href}`
   if (path === '/' || path === '') return `/${locale}`
   if (translatedPages.has(path)) return `/${locale}${path}`
+  if (hasTranslatedPrefix(path)) return `/${locale}${path}`
   return path
 }
 

@@ -1,54 +1,40 @@
 "use client"
 
 import Image from "next/image"
+import { getHomeContent } from "@/lib/i18n/home"
+import { localeHref } from "@/lib/i18n/routing"
+import type { Locale } from "@/lib/i18n/config"
 
-const salonImages = [
-  {
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80",
-    alt: "Professional hair salon interior",
-    caption: "Premium Salon Environments",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
-    alt: "Hair extension application in progress",
-    caption: "Expert Application",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80",
-    alt: "Professional hair stylist at work",
-    caption: "Skilled Stylists",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=600&q=80",
-    alt: "Modern salon workspace",
-    caption: "Modern Facilities",
-  },
-]
-
-export function SalonTrustSection() {
+export function SalonTrustSection({ locale }: { locale: Locale }) {
+  const c = getHomeContent(locale).salonTrust
   return (
     <section className="py-16 bg-gradient-to-b from-[#FFFDF9] to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
-            Trusted by Salons
+            {c.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4">
-            Trusted by Salons Across the UK & Ireland
+            {c.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-base">
-            From boutique studios in Liverpool to busy city-centre salons — stylists choose D.S Hair & Beauty for reliable supply and consistent quality.
+            {c.subtitle}
           </p>
         </div>
 
         {/* Photo Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
-          {salonImages.map((img, i) => (
+          {c.images.map((img, i) => (
             <div key={i} className="group relative overflow-hidden rounded-xl">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={img.src}
+                  src={[
+                    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80",
+                    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+                    "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80",
+                    "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=600&q=80",
+                  ][i]}
                   alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -64,12 +50,7 @@ export function SalonTrustSection() {
 
         {/* Trust Numbers */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-          {[
-            { num: "19+", label: "Years in Business" },
-            { num: "50+", label: "UK & EU Salons Served" },
-            { num: "100%", label: "Remy Human Hair" },
-            { num: "3–5d", label: "Express Delivery" },
-          ].map((stat, i) => (
+          {c.stats.map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl font-bold text-primary mb-1">{stat.num}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -80,13 +61,13 @@ export function SalonTrustSection() {
         {/* CTA */}
         <div className="text-center mt-10">
           <p className="text-sm text-muted-foreground mb-4">
-            Ready to join the D.S Hair & Beauty salon network?
+            {c.ctaText}
           </p>
           <a
-            href="/salon-partners"
+            href={localeHref('/salon-partners', locale)}
             className="inline-flex items-center gap-2 bg-[#1a1a2e] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#2a2a4e] transition-colors"
           >
-            Apply for Trade Account
+            {c.ctaButton}
           </a>
         </div>
       </div>

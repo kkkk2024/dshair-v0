@@ -1,5 +1,28 @@
 import type { Locale } from './config'
 
+export type SalonProductContent = {
+  breadcrumbSupplies: string
+  backToSupplies: string
+  postageNote: string
+  onePerSalon: string
+  savePercent: (n: number) => string
+  freeShippingNote: string
+  keyFeatures: string
+  whatIncluded: string
+  weight: string
+  monthlyUsage: string
+  margin: string
+  forLabel: string
+  buyNow: (price: number) => string
+  whatsappUs: string
+  freeUkDelivery: string
+  dispatchesNextDay: string
+  tryBeforeTitle: string
+  tryBeforeText: string
+  getFreeSample: string
+  whatsappMsg: (name: string) => string
+}
+
 export type SalonSuppliesContent = {
   metaTitle: string
   metaDescription: string
@@ -32,6 +55,7 @@ export type SalonSuppliesContent = {
   cardWhatsapp: string
   cardFree: string
   cardWhatsappMsg: (name: string) => string
+  product: SalonProductContent
 }
 
 const en: SalonSuppliesContent = {
@@ -115,6 +139,28 @@ const en: SalonSuppliesContent = {
   cardWhatsapp: 'WhatsApp',
   cardFree: 'FREE',
   cardWhatsappMsg: (name) => `Hi! I'm interested in the ${name}. Can you help me order?`,
+  product: {
+    breadcrumbSupplies: 'Salon Supplies',
+    backToSupplies: 'Back to all supplies',
+    postageNote: '+ £4.00 postage',
+    onePerSalon: 'One per salon. Limited time offer.',
+    savePercent: (n) => `Save ${n}%`,
+    freeShippingNote: 'Price includes FREE UK shipping',
+    keyFeatures: 'Key Features',
+    whatIncluded: 'What is Included',
+    weight: 'Weight',
+    monthlyUsage: 'Monthly Usage',
+    margin: 'Margin',
+    forLabel: 'For',
+    buyNow: (price) => `Buy Now — £${price}`,
+    whatsappUs: 'WhatsApp Us',
+    freeUkDelivery: 'Free UK delivery',
+    dispatchesNextDay: 'Dispatches next working day',
+    tryBeforeTitle: 'Want to try before buying?',
+    tryBeforeText: 'Claim your free sample pack. Test our quality in your own salon — just cover £4.00 postage.',
+    getFreeSample: 'Get Free Sample Pack',
+    whatsappMsg: (name) => `Hi! I'd like to order: ${name}. Can you help me?`,
+  },
 }
 
 const de: SalonSuppliesContent = {
@@ -198,6 +244,28 @@ const de: SalonSuppliesContent = {
   cardWhatsapp: 'WhatsApp',
   cardFree: 'GRATIS',
   cardWhatsappMsg: (name) => `Hallo! Ich interessiere mich für ${name}. Können Sie mir bei der Bestellung helfen?`,
+  product: {
+    breadcrumbSupplies: 'Salon-Verbrauchsmaterial',
+    backToSupplies: 'Zurück zu allen Artikeln',
+    postageNote: '+ 4,00 £ Porto',
+    onePerSalon: 'Eine pro Salon. Limitiertes Angebot.',
+    savePercent: (n) => `Sparen ${n}%`,
+    freeShippingNote: 'Preis inkl. gratis Versand UK',
+    keyFeatures: 'Merkmale',
+    whatIncluded: 'Lieferumfang',
+    weight: 'Gewicht',
+    monthlyUsage: 'Monatlicher Verbrauch',
+    margin: 'Marge',
+    forLabel: 'Für',
+    buyNow: (price) => `Jetzt kaufen — ${price} £`,
+    whatsappUs: 'WhatsApp uns',
+    freeUkDelivery: 'Gratis Versand UK',
+    dispatchesNextDay: 'Versand am nächsten Werktag',
+    tryBeforeTitle: 'Möchten Sie vor dem Kauf testen?',
+    tryBeforeText: 'Fordern Sie Ihr kostenloses Musterpaket an. Testen Sie unsere Qualität in Ihrem eigenen Salon — nur 4,00 £ Porto.',
+    getFreeSample: 'Gratis Musterpaket',
+    whatsappMsg: (name) => `Hallo! Ich möchte bestellen: ${name}. Können Sie helfen?`,
+  },
 }
 
 const fr: SalonSuppliesContent = {
@@ -281,6 +349,28 @@ const fr: SalonSuppliesContent = {
   cardWhatsapp: 'WhatsApp',
   cardFree: 'GRATUIT',
   cardWhatsappMsg: (name) => `Bonjour ! Je suis intéressé(e) par ${name}. Pouvez-vous m'aider à commander ?`,
+  product: {
+    breadcrumbSupplies: 'Consommables salon',
+    backToSupplies: 'Retour à tous les articles',
+    postageNote: '+ 4,00 £ de port',
+    onePerSalon: 'Un par salon. Offre à durée limitée.',
+    savePercent: (n) => `Économisez ${n}%`,
+    freeShippingNote: 'Prix incluant la livraison gratuite UK',
+    keyFeatures: 'Caractéristiques clés',
+    whatIncluded: 'Ce qui est inclus',
+    weight: 'Poids',
+    monthlyUsage: 'Usage mensuel',
+    margin: 'Marge',
+    forLabel: 'Pour',
+    buyNow: (price) => `Acheter — ${price} £`,
+    whatsappUs: 'WhatsApp nous',
+    freeUkDelivery: 'Livraison gratuite UK',
+    dispatchesNextDay: 'Expédié le jour ouvré suivant',
+    tryBeforeTitle: 'Vous voulez essayer avant d’acheter ?',
+    tryBeforeText: 'Réclamez votre pack échantillon gratuit. Testez notre qualité dans votre salon — vous couvrez seulement 4,00 £ de port.',
+    getFreeSample: 'Obtenir le pack échantillon',
+    whatsappMsg: (name) => `Bonjour ! Je souhaite commander : ${name}. Pouvez-vous m'aider ?`,
+  },
 }
 
 const ar: SalonSuppliesContent = {
@@ -363,6 +453,28 @@ const ar: SalonSuppliesContent = {
   cardWhatsapp: 'واتساب',
   cardFree: 'مجاني',
   cardWhatsappMsg: (name) => `مرحبًا! أنا مهتم بـ ${name}. هل يمكنك مساعدتي في الطلب؟`,
+  product: {
+    breadcrumbSupplies: 'لوازم الصالون',
+    backToSupplies: 'العودة إلى كل اللوازم',
+    postageNote: '+ 4.00 £ شحن',
+    onePerSalon: 'واحد لكل صالون. عرض لفترة محدودة.',
+    savePercent: (n) => `وفّر ${n}%`,
+    freeShippingNote: 'السعر يشمل توصيل مجاني UK',
+    keyFeatures: 'المزايا الرئيسية',
+    whatIncluded: 'ما هو مشمول',
+    weight: 'الوزن',
+    monthlyUsage: 'الاستخدام الشهري',
+    margin: 'الهامش',
+    forLabel: 'لـ',
+    buyNow: (price) => `اشترِ الآن — ${price} £`,
+    whatsappUs: 'راسلنا واتساب',
+    freeUkDelivery: 'توصيل مجاني UK',
+    dispatchesNextDay: 'يُشحن في يوم العمل التالي',
+    tryBeforeTitle: 'تريد التجربة قبل الشراء؟',
+    tryBeforeText: 'احصل على باقة العينات المجانية. جرّب جودتنا في صالونك — تدفع فقط 4.00 £ شحن.',
+    getFreeSample: 'احصل على باقة العينات',
+    whatsappMsg: (name) => `مرحبًا! أود الطلب: ${name}. هل يمكنك المساعدة؟`,
+  },
 }
 
 const sv: SalonSuppliesContent = {
@@ -445,6 +557,28 @@ const sv: SalonSuppliesContent = {
   cardWhatsapp: 'WhatsApp',
   cardFree: 'GRATIS',
   cardWhatsappMsg: (name) => `Hej! Jag är intresserad av ${name}. Kan du hjälpa mig att beställa?`,
+  product: {
+    breadcrumbSupplies: 'Salongtillbehör',
+    backToSupplies: 'Tillbaka till alla tillbehör',
+    postageNote: '+ 4,00 £ porto',
+    onePerSalon: 'En per salong. Tidsbegränsat erbjudande.',
+    savePercent: (n) => `Spara ${n}%`,
+    freeShippingNote: 'Priset inkluderar gratis frakt UK',
+    keyFeatures: 'Huvudfunktioner',
+    whatIncluded: 'Vad som ingår',
+    weight: 'Vikt',
+    monthlyUsage: 'Månatlig användning',
+    margin: 'Marginal',
+    forLabel: 'För',
+    buyNow: (price) => `Köp nu — ${price} £`,
+    whatsappUs: 'WhatsApp oss',
+    freeUkDelivery: 'Gratis frakt UK',
+    dispatchesNextDay: 'Skickas nästa arbetsdag',
+    tryBeforeTitle: 'Vill du testa innan du köper?',
+    tryBeforeText: 'Hämta ditt gratis provpaket. Testa vår kvalitet i din egen salong — betala bara 4,00 £ i porto.',
+    getFreeSample: 'Hämta gratis provpaket',
+    whatsappMsg: (name) => `Hej! Jag vill beställa: ${name}. Kan du hjälpa mig?`,
+  },
 }
 
 const pl: SalonSuppliesContent = {
@@ -527,6 +661,28 @@ const pl: SalonSuppliesContent = {
   cardWhatsapp: 'WhatsApp',
   cardFree: 'ZA DARMO',
   cardWhatsappMsg: (name) => `Cześć! Interesuje mnie ${name}. Czy możesz pomóc mi zamówić?`,
+  product: {
+    breadcrumbSupplies: 'Materiały salonu',
+    backToSupplies: 'Wstecz do wszystkich produktów',
+    postageNote: '+ 4,00 £ przesyłki',
+    onePerSalon: 'Jeden na salon. Oferta limitowana.',
+    savePercent: (n) => `Oszczędzasz ${n}%`,
+    freeShippingNote: 'Cena zawiera darmową dostawę UK',
+    keyFeatures: 'Kluczowe cechy',
+    whatIncluded: 'Co jest w zestawie',
+    weight: 'Waga',
+    monthlyUsage: 'Miesięczne zużycie',
+    margin: 'Marża',
+    forLabel: 'Dla',
+    buyNow: (price) => `Kup teraz — ${price} £`,
+    whatsappUs: 'WhatsApp my',
+    freeUkDelivery: 'Darmowa dostawa UK',
+    dispatchesNextDay: 'Wysyłka następnego dnia roboczego',
+    tryBeforeTitle: 'Chcesz wypróbować przed zakupem?',
+    tryBeforeText: 'Odbierz darmowy zestaw próbek. Sprawdź jakość we własnym salonie — płacisz tylko 4,00 £ przesyłki.',
+    getFreeSample: 'Odbierz darmowy zestaw próbek',
+    whatsappMsg: (name) => `Cześć! Chcę zamówić: ${name}. Czy możesz pomóc?`,
+  },
 }
 
 const salonSuppliesContent: Record<Locale, SalonSuppliesContent> = { en, de, fr, ar, sv, pl }

@@ -1,18 +1,5 @@
 import type { Metadata } from "next"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { CartDrawer } from "@/components/cart/cart-drawer"
-import { CartProvider } from "@/lib/cart-context"
-import { HeroSection } from "@/components/home/hero-section"
-import { BrandValues } from "@/components/home/brand-values"
-import { SalonTrustSection } from "@/components/home/salon-trust-section"
-import { CategoryGrid } from "@/components/home/category-grid"
-import { FeaturedProducts } from "@/components/home/featured-products"
-import { DualPathSection } from "@/components/home/dual-path-section"
-import { ServicesSection } from "@/components/home/services-section"
-import { TestimonialsSection } from "@/components/home/testimonials-section"
-import { InstagramSection } from "@/components/home/instagram-section"
-import { QuickQuoteSection } from "@/components/home/quick-quote-section"
+import { HomePageView } from "@/components/home/home-page-view"
 import { hreflangAlternates } from "@/lib/i18n/config"
 
 export const metadata: Metadata = {
@@ -34,25 +21,5 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          <HeroSection />
-          <BrandValues />
-          <SalonTrustSection />
-          <CategoryGrid />
-          <FeaturedProducts />
-          <DualPathSection />
-          <ServicesSection />
-          <TestimonialsSection />
-          <InstagramSection />
-          <QuickQuoteSection />
-        </main>
-        <Footer />
-        <CartDrawer />
-      </div>
-    </CartProvider>
-  )
+  return <HomePageView locale="en" />
 }
