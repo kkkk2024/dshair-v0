@@ -17,7 +17,8 @@ import {
 import { cn } from "@/lib/utils"
 import { products, contactInfo } from "@/lib/products"
 import { useLocale, useDict } from "@/lib/i18n"
-import { locales, localeNames, type Locale } from "@/lib/i18n/config"
+import { locales, localeNames, isLocale, defaultLocale, type Locale } from "@/lib/i18n/config"
+import { localeHref } from "@/lib/i18n/routing"
 
 export function Header() {
   const d = useDict()
@@ -26,6 +27,17 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("")
   const router = useRouter()
   const pathname = usePathname()
+
+  // Strip any leading /{locale} so language switching keeps the visitor on the
+  // same page (e.g. /de/about -> switch to /fr/about, not /fr).
+  const basePath = (() => {
+    const seg = (pathname || "/").split("/").filter(Boolean)
+    if (seg.length && isLocale(seg[0] as Locale) && seg[0] !== defaultLocale) {
+      return "/" + seg.slice(1).join("/")
+    }
+    return pathname || "/"
+  })()
+  const switchLang = (l: Locale) => localeHref(basePath, l)
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -104,15 +116,15 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[350px]">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
-                <MobileNavSection title={d.ui.nav.diy} items={diyExtensions} />
-                <MobileNavSection title={d.ui.nav.professional} items={proExtensions} />
-                <MobileNavSection title={d.ui.nav.hairCare} items={hairCare} />
-                <MobileNavSection title={d.ui.nav.accessories} items={accessories} />
-                <MobileNavSection title={d.ui.nav.services} items={services} />
-                <Link href="/about" className="py-2 text-lg font-medium hover:text-accent transition-colors">
+                <MobileNavSection title={d.ui.nav.diy} items={diyExtensions} locale={locale} />
+                <MobileNavSection title={d.ui.nav.professional} items={proExtensions} locale={locale} />
+                <MobileNavSection title={d.ui.nav.hairCare} items={hairCare} locale={locale} />
+                <MobileNavSection title={d.ui.nav.accessories} items={accessories} locale={locale} />
+                <MobileNavSection title={d.ui.nav.services} items={services} locale={locale} />
+                <Link href={localeHref("/about", locale)} className="py-2 text-lg font-medium hover:text-accent transition-colors">
                   {d.ui.nav.about}
                 </Link>
-                <Link href="/why-choose-us" className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
+                <Link href={localeHref("/why-choose-us", locale)} className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
                   {d.ui.nav.whyChooseUs}
                 </Link>
                 <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="py-2 text-lg font-medium hover:text-accent transition-colors">
@@ -122,7 +134,7 @@ export function Header() {
                   <p className="text-sm font-medium mb-2">{localeNames[locale]}</p>
                   <div className="flex flex-col gap-1">
                     {locales.filter((l) => l !== locale).map((l) => (
-                      <Link key={l} href={langHome(l)} className="py-1 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link key={l} href={switchLang(l)} className="py-1 text-muted-foreground hover:text-foreground transition-colors">
                         {localeNames[l]}
                       </Link>
                     ))}
@@ -209,7 +221,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/blog" legacyBehavior passHref>
+                <Link href={localeHref("/blog", locale)} legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                     {d.ui.nav.blog}
                   </NavigationMenuLink>
@@ -217,7 +229,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/why-choose-us" legacyBehavior passHref>
+                <Link href={localeHref("/why-choose-us", locale)} legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-primary">
                     {d.ui.nav.whyChooseUs}
                   </NavigationMenuLink>
@@ -225,7 +237,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href={localeHref("/about", locale)} legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                     {d.ui.nav.about}
                   </NavigationMenuLink>
@@ -247,7 +259,7 @@ export function Header() {
           </NavigationMenu>
 
           {/* Desktop language switcher (custom hover dropdown; Radix viewport was unreliable at far right) */}
-          <LanguageDropdown locale={locale} />
+          <LanguageDropdown locale={locale} basePath={basePath} />
         </div>
 
           {/* Right side actions */}
@@ -260,12 +272,12 @@ export function Header() {
             >
               <Search className="h-5 w-5" />
             </Button>
-            <Link href="/contact">
+            <Link href={localeHref("/contact", locale)}>
               <Button variant="ghost" size="icon" aria-label="Account">
                 <User className="h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/trade-wholesale">
+            <Link href={localeHref("/trade-wholesale", locale)}>
               <Button variant="default" size="sm" className="hidden sm:inline-flex">
                 {d.ui.nav.tradeEnquiry}
               </Button>
@@ -342,9 +354,7 @@ export function Header() {
   )
 }
 
-function LanguageDropdown({ locale }: { locale: Locale }) {
-  const langHome = (l: string) => (l === "en" ? "/" : `/${l}`)
-
+function LanguageDropdown({ locale, basePath }: { locale: Locale; basePath: string }) {
   return (
     <div className="relative group">
       <button
@@ -361,7 +371,7 @@ function LanguageDropdown({ locale }: { locale: Locale }) {
           {locales.filter((l) => l !== locale).map((l) => (
             <li key={l}>
               <Link
-                href={langHome(l)}
+                href={localeHref(basePath, l)}
                 className="block px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 {localeNames[l]}
@@ -374,7 +384,7 @@ function LanguageDropdown({ locale }: { locale: Locale }) {
   )
 }
 
-function MobileNavSection({ title, items }: { title: string; items: { title: string; href: string; description: string }[] }) {
+function MobileNavSection({ title, items, locale }: { title: string; items: { title: string; href: string; description: string }[]; locale: Locale }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -391,7 +401,7 @@ function MobileNavSection({ title, items }: { title: string; items: { title: str
           {items.map((item) => (
             <Link
               key={item.title}
-              href={item.href}
+              href={localeHref(item.href, locale)}
               className="py-1 text-muted-foreground hover:text-foreground transition-colors"
             >
               {item.title}

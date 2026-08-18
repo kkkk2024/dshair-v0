@@ -14,10 +14,15 @@ import {
   Clock, ShieldCheck, Star
 } from "lucide-react"
 import Image from "next/image"
+import { tradeWholesaleContent, type TradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
 
-export default function TradeWholesaleClient() {
+const WA_HREF =
+  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20the%20UK.%20I%27d%20like%20to%20open%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
+
+export default function TradeWholesaleClient({ content }: { content: TradeWholesaleContent }) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const t = content.form
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -42,71 +47,17 @@ export default function TradeWholesaleClient() {
       if (!response.ok) throw new Error("Failed to submit")
       setSubmitted(true)
     } catch {
-      alert("Failed to submit. Please try again or contact us via WhatsApp.")
+      alert(t.footWhatsApp + " " + t.footNote)
     } finally {
       setLoading(false)
     }
   }
-
-  const whyChooseUs = [
-    {
-      icon: ShieldCheck,
-      title: "100% Remy Human Hair",
-      description:
-        "Ethically sourced, consistent quality. Every strand is cuticle-aligned for a natural, seamless blend with your clients' hair.",
-    },
-    {
-      icon: Package,
-      title: "Full Product Range",
-      description:
-        "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers & Accessories. One supplier for every method your salon offers.",
-    },
-    {
-      icon: MapPin,
-      title: "UK Warehouse Launching & Factory-Direct",
-      description:
-        "Our UK warehouse is launching. Until then the full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
-    },
-    {
-      icon: BadgeCheck,
-      title: "Trade Accounts Available",
-      description:
-        "Dedicated wholesale pricing for registered salons. No middlemen, no inflated retail prices — straight from the source.",
-    },
-  ]
-
-  const productRange = [
-    { type: "Tape-In", minimum: "10 sets", leadTime: "Express 3–5 days" },
-    { type: "K-Tip", minimum: "50 grams", leadTime: "Express 3–5 days" },
-    { type: "Weft", minimum: "3 pieces", leadTime: "Express 3–5 days" },
-    { type: "Butterfly Weft", minimum: "3 pieces", leadTime: "Express 3–5 days" },
-    { type: "Hair Toppers", minimum: "1 piece", leadTime: "Express 3–5 days" },
-  ]
-
-  const steps = [
-    {
-      num: "01",
-      title: "Contact Us with Your Salon Details",
-      desc: "Send us your salon name, location, and a brief intro. Takes 2 minutes via the form below or WhatsApp.",
-    },
-    {
-      num: "02",
-      title: "We Set Up Your Trade Account",
-      desc: "We create your trade account and send a welcome sample pack so you can feel the quality before ordering.",
-    },
-    {
-      num: "03",
-      title: "Order Online with Trade Pricing",
-      desc: "Access your exclusive trade prices, place orders anytime, and get dedicated support from a real person.",
-    },
-  ]
 
   return (
     <CartProvider>
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-
           {/* Hero */}
           <section className="relative h-[520px] md:h-[600px] flex items-center">
             <div className="absolute inset-0 z-0">
@@ -123,17 +74,15 @@ export default function TradeWholesaleClient() {
               <div className="max-w-2xl text-white">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-1.5 mb-6">
                   <Store className="h-4 w-4" />
-                  <span className="text-sm font-medium">Salon Supply Partner</span>
+                  <span className="text-sm font-medium">{content.badge}</span>
                 </div>
                 <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
-                  Your Salon&apos;s Supply Chain, Simplified
+                  {content.heroTitle}
                 </h1>
-                <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  Factory-direct Remy hair extensions for professional UK & EU salons. One partner, every product type, zero middlemen. Join 50+ UK & EU salons who stock with us — with private label options.
-                </p>
+                <p className="text-lg text-white/80 leading-relaxed mb-8">{content.heroSubtitle}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild className="bg-white text-black hover:bg-white/90">
-                    <a href="#open-account">Open Your Trade Account</a>
+                    <a href="#open-account">{content.ctaOpenAccount}</a>
                   </Button>
                   <Button
                     size="lg"
@@ -141,13 +90,9 @@ export default function TradeWholesaleClient() {
                     className="border-white text-white bg-black/30 hover:bg-white hover:text-black"
                     asChild
                   >
-                    <a
-                      href="https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20the%20UK.%20I%27d%20like%20to%20open%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={WA_HREF} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="h-4 w-4 mr-2" />
-                      Chat on WhatsApp
+                      {content.ctaWhatsApp}
                     </a>
                   </Button>
                 </div>
@@ -159,12 +104,7 @@ export default function TradeWholesaleClient() {
           <section className="bg-primary text-primary-foreground py-6">
             <div className="container px-4 md:px-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                {[
-                  { stat: "19+", label: "Years Industry Experience" },
-                  { stat: "100%", label: "Remy Human Hair" },
-                  { stat: "3–5 Days", label: "Express UK Shipping" },
-                  { stat: "No Min.", label: "First Order Required" },
-                ].map((item) => (
+                {content.stats.map((item) => (
                   <div key={item.label}>
                     <div className="text-2xl md:text-3xl font-bold">{item.stat}</div>
                     <div className="text-xs md:text-sm text-primary-foreground/70 mt-0.5">{item.label}</div>
@@ -178,24 +118,25 @@ export default function TradeWholesaleClient() {
           <section className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Why Salons Choose Us</h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  Not just a supplier — a long-term partner who understands the salon business.
-                </p>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.whyTitle}</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{content.whySubtitle}</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {whyChooseUs.map((item) => (
-                  <div
-                    key={item.title}
-                    className="bg-card rounded-xl p-6 border hover:shadow-md transition-shadow text-center"
-                  >
-                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="h-6 w-6 text-primary" />
+                {content.whyItems.map((item, i) => {
+                  const Icon = [ShieldCheck, Package, MapPin, BadgeCheck][i] ?? ShieldCheck
+                  return (
+                    <div
+                      key={item.title}
+                      className="bg-card rounded-xl p-6 border hover:shadow-md transition-shadow text-center"
+                    >
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           </section>
@@ -204,22 +145,20 @@ export default function TradeWholesaleClient() {
           <section className="py-16 md:py-24 bg-secondary">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Product Range Overview</h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  From Tape-In to Butterfly Weft — everything your salon needs, in stock and ready to dispatch.
-                </p>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.rangeTitle}</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{content.rangeSubtitle}</p>
               </div>
               <div className="max-w-3xl mx-auto overflow-x-auto">
                 <table className="w-full bg-card rounded-xl border overflow-hidden">
                   <thead>
                     <tr className="bg-primary text-primary-foreground">
-                      <th className="text-left px-6 py-4 text-sm font-medium">Product Type</th>
-                      <th className="text-left px-6 py-4 text-sm font-medium">Minimum Order</th>
-                      <th className="text-left px-6 py-4 text-sm font-medium">Typical Lead Time</th>
+                      <th className="text-left px-6 py-4 text-sm font-medium">{content.rangeCols.type}</th>
+                      <th className="text-left px-6 py-4 text-sm font-medium">{content.rangeCols.min}</th>
+                      <th className="text-left px-6 py-4 text-sm font-medium">{content.rangeCols.lead}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
-                    {productRange.map((row) => (
+                    {content.rangeRows.map((row) => (
                       <tr key={row.type} className="hover:bg-muted/50 transition-colors">
                         <td className="px-6 py-4 text-sm font-medium">{row.type}</td>
                         <td className="px-6 py-4 text-sm text-muted-foreground">{row.minimum}</td>
@@ -234,13 +173,7 @@ export default function TradeWholesaleClient() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-6">
-                Need something not listed?{" "}
-                <a href="mailto:info@dshairbeauty.co.uk" className="text-primary underline">
-                  Contact us
-                </a>{" "}
-                — we may be able to source it.
-              </p>
+              <p className="text-center text-sm text-muted-foreground mt-6">{content.rangeFootnote}</p>
             </div>
           </section>
 
@@ -248,18 +181,16 @@ export default function TradeWholesaleClient() {
           <section className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">How to Open a Trade Account</h2>
-                <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-                  Simple, fast, no commitment required to apply.
-                </p>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.stepsTitle}</h2>
+                <p className="text-muted-foreground text-lg max-w-xl mx-auto">{content.stepsSubtitle}</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                {steps.map((step, i) => (
+                {content.steps.map((step, i) => (
                   <div key={step.num} className="relative text-center">
                     <div className="h-16 w-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mx-auto mb-5">
                       {step.num}
                     </div>
-                    {i < steps.length - 1 && (
+                    {i < content.steps.length - 1 && (
                       <div className="hidden md:block absolute top-8 left-[calc(50%+36px)] right-[calc(-50%+36px)] h-px bg-border" />
                     )}
                     <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
@@ -274,21 +205,16 @@ export default function TradeWholesaleClient() {
           <section className="py-12 bg-secondary border-y">
             <div className="container px-4 md:px-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
-                <div>
-                  <Star className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="font-semibold mb-1">4.9/5 Salon Rating</div>
-                  <p className="text-sm text-muted-foreground">Trusted by hundreds of UK salons</p>
-                </div>
-                <div>
-                  <Scissors className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="font-semibold mb-1">Professional Grade</div>
-                  <p className="text-sm text-muted-foreground">100% Remy, cuticle-aligned hair</p>
-                </div>
-                <div>
-                  <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="font-semibold mb-1">Express Shipping</div>
-                  <p className="text-sm text-muted-foreground">Ships in 3–5 days via DHL/UPS</p>
-                </div>
+                {content.trust.map((item, i) => {
+                  const Icon = [Star, Scissors, Clock][i] ?? Star
+                  return (
+                    <div key={item.title}>
+                      <Icon className="h-8 w-8 text-primary mx-auto mb-2" />
+                      <div className="font-semibold mb-1">{item.title}</div>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </section>
@@ -298,15 +224,10 @@ export default function TradeWholesaleClient() {
             <div className="container px-4 md:px-6">
               <div className="max-w-2xl mx-auto">
                 <div className="text-center mb-10">
-                  <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Open Your Trade Account Today</h2>
-                  <p className="text-muted-foreground text-lg">
-                    Fill in the form below — we will respond within 24 hours with your trade pricing.
-                  </p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.ctaTitle}</h2>
+                  <p className="text-muted-foreground text-lg">{content.ctaSubtitle}</p>
                   <p className="text-muted-foreground text-sm mt-2">
-                    Or email us directly:{" "}
-                    <a href="mailto:info@dshairbeauty.co.uk" className="text-primary underline">
-                      info@dshairbeauty.co.uk
-                    </a>
+                    {content.ctaEmailLine}
                   </p>
                 </div>
 
@@ -315,19 +236,13 @@ export default function TradeWholesaleClient() {
                     <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="font-serif text-2xl font-medium mb-2">Application Received!</h3>
-                    <p className="text-muted-foreground mb-2">
-                      Thank you — we will send your trade price list within 24 hours.
-                    </p>
-                    <p className="text-muted-foreground text-sm mb-6">For faster response, reach us directly on WhatsApp:</p>
+                    <h3 className="font-serif text-2xl font-medium mb-2">{t.successTitle}</h3>
+                    <p className="text-muted-foreground mb-2">{t.successBody}</p>
+                    <p className="text-muted-foreground text-sm mb-6">{content.ctaEmailLine}</p>
                     <Button className="bg-green-500 hover:bg-green-600 text-white" asChild>
-                      <a
-                        href="https://wa.me/8613516946001?text=Hi!%20I%20just%20submitted%20a%20trade%20account%20application%20on%20your%20website."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={WA_HREF} target="_blank" rel="noopener noreferrer">
                         <MessageCircle className="h-4 w-4 mr-2" />
-                        Follow Up on WhatsApp
+                        {t.successWhatsApp}
                       </a>
                     </Button>
                   </div>
@@ -335,47 +250,37 @@ export default function TradeWholesaleClient() {
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Your Name *</label>
-                        <Input name="name" placeholder="First & Last Name" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.name}</label>
+                        <Input name="name" placeholder={t.namePh} required />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Salon Name *</label>
-                        <Input name="salon_name" placeholder="e.g. The Hair Studio" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.salon}</label>
+                        <Input name="salon_name" placeholder={t.salonPh} required />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Email Address *</label>
-                      <Input name="email" type="email" placeholder="you@yoursalon.co.uk" required />
+                      <label className="block text-sm font-medium mb-1.5">{t.email}</label>
+                      <Input name="email" type="email" placeholder={t.emailPh} required />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Message (optional)</label>
-                      <Textarea
-                        name="message"
-                        placeholder="Tell us about your salon, the extension methods you offer, or any questions you have..."
-                        rows={4}
-                      />
+                      <label className="block text-sm font-medium mb-1.5">{t.message}</label>
+                      <Textarea name="message" placeholder={t.messagePh} rows={4} />
                     </div>
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
-                      {loading ? "Submitting..." : "Open My Trade Account"}
+                      {loading ? t.submitting : t.submit}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
-                      Prefer to chat first?{" "}
-                      <a
-                        href="https://wa.me/8613516946001"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline text-green-600"
-                      >
-                        Message us on WhatsApp
+                      {t.footWhatsApp}{" "}
+                      <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="underline text-green-600">
+                        {content.ctaWhatsApp}
                       </a>{" "}
-                      — we respond within 2 hours.
+                      {t.footNote}
                     </p>
                   </form>
                 )}
               </div>
             </div>
           </section>
-
         </main>
         <Footer />
         <CartDrawer />

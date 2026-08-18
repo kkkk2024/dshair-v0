@@ -12,17 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { contactFormLabels, type ContactFormLabels } from "@/lib/i18n/pages/contact-form"
 
-const subjects = [
-  { value: "general", label: "General Enquiry" },
-  { value: "order", label: "Order Support" },
-  { value: "returns", label: "Returns & Exchanges" },
-  { value: "colour-match", label: "Colour Matching Help" },
-  { value: "professional", label: "Professional Partnership" },
-  { value: "press", label: "Press & Media" },
-]
-
-export function ContactForm() {
+export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
+  const t = labels ?? contactFormLabels.en
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
@@ -60,7 +53,7 @@ export function ContactForm() {
       setIsSubmitted(true)
     } catch (err) {
       setIsSubmitting(false)
-      setError("Failed to send message. Please try again.")
+      setError(t.error)
     }
   }
 
@@ -72,12 +65,10 @@ export function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h2 className="font-serif text-2xl font-medium mb-2">Message Sent!</h2>
-        <p className="text-muted-foreground mb-6">
-          Thank you for getting in touch. We will respond to your enquiry within 24 hours.
-        </p>
+        <h2 className="font-serif text-2xl font-medium mb-2">{t.successTitle}</h2>
+        <p className="text-muted-foreground mb-6">{t.successBody}</p>
         <Button variant="outline" onClick={() => setIsSubmitted(false)}>
-          Send Another Message
+          {t.another}
         </Button>
       </div>
     )
@@ -85,44 +76,42 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border">
-      <h2 className="font-semibold text-xl mb-6">Send Us a Message</h2>
-      
+      <h2 className="font-semibold text-xl mb-6">{t.heading}</h2>
+
       {error && (
-        <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">
-          {error}
-        </div>
+        <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">{error}</div>
       )}
-      
+
       <FieldGroup>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field>
-            <FieldLabel htmlFor="first-name">First Name</FieldLabel>
-            <Input id="first-name" name="first-name" placeholder="Your first name" required />
+            <FieldLabel htmlFor="first-name">{t.firstName}</FieldLabel>
+            <Input id="first-name" name="first-name" placeholder={t.firstNamePh} required />
           </Field>
           <Field>
-            <FieldLabel htmlFor="last-name">Last Name</FieldLabel>
-            <Input id="last-name" name="last-name" placeholder="Your last name" required />
+            <FieldLabel htmlFor="last-name">{t.lastName}</FieldLabel>
+            <Input id="last-name" name="last-name" placeholder={t.lastNamePh} required />
           </Field>
         </div>
 
         <Field>
-          <FieldLabel htmlFor="email">Email Address</FieldLabel>
-          <Input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <FieldLabel htmlFor="email">{t.email}</FieldLabel>
+          <Input id="email" name="email" type="email" placeholder={t.emailPh} required />
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="phone">Phone Number (Optional)</FieldLabel>
-          <Input id="phone" name="phone" type="tel" placeholder="+44 123 456 7890" />
+          <FieldLabel htmlFor="phone">{t.phone}</FieldLabel>
+          <Input id="phone" name="phone" type="tel" placeholder={t.phonePh} />
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="subject">Subject</FieldLabel>
+          <FieldLabel htmlFor="subject">{t.subject}</FieldLabel>
           <Select required name="subject">
             <SelectTrigger id="subject">
-              <SelectValue placeholder="Select a subject" />
+              <SelectValue placeholder={t.subjectPh} />
             </SelectTrigger>
             <SelectContent>
-              {subjects.map((subject) => (
+              {t.subjects.map((subject) => (
                 <SelectItem key={subject.value} value={subject.value}>
                   {subject.label}
                 </SelectItem>
@@ -132,23 +121,23 @@ export function ContactForm() {
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="order-number">Order Number (Optional)</FieldLabel>
-          <Input id="order-number" name="order-number" placeholder="e.g. DS-12345" />
+          <FieldLabel htmlFor="order-number">{t.orderNumber}</FieldLabel>
+          <Input id="order-number" name="order-number" placeholder={t.orderNumberPh} />
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="message">Message</FieldLabel>
+          <FieldLabel htmlFor="message">{t.message}</FieldLabel>
           <Textarea
             id="message"
             name="message"
-            placeholder="Tell us how we can help..."
+            placeholder={t.messagePh}
             rows={5}
             required
           />
         </Field>
 
         <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? t.sending : t.submit}
         </Button>
       </FieldGroup>
     </form>

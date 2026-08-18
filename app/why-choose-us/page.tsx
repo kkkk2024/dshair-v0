@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 import WhyChooseUsClient from "./why-choose-us-client"
+import { whyChooseUsContent } from "@/lib/i18n/pages/why-choose-us"
 
 export const metadata: Metadata = {
-  title: "Why Choose D.S Hair Beauty | 19 Years Expertise | Remy Human Hair Extensions",
-  description:
-    "19 years of hair extension expertise. Factory-direct pricing, 100% Remy human hair, express 3–5 day UK shipping, free digital colour matching. Discover why 50+ UK & EU salons trust D.S Hair Beauty.",
+  title: whyChooseUsContent.en.metaTitle,
+  description: whyChooseUsContent.en.metaDescription,
   keywords: [
     "why choose D.S Hair Beauty",
     "hair extension supplier benefits",
@@ -14,25 +14,27 @@ export const metadata: Metadata = {
     "salon hair extension partner",
   ],
   alternates: {
-    canonical: 'https://www.dshairbeauty.co.uk/why-choose-us',
+    canonical: "https://www.dshairbeauty.co.uk/why-choose-us",
   },
   openGraph: {
-    title: 'Why Choose D.S Hair Beauty | 19 Years Expertise',
-    description: 'Factory-direct pricing, 100% Remy human hair, express 3–5 day UK shipping. 50+ UK & EU salons trust us.',
-    url: 'https://www.dshairbeauty.co.uk/why-choose-us',
-    type: 'website',
-    locale: 'en_GB',
+    title: whyChooseUsContent.en.metaTitle,
+    description: whyChooseUsContent.en.metaDescription,
+    url: "https://www.dshairbeauty.co.uk/why-choose-us",
+    type: "website",
+    locale: "en_GB",
   },
 }
 
 export default function WhyChooseUsPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[
-        { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-        { name: "Why Choose Us", url: "https://www.dshairbeauty.co.uk/why-choose-us" },
-      ]} />
-      <WhyChooseUsClient />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
+          { name: "Why Choose Us", url: "https://www.dshairbeauty.co.uk/why-choose-us" },
+        ]}
+      />
+      <WhyChooseUsClient content={whyChooseUsContent.en} locale="en" />
     </>
   )
 }

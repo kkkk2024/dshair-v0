@@ -14,111 +14,19 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { localeHref } from "@/lib/i18n/routing"
+import type { Locale } from "@/lib/i18n/config"
+import { salonPartnerContent, type SalonPartnerContent } from "@/lib/i18n/pages/salon-partners"
 
-const benefits = [
-  {
-    icon: ShieldCheck,
-    title: "Wholesale Trade Pricing",
-    description: "30–50% below retail. Direct factory pricing with no middlemen.",
-  },
-  {
-    icon: Gift,
-    title: "Free Digital Colour Catalogue",
-    description: "Every new salon partner receives our full digital colour catalogue — 40+ shades, completely free, accessible instantly.",
-  },
-  {
-    icon: Truck,
-    title: "UK Stock + Express Factory-Direct",
-    description: "UK warehouse launching, plus factory-direct express (3–5 days) for the full range. No waiting weeks for stock.",
-  },
-  {
-    icon: Palette,
-    title: "Custom Colour Matching",
-    description: "Our specialist provides a free digital colour-matching consultation. We match your clients precisely, remotely or on request.",
-  },
-  {
-    icon: Users,
-    title: "No Minimum Order to Start",
-    description: "Start small, scale as you grow. No pressure to over-stock. Order what you need, when you need it.",
-  },
-  {
-    icon: Star,
-    title: "Priority Access to New Stock",
-    description: "Partners get first access to new hand-tied wefts, balayage blends, and seasonal colours before general release.",
-  },
-  {
-    icon: Users,
-    title: "Ambassador Programme",
-    description: "Refer other salons and earn commission. Bronze, Silver, and Gold tiers with increasing rewards.",
-    highlight: true,
-  },
-]
+const WA_HREF =
+  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extension%20supply."
 
-const products = [
-  {
-    name: "Hand-Tied Weft",
-    tag: "Most Requested",
-    description: "Ultra-thin, flat lay. Perfect for fine and medium hair. White salon clients love the invisible result.",
-    price: "From £X/bundle trade",
-  },
-  {
-    name: "Balayage Weft",
-    tag: "Trending",
-    description: "Custom balayage colour blending. Ready to install — no additional colouring needed at the salon.",
-    price: "From £X/bundle trade",
-  },
-  {
-    name: "Nano Ring Extensions",
-    tag: "Best Seller",
-    description: "No heat, no glue. One of the most popular professional methods for salons.",
-    price: "From £X/pack trade",
-  },
-  {
-    name: "Tape-In Extensions",
-    tag: "Classic",
-    description: "Quick application, seamless blend. Our pro-grade tape lasts 6–8 weeks with proper care.",
-    price: "From £X/pack trade",
-  },
-  {
-    name: "K-Tip Keratin Extensions",
-    tag: "Premium",
-    description: "Individual strand application for a completely natural result. 100% Remy cuticle-aligned.",
-    price: "From £X/100 strands trade",
-  },
-  {
-    name: "Hair Topper",
-    tag: "Specialist",
-    description: "Crown coverage for thinning hair. Rapidly growing demand — an underserved niche.",
-    price: "From £X trade",
-  },
-]
+const benefitIcons = [ShieldCheck, Gift, Truck, Palette, Users, Star, Users]
 
-const steps = [
-  {
-    num: "01",
-    title: "Fill in the Application",
-    desc: "Tell us about your salon — name, location, and the methods you specialise in. Takes 2 minutes.",
-  },
-  {
-    num: "02",
-    title: "We Review & Contact You",
-    desc: "We respond within 24 hours via WhatsApp or email with your trade price list.",
-  },
-  {
-    num: "03",
-    title: "Receive Your Welcome Kit",
-    desc: "Your digital colour catalogue and tailored trade pricing are sent right away, with a dedicated WhatsApp contact for ongoing support.",
-  },
-  {
-    num: "04",
-    title: "Start Supplying Your Clients",
-    desc: "Place orders as you need them. No minimum, no pressure. We grow with you.",
-  },
-]
-
-export default function SalonPartnersPage() {
+export default function SalonPartnersClient({ content, locale }: { content: SalonPartnerContent; locale: Locale }) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const t = content.form
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -137,6 +45,7 @@ export default function SalonPartnersPage() {
       howFoundUs: formData.get("how_found_us"),
       instagram: formData.get("instagram"),
       notes: formData.get("notes"),
+      source: "salon-partners-page",
     }
 
     try {
@@ -148,8 +57,8 @@ export default function SalonPartnersPage() {
 
       if (!response.ok) throw new Error("Failed to submit")
       setSubmitted(true)
-    } catch (err) {
-      alert("Failed to submit. Please try again or contact us via WhatsApp.")
+    } catch {
+      alert(t.footWhatsApp + " " + t.footNote)
     } finally {
       setLoading(false)
     }
@@ -177,26 +86,26 @@ export default function SalonPartnersPage() {
               <div className="max-w-2xl text-white">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-1.5 mb-6">
                   <Building2 className="h-4 w-4" />
-                  <span className="text-sm font-medium">Salon Partner Programme</span>
+                  <span className="text-sm font-medium">{content.badge}</span>
                 </div>
                 <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
-                  Your Trade Hair Extension Supplier. Trade Prices. No Minimums.
+                  {content.heroTitle}
                 </h1>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  Join our growing UK &amp; EU network of professional salons. Get wholesale pricing on 100% Remy human hair extensions — with express factory-direct supply (3–5 days) and select UK-stocked lines.
+                  {content.heroSubtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild>
-                    <a href="#apply">Apply for Trade Account</a>
+                    <a href="#apply">{content.ctaApply}</a>
                   </Button>
                   <Button size="lg" variant="outline" className="border-white text-white bg-black/30 hover:bg-white hover:text-black" asChild>
                     <a
-                      href="https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extension%20supply."
+                      href={WA_HREF}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <MessageCircle className="h-4 w-4 mr-2" />
-                      WhatsApp Us First
+                      {content.ctaWhatsApp}
                     </a>
                   </Button>
                 </div>
@@ -208,12 +117,7 @@ export default function SalonPartnersPage() {
           <section className="bg-primary text-primary-foreground py-6">
             <div className="container px-4 md:px-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                {[
-                  { stat: "19+", label: "Years Supply Experience" },
-                  { stat: "£0", label: "Minimum First Order" },
-                  { stat: "3–5 Days", label: "Express UK Shipping" },
-                  { stat: "Free", label: "Digital Colour Catalogue" },
-                ].map((item) => (
+                {content.stats.map((item) => (
                   <div key={item.label}>
                     <div className="text-2xl md:text-3xl font-bold">{item.stat}</div>
                     <div className="text-xs md:text-sm text-primary-foreground/70 mt-0.5">{item.label}</div>
@@ -227,26 +131,29 @@ export default function SalonPartnersPage() {
           <section className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">What You Get as a Partner</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.benefitsTitle}</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  More than a supplier. A business partner who wants your salon to succeed.
+                  {content.benefitsSubtitle}
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((b) => (
-                  <div key={b.title} className={`bg-card rounded-xl p-6 border hover:shadow-md transition-shadow ${b.highlight ? 'ring-2 ring-primary bg-primary/5' : ''}`}>
-                    <div className="h-11 w-11 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <b.icon className="h-5 w-5 text-primary" />
+                {content.benefits.map((b, i) => {
+                  const Icon = benefitIcons[i] ?? ShieldCheck
+                  return (
+                    <div key={b.title} className={`bg-card rounded-xl p-6 border hover:shadow-md transition-shadow ${b.highlight ? 'ring-2 ring-primary bg-primary/5' : ''}`}>
+                      <div className="h-11 w-11 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-lg mb-2">{b.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">{b.desc}</p>
+                      {b.highlight && (
+                        <Button size="sm" variant="outline" className="w-full" asChild>
+                          <Link href={localeHref("/ambassador", locale)}>{content.ambassadorCta}</Link>
+                        </Button>
+                      )}
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{b.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{b.description}</p>
-                    {b.highlight && (
-                      <Button size="sm" variant="outline" className="w-full" asChild>
-                        <Link href="/ambassador">Learn More →</Link>
-                      </Button>
-                    )}
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           </section>
@@ -255,13 +162,13 @@ export default function SalonPartnersPage() {
           <section className="py-16 md:py-24 bg-secondary">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Products for Professional Salons</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.productsTitle}</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  Specialising in the methods Manchester&apos;s white hair salons demand most.
+                  {content.productsSubtitle}
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((p) => (
+                {content.products.map((p) => (
                   <div key={p.name} className="bg-card rounded-xl p-6 border hover:shadow-md transition-shadow">
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="font-semibold text-lg">{p.name}</h3>
@@ -269,17 +176,17 @@ export default function SalonPartnersPage() {
                         {p.tag}
                       </span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{p.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{p.desc}</p>
                     <p className="text-xs text-muted-foreground border-t pt-3">
-                      Trade pricing available after account approval
+                      {content.productsNote}
                     </p>
                   </div>
                 ))}
               </div>
               <div className="text-center mt-10">
                 <Button asChild>
-                  <Link href="/collections/professional">
-                    Browse All Professional Products <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href={localeHref("/collections/professional", locale)}>
+                    {content.productsCta} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
@@ -290,18 +197,18 @@ export default function SalonPartnersPage() {
           <section className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">How to Get Started</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{content.stepsTitle}</h2>
                 <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-                  Simple, fast, no commitment required to apply.
+                  {content.stepsSubtitle}
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                {steps.map((step, i) => (
+                {content.steps.map((step, i) => (
                   <div key={step.num} className="relative text-center">
                     <div className="h-14 w-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold mx-auto mb-4">
                       {step.num}
                     </div>
-                    {i < steps.length - 1 && (
+                    {i < content.steps.length - 1 && (
                       <div className="hidden lg:block absolute top-7 left-[calc(50%+28px)] right-0 h-px bg-border" />
                     )}
                     <h3 className="font-semibold mb-2">{step.title}</h3>
@@ -317,9 +224,9 @@ export default function SalonPartnersPage() {
             <div className="container px-4 md:px-6">
               <div className="max-w-2xl mx-auto">
                 <div className="text-center mb-10">
-                  <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Apply for a Trade Account</h2>
+                  <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">{t.title}</h2>
                   <p className="text-muted-foreground text-lg">
-                    Fill in the form below — we will be in touch within 24 hours with your trade price list.
+                    {t.subtitle}
                   </p>
                 </div>
 
@@ -328,21 +235,21 @@ export default function SalonPartnersPage() {
                     <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="font-serif text-2xl font-medium mb-2">Application Received!</h3>
+                    <h3 className="font-serif text-2xl font-medium mb-2">{t.successTitle}</h3>
                     <p className="text-muted-foreground mb-2">
-                      Thank you — we will send your trade price list within 24 hours.
+                      {t.successBody}
                     </p>
                     <p className="text-muted-foreground text-sm mb-6">
-                      For faster response, message us directly on WhatsApp:
+                      {t.successNote}
                     </p>
                     <Button className="bg-green-500 hover:bg-green-600 text-white" asChild>
                       <a
-                        href="https://wa.me/8613516946001?text=Hi!%20I%20just%20submitted%20a%20salon%20partner%20application%20on%20your%20website."
+                        href={WA_HREF}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <MessageCircle className="h-4 w-4 mr-2" />
-                        Follow Up on WhatsApp
+                        {t.successWhatsApp}
                       </a>
                     </Button>
                   </div>
@@ -350,32 +257,32 @@ export default function SalonPartnersPage() {
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Your Name *</label>
-                        <Input name="name" placeholder="First & Last Name" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.name}</label>
+                        <Input name="name" placeholder={t.namePh} required />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Salon Name *</label>
-                        <Input name="salon_name" placeholder="e.g. The Hair Studio" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.salon}</label>
+                        <Input name="salon_name" placeholder={t.salonPh} required />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Salon Location *</label>
-                      <Input name="location" placeholder="e.g. Didsbury, Manchester / Salford" required />
+                      <label className="block text-sm font-medium mb-1.5">{t.location}</label>
+                      <Input name="location" placeholder={t.locationPh} required />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">Email Address *</label>
-                        <Input name="email" type="email" placeholder="you@yoursalon.co.uk" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.email}</label>
+                        <Input name="email" type="email" placeholder={t.emailPh} required />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-1.5">WhatsApp / Phone *</label>
-                        <Input name="phone" type="tel" placeholder="+44 7xxx xxxxxx" required />
+                        <label className="block text-sm font-medium mb-1.5">{t.phone}</label>
+                        <Input name="phone" type="tel" placeholder={t.phonePh} required />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Extension Methods You Offer</label>
+                      <label className="block text-sm font-medium mb-1.5">{t.methodsLabel}</label>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                        {["Hand-Tied Weft","Nano Ring","Tape-In","K-Tip","Balayage","Clip-In"].map((method) => (
+                        {t.methodOptions.map((method) => (
                           <label key={method} className="flex items-center gap-2 text-sm cursor-pointer">
                             <input type="checkbox" name="methods" value={method} className="rounded" />
                             {method}
@@ -384,73 +291,67 @@ export default function SalonPartnersPage() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Estimated Monthly Spend on Hair Extensions</label>
+                      <label className="block text-sm font-medium mb-1.5">{t.spendLabel}</label>
                       <select name="monthly_spend" className="w-full rounded-md border px-3 py-2 text-sm bg-background">
-                        <option value="">Select range</option>
-                        <option value="under-500">Under £500</option>
-                        <option value="500-1500">£500 – £1,500</option>
-                        <option value="1500-5000">£1,500 – £5,000</option>
-                        <option value="over-5000">Over £5,000</option>
+                        {t.spendOptions.map((opt) => (
+                          <option key={opt.value} value={opt.value}>{opt.label}</option>
+                        ))}
                       </select>
                     </div>
                     <div className="border-t pt-4">
-                      <p className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wide">Help us serve you better</p>
+                      <p className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wide">{t.serveHeader}</p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium mb-1.5">Current Supplier</label>
+                          <label className="block text-sm font-medium mb-1.5">{t.currentSupplierLabel}</label>
                           <Input
                             name="current_supplier"
-                            placeholder="e.g. Gold Hair / Great Lengths / None yet"
+                            placeholder={t.currentSupplierPh}
                           />
-                          <p className="text-xs text-muted-foreground mt-1">Helps us understand your current setup</p>
+                          <p className="text-xs text-muted-foreground mt-1">{t.currentSupplierHint}</p>
                         </div>
                         <div>
-                          <label className="block text-sm font-medium mb-1.5">How did you find us?</label>
+                          <label className="block text-sm font-medium mb-1.5">{t.foundLabel}</label>
                           <select
                             name="how_found_us"
                             className="w-full rounded-md border px-3 py-2 text-sm bg-background"
                           >
-                            <option value="">Select one</option>
-                            <option value="google">Google Search</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="linkedin">LinkedIn</option>
-                            <option value="referral">Word of Mouth / Referral</option>
-                            <option value="trade-show">Trade Show / Event</option>
-                            <option value="other">Other</option>
+                            {t.foundOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value}>{opt.label}</option>
+                            ))}
                           </select>
                         </div>
                       </div>
                       <div className="mt-4">
-                        <label className="block text-sm font-medium mb-1.5">Salon Instagram (optional)</label>
+                        <label className="block text-sm font-medium mb-1.5">{t.instagramLabel}</label>
                         <Input
                           name="instagram"
-                          placeholder="@yoursalon"
+                          placeholder={t.instagramPh}
                         />
-                        <p className="text-xs text-muted-foreground mt-1">We will follow you back — let's connect</p>
+                        <p className="text-xs text-muted-foreground mt-1">{t.instagramHint}</p>
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1.5">Anything else you would like us to know?</label>
+                      <label className="block text-sm font-medium mb-1.5">{t.notesLabel}</label>
                       <Textarea
                         name="notes"
-                        placeholder="Questions, specific needs, or anything you want us to know..."
+                        placeholder={t.notesPh}
                         rows={3}
                       />
                     </div>
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
-                      {loading ? "Submitting..." : "Submit Application"}
+                      {loading ? t.submitting : t.submit}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
-                      Prefer to chat first?{" "}
+                      {t.footWhatsApp}{" "}
                       <a
-                        href="https://wa.me/8613516946001"
+                        href={WA_HREF}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline text-green-600"
                       >
-                        Message us on WhatsApp
+                        {content.ctaWhatsApp}
                       </a>{" "}
-                      — we respond within 2 hours.
+                      {t.footNote}
                     </p>
                   </form>
                 )}

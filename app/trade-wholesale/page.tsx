@@ -1,34 +1,35 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import TradeWholesaleClient from "./trade-wholesale-client"
+import { tradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
 
 export const metadata: Metadata = {
-  title: "Wholesale Hair Extensions for UK Salons | Trade Account | D.S Hair Beauty",
-  description:
-    "Open a trade account with D.S Hair Beauty. 100% Remy human hair extensions at wholesale prices. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct with express UK shipping (3–5 days). UK warehouse launching.",
+  title: tradeWholesaleContent.en.metaTitle,
+  description: tradeWholesaleContent.en.metaDescription,
   keywords:
     "trade hair extension suppliers UK, wholesale hair extensions, hair extension wholesale UK, tape-in wholesale, salon hair supplier",
   alternates: {
-    canonical: 'https://www.dshairbeauty.co.uk/trade-wholesale',
+    canonical: "https://www.dshairbeauty.co.uk/trade-wholesale",
   },
   openGraph: {
-    title: 'Wholesale Hair Extensions for UK Salons | D.S Hair Beauty',
-    description: 'Open a trade account. 100% Remy human hair at wholesale prices. Express UK shipping 3–5 days factory-direct. UK warehouse launching.',
-    url: 'https://www.dshairbeauty.co.uk/trade-wholesale',
-    type: 'website',
-    locale: 'en_GB',
+    title: tradeWholesaleContent.en.metaTitle,
+    description: tradeWholesaleContent.en.metaDescription,
+    url: "https://www.dshairbeauty.co.uk/trade-wholesale",
+    type: "website",
+    locale: "en_GB",
   },
 }
-
-import TradeWholesaleClient from "./trade-wholesale-client"
 
 export default function TradeWholesalePage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[
-        { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-        { name: "Trade Wholesale", url: "https://www.dshairbeauty.co.uk/trade-wholesale" },
-      ]} />
-      <TradeWholesaleClient />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
+          { name: "Trade Wholesale", url: "https://www.dshairbeauty.co.uk/trade-wholesale" },
+        ]}
+      />
+      <TradeWholesaleClient content={tradeWholesaleContent.en} />
     </>
   )
 }
