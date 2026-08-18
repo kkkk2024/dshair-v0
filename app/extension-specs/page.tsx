@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import { ExtensionSpecsView } from "@/components/pages/extension-specs-view"
 import { getExtensionSpecsContent } from "@/lib/i18n/pages/extension-specs"
-import { SITE_URL } from "@/lib/i18n/config"
-import { hreflangAlternates } from "@/lib/i18n/routing"
+import { SITE_URL, hreflangAlternates } from "@/lib/i18n/config"
 
 const c = getExtensionSpecsContent("en")
 

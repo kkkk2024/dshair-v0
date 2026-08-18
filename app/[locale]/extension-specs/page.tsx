@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { ExtensionSpecsView } from "@/components/pages/extension-specs-view"
 import { getExtensionSpecsContent } from "@/lib/i18n/pages/extension-specs"
-import { SITE_URL, isLocale, defaultLocale, ogLocale, type Locale } from "@/lib/i18n/config"
-import { localeStaticParams, hreflangAlternates } from "@/lib/i18n/routing"
+import { SITE_URL, isLocale, defaultLocale, ogLocale, hreflangAlternates, type Locale } from "@/lib/i18n/config"
+import { localeStaticParams } from "@/lib/i18n/routing"
 
 export function generateStaticParams() {
   return localeStaticParams()
