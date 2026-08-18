@@ -34,8 +34,7 @@ export const translatedDynamicPrefixes = new Set<string>([
   '/collections/',
   '/products/',
   '/salon-supplies/',
-  // Pending: /[locale]/uk-salon-hair-extensions route not built yet (Batch 7)
-  // '/uk-salon-hair-extensions/',
+  '/uk-salon-hair-extensions/',
   // Pending: /[locale]/blog route not built yet (Phase 3)
   // '/blog/',
 ])
