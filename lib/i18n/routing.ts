@@ -11,6 +11,8 @@ export const translatedPages = new Set<string>([
   // Bare dynamic-index pages that DO have a localized /[locale]/<page> variant.
   // (Sub-paths like /salon-supplies/<slug> are handled by translatedDynamicPrefixes.)
   '/salon-supplies',
+  '/colour-match',
+  '/color-chart',
 ])
 
 // Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>
@@ -19,8 +21,10 @@ export const translatedDynamicPrefixes = new Set<string>([
   '/collections/',
   '/products/',
   '/salon-supplies/',
-  '/uk-salon-hair-extensions/',
-  '/blog/',
+  // Pending: /[locale]/uk-salon-hair-extensions route not built yet (Batch 7)
+  // '/uk-salon-hair-extensions/',
+  // Pending: /[locale]/blog route not built yet (Phase 3)
+  // '/blog/',
 ])
 
 function hasTranslatedPrefix(path: string): boolean {
