@@ -9,13 +9,16 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { contactInfo } from "@/lib/products"
 import {
-  Calculator, ChevronRight, ChevronLeft, MessageCircle,
-  Package, Clock, Award, Shield, Factory, Star, ArrowRight,
+  ChevronRight, ChevronLeft, MessageCircle,
+  Package, Factory, Star, ArrowRight,
   Truck, BadgeCheck
 } from "lucide-react"
 import Link from "next/link"
+import { localeHref } from "@/lib/i18n/routing"
+import { getTradeCalcContent, type TradeCalcContent } from "@/lib/i18n/pages/trade-price-calculator"
+import type { Locale } from "@/lib/i18n/config"
 
-// --- Data Types ---
+// --- Data Types (logic/data, language-independent) ---
 
 type ExtensionType = "tape-in" | "nano-ring" | "k-tip" | "clip-in" | "machine-weft" | "butterfly-weft"
 
@@ -25,9 +28,6 @@ interface PriceScale {
 
 interface ExtensionOption {
   id: ExtensionType
-  name: string
-  badge?: string
-  description: string
   factoryPriceScale: PriceScale
   packUnit: string // "per 20pcs pack" / "per 100pcs" / "per set"
   packDescription: string
@@ -38,9 +38,6 @@ interface ExtensionOption {
 const extensionTypes: ExtensionOption[] = [
   {
     id: "tape-in",
-    name: "Tape-In Extensions",
-    badge: "Most Popular",
-    description: "Factory-direct 100% Remy tape-in extensions. Salon standard 12A grade. 20pcs per pack.",
     factoryPriceScale: { "16": 16.60, "18": 19.20, "20": 25.80, "22": 28.90, "24": 32.00, "26": 35.00 },
     packUnit: "per 20pcs pack",
     packDescription: "20 pieces (10 sandwiches) per pack — 4cm×1cm, 2-2.5g per piece",
@@ -49,8 +46,6 @@ const extensionTypes: ExtensionOption[] = [
   },
   {
     id: "nano-ring",
-    name: "Nano Ring Extensions",
-    description: "Ultra-discreet nano ring extensions. 12A Remy grade, 0.75g/pc — ideal for fine hair clients.",
     factoryPriceScale: { "16": 25.40, "18": 30.80, "20": 36.20, "22": 40.80, "24": 46.20, "26": 47.00 },
     packUnit: "per 100pcs",
     packDescription: "100 pieces per pack — 0.75g each, salon standard quality",
@@ -59,8 +54,6 @@ const extensionTypes: ExtensionOption[] = [
   },
   {
     id: "k-tip",
-    name: "K-Tip / Pre-Tipped",
-    description: "Keratin-bonded pre-tipped extensions for secure, long-lasting salon application.",
     factoryPriceScale: {},
     packUnit: "",
     packDescription: "",
@@ -69,8 +62,6 @@ const extensionTypes: ExtensionOption[] = [
   },
   {
     id: "clip-in",
-    name: "Clip-In Extension Sets",
-    description: "Ready-to-wear clip-in sets. Multiple weft pieces per set for full-head coverage.",
     factoryPriceScale: {},
     packUnit: "",
     packDescription: "",
@@ -79,8 +70,6 @@ const extensionTypes: ExtensionOption[] = [
   },
   {
     id: "machine-weft",
-    name: "Machine Weft (Bulk)",
-    description: "Machine-sewn wefts for salon volume work. Sold by weight — ideal for colour technicians.",
     factoryPriceScale: {},
     packUnit: "",
     packDescription: "",
@@ -89,8 +78,6 @@ const extensionTypes: ExtensionOption[] = [
   },
   {
     id: "butterfly-weft",
-    name: "Butterfly Weft (Hand-Tied)",
-    description: "Premium hand-tied wefts with ultra-thin, flexible bases. Lightweight and invisible.",
     factoryPriceScale: {},
     packUnit: "",
     packDescription: "",
@@ -162,40 +149,15 @@ function useCountUp(target: number, duration = 600, shouldRun = false) {
   return display
 }
 
-// --- FAQ Data ---
-
-const faqs = [
-  {
-    q: "Are these the exact prices I'll pay as a salon?",
-    a: "The calculator shows estimated factory-direct trade prices based on our 2025 quotation sheets for 12A Remy grade. Exact pricing depends on your salon's order volume, colour selection, and any custom requirements. Contact us on WhatsApp for a personalised salon quote — typically we respond within minutes during UK business hours."
-  },
-  {
-    q: "What's the difference between 10A, 12A, and Top Grade?",
-    a: "12A (100% Remy human hair) is our recommended salon standard — cuticles aligned, minimal shedding, 3-6 month lifespan with proper care. Top Grade offers even finer quality for high-end salon clients. 10A is a budget option we don't actively recommend for professional salons."
-  },
-  {
-    q: "Do you offer trade accounts with net-30 terms?",
-    a: "Yes. Established salon partners with consistent order history can apply for trade credit terms. New salons typically start with proforma invoice payment, with trade terms available after your first 2-3 orders. Visit our Trade Wholesale page or WhatsApp us to discuss."
-  },
-  {
-    q: "What about custom colours and blending?",
-    a: "We custom-colour to your salon's specifications. Light colours (blondes, highlights) carry an 18-20% premium. Fashion colours and balayage blends are quoted per project. Send us your colour formula and we'll match it exactly."
-  },
-  {
-    q: "How quickly can I stock my salon?",
-    a: "Selected lines are UK warehouse launching with express 3–5 day delivery; the full range ships factory-direct via express (3–5 days). Custom colours typically ship within 5-7 business days. For new salon partners, we recommend ordering a sample pack first to assess quality before placing volume orders."
-  },
-  {
-    q: "What's your MOQ for salon accounts?",
-    a: "We have no strict MOQ for new salon partners. You can start with a single trial pack to evaluate quality. Volume discounts kick in at 5 packs. There's no upper limit — we supply salons ordering 50+ packs monthly."
-  },
-]
-
 // --- WhatsApp Helper ---
 
 function openWhatsApp(message: string) {
   const url = `${contactInfo.whatsapp}?text=${encodeURIComponent(message)}`
   window.open(url, "_blank")
+}
+
+function fillTemplate(tpl: string, vars: Record<string, string>): string {
+  return Object.entries(vars).reduce((s, [k, v]) => s.split(`{${k}}`).join(v), tpl)
 }
 
 // --- Step Indicator ---
@@ -225,9 +187,10 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
   )
 }
 
-// --- Main Client Component ---
+// --- Main View Component ---
 
-export default function TradePriceCalculatorClient() {
+export function TradePriceCalculatorView({ locale }: { locale: Locale }) {
+  const c: TradeCalcContent = getTradeCalcContent(locale)
   const [step, setStep] = useState(1)
   const [selectedType, setSelectedType] = useState<ExtensionType | null>(null)
   const [selectedLength, setSelectedLength] = useState("20")
@@ -235,6 +198,7 @@ export default function TradePriceCalculatorClient() {
   const [showResult, setShowResult] = useState(false)
 
   const currentExtension = extensionTypes.find(e => e.id === selectedType)
+  const currentText = currentExtension ? c.extTexts[currentExtension.id] : null
   const priceResult = currentExtension && !currentExtension.isCustomQuote
     ? calculatePrice(currentExtension, selectedLength, selectedPacks)
     : null
@@ -271,8 +235,6 @@ export default function TradePriceCalculatorClient() {
     }
   }
 
-  const stepTitles = ["Select Extension Type", "Choose Length", "Choose Order Quantity"]
-
   return (
     <CartProvider>
       <Header />
@@ -284,16 +246,16 @@ export default function TradePriceCalculatorClient() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4">
                 <Factory className="w-4 h-4" />
-                <span>Factory-Direct Salon Supply</span>
+                <span>{c.heroEyebrow}</span>
               </div>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4">
-                Salon Trade Pricing
+                {c.heroTitle}
               </h1>
               <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-2">
-                Direct from our factory to your salon chair.
+                {c.heroSub1}
               </p>
               <p className="text-sm md:text-base opacity-75 max-w-xl mx-auto">
-                Transparent, volume-based pricing for professional salons. No middlemen, no retail markup.
+                {c.heroSub2}
               </p>
             </div>
           </div>
@@ -309,76 +271,76 @@ export default function TradePriceCalculatorClient() {
               {/* Step Title */}
               {!showResult && (
                 <h2 className="font-serif text-2xl md:text-3xl text-center mb-8">
-                  {stepTitles[step - 1]}
+                  {c.stepTitles[step - 1]}
                 </h2>
               )}
 
               {/* Step 1: Extension Type */}
               {step === 1 && !showResult && (
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 animate-in fade-in duration-300">
-                  {extensionTypes.map(ext => (
-                    <button
-                      key={ext.id}
-                      onClick={() => setSelectedType(ext.id)}
-                      className={`relative p-6 rounded-lg border-2 text-left transition-all duration-200 hover:shadow-md ${
-                        selectedType === ext.id
-                          ? "border-accent bg-accent/5 shadow-md"
-                          : "border-border bg-card hover:border-accent/50"
-                      }`}
-                    >
-                      {ext.badge && (
-                        <span className="absolute top-2 right-2 text-xs font-medium bg-accent text-accent-foreground px-2 py-0.5 rounded-full">
-                          {ext.badge}
-                        </span>
-                      )}
-                      <h3 className="font-medium text-sm md:text-base mb-1">{ext.name}</h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{ext.description}</p>
-                      {ext.isCustomQuote ? (
-                        <p className="text-sm font-semibold text-accent mt-3">
-                          Custom Quote
-                        </p>
-                      ) : (
-                        <p className="text-sm font-semibold text-accent mt-3">
-                          From £{Object.values(ext.factoryPriceScale)[0]?.toFixed(0)} {ext.packUnit}
-                        </p>
-                      )}
-                    </button>
-                  ))}
+                  {extensionTypes.map(ext => {
+                    const txt = c.extTexts[ext.id]
+                    return (
+                      <button
+                        key={ext.id}
+                        onClick={() => setSelectedType(ext.id)}
+                        className={`relative p-6 rounded-lg border-2 text-left transition-all duration-200 hover:shadow-md ${
+                          selectedType === ext.id
+                            ? "border-accent bg-accent/5 shadow-md"
+                            : "border-border bg-card hover:border-accent/50"
+                        }`}
+                      >
+                        {txt.badge && (
+                          <span className="absolute top-2 right-2 text-xs font-medium bg-accent text-accent-foreground px-2 py-0.5 rounded-full">
+                            {txt.badge}
+                          </span>
+                        )}
+                        <h3 className="font-medium text-sm md:text-base mb-1">{txt.name}</h3>
+                        <p className="text-xs text-muted-foreground leading-relaxed">{txt.description}</p>
+                        {ext.isCustomQuote ? (
+                          <p className="text-sm font-semibold text-accent mt-3">
+                            {c.customQuoteTitle}
+                          </p>
+                        ) : (
+                          <p className="text-sm font-semibold text-accent mt-3">
+                            From £{Object.values(ext.factoryPriceScale)[0]?.toFixed(0)} {ext.packUnit}
+                          </p>
+                        )}
+                      </button>
+                    )
+                  })}
                 </div>
               )}
 
               {/* Step 2: Length */}
-              {step === 2 && !showResult && currentExtension && (
+              {step === 2 && !showResult && currentExtension && currentText && (
                 <div className="flex flex-col items-center animate-in fade-in duration-300">
                   {currentExtension.isCustomQuote ? (
                     <div className="text-center max-w-md">
                       <div className="p-8 bg-amber-50 border border-amber-200 rounded-xl mb-6">
                         <Star className="w-10 h-10 text-amber-500 mx-auto mb-3" />
-                        <h3 className="font-semibold text-lg mb-2">Custom Quote Required</h3>
+                        <h3 className="font-semibold text-lg mb-2">{c.customQuoteTitle}</h3>
                         <p className="text-sm text-muted-foreground mb-4">
-                          {currentExtension.name} pricing varies significantly by specification. 
-                          Contact us directly for your salon&apos;s custom quote — we typically respond within minutes.
+                          {fillTemplate(c.customQuoteDesc, { name: currentText.name })}
                         </p>
                         <Button
                           className="gap-2 w-full"
                           onClick={() =>
-                            openWhatsApp(
-                              `Hi! I'd like a salon quote for ${currentExtension.name}. My salon is based in [your location]. Can you send me trade pricing?`
-                            )
+                            openWhatsApp(fillTemplate(c.waCustomQuoteMsg, { name: currentText.name }))
                           }
                         >
                           <MessageCircle className="w-4 h-4" />
-                          Get Quote via WhatsApp
+                          {c.customQuoteBtn}
                         </Button>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Or go back and select Tape-In or Nano Ring for instant pricing estimates.
+                        {c.customQuoteBack}
                       </p>
                     </div>
                   ) : (
                     <>
                       <p className="text-muted-foreground text-center mb-6 max-w-md">
-                        Longer lengths use more raw material. Our prices scale transparently with length.
+                        {c.lengthHint}
                       </p>
                       <div className="grid grid-cols-3 md:grid-cols-6 gap-3 w-full max-w-2xl">
                         {lengths.map(l => (
@@ -410,7 +372,7 @@ export default function TradePriceCalculatorClient() {
               {step === 3 && !showResult && currentExtension && !currentExtension.isCustomQuote && (
                 <div className="flex flex-col items-center animate-in fade-in duration-300">
                   <p className="text-muted-foreground text-center mb-6 max-w-md">
-                    Larger orders earn better pricing. Most salon partners start with 5 packs and scale up.
+                    {c.qtyHint}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full max-w-2xl">
                     {quantityTiers.map(q => (
@@ -444,7 +406,7 @@ export default function TradePriceCalculatorClient() {
                         </span>
                       ) : (
                         <span className="text-muted-foreground">
-                          Starter pack at standard rate. Volume discounts from 5 packs.
+                          {c.qtyNoDiscount}
                         </span>
                       )
                     })()}
@@ -452,28 +414,21 @@ export default function TradePriceCalculatorClient() {
                 </div>
               )}
 
-              {/* Skip step 3 for custom quote types */}
-              {step === 3 && !showResult && currentExtension?.isCustomQuote && handleStartOver && (
-                <div className="flex justify-center">
-                  {(() => { handleStartOver(); return null })()}
-                </div>
-              )}
-
               {/* Result Display */}
-              {showResult && priceResult && currentExtension && (
+              {showResult && priceResult && currentExtension && currentText && (
                 <div className="animate-in fade-in duration-500">
                   <div className="bg-card border-2 border-accent/30 rounded-xl p-6 md:p-8 max-w-lg mx-auto text-center shadow-lg">
                     <div className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 text-xs text-amber-700 mb-3">
                       <Factory className="w-3 h-3" />
-                      Factory-Direct Estimate
+                      {c.resultBadge}
                     </div>
-                    <h2 className="font-serif text-2xl md:text-3xl mb-2">Your Trade Price Estimate</h2>
+                    <h2 className="font-serif text-2xl md:text-3xl mb-2">{c.resultTitle}</h2>
                     <p className="text-sm text-muted-foreground mb-6">
-                      {currentExtension.name} &middot; {selectedLength}&quot; &middot; {selectedPacks} pack{selectedPacks > 1 ? "s" : ""}
+                      {currentText.name} &middot; {selectedLength}&quot; &middot; {selectedPacks} pack{selectedPacks > 1 ? "s" : ""}
                     </p>
 
                     <div className="mb-6">
-                      <span className="text-sm text-muted-foreground">Estimated Order Total</span>
+                      <span className="text-sm text-muted-foreground">{c.resultOrderTotal}</span>
                       <p className="text-5xl md:text-6xl font-serif font-bold text-accent">
                         &pound;{animatedTotal.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </p>
@@ -482,34 +437,34 @@ export default function TradePriceCalculatorClient() {
                       </p>
                       {priceResult.discountPercent > 0 && (
                         <p className="text-sm text-green-600 mt-1">
-                          Includes {priceResult.discountPercent}% volume discount
+                          {fillTemplate(c.resultIncludesDiscount, { n: String(priceResult.discountPercent) })}
                         </p>
                       )}
                     </div>
 
                     <div className="grid grid-cols-3 gap-4 mb-6 text-left bg-secondary/50 rounded-lg p-4">
                       <div>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Pack Price</span>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">{c.resultPackPriceLabel}</span>
                         <p className="font-semibold">&pound;{animatedPackPrice.toFixed(2)}</p>
                       </div>
                       <div>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Quantity</span>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">{c.resultQuantity}</span>
                         <p className="font-semibold">{selectedPacks} {selectedPacks === 1 ? "Pack" : "Packs"}</p>
                       </div>
                       <div>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wide">Grade</span>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">{c.resultGrade}</span>
                         <p className="font-semibold">12A Remy</p>
                       </div>
                     </div>
 
                     {/* Hook: Trade Account */}
                     <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-sm text-amber-800 text-left">
-                      <strong className="block mb-1">Not your final price.</strong>
-                      This is an estimate based on our standard trade rates. Your salon&apos;s actual price depends on:
+                      <strong className="block mb-1">{c.hookTitle}</strong>
+                      {c.hookBody}
                       <ul className="list-disc pl-4 mt-1 space-y-0.5 text-xs">
-                        <li>Colour selection (light colours +18-20%)</li>
-                        <li>Consistent order volume (recurring discounts)</li>
-                        <li>Trade account status (additional 5% off)</li>
+                        <li>{c.hookLi1}</li>
+                        <li>{c.hookLi2}</li>
+                        <li>{c.hookLi3}</li>
                       </ul>
                     </div>
 
@@ -519,12 +474,16 @@ export default function TradePriceCalculatorClient() {
                         className="gap-2 w-full"
                         onClick={() =>
                           openWhatsApp(
-                            `Hi! I'd like an exact salon trade quote:\n\n- ${currentExtension.name}\n- Length: ${selectedLength}"\n- Quantity: ${selectedPacks} packs\n- My salon is based in [location]\n\nCould you send me your best trade pricing?`
+                            fillTemplate(c.waExactQuoteMsg, {
+                              name: currentText.name,
+                              length: selectedLength,
+                              packs: String(selectedPacks),
+                            })
                           )
                         }
                       >
                         <MessageCircle className="w-4 h-4" />
-                        Get Your Salon&apos;s Exact Quote
+                        {c.exactQuoteBtn}
                       </Button>
                       <div className="grid grid-cols-2 gap-3">
                         <Button
@@ -533,9 +492,9 @@ export default function TradePriceCalculatorClient() {
                           className="gap-1.5 text-sm w-full"
                           asChild
                         >
-                          <Link href="/trade-wholesale">
+                          <Link href={localeHref("/trade-wholesale", locale)}>
                             <BadgeCheck className="w-4 h-4" />
-                            Open Trade Account
+                            {c.openAccountBtn}
                           </Link>
                         </Button>
                         <Button
@@ -544,9 +503,9 @@ export default function TradePriceCalculatorClient() {
                           className="gap-1.5 text-sm w-full"
                           asChild
                         >
-                          <Link href={currentExtension.collectionLink}>
+                          <Link href={localeHref(currentExtension.collectionLink, locale)}>
                             <Package className="w-4 h-4" />
-                            View Products
+                            {c.viewProductsBtn}
                           </Link>
                         </Button>
                       </div>
@@ -558,7 +517,7 @@ export default function TradePriceCalculatorClient() {
                       onClick={handleStartOver}
                       className="text-sm text-muted-foreground hover:text-foreground underline transition-colors"
                     >
-                      Start a new calculation
+                      {c.startOver}
                     </button>
                   </div>
                 </div>
@@ -574,14 +533,14 @@ export default function TradePriceCalculatorClient() {
                     className="gap-2"
                   >
                     <ChevronLeft className="w-4 h-4" />
-                    Back
+                    {c.backBtn}
                   </Button>
                   <Button
                     onClick={handleNext}
                     disabled={!canProceed()}
                     className="gap-2"
                   >
-                    {step === 3 ? "Calculate Price" : "Next"}
+                    {step === 3 ? c.calcBtn : c.nextBtn}
                     <ChevronRight className="w-4 h-4" />
                   </Button>
                 </div>
@@ -595,10 +554,10 @@ export default function TradePriceCalculatorClient() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
               {[
-                { icon: Factory, label: "Factory-Direct" },
-                { icon: Truck, label: "UK & Factory Stock" },
-                { icon: BadgeCheck, label: "100% Remy 12A Grade" },
-                { icon: Star, label: "19+ Years Experience" },
+                { icon: Factory, label: c.trustLabels[0] },
+                { icon: Truck, label: c.trustLabels[1] },
+                { icon: BadgeCheck, label: c.trustLabels[2] },
+                { icon: Star, label: c.trustLabels[3] },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2 text-primary">
                   <Icon className="w-5 h-5" />
@@ -614,13 +573,13 @@ export default function TradePriceCalculatorClient() {
           <div className="container px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl text-center mb-4">
-                Salon Partner FAQs
+                {c.faqTitle}
               </h2>
               <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">
-                Everything you need to know about becoming a D.S Hair Beauty salon partner.
+                {c.faqSubtitle}
               </p>
               <Accordion type="single" collapsible className="space-y-2">
-                {faqs.map((faq, i) => (
+                {c.faqs.map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="border rounded-lg px-4">
                     <AccordionTrigger className="text-left font-medium">{faq.q}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
@@ -636,31 +595,31 @@ export default function TradePriceCalculatorClient() {
           <div className="container px-4 md:px-6 text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4">
               <Factory className="w-4 h-4" />
-              <span>Your Salon&apos;s Supply Partner</span>
+              <span>{c.ctaBadge}</span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">
-              From our factory to your salon
+              {c.ctaTitle}
             </h2>
             <p className="text-lg opacity-90 mb-6 max-w-xl mx-auto">
-              We supply hundreds of UK salons with premium hair extensions at factory-direct prices. No middlemen, no retail markup — just quality you can trust.
+              {c.ctaSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 size="lg"
                 variant="outline"
                 className="gap-2 border-white text-white hover:bg-white hover:text-primary"
-                onClick={() => openWhatsApp("Hi! I run a salon and I'm interested in becoming a D.S Hair Beauty stockist. Can you send me your trade pricing and MOQ?")}
+                onClick={() => openWhatsApp(c.waCtaMsg)}
               >
                 <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
+                {c.ctaWhatsapp}
               </Button>
               <Button
                 size="lg"
                 className="gap-2 bg-white text-primary hover:bg-white/90"
                 asChild
               >
-                <Link href="/trade-wholesale">
-                  Open Trade Account
+                <Link href={localeHref("/trade-wholesale", locale)}>
+                  {c.ctaAccount}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
@@ -675,7 +634,7 @@ export default function TradePriceCalculatorClient() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": faqs.map(faq => ({
+              "mainEntity": c.faqs.map(faq => ({
                 "@type": "Question",
                 "name": faq.q,
                 "acceptedAnswer": {
