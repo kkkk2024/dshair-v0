@@ -1,26 +1,21 @@
 import type { Metadata } from "next"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import AcademyClient from "./academy-client"
+import { AcademyView } from "@/components/pages/academy-view"
+import { getAcademyContent } from "@/lib/i18n/pages/academy"
+import { SITE_URL, hreflangAlternates } from "@/lib/i18n/config"
+
+const c = getAcademyContent("en")
 
 export const metadata: Metadata = {
-  title: "Hair Extension Training Academy | D.S HAIR & BEAUTY",
-  description:
-    "Professional hair extension training courses in Manchester. Learn tape-in, K-tip, nano ring, weft & butterfly weft installation. CPD-certified. In-person & online options.",
-  keywords: [
-    "hair extension training",
-    "extension courses UK",
-    "hair extension academy",
-    "tape-in training",
-    "nano ring training course",
-    "extension certification",
-  ],
+  title: c.metaTitle,
+  description: c.metaDescription,
   alternates: {
-    canonical: "https://www.dshairbeauty.co.uk/academy",
+    canonical: `${SITE_URL}/academy`,
+    languages: hreflangAlternates("/academy"),
   },
   openGraph: {
-    title: "Hair Extension Training Academy | D.S HAIR & BEAUTY",
-    description: "Professional hair extension training courses in Manchester. Learn tape-in, K-tip, nano ring, weft & butterfly weft installation.",
-    url: "https://www.dshairbeauty.co.uk/academy",
+    title: c.metaTitle,
+    description: c.metaDescription,
+    url: `${SITE_URL}/academy`,
     type: "website",
     locale: "en_GB",
     siteName: "D.S HAIR & BEAUTY",
@@ -28,15 +23,5 @@ export const metadata: Metadata = {
 }
 
 export default function AcademyPage() {
-  return (
-    <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", url: "https://www.dshairbeauty.co.uk" },
-          { name: "Academy", url: "https://www.dshairbeauty.co.uk/academy" },
-        ]}
-      />
-      <AcademyClient />
-    </>
-  )
+  return <AcademyView locale="en" />
 }
