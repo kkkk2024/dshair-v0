@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 import ReturnsClient from "./returns-client"
+import { returnsContent, getReturnsContent } from "@/lib/i18n/pages/returns"
 
 export const metadata: Metadata = {
-  title: "Returns & Refunds Policy | D.S HAIR & BEAUTY",
-  description:
-    "30-day return policy on unused D.S Hair & Beauty products. Free returns by post for UK orders. Refunds processed within 5 working days of receipt.",
+  title: returnsContent.en.metaTitle,
+  description: returnsContent.en.metaDescription,
   keywords: [
     "returns policy UK",
     "hair extension returns",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://www.dshairbeauty.co.uk/returns",
   },
   openGraph: {
-    title: "Returns & Refunds Policy | D.S HAIR & BEAUTY",
-    description: "30-day return policy on unused products. Free UK returns by post.",
+    title: returnsContent.en.metaTitle,
+    description: returnsContent.en.metaDescription,
     url: "https://www.dshairbeauty.co.uk/returns",
     type: "website",
     locale: "en_GB",
@@ -35,7 +35,7 @@ export default function ReturnsPage() {
           { name: "Returns Policy", url: "https://www.dshairbeauty.co.uk/returns" },
         ]}
       />
-      <ReturnsClient />
+      <ReturnsClient content={getReturnsContent("en")} locale="en" />
     </>
   )
 }

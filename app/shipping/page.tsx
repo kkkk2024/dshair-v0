@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 import ShippingClient from "./shipping-client"
+import { shippingContent, getShippingContent } from "@/lib/i18n/pages/shipping"
 
 export const metadata: Metadata = {
-  title: "Shipping & Delivery | D.S HAIR & BEAUTY",
-  description:
-    "Shipping and delivery information for D.S Hair & Beauty. Free UK delivery on orders over £175. Fast dispatch on orders; express 3–5 day delivery. International shipping available.",
+  title: shippingContent.en.metaTitle,
+  description: shippingContent.en.metaDescription,
   keywords: [
     "shipping policy UK",
     "hair extension delivery",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://www.dshairbeauty.co.uk/shipping",
   },
   openGraph: {
-    title: "Shipping & Delivery | D.S HAIR & BEAUTY",
-    description: "Free UK delivery on orders over £175. Fast dispatch; express 3–5 day delivery.",
+    title: shippingContent.en.metaTitle,
+    description: shippingContent.en.metaDescription,
     url: "https://www.dshairbeauty.co.uk/shipping",
     type: "website",
     locale: "en_GB",
@@ -35,7 +35,7 @@ export default function ShippingPage() {
           { name: "Shipping & Delivery", url: "https://www.dshairbeauty.co.uk/shipping" },
         ]}
       />
-      <ShippingClient />
+      <ShippingClient content={getShippingContent("en")} locale="en" />
     </>
   )
 }
