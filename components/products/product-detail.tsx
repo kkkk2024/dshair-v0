@@ -9,6 +9,9 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Product, contactInfo } from "@/lib/products"
+import { useLocale } from "@/lib/i18n"
+import { getShopUi } from "@/lib/i18n/shop"
+import { localeHref } from "@/lib/i18n/routing"
 
 interface ProductDetailProps {
   product: Product
@@ -35,6 +38,8 @@ const KTIP_RESULT_IMAGES = [
 ]
 
 export function ProductDetail({ product }: ProductDetailProps) {
+  const locale = useLocale()
+  const t = getShopUi(locale)
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedLength, setSelectedLength] = useState(product.lengths[0])
@@ -58,23 +63,26 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   // Generate WhatsApp message with product details
   const whatsappMessage = encodeURIComponent(
-    `Hi D.S HAIR & BEAUTY!\n\nI'm interested in:\n- Product: ${product.name}\n- Price: ${formatPrice(product.price)}\n- Colour: ${selectedColor.name}\n- Length: ${selectedLength}\n- Quantity: ${quantity}\n\nPlease let me know more details. Thanks!`
+    t.productDetail.whatsAppTitle
+      .replace('{name}', product.name)
+      .replace('{price}', formatPrice(product.price))
+      .replace('{color}', selectedColor.name)
+      .replace('{length}', selectedLength)
+      .replace('{qty}', String(quantity))
   )
 
   // Generate email subject
-  const emailSubject = encodeURIComponent(`Inquiry about ${product.name}`)
-  const emailBody = encodeURIComponent(
-    `Hi D.S HAIR & BEAUTY,\n\nI'm interested in:\n- Product: ${product.name}\n- Price: ${formatPrice(product.price)}\n- Colour: ${selectedColor.name}\n- Length: ${selectedLength}\n- Quantity: ${quantity}\n\nPlease let me know more details. Thanks!\n\nBest regards`
-  )
+  const emailSubject = encodeURIComponent(t.productDetail.emailSubject(product.name))
+  const emailBody = encodeURIComponent(t.productDetail.emailBody(product.name, selectedColor.name, selectedLength, quantity))
 
   return (
     <div className="container px-4 md:px-6 py-8 md:py-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-        <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+        <Link href={localeHref('/', locale)} className="hover:text-foreground transition-colors">{t.productDetail.breadcrumbHome}</Link>
         <ChevronRight className="h-4 w-4" />
-        <Link href={`/collections/${product.type}`} className="hover:text-foreground transition-colors">
-          {product.type === "diy" ? "DIY Extensions" : "Professional"}
+        <Link href={localeHref(`/collections/${product.type}`, locale)} className="hover:text-foreground transition-colors">
+          {product.type === "diy" ? t.collectionHeader.typeDiy : t.collectionHeader.typeProfessional}
         </Link>
         <ChevronRight className="h-4 w-4" />
         <span className="text-foreground">{product.name}</span>
@@ -119,7 +127,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         <div className="flex flex-col">
           <div className="mb-4">
             <p className="text-sm text-muted-foreground mb-1">
-              {product.type === "diy" ? "DIY Extensions" : "Professional Extensions"}
+              {product.type === "diy" ? t.collectionHeader.typeDiy : t.collectionHeader.typeProfessional}
             </p>
             {product.sku && (
               <p className="text-xs text-muted-foreground mb-1 font-mono">
@@ -144,7 +152,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <span className="ml-1 text-sm font-medium">{product.rating}</span>
               </div>
               <Link href="#reviews" className="text-sm text-muted-foreground hover:text-foreground">
-                {product.reviews.toLocaleString()} reviews
+                {t.productDetail.reviews(product.reviews.toLocaleString())}
               </Link>
             </div>
           </div>
@@ -161,36 +169,36 @@ export function ProductDetail({ product }: ProductDetailProps) {
                       </svg>
                     </div>
                     <div>
-                      <span className="text-xl font-semibold text-accent">Trade Exclusive Pricing</span>
+                      <span className="text-xl font-semibold text-accent">{t.productDetail.tradeExclusive}</span>
                       <p className="text-sm text-muted-foreground mt-0.5">
-                        Wholesale pricing available for registered salon partners
+                        {t.productDetail.tradeExclusiveDesc}
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button className="flex-1" asChild>
-                      <Link href="/salon-partners">
+                      <Link href={localeHref('/salon-partners', locale)}>
                         <svg className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
-                        Apply for Trade Account
+                        {t.productDetail.applyTradeAccount}
                       </Link>
                     </Button>
                     <Button variant="outline" className="flex-1" asChild>
                       <a
-                        href={`https://wa.me/8613516946001?text=${encodeURIComponent(`Hi D.S HAIR & BEAUTY! I'm a salon owner interested in trade pricing for: ${product.name}`)}`}
+                        href={`https://wa.me/8613516946001?text=${encodeURIComponent(t.productDetail.tradeWhatsApp(product.name))}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <MessageCircle className="h-4 w-4 mr-2" />
-                        Enquire via WhatsApp
+                        {t.productDetail.enquireWhatsApp}
                       </a>
                     </Button>
                   </div>
                   <div className="grid grid-cols-3 gap-3 text-center text-xs text-muted-foreground pt-2 border-t border-accent/10">
-                    <span>✅ No minimum order</span>
-                    <span>✅ Express 3–5 day dispatch</span>
-                    <span>✅ Free digital colour match</span>
+                    <span>✅ {t.productDetail.noMinOrder}</span>
+                    <span>✅ {t.productDetail.expressDispatch}</span>
+                    <span>✅ {t.productDetail.freeDigitalColourMatch}</span>
                   </div>
                 </div>
               </div>
@@ -203,7 +211,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                       {formatPrice(product.originalPrice)}
                     </span>
                     <Badge variant="secondary" className="bg-green-100 text-green-800">
-                      Save {formatPrice(product.originalPrice - product.price)}
+                      {t.productDetail.save} {formatPrice(product.originalPrice - product.price)}
                     </Badge>
                   </>
                 )}
@@ -218,13 +226,13 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {/* Colour Selection */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-medium">Colour: {selectedColor.name}</span>
+              <span className="font-medium">{t.productDetail.color}: {selectedColor.name}</span>
               <button
                 onClick={() => setColorModalOpen(true)}
                 className="flex items-center gap-1.5 text-sm text-accent hover:underline"
               >
                 <Palette className="h-4 w-4" />
-                View all colours
+                {t.productDetail.viewAllColours}
               </button>
             </div>
             {/* Current selected color preview */}
@@ -256,9 +264,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {/* Length Selection */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-medium">Length: {selectedLength}</span>
-              <Link href="/size-guide" className="text-sm text-accent hover:underline">
-                Size guide
+              <span className="font-medium">{t.productDetail.length}: {selectedLength}</span>
+              <Link href={localeHref('/size-guide', locale)} className="text-sm text-accent hover:underline">
+                {t.productDetail.sizeGuide}
               </Link>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -280,7 +288,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
           {/* Quantity */}
           <div className="mb-6">
-            <span className="font-medium mb-3 block">Quantity</span>
+            <span className="font-medium mb-3 block">{t.productDetail.quantity}</span>
             <div className="flex items-center gap-4">
               <div className="flex items-center border rounded-lg">
                 <Button
@@ -304,10 +312,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </div>
               {product.inStock ? (
                 <span className="text-sm text-green-600 flex items-center gap-1">
-                  <Check className="h-4 w-4" /> In Stock
+                  <Check className="h-4 w-4" /> {t.productDetail.inStock}
                 </span>
               ) : (
-                <span className="text-sm text-red-600">Out of Stock</span>
+                <span className="text-sm text-red-600">{t.productDetail.outOfStock}</span>
               )}
             </div>
           </div>
@@ -325,7 +333,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                Order via WhatsApp
+                {t.productDetail.orderWhatsApp}
               </a>
             </Button>
             <Button
@@ -338,7 +346,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 href={`mailto:${contactInfo.email}?subject=${emailSubject}&body=${emailBody}`}
               >
                 <Mail className="h-5 w-5 mr-2" />
-                Email Inquiry
+                {t.productDetail.emailInquiry}
               </a>
             </Button>
           </div>
@@ -347,25 +355,25 @@ export function ProductDetail({ product }: ProductDetailProps) {
           <div className="grid grid-cols-3 gap-4 text-center">
             <div className="flex flex-col items-center gap-2">
               <Truck className="h-5 w-5 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Free UK Delivery over £175</span>
+              <span className="text-xs text-muted-foreground">{t.productDetail.freeDeliveryOver}</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <RefreshCw className="h-5 w-5 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">30-Day Returns</span>
+              <span className="text-xs text-muted-foreground">{t.productDetail.returns30}</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Shield className="h-5 w-5 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">1 Year Warranty</span>
+              <span className="text-xs text-muted-foreground">{t.productDetail.warranty1Year}</span>
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="mt-8 p-4 bg-green-50 rounded-lg border border-green-200">
             <p className="text-sm text-green-800 font-medium mb-2">
-              💬 Prefer to order differently?
+              💬 {t.productDetail.preferToOrder}
             </p>
             <p className="text-sm text-green-700">
-              Contact us on WhatsApp: {contactInfo.whatsappNumber} or email: {contactInfo.email}
+              {t.productDetail.contactUsOn.replace('{phone}', contactInfo.whatsappNumber).replace('{email}', contactInfo.email)}
             </p>
           </div>
         </div>
@@ -379,43 +387,43 @@ export function ProductDetail({ product }: ProductDetailProps) {
               value="description"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Description
+              {t.productDetail.tabs.description}
             </TabsTrigger>
             <TabsTrigger
               value="howtouse"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              How To Use
+              {t.productDetail.tabs.howToUse}
             </TabsTrigger>
             <TabsTrigger
               value="sizeguide"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Finding the Perfect Fit
+              {t.productDetail.tabs.perfectFit}
             </TabsTrigger>
             <TabsTrigger
               value="results"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Real Results
+              {t.productDetail.tabs.realResults}
             </TabsTrigger>
             <TabsTrigger
               value="features"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Features
+              {t.productDetail.tabs.features}
             </TabsTrigger>
             <TabsTrigger
               value="faq"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              FAQ
+              {t.productDetail.tabs.faq}
             </TabsTrigger>
             <TabsTrigger
               value="reviews"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent pb-4"
             >
-              Reviews ({product.reviews.toLocaleString()})
+              {t.productDetail.tabs.reviews} ({product.reviews.toLocaleString()})
             </TabsTrigger>
           </TabsList>
 
@@ -2554,12 +2562,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               {/* More Reviews CTA */}
               <div className="text-center">
-                <p className="text-muted-foreground mb-4">See what our customers are saying</p>
+                <p className="text-muted-foreground mb-4">{t.productDetail.seeReviewsCta}</p>
                 <a
                   href="#reviews"
                   className="inline-block border border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition-colors"
                 >
-                  Read All Reviews
+                  {t.productDetail.readAllReviews}
                 </a>
               </div>
             </div>
