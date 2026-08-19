@@ -171,7 +171,7 @@ export function ClipInExtensionsGuideView({ locale }: { locale: Locale }) {
             </div>
           </article>
         </main>
-        <BlogFaqSection slug="clip-in-extensions-guide" locale={locale} />
+        <BlogFaqSection slug="clip-in-extensions-guide" title={c.faqHeading} locale={locale} />
         <RelatedGuides slug="clip-in-extensions-guide" locale={locale} />
         <Footer />
         <CartDrawer />

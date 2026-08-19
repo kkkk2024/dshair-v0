@@ -14,7 +14,7 @@ import type { Locale } from "@/lib/i18n/config"
 
 const BASE_URL = "https://www.dshairbeauty.co.uk"
 
-function BlogPageJsonLd({ posts, c }: { posts: BlogPost[]; c: BlogListContent }) {
+function BlogPageJsonLd({ posts, c, locale }: { posts: BlogPost[]; c: BlogListContent; locale: Locale }) {
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -25,28 +25,34 @@ function BlogPageJsonLd({ posts, c }: { posts: BlogPost[]; c: BlogListContent })
         description: c.jsonLdDescription,
         url: `${BASE_URL}/blog`,
         publisher: { "@id": `${BASE_URL}/#organization` },
-        blogPost: posts.map((post) => ({
-          "@type": "BlogPosting",
-          "@id": `${BASE_URL}/blog/${post.slug}#article`,
-          headline: post.title,
-          description: post.excerpt,
-          url: `${BASE_URL}/blog/${post.slug}`,
-          datePublished: post.date,
-          author: { "@type": "Organization", name: "D.S HAIR & BEAUTY" },
-          publisher: { "@id": `${BASE_URL}/#organization` },
-          image: post.image,
-        })),
+        blogPost: posts.map((post) => {
+          const lc = getBlogContent(post.slug, locale)
+          return {
+            "@type": "BlogPosting",
+            "@id": `${BASE_URL}/blog/${post.slug}#article`,
+            headline: lc?.seoTitle ?? post.title,
+            description: lc?.seoDescription ?? post.excerpt,
+            url: `${BASE_URL}/blog/${post.slug}`,
+            datePublished: post.date,
+            author: { "@type": "Organization", name: "D.S HAIR & BEAUTY" },
+            publisher: { "@id": `${BASE_URL}/#organization` },
+            image: post.image,
+          }
+        }),
       },
       {
         "@type": "ItemList",
         "@id": `${BASE_URL}/blog#post-list`,
         name: c.postListName,
-        itemListElement: posts.map((post, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          url: `${BASE_URL}/blog/${post.slug}`,
-          name: post.title,
-        })),
+        itemListElement: posts.map((post, index) => {
+          const lc = getBlogContent(post.slug, locale)
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            url: `${BASE_URL}/blog/${post.slug}`,
+            name: lc?.seoTitle ?? post.title,
+          }
+        }),
       },
     ],
   }
@@ -55,15 +61,26 @@ function BlogPageJsonLd({ posts, c }: { posts: BlogPost[]; c: BlogListContent })
   )
 }
 
+// Map our locale codes to Intl date locales for localized publish dates.
+const DATE_LOCALE: Record<Locale, string> = {
+  en: "en-GB",
+  de: "de-DE",
+  fr: "fr-FR",
+  ar: "ar",
+  sv: "sv-SE",
+  pl: "pl-PL",
+}
+
 export function BlogListView({ locale }: { locale: Locale }) {
   const c = blogListContent[locale]
   const posts = blogPosts
+  const dateLocale = DATE_LOCALE[locale]
 
   return (
     <CartProvider>
       <div className="flex min-h-screen flex-col">
         <Header />
-        <BlogPageJsonLd posts={posts} c={c} />
+        <BlogPageJsonLd posts={posts} c={c} locale={locale} />
         <main className="flex-1">
           {/* Header */}
           <section className="bg-secondary py-16 md:py-20">
@@ -99,12 +116,12 @@ export function BlogListView({ locale }: { locale: Locale }) {
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-medium px-2.5 py-1 rounded-full">
-                          {post.category}
+                          {post.category || c.categoryLabel}
                         </span>
                       </div>
                       <div className="p-6">
                         <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                          <span>{new Date(post.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</span>
+                          <span>{new Date(post.date).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })}</span>
                           <span>·</span>
                           <span className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
@@ -118,7 +135,7 @@ export function BlogListView({ locale }: { locale: Locale }) {
                           {excerpt}
                         </p>
                         <span className="text-sm font-medium text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
-                          Read Article <ArrowRight className="h-4 w-4" />
+                          {c.readArticle} <ArrowRight className="h-4 w-4" />
                         </span>
                       </div>
                     </Link>

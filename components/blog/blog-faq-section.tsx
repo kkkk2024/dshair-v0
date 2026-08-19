@@ -21,17 +21,22 @@ export function BlogFaqSection({
 }) {
   const post = getPost(slug)
   const localized = locale ? getBlogContent(slug, locale) : undefined
-  const faqs = localized?.faqs ?? post?.faqs ?? []
-  if (!faqs || faqs.length === 0) return null
+  const rawFaqs = (localized?.faqs ?? post?.faqs ?? []) as Array<Record<string, string>>
+  if (!rawFaqs || rawFaqs.length === 0) return null
+  // Tolerate both {question,answer} (lib/blog-seo) and {q,a} (i18n modules).
+  const faqs = rawFaqs.map((f) => ({
+    q: f.question ?? f.q ?? "",
+    a: f.answer ?? f.a ?? "",
+  }))
 
   return (
     <section className="not-prose my-10">
       <h2 className="font-serif text-3xl md:text-4xl font-medium mt-12 mb-6">{title}</h2>
       <div className="space-y-4">
         {faqs.map((faq) => (
-          <div key={faq.question} className="bg-[#FDF8F0] border border-amber-100 rounded-xl p-5">
-            <p className="font-semibold text-[#4A1942] mb-2">{faq.question}</p>
-            <p className="text-sm text-[#6B3A6E] leading-relaxed">{faq.answer}</p>
+          <div key={faq.q} className="bg-[#FDF8F0] border border-amber-100 rounded-xl p-5">
+            <p className="font-semibold text-[#4A1942] mb-2">{faq.q}</p>
+            <p className="text-sm text-[#6B3A6E] leading-relaxed">{faq.a}</p>
           </div>
         ))}
       </div>

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getPost } from "@/lib/blog-seo"
 import { BLOG_INTERNAL_LINKS } from "@/lib/blog-internal-links"
 import { getBlogContent, blogShared } from "@/lib/i18n/blog"
+import { localeHref } from "@/lib/i18n/routing"
 import type { Locale } from "@/lib/i18n/config"
 
 export function RelatedGuides({ slug, locale }: { slug: string; locale?: Locale }) {
@@ -35,7 +36,7 @@ export function RelatedGuides({ slug, locale }: { slug: string; locale?: Locale 
           {related.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={localeHref(`/blog/${post.slug}`, locale)}
               className="group block rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent/40"
             >
               <span className="text-xs font-medium uppercase tracking-wide text-primary/70">
@@ -55,7 +56,7 @@ export function RelatedGuides({ slug, locale }: { slug: string; locale?: Locale 
             {blurb}
           </p>
           <Link
-            href={map.collection.href}
+            href={localeHref(map.collection.href, locale)}
             className="shrink-0 inline-flex items-center justify-center rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-amber-600"
           >
             {map.collection.label}

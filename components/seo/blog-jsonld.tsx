@@ -18,11 +18,16 @@ export function BlogJsonLd({ slug, locale }: { slug: string; locale?: Locale }) 
 
   const title = localized?.seoTitle ?? post?.title ?? ""
   const description = localized?.seoDescription ?? post?.excerpt ?? ""
-  const faqs = localized?.faqs ?? post?.faqs ?? []
+  const rawFaqs = (localized?.faqs ?? post?.faqs ?? []) as Array<Record<string, string>>
 
   if (!title) return null
 
   const url = `${BASE_URL}/blog/${slug}`
+  // Tolerate both {question,answer} (lib/blog-seo) and {q,a} (i18n modules).
+  const faqs = rawFaqs.map((f) => ({
+    question: f.question ?? f.q ?? "",
+    answer: f.answer ?? f.a ?? "",
+  }))
 
   return (
     <>
@@ -36,14 +41,7 @@ export function BlogJsonLd({ slug, locale }: { slug: string; locale?: Locale }) 
         author={AUTHOR_NAME}
         authorUrl={`${BASE_URL}/about/caro-chen`}
       />
-      {faqs && faqs.length > 0 && (
-        <FaqJsonLd
-          faqs={faqs.map((faq) => ({
-            question: faq.question,
-            answer: faq.answer,
-          }))}
-        />
-      )}
+      {faqs && faqs.length > 0 && <FaqJsonLd faqs={faqs} />}
     </>
   )
 }

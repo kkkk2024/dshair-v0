@@ -8,6 +8,8 @@ export interface BlogListContent {
   jsonLdDescription: string
   srOnly: string
   postListName: string
+  readArticle: string
+  categoryLabel: string
 }
 
 const en: BlogListContent = {
@@ -20,6 +22,8 @@ const en: BlogListContent = {
     "Expert guides on hair extensions for UK professional salons. Hand-tied weft, tape-in, nano ring, aftercare and more.",
   srOnly: "Latest Articles",
   postListName: "DS Hair Beauty Blog Posts",
+  readArticle: "Read Article",
+  categoryLabel: "Guide",
 }
 
 // === LOCALES_PLACEHOLDER ===
@@ -36,8 +40,10 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     jsonLdDescription:
       "Expert Ratgeber zu Haarverlängerungen für UK-Fachsalons. Hand-tied weft, tape-in, nano ring, Nachsorge und mehr.",
     srOnly: "Neueste Artikel",
-    postListName: "DS Hair Beauty Blog-Beiträge",
-  },
+  postListName: "DS Hair Beauty Blog-Beiträge",
+  readArticle: "Artikel lesen",
+  categoryLabel: "Ratgeber",
+},
   fr: {
     heroBadge: "Expertise",
     heroTitle: "Blog sur les Extensions de Cheveux",
@@ -47,8 +53,10 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     jsonLdDescription:
       "Guides experts sur les extensions de cheveux pour les salons professionnels UK. Hand-tied weft, tape-in, nano ring, soins et plus.",
     srOnly: "Derniers Articles",
-    postListName: "Articles du Blog DS Hair Beauty",
-  },
+  postListName: "Articles du Blog DS Hair Beauty",
+  readArticle: "Lire l'article",
+  categoryLabel: "Guide",
+},
   ar: {
     heroBadge: "خبرة احترافية",
     heroTitle: "مدونة إكسسوارات الشعر",
@@ -58,8 +66,10 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     jsonLdDescription:
       "أدلة خبيرة حول إكسسوارات الشعر لصالونات UK الاحترافية. Hand-tied weft, tape-in, nano ring، والعناية اللاحقة والمزيد.",
     srOnly: "أحدث المقالات",
-    postListName: "مقالات مدونة DS Hair Beauty",
-  },
+  postListName: "مقالات مدونة DS Hair Beauty",
+  readArticle: "اقرأ المقال",
+  categoryLabel: "دليل",
+},
   sv: {
     heroBadge: "Expertkunskap",
     heroTitle: "Blogg om Hårförlängningar",
@@ -69,8 +79,10 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     jsonLdDescription:
       "Expertguider om hårförlängningar för UK:s professionella salonger. Hand-tied weft, tape-in, nano ring, eftervård och mer.",
     srOnly: "Senaste Artiklarna",
-    postListName: "DS Hair Beauty Blogginlägg",
-  },
+  postListName: "DS Hair Beauty Blogginlägg",
+  readArticle: "Läs artikeln",
+  categoryLabel: "Guide",
+},
   pl: {
     heroBadge: "Wiedza Ekspercka",
     heroTitle: "Blog o Przedłużaniu Włosów",
@@ -80,6 +92,8 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     jsonLdDescription:
       "Eksperckie przewodniki o przedłużaniu włosów dla profesjonalnych salonów w UK. Hand-tied weft, tape-in, nano ring, pielęgnacja i więcej.",
     srOnly: "Najnowsze Artykuły",
-    postListName: "Wpisy na Blogu DS Hair Beauty",
-  },
+  postListName: "Wpisy na Blogu DS Hair Beauty",
+  readArticle: "Czytaj artykuł",
+  categoryLabel: "Przewodnik",
+},
 }
