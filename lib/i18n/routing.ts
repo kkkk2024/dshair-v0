@@ -26,6 +26,7 @@ export const translatedPages = new Set<string>([
   '/find-stylist',
   '/account',
   '/about/caro-chen',
+  '/blog',
 ])
 
 // Dynamic route prefixes that are localized under /[locale]/<prefix>/<...>
@@ -35,8 +36,7 @@ export const translatedDynamicPrefixes = new Set<string>([
   '/products/',
   '/salon-supplies/',
   '/uk-salon-hair-extensions/',
-  // Pending: /[locale]/blog route not built yet (Phase 3)
-  // '/blog/',
+  '/blog/',
 ])
 
 function hasTranslatedPrefix(path: string): boolean {
