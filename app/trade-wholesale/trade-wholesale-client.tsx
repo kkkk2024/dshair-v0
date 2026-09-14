@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -15,7 +15,6 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { tradeWholesaleContent, type TradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
-import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 import { FaqJsonLd } from "@/components/seo/json-ld"
 
 const WA_HREF =
@@ -31,31 +30,16 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
   const pricing = content.pricing ?? en.pricing
   const cases = content.cases ?? en.cases
   const faq = content.faq ?? en.faq
-  const turnstileToken = useRef("")
-  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
 
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get("name"),
-      salonName: formData.get("salon_name"),
-      location: formData.get("location"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-      source: "trade-wholesale-page",
-      turnstileToken: turnstileToken.current,
-      submitTime: formMountedAt.current,
-    }
-
     try {
-      const response = await fetch("/api/salon-partners", {
+      const response = await fetch("https://formspree.io/f/mjgaagep", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { Accept: "application/json" },
+        body: new FormData(e.currentTarget),
       })
 
       if (!response.ok) throw new Error("Failed to submit")
@@ -349,7 +333,6 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
-                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">{t.name}</label>
@@ -376,7 +359,6 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                       <label className="block text-sm font-medium mb-1.5">{t.message}</label>
                       <Textarea name="message" placeholder={t.messagePh} rows={4} />
                     </div>
-                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? t.submitting : t.submit}
                     </Button>

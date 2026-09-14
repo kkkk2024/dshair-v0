@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -14,7 +14,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 import { getFindStylistContent, type FindStylistContent } from "@/lib/i18n/pages/find-stylist"
 import type { Locale } from "@/lib/i18n/config"
 
@@ -36,32 +35,16 @@ export function FindStylistView({ locale }: { locale: Locale }) {
   const c: FindStylistContent = getFindStylistContent(locale)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-  const turnstileToken = useRef("")
-  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get("name"),
-      salonName: formData.get("salon_name"),
-      location: formData.get("location"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      instagram: formData.get("instagram"),
-      website: formData.get("website"),
-      methods: formData.getAll("methods"),
-      yearsExperience: formData.get("years_experience"),
-      about: formData.get("about"),
-      turnstileToken: turnstileToken.current,
-      submitTime: formMountedAt.current,
-    }
+
     try {
-      const response = await fetch("/api/find-stylist", {
+      const response = await fetch("https://formspree.io/f/mjgaagep", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { Accept: "application/json" },
+        body: new FormData(e.currentTarget),
       })
       if (!response.ok) throw new Error("Failed to submit")
       setSubmitted(true)
@@ -223,7 +206,6 @@ export function FindStylistView({ locale }: { locale: Locale }) {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
-                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">{c.nameLabel}</label>
@@ -305,7 +287,6 @@ export function FindStylistView({ locale }: { locale: Locale }) {
                       />
                     </div>
 
-                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={loading}>
                       {loading ? c.submittingBtn : c.submitBtn}
                     </Button>

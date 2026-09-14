@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -13,15 +13,12 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { contactFormLabels, type ContactFormLabels } from "@/lib/i18n/pages/contact-form"
-import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
   const t = labels ?? contactFormLabels.en
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
-  const turnstileToken = useRef("")
-  const formMountedAt = useRef(Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -29,30 +26,19 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
     setError("")
 
     const formData = new FormData(e.currentTarget)
-    const data = {
-      firstName: formData.get("first-name"),
-      lastName: formData.get("last-name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      subject: formData.get("subject"),
-      orderNumber: formData.get("order-number"),
-      message: formData.get("message"),
-      leadType: formData.get("lead-type"),
-      turnstileToken: turnstileToken.current,
-      submitTime: formMountedAt.current,
-    }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formspree.io/f/mjgaagep", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(data),
+        body: formData,
       })
 
       if (!response.ok) {
-        throw new Error("Failed to send message")
+        const payload = await response.json().catch(() => ({}))
+        throw new Error(payload.error || "Failed to send message")
       }
 
       setIsSubmitting(false)
@@ -83,8 +69,6 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border">
       <h2 className="font-semibold text-xl mb-6">{t.heading}</h2>
-
-      <HoneypotField />
 
       {error && (
         <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">{error}</div>
@@ -159,8 +143,6 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
             required
           />
         </Field>
-
-        <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
 
         <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? t.sending : t.submit}

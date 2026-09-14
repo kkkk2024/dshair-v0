@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartDrawer } from "@/components/cart/cart-drawer"
@@ -13,7 +13,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 import { localeHref } from "@/lib/i18n/routing"
 import { getAmbassadorContent, type AmbassadorContent } from "@/lib/i18n/pages/ambassador"
 import type { Locale } from "@/lib/i18n/config"
@@ -35,30 +34,16 @@ export function AmbassadorView({ locale }: { locale: Locale }) {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [applied, setApplied] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const turnstileToken = useRef("")
-  const formMountedAt = useRef(Date.now())
 
   const handleAmbassadorSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get("name"),
-      salonName: formData.get("salon_name"),
-      location: formData.get("location"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      referralCount: formData.get("referral_count"),
-      notes: formData.get("notes"),
-      isAmbassador: true,
-      turnstileToken: turnstileToken.current,
-      submitTime: formMountedAt.current,
-    }
+
     try {
-      const response = await fetch("/api/salon-partners", {
+      const response = await fetch("https://formspree.io/f/mjgaagep", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { Accept: "application/json" },
+        body: new FormData(e.currentTarget),
       })
       if (!response.ok) throw new Error("Failed to submit")
       setApplied(true)
@@ -283,7 +268,6 @@ export function AmbassadorView({ locale }: { locale: Locale }) {
                   </div>
                 ) : (
                   <form onSubmit={handleAmbassadorSubmit} className="bg-card rounded-2xl p-6 md:p-8 border space-y-5">
-                    <HoneypotField />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5">{c.nameLabel}</label>
@@ -321,7 +305,6 @@ export function AmbassadorView({ locale }: { locale: Locale }) {
                       <label className="block text-sm font-medium mb-1.5">{c.notesLabel}</label>
                       <Textarea name="notes" placeholder={c.notesPlaceholder} rows={3} />
                     </div>
-                    <TurnstileField onTokenChange={(token) => { turnstileToken.current = token }} />
                     <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? c.submittingBtn : c.submitBtn}
                     </Button>
