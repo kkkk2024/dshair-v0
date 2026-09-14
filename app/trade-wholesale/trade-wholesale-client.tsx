@@ -11,14 +11,15 @@ import { Textarea } from "@/components/ui/textarea"
 import {
   CheckCircle2, Package, MapPin, BadgeCheck,
   MessageCircle, Store, Scissors,
-  Clock, ShieldCheck, Star
+  Clock, ShieldCheck, Star,
+  Award, Users
 } from "lucide-react"
 import Image from "next/image"
 import { tradeWholesaleContent, type TradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
 import { FaqJsonLd } from "@/components/seo/json-ld"
 
 const WA_HREF =
-  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20the%20UK.%20I%27d%20like%20to%20open%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
+  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20interested%20in%20opening%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
 
 export default function TradeWholesaleClient({ content }: { content: TradeWholesaleContent }) {
   const [submitted, setSubmitted] = useState(false)
@@ -135,6 +136,34 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                     </div>
                   )
                 })}
+              </div>
+            </div>
+          </section>
+
+          {/* Verifiable Trust — order with confidence */}
+          <section className="py-16 md:py-24 bg-secondary">
+            <div className="container px-4 md:px-6">
+              <div className="text-center mb-12">
+                <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Order with confidence</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Real manufacturing experience, real salon partners, and transparent terms — so you always know exactly who you are buying from.</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { icon: Award, title: "19 years in the trade", body: "Our founder has been sourcing and supplying Remy human hair since 2007. We know the grades, the product, and the pitfalls — no guesswork, no middlemen." },
+                  { icon: Users, title: "50+ salons & brands grown", body: "We have helped more than 50 salon owners and small businesses scale into serious wholesalers and launch their own private-label lines." },
+                  { icon: BadgeCheck, title: "Real partners, real results", body: "From multi-city salon chains in Northern Europe to boutique studios — our trade clients reorder because the quality holds batch after batch." },
+                  { icon: ShieldCheck, title: "QC you can verify", body: "Every batch is quality-checked before it ships. Pre-shipment photos and video are available on request — see your order before you pay." },
+                  { icon: Package, title: "Factory-direct margins", body: "We own the production relationship, so you skip distributor and importer markup. Better margins and consistent supply for your salon." },
+                  { icon: CheckCircle2, title: "Secure first orders", body: "New to us? Start small through Alibaba Trade Assurance or PayPal Goods & Services — protected, low-risk first orders while we build trust." },
+                ].map((item) => (
+                  <div key={item.title} className="bg-card rounded-xl p-6 border">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                      <item.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
