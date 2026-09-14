@@ -19,8 +19,9 @@ const CYCLE_ICONS = {
   checkCircle: CheckCircle,
 } as const
 
-function renderSpans(spans: Span[], locale: Locale, keyPrefix: string) {
-  return spans.map((s, i) => {
+function renderSpans(spans: Span | Span[], locale: Locale, keyPrefix: string) {
+  const list = Array.isArray(spans) ? spans : [spans]
+  return list.map((s, i) => {
     const key = `${keyPrefix}-${i}`
     if ("link" in s) {
       return (

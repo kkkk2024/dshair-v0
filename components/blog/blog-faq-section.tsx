@@ -21,7 +21,11 @@ export function BlogFaqSection({
 }) {
   const post = getPost(slug)
   const localized = locale ? getBlogContent(slug, locale) : undefined
-  const rawFaqs = (localized?.faqs ?? post?.faqs ?? []) as Array<Record<string, string>>
+  const rawFaqs = (Array.isArray(localized?.faqs)
+    ? localized.faqs
+    : Array.isArray(post?.faqs)
+      ? post.faqs
+      : []) as Array<Record<string, string>>
   if (!rawFaqs || rawFaqs.length === 0) return null
   // Tolerate both {question,answer} (lib/blog-seo) and {q,a} (i18n modules).
   const faqs = rawFaqs.map((f) => ({
