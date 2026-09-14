@@ -99,8 +99,8 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Send email using Resend
-    const data = await resend.emails.send({
-      from: 'D.S HAIR & BEAUTY <onboarding@resend.dev>',
+    const { data, error } = await resend.emails.send({
+      from: 'Caro <caro@dshairbeauty.co.uk>',
       to: ['caro@dshairbeauty.co.uk'],
       subject: `New Contact [${leadType === 'salon' ? 'SALON' : leadType === 'wholesaler' ? 'WHOLESALE' : leadType === 'individual' ? 'RETAIL' : 'GENERAL'}]: ${subject || 'General Enquiry'}`,
       html: `
@@ -115,6 +115,14 @@ export async function POST(request: Request) {
         <p>${message}</p>
       `,
     });
+
+    if (error) {
+      console.error('Resend send error:', error);
+      return NextResponse.json(
+        { error: 'Failed to send email. Please contact us directly at caro@dshairbeauty.co.uk' },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({ success: true, data });
   } catch (error) {

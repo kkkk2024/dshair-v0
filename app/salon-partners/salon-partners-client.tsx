@@ -20,7 +20,7 @@ import { salonPartnerContent, type SalonPartnerContent } from "@/lib/i18n/pages/
 import { HoneypotField, TurnstileField } from "@/components/antispam/spam-fields"
 
 const WA_HREF =
-  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20in%20Manchester%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extension%20supply."
+  "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extensions%2C%20e.g.%20tape-in%2C%20nano%2C%20weft%20or%20clip-in."
 
 const benefitIcons = [ShieldCheck, Gift, Truck, Palette, Users, Star, Users]
 
@@ -80,7 +80,7 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
             <div className="absolute inset-0 z-0">
               <Image
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80"
-                alt="Manchester Salon Partner Programme – DS Hair Beauty"
+                alt="Salon Partner Programme – DS Hair Beauty"
                 fill
                 className="object-cover"
                 priority
