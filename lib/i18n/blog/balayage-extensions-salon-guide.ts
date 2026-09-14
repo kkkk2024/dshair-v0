@@ -480,7 +480,7 @@ const fr: BalayageExtensionsSalonGuideContent = {
     },
     {
       q: "Combien d'options de nuances balayage dois-je stocker ?",
-      a: 'Pour la plupart des salons indépendants, stocker 5–6 nuances balayage de base en longueur 18"-22" couvre environ 80% des demandes clientes. Palette de départ recommandée : Classic Balayage (#4/#6 racine à #18/#22 pointe), Ash Balayage (#6 ash à #18 ash), Warm Caramel (#4 à #27/613), Bronde (#6 à #14), Shadow Root (#2 à #18), et une option Face-Framing. Stockez d'abord des sets uniques — vous pouvez réapprovisionner sous 1–3 jours auprès d'un fournisseur trade basé au UK plutôt que de bloquer du capital dans un stock qui tourne lentement.',
+      a: `Pour la plupart des salons indépendants, stocker 5–6 nuances balayage de base en longueur 18"-22" couvre environ 80% des demandes clientes. Palette de départ recommandée : Classic Balayage (#4/#6 racine à #18/#22 pointe), Ash Balayage (#6 ash à #18 ash), Warm Caramel (#4 à #27/613), Bronde (#6 à #14), Shadow Root (#2 à #18), et une option Face-Framing. Stockez d'abord des sets uniques — vous pouvez réapprovisionner sous 1–3 jours auprès d'un fournisseur trade basé au UK plutôt que de bloquer du capital dans un stock qui tourne lentement.`,
     },
     {
       q: "Puis-je proposer des extensions balayage si je ne suis pas coloriste ?",

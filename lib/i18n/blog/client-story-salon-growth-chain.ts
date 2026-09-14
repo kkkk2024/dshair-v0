@@ -530,7 +530,7 @@ const pl: ClientStorySalonGrowthChainContent = {
     { icon: "sparkles", q: "1. Usługa powtarzalna, nie jednorazowa", a: "Dodanie tape-in i nano extensions stworzyło wbudowany 6–8-tygodniowy cykl konserwacji. Klientki wracały w rytmie, a przychody przestały zależeć tylko od marketingu nowych klientek. Extensions zamieniły salon jednej wizyty w biznes subskrypcyjny." },
     { icon: "sparkles", q: "2. Udokumentowany standard (SOP)", a: "Przed zatrudnieniem właścicielka zapisała dokładne kroki konsultacji, doboru koloru, aplikacji i aftercare. Nowe stylistki można było przeszkolić do tego samego standardu w dni, nie miesiące — co uczyniło bezpiecznym dodanie drugiego fotela." },
     { icon: "sparkles", q: "3. Przeszkolony, spójny zespół", a: "Korzystając z naszego wsparcia szkoleniowego extensions, salon certyfikował stylistki według listy kontrolnej, zanim wzięły płacące klientki. Spójne wyniki na każdym fotelu pozwoliły właścicielce cofnąć się z fotela i zacząć prowadzić biznes." },
-    { icon: "sparkles", q: "4. Marka, o którą klientki pytają po nazwisku", a: "Gdy usługa była spójna, salon uruchomił własną linię extensions i aftercare w private label. Klientki teraz zamawiają ponownie „własne włosy salonu" — marża i relacja zostają w salonie, nie u odsprzedawcy." },
+    { icon: "sparkles", q: "4. Marka, o którą klientki pytają po nazwisku", a: "Gdy usługa była spójna, salon uruchomił własną linię extensions i aftercare w private label. Klientki teraz zamawiają ponownie „własne włosy salonu” — marża i relacja zostają w salonie, nie u odsprzedawcy." },
   ],
   resultHeading: "Od drugiego fotela do trzeciej lokalizacji",
   resultCards: [

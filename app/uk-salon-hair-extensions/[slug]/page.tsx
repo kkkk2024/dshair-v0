@@ -8,6 +8,7 @@ import { CartDrawer } from "@/components/cart/cart-drawer"
 import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import { getSeoPage, seoPages } from "@/lib/seo-pages"
+import { FaqJsonLd } from "@/components/seo/json-ld"
 
 const BASE_URL = "https://www.dshairbeauty.co.uk"
 
@@ -86,7 +87,8 @@ export default async function SalonSeoPage({ params }: PageProps) {
                   name: "D.S Hair Beauty",
                   url: BASE_URL,
                 },
-            }}
+            })
+          }}
           />
 
           <FaqJsonLd faqs={page.faqs} />

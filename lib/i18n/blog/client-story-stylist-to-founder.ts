@@ -529,7 +529,7 @@ const pl: ClientStoryStylistToFounderContent = {
   borrowCards: [
     { icon: "graduationCap", q: "Dokumentuj przed skalowaniem", a: "Nie możesz uczyć ani franczyzować tego, co żyje tylko w twoich rękach. Najpierw zapisz metodę — to aktywo, na którym buduje się każdą markę." },
     { icon: "graduationCap", q: "Nie musisz produkować, by mieć markę", a: "Private label pozwala położyć nazwisko na spójnym 100% Remy włosach naturalnych bez prowadzenia fabryki. Miej markę; niech partner dostawczy ma produkcję." },
-    { icon: "graduationCap", q: "Nauczanie to najszybszy autorytet", a: "W momencie, gdy szkolisz innych w swojej metodzie, przestajesz być „stylistką" i stajesz się „nazwiskiem" w swojej niszy. Autorytet kumuluje się w rezerwacjach i sprzedaży produktów." },
+    { icon: "graduationCap", q: "Nauczanie to najszybszy autorytet", a: "W momencie, gdy szkolisz innych w swojej metodzie, przestajesz być „stylistką” i stajesz się „nazwiskiem” w swojej niszy. Autorytet kumuluje się w rezerwacjach i sprzedaży produktów." },
   ],
   ctaBoxTitle: "Buduj swoje nazwisko na włosach, które dostarczają",
   ctaBoxBody:
@@ -542,7 +542,7 @@ const pl: ClientStoryStylistToFounderContent = {
   faqs: [
     { q: "Czy freelancingowa stylistka może zbudować markę przedłużeń?", a: "Tak. Technicy, którzy stają się markami, robią trzy rzeczy po kolei: dokumentują metodę, kładą nazwisko na linii produktów (przez private label) i uczą metody innych. Żadna nie wymaga produkcji włosów — robi to partner dostawczy. Wymaga to zamiany umiejętności w coś powtarzalnego i możliwego do posiadania." },
     { q: "Czego stylistka potrzebuje, by zostać założycielką marki?", a: "Trzy przedmioty możliwe do posiadania: udokumentowana metoda (zapisana, nie tylko w rękach), linia produktów pod twoim nazwiskiem (private label) i autorytet (nauczanie lub dowód, że metoda działa). Z tym masz usługę, produkt i dochód z edukacji — trzy linie pod jednym nazwiskiem." },
-    { q: "Jak przejść od technika do edukatora?", a: "Najpierw udokumentuj metodę — konsultacja, sectioning, napięcie, blend, aftercare. Gdy jest zapisana, możesz szkolić na niej nowsze techniczki. Nauczanie to najszybsza droga do bycia „nazwiskiem" w niszy: autorytet kumuluje się w rezerwacjach i sprzedaży produktów." },
+    { q: "Jak przejść od technika do edukatora?", a: "Najpierw udokumentuj metodę — konsultacja, sectioning, napięcie, blend, aftercare. Gdy jest zapisana, możesz szkolić na niej nowsze techniczki. Nauczanie to najszybsza droga do bycia „nazwiskiem” w niszy: autorytet kumuluje się w rezerwacjach i sprzedaży produktów." },
     { q: "Czy muszę produkować włosy, by mieć własną markę?", a: "Nie. Private label pozwala położyć twoją markę na spójne 100% Remy włosy naturalne bez prowadzenia fabryki. Ty posiadasz markę, wycenę i relację z klientem; partner dostawczy posiada produkcję. Ten podział to dokładnie to, jak buduje się większość marek salonów i techników." },
     { q: "Jak długo trwa zbudowanie uznaniej marki salonu?", a: "To etapowa ścieżka, nie z dnia na dzień. Najpierw udokumentuj metodę, dodaj linię private label, gdy masz lojalną bazę, potem jej ucz. Każdy krok buduje na poprzednim; większość techników osiąga uznaną, nazwaną markę przez kilka lat konsekwentnej pracy — znacznie szybciej, gdy metoda jest zapisana, a produkt nosi ich nazwisko." },
   ],
