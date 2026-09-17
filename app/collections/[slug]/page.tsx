@@ -1,4 +1,5 @@
-import { collections } from "@/lib/products"
+import { permanentRedirect } from "next/navigation"
+import { collections, getCollectionBySlug } from "@/lib/products"
 import { CollectionView, collectionMetadata } from "@/components/collections/collection-view"
 import { defaultLocale } from "@/lib/i18n/config"
 
@@ -19,5 +20,12 @@ export async function generateMetadata({ params }: CollectionPageProps) {
 
 export default async function CollectionPage({ params }: CollectionPageProps) {
   const { slug } = await params
+
+  // Same reasoning as product pages: a collection address that no longer exists
+  // is a legacy URL, so send it to the full range rather than a dead end.
+  if (!getCollectionBySlug(slug)) {
+    permanentRedirect("/collections/all")
+  }
+
   return <CollectionView slug={slug} locale={defaultLocale} />
 }

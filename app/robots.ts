@@ -54,8 +54,11 @@ export default function robots(): MetadataRoute.Robots {
   const openRule = (userAgent: string) => ({
     userAgent,
     allow: '/',
-    // 只屏蔽真正无意义的接口与账户区，保留 /_next/static/ 让渲染型爬虫拿得到样式
-    disallow: ['/api/', '/account/', '/_next/image'],
+    // Only block the endpoints and the account area that genuinely have nothing
+    // to offer a crawler. Note: "/account" is listed without a trailing slash on
+    // purpose — "/account/" would only match paths beneath it and would leave
+    // the /account page itself crawlable.
+    disallow: ['/api/', '/account', '/_next/image'],
   })
 
   return {
@@ -66,7 +69,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/account/', '/_next/image'],
+        disallow: ['/api/', '/account', '/_next/image'],
       },
     ],
     sitemap: 'https://www.dshairbeauty.co.uk/sitemap.xml',

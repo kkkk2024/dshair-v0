@@ -12,11 +12,18 @@ export interface CartItem {
   length?: string
 }
 
+// A single bag line is identified by product + colour + length, so that two
+// variants of the same product can be managed independently in the drawer.
+const isSameLine = (item: CartItem, id: string, color?: string, length?: string) =>
+  item.id === id && item.color === color && item.length === length
+
 interface CartContextType {
   items: CartItem[]
   addItem: (item: CartItem) => void
   removeItem: (id: string) => void
   updateQuantity: (id: string, quantity: number) => void
+  removeLine: (id: string, color?: string, length?: string) => void
+  setLineQuantity: (id: string, color: string | undefined, length: string | undefined, quantity: number) => void
   clearCart: () => void
   itemCount: number
   total: number
@@ -70,6 +77,29 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems([])
   }
 
+  // Line-scoped helpers: operate on one variant only, leaving other variants of
+  // the same product untouched.
+  const removeLine = (id: string, color?: string, length?: string) => {
+    setItems((prev) => prev.filter((item) => !isSameLine(item, id, color, length)))
+  }
+
+  const setLineQuantity = (
+    id: string,
+    color: string | undefined,
+    length: string | undefined,
+    quantity: number
+  ) => {
+    if (quantity <= 0) {
+      removeLine(id, color, length)
+      return
+    }
+    setItems((prev) =>
+      prev.map((item) =>
+        isSameLine(item, id, color, length) ? { ...item, quantity } : item
+      )
+    )
+  }
+
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0)
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
@@ -80,6 +110,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         addItem,
         removeItem,
         updateQuantity,
+        removeLine,
+        setLineQuantity,
         clearCart,
         itemCount,
         total,

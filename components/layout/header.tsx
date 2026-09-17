@@ -272,8 +272,8 @@ export function Header() {
             >
               <Search className="h-5 w-5" />
             </Button>
-            <Link href={localeHref("/contact", locale)}>
-              <Button variant="ghost" size="icon" aria-label="Account">
+            <Link href={localeHref("/account", locale)}>
+              <Button variant="ghost" size="icon" aria-label="Apply for a trade account">
                 <User className="h-5 w-5" />
               </Button>
             </Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { notFound } from "next/navigation"
+import { permanentRedirect } from "next/navigation"
 import { ArrowRight, CheckCircle, MapPin, Search } from "lucide-react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -52,8 +52,10 @@ export default async function SalonSeoPage({ params }: PageProps) {
   const { slug } = await params
   const page = getSeoPage(slug)
 
+  // Legacy or mistyped address rather than a broken page — send it to the trade
+  // hub, which is where this whole section leads.
   if (!page) {
-    notFound()
+    permanentRedirect("/trade-wholesale")
   }
 
   const pageUrl = `${BASE_URL}/uk-salon-hair-extensions/${page.slug}`

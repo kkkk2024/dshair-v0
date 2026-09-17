@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+import { permanentRedirect } from "next/navigation"
 import { getProductBySlug, products } from "@/lib/products"
 import { ProductPageView } from "@/components/products/product-page-view"
 
@@ -147,8 +147,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params
   const product = getProductBySlug(slug)
 
+  // A product URL that no longer resolves is a legacy address rather than a
+  // broken one: old product handles, and links Google still holds from earlier
+  // versions of the store. Send it to the full range with a permanent redirect
+  // so the visitor and the crawler both land somewhere useful, instead of
+  // returning a dead end.
   if (!product) {
-    notFound()
+    permanentRedirect("/collections/all")
   }
 
   return <ProductPageView product={product} />
