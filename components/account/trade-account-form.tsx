@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, MessageCircle, Store } from "lucide-react"
 import { contactInfo } from "@/lib/products"
+import { submitLeadForm } from "@/lib/lead-form"
 import {
   getTradeAccountContent,
   type TradeAccountContent,
@@ -42,20 +43,13 @@ export function TradeAccountForm({ locale = "en" }: { locale?: Locale }) {
     setLoading(true)
     setError(false)
 
-    try {
-      const response = await fetch("https://formspree.io/f/mjgaagep", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(e.currentTarget),
-      })
-
-      if (!response.ok) throw new Error("Failed to submit")
+    const result = await submitLeadForm(e.currentTarget)
+    if (result.ok) {
       setSubmitted(true)
-    } catch {
+    } else {
       setError(true)
-    } finally {
-      setLoading(false)
     }
+    setLoading(false)
   }
 
   return (
@@ -295,9 +289,17 @@ export function TradeAccountForm({ locale = "en" }: { locale?: Locale }) {
                           </label>
 
                           {error && (
-                            <p className="rounded-lg border border-destructive/40 bg-destructive/5 p-3 text-sm">
-                              {c.errorNote}
-                            </p>
+                            <div className="rounded-lg border border-destructive/40 bg-destructive/5 p-3 text-sm">
+                              <p className="mb-2">{c.errorNote}</p>
+                              <a
+                                href={WA_HREF}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-medium text-accent underline underline-offset-2"
+                              >
+                                Message us on WhatsApp
+                              </a>
+                            </div>
                           )}
 
                           <Button type="submit" size="lg" className="w-full" disabled={loading}>

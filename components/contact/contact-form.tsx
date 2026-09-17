@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { contactFormLabels, type ContactFormLabels } from "@/lib/i18n/pages/contact-form"
+import { submitLeadForm, FALLBACK_WHATSAPP, FALLBACK_EMAIL } from "@/lib/lead-form"
 
 export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
   const t = labels ?? contactFormLabels.en
@@ -25,26 +26,12 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
     setIsSubmitting(true)
     setError("")
 
-    const formData = new FormData(e.currentTarget)
+    const result = await submitLeadForm(e.currentTarget)
 
-    try {
-      const response = await fetch("https://formspree.io/f/mjgaagep", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      })
-
-      if (!response.ok) {
-        const payload = await response.json().catch(() => ({}))
-        throw new Error(payload.error || "Failed to send message")
-      }
-
-      setIsSubmitting(false)
+    setIsSubmitting(false)
+    if (result.ok) {
       setIsSubmitted(true)
-    } catch (err) {
-      setIsSubmitting(false)
+    } else {
       setError(t.error)
     }
   }
@@ -68,10 +55,32 @@ export function ContactForm({ labels }: { labels?: ContactFormLabels }) {
 
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 md:p-8 border">
+      {/* Gives every website enquiry a consistent subject line, so they can be
+          filtered and found in the inbox. */}
+      <input type="hidden" name="_subject" value="Website enquiry — dshairbeauty.co.uk" />
+      <input type="hidden" name="form_source" value="contact-page" />
       <h2 className="font-semibold text-xl mb-6">{t.heading}</h2>
 
       {error && (
-        <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">{error}</div>
+        <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6">
+          <p className="font-medium mb-2">{error}</p>
+          <p className="text-sm leading-relaxed">
+            Please send your enquiry to us directly instead:{" "}
+            <a
+              href={FALLBACK_WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium"
+            >
+              message us on WhatsApp
+            </a>{" "}
+            or email{" "}
+            <a href={`mailto:${FALLBACK_EMAIL}`} className="underline font-medium">
+              {FALLBACK_EMAIL}
+            </a>
+            .
+          </p>
+        </div>
       )}
 
       <FieldGroup>

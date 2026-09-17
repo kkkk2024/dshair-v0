@@ -17,6 +17,7 @@ import Image from "next/image"
 import { localeHref } from "@/lib/i18n/routing"
 import type { Locale } from "@/lib/i18n/config"
 import { salonPartnerContent, type SalonPartnerContent } from "@/lib/i18n/pages/salon-partners"
+import { submitLeadForm, FALLBACK_EMAIL } from "@/lib/lead-form"
 
 const WA_HREF =
   "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20and%20I%27d%20like%20to%20know%20more%20about%20your%20wholesale%20hair%20extensions%2C%20e.g.%20tape-in%2C%20nano%2C%20weft%20or%20clip-in."
@@ -32,20 +33,15 @@ export default function SalonPartnersClient({ content, locale }: { content: Salo
     e.preventDefault()
     setLoading(true)
 
-    try {
-      const response = await fetch("https://formspree.io/f/mjgaagep", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(e.currentTarget),
-      })
-
-      if (!response.ok) throw new Error("Failed to submit")
+    const result = await submitLeadForm(e.currentTarget)
+    if (result.ok) {
       setSubmitted(true)
-    } catch {
-      alert(t.footWhatsApp + " " + t.footNote)
-    } finally {
-      setLoading(false)
+    } else {
+      alert(
+        `Sorry, your application could not be sent just now. Please message us on WhatsApp: +86 13516946001, or email ${FALLBACK_EMAIL}.`
+      )
     }
+    setLoading(false)
   }
 
   return (

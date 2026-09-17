@@ -8,6 +8,7 @@ import { CartProvider } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { submitLeadForm, FALLBACK_EMAIL } from "@/lib/lead-form"
 import {
   CheckCircle2, MapPin, Instagram, Globe, Scissors,
   Star, ArrowRight, Users, Heart, Award, Clock,
@@ -40,19 +41,15 @@ export function FindStylistView({ locale }: { locale: Locale }) {
     e.preventDefault()
     setLoading(true)
 
-    try {
-      const response = await fetch("https://formspree.io/f/mjgaagep", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(e.currentTarget),
-      })
-      if (!response.ok) throw new Error("Failed to submit")
+    const result = await submitLeadForm(e.currentTarget)
+    if (result.ok) {
       setSubmitted(true)
-    } catch {
-      alert("Something went wrong. Please try again or contact us via WhatsApp.")
-    } finally {
-      setLoading(false)
+    } else {
+      alert(
+        `Sorry, your form could not be sent just now. Please message us on WhatsApp: +86 13516946001, or email ${FALLBACK_EMAIL}.`
+      )
     }
+    setLoading(false)
   }
 
   return (

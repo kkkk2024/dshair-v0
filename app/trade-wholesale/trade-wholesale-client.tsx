@@ -17,6 +17,7 @@ import {
 import Image from "next/image"
 import { tradeWholesaleContent, type TradeWholesaleContent } from "@/lib/i18n/pages/trade-wholesale"
 import { FaqJsonLd } from "@/components/seo/json-ld"
+import { submitLeadForm, FALLBACK_EMAIL } from "@/lib/lead-form"
 
 const WA_HREF =
   "https://wa.me/8613516946001?text=Hi!%20I%27m%20a%20salon%20owner%20interested%20in%20opening%20a%20trade%20account%20for%20wholesale%20hair%20extensions."
@@ -36,20 +37,15 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
     e.preventDefault()
     setLoading(true)
 
-    try {
-      const response = await fetch("https://formspree.io/f/mjgaagep", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(e.currentTarget),
-      })
-
-      if (!response.ok) throw new Error("Failed to submit")
+    const result = await submitLeadForm(e.currentTarget)
+    if (result.ok) {
       setSubmitted(true)
-    } catch {
-      alert(t.footWhatsApp + " " + t.footNote)
-    } finally {
-      setLoading(false)
+    } else {
+      alert(
+        `Sorry, your enquiry could not be sent just now. Please message us on WhatsApp: +86 13516946001, or email ${FALLBACK_EMAIL}.`
+      )
     }
+    setLoading(false)
   }
 
   return (
