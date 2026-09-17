@@ -303,7 +303,7 @@ export const seoPages: SeoPage[] = [
       { label: "Request colour matching", href: "/colour-match" },
       { label: "Read the wholesale guide", href: "/blog/wholesale-hair-extensions-uk" },
       { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
-      { label: "Hair extension supplier in London", href: "/uk-salon-hair-extensions/hair-extension-supplier-london" },
+      { label: "Hair extension supplier in Birmingham", href: "/uk-salon-hair-extensions/hair-extension-supplier-birmingham" },
       { label: "Hair extension supplier in Leeds", href: "/uk-salon-hair-extensions/hair-extension-supplier-leeds" },
     ],
     cta: "Request London Trade Pricing",
