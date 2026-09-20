@@ -48,40 +48,59 @@ async function deliverByEmail(
   if (!apiKey) return skipped("no RESEND_API_KEY configured")
 
   const to = process.env.LEAD_EMAIL || DEFAULT_LEAD_EMAIL
-  const from = process.env.LEAD_FROM || `D.S Hair & Beauty <${DEFAULT_LEAD_EMAIL}>`
+
+  // LEAD_FROM may list several candidate senders separated by "|". Resend can
+  // only send from a domain that is verified in the account the key belongs to,
+  // and that account cannot be inspected from here, so the first candidate the
+  // account actually accepts is the one used. A single value behaves normally.
+  const fromCandidates = (process.env.LEAD_FROM || `D.S Hair & Beauty <${DEFAULT_LEAD_EMAIL}>`)
+    .split("|")
+    .map((value) => value.trim())
+    .filter(Boolean)
 
   const body = Object.entries(fields)
     .filter(([key]) => !key.startsWith("_"))
     .map(([key, value]) => `${key}: ${value}`)
     .join("\n")
 
-  try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: fields.email || undefined,
-        subject,
-        text: `${body}\n\n---\nSubmitted from ${fields.form_source || "the website"} on ${SITE}`,
-      }),
-    })
+  const rejections: string[] = []
 
-    if (response.ok) return { attempted: true, ok: true, detail: "accepted" }
+  for (const from of fromCandidates) {
+    const shortName = from.replace(/.*<|>.*/g, "")
+    try {
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from,
+          to: [to],
+          reply_to: fields.email || undefined,
+          subject,
+          text: `${body}\n\n---\nSubmitted from ${fields.form_source || "the website"} on ${SITE}`,
+        }),
+      })
 
-    const payload = await response.json().catch(() => ({}))
-    return {
-      attempted: true,
-      ok: false,
-      detail: `HTTP ${response.status}${payload?.message ? ` — ${payload.message}` : ""}`,
+      if (response.ok) {
+        return { attempted: true, ok: true, detail: `accepted, sent from ${shortName}` }
+      }
+
+      const payload = await response.json().catch(() => ({}))
+      const detail = `HTTP ${response.status}${payload?.message ? ` — ${payload.message}` : ""}`
+      rejections.push(`${shortName}: ${detail}`)
+
+      // A rejected key fails for every candidate, so stop early.
+      if (response.status === 401) {
+        return { attempted: true, ok: false, detail: `API key rejected — ${detail}` }
+      }
+    } catch (error) {
+      rejections.push(`${shortName}: network — ${String(error)}`)
     }
-  } catch (error) {
-    return { attempted: true, ok: false, detail: `network — ${String(error)}` }
   }
+
+  return { attempted: true, ok: false, detail: rejections.join(" ;; ") }
 }
 
 /** Forwards the submission to the third-party form service. */
