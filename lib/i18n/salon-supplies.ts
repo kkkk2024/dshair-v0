@@ -471,7 +471,7 @@ const ar: SalonSuppliesContent = {
     freeUkDelivery: 'توصيل UK',
     dispatchesNextDay: 'يُشحن في يوم العمل التالي',
     tryBeforeTitle: 'تريد التجربة قبل الشراء؟',
-    tryBeforeText: 'اطلب باقة العينات. جرّب جودتنا — سعر العينة + 4.00 £ شحن، على حسابك.'
+    tryBeforeText: 'اطلب باقة العينات. جرّب جودتنا — سعر العينة + 4.00 £ شحن، على حسابك.',
     getFreeSample: 'اطلب باقة العينات',
     whatsappMsg: (name) => `مرحبًا! أود الطلب: ${name}. هل يمكنك المساعدة؟`,
   },
@@ -679,7 +679,7 @@ const pl: SalonSuppliesContent = {
     freeUkDelivery: 'Dostawa UK',
     dispatchesNextDay: 'Wysyłka następnego dnia roboczego',
     tryBeforeTitle: 'Chcesz wypróbować przed zakupem?',
-    tryBeforeText: 'Zamów zestaw próbek. Sprawdź jakość we własnym salonie — cena próbki + 4,00 £ przesyłki, na Twój koszt.'
+    tryBeforeText: 'Zamów zestaw próbek. Sprawdź jakość we własnym salonie — cena próbki + 4,00 £ przesyłki, na Twój koszt.',
     getFreeSample: 'Zamów zestaw próbek',
     whatsappMsg: (name) => `Cześć! Chcę zamówić: ${name}. Czy możesz pomóc?`,
   },
