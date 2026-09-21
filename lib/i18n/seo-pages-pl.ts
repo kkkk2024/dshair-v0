@@ -9,7 +9,7 @@ export const plSeoPages: SeoPage[] = [
     h1: "Hurtowe przedłużania włosów w Wielkiej Brytanii",
     metaTitle: "Hurtowe przedłużania włosów w UK dla salonów | D.S Hair Beauty",
     metaDescription:
-      "Hurtowe przedłużania z prawdziwych włosów dla salonów, stylistek i hurtowych kupujących w UK. Dostawca bezpośrednio od fabryki z magazynem w UK w trakcie uruchamiania, ekspresowa dostawa 3–5 dni, wsparcie konta hurtowego i dobieranie kolorów.",
+      "Hurtowe przedłużania z prawdziwych włosów dla salonów, stylistek i hurtowych kupujących w UK. Dostawca bezpośrednio od fabryki, ekspresowa dostawa 3–5 dni, wsparcie konta hurtowego i dobieranie kolorów.",
     intro:
       "D.S Hair Beauty zaopatruje profesjonalne salony i stylistki w 100% Remy human hair extensions, wsparcie konta hurtowego oraz praktyczne zamawianie hurtowe z ekspresową dostawą 3–5 dni bezpośrednio od fabryki.",
     sections: [
@@ -58,19 +58,19 @@ export const plSeoPages: SeoPage[] = [
     cta: "Złóż wniosek o konto hurtowe",
   },
   {
-    slug: "hair-extension-supplier-manchester",
-    title: "Dostawca przedłużania włosów Manchester",
-    keyword: "hair extension supplier manchester",
+    slug: "hair-extension-supplier-uk",
+    title: "Dostawca przedłużania włosów UK & UE",
+    keyword: "hair extension supplier uk",
     intent: "GEO",
-    h1: "Dostawca przedłużania włosów — Magazyn w UK w trakcie uruchamiania",
-    metaTitle: "Dostawca przedłużania włosów bezpośrednio od fabryki Manchester | D.S Hair Beauty",
+    h1: "Dostawca przedłużania włosów — Bezpośrednio od fabryki",
+    metaTitle: "Dostawca przedłużania włosów bezpośrednio od fabryki UK & UE | D.S Hair Beauty",
     metaDescription:
-      "Producent przedłużania włosów bezpośrednio od fabryki z magazynem w UK w trakcie uruchamiania. Ekspresowa dostawa 3–5 dni w całym UK i UE, ceny hurtowe i wsparcie kolorystyczne.",
+      "Producent przedłużania włosów bezpośrednio od fabryki. Ekspresowa dostawa 3–5 dni w całym UK i UE, ceny hurtowe i wsparcie kolorystyczne.",
     intro:
-      "D.S Hair Beauty jest producentem bezpośrednio od fabryki. Nasz magazyn w UK właśnie rusza — salony otrzymują ekspresową dostawę 3–5 dni bezpośrednio od fabryki w cenach producenta, bez narzutu pośredników.",
+      "D.S Hair Beauty jest producentem bezpośrednio od fabryki. Salony otrzymują ekspresową dostawę 3–5 dni bezpośrednio od fabryki w cenach producenta, bez narzutu pośredników.",
     sections: [
       {
-        heading: "Zaopatrzenie bezpośrednio od fabryki. Magazyn w UK w trakcie uruchamiania.",
+        heading: "Zaopatrzenie bezpośrednio od fabryki.",
         body: "W przeciwieństwie do hurtowników, którzy kupują od importerów i ponownie podbijają ceny, D.S Hair Beauty czerpie bezpośrednio od czołowych chińskich producentów włosów Remy. Zamówienia wysyłane są bezpośrednio od fabryki z ekspresową dostawą 3–5 dni — dzięki czemu otrzymujesz jakość bezpośrednio od fabryki z szybką realizacją w UK.",
       },
       {
@@ -84,7 +84,7 @@ export const plSeoPages: SeoPage[] = [
     ],
     bullets: [
       "Ceny producenta bezpośrednio od fabryki",
-      "Magazyn w UK w trakcie uruchamiania — ekspresowa dostawa 3–5 dni bezpośrednio od fabryki",
+      "Ekspresowa dostawa 3–5 dni bezpośrednio od fabryki",
       "Ścieżka konta hurtowego dla salonów",
       "Profesjonalne metody przedłużania i pielęgnacja",
       "Dobieranie kolorów i wsparcie WhatsApp",
@@ -94,15 +94,15 @@ export const plSeoPages: SeoPage[] = [
       {
         question: "Gdzie przechowywany jest Wasz zapas?",
         answer:
-          "Nasz magazyn w UK właśnie rusza. Czerpiemy bezpośrednio od fabryki od producentów w Chinach — dzięki czemu otrzymujesz ceny producenta z ekspresową dostawą 3–5 dni w UK.",
+          "Dostarczamy bezpośrednio od fabryki od producentów w Chinach — dzięki czemu otrzymujesz ceny producenta z ekspresową dostawą 3–5 dni w UK.",
       },
       {
-        question: "Czy salony w Manchester mogą otworzyć konto hurtowe?",
+        question: "Czy salony w UK mogą otworzyć konto hurtowe?",
         answer:
           "Tak. Salony i stylistki mogą ubiegać się przez ścieżkę partnera salonu lub skontaktować się z zespołem bezpośrednio.",
       },
       {
-        question: "Czy zaopatrujecie tylko Manchester?",
+        question: "Czy zaopatrujecie tylko UK?",
         answer:
           "Nie. Zaopatrujemy salony w całym UK i UE z ekspresową dostawą 3–5 dni bezpośrednio od fabryki w skali kraju.",
       },
@@ -479,7 +479,7 @@ export const plSeoPages: SeoPage[] = [
       "Strona GEO specyficzna dla Leeds",
       "Wspiera zapytania salonów i mobilnych stylistek",
       "Łączy wyszukiwania miasta z konwersją konta hurtowego",
-      "Dodaje zasięg w UK poza Manchester i London",
+      "Dodaje zasięg w UK i UE poza Londyn",
       "Przydatne dla linkowania wewnętrznego i rozbudowy mapy strony",
     ],
     faqs: [

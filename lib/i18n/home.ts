@@ -283,15 +283,15 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "For Salons & Stylists",
         title: "Professional Extensions",
         description:
-          "Factory-direct pricing. UK warehouse launching + full range express 3–5 days. Free digital colour catalogue. No minimum order to start.",
+          "Factory-direct pricing. factory-direct express 3–5 day delivery across the full range. Free digital colour catalogue. No minimum order to start.",
         checks: ["Hand-Tied Weft", "Balayage Weft", "Nano Ring / Tape-In", "Wholesale pricing", "Express 3–5 day delivery"],
         ctaPrimary: "Apply for Trade Account",
         ctaSecondary: "Browse Products",
       },
       bottom: {
-        title: "UK Warehouse Launching & Factory-Direct",
+        title: "Factory-Direct & Express Delivery",
         description:
-          "19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. UK warehouse launching + express factory-direct 3–5 day delivery.",
+          "19 years of hair extension expertise. Direct factory relationships. Free digital colour catalogue with your first trade order. factory-direct express 3–5 day delivery.",
         cta: "Become a Partner →",
       },
     },
@@ -311,15 +311,15 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           title: "Find a Stylist",
           description:
-            "Locate certified D.S HAIR & BEAUTY professionals in your area for expert installation.",
+            "Locate professional D.S HAIR & BEAUTY salon partners in your area for expert installation.",
           cta: "Find Near Me",
           href: "/find-stylist",
           highlight: false,
         },
         {
-          title: "Education & Certification",
+          title: "Salon Partner Support",
           description:
-            "Professional training courses to master the art of hair extensions application.",
+            "Product knowledge and private label support to grow your extension service.",
           cta: "View Courses",
           href: "/education",
           highlight: false,
@@ -376,7 +376,7 @@ export const homeContent: Record<Locale, HomeContent> = {
     quickQuote: {
       title: "Get Wholesale Pricing in 24 Hours",
       subtitle:
-        "Open your trade account today — no minimum first order, free UK delivery, and dedicated support from a real person.",
+        "Open your trade account today — no minimum first order, express UK delivery, and dedicated support from a real person.",
       ctaPrimary: "Open Trade Account",
       ctaSecondary: "WhatsApp Us",
       whatsappMsg: "Hi! I'm interested in wholesale pricing for my salon.",
@@ -401,7 +401,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       trust3: "Expressversand nach UK (3–5 Tage)",
     },
     brandValues: [
-      { title: "Kostenloser UK-Versand", description: "Kostenloser Standardversand ab £175" },
+      { title: "Express UK-Versand", description: "Kostenloser Standardversand ab £175" },
       { title: "30-Tage-Rückgabe", description: "Einfache Rückgabe innerhalb von 30 Tagen" },
       { title: "100% Remy-Haar", description: "Premium-Qualität, ethisch bezogenes Echthaar" },
       { title: "Expertensupport", description: "Engagiertes Team hilft Ihnen bei der perfekten Wahl" },
@@ -487,7 +487,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "Für Salons & Stylisten",
         title: "Professionelle Verlängerungen",
         description:
-          "Fabrikdirekte Preise. UK-Lager in Planung + Express 3–5 Tage für die gesamte Range. Kostenloser digitaler Farbkatalog. Keine Mindestbestellmenge.",
+          "Fabrikdirekte Preise. Express 3–5 Tage für die gesamte Range. Kostenloser digitaler Farbkatalog. Keine Mindestbestellmenge.",
         checks: [
           "Hand-Tied Weft",
           "Balayage Weft",
@@ -499,9 +499,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         ctaSecondary: "Produkte durchsuchen",
       },
       bottom: {
-        title: "UK-Lager in Planung & fabrikdirekt",
+        title: "Fabrikdirekt & Express",
         description:
-          "19 Jahre Erfahrung in Haarverlängerungen. Direkte Fabrikbeziehungen. Kostenloser digitaler Farbkatalog mit Ihrer ersten Handelsbestellung. UK-Lager in Planung + Express-Fabrikdirektlieferung in 3–5 Tagen.",
+          "19 Jahre Erfahrung in Haarverlängerungen. Direkte Fabrikbeziehungen. Kostenloser digitaler Farbkatalog mit Ihrer ersten Handelsbestellung. Express-Fabrikdirektlieferung in 3–5 Tagen.",
         cta: "Partner werden →",
       },
     },
@@ -527,7 +527,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           highlight: false,
         },
         {
-          title: "Schulung & Zertifizierung",
+          title: "Salon-Partnerprogramm",
           description:
             "Professionelle Trainingskurse, um die Kunst der Haarverlängerungsanwendung zu beherrschen.",
           cta: "Kurse ansehen",
@@ -611,7 +611,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       trust3: "Livraison express vers le UK (3–5 jours)",
     },
     brandValues: [
-      { title: "Livraison UK gratuite", description: "Livraison standard offerte dès £175" },
+      { title: "Livraison express UK", description: "Livraison standard offerte dès £175" },
       { title: "Retours 30 jours", description: "Retours faciles sous 30 jours" },
       { title: "Cheveux 100% Remy", description: "Cheveux humains de qualité premium, éthiques" },
       { title: "Support expert", description: "Une équipe dédiée pour vous aider" },
@@ -697,7 +697,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "Pour salons & coiffeurs",
         title: "Extensions professionnelles",
         description:
-          "Prix direct usine. Entrepôt UK en projet + express 3–5 jours sur toute la gamme. Catalogue numérique des couleurs offert. Pas de minimum de commande.",
+          "Prix direct usine. Express 3–5 jours sur toute la gamme. Catalogue numérique des couleurs offert. Pas de minimum de commande.",
         checks: [
           "Hand-Tied Weft",
           "Balayage Weft",
@@ -709,9 +709,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         ctaSecondary: "Parcourir les produits",
       },
       bottom: {
-        title: "Entrepôt UK en projet & direct usine",
+        title: "Direct usine & express",
         description:
-          "19 ans d'expertise en extensions de cheveux. Relations directes avec l'usine. Catalogue numérique des couleurs offert avec votre première commande pro. Entrepôt UK en projet + livraison express direct usine en 3–5 jours.",
+          "19 ans d'expertise en extensions de cheveux. Relations directes avec l'usine. Catalogue numérique des couleurs offert avec votre première commande pro. Livraison express direct usine en 3–5 jours.",
         cta: "Devenir partenaire →",
       },
     },
@@ -737,7 +737,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           highlight: false,
         },
         {
-          title: "Formation & certification",
+          title: "Programme partenaire salon",
           description:
             "Cours de formation professionnels pour maîtriser l'art de la pose d'extensions de cheveux.",
           cta: "Voir les cours",
@@ -906,7 +906,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "للصالونات ومصففي الشعر",
         title: "إكسسوارات احترافية",
         description:
-          "أسعار مباشرة من المصنع. مستودع المملكة المتحدة قيد التخطيط + توصيل سريع 3–5 أيام للمجموعة كاملة. كتالوج ألوان رقمي مجاني. لا يوجد حد أدنى للطلب.",
+          "أسعار مباشرة من المصنع. توصيل سريع 3–5 أيام للمجموعة كاملة. كتالوج ألوان رقمي مجاني. لا يوجد حد أدنى للطلب.",
         checks: [
           "Hand-Tied Weft",
           "Balayage Weft",
@@ -918,9 +918,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         ctaSecondary: "تصفح المنتجات",
       },
       bottom: {
-        title: "مستودع المملكة المتحدة قيد التخطيط ومباشر من المصنع",
+        title: "مباشر من المصنع وشحن سريع",
         description:
-          "19 عاماً من الخبرة في ملحقات الشعر. علاقات مباشرة مع المصنع. كتالوج ألوان رقمي مجاني مع أول طلب تجاري. مستودع المملكة المتحدة قيد التخطيط + توصيل سريع مباشر من المصنع خلال 3–5 أيام.",
+          "19 عاماً من الخبرة في ملحقات الشعر. علاقات مباشرة مع المصنع. كتالوج ألوان رقمي مجاني مع أول طلب تجاري. توصيل سريع مباشر من المصنع خلال 3–5 أيام.",
         cta: "كن شريكاً →",
       },
     },
@@ -1114,7 +1114,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "För salonger & frisörer",
         title: "Professionella förlängningar",
         description:
-          "Fabriksdirekta priser. UK-lager under planering + express 3–5 dagar för hela sortimentet. Gratis digital färgkatalog. Ingen minimibeställning.",
+          "Fabriksdirekta priser. Express 3–5 dagar för hela sortimentet. Gratis digital färgkatalog. Ingen minimibeställning.",
         checks: [
           "Hand-Tied Weft",
           "Balayage Weft",
@@ -1126,9 +1126,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         ctaSecondary: "Bläddra bland produkter",
       },
       bottom: {
-        title: "UK-lager under planering & fabriksdirekt",
+        title: "Fabriksdirekt & express",
         description:
-          "19 års erfarenhet av hårförlängningar. Direkta fabriksrelationer. Gratis digital färgkatalog med din första handelsbeställning. UK-lager under planering + express fabriksdirekt 3–5 dagar.",
+          "19 års erfarenhet av hårförlängningar. Direkta fabriksrelationer. Gratis digital färgkatalog med din första handelsbeställning. Express fabriksdirekt 3–5 dagar.",
         cta: "Bli partner →",
       },
     },
@@ -1154,7 +1154,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           highlight: false,
         },
         {
-          title: "Utbildning & certifiering",
+          title: "Salongspartnerprogram",
           description: "Professionella utbildningskurser för att bemästra konsten att applicera hårförlängningar.",
           cta: "Se kurser",
           href: "/education",
@@ -1321,7 +1321,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         eyebrow: "Dla salonów i fryzjerów",
         title: "Produkty profesjonalne",
         description:
-          "Ceny bezpośrednie z fabryki. Magazyn w UK w planie + ekspres 3–5 dni na cały asortyment. Bezpłatny cyfrowy katalog kolorów. Brak minimum zamówieniowego.",
+          "Ceny bezpośrednie z fabryki. Ekspres 3–5 dni na cały asortyment. Bezpłatny cyfrowy katalog kolorów. Brak minimum zamówieniowego.",
         checks: [
           "Hand-Tied Weft",
           "Balayage Weft",
@@ -1333,9 +1333,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         ctaSecondary: "Przeglądaj produkty",
       },
       bottom: {
-        title: "Magazyn w UK w planie i bezpośrednio z fabryki",
+        title: "Bezpośrednio z fabryki i ekspres",
         description:
-          "19 lat doświadczenia w doczepianych włosach. Bezpośrednie relacje z fabryką. Bezpłatny cyfrowy katalog kolorów przy pierwszym zamówieniu handlowym. Magazyn w UK w planie + ekspres bezpośrednio z fabryki w 3–5 dni.",
+          "19 lat doświadczenia w doczepianych włosach. Bezpośrednie relacje z fabryką. Bezpłatny cyfrowy katalog kolorów przy pierwszym zamówieniu handlowym. Ekspres bezpośrednio z fabryki w 3–5 dni.",
         cta: "Zostań partnerem →",
       },
     },

@@ -77,9 +77,9 @@ const WHY_EN: { title: string; description: string }[] = [
       "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers & Accessories. One supplier for every method your salon offers.",
   },
   {
-    title: "UK Warehouse Launching & Factory-Direct",
+    title: "Factory-Direct & Express Delivery",
     description:
-      "Our UK warehouse is launching. Until then the full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
+      "The full range ships factory-direct via express (3–5 days). No cross-continental wait times.",
   },
   {
     title: "Trade Accounts Available",
@@ -105,7 +105,7 @@ const STEPS_EN: { num: string; title: string; desc: string }[] = [
   {
     num: "02",
     title: "We Set Up Your Trade Account",
-    desc: "We create your trade account and send a welcome sample pack so you can feel the quality before ordering.",
+    desc: "We create your trade account and you can order a sample pack (sample price + shipping at buyer's cost) so you can feel the quality before ordering.",
   },
   {
     num: "03",
@@ -124,7 +124,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   en: {
     metaTitle: "Wholesale Hair Extensions for UK Salons | Trade Account | D.S Hair Beauty",
     metaDescription:
-      "Open a trade account with D.S Hair Beauty. 100% Remy human hair extensions at wholesale prices. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct express UK shipping (3–5 days). UK warehouse launching.",
+      "Open a trade account with D.S Hair Beauty. 100% Remy human hair extensions at wholesale prices. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct express UK shipping (3–5 days).",
     badge: "Salon Supply Partner",
     heroTitle: "Your Salon's Supply Chain, Simplified",
     heroSubtitle:
@@ -171,15 +171,15 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       footNote: "— we respond within 2 hours.",
     },
     sampleProgram: {
-      title: "Try Before You Stock — Free Trade Sample Pack",
+      title: "Try Before You Stock — Trade Sample Pack",
       subtitle:
-        "Feel the quality and see the shade range before you commit a penny. Every new trade partner gets a sample pack on us.",
+        "Feel the quality and see the shade range before you commit. Every new trade partner can order a sample pack (sample price + shipping at buyer's cost).",
       items: [
         { title: "Welcome Swatch Pack", desc: "Best-selling Remy shades across Tape-In, K-Tip, Weft & Topper — so your team can feel cuticle-aligned quality." },
         { title: "Colour Ring Loan", desc: "Borrow our 40+ shade ring for in-salon colour matching with your clients." },
         { title: "No-Risk First Order", desc: "Start with a single piece. No minimum order — you pay trade price from your very first weft." },
       ],
-      ctaLabel: "Request Your Free Sample Pack",
+      ctaLabel: "Request Your Sample Pack",
     },
     pricing: {
       title: "Transparent Trade Pricing That Scales",
@@ -199,7 +199,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       subtitle: "Real trade partners who switched to factory-direct Remy and never looked back.",
       items: [
         { salon: "Headlites", location: "Sweden · 4-city salon chain", tag: "A+ Partner", quote: "Factory-direct Remy with consistent shade match across all four of our locations — finally a supplier we trust.", metric: "4 locations · private label in progress" },
-        { salon: "Salon Partner", location: "Manchester, UK", tag: "Boutique Studio", quote: "Switched from a retail brand to trade pricing. Same quality, far better margin on every extension service.", metric: "Higher per-service margin" },
+        { salon: "Salon Partner", location: "United Kingdom", tag: "Boutique Studio", quote: "Switched from a retail brand to trade pricing. Same quality, far better margin on every extension service.", metric: "Higher per-service margin" },
         { salon: "Salon Partner", location: "Dublin, IE", tag: "Multi-chair Salon", quote: "The sample pack sold my team in a day. Reorders arrive in 3–5 days, so we hold less stock.", metric: "Faster rebooking, less tied-up cash" },
       ],
     },
@@ -207,9 +207,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       title: "Trade Account FAQ",
       items: [
         { q: "What is the minimum order for trade?", a: "There is no minimum order. You can start with a single piece and still pay trade price — ideal for trying a new method with a real client." },
-        { q: "How fast is delivery to the UK & EU?", a: "Our selected UK warehouse is launching; until then the full range ships factory-direct via express courier in 3–5 days (DHL/UPS). Reorder as needed without holding large stock." },
+        { q: "How fast is delivery to the UK & EU?", a: "The full range ships factory-direct via express courier in 3–5 days (DHL/UPS). Reorder as needed without holding large stock." },
         { q: "Do you offer private label?", a: "Yes. Private label is available for trade accounts — your salon or brand on the packaging. Ask us for the setup." },
-        { q: "Can I get samples before committing?", a: "Absolutely. Every new trade partner can request a free sample pack with swatches and a piece to feel. We want you confident before you stock." },
+        { q: "Can I get samples before committing?", a: "Absolutely. Every new trade partner can request a sample pack (sample price + shipping at buyer's cost) with swatches and a piece to feel. We want you confident before you stock." },
         { q: "What hair quality do you supply?", a: "100% Remy human hair, cuticle-aligned, in 40+ shades including balayage and ombre — the same grade every reorder." },
         { q: "How do I open a trade account?", a: "Fill the form below or message us on WhatsApp. Most applications are approved same day, and your trade price list lands within 24 hours." },
       ],
@@ -218,7 +218,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   de: {
     metaTitle: "Großhandel Haarverlängerungen für UK-Salons | Handelskonto | D.S Hair Beauty",
     metaDescription:
-      "Eröffnen Sie ein Handelskonto bei D.S Hair Beauty. 100 % Remy Menschenhaar zu Großhandelspreisen. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct Express-Versand UK (3–5 Tage). UK-Lager im Aufbau.",
+      "Eröffnen Sie ein Handelskonto bei D.S Hair Beauty. 100 % Remy Menschenhaar zu Großhandelspreisen. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct Express-Versand UK (3–5 Tage).",
     badge: "Salon-Lieferpartner",
     heroTitle: "Ihre Salon-Lieferkette, vereinfacht",
     heroSubtitle:
@@ -245,9 +245,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
           "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers & Zubehör. Ein Lieferant für jede Methode Ihres Salons.",
       },
       {
-        title: "UK-Lager im Aufbau & Factory-Direct",
+        title: "Factory-Direct & Express Delivery",
         description:
-          "Unser UK-Lager ist im Aufbau. Bis dahin wird das gesamte Sortiment factory-direct per Express (3–5 Tage) versandt. Keine kontinentalen Wartezeiten.",
+          "Das gesamte Sortiment wird factory-direct per Express (3–5 Tage) versandt. Keine kontinentalen Wartezeiten.",
       },
       {
         title: "Handelskonten verfügbar",
@@ -308,7 +308,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   fr: {
     metaTitle: "Extensions grossistes pour salons UK | Compte pro | D.S Hair Beauty",
     metaDescription:
-      "Ouvrez un compte pro chez D.S Hair Beauty. Extensions 100 % cheveux humains Remy au prix de gros. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Expédition express factory-direct UK (3–5 jours). Entrepôt UK en cours.",
+      "Ouvrez un compte pro chez D.S Hair Beauty. Extensions 100 % cheveux humains Remy au prix de gros. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Expédition express factory-direct UK (3–5 jours).",
     badge: "Partenaire approvisionnement salon",
     heroTitle: "Votre chaîne d'approvisionnement, simplifiée",
     heroSubtitle:
@@ -335,9 +335,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
           "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers et accessoires. Un seul fournisseur pour chaque méthode.",
       },
       {
-        title: "Entrepôt UK en cours & factory-direct",
+        title: "Factory-direct & livraison express",
         description:
-          "Notre entrepôt UK est en cours d'ouverture. En attendant, toute la gamme est expédiée factory-direct en express (3–5 jours). Pas d'attente intercontinentale.",
+          "Toute la gamme est expédiée factory-direct en express (3–5 jours). Pas d'attente intercontinentale.",
       },
       {
         title: "Comptes pro disponibles",
@@ -361,7 +361,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       {
         num: "02",
         title: "Nous créons votre compte pro",
-        desc: "Nous créons votre compte et envoyons un échantillon de bienvenue pour tester la qualité avant de commander.",
+        desc: "Nous créons votre compte et vous pouvez commander un échantillon (prix d'échantillon + livraison à la charge de l'acheteur) pour tester la qualité avant de commander.",
       },
       {
         num: "03",
@@ -398,7 +398,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   ar: {
     metaTitle: "جملة وصلات الشعر لصالونات بريطانيا | حساب تجاري | D.S Hair Beauty",
     metaDescription:
-      "افتح حساباً تجارياً مع D.S Hair Beauty. وصلات شعر بشرية ريمي 100% بأسعار الجملة. تيب-إن، كي-تيب، ويفت، باترفلاي ويفت وتوبيرز. شحن سريع مباشر من المصنع (3–5 أيام). مستودع بريطاني قيد الإطلاق.",
+      "افتح حساباً تجارياً مع D.S Hair Beauty. وصلات شعر بشرية ريمي 100% بأسعار الجملة. تيب-إن، كي-تيب، ويفت، باترفلاي ويفت وتوبيرز. شحن سريع مباشر من المصنع (3–5 أيام).",
     badge: "شريك توريد الصالونات",
     heroTitle: "سلسلة توريد صالونك، مبسطة",
     heroSubtitle:
@@ -425,9 +425,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
           "تيب-إن، كي-تيب، ويفت، باترفلاي ويفت، توبيرز وإكسسوارات. مورد واحد لكل طريقة يقدمها صالونك.",
       },
       {
-        title: "مستودع بريطاني قيد الإطلاق ومباشر من المصنع",
+        title: "مباشر من المصنع وشحن سريع",
         description:
-          "مستودعنا البريطاني قيد الإطلاق. حتى ذلك الحين، يُشحن كامل المجموعة مباشرة من المصنع بسرعة (3–5 أيام). لا فترات انتظار عابرة للقارات.",
+          "يُشحن كامل المجموعة مباشرة من المصنع بسرعة (3–5 أيام). لا فترات انتظار عابرة للقارات.",
       },
       {
         title: "حسابات تجارية متاحة",
@@ -451,7 +451,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       {
         num: "02",
         title: "ننشئ حسابك التجاري",
-        desc: "ننشئ حسابك ونرسل عينة ترحيبية لتشعر بالجودة قبل الطلب.",
+        desc: "ننشئ حسابك ويمكنك طلب عينة (سعر العينة + الشحن على حساب المشتري) لتشعر بالجودة قبل الطلب.",
       },
       {
         num: "03",
@@ -488,7 +488,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   sv: {
     metaTitle: "Partihandel hårförlängning för UK-salonger | Handelskonto | D.S Hair Beauty",
     metaDescription:
-      "Öppna ett handelskonto hos D.S Hair Beauty. 100 % Remy människohår till partipriser. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct expressfrakt UK (3–5 dagar). UK-lager öppnar.",
+      "Öppna ett handelskonto hos D.S Hair Beauty. 100 % Remy människohår till partipriser. Tape-In, K-Tip, Weft, Butterfly Weft & Toppers. Factory-direct expressfrakt UK (3–5 dagar).",
     badge: "Salongens leveranspartner",
     heroTitle: "Din salongs leveranskedja, förenklad",
     heroSubtitle:
@@ -515,9 +515,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
           "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers & tillbehör. En leverantör för varje metod.",
       },
       {
-        title: "UK-lager öppnar & factory-direct",
+        title: "Factory-direct & expressleverans",
         description:
-          "Vårt UK-lager öppnar. Tills dess skeppas hela sortimentet factory-direct med express (3–5 dagar). Inga kontinentala väntetider.",
+          "Hela sortimentet skeppas factory-direct med express (3–5 dagar). Inga kontinentala väntetider.",
       },
       {
         title: "Handelskonton tillgängliga",
@@ -578,7 +578,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
   pl: {
     metaTitle: "Hurtowe przedłużanie włosów dla salonów UK | Konto hurtowe | D.S Hair Beauty",
     metaDescription:
-      "Otwórz konto hurtowe w D.S Hair Beauty. 100 % włosy Remy po cenach hurtowych. Tape-In, K-Tip, Weft, Butterfly Weft i Toppers. Ekspresowa wysyłka factory-direct UK (3–5 dni). Magazyn UK w przygotowaniu.",
+      "Otwórz konto hurtowe w D.S Hair Beauty. 100 % włosy Remy po cenach hurtowych. Tape-In, K-Tip, Weft, Butterfly Weft i Toppers. Ekspresowa wysyłka factory-direct UK (3–5 dni).",
     badge: "Partner zaopatrzenia salonu",
     heroTitle: "Łańcuch dostaw Twojego salonu, uproszczony",
     heroSubtitle:
@@ -604,9 +604,9 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
         description: "Tape-In, K-Tip, Weft, Butterfly Weft, Hair Toppers i akcesoria. Jeden dostawca dla każdej metody.",
       },
       {
-        title: "Magazyn UK w przygotowaniu i factory-direct",
+        title: "Factory-direct i ekspresowa wysyłka",
         description:
-          "Nasz magazyn UK jest w przygotowaniu. Do tego czasu cała gama wysyłana jest factory-direct ekspresem (3–5 dni). Bez międzykontynentalnego czekania.",
+          "Cała gama wysyłana jest factory-direct ekspresem (3–5 dni). Bez międzykontynentalnego czekania.",
       },
       {
         title: "Konta hurtowe dostępne",
@@ -615,7 +615,7 @@ export const tradeWholesaleContent: Record<Locale, TradeWholesaleContent> = {
       },
     ],
     rangeTitle: "Przegląd asortymentu",
-    rangeSubtitle: "Od Tape-In do Butterfly Weft – wszystko, czego potrzebuje Twój salon, w magazynie i gotowe do wysyłki.",
+    rangeSubtitle: "Od Tape-In do Butterfly Weft – wszystko, czego potrzebuje Twój salon, w ofercie i gotowe do szybkiej wysyłki.",
     rangeCols: { type: "Typ produktu", min: "Minimalne zamówienie", lead: "Typowy czas" },
     rangeRows: RANGE_EN,
     rangeFootnote: "Czegoś brakuje? Skontaktuj się z nami – być może to znajdziemy.",

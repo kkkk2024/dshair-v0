@@ -127,9 +127,6 @@ export function Header() {
                 <Link href={localeHref("/why-choose-us", locale)} className="py-2 text-lg font-medium text-primary hover:text-accent transition-colors">
                   {d.ui.nav.whyChooseUs}
                 </Link>
-                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="py-2 text-lg font-medium hover:text-accent transition-colors">
-                  {d.ui.nav.manufacturing} &#8599;
-                </a>
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm font-medium mb-2">{localeNames[locale]}</p>
                   <div className="flex flex-col gap-1">
@@ -244,17 +241,6 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <a
-                  href="https://wigexporter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  {d.ui.nav.manufacturing} &#8599;
-                </a>
-              </NavigationMenuItem>
-
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -282,14 +268,6 @@ export function Header() {
                 {d.ui.nav.tradeEnquiry}
               </Button>
             </Link>
-            <a
-              href="https://wigexporter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-1 text-sm font-medium hover:text-accent transition-colors"
-            >
-              {d.ui.nav.manufacturing} &#8599;
-            </a>
             <Button
               variant="ghost"
               size="icon"

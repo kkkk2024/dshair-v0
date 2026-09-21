@@ -59,7 +59,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "Free in-salon or virtual colour matching consultation. We help you find the perfect match for every client — every time." },
       { title: "Tool & Equipment Packages", description: "Professional-grade application tools, styling brushes and salon storage. Everything extension stylists need in one place." },
-      { title: "Method Training Referrals", description: "We connect salon partners with certified training courses for advanced extension methods. Upskill your team with confidence." },
+      { title: "Priority Reorder Support", description: "Fast repeat ordering so your colour match stays consistent across every batch - built for busy salon teams." },
       { title: "Reorder Bundles", description: "Easy restocking bundles for ongoing salon supply. Order the same combination each time — consistent quality, every batch." },
     ],
   },
@@ -90,7 +90,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "Kostenlose Farbabgleich-Beratung im Salon oder virtuell. Wir helfen Ihnen, den perfekten Ton für jeden Kunden zu finden – jedes Mal." },
       { title: "Tool & Equipment Packages", description: "Professionelle Applikationswerkzeuge, Styling-Bürsten und Salon-Lagerung. Alles, was Extensions-Stylisten an einem Ort brauchen." },
-      { title: "Method Training Referrals", description: "Wir verbinden Salon-Partner mit zertifizierten Schulungskursen für fortgeschrittene Extensions-Methoden. Schule Sie Ihr Team mit Sicherheit weiter." },
+      { title: "Priority Reorder Support", description: "Wir verbinden Salon-Partner mit zertifizierten Schulungskursen für fortgeschrittene Extensions-Methoden. Schule Sie Ihr Team mit Sicherheit weiter." },
       { title: "Reorder Bundles", description: "Einfache Nachbestell-Bundles für laufende Salon-Versorgung. Bestellen Sie jedes Mal dieselbe Kombination – gleichbleibende Qualität, jede Charge." },
     ],
   },
@@ -121,7 +121,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "Consultation colorimétrie gratuite en salon ou virtuelle. Nous vous aidons à trouver la teinte parfaite pour chaque cliente — à chaque fois." },
       { title: "Tool & Equipment Packages", description: "Outils d'application pro, brosses de styling et rangement salon. Tout ce dont les stylistes extensions ont besoin, au même endroit." },
-      { title: "Method Training Referrals", description: "Nous mettons les salon partenaires en relation avec des formations certifiées pour méthodes avancées. Monter en compétence en confiance." },
+      { title: "Priority Reorder Support", description: "Nous mettons les salon partenaires en relation avec des formations certifiées pour méthodes avancées. Monter en compétence en confiance." },
       { title: "Reorder Bundles", description: "Bundles de réapprovisionnement simples pour l'approvisionnement continu du salon. Commandez la même combinaison à chaque fois — qualité constante." },
     ],
   },
@@ -152,7 +152,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "استشارة مطابقة لون مجانية داخل الصالون أو افتراضية. نساعدك في إيجاد الدرجة المثالية لكل عميلة — في كل مرة." },
       { title: "Tool & Equipment Packages", description: "أدوات تطبيق احترافية، فرشاة تصفيف، وتخزين الصالون. كل ما يحتاجه مصففو الإكسسوارات في مكان واحد." },
-      { title: "Method Training Referrals", description: "نربط شركاء الصالون بدورات تدريب معتمدة للطرق المتقدمة. ارفع كفاءة فريقك بثقة." },
+      { title: "Priority Reorder Support", description: "نربط شركاء الصالون بدورات تدريب معتمدة للطرق المتقدمة. ارفع كفاءة فريقك بثقة." },
       { title: "Reorder Bundles", description: "حزم إعادة طلب سهلة للتوريد المستمر للصالون. اطلب نفس التركيبة في كل مرة — جودة ثابتة، كل شحنة." },
     ],
   },
@@ -183,7 +183,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "Gratis färgmatchning i salongen eller virtuellt. Vi hjälper dig hitta den perfekta nyansen för varje kund — varje gång." },
       { title: "Tool & Equipment Packages", description: "Professionella applikationsverktyg, stylingsborstar och salongsförvaring. Allt extensions-stylister behöver på ett ställe." },
-      { title: "Method Training Referrals", description: "Vi kopplar salongspartners till certifierade utbildningar för avancerade metoder. Vidareutbilda ditt team med trygghet." },
+      { title: "Priority Reorder Support", description: "Vi kopplar salongspartners till certifierade utbildningar för avancerade metoder. Vidareutbilda ditt team med trygghet." },
       { title: "Reorder Bundles", description: "Enkla påfyllnadspaket för löpande salongsförsörjning. Beställ samma kombination varje gång — konsekvent kvalitet, varje sändning." },
     ],
   },
@@ -214,7 +214,7 @@ export const solutionsContent: Record<Locale, SolutionsContent> = {
     services: [
       { title: "Colour Matching Service", description: "Bezpłatna konsultacja doboru koloru w salonie lub wirtualnie. Pomagamy znaleźć idealny odcień dla każdej klientki — za każdym razem." },
       { title: "Tool & Equipment Packages", description: "Profesjonalne narzędzia aplikacyjne, szczotki do stylizacji i przechowywanie salonowe. Wszystko, czego potrzebują styliści przedłużeń, w jednym miejscu." },
-      { title: "Method Training Referrals", description: "Łączymy partnerów salonów z certyfikowanymi kursami zaawansowanych metod. Podnieście kwalifikacje zespołu z pewnością." },
+      { title: "Priority Reorder Support", description: "Łączymy partnerów salonów z certyfikowanymi kursami zaawansowanych metod. Podnieście kwalifikacje zespołu z pewnością." },
       { title: "Reorder Bundles", description: "Proste zestawy uzupełniające do ciągłych dostaw salonu. Zamawiaj tę samą kombinację za każdym razem — stała jakość, każda partia." },
     ],
   },

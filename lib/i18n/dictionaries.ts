@@ -223,7 +223,7 @@ const en: Dictionary = {
       svcAmbassador: 'Ambassador',
       svcAmbassadorDesc: 'Join our ambassador programme',
       svcAcademy: 'Academy',
-      svcAcademyDesc: 'Professional training & certification',
+      svcAcademyDesc: 'Salon partner programme',
     },
     footer: {
       newsletterTitle: 'Trade Updates for Salons',
@@ -263,8 +263,8 @@ const en: Dictionary = {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       cookies: 'Cookie Policy',
-      location: 'Manchester, UK · UK & EU Salon Trade · UK Warehouse Launching',
-      manufLabel: 'Manufacturing: wigexporter.com',
+      location: 'United Kingdom · UK & EU Salon Trade · Factory-direct from China',
+      manufLabel: 'Factory-direct manufacturing',
       copyright: '© {year} D.S HAIR & BEAUTY. All rights reserved.',
       company: 'A trading brand of Kangde Health Technology Co., Ltd.',
     },
@@ -305,9 +305,9 @@ const en: Dictionary = {
     why3Title: '100% Remy human hair, consistently',
     why3Body:
       'Remy cuticle-aligned hair behaves like natural hair — it blends, styles and lasts. We keep the grade consistent across every order.',
-    why4Title: 'UK delivery from our Manchester warehouse',
+    why4Title: 'Express UK & EU delivery',
     why4Body:
-      'For UK orders we ship locally from our Manchester warehouse. For other markets we dispatch factory-direct with the fastest available express courier — so you can promise reliable fulfilment everywhere.',
+      'For all orders we dispatch factory-direct from our manufacturing partner in China with express courier (3–5 days) to the UK & EU — so you can promise reliable fulfilment everywhere.',
     plTitle: 'Build your own brand with private label',
     plBody:
       'Launch extensions under your salon’s name — your logo, your colour ring, your packaging. We handle production so you own the margin and the client relationship.',
@@ -386,7 +386,7 @@ const de: Dictionary = {
       svcAmbassador: 'Botschafter',
       svcAmbassadorDesc: 'Werden Sie Botschafter',
       svcAcademy: 'Akademie',
-      svcAcademyDesc: 'Professionelle Ausbildung & Zertifizierung',
+      svcAcademyDesc: 'Salon-Partnerprogramm',
     },
     footer: {
       newsletterTitle: 'Branchen-News für Salons',
@@ -426,8 +426,8 @@ const de: Dictionary = {
       privacy: 'Datenschutz',
       terms: 'AGB',
       cookies: 'Cookie-Richtlinie',
-      location: 'Manchester, UK · Salon-Handel UK & EU · UK-Lager in Eröffnung',
-      manufLabel: 'Fertigung: wigexporter.com',
+      location: 'Vereinigtes Königreich · Salon-Handel UK & EU · Factory-direct aus China',
+      manufLabel: 'Factory-direct Fertigung',
       copyright: '© {year} D.S HAIR & BEAUTY. Alle Rechte vorbehalten.',
       company: 'Eine Handelsmarke der Kangde Health Technology Co., Ltd.',
     },
@@ -468,9 +468,9 @@ const de: Dictionary = {
     why3Title: 'Durchgängig 100% Remy Echthaar',
     why3Body:
       'Remy-Haar mit ausgerichteter Cuticula verhält sich wie natürliches Haar — es mischt, stylt und hält. Wir halten den Grad bei jeder Bestellung gleich.',
-    why4Title: 'UK-Lieferung aus unserem Manchester-Lager',
+    why4Title: 'Express-Lieferung UK & EU',
     why4Body:
-      'Für UK-Bestellungen liefern wir lokal aus unserem Manchester-Lager. Für andere Märkte versenden wir direkt ab Werk mit dem schnellsten verfügbaren Express-Versand — damit Sie überall verlässliche Lieferung versprechen können.',
+      'Für alle Bestellungen versenden wir direkt ab Werk von unserem Fertigungspartner in China per Express (3–5 Tage) in das UK & EU — damit Sie überall verlässliche Lieferung versprechen können.',
     plTitle: 'Aufbau einer eigenen Marke mit Private Label',
     plBody:
       'Bringen Sie Extensions unter dem Namen Ihres Salons heraus — Ihr Logo, Ihr Farbring, Ihre Verpackung. Wir übernehmen die Produktion, damit Sie Marge und Kundenbeziehung besitzen.',
@@ -549,7 +549,7 @@ const fr: Dictionary = {
       svcAmbassador: 'Ambassadeur',
       svcAmbassadorDesc: 'Rejoignez notre programme ambassadeur',
       svcAcademy: 'Académie',
-      svcAcademyDesc: 'Formation et certification professionnelles',
+      svcAcademyDesc: 'Programme partenaire salon',
     },
     footer: {
       newsletterTitle: 'Actualités pro pour salons',
@@ -589,8 +589,8 @@ const fr: Dictionary = {
       privacy: 'Politique de confidentialité',
       terms: 'Conditions de service',
       cookies: 'Politique cookies',
-      location: 'Manchester, UK · Commerce salon UK & UE · Entrepôt UK en lancement',
-      manufLabel: 'Fabrication : wigexporter.com',
+      location: 'Royaume-Uni · Commerce salon UK & UE · Factory-direct depuis la Chine',
+      manufLabel: 'Fabrication directe usine',
       copyright: '© {year} D.S HAIR & BEAUTY. Tous droits réservés.',
       company: 'Une marque commerciale de Kangde Health Technology Co., Ltd.',
     },
@@ -631,9 +631,9 @@ const fr: Dictionary = {
     why3Title: '100% Remy humain, en continu',
     why3Body:
       'Le cheveu Remy à cuticule alignée se comporte comme le cheveu naturel — il se fond, se coiffe et dure. Nous gardons le grade constant à chaque commande.',
-    why4Title: 'Livraison UK depuis notre entrepôt de Manchester',
+    why4Title: 'Livraison express UK & UE',
     why4Body:
-      'Pour les commandes UK, nous expédions localement depuis notre entrepôt de Manchester. Pour les autres marchés, nous expédions direct usine avec le transporteur express le plus rapide — pour promettre partout une livraison fiable.',
+      'Pour toutes les commandes, nous expédions direct usine depuis notre partenaire de fabrication en Chine par express (3–5 jours) vers le UK & UE — pour promettre partout une livraison fiable.',
     plTitle: 'Créez votre propre marque en private label',
     plBody:
       'Lancez des extensions sous le nom de votre salon — votre logo, votre anneau de couleurs, votre packaging. Nous gérons la production pour que vous possédiez la marge et la relation client.',
@@ -712,7 +712,7 @@ const ar: Dictionary = {
       svcAmbassador: 'سفير',
       svcAmbassadorDesc: 'انضم لبرنامج السفراء',
       svcAcademy: 'الأكاديمية',
-      svcAcademyDesc: 'تدريب واعتماد احترافي',
+      svcAcademyDesc: 'برنامج الشراكة للصالون',
     },
     footer: {
       newsletterTitle: 'تحديثات تجارية للصالونات',
@@ -752,8 +752,8 @@ const ar: Dictionary = {
       privacy: 'سياسة الخصوصية',
       terms: 'شروط الخدمة',
       cookies: 'سياسة ملفات الارتباط',
-      location: 'مانشستر، المملكة المتحدة · تجارة الصالونات في المملكة المتحدة والاتحاد الأوروبي · افتتاح المستودع البريطاني قريبًا',
-      manufLabel: 'التصنيع: wigexporter.com',
+      location: 'المملكة المتحدة والاتحاد الأوروبي · تجارة الصالونات · مباشر من المصنع',
+      manufLabel: 'تصنيع مباشر من المصنع',
       copyright: '© {year} D.S HAIR & BEAUTY. جميع الحقوق محفوظة.',
       company: 'علامة تجارية تابعة لشركة Kangde Health Technology Co., Ltd.',
     },
@@ -794,9 +794,9 @@ const ar: Dictionary = {
     why3Title: 'شعر بشري ريمي 100%، بشكل متسق',
     why3Body:
       'شعر ريمي ذو القشور المتوائمة يتصرف مثل الشعر الطبيعي — يمتزج ويتصفف ويصمد. نحافظ على الدرجة ثابتة في كل طلب.',
-    why4Title: 'توصيل في المملكة المتحدة من مستودع مانشستر لدينا',
+    why4Title: 'توصيل سريع ومباشر من المصنع',
     why4Body:
-      'بالنسبة لطلبات المملكة المتحدة نشحن محليًا من مستودع مانشستر لدينا. بالنسبة للأسواق الأخرى نشحن مباشرة من المصنع مع أسرع شركة شحن سريع متاحة — حتى تتمكن من الوعد بتوريد موثوق في كل مكان.',
+      'نشحن مباشرة من المصنع عبر شريك شحن سريع (3–5 أيام) لجميع الطلبات — حتى تتمكن من الوعد بتوريد موثوق في كل مكان.',
     plTitle: 'ابنِ علامتك التجارية الخاصة',
     plBody:
       'أطلق الإضافات باسم صالونك — شعارك، حلقة ألوانك، تغليفك. نحن نتولى الإنتاج حتى تمتلك الهامش وعلاقة العملاء.',
@@ -875,7 +875,7 @@ const sv: Dictionary = {
       svcAmbassador: 'Ambassadör',
       svcAmbassadorDesc: 'Gå med i vårt ambassadörsprogram',
       svcAcademy: 'Akademi',
-      svcAcademyDesc: 'Professionell utbildning och certifiering',
+      svcAcademyDesc: 'Salongspartnerprogram',
     },
     footer: {
       newsletterTitle: 'Branschnyheter för salonger',
@@ -915,8 +915,8 @@ const sv: Dictionary = {
       privacy: 'Integritetspolicy',
       terms: 'Användarvillkor',
       cookies: 'Cookiepolicy',
-      location: 'Manchester, Storbritannien · Salonghandel Storbritannien & EU · UK-lager öppnas',
-      manufLabel: 'Tillverkning: wigexporter.com',
+      location: 'Storbritannien · Salonghandel Storbritannien & EU · Factory-direct från Kina',
+      manufLabel: 'Factory-direct tillverkning',
       copyright: '© {year} D.S HAIR & BEAUTY. Alla rättigheter förbehållna.',
       company: 'Ett handelsvarumärke för Kangde Health Technology Co., Ltd.',
     },
@@ -957,9 +957,9 @@ const sv: Dictionary = {
     why3Title: '100 % Remy människohår, konsekvent',
     why3Body:
       'Remy-hår med anpassad kutikula beter sig som naturligt hår — det smälter in, stylas och håller. Vi håller kvaliteten konstant i varje order.',
-    why4Title: 'Leverans i Storbritannien från vårt Manchester-lager',
+    why4Title: 'Expressleverans UK & EU',
     why4Body:
-      'För brittiska beställningar levererar vi lokalt från vårt Manchester-lager. För andra marknader skickar vi direkt från fabrik med snabbaste tillgängliga express — så att du kan lova pålitlig leverans överallt.',
+      'För alla beställningar skickar vi direkt från fabrik från vår tillverkningspartner i Kina med express (3–5 dagar) till UK & EU — så att du kan lova pålitlig leverans överallt.',
     plTitle: 'Bygg ditt eget varumärke med private label',
     plBody:
       'Lansera extensions under din salongs namn — din logotyp, din färgring, ditt emballage. Vi sköter produktionen så att du äger marginalen och kundrelationen.',
@@ -1038,7 +1038,7 @@ const pl: Dictionary = {
       svcAmbassador: 'Ambasador',
       svcAmbassadorDesc: 'Dołącz do programu ambasadorskiego',
       svcAcademy: 'Akademia',
-      svcAcademyDesc: 'Profesjonalne szkolenia i certyfikacja',
+      svcAcademyDesc: 'Program partnerski salonów',
     },
     footer: {
       newsletterTitle: 'Aktualności handlowe dla salonów',
@@ -1078,8 +1078,8 @@ const pl: Dictionary = {
       privacy: 'Polityka prywatności',
       terms: 'Regulamin',
       cookies: 'Polityka cookies',
-      location: 'Manchester, Wielka Brytania · Handel salonowy w WB i UE · Otwarcie magazynu UK wkrótce',
-      manufLabel: 'Produkcja: wigexporter.com',
+      location: 'Wielka Brytania · Handel salonowy w WB i UE · Factory-direct z Chin',
+      manufLabel: 'Produkcja factory-direct',
       copyright: '© {year} D.S HAIR & BEAUTY. Wszelkie prawa zastrzeżone.',
       company: 'Marka handlowa Kangde Health Technology Co., Ltd.',
     },
@@ -1120,9 +1120,9 @@ const pl: Dictionary = {
     why3Title: '100% ludzkie włosy Remy, stale',
     why3Body:
       'Włosy Remy z wyrównanymi łuskami zachowują się jak naturalne — wtapiają się, dają się stylizować i trzymają. Trzymamy ten sam gatunek w każdym zamówieniu.',
-    why4Title: 'Dostawa w Wielkiej Brytanii z naszego magazynu w Manchesterze',
+    why4Title: 'Ekspresowa dostawa UK & UE',
     why4Body:
-      'Zamówienia brytyjskie wysyłamy lokalnie z naszego magazynu w Manchesterze. Na inne rynki wysyłamy bezpośrednio z fabryki najszybszym dostępnym kurierem express — byś mógł obiecywać niezawodną dostawę wszędzie.',
+      'Wszystkie zamówienia wysyłamy bezpośrednio z fabryki od naszego partnera produkcyjnego w Chinach kurierem ekspres (3–5 dni) do UK & UE — byś mógł obiecywać niezawodną dostawę wszędzie.',
     plTitle: 'Stwórz własną markę z private label',
     plBody:
       'Wprowadź extensions pod nazwą swojego salonu — Twój logo, Twój pierścień kolorów, Twoje opakowanie. My przejmujemy produkcję, byś posiadał marżę i relację z klientem.',

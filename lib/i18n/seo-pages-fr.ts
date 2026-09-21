@@ -9,7 +9,7 @@ export const frSeoPages: SeoPage[] = [
     h1: "Extensions de cheveux en gros au Royaume-Uni",
     metaTitle: "Extensions de cheveux en gros au Royaume-Uni pour salons | D.S Hair Beauty",
     metaDescription:
-      "Extensions de cheveux naturels en gros pour salons, stylistes et acheteurs professionnels au Royaume-Uni. Fournisseur direct usine avec entrepôt au Royaume-Uni à venir, livraison express en 3 à 5 jours, support de compte professionnel et mise en correspondance des couleurs.",
+      "Extensions de cheveux naturels en gros pour salons, stylistes et acheteurs professionnels au Royaume-Uni. Fournisseur direct usine, livraison express en 3 à 5 jours, support de compte professionnel et mise en correspondance des couleurs.",
     intro:
       "D.S Hair Beauty fournit aux salons professionnels et aux stylistes des extensions de cheveux humains 100 % Remy, un support de compte professionnel et une commande en gros pratique avec livraison directe usine express en 3 à 5 jours.",
     sections: [
@@ -58,19 +58,19 @@ export const frSeoPages: SeoPage[] = [
     cta: "Demander un compte professionnel",
   },
   {
-    slug: "hair-extension-supplier-manchester",
-    title: "Fournisseur d'extensions de cheveux Manchester",
-    keyword: "hair extension supplier manchester",
+    slug: "hair-extension-supplier-uk",
+    title: "Fournisseur d'extensions de cheveux UK",
+    keyword: "hair extension supplier uk",
     intent: "GEO",
-    h1: "Fournisseur d'extensions de cheveux — Entrepôt au Royaume-Uni à venir",
-    metaTitle: "Fournisseur d'extensions de cheveux direct usine Manchester | D.S Hair Beauty",
+    h1: "Fournisseur d'extensions de cheveux — Direct usine",
+    metaTitle: "Fournisseur d'extensions de cheveux direct usine UK | D.S Hair Beauty",
     metaDescription:
-      "Fabricant d'extensions de cheveux direct usine avec entrepôt au Royaume-Uni à venir. Livraison express en 3 à 5 jours dans tout le Royaume-Uni et l'UE, tarifs professionnels et support couleur.",
+      "Fabricant d'extensions de cheveux direct usine. Livraison express en 3 à 5 jours dans tout le Royaume-Uni et l'UE, tarifs professionnels et support couleur.",
     intro:
-      "D.S Hair Beauty est un fabricant direct usine. Notre entrepôt au Royaume-Uni arrive — les salons bénéficient d'une livraison directe usine express en 3 à 5 jours au tarif fabricant, sans marge d'intermédiaire.",
+      "D.S Hair Beauty est un fabricant direct usine. Les salons bénéficient d'une livraison directe usine express en 3 à 5 jours au tarif fabricant, sans marge d'intermédiaire.",
     sections: [
       {
-        heading: "Approvisionnement direct usine. Entrepôt au Royaume-Uni à venir.",
+        heading: "Approvisionnement direct usine.",
         body: "Contrairement aux grossistes qui achètent à des importateurs et revendent avec une marge, D.S Hair Beauty s'approvisionne directement auprès des principaux fabricants de cheveux Remy de Chine. Les commandes sont expédiées directement de l'usine avec une livraison express en 3 à 5 jours — vous bénéficiez ainsi d'une qualité directe usine avec une exécution rapide au Royaume-Uni.",
       },
       {
@@ -84,7 +84,7 @@ export const frSeoPages: SeoPage[] = [
     ],
     bullets: [
       "Tarifs fabricant direct usine",
-      "Entrepôt au Royaume-Uni à venir — livraison directe usine express en 3 à 5 jours",
+      "Livraison directe usine express en 3 à 5 jours",
       "Parcours de compte professionnel pour les salons",
       "Méthodes d'extensions professionnelles et soins",
       "Mise en correspondance des couleurs et support WhatsApp",
@@ -94,15 +94,15 @@ export const frSeoPages: SeoPage[] = [
       {
         question: "Où sont stockés vos produits ?",
         answer:
-          "Notre entrepôt au Royaume-Uni arrive. Nous nous approvisionnons directement auprès de fabricants en Chine — vous bénéficiez ainsi du tarif fabricant avec une livraison express en 3 à 5 jours au Royaume-Uni.",
+          "Nous livrons directement usine de fabricants en Chine — vous bénéficiez ainsi du tarif fabricant avec une livraison express en 3 à 5 jours au Royaume-Uni.",
       },
       {
-        question: "Les salons de Manchester peuvent-ils ouvrir un compte professionnel ?",
+        question: "Les salons du UK & UE peuvent-ils ouvrir un compte professionnel ?",
         answer:
           "Oui. Les salons et stylistes peuvent postuler via la voie partenaire salon ou contacter l'équipe directement.",
       },
       {
-        question: "Fournissez-vous uniquement à Manchester ?",
+        question: "Fournissez-vous uniquement au UK ?",
         answer:
           "Non. Nous fournissons des salons dans tout le Royaume-Uni et l'UE avec une livraison directe usine express en 3 à 5 jours à l'échelle nationale.",
       },
@@ -479,7 +479,7 @@ export const frSeoPages: SeoPage[] = [
       "Page GEO spécifique à Leeds",
       "Prend en charge les demandes de salons et stylistes mobiles",
       "Relie les recherches par ville à la conversion du compte professionnel",
-      "Ajoute une couverture du Royaume-Uni au-delà de Manchester et Londres",
+      "Ajoute une couverture du Royaume-Uni",
       "Utile pour le maillage interne et l'expansion du plan du site",
     ],
     faqs: [

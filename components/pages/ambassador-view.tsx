@@ -287,7 +287,7 @@ export function AmbassadorView({ locale }: { locale: Locale }) {
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">{c.locationLabel}</label>
-                      <Input name="location" placeholder="e.g. Didsbury, Manchester" required />
+                      <Input name="location" placeholder="e.g. your city" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">{c.referralLabel}</label>

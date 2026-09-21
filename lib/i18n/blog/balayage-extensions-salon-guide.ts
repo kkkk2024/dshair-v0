@@ -203,7 +203,7 @@ const en: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "Get Trade Pricing on Balayage Extensions",
   ctaBoxBody:
-    "DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to Manchester salons and across the Northwest. Free digital colour catalogue with your first trade order. UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.",
+    "DS Hair & Beauty supplies pre-coloured balayage weft in 7 tone families to salons across the UK & EU. Free digital colour catalogue with your first trade order. factory-direct express 3–5 day shipping. Apply for your trade account to access wholesale pricing on balayage weft, tape-in, and custom colour blends.",
   ctaPrimaryLabel: "Apply for Trade Account",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Ask About Balayage Stock",
@@ -346,7 +346,7 @@ const de: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "Holen Sie sich Trade-Preise für Balayage Extensions",
   ctaBoxBody:
-    "D.S Hair & Beauty liefert vorgefärbtes Balayage Weft in 7 Tonfamilien an Salons in Manchester und im gesamten Nordwesten. Kostenloser digitaler Farbkatalog mit Ihrer ersten Trade-Bestellung. UK-Lager startet + express 3–5 Tage Versand. Beantragen Sie Ihr Trade-Konto, um Großhandelspreise für Balayage Weft, tape-in und Custom Colour Blends zu erhalten.",
+    "D.S Hair & Beauty liefert vorgefärbtes Balayage Weft in 7 Tonfamilien an Salons in Manchester und im gesamten Nordwesten. Kostenloser digitaler Farbkatalog mit Ihrer ersten Trade-Bestellung. express 3–5 Tage Versand von unserem Fertigungspartner. Beantragen Sie Ihr Trade-Konto, um Großhandelspreise für Balayage Weft, tape-in und Custom Colour Blends zu erhalten.",
   ctaPrimaryLabel: "Trade-Konto beantragen",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Balayage-Bestand anfragen",
@@ -489,7 +489,7 @@ const fr: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "Obtenez des prix Trade sur les extensions Balayage",
   ctaBoxBody:
-    "D.S Hair & Beauty fournit du balayage weft pré-coloré en 7 familles de tons aux salons de Manchester et dans tout le Nord-Ouest. Catalogue couleur numérique gratuit avec votre première commande trade. Entrepôt UK à venir + expédition express 3–5 jours. Demandez votre compte trade pour accéder aux prix de gros sur le balayage weft, tape-in et custom colour blends.",
+    "D.S Hair & Beauty fournit du balayage weft pré-coloré en 7 familles de tons aux salons de Manchester et dans tout le Nord-Ouest. Catalogue couleur numérique gratuit avec votre première commande trade. expédition express 3–5 jours depuis notre partenaire de fabrication. Demandez votre compte trade pour accéder aux prix de gros sur le balayage weft, tape-in et custom colour blends.",
   ctaPrimaryLabel: "Demander un compte Trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Demander le stock balayage",
@@ -632,7 +632,7 @@ const ar: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "احصلي على أسعار التجارة لإكسسوارات بالاياج",
   ctaBoxBody:
-    "تزوّد D.S Hair & Beauty ويف بالاياج الملون مسبقاً في 7 عائلات درجات لصالونات Manchester وفي كل الشمال الغربي. كتالوج ألوان رقمي مجاني مع أول طلب تجاري لك. مستودع UK قادم + شحن سريع 3–5 أيام. اطلبي حساباً تجارياً للوصول إلى أسعار الجملة على ويف بالاياج وtape-in ومزيج الألوان المخصص.",
+    "تزوّد D.S Hair & Beauty ويف بالاياج الملون مسبقاً في 7 عائلات درجات لصالونات Manchester وفي كل الشمال الغربي. كتالوج ألوان رقمي مجاني مع أول طلب تجاري لك. شحن سريع 3–5 أيام من شريك التصنيع لدينا. اطلبي حساباً تجارياً للوصول إلى أسعار الجملة على ويف بالاياج وtape-in ومزيج الألوان المخصص.",
   ctaPrimaryLabel: "اطلبي حساباً تجارياً",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "اسألي عن مخزون بالاياج",
@@ -775,7 +775,7 @@ const sv: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "Få Trade-priser på Balayage Förlängningar",
   ctaBoxBody:
-    "D.S Hair & Beauty levererar förfärgat balayage weft i 7 tonfamiljer till salonger i Manchester och i hela Nordväst. Gratis digital färgkatalog med din första trade-order. UK-lager kommer + express 3–5 dagars frakt. Ansök om ditt trade-konto för att få partipriser på balayage weft, tape-in och custom colour blends.",
+    "D.S Hair & Beauty levererar förfärgat balayage weft i 7 tonfamiljer till salonger i Manchester och i hela Nordväst. Gratis digital färgkatalog med din första trade-order. express 3–5 dagars frakt från vår tillverkningspartner. Ansök om ditt trade-konto för att få partipriser på balayage weft, tape-in och custom colour blends.",
   ctaPrimaryLabel: "Ansök om Trade-konto",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Fråga om Balayage-lager",
@@ -918,7 +918,7 @@ const pl: BalayageExtensionsSalonGuideContent = {
   ],
   ctaBoxTitle: "Zyskaj Ceny Trade na Przedłużenia Balayage",
   ctaBoxBody:
-    "D.S Hair & Beauty dostarcza wstępnie pokolorowany weft balayage w 7 rodzinach odcieni do salonów w Manchester i w całym północno-zachodnim regionie. Bezpłatny cyfrowy katalog kolorów przy pierwszym zamówieniu trade. Magazyn UK wdrożony + ekspresowa wysyłka 3–5 dni. Złóż wniosek o konto trade, aby uzyskać ceny hurtowe na weft balayage, tape-in i niestandardowe mieszanki kolorów.",
+    "D.S Hair & Beauty dostarcza wstępnie pokolorowany weft balayage w 7 rodzinach odcieni do salonów w Manchester i w całym północno-zachodnim regionie. Bezpłatny cyfrowy katalog kolorów przy pierwszym zamówieniu trade. ekspresowa wysyłka 3–5 dni od naszego partnera produkcyjnego. Złóż wniosek o konto trade, aby uzyskać ceny hurtowe na weft balayage, tape-in i niestandardowe mieszanki kolorów.",
   ctaPrimaryLabel: "Złóż wniosek o konto Trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Zapytaj o stan balayage",

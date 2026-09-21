@@ -64,12 +64,12 @@ export default function ManchesterSupplierPage() {
 
               <h3>1. Manufacturer Pricing — No Middleman Markup</h3>
               <p>
-                When you buy from a factory-direct supplier, you are paying manufacturer prices — not distributor markup on top of importer markup. For a busy salon ordering weekly, the savings are significant. D.S HAIR & BEAUTY sources directly from China&apos;s leading Remy hair manufacturers and holds stock in Manchester for fast UK delivery.
+                When you buy from a factory-direct supplier, you are paying manufacturer prices — not distributor markup on top of importer markup. For a busy salon ordering weekly, the savings are significant. D.S HAIR & BEAUTY sources directly from China&apos;s leading Remy hair manufacturers and ships express 3-5 days from our manufacturing partner.
               </p>
 
-              <h3>2. Selected UK Stock + Express Shipping</h3>
+              <h3>2. Express Factory-Direct Shipping</h3>
               <p>
-                Our UK warehouse is launching — so when you need hand-tied weft for a client booking, it ships from the UK, not from a factory in Guangzhou. No cross-continental wait times. Factory-direct quality, locally stocked.
+                Our extensions ship factory-direct via express (3–5 days) — so when you need hand-tied weft for a client booking, it arrives fast without cross-continental wait times. Factory-direct quality, reliable delivery.
               </p>
 
               <h3>3. Real Quality Control</h3>
@@ -101,7 +101,7 @@ export default function ManchesterSupplierPage() {
               <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 my-8 not-prose">
                 <h3 className="font-semibold text-lg mb-2">DS Hair Beauty — Factory-Direct. UK &amp; EU Trade.</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  19 years of industry experience. Direct factory sourcing. Selected UK warehouse launching + factory-direct express 3–5 day shipping. Free digital colour catalogue with your first trade order. No minimum order to start.
+                  19 years of industry experience. Direct factory sourcing. Selected factory-direct express 3–5 day shipping. Free digital colour catalogue with your first trade order. No minimum order to start.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>

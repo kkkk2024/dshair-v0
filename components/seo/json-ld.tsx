@@ -27,29 +27,16 @@ export function OrganizationJsonLd() {
           "UK & EU's trusted factory-direct wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Express 3–5 day shipping for UK & EU orders.",
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Manchester',
-          addressLocality: 'Manchester',
-          addressRegion: 'Greater Manchester',
-          postalCode: 'M1',
+          addressLocality: 'United Kingdom',
           addressCountry: {
             '@type': 'Country',
             name: 'GB',
           },
         },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: 53.4808,
-          longitude: -2.2426,
-        },
         areaServed: [
           {
-            '@type': 'City',
-            name: 'Manchester',
-            sameAs: 'https://en.wikipedia.org/wiki/Manchester',
-          },
-          {
-            '@type': 'AdministrativeArea',
-            name: 'Greater Manchester',
+            '@type': 'Country',
+            name: 'United Kingdom',
           },
           {
             '@type': 'Country',
@@ -224,31 +211,20 @@ export function LocalBusinessJsonLd() {
       "UK & EU's trusted factory-direct wholesale hair extension supplier. 100% Remy human hair — hand-tied weft, balayage, nano ring, tape-in, K-tip, butterfly weft & toppers. Trade pricing for professional salons. 19 years industry experience. Express 3–5 day shipping for UK & EU orders.",
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Manchester',
-      addressRegion: 'Greater Manchester',
-      postalCode: 'M1',
+      addressLocality: 'United Kingdom',
       addressCountry: {
         '@type': 'Country',
         name: 'GB',
       },
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 53.4808,
-      longitude: -2.2426,
-    },
     areaServed: [
-      {
-        '@type': 'City',
-        name: 'Manchester',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Greater Manchester',
-      },
       {
         '@type': 'Country',
         name: 'United Kingdom',
+      },
+      {
+        '@type': 'Country',
+        name: 'European Union',
       },
     ],
     telephone: '+44-7780-480868',

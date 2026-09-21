@@ -254,7 +254,7 @@ const en: HairExtensionMethodsComparisonContent = {
   ],
   ctaBoxTitle: "Trade Supply for Every Method",
   ctaBoxBody:
-    "DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free digital colour catalogue, and UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing.",
+    "DS Hair & Beauty supplies professional-grade hand-tied weft, nano ring, tape-in, K-tip, clip-in, and butterfly weft extensions to Manchester salons. Trade pricing, free digital colour catalogue, and factory-direct express 3–5 day shipping. Apply for your trade account to access wholesale pricing.",
   ctaPrimaryLabel: "Apply for Trade Account",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -454,7 +454,7 @@ const de: HairExtensionMethodsComparisonContent = {
   ],
   ctaBoxTitle: "Trade-Belieferung für jede Methode",
   ctaBoxBody:
-    "DS Hair & Beauty beliefert Salons in Manchester mit professionellen Hand-Tied-Weft-, nano-ring-, tape-in-, K-tip-, clip-in- und Butterfly-Weft-Extensions. Trade-Preise, kostenloser digitaler Farbkatalog sowie UK-Lagerstart + Expressversand in 3–5 Tagen. Beantragen Sie Ihr Trade-Konto für Großhandelspreise.",
+    "DS Hair & Beauty beliefert Salons in Manchester mit professionellen Hand-Tied-Weft-, nano-ring-, tape-in-, K-tip-, clip-in- und Butterfly-Weft-Extensions. Trade-Preise, kostenloser digitaler Farbkatalog sowie Expressversand in 3–5 Tagen. Beantragen Sie Ihr Trade-Konto für Großhandelspreise.",
   ctaPrimaryLabel: "Trade-Konto beantragen",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp-Kontakt",
@@ -654,7 +654,7 @@ const fr: HairExtensionMethodsComparisonContent = {
   ],
   ctaBoxTitle: "Approvisionnement trade pour chaque méthode",
   ctaBoxBody:
-    "DS Hair & Beauty fournit des extensions professionnelles hand-tied weft, nano ring, tape-in, K-tip, clip-in et butterfly weft aux salons de Manchester. Tarifs trade, catalogue de couleurs numérique gratuit et lancement d'un entrepôt UK + expédition express 3–5 jours. Demandez votre compte trade pour accéder aux prix de gros.",
+    "DS Hair & Beauty fournit des extensions professionnelles hand-tied weft, nano ring, tape-in, K-tip, clip-in et butterfly weft aux salons de Manchester. Tarifs trade, catalogue de couleurs numérique gratuit et expédition express 3–5 jours. Demandez votre compte trade pour accéder aux prix de gros.",
   ctaPrimaryLabel: "Demander un compte trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "Écrire sur WhatsApp",
@@ -854,7 +854,7 @@ const ar: HairExtensionMethodsComparisonContent = {
   ],
   ctaBoxTitle: "توريد trade لكل طريقة",
   ctaBoxBody:
-    "توفر DS Hair & Beauty وصلات احترافية من hand-tied weft وnano ring وtape-in وK-tip وclip-in وbutterfly weft لصالونات Manchester. أسعار trade، كتالوج ألوان رقمي مجاني، وإطلاق مستودع UK + شحن سريع خلال 3–5 أيام. قدّم طلب حساب trade للوصول إلى أسعار الجملة.",
+    "توفر DS Hair & Beauty وصلات احترافية من hand-tied weft وnano ring وtape-in وK-tip وclip-in وbutterfly weft لصالونات Manchester. أسعار trade، كتالوج ألوان رقمي مجاني، وشحن سريع خلال 3–5 أيام. قدّم طلب حساب trade للوصول إلى أسعار الجملة.",
   ctaPrimaryLabel: "قدّم طلب حساب Trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "راسلنا عبر WhatsApp",
@@ -1054,7 +1054,7 @@ const sv: HairExtensionMethodsComparisonContent = {
   ],
   ctaBoxTitle: "Trade-leverans för varje metod",
   ctaBoxBody:
-    "DS Hair & Beauty levererar professionella hand-tied-weft-, nano-ring-, tape-in-, K-tip-, clip-in- och butterfly-weft-förlängningar till salonger i Manchester. Trade-priser, gratis digital färgkatalog och lansering av UK-lager + expressfrakt 3–5 dagar. Ansök om ditt trade-konto för att få grossistpriser.",
+    "DS Hair & Beauty levererar professionella hand-tied-weft-, nano-ring-, tape-in-, K-tip-, clip-in- och butterfly-weft-förlängningar till salonger i Manchester. Trade-priser, gratis digital färgkatalog och expressfrakt 3–5 dagar. Ansök om ditt trade-konto för att få grossistpriser.",
   ctaPrimaryLabel: "Ansök om trade-konto",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp-kontakt",

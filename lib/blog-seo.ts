@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "How long does private label production take?",
-        answer: "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. Our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
+        answer: "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. The full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
       },
       {
         question: "Can a small salon start a private label line?",
@@ -233,7 +233,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How long does it take to launch a private label hair extension line?",
         answer:
-          "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. Our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
+          "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. The full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one.",
       },
       {
         question: "How do I choose a hair extension manufacturing partner in the UK?",
@@ -1075,20 +1075,20 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "manchester-hair-extension-supplier",
-    title: "Why Manchester Salons Are Switching to Local Hair Extension Suppliers",
+    title: "Why Salons Are Switching to Factory-Direct Hair Extension Suppliers",
     excerpt:
-      "Faster supply, better colour matching, and direct factory quality — why more Manchester salons are choosing a local wholesale partner over large distributors.",
+      "Faster supply, better colour matching, and direct factory quality — why more UK & EU salons are choosing a factory-direct wholesale partner over large distributors.",
     category: "Business",
     readTime: "6 min read",
     date: "2025-01-20",
     image: "https://images.unsplash.com/photo-1470259078422-826894b933aa?w=800&q=80",
     faqs: [
       {
-        question: "Are there hair extension suppliers in Manchester?",
-        answer: "Yes — Manchester has trade suppliers serving salons across the North West, including factory-direct manufacturers offering 100% Remy human hair, trade pricing, and salon support. Many also ship nationwide with express delivery.",
+        question: "Are there hair extension suppliers for UK & EU salons?",
+        answer: "Yes — factory-direct manufacturers offer 100% Remy human hair, trade pricing, and salon support to salons across the UK & EU, with express 3–5 day delivery.",
       },
       {
-        question: "Why choose a local Manchester supplier?",
+        question: "Why choose a factory-direct supplier?",
         answer: "A local supplier can mean faster replenishments, easier colour matching, and a direct relationship with someone who understands the local market. For urgent top-ups, local stock eliminates wait time that costs you a sale.",
       },
       {

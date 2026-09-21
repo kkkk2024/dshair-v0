@@ -192,7 +192,7 @@ export function SwitchTradeSupplierView({ locale }: { locale: Locale }) {
               </div>
               <p className="text-sm text-primary-foreground/60 mt-6">
                 {c.manufacturingArmLabel}{" "}
-                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-foreground">wigexporter.com ↗</a>
+                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-foreground">our manufacturing arm ↗</a>
               </p>
             </div>
           </section>

@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 // Image metadata
-export const alt = 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier Manchester UK'
+export const alt = 'D.S HAIR & BEAUTY | Professional Hair Extension Supplier UK & EU'
 export const size = {
   width: 1200,
   height: 630,
@@ -131,7 +131,7 @@ export default async function Image() {
               textTransform: 'uppercase',
             }}
           >
-            Wholesale Supplier · Manchester, UK · Est. 2006
+            Wholesale Supplier · United Kingdom · Est. 2006
           </div>
         </div>
 

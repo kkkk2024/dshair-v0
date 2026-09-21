@@ -237,7 +237,7 @@ const en: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "Manchester Salons: Get Trade Pricing on Hand-Tied Weft",
   ctaBoxBody:
-    "D.S Hair & Beauty supplies hand-tied weft to professional salons across Manchester and the Northwest. Free digital colour catalogue with your first trade order. UK warehouse launching + express 3–5 day shipping. Apply for your trade account to access wholesale pricing on double-drawn Remy hand-tied weft in 40+ shades.",
+    "D.S Hair & Beauty supplies hand-tied weft to professional salons across the UK & EU. Free digital colour catalogue with your first trade order. factory-direct express 3–5 day shipping. Apply for your trade account to access wholesale pricing on double-drawn Remy hand-tied weft in 40+ shades.",
   ctaPrimaryLabel: "Apply for Trade Account",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -425,7 +425,7 @@ const de: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "Salons in Manchester: Trade-Preise für Hand-Tied Weft erhalten",
   ctaBoxBody:
-    "D.S Hair & Beauty beliefert Profi-Salons in ganz Manchester und dem Nordwesten mit hand-tied weft. Kostenloser digitaler Farbkatalog zur ersten Trade-Bestellung. UK-Lager wird eröffnet + Expressversand in 3–5 Tagen. Beantragen Sie Ihr Trade-Konto für Großhandelspreise auf double-drawn Remy hand-tied weft in über 40 Farbtönen.",
+    "D.S Hair & Beauty beliefert Profi-Salons in ganz Manchester und dem Nordwesten mit hand-tied weft. Kostenloser digitaler Farbkatalog zur ersten Trade-Bestellung. Expressversand in 3–5 Tagen. Beantragen Sie Ihr Trade-Konto für Großhandelspreise auf double-drawn Remy hand-tied weft in über 40 Farbtönen.",
   ctaPrimaryLabel: "Trade-Konto beantragen",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -613,7 +613,7 @@ const fr: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "Salons de Manchester : obtenez les prix trade sur le hand-tied weft",
   ctaBoxBody:
-    "D.S Hair & Beauty fournit du hand-tied weft aux salons professionnels de Manchester et du Nord-Ouest. Catalogue de couleurs numérique gratuit avec votre première commande trade. Entrepôt UK en cours de lancement + expédition express sous 3 à 5 jours. Demandez votre compte trade pour accéder aux prix de gros sur le hand-tied weft Remy double-drawn en plus de 40 nuances.",
+    "D.S Hair & Beauty fournit du hand-tied weft aux salons professionnels de Manchester et du Nord-Ouest. Catalogue de couleurs numérique gratuit avec votre première commande trade. Expédition express sous 3 à 5 jours. Demandez votre compte trade pour accéder aux prix de gros sur le hand-tied weft Remy double-drawn en plus de 40 nuances.",
   ctaPrimaryLabel: "Demander un compte Trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -801,7 +801,7 @@ const ar: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "صالونات مانشستر: احصل على أسعار تجارية لهاند-تايد ويفت",
   ctaBoxBody:
-    "تورّد D.S Hair & Beauty هاند-تايد ويفت للصالونات الاحترافية في جميع أنحاء مانشستر والشمال الغربي. كتالوج ألوان رقمي مجاني مع أول طلب تجاري. مستودع في المملكة المتحدة قيد الإطلاق + شحن سريع خلال 3–5 أيام. تقدّم بطلبك للحصول على حساب تجاري للوصول إلى أسعار الجملة لهاند-تايد ويفت Remy دبل-دراون بأكثر من 40 درجة لون.",
+    "تورّد D.S Hair & Beauty هاند-تايد ويفت للصالونات الاحترافية في جميع أنحاء مانشستر والشمال الغربي. كتالوج ألوان رقمي مجاني مع أول طلب تجاري. شحن سريع خلال 3–5 أيام. تقدّم بطلبك للحصول على حساب تجاري للوصول إلى أسعار الجملة لهاند-تايد ويفت Remy دبل-دراون بأكثر من 40 درجة لون.",
   ctaPrimaryLabel: "قدّم طلب حساب تجاري",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -989,7 +989,7 @@ const sv: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "Salonger i Manchester: få grossistpriser på hand-tied weft",
   ctaBoxBody:
-    "D.S Hair & Beauty levererar hand-tied weft till professionella salonger i Manchester och nordvästra England. Gratis digital färgkatalog med din första grossistorder. UK-lager lanseras + expresstransport på 3–5 dagar. Ansök om ditt grossistkonto för att få tillgång till partipriser på double-drawn Remy hand-tied weft i över 40 nyanser.",
+    "D.S Hair & Beauty levererar hand-tied weft till professionella salonger i Manchester och nordvästra England. Gratis digital färgkatalog med din första grossistorder. Expresstransport på 3–5 dagar. Ansök om ditt grossistkonto för att få tillgång till partipriser på double-drawn Remy hand-tied weft i över 40 nyanser.",
   ctaPrimaryLabel: "Ansök om grossistkonto",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",
@@ -1177,7 +1177,7 @@ const pl: HandTiedWeftGuideContent = {
   ],
   ctaBoxTitle: "Salony w Manchesterze: uzyskaj ceny trade na hand-tied weft",
   ctaBoxBody:
-    "D.S Hair & Beauty dostarcza hand-tied weft profesjonalnym salonom w Manchesterze i północno-zachodniej Anglii. Darmowy cyfrowy katalog kolorów przy pierwszym zamówieniu trade. Magazyn UK wdrożony + ekspresowa wysyłka 3–5 dni. Złóż wniosek o konto trade, aby uzyskać ceny hurtowe na double-drawn Remy hand-tied weft w ponad 40 odcieniach.",
+    "D.S Hair & Beauty dostarcza hand-tied weft profesjonalnym salonom w Manchesterze i północno-zachodniej Anglii. Darmowy cyfrowy katalog kolorów przy pierwszym zamówieniu trade. ekspresowa wysyłka 3–5 dni od naszego partnera produkcyjnego. Złóż wniosek o konto trade, aby uzyskać ceny hurtowe na double-drawn Remy hand-tied weft w ponad 40 odcieniach.",
   ctaPrimaryLabel: "Złóż wniosek o konto Trade",
   ctaPrimaryHref: "/salon-partners",
   ctaSecondaryLabel: "WhatsApp Us",

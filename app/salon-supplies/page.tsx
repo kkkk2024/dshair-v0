@@ -5,7 +5,7 @@ import { SalonSuppliesView } from "@/components/salon/salon-supplies-view"
 export const metadata: Metadata = {
   title: "Salon Consumables & Hair Extension Tools | Wholesale Supplies UK | D.S Hair Beauty",
   description:
-    "Professional hair extension consumables for UK salons. Nano rings, tape tabs, sectioning clips, keratin glue & more. Quality supplies at factory prices. Free delivery. Trade pricing available.",
+    "Professional hair extension consumables for UK salons. Nano rings, tape tabs, sectioning clips, keratin glue & more. Quality supplies at factory prices. Express delivery. Trade pricing available.",
   keywords: [
     "nano rings UK", "tape tabs hair extensions", "sectioning clips salon", "hair extension tools UK",
     "keratin glue sticks", "threading tool hair extensions", "salon consumables wholesale",

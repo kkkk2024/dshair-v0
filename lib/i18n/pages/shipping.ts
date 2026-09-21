@@ -61,7 +61,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "Trade account holders get priority handling and dedicated delivery routes.",
         bullets: [
           "Fast dispatch on trade orders; express 3–5 day delivery",
-          "Free UK delivery on all trade orders, no minimum spend",
+          "Express UK delivery on all trade orders, no minimum spend",
           "Dedicated WhatsApp support line for delivery tracking"
         ]
       }
@@ -81,7 +81,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "Dispatched",
-        desc: "You'll receive a tracking link by email as soon as your order leaves our manufacturing partner (UK warehouse launching)."
+        desc: "You'll receive a tracking link by email as soon as your order leaves our manufacturing partner."
       }
     ],
     ctaTitle: "Still have questions about delivery?",
@@ -91,7 +91,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
   },
   de: {
     metaTitle: "Versand & Lieferung | D.S HAIR & BEAUTY",
-    metaDescription: "Versand- und Lieferinformationen für D.S Hair & Beauty. Kostenloser UK-Versand bei Bestellungen ab £175. Schneller Versand; Expresslieferung in 3–5 Tagen. Internationaler Versand verfügbar.",
+    metaDescription: "Versand- und Lieferinformationen für D.S Hair & Beauty. Express UK-Versand bei Bestellungen ab £175. Schneller Versand; Expresslieferung in 3–5 Tagen. Internationaler Versand verfügbar.",
     heroEyebrow: "Kundeninformationen",
     heroTitle: "Versand & Lieferung",
     heroSubtitle: "Schneller, sendungsverfolgter Versand im gesamten UK und weltweit. Schneller Versand; Expresslieferung in 3–5 Tagen für Bestellungen vor 14 Uhr (UK-Zeit).",
@@ -131,7 +131,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "Inhaber von Trade-Konten erhalten Vorrang und dedizierte Lieferwege.",
         bullets: [
           "Schneller Versand bei Trade-Bestellungen; Expresslieferung in 3–5 Tagen",
-          "Kostenloser UK-Versand bei allen Trade-Bestellungen, ohne Mindestbestellwert",
+          "Express UK-Versand bei allen Trade-Bestellungen, ohne Mindestbestellwert",
           "Dedizierte WhatsApp-Supportlinie für Lieferverfolgung"
         ]
       }
@@ -151,7 +151,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "Versendet",
-        desc: "Sie erhalten einen Sendungsverfolgungs-Link per E-Mail, sobald Ihre Bestellung unser Fertigungspartner (UK warehouse launching) verlässt."
+        desc: "Sie erhalten einen Sendungsverfolgungs-Link per E-Mail, sobald Ihre Bestellung unser Fertigungspartner verlässt."
       }
     ],
     ctaTitle: "Noch Fragen zur Lieferung?",
@@ -201,7 +201,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "Les détenteurs de compte pro bénéficient d'un traitement prioritaire et de circuits de livraison dédiés.",
         bullets: [
           "Expédition rapide des commandes pro ; livraison express en 3–5 jours",
-          "Livraison UK gratuite sur toutes les commandes pro, sans minimum d'achat",
+          "Livraison express UK sur toutes les commandes pro, sans minimum d'achat",
           "Ligne de support WhatsApp dédiée pour le suivi des livraisons"
         ]
       }
@@ -221,7 +221,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "Expédiée",
-        desc: "Vous recevrez un lien de suivi par e-mail dès que votre commande quitte notre partenaire de fabrication (UK warehouse launching)."
+        desc: "Vous recevrez un lien de suivi par e-mail dès que votre commande quitte notre partenaire de fabrication."
       }
     ],
     ctaTitle: "Vous avez encore des questions sur la livraison ?",
@@ -271,7 +271,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "يحصل أصحاب الحسابات التجارية على أولوية ومسارات توصيل مخصصة.",
         bullets: [
           "شحن سريع لطلبات التجارة؛ توصيل سريع خلال 3–5 أيام",
-          "توصيل مجاني في UK لجميع طلبات التجارة دون حد أدنى",
+          "توصيل سريع في UK لجميع طلبات التجارة دون حد أدنى",
           "خط دعم مخصص عبر WhatsApp لتتبع التوصيل"
         ]
       }
@@ -291,7 +291,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "تم الشحن",
-        desc: "ستتلقى رابط تتبع عبر البريد الإلكتروني بمجرد مغادرة طلبك شريك التصنيع لدينا (UK warehouse launching)."
+        desc: "ستتلقى رابط تتبع عبر البريد الإلكتروني بمجرد مغادرة طلبك شريك التصنيع لدينا."
       }
     ],
     ctaTitle: "لا يزال لديك أسئلة حول التوصيل؟",
@@ -341,7 +341,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "Innehavare av handelskonto får prioriterad hantering och dedikerade leveransvägar.",
         bullets: [
           "Snabb hantering av handelsbeställningar; expressleverans på 3–5 dagar",
-          "Gratis UK-frakt på alla handelsbeställningar, inget minimibelopp",
+          "Express UK-frakt på alla handelsbeställningar, inget minimibelopp",
           "Dedikerad WhatsApp-support för leveransspårning"
         ]
       }
@@ -361,7 +361,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "Skickad",
-        desc: "Du får en spårningslänk via e-post så snart din bestellning lämnar vår tillverkningspartner (UK warehouse launching)."
+        desc: "Du får en spårningslänk via e-post så snart din bestellning lämnar vår tillverkningspartner."
       }
     ],
     ctaTitle: "Har du fortfarande frågor om leveransen?",
@@ -371,7 +371,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
   },
   pl: {
     metaTitle: "Wysyłka i Dostawa | D.S HAIR & BEAUTY",
-    metaDescription: "Informacje o wysyłce i dostawie dla D.S Hair & Beauty. Darmowa dostawa w UK przy zamówieniach powyżej £175. Szybka wysyłka; ekspresowa dostawa w 3–5 dni. Dostępna wysyłka międzynarodowa.",
+    metaDescription: "Informacje o wysyłce i dostawie dla D.S Hair & Beauty. Ekspresowa dostawa UK przy zamówieniach powyżej £175. Szybka wysyłka; ekspresowa dostawa w 3–5 dni. Dostępna wysyłka międzynarodowa.",
     heroEyebrow: "Informacje dla klienta",
     heroTitle: "Wysyłka i Dostawa",
     heroSubtitle: "Szybka, z możliwością śledzenia dostawa w całym UK i na świecie. Szybka wysyłka; ekspresowa dostawa w 3–5 dni dla zamówień złożonych przed 14:00 (czas UK).",
@@ -411,7 +411,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
         desc: "Posiadacze kont handlowych otrzymują priorytetową obsługę i dedykowane trasy dostawy.",
         bullets: [
           "Szybka wysyłka zamówień handlowych; ekspresowa dostawa w 3–5 dni",
-          "Darmowa dostawa w UK dla wszystkich zamówień handlowych, bez minimum",
+          "Ekspresowa dostawa UK dla wszystkich zamówień handlowych, bez minimum",
           "Dedykowana linia wsparcia WhatsApp do śledzenia dostawy"
         ]
       }
@@ -431,7 +431,7 @@ export const shippingContent: Record<Locale, ShippingContent> = {
       {
         step: "Step 03",
         title: "Wysłane",
-        desc: "Otrzymasz link do śledzenia e-mailem, gdy tylko Twoje zamówienie opuści naszego partnera produkcyjnego (UK warehouse launching)."
+        desc: "Otrzymasz link do śledzenia e-mailem, gdy tylko Twoje zamówienie opuści naszego partnera produkcyjnego."
       }
     ],
     ctaTitle: "Nadal masz pytania dotyczące dostawy?",

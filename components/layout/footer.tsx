@@ -217,11 +217,6 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{f.colManufacturing}</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  wigexporter.com &#8599;
-                </a>
-              </li>
-              <li>
                 <Link href="/switch-trade-supplier" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                   {f.manufWhyDirect}
                 </Link>
@@ -252,8 +247,6 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-xs">{f.location}</span>
-              <span className="text-xs">|</span>
-              <a href="https://wigexporter.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-accent transition-colors">{f.manufLabel} &#8599;</a>
               <span className="text-xs">|</span>
               <a href={`mailto:${contactInfo.email}`} className="text-xs hover:text-accent transition-colors">{contactInfo.email}</a>
             </div>

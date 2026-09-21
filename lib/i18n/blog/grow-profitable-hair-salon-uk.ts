@@ -190,7 +190,7 @@ const en: GrowProfitableHairSalonUkContent = {
   s4List: [
     { term: "MOQ", text: "a sensible starting order (we help you size it to your client base so you're not sitting on stock)." },
     { term: "Branding", text: "your logo on packs, custom colour ring, and point-of-sale cards." },
-    { term: "Lead time", text: "our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days) so you can keep promises to clients." },
+    { term: "Lead time", text: "the full range ships factory-direct via express (3–5 days) so you can keep promises to clients." },
     { term: "Support", text: "colour matching, training, and the same 19-years-of-experience backing we give our trade accounts." },
   ],
   s4P4: [
@@ -228,7 +228,7 @@ const en: GrowProfitableHairSalonUkContent = {
     { q: "How can a salon increase profits without raising prices?", a: "Close the leaks first: introduce a deposit/no-show policy, train the front desk to rebook before clients leave, set a retail attach-rate target of 25–35%, and add high-margin extension services. These lift profit per client without touching your menu prices." },
     { q: "Should my salon start its own hair extension brand?", a: "If you already sell extensions and have a loyal client base, private label is often the highest-leverage next step. You keep the margin, own the client relationship, and differentiate from salons that only resell a supplier's name. Start with a small, well-chosen sample order." },
     { q: "What is private label for salons and how does it work?", a: "Private label means extensions are made and packed under your salon's brand — your logo, your colour ring, your packaging. A manufacturing partner (like D.S Hair & Beauty) handles production and quality; you own the brand, the pricing, and the client relationship." },
-    { q: "How long does it take to launch a private label hair extension line?", a: "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. Our UK warehouse is launching; until then the full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one." },
+    { q: "How long does it take to launch a private label hair extension line?", a: "Typically a few weeks to finalise branding and a sample order, then ongoing express replenishment. The full range ships factory-direct via express (3–5 days), so you can promise reliable fulfilment to clients from day one." },
     { q: "How do I choose a hair extension manufacturing partner in the UK?", a: "Look for proven industry experience, 100% Remy human hair as standard, transparent MOQs and lead times, and real training/colour-matching support. See our supplier checklist for the full questions to ask before you commit." },
   ],
   rel1Label: "Related Guide",
@@ -349,7 +349,7 @@ const de: GrowProfitableHairSalonUkContent = {
   s4List: [
     { term: "MOQ", text: "eine sinnvolle Startbestellung (wir helfen, sie auf Ihren Kundenstamm abzustimmen, damit Sie nicht auf Lager sitzen)." },
     { term: "Branding", text: "Ihr Logo auf den Packungen, ein individueller Farbring und Verkaufskarten am Point of Sale." },
-    { term: "Lieferzeit", text: "unser UK-Lager startet; bis dahin versendet die gesamte Kollektion direkt ab Werk per Express (3–5 Tage), damit Sie Kundinnen verlässliche Zusagen machen können." },
+    { term: "Lieferzeit", text: "die gesamte Kollektion wird direkt ab Werk per Express (3–5 Tage) versendet, damit Sie Kundinnen verlässliche Zusagen machen können." },
     { term: "Support", text: "Farbabstimmung, Schulung und derselbe Erfahrungsvorsprung aus 19 Jahren, den wir auch unseren Händlerkonten bieten." },
   ],
   s4P4: [
@@ -387,7 +387,7 @@ const de: GrowProfitableHairSalonUkContent = {
     { q: "Wie kann ein Salon den Gewinn steigern, ohne die Preise zu erhöhen?", a: "Schließen Sie zuerst die Verluststellen: Einführung einer Anzahlungs-/No-Show-Politik, Schulung der Rezeption zum Wiederbuchen vor Abreise der Kundinnen, Ziel von 25–35% Retail-Attach-Rate und margenstarke Verlängerungsservices ergänzen. Das hebt den Gewinn pro Kundin, ohne die Menüpreise anzufassen." },
     { q: "Sollte mein Salon eine eigene Haarverlängerungs-Marke starten?", a: "Wenn Sie bereits Verlängerungen verkaufen und einen loyalen Kundenstamm haben, ist Private Label oft der nächste Schritt mit dem größten Hebel. Sie behalten die Marge, kontrollieren die Kundenbeziehung und heben sich von Salons ab, die nur den Namen eines Lieferanten weiterverkaufen. Beginnen Sie mit einer kleinen, gut gewählten Musterbestellung." },
     { q: "Was ist Private Label für Salons und wie funktioniert es?", a: "Private Label bedeutet, dass Verlängerungen unter der Marke Ihres Salons hergestellt und verpackt werden — Ihr Logo, Ihr Farbring, Ihre Verpackung. Ein Fertigungspartner (wie D.S Hair & Beauty) übernimmt Produktion und Qualität; Sie besitzen die Marke, die Preisgestaltung und die Kundenbeziehung." },
-    { q: "Wie lange dauert der Launch einer Private-Label-Haarverlängerungs-Linie?", a: "In der Regel einige Wochen für Branding und Musterbestellung, danach laufende Express-Nachbestellung. Unser UK-Lager startet; bis dahin versendet die gesamte Kollektion direkt ab Werk per Express (3–5 Tage), sodass Sie Kundinnen von Tag eins an verlässliche Lieferung zusagen können." },
+    { q: "Wie lange dauert der Launch einer Private-Label-Haarverlängerungs-Linie?", a: "In der Regel einige Wochen für Branding und Musterbestellung, danach laufende Express-Nachbestellung. Die gesamte Kollektion wird direkt ab Werk per Express (3–5 Tage) versendet, sodass Sie Kundinnen von Tag eins an verlässliche Lieferung zusagen können." },
     { q: "Wie wähle ich einen Fertigungspartner für Haarverlängerungen im UK?", a: "Achten Sie auf nachgewiesene Branchenerfahrung, 100% Remy Echthaar als Standard, transparente MOQs und Lieferzeiten sowie echte Schulungs- und Farbabstimmungs-Unterstützung. Unsere Lieferanten-Checkliste enthält alle Fragen, die Sie vor einer Zusage stellen sollten." },
   ],
   rel1Label: "Verwandter Leitfaden",
@@ -508,7 +508,7 @@ const fr: GrowProfitableHairSalonUkContent = {
   s4List: [
     { term: "MOQ", text: "une commande de départ raisonnable (nous vous aidons à la dimensionner selon votre clientèle pour ne pas rester sur du stock)." },
     { term: "Branding", text: "votre logo sur les packs, un anneau de couleurs personnalisé et des cartes de point de vente." },
-    { term: "Délais", text: "notre entrepôt UK ouvre bientôt ; d'ici là, toute la gamme est expédiée en direct usine par express (3–5 jours) afin que vous puissiez tenir vos promesses envers vos clientes." },
+    { term: "Délais", text: "toute la gamme est expédiée en direct usine par express (3–5 jours) afin que vous puissiez tenir vos promesses envers vos clientes." },
     { term: "Accompagnement", text: "appariement des couleurs, formation et le même appui fort de 19 ans d'expérience que nous offrons à nos comptes pro." },
   ],
   s4P4: [
@@ -546,7 +546,7 @@ const fr: GrowProfitableHairSalonUkContent = {
     { q: "Comment un salon peut-il augmenter ses profits sans hausser ses prix ?", a: "Colmatez d'abord les fuites : instaurez une politique d'acompte/anti no-show, formez l'accueil à rebooker avant le départ des clientes, fixez un objectif d'attache retail de 25–35% et ajoutez des services d'extensions à forte marge. Cela augmente le profit par cliente sans toucher à vos tarifs." },
     { q: "Mon salon doit-il lancer sa propre marque d'extensions ?", a: "Si vous vendez déjà des extensions et disposez d'une clientèle fidèle, le private label est souvent le prochain pas au plus fort effet de levier. Vous conservez la marge, possédez la relation client et vous différenciez des salons qui ne font que revendre le nom d'un fournisseur. Commencez par une petite commande d'échantillons bien choisie." },
     { q: "Qu'est-ce que le private label pour les salons et comment ça marche ?", a: "Le private label signifie que les extensions sont fabriquées et conditionnées sous la marque de votre salon — votre logo, votre anneau de couleurs, votre packaging. Un partenaire de fabrication (comme D.S Hair & Beauty) gère la production et la qualité ; vous possédez la marque, la tarification et la relation client." },
-    { q: "Combien de temps faut-il pour lancer une ligne d'extensions private label ?", a: "Typiquement quelques semaines pour finaliser le branding et une commande d'échantillons, puis un réapprovisionnement express continu. Notre entrepôt UK ouvre bientôt ; d'ici là, toute la gamme part en direct usine par express (3–5 jours), pour que vous puissiez promettre une livraison fiable à vos clientes dès le premier jour." },
+    { q: "Combien de temps faut-il pour lancer une ligne d'extensions private label ?", a: "Typiquement quelques semaines pour finaliser le branding et une commande d'échantillons, puis un réapprovisionnement express continu. Toute la gamme part en direct usine par express (3–5 jours), pour que vous puissiez promettre une livraison fiable à vos clientes dès le premier jour." },
     { q: "Comment choisir un partenaire de fabrication d'extensions au Royaume-Uni ?", a: "Recherchez une expérience avérée du secteur, du 100% cheveux humains Remy en standard, des MOQ et délais transparents, ainsi qu'un réel accompagnement formation/appariement des couleurs. Consultez notre checklist fournisseur pour toutes les questions à poser avant de vous engager." },
   ],
   rel1Label: "Guide associé",
@@ -667,7 +667,7 @@ const ar: GrowProfitableHairSalonUkContent = {
   s4List: [
     { term: "MOQ", text: "طلب بداية معقول (نساعدك على تحديد حجمه بما يناسب قاعدة عملائك حتى لا يتبقى لديك مخزون راكد)." },
     { term: "العلامة", text: "شعارك على العبوات، وحلقة ألوان مخصصة، وبطاقات نقاط البيع." },
-    { term: "وقت التسليم", text: "مستودعنا في UK سيُطلق قريباً؛ حتى ذلك الحين تشحن المجموعة كاملة من المصنع مباشرة عبر الشحن السريع (3–5 أيام) حتى تفي بوعودك للعملاء." },
+    { term: "وقت التسليم", text: "تشحن المجموعة كاملة من المصنع مباشرة عبر الشحن السريع (3–5 أيام) حتى تفي بوعودك للعملاء." },
     { term: "الدعم", text: "مطابقة الألوان والتدريب ونفس الدعم الممتد 19 عاماً من الخبرة الذي نقدمه لحساباتنا التجارية." },
   ],
   s4P4: [
@@ -705,7 +705,7 @@ const ar: GrowProfitableHairSalonUkContent = {
     { q: "كيف يمكن للصالون زيادة الأرباح دون رفع الأسعار؟", a: "أغلق التسريبات أولاً: طبق سياسة عربون/عدم حضور، ودرّب الاستقبال على إعادة الحجز قبل مغادرة العميلات، وحدد هدف ربط تجزئة بنسبة 25–35%، وأضف خدمات وصلات عالية الهامش. هذا يرفع الربح لكل عميلة دون المساس بأسعار قائمتك." },
     { q: "هل يجب أن يطلق صالوني علامة وصلات شعر خاصة به؟", a: "إذا كنت تبيع الوصلات بالفعل ولديك قاعدة عملاء مخلصون، فإن الـ private label غالباً الخطوة التالية الأعلى أثراً. تحتفظ بالهامش، وتملك علاقة العميلة، وتميّز نفسك عن الصالونات التي تعيد بيع اسم مورّد فقط. ابدأ بطلب عينات صغير مُحكَم الاختيار." },
     { q: "ما هو الـ private label للصالونات وكيف يعمل؟", a: "الـ private label يعني أن الوصلات تُصنع وتُغلف تحت علامة صالونك — شعارك وحلقة ألوانك وتغليفك. شريك تصنيع (مثل D.S Hair & Beauty) يتولى الإنتاج والجودة؛ بينما تملك أنت العلامة والتسعير وعلاقة العميلة." },
-    { q: "كم يستغرق إطلاق خط وصلات private label؟", a: "عادة بضعة أسابيع لإنهاء العلامة وطلب العينات، ثم إعادة توريد سريعة مستمرة. مستودعنا في UK سيُطلق قريباً؛ حتى ذلك الحين تشحن المجموعة كاملة من المصنع مباشرة عبر الشحن السريع (3–5 أيام)، لتنفيذ مواعيد التوريد لعملائك من اليوم الأول." },
+    { q: "كم يستغرق إطلاق خط وصلات private label؟", a: "عادة بضعة أسابيع لإنهاء العلامة وطلب العينات، ثم إعادة توريد سريعة مستمرة. تشحن المجموعة كاملة من المصنع مباشرة عبر الشحن السريع (3–5 أيام)، لتنفيذ مواعيد التوريد لعملائك من اليوم الأول." },
     { q: "كيف أختار شريك تصنيع وصلات الشعر في المملكة المتحدة؟", a: "ابحث عن خبرة صناعية مثبتة، وشعر بشري Remy 100% كمعيار، وMOQs ومواعيد تسليم شفافة، ودعم تدريب ومطابقة ألوان حقيقي. راجع قائمة المورّدين لدينا للأسئلة الكاملة قبل الالتزام." },
   ],
   rel1Label: "دليل ذو صلة",
@@ -985,7 +985,7 @@ const pl: GrowProfitableHairSalonUkContent = {
   s4List: [
     { term: "MOQ", text: "rozsądne zamówienie startowe (pomagamy dobrać wielkość do bazy klientów, byś nie siedział na zapasach)." },
     { term: "Branding", text: "Twój logo na opakowaniach, indywidualny pierścień kolorów i karty przy kasie." },
-    { term: "Czas realizacji", text: "nasz magazyn w UK startuje; do tego czasu cała gama wysyłana jest bezpośrednio z fabryki ekspresowo (3–5 dni), byś mógł dotrzymać obietnic klientkom." },
+    { term: "Czas realizacji", text: "cała gama wysyłana jest bezpośrednio z fabryki ekspresowo (3–5 dni), byś mógł dotrzymać obietnic klientkom." },
     { term: "Wsparcie", text: "dobór kolorów, szkolenia i to samo 19-letnie zaplecze doświadczenia, które dajemy naszym kontom hurtowym." },
   ],
   s4P4: [
@@ -1023,7 +1023,7 @@ const pl: GrowProfitableHairSalonUkContent = {
     { q: "Jak salon może zwiększyć zyski bez podnoszenia cen?", a: "Najpierw zatkaj wycieki: wprowadź politykę zadatku/no-show, naucz recepcję ponownej rezerwacji przed wyjściem klientek, ustal cel 25–35% sprzedaży detalicznej i dodaj wysokomarżowe usługi przedłużania. To podnosi zysk na klientkę bez ruszania cen w menu." },
     { q: "Czy mój salon powinien założyć własną markę przedłużeń?", a: "Jeśli już sprzedajesz przedłużenia i masz lojalną bazę klientek, private label to często kolejny krok o największej dźwigni. Zachowujesz marżę, posiadasz relację z klientką i odróżniasz się od salonów odsprzedających tylko nazwę dostawcy. Zacznij od małego, dobrze dobranego zamówienia próbnego." },
     { q: "Czym jest private label dla salonów i jak działa?", a: "Private label oznacza, że przedłużenia są produkowane i pakowane pod marką Twojego salonu — Twoje logo, Twój pierścień kolorów, Twoje opakowania. Partner produkcyjny (jak D.S Hair & Beauty) zajmuje się produkcją i jakością; Ty posiadasz markę, ceny i relację z klientką." },
-    { q: "Ile czasu zajmuje uruchomienie linii przedłużeń private label?", a: "Zazwyczaj kilka tygodni na finalizację brandingu i zamówienia próbnego, potem ciągłe ekspresowe uzupełnianie. Nasz magazyn w UK startuje; do tego czasu cała gama wysyłana jest bezpośrednio z fabryki ekspresowo (3–5 dni), więc możesz obiecać klientkom niezawodną realizację od pierwszego dnia." },
+    { q: "Ile czasu zajmuje uruchomienie linii przedłużeń private label?", a: "Zazwyczaj kilka tygodni na finalizację brandingu i zamówienia próbnego, potem ciągłe ekspresowe uzupełnianie. Cała gama wysyłana jest bezpośrednio z fabryki ekspresowo (3–5 dni), więc możesz obiecać klientkom niezawodną realizację od pierwszego dnia." },
     { q: "Jak wybrać partnera produkcyjnego przedłużeń w UK?", a: "Szukaj udokumentowanego doświadczenia branżowego, 100% naturalnych włosów Remy jako standardu, transparentnych MOQ i terminów oraz realnego wsparcia szkoleniowego i doboru kolorów. Zobacz naszą listę kontrolną dostawców, by poznać wszystkie pytania przed zobowiązaniem." },
   ],
   rel1Label: "Powiązany przewodnik",

@@ -23,7 +23,7 @@ export const seoPages: SeoPage[] = [
     h1: "Hair Extensions Wholesale UK",
     metaTitle: "Hair Extensions Wholesale UK for Salons | D.S Hair Beauty",
     metaDescription:
-      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Factory-direct supplier with UK warehouse launching, express 3–5 day delivery, trade account support and colour matching.",
+      "Wholesale human hair extensions for UK salons, stylists and trade buyers. Factory-direct supplier with factory-direct express 3–5 day delivery, trade account support and colour matching.",
     intro:
       "D.S Hair Beauty supplies professional salons and stylists with 100% Remy human hair extensions, trade account support and practical wholesale ordering with express 3–5 day factory-direct delivery.",
     sections: [
@@ -75,20 +75,20 @@ export const seoPages: SeoPage[] = [
     cta: "Apply for Trade Account",
   },
   {
-    slug: "hair-extension-supplier-manchester",
-    title: "Hair Extension Supplier Manchester",
-    keyword: "hair extension supplier manchester",
+    slug: "hair-extension-supplier-uk",
+    title: "Hair Extension Supplier UK",
+    keyword: "hair extension supplier uk",
     intent: "GEO",
-    h1: "Hair Extension Supplier — Manchester Warehouse Launching",
-    metaTitle: "Factory-Direct Hair Extension Supplier Manchester | D.S Hair Beauty",
+    h1: "Hair Extension Supplier — UK & EU",
+    metaTitle: "Factory-Direct Hair Extension Supplier UK & EU | D.S Hair Beauty",
     metaDescription:
-      "Factory-direct hair extension manufacturer with Manchester warehouse launching. Express UK & EU delivery, trade pricing and colour support.",
+      "Factory-direct hair extension manufacturer supplying salons across the UK & EU. Express 3–5 day delivery, trade pricing and colour support.",
     intro:
-      "D.S Hair Beauty is a factory-direct manufacturer. Our Manchester warehouse is launching — salons get express UK & EU delivery with manufacturer pricing, no middleman markup.",
+      "D.S Hair Beauty is a factory-direct manufacturer supplying salons across the UK & EU. Salons get express 3–5 day delivery with manufacturer pricing, no middleman markup.",
     sections: [
       {
-        heading: "Factory-direct supply. Manchester warehouse launching.",
-        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources factory-direct from China's leading Remy hair manufacturers. Orders ship factory-direct with express UK & EU delivery — and once the Manchester warehouse is live, dispatch from Manchester brings 48-hour delivery.",
+        heading: "Factory-direct supply for UK & EU salons.",
+        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources factory-direct from China's leading Remy hair manufacturers. Orders ship factory-direct with express UK & EU delivery (3–5 days).,
       },
       {
         heading: "Professional product range",
@@ -101,7 +101,7 @@ export const seoPages: SeoPage[] = [
     ],
     bullets: [
       "Factory-direct manufacturer pricing",
-      "Manchester warehouse launching — express UK & EU delivery (48h once live)",
+      "Express UK & EU delivery (3–5 days factory-direct)",
       "Trade account pathway for salons",
       "Professional extension methods and aftercare",
       "Colour matching and WhatsApp support",
@@ -111,15 +111,15 @@ export const seoPages: SeoPage[] = [
       {
         question: "Where is your stock held?",
         answer:
-          "Our Manchester warehouse is launching. We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK delivery (48 hours once the Manchester warehouse is live).",
+          "We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK & EU delivery (3–5 days).,
       },
       {
-        question: "Can Manchester salons open a trade account?",
+        question: "Can UK & EU salons open a trade account?",
         answer:
           "Yes. Salons and stylists can apply through the salon partner route or contact the team directly.",
       },
       {
-        question: "Do you only supply Manchester?",
+        question: "Do you only supply the UK?",
         answer:
           "No. We supply salons across the UK and EU with express 3–5 day factory-direct delivery nationwide.",
       },
@@ -243,7 +243,7 @@ export const seoPages: SeoPage[] = [
       { label: "View tape-in collection", href: "/collections/tape-in" },
       { label: "Apply for trade account", href: "/salon-partners" },
       { label: "Read tape-in guide", href: "/blog/tape-in-extensions-guide" },
-      { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
+      { label: "Hair extension supplier in the UK", href: "/uk-salon-hair-extensions/hair-extension-supplier-uk" },
       { label: "Hair extension supplier in Birmingham", href: "/uk-salon-hair-extensions/hair-extension-supplier-birmingham" },
       { label: "Hair extension supplier in Leeds", href: "/uk-salon-hair-extensions/hair-extension-supplier-leeds" },
     ],
@@ -302,7 +302,7 @@ export const seoPages: SeoPage[] = [
       { label: "Apply for salon partners", href: "/salon-partners" },
       { label: "Request colour matching", href: "/colour-match" },
       { label: "Read the wholesale guide", href: "/blog/wholesale-hair-extensions-uk" },
-      { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
+      { label: "Hair extension supplier in the UK", href: "/uk-salon-hair-extensions/hair-extension-supplier-uk" },
       { label: "Hair extension supplier in Birmingham", href: "/uk-salon-hair-extensions/hair-extension-supplier-birmingham" },
       { label: "Hair extension supplier in Leeds", href: "/uk-salon-hair-extensions/hair-extension-supplier-leeds" },
     ],
@@ -361,7 +361,7 @@ export const seoPages: SeoPage[] = [
       { label: "Open a salon account", href: "/salon-partners" },
       { label: "Compare extension methods", href: "/blog/hair-extension-methods-comparison" },
       { label: "Contact the team", href: "/contact" },
-      { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
+      { label: "Hair extension supplier in the UK", href: "/uk-salon-hair-extensions/hair-extension-supplier-uk" },
       { label: "Hair extension supplier in London", href: "/uk-salon-hair-extensions/hair-extension-supplier-london" },
       { label: "Hair extension supplier in Leeds", href: "/uk-salon-hair-extensions/hair-extension-supplier-leeds" },
     ],
@@ -476,7 +476,7 @@ export const seoPages: SeoPage[] = [
       { label: "Apply for salon partners", href: "/salon-partners" },
       { label: "Read aftercare guide", href: "/blog/hair-extension-aftercare-guide" },
       { label: "Explore trade wholesale", href: "/trade-wholesale" },
-      { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
+      { label: "Hair extension supplier in the UK", href: "/uk-salon-hair-extensions/hair-extension-supplier-uk" },
       { label: "Hair extension supplier in London", href: "/uk-salon-hair-extensions/hair-extension-supplier-london" },
       { label: "Hair extension supplier in Birmingham", href: "/uk-salon-hair-extensions/hair-extension-supplier-birmingham" },
     ],
@@ -511,7 +511,7 @@ export const seoPages: SeoPage[] = [
       "Leeds-specific GEO page",
       "Supports salon and mobile stylist enquiries",
       "Links city searches to trade account conversion",
-      "Adds UK coverage beyond Manchester and London",
+      "Adds UK & EU salon coverage",
       "Useful for internal linking and sitemap expansion",
     ],
     faqs: [
@@ -535,7 +535,7 @@ export const seoPages: SeoPage[] = [
       { label: "Apply for salon partner support", href: "/salon-partners" },
       { label: "Request colour matching", href: "/colour-match" },
       { label: "Read supplier guide", href: "/blog/how-to-choose-hair-extension-supplier" },
-      { label: "Hair extension supplier in Manchester", href: "/uk-salon-hair-extensions/hair-extension-supplier-manchester" },
+      { label: "Hair extension supplier in the UK", href: "/uk-salon-hair-extensions/hair-extension-supplier-uk" },
       { label: "Hair extension supplier in London", href: "/uk-salon-hair-extensions/hair-extension-supplier-london" },
       { label: "Hair extension supplier in Birmingham", href: "/uk-salon-hair-extensions/hair-extension-supplier-birmingham" },
     ],

@@ -61,18 +61,18 @@ export type SalonSuppliesContent = {
 const en: SalonSuppliesContent = {
   metaTitle: 'Salon Consumables & Hair Extension Tools | Wholesale Supplies UK | D.S Hair Beauty',
   metaDescription:
-    'Professional hair extension consumables for UK salons. Nano rings, tape tabs, sectioning clips, keratin glue & more. Quality supplies at factory prices. Free delivery. Trade pricing available.',
+    'Professional hair extension consumables for UK salons. Nano rings, tape tabs, sectioning clips, keratin glue & more. Quality supplies at factory prices. Express delivery. Trade pricing available.',
   heroBadge: 'New — Salon Consumables Range',
   heroTitle1: 'Extension Tools',
   heroTitle2: '& Consumables',
   heroSubtitle:
     'Professional-grade nano rings, tape tabs, tools & supplies for UK extension technicians. Quality products at honest prices — delivered to your salon.',
   shopBundles: 'Shop Bundles',
-  freeSample: 'Free Sample Pack',
-  trustBadges: ['Free UK Delivery', 'Quality Guaranteed', 'Express 3–5 Day Dispatch', 'Factory-Direct Prices'],
+  freeSample: 'Sample Pack',
+  trustBadges: ['Fast UK Delivery', 'Quality Guaranteed', 'Express 3–5 Day Dispatch', 'Factory-Direct Prices'],
   sampleCtaTitle: 'Try Before You Buy',
-  sampleCtaText: 'Get a free sample pack delivered. Nano rings, clips & tool — just cover £4.00 postage.',
-  sampleCtaButton: 'Claim Free Sample',
+  sampleCtaText: 'Order a sample pack — sample price + £4.00 postage, both at your cost.',
+  sampleCtaButton: 'Order Sample Pack',
   bundlesEyebrow: 'Bundles',
   bundlesTitle: 'Save More with Bundles',
   bundlesText:
@@ -112,7 +112,7 @@ const en: SalonSuppliesContent = {
   faqs: [
     {
       q: 'How quickly will I receive my order?',
-      a: 'Orders ship via express (3–5 days) across the UK. UK warehouse launching — express 3–5 day delivery. Tracked delivery on every order.',
+      a: 'Orders ship via express (3–5 days) across the UK. factory-direct express 3–5 day delivery. Tracked delivery on every order.',
     },
     {
       q: 'What if I am unhappy with the quality?',
@@ -124,7 +124,7 @@ const en: SalonSuppliesContent = {
     },
     {
       q: 'Can I get a sample before placing a large order?',
-      a: 'Absolutely. Claim our free sample pack at the top of this page — you only cover £2.95 postage. Test the quality yourself.',
+      a: 'Yes — order our sample pack at the top of this page: sample price + £2.95 postage, both at your cost. Test the quality yourself.'
     },
     {
       q: 'How do nano rings compare between non-silicone and silicone-lined?',
@@ -137,7 +137,7 @@ const en: SalonSuppliesContent = {
   waWhatsappMsg: 'Hi D.S HAIR & BEAUTY! I have a question about salon consumables.',
   cardDetails: 'Details',
   cardWhatsapp: 'WhatsApp',
-  cardFree: 'FREE',
+  cardFree: 'SAMPLE',
   cardWhatsappMsg: (name) => `Hi! I'm interested in the ${name}. Can you help me order?`,
   product: {
     breadcrumbSupplies: 'Salon Supplies',
@@ -145,7 +145,7 @@ const en: SalonSuppliesContent = {
     postageNote: '+ £4.00 postage',
     onePerSalon: 'One per salon. Limited time offer.',
     savePercent: (n) => `Save ${n}%`,
-    freeShippingNote: 'Price includes FREE UK shipping',
+    freeShippingNote: 'Price includes tracked UK shipping',
     keyFeatures: 'Key Features',
     whatIncluded: 'What is Included',
     weight: 'Weight',
@@ -154,11 +154,11 @@ const en: SalonSuppliesContent = {
     forLabel: 'For',
     buyNow: (price) => `Buy Now — £${price}`,
     whatsappUs: 'WhatsApp Us',
-    freeUkDelivery: 'Free UK delivery',
+    freeUkDelivery: 'UK delivery',
     dispatchesNextDay: 'Dispatches next working day',
     tryBeforeTitle: 'Want to try before buying?',
-    tryBeforeText: 'Claim your free sample pack. Test our quality in your own salon — just cover £4.00 postage.',
-    getFreeSample: 'Get Free Sample Pack',
+    tryBeforeText: 'Order your sample pack. Test our quality in your own salon — sample price + £4.00 postage, at your cost.',
+    getFreeSample: 'Get Sample Pack',
     whatsappMsg: (name) => `Hi! I'd like to order: ${name}. Can you help me?`,
   },
 }
@@ -173,11 +173,11 @@ const de: SalonSuppliesContent = {
   heroSubtitle:
     'Professionelle Nano-Ringe, Tape-Tabs, Werkzeuge & Zubehör für Extension-Techniker in UK. Qualitätsprodukte zu fairen Preisen — direkt in Ihren Salon geliefert.',
   shopBundles: 'Bundles shoppen',
-  freeSample: 'Kostenloses Musterpaket',
-  trustBadges: ['Gratis Versand UK', 'Qualität garantiert', 'Express-Versand 3–5 Tage', 'Fabrikpreise'],
+  freeSample: 'Musterpaket',
+  trustBadges: ['Schneller UK-Versand', 'Qualität garantiert', 'Express-Versand 3–5 Tage', 'Fabrikpreise'],
   sampleCtaTitle: 'Testen Sie vor dem Kauf',
-  sampleCtaText: 'Fordern Sie ein kostenloses Musterpaket an. Nano-Ringe, Clips & Werkzeug — nur £4,00 Porto zahlen.',
-  sampleCtaButton: 'Gratis Muster sichern',
+  sampleCtaText: 'Bestellen Sie ein Musterpaket — Musterpreis + £4,00 Porto, beides auf Ihre Kosten.',
+  sampleCtaButton: 'Musterpaket bestellen',
   bundlesEyebrow: 'Bundles',
   bundlesTitle: 'Mehr sparen mit Bundles',
   bundlesText:
@@ -217,7 +217,7 @@ const de: SalonSuppliesContent = {
   faqs: [
     {
       q: 'Wie schnell erhalte ich meine Bestellung?',
-      a: 'Bestellungen werden per Express (3–5 Tage) im gesamten UK versendet. UK-Lager eröffnet — Express-Lieferung in 3–5 Tagen. Sendungsverfolgung bei jeder Bestellung.',
+      a: 'Bestellungen werden per Express (3–5 Tage) im gesamten UK versendet. Sendungsverfolgung bei jeder Bestellung.',
     },
     {
       q: 'Was, wenn ich mit der Qualität unzufrieden bin?',
@@ -229,7 +229,7 @@ const de: SalonSuppliesContent = {
     },
     {
       q: 'Kann ich vor einer großen Bestellung eine Probe erhalten?',
-      a: 'Absolut. Fordern Sie oben auf dieser Seite unser kostenloses Musterpaket an — Sie zahlen nur £2,95 Porto. Testen Sie die Qualität selbst.',
+      a: 'Ja — bestellen Sie oben auf dieser Seite unser Musterpaket: Musterpreis + £2,95 Porto, beides auf Ihre Kosten. Testen Sie die Qualität selbst.'
     },
     {
       q: 'Wie unterscheiden sich nicht-silikonnierte und silikonbeschichtete Nano-Ringe?',
@@ -242,7 +242,7 @@ const de: SalonSuppliesContent = {
   waWhatsappMsg: 'Hallo D.S HAIR & BEAUTY! Ich habe eine Frage zu Salon-Verbrauchsmaterialien.',
   cardDetails: 'Details',
   cardWhatsapp: 'WhatsApp',
-  cardFree: 'GRATIS',
+  cardFree: 'MUSTER',
   cardWhatsappMsg: (name) => `Hallo! Ich interessiere mich für ${name}. Können Sie mir bei der Bestellung helfen?`,
   product: {
     breadcrumbSupplies: 'Salon-Verbrauchsmaterial',
@@ -250,7 +250,7 @@ const de: SalonSuppliesContent = {
     postageNote: '+ 4,00 £ Porto',
     onePerSalon: 'Eine pro Salon. Limitiertes Angebot.',
     savePercent: (n) => `Sparen ${n}%`,
-    freeShippingNote: 'Preis inkl. gratis Versand UK',
+    freeShippingNote: 'Preis inkl. versicherter UK-Versand',
     keyFeatures: 'Merkmale',
     whatIncluded: 'Lieferumfang',
     weight: 'Gewicht',
@@ -259,11 +259,11 @@ const de: SalonSuppliesContent = {
     forLabel: 'Für',
     buyNow: (price) => `Jetzt kaufen — ${price} £`,
     whatsappUs: 'WhatsApp uns',
-    freeUkDelivery: 'Gratis Versand UK',
+    freeUkDelivery: 'UK-Versand',
     dispatchesNextDay: 'Versand am nächsten Werktag',
     tryBeforeTitle: 'Möchten Sie vor dem Kauf testen?',
-    tryBeforeText: 'Fordern Sie Ihr kostenloses Musterpaket an. Testen Sie unsere Qualität in Ihrem eigenen Salon — nur 4,00 £ Porto.',
-    getFreeSample: 'Gratis Musterpaket',
+    tryBeforeText: 'Bestellen Sie Ihr Musterpaket. Testen Sie unsere Qualität in Ihrem Salon — Musterpreis + 4,00 £ Porto, auf Ihre Kosten.',
+    getFreeSample: 'Musterpaket bestellen',
     whatsappMsg: (name) => `Hallo! Ich möchte bestellen: ${name}. Können Sie helfen?`,
   },
 }
@@ -278,11 +278,11 @@ const fr: SalonSuppliesContent = {
   heroSubtitle:
     'Anneaux nano, tabs adhésifs, outils & fournitures professionnels pour technicien·nes extensions au UK. Des produits de qualité à prix honnêtes — livrés dans votre salon.',
   shopBundles: 'Voir les packs',
-  freeSample: 'Échantillon gratuit',
-  trustBadges: ['Livraison gratuite UK', 'Qualité garantie', 'Expédition express 3–5 j', 'Prix usine'],
+  freeSample: 'Échantillon',
+  trustBadges: ['Livraison UK rapide', 'Qualité garantie', 'Expédition express 3–5 j', 'Prix usine'],
   sampleCtaTitle: 'Essayez avant d’acheter',
-  sampleCtaText: 'Recevez un pack échantillon gratuit. Anneaux nano, clips & outil — vous couvrez seulement £4,00 de port.',
-  sampleCtaButton: 'Recevoir l’échantillon',
+  sampleCtaText: 'Commandez un pack échantillon — prix de l’échantillon + £4,00 de port, à votre charge.',
+  sampleCtaButton: 'Commander l’échantillon',
   bundlesEyebrow: 'Packs',
   bundlesTitle: 'Économisez avec les packs',
   bundlesText:
@@ -322,7 +322,7 @@ const fr: SalonSuppliesContent = {
   faqs: [
     {
       q: 'Comment recevrai-je ma commande rapidement ?',
-      a: 'Les commandes sont expédiées en express (3–5 jours) dans tout le UK. Entrepôt UK à venir — livraison express 3–5 jours. Suivi sur chaque commande.',
+      a: 'Les commandes sont expédiées en express (3–5 jours) dans tout le UK. Suivi sur chaque commande.',
     },
     {
       q: 'Et si je ne suis pas satisfait de la qualité ?',
@@ -334,7 +334,7 @@ const fr: SalonSuppliesContent = {
     },
     {
       q: 'Puis-je avoir un échantillon avant une grosse commande ?',
-      a: 'Bien sûr. Réclamez notre pack échantillon gratuit en haut de page — vous couvrez seulement £2,95 de port. Testez la qualité vous-même.',
+      a: 'Oui — commandez notre pack échantillon en haut de page : prix de l’échantillon + £2,95 de port, à votre charge. Testez la qualité vous-même.'
     },
     {
       q: 'Différence entre anneaux nano sans et avec silicone ?',
@@ -347,7 +347,7 @@ const fr: SalonSuppliesContent = {
   waWhatsappMsg: 'Bonjour D.S HAIR & BEAUTY ! J\'ai une question sur les consommables salon.',
   cardDetails: 'Détails',
   cardWhatsapp: 'WhatsApp',
-  cardFree: 'GRATUIT',
+  cardFree: 'ÉCHANTILLON',
   cardWhatsappMsg: (name) => `Bonjour ! Je suis intéressé(e) par ${name}. Pouvez-vous m'aider à commander ?`,
   product: {
     breadcrumbSupplies: 'Consommables salon',
@@ -355,7 +355,7 @@ const fr: SalonSuppliesContent = {
     postageNote: '+ 4,00 £ de port',
     onePerSalon: 'Un par salon. Offre à durée limitée.',
     savePercent: (n) => `Économisez ${n}%`,
-    freeShippingNote: 'Prix incluant la livraison gratuite UK',
+    freeShippingNote: 'Prix incluant la livraison suivie UK',
     keyFeatures: 'Caractéristiques clés',
     whatIncluded: 'Ce qui est inclus',
     weight: 'Poids',
@@ -364,11 +364,11 @@ const fr: SalonSuppliesContent = {
     forLabel: 'Pour',
     buyNow: (price) => `Acheter — ${price} £`,
     whatsappUs: 'WhatsApp nous',
-    freeUkDelivery: 'Livraison gratuite UK',
+    freeUkDelivery: 'Livraison UK',
     dispatchesNextDay: 'Expédié le jour ouvré suivant',
     tryBeforeTitle: 'Vous voulez essayer avant d’acheter ?',
-    tryBeforeText: 'Réclamez votre pack échantillon gratuit. Testez notre qualité dans votre salon — vous couvrez seulement 4,00 £ de port.',
-    getFreeSample: 'Obtenir le pack échantillon',
+    tryBeforeText: 'Commandez votre pack échantillon. Testez notre qualité dans votre salon — prix de l’échantillon + 4,00 £ de port, à votre charge.',
+    getFreeSample: 'Commander le pack échantillon',
     whatsappMsg: (name) => `Bonjour ! Je souhaite commander : ${name}. Pouvez-vous m'aider ?`,
   },
 }
@@ -383,11 +383,11 @@ const ar: SalonSuppliesContent = {
   heroSubtitle:
     'حلقات نانو احترافية وأشرطة لاصقة وأدوات ومستلزمات لفنيّ الإكسسوارات في UK. منتجات عالية الجودة بأسعار منصفة — تُسلّم إلى صالونك.',
   shopBundles: 'تسوق الباقات',
-  freeSample: 'عينة مجانية',
-  trustBadges: ['توصيل مجاني UK', 'جودة مضمونة', 'شحن سريع 3–5 أيام', 'أسعار المصنع'],
+  freeSample: 'عينة (بالسعر)',
+  trustBadges: ['توصيل سريع UK', 'جودة مضمونة', 'شحن سريع 3–5 أيام', 'أسعار المصنع'],
   sampleCtaTitle: 'جرّب قبل أن تشتري',
-  sampleCtaText: 'احصل على باقة عينات مجانية. حلقات نانو ومشابك وأداة — تدفع فقط £4.00 للشحن.',
-  sampleCtaButton: 'احصل على العينة المجانية',
+  sampleCtaText: 'اطلب باقة عينات — سعر العينة + £4.00 شحن، على حسابك.',
+  sampleCtaButton: 'اطلب باقة العينات',
   bundlesEyebrow: 'الباقات',
   bundlesTitle: 'وفّر أكثر مع الباقات',
   bundlesText: 'مجموعات منتقاة لتناسب عمل الصالون الفعلي. كل ما تحتاجه في صندوق واحد — وأرخص من الشراء منفردًا.',
@@ -438,7 +438,7 @@ const ar: SalonSuppliesContent = {
     },
     {
       q: 'هل يمكنني الحصول على عينة قبل طلب كبير؟',
-      a: 'بالتأكيد. اطلب باقة العينات المجانية أعلى الصفحة — تدفع فقط £2.95 للشحن. جرّب الجودة بنفسك.',
+      a: 'نعم — اطلب باقة العينات أعلى الصفحة: سعر العينة + £2.95 شحن، على حسابك. جرّب الجودة بنفسك.'
     },
     {
       q: 'ما الفرق بين حلقات النانو غير المبطّنة والملبّسة بالسيليكون؟',
@@ -451,7 +451,7 @@ const ar: SalonSuppliesContent = {
   waWhatsappMsg: 'مرحبًا D.S HAIR & BEAUTY! لدي سؤال حول لوازم الصالون.',
   cardDetails: 'التفاصيل',
   cardWhatsapp: 'واتساب',
-  cardFree: 'مجاني',
+  cardFree: 'عينة',
   cardWhatsappMsg: (name) => `مرحبًا! أنا مهتم بـ ${name}. هل يمكنك مساعدتي في الطلب؟`,
   product: {
     breadcrumbSupplies: 'لوازم الصالون',
@@ -459,7 +459,7 @@ const ar: SalonSuppliesContent = {
     postageNote: '+ 4.00 £ شحن',
     onePerSalon: 'واحد لكل صالون. عرض لفترة محدودة.',
     savePercent: (n) => `وفّر ${n}%`,
-    freeShippingNote: 'السعر يشمل توصيل مجاني UK',
+    freeShippingNote: 'السعر يشمل توصيلاً متتبعاً UK',
     keyFeatures: 'المزايا الرئيسية',
     whatIncluded: 'ما هو مشمول',
     weight: 'الوزن',
@@ -468,11 +468,11 @@ const ar: SalonSuppliesContent = {
     forLabel: 'لـ',
     buyNow: (price) => `اشترِ الآن — ${price} £`,
     whatsappUs: 'راسلنا واتساب',
-    freeUkDelivery: 'توصيل مجاني UK',
+    freeUkDelivery: 'توصيل UK',
     dispatchesNextDay: 'يُشحن في يوم العمل التالي',
     tryBeforeTitle: 'تريد التجربة قبل الشراء؟',
-    tryBeforeText: 'احصل على باقة العينات المجانية. جرّب جودتنا في صالونك — تدفع فقط 4.00 £ شحن.',
-    getFreeSample: 'احصل على باقة العينات',
+    tryBeforeText: 'اطلب باقة العينات. جرّب جودتنا — سعر العينة + 4.00 £ شحن، على حسابك.'
+    getFreeSample: 'اطلب باقة العينات',
     whatsappMsg: (name) => `مرحبًا! أود الطلب: ${name}. هل يمكنك المساعدة؟`,
   },
 }
@@ -487,11 +487,11 @@ const sv: SalonSuppliesContent = {
   heroSubtitle:
     'Professionella nano-ringar, tejp-tabs, verktyg & tillbehör för extensions-tekniker i UK. Kvalitetsprodukter till ärliga priser — levererade till din salong.',
   shopBundles: 'Handla bundles',
-  freeSample: 'Gratis provpaket',
-  trustBadges: ['Gratis frakt UK', 'Kvalitet garanterad', 'Express 3–5 dagar', 'Fabrikspriser'],
+  freeSample: 'Provpaket',
+  trustBadges: ['Snabb UK-frakt', 'Kvalitet garanterad', 'Express 3–5 dagar', 'Fabrikspriser'],
   sampleCtaTitle: 'Testa innan du köper',
-  sampleCtaText: 'Få ett gratis provpaket levererat. Nano-ringar, clips & verktyg — betala bara £4,00 i porto.',
-  sampleCtaButton: 'Hämta gratis prov',
+  sampleCtaText: 'Beställ ett provpaket — provpris + £4,00 i porto, båda på din bekostnad.',
+  sampleCtaButton: 'Beställ provpaket',
   bundlesEyebrow: 'Bundles',
   bundlesTitle: 'Spara mer med bundles',
   bundlesText: 'Kurerade kit för riktiga salongflöden. Allt du behöver i en låda — och billigare än att köpa separat.',
@@ -530,7 +530,7 @@ const sv: SalonSuppliesContent = {
   faqs: [
     {
       q: 'Hur snabbt får jag min beställning?',
-      a: 'Beställningar skickas express (3–5 dagar) i hela UK. UK-lager öppnar — expressleverans 3–5 dagar. Spårning på varje beställning.',
+      a: 'Beställningar skickas express (3–5 dagar) i hela UK. Spårning på varje beställning.',
     },
     {
       q: 'Vad om jag inte är nöjd med kvaliteten?',
@@ -542,7 +542,7 @@ const sv: SalonSuppliesContent = {
     },
     {
       q: 'Kan jag få ett prov innan en stor beställning?',
-      a: 'Absolut. Hämta vårt gratis provpaket högst upp på sidan — du betalar bara £2,95 i porto. Testa kvaliteten själv.',
+      a: 'Ja — beställ vårt provpaket högst upp på sidan: provpris + £2,95 i porto, båda på din bekostnad. Testa kvaliteten själv.'
     },
     {
       q: 'Hur skiljer sig nano-ringar utan och med silikon?',
@@ -555,7 +555,7 @@ const sv: SalonSuppliesContent = {
   waWhatsappMsg: 'Hej D.S HAIR & BEAUTY! Jag har en fråga om salongsförbrukning.',
   cardDetails: 'Detaljer',
   cardWhatsapp: 'WhatsApp',
-  cardFree: 'GRATIS',
+  cardFree: 'MUSTER',
   cardWhatsappMsg: (name) => `Hej! Jag är intresserad av ${name}. Kan du hjälpa mig att beställa?`,
   product: {
     breadcrumbSupplies: 'Salongtillbehör',
@@ -563,7 +563,7 @@ const sv: SalonSuppliesContent = {
     postageNote: '+ 4,00 £ porto',
     onePerSalon: 'En per salong. Tidsbegränsat erbjudande.',
     savePercent: (n) => `Spara ${n}%`,
-    freeShippingNote: 'Priset inkluderar gratis frakt UK',
+    freeShippingNote: 'Priset inkluderar spårad UK-frakt',
     keyFeatures: 'Huvudfunktioner',
     whatIncluded: 'Vad som ingår',
     weight: 'Vikt',
@@ -572,11 +572,11 @@ const sv: SalonSuppliesContent = {
     forLabel: 'För',
     buyNow: (price) => `Köp nu — ${price} £`,
     whatsappUs: 'WhatsApp oss',
-    freeUkDelivery: 'Gratis frakt UK',
+    freeUkDelivery: 'UK-frakt',
     dispatchesNextDay: 'Skickas nästa arbetsdag',
     tryBeforeTitle: 'Vill du testa innan du köper?',
-    tryBeforeText: 'Hämta ditt gratis provpaket. Testa vår kvalitet i din egen salong — betala bara 4,00 £ i porto.',
-    getFreeSample: 'Hämta gratis provpaket',
+    tryBeforeText: 'Beställ ditt provpaket. Testa vår kvalitet i din salong — provpris + 4,00 £ i porto, på din bekostnad.',
+    getFreeSample: 'Beställ provpaket',
     whatsappMsg: (name) => `Hej! Jag vill beställa: ${name}. Kan du hjälpa mig?`,
   },
 }
@@ -591,11 +591,11 @@ const pl: SalonSuppliesContent = {
   heroSubtitle:
     'Profesjonalne pierścienie nano, taśmy, narzędzia i akcesoria dla stylistów extensions w UK. Produkty wysokiej jakości w uczciwych cenach — dowożone do Twojego salonu.',
   shopBundles: 'Kup pakiety',
-  freeSample: 'Darmowy zestaw próbek',
-  trustBadges: ['Darmowa dostawa UK', 'Gwarancja jakości', 'Ekspres 3–5 dni', 'Ceny fabryczne'],
+  freeSample: 'Zestaw próbek',
+  trustBadges: ['Szybka dostawa UK', 'Gwarancja jakości', 'Ekspres 3–5 dni', 'Ceny fabryczne'],
   sampleCtaTitle: 'Wypróbuj zanim kupisz',
-  sampleCtaText: 'Odbierz darmowy zestaw próbek. Pierścienie nano, klipsi i narzędzie — płacisz tylko £4,00 za przesyłkę.',
-  sampleCtaButton: 'Odbierz darmową próbkę',
+  sampleCtaText: 'Zamów zestaw próbek — cena próbki + £4,00 za przesyłkę, obie na Twój koszt.',
+  sampleCtaButton: 'Zamów zestaw próbek',
   bundlesEyebrow: 'Pakiety',
   bundlesTitle: 'Oszczędzaj z pakietami',
   bundlesText: 'Kurate zestawy na potrzeby prawdziwej pracy w salonie. Wszystko, czego potrzebujesz, w jednym pudełku — i taniej niż osobno.',
@@ -634,7 +634,7 @@ const pl: SalonSuppliesContent = {
   faqs: [
     {
       q: 'Jak szybko otrzymam zamówienie?',
-      a: 'Zamówienia wysyłane ekspresem (3–5 dni) w całym UK. Magazyn UK wdrożony — ekspres 3–5 dni. Śledzenie każdego zamówienia.',
+      a: 'Zamówienia wysyłane ekspresem (3–5 dni) w całym UK. Śledzenie każdego zamówienia.',
     },
     {
       q: 'Co jeśli nie jestem zadowolony z jakości?',
@@ -646,7 +646,7 @@ const pl: SalonSuppliesContent = {
     },
     {
       q: 'Czy mogę otrzymać próbkę przed dużym zamówieniem?',
-      a: 'Oczywiście. Odbierz nasz darmowy zestaw próbek na górze strony — płacisz tylko £2,95 za przesyłkę. Sprawdź jakość sam.',
+      a: 'Tak — zamów nasz zestaw próbek na górze strony: cena próbki + £2,95 za przesyłkę, obie na Twój koszt. Sprawdź jakość sam.'
     },
     {
       q: 'Jaka jest różnica między pierścieniami nano bez i z silikonem?',
@@ -659,7 +659,7 @@ const pl: SalonSuppliesContent = {
   waWhatsappMsg: 'Cześć D.S HAIR & BEAUTY! Mam pytanie o materiały eksploatacyjne.',
   cardDetails: 'Szczegóły',
   cardWhatsapp: 'WhatsApp',
-  cardFree: 'ZA DARMO',
+  cardFree: 'PRÓBKA',
   cardWhatsappMsg: (name) => `Cześć! Interesuje mnie ${name}. Czy możesz pomóc mi zamówić?`,
   product: {
     breadcrumbSupplies: 'Materiały salonu',
@@ -667,7 +667,7 @@ const pl: SalonSuppliesContent = {
     postageNote: '+ 4,00 £ przesyłki',
     onePerSalon: 'Jeden na salon. Oferta limitowana.',
     savePercent: (n) => `Oszczędzasz ${n}%`,
-    freeShippingNote: 'Cena zawiera darmową dostawę UK',
+    freeShippingNote: 'Cena zawiera śledzoną dostawę UK',
     keyFeatures: 'Kluczowe cechy',
     whatIncluded: 'Co jest w zestawie',
     weight: 'Waga',
@@ -676,11 +676,11 @@ const pl: SalonSuppliesContent = {
     forLabel: 'Dla',
     buyNow: (price) => `Kup teraz — ${price} £`,
     whatsappUs: 'WhatsApp my',
-    freeUkDelivery: 'Darmowa dostawa UK',
+    freeUkDelivery: 'Dostawa UK',
     dispatchesNextDay: 'Wysyłka następnego dnia roboczego',
     tryBeforeTitle: 'Chcesz wypróbować przed zakupem?',
-    tryBeforeText: 'Odbierz darmowy zestaw próbek. Sprawdź jakość we własnym salonie — płacisz tylko 4,00 £ przesyłki.',
-    getFreeSample: 'Odbierz darmowy zestaw próbek',
+    tryBeforeText: 'Zamów zestaw próbek. Sprawdź jakość we własnym salonie — cena próbki + 4,00 £ przesyłki, na Twój koszt.'
+    getFreeSample: 'Zamów zestaw próbek',
     whatsappMsg: (name) => `Cześć! Chcę zamówić: ${name}. Czy możesz pomóc?`,
   },
 }

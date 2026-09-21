@@ -220,11 +220,11 @@ const en: BestExtensionsFineHairUkContent = {
     { q: "Will extensions damage my fine hair?", a: "When applied correctly by a trained stylist, extensions should not damage fine hair. The key is using lightweight methods (tape-in or nano), limiting the weight to 20% of natural hair's density, and attending all maintenance appointments." },
     { q: "How much hair do I need for fine hair?", a: "For fine hair, we recommend 100–150g of extension hair. Adding more than 20% of your natural hair's weight increases the risk of traction alopecia and premature shedding." },
     { q: "Can fine hair with extensions be coloured?", a: "Yes — 100% Remy human hair extensions can be coloured or toned, but only by a professional. Avoid lightening tape-in or nano bonds. Always do a strand test first." },
-    { q: "How do I find a stylist who specialises in fine hair?", a: "Look for stylists with 'fine hair' or 'thin hair' extensions in their bio. Ask to see before-and-after photos of fine-haired clients. D.S HAIR & BEAUTY also offers training for salon stylists — find a certified partner stylist near you." },
+    { q: "How do I find a stylist who specialises in fine hair?", a: "Look for stylists with 'fine hair' or 'thin hair' extensions in their bio. Ask to see before-and-after photos of fine-haired clients. D.S HAIR & BEAUTY can help you connect with experienced extension stylists near you." },
   ],
   ctaBoxTitle: "Shop Extensions for Fine Hair",
   ctaBoxBody:
-    "Free UK delivery, 30-day returns, and trade pricing available for salon partners.",
+    "Express 3–5 day UK delivery, 30-day returns, and trade pricing available for salon partners.",
   ctaBoxPrimaryLabel: "Tape-In Extensions",
   ctaBoxPrimaryHref: "/collections/tape-in",
   ctaBoxSecondaryLabel: "Nano Ring Extensions",
@@ -536,7 +536,7 @@ const fr: BestExtensionsFineHairUkContent = {
   ],
   ctaBoxTitle: "Acheter des extensions pour cheveux fins",
   ctaBoxBody:
-    "Livraison gratuite au UK, retours 30 jours, et tarifs de gros disponibles pour les partenaires salon.",
+    "Livraison express UK, retours 30 jours, et tarifs de gros disponibles pour les partenaires salon.",
   ctaBoxPrimaryLabel: "Extensions Tape-In",
   ctaBoxPrimaryHref: "/collections/tape-in",
   ctaBoxSecondaryLabel: "Extensions Nano Ring",
@@ -1004,7 +1004,7 @@ const pl: BestExtensionsFineHairUkContent = {
   ],
   ctaBoxTitle: "Kup przedłużenia dla cienkich włosów",
   ctaBoxBody:
-    "Darmowa dostawa w UK, zwroty 30 dni i ceny hurtowe dla partnerów salonowych.",
+    "Ekspresowa dostawa UK, zwroty 30 dni i ceny hurtowe dla partnerów salonowych.",
   ctaBoxPrimaryLabel: "Przedłużenia Tape-In",
   ctaBoxPrimaryHref: "/collections/tape-in",
   ctaBoxSecondaryLabel: "Przedłużenia Nano Ring",

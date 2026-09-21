@@ -9,7 +9,7 @@ export const deSeoPages: SeoPage[] = [
     h1: "Haarverlängerungen Großhandel UK",
     metaTitle: "Haarverlängerungen Großhandel UK für Salons | D.S Hair Beauty",
     metaDescription:
-      "Großhandel Echthaar-Haarverlängerungen für UK-Salons, Stylisten und Handelskäufer. Direkt vom Hersteller mit startendem UK-Lager, Express-Lieferung in 3–5 Tagen, Handelskonto-Support und Farbabgleich.",
+      "Großhandel Echthaar-Haarverlängerungen für UK-Salons, Stylisten und Handelskäufer. Direkt vom Hersteller mit Express-Lieferung in 3–5 Tagen, Handelskonto-Support und Farbabgleich.",
     intro:
       "D.S Hair Beauty beliefert professionelle Salons und Stylisten mit 100% Remy Echthaar-Haarverlängerungen, Unterstützung für Handelskonten und praktischer Großhandelsbestellung mit Express-Lieferung in 3–5 Tagen direkt ab Werk.",
     sections: [
@@ -58,19 +58,19 @@ export const deSeoPages: SeoPage[] = [
     cta: "Handelskonto beantragen",
   },
   {
-    slug: "hair-extension-supplier-manchester",
-    title: "Haarverlängerungs-Lieferant Manchester",
-    keyword: "hair extension supplier manchester",
+    slug: "hair-extension-supplier-uk",
+    title: "Haarverlängerungs-Lieferant UK",
+    keyword: "hair extension supplier uk",
     intent: "GEO",
-    h1: "Haarverlängerungs-Lieferant — UK-Lager startet",
-    metaTitle: "Direkt vom Hersteller Haarverlängerungs-Lieferant Manchester | D.S Hair Beauty",
+    h1: "Haarverlängerungs-Lieferant — Fabriksdirekt",
+    metaTitle: "Direkt vom Hersteller Haarverlängerungs-Lieferant UK | D.S Hair Beauty",
     metaDescription:
-      "Haarverlängerungs-Hersteller direkt ab Werk mit startendem UK-Lager. Express-Lieferung in 3–5 Tagen im gesamten UK & EU, Handelspreise und Farb-Support.",
+      "Haarverlängerungs-Hersteller direkt ab Werk. Express-Lieferung in 3–5 Tagen im gesamten UK & EU, Handelspreise und Farb-Support.",
     intro:
-      "D.S Hair Beauty ist ein Hersteller direkt ab Werk. Unser UK-Lager startet — Salons erhalten Express-Lieferung in 3–5 Tagen direkt ab Werk zu Herstellerpreisen, ohne Zwischenhändler-Aufschlag.",
+      "D.S Hair Beauty ist ein Hersteller direkt ab Werk. Salons erhalten Express-Lieferung in 3–5 Tagen direkt ab Werk zu Herstellerpreisen, ohne Zwischenhändler-Aufschlag.",
     sections: [
       {
-        heading: "Direkt vom Hersteller. UK-Lager startet.",
+        heading: "Direkt vom Hersteller.",
         body: "Anders als Großhändler, die von Importeuren kaufen und erneut aufschlagen, bezieht D.S Hair Beauty direkt von führenden Remy-Haarherstellern in China. Bestellungen werden direkt ab Werk mit Express-Lieferung in 3–5 Tagen versendet — so erhalten Sie Werksqualität mit schneller UK-Belieferung.",
       },
       {
@@ -84,7 +84,7 @@ export const deSeoPages: SeoPage[] = [
     ],
     bullets: [
       "Herstellerpreise direkt ab Werk",
-      "UK-Lager startet — Express-Lieferung in 3–5 Tagen direkt ab Werk",
+      "Express-Lieferung in 3–5 Tagen direkt ab Werk",
       "Handelskonto-Weg für Salons",
       "Professionelle Extension-Methoden und Aftercare",
       "Farbabgleich und WhatsApp-Support",
@@ -94,15 +94,15 @@ export const deSeoPages: SeoPage[] = [
       {
         question: "Wo wird Ihr Lagerbestand gehalten?",
         answer:
-          "Unser UK-Lager startet. Wir beziehen direkt ab Werk von Herstellern in China — so erhalten Sie Herstellerpreise mit Express-Lieferung in 3–5 Tagen im UK.",
+          "Wir liefern direkt ab Werk von Herstellern in China — so erhalten Sie Herstellerpreise mit Express-Lieferung in 3–5 Tagen im UK.",
       },
       {
-        question: "Können Manchester-Salons ein Handelskonto eröffnen?",
+        question: "Können UK- & EU-Salons ein Handelskonto eröffnen?",
         answer:
           "Ja. Salons und Stylisten können über die Salon-Partner-Route beantragen oder das Team direkt kontaktieren.",
       },
       {
-        question: "Beliefern Sie nur Manchester?",
+        question: "Beliefern Sie nur das UK?",
         answer:
           "Nein. Wir beliefern Salons im gesamten UK und EU mit Express-Lieferung in 3–5 Tagen direkt ab Werk landesweit.",
       },
@@ -479,7 +479,7 @@ export const deSeoPages: SeoPage[] = [
       "Leeds-spezifische GEO-Seite",
       "Unterstützt Salon- und mobile Stylisten-Anfragen",
       "Verbindet Stadt-Suchen mit Handelskonto-Conversion",
-      "Erweitert UK-Abdeckung über Manchester und London hinaus",
+      "Erweitert UK-Abdeckung",
       "Nützlich für internes Linken und Sitemap-Erweiterung",
     ],
     faqs: [

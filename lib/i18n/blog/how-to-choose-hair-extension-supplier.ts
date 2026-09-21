@@ -144,7 +144,7 @@ const en: HowToChooseHairExtensionSupplierContent = {
   leadTimeP1:
     "UK salons work to appointment schedules. When a client books in for a full-head K-tip application and your supplier tells you the stock is delayed, you face two bad options: disappoint the client or source emergency stock elsewhere.",
   leadTimeP2:
-    "Look for suppliers with UK-based stock or fast international shipping (5–10 working days). D.S Hair Beauty holds stock in the UK for rapid dispatch — because we know your appointments do not wait.",
+    "Look for suppliers with UK-based stock or fast international shipping (5–10 working days). D.S Hair Beauty ships factory-direct with express 3–5 day delivery — because we know your appointments do not wait.",
   supportHeading: "5. Trade Support and Account Management",
   supportP:
     "A transactional supplier who only sends you an invoice is not a partner. Look for suppliers who offer trade accounts with net-30 terms, dedicated account managers, and responsive support via WhatsApp or email. At D.S Hair Beauty, trade accounts receive priority dispatch, volume discounts, and direct access to our team.",
@@ -308,7 +308,7 @@ const en: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty is a factory-direct manufacturer with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions via UK warehouse launching + factory-direct express 3–5 day shipping, with trade accounts, no minimum order quantities, and direct manufacturer support.",
+    "D.S Hair Beauty is a factory-direct manufacturer with 19 years in the hair extension industry. We supply salons across the UK with Remy human hair extensions via factory-direct express 3–5 day shipping, with trade accounts, no minimum order quantities, and direct manufacturer support.",
   faqHeading: "Frequently Asked Questions",
   faqs: [
     {
@@ -409,7 +409,7 @@ const de: HowToChooseHairExtensionSupplierContent = {
   leadTimeP1:
     "Salons in Großbritannien arbeiten nach Terminplänen. Wenn eine Kundin eine Full-Head-K-tip-Anwendung bucht und Ihr Lieferant Ihnen mitteilt, dass sich der Bestand verzögert, haben Sie zwei schlechte Optionen: die Kundin enttäuschen oder Notbestände woanders beschaffen.",
   leadTimeP2:
-    "Achten Sie auf Lieferanten mit UK-Lagerbestand oder schnellem internationalem Versand (5–10 Werktage). D.S Hair Beauty hält Bestände in Großbritannien für schnellen Versand — weil wir wissen, dass Ihre Termine nicht warten.",
+    "Achten Sie auf Lieferanten mit UK-Lagerbestand oder schnellem internationalem Versand (5–10 Werktage). D.S Hair Beauty liefert per Express in 3–5 Tagen direkt ab Werk — weil wir wissen, dass Ihre Termine nicht warten.",
   supportHeading: "5. Trade-Support und Account-Management",
   supportP:
     "Ein transaktionaler Lieferant, der Ihnen nur eine Rechnung schickt, ist kein Partner. Achten Sie auf Lieferanten, die Trade-Konten mit net-30-Konditionen, eigene Account-Manager und reaktionsschnellen Support per WhatsApp oder E-Mail anbieten. Bei D.S Hair Beauty erhalten Trade-Konten bevorzugten Versand, Mengenrabatte und direkten Zugang zu unserem Team.",
@@ -574,7 +574,7 @@ const de: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty ist ein fabrikdirekter Hersteller mit 19 Jahren Erfahrung in der Haarverlängerungs-Branche. Wir beliefern Salons in ganz Großbritannien mit Remy-Echthaar-Verlängerungen über UK-Lager (Eröffnung) + fabrikdirekten Expressversand in 3–5 Tagen, mit Trade-Konten, ohne Mindestbestellmengen und mit direktem Hersteller-Support.",
+    "D.S Hair Beauty ist ein fabrikdirekter Hersteller mit 19 Jahren Erfahrung in der Haarverlängerungs-Branche. Wir beliefern Salons in ganz Großbritannien mit Remy-Echthaar-Verlängerungen mit fabrikdirekten Expressversand in 3–5 Tagen, mit Trade-Konten, ohne Mindestbestellmengen und mit direktem Hersteller-Support.",
   faqHeading: "Häufig gestellte Fragen",
   faqs: [
     {
@@ -841,7 +841,7 @@ const fr: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty est un fabricant direct d'usine avec 19 ans d'expérience dans l'industrie des extensions capillaires. Nous fournissons aux salons du Royaume-Uni des extensions en vrais cheveux Remy via un entrepôt UK en cours de lancement + expédition express directe d'usine sous 3 à 5 jours, avec comptes trade, sans quantité minimale de commande et avec un support fabricant direct.",
+    "D.S Hair Beauty est un fabricant direct d'usine avec 19 ans d'expérience dans l'industrie des extensions capillaires. Nous fournissons aux salons du Royaume-Uni des extensions en vrais cheveux Remy avec expédition express directe d'usine sous 3 à 5 jours, avec comptes trade, sans quantité minimale de commande et avec un support fabricant direct.",
   faqHeading: "Questions fréquentes",
   faqs: [
     {
@@ -1107,7 +1107,7 @@ const ar: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty مصنّع مباشر من المصنع بخبرة 19 عاماً في صناعة وصلات الشعر. نوفر للصالونات في جميع أنحاء المملكة المتحدة وصلات من شعر Remy البشري عبر مستودع في المملكة المتحدة قيد الإطلاق + شحن سريع مباشر من المصنع خلال 3–5 أيام، مع حسابات تجارية وبدون حد أدنى لكمية الطلب ودعم مباشر من المصنع.",
+    "D.S Hair Beauty مصنّع مباشر من المصنع بخبرة 19 عاماً في صناعة وصلات الشعر. نوفر للصالونات في جميع أنحاء المملكة المتحدة وصلات من شعر Remy البشري مع شحن سريع مباشر من المصنع خلال 3–5 أيام، مع حسابات تجارية وبدون حد أدنى لكمية الطلب ودعم مباشر من المصنع.",
   faqHeading: "الأسئلة الشائعة",
   faqs: [
     {
@@ -1208,7 +1208,7 @@ const sv: HowToChooseHairExtensionSupplierContent = {
   leadTimeP1:
     "Salonger i Storbritannien arbetar efter bokningsscheman. När en kund bokar en fullständig K-tip-applikation och din leverantör meddelar att lagret är försenat står du inför två dåliga alternativ: göra kunden besviken eller skaffa akutlager någon annanstans.",
   leadTimeP2:
-    "Leta efter leverantörer med lager i Storbritannien eller snabb internationell frakt (5–10 arbetsdagar). D.S Hair Beauty håller lager i Storbritannien för snabb avsändning — eftersom vi vet att dina bokningar inte väntar.",
+    "Leta efter leverantörer med lager i Storbritannien eller snabb internationell frakt (5–10 arbetsdagar). D.S Hair Beauty levererar per express 3–5 dagar direkt från fabriken — eftersom vi vet att dina bokningar inte väntar.",
   supportHeading: "5. Grossistsupport och kontohantering",
   supportP:
     "En transaktionsinriktad leverantör som bara skickar en faktura är ingen partner. Leta efter leverantörer som erbjuder grossistkonton med net-30-villkor, dedikerade kontohanterare och snabb support via WhatsApp eller e-post. Hos D.S Hair Beauty får grossistkonton prioriterad avsändning, volymrabatter och direkt tillgång till vårt team.",
@@ -1374,7 +1374,7 @@ const sv: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty är en fabriksdirekt tillverkare med 19 års erfarenhet i hårförlängningsbranschen. Vi levererar förlängningar i äkta Remy-hår till salonger i hela Storbritannien via UK-lager (lanseras) + fabriksdirekt expresstransport på 3–5 dagar, med grossistkonton, utan minimiorderkvantiteter och med direkt tillverkarsupport.",
+    "D.S Hair Beauty är en fabriksdirekt tillverkare med 19 års erfarenhet i hårförlängningsbranschen. Vi levererar förlängningar i äkta Remy-hår till salonger i hela Storbritannien med fabriksdirekt expresstransport på 3–5 dagar, med grossistkonton, utan minimiorderkvantiteter och med direkt tillverkarsupport.",
   faqHeading: "Vanliga frågor",
   faqs: [
     {
@@ -1475,7 +1475,7 @@ const pl: HowToChooseHairExtensionSupplierContent = {
   leadTimeP1:
     "Salony w Wielkiej Brytanii pracują według harmonogramów wizyt. Gdy klientka rezerwuje pełną aplikację K-tip, a dostawca informuje Cię, że zapasy są opóźnione, stajesz przed dwiema złymi opcjami: rozczarować klientkę albo zdobyć awaryjne zapasy gdzie indziej.",
   leadTimeP2:
-    "Szukaj dostawców z magazynem w Wielkiej Brytanii lub szybką wysyłką międzynarodową (5–10 dni roboczych). D.S Hair Beauty utrzymuje zapasy w Wielkiej Brytanii dla szybkiej wysyłki — bo wiemy, że Twoje wizyty nie czekają.",
+    "Szukaj dostawców z magazynem w Wielkiej Brytanii lub szybką wysyłką międzynarodową (5–10 dni roboczych). D.S Hair Beauty dostarcza ekspresowo w 3–5 dni bezpośrednio z fabryki — bo wiemy, że Twoje wizyty nie czekają.",
   supportHeading: "5. Wsparcie trade i zarządzanie kontem",
   supportP:
     "Transakcyjny dostawca, który wysyła Ci tylko fakturę, nie jest partnerem. Szukaj dostawców oferujących konta trade z warunkami net-30, dedykowanych opiekunów konta i szybkie wsparcie przez WhatsApp lub e-mail. W D.S Hair Beauty konta trade otrzymują priorytetową wysyłkę, rabaty ilościowe i bezpośredni dostęp do naszego zespołu.",
@@ -1641,7 +1641,7 @@ const pl: HowToChooseHairExtensionSupplierContent = {
     },
   ],
   ukP2:
-    "D.S Hair Beauty to producent działający bezpośrednio z fabryki z 19-letnim doświadczeniem w branży przedłużania włosów. Dostarczamy salonom w całej Wielkiej Brytanii przedłużenia z ludzkich włosów Remy poprzez magazyn w UK (wdrażany) + ekspresową wysyłkę bezpośrednio z fabryki w 3–5 dni, z kontami trade, bez minimalnych ilości zamówienia i z bezpośrednim wsparciem producenta.",
+    "D.S Hair Beauty to producent działający bezpośrednio z fabryki z 19-letnim doświadczeniem w branży przedłużania włosów. Dostarczamy salonom w całej Wielkiej Brytanii przedłużenia z ludzkich włosów Remy z ekspresową wysyłką bezpośrednio z fabryki w 3–5 dni, z kontami trade, bez minimalnych ilości zamówienia i z bezpośrednim wsparciem producenta.",
   faqHeading: "Najczęściej zadawane pytania",
   faqs: [
     {

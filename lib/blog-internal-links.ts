@@ -89,10 +89,10 @@ export const BLOG_INTERNAL_LINKS: Record<string, BlogLinkMap> = {
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
   "salon-hair-extension-stockist-uk": {
-    related: ["how-to-choose-hair-extension-supplier", "wholesale-hair-extensions-uk", "manchester-hair-extension-supplier"],
+    related: ["how-to-choose-hair-extension-supplier", "wholesale-hair-extensions-uk", "hair-extension-supplier-uk"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },
-  "manchester-hair-extension-supplier": {
+  "hair-extension-supplier-uk": {
     related: ["salon-hair-extension-stockist-uk", "how-to-choose-hair-extension-supplier", "wholesale-hair-extensions-uk"],
     collection: { href: "/collections/professional", label: "Shop Professional Extensions" },
   },

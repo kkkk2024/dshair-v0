@@ -139,7 +139,7 @@ const en: ManchesterColourCollection2026Content = {
   ctaBoxTitle:
     "Every shade in our 2026 collection is crafted with 19 years of expertise behind every strand.",
   ctaBoxBody:
-    "Selected UK stock (preparing). Express 3–5 day delivery. This isn't just hair. This is your signature.",
+    "Factory-direct supply. Express 3–5 day delivery. This isn't just hair. This is your signature.",
   ctaBoxPrimaryLabel: "Shop by Colour",
   ctaBoxPrimaryHref: "/color-chart",
   ctaBoxSecondaryLabel: "Open a Trade Account",
@@ -262,7 +262,7 @@ export const manchesterColourCollection2026Content: Record<Locale, ManchesterCol
     ctaBoxTitle:
       "Jeder Ton unserer 2026 Kollektion ist mit 19 Jahren Expertise hinter jedem Strang gefertigt.",
     ctaBoxBody:
-      "Ausgewählter UK-Lagerbestand (in Vorbereitung). Express-Lieferung in 3–5 Tagen. Das ist nicht nur Haar. Das ist Ihre Signatur.",
+      "Fabriksdirekte Lieferung. Express-Lieferung in 3–5 Tagen. Das ist nicht nur Haar. Das ist Ihre Signatur.",
     ctaBoxPrimaryLabel: "Nach Farbe shoppen",
     ctaBoxPrimaryHref: "/color-chart",
     ctaBoxSecondaryLabel: "Händlerkonto eröffnen",
@@ -379,7 +379,7 @@ export const manchesterColourCollection2026Content: Record<Locale, ManchesterCol
     ctaBoxTitle:
       "Chaque nuance de notre collection 2026 est façonnée avec 19 ans d'expertise derrière chaque mèche.",
     ctaBoxBody:
-      "Stock UK sélectionné (en préparation). Livraison express en 3–5 jours. Ce n'est pas seulement de la chevelure. C'est votre signature.",
+      "Approvisionnement direct usine. Livraison express en 3–5 jours. Ce n'est pas seulement de la chevelure. C'est votre signature.",
     ctaBoxPrimaryLabel: "Acheter par couleur",
     ctaBoxPrimaryHref: "/color-chart",
     ctaBoxSecondaryLabel: "Ouvrir un compte pro",
@@ -495,7 +495,7 @@ export const manchesterColourCollection2026Content: Record<Locale, ManchesterCol
     ctaBoxTitle:
       "كل درجة في تشكيلة 2026 لدينا مصنوعة بـ 19 عاماً من الخبرة خلف كل خصلة.",
     ctaBoxBody:
-      "مخزون UK مختار (قيد التحضير). توصيل سريع خلال 3–5 أيام. هذا ليس مجرد شعر. هذه بصمتك.",
+      "توريد مباشر من المصنع. توصيل سريع خلال 3–5 أيام. هذا ليس مجرد شعر. هذه بصمتك.",
     ctaBoxPrimaryLabel: "تسوق حسب اللون",
     ctaBoxPrimaryHref: "/color-chart",
     ctaBoxSecondaryLabel: "افتح حساب جملة",
@@ -612,7 +612,7 @@ export const manchesterColourCollection2026Content: Record<Locale, ManchesterCol
     ctaBoxTitle:
       "Varje nyans i vår 2026-samling är skapad med 19 års expertis bakom varje strå.",
     ctaBoxBody:
-      "Utvalt UK-lager (under förberedelse). Expressleverans på 3–5 dagar. Detta är inte bara hår. Det är din signatur.",
+      "Fabriksdirekt försörjning. Expressleverans på 3–5 dagar. Detta är inte bara hår. Det är din signatur.",
     ctaBoxPrimaryLabel: "Handla efter färg",
     ctaBoxPrimaryHref: "/color-chart",
     ctaBoxSecondaryLabel: "Öppna återförsäljarkonto",
@@ -729,7 +729,7 @@ export const manchesterColourCollection2026Content: Record<Locale, ManchesterCol
     ctaBoxTitle:
       "Każdy odcień naszej kolekcji 2026 jest tworzony z 19-letnim doświadczeniem za każdym pasmem.",
     ctaBoxBody:
-      "Wybrany zapas w UK (w przygotowaniu). Ekspresowa dostawa w 3–5 dni. To nie jest tylko włosie. To Twoja sygnatura.",
+      "Zaopatrzenie bezpośrednio od fabryki. Ekspresowa dostawa w 3–5 dni. To nie jest tylko włosie. To Twoja sygnatura.",
     ctaBoxPrimaryLabel: "Kupuj według koloru",
     ctaBoxPrimaryHref: "/color-chart",
     ctaBoxSecondaryLabel: "Otwórz konto hurtowe",

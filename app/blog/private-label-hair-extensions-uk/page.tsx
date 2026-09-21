@@ -256,12 +256,12 @@ export default function PrivateLabelHairExtensionsUK() {
                 D.S Hair Beauty has been manufacturing hair extensions for <strong>19 years</strong>. Over that time, we have helped salons across Europe — including more than a dozen UK and EU brands — launch and grow their own private label extension lines. Some started as single-chair stylists. Several now operate multi-salon businesses with their own branded ranges.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Our manufacturing arm operates through <Link href="https://www.wigexporter.com" className="text-[#4A1942] font-semibold underline" target="_blank" rel="noopener noreferrer">wigexporter.com ↗</Link>, giving you direct access to factory capabilities without distributor markups. Combined with our UK &amp; EU trade supply network (<Link href="/" className="text-[#4A1942] font-semibold underline">dshairbeauty.co.uk</Link>), this dual structure means:
+                Our manufacturing arm operates through <Link href="https://www.wigexporter.com" className="text-[#4A1942] font-semibold underline" target="_blank" rel="noopener noreferrer">our manufacturing arm ↗</Link>, giving you direct access to factory capabilities without distributor markups. Combined with our UK &amp; EU trade supply network (<Link href="/" className="text-[#4A1942] font-semibold underline">dshairbeauty.co.uk</Link>), this dual structure means:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground mb-8">
                 <li><strong>Factory-direct pricing</strong> — no intermediary between you and production</li>
                 <li><strong>Express shipping to the UK</strong> — 3–5 working days via DHL/UPS from our manufacturing base</li>
-                <li><strong>Selected UK warehouse launching</strong> — faster dispatch on popular items coming soon</li>
+                <li><strong>Selected lines ship factory-direct</strong> — faster dispatch on popular items coming soon</li>
                 <li><strong>No minimum order quantity</strong> — start with a test batch, not a warehouse commitment</li>
                 <li><strong>Full customisation</strong> — your logo, your colours, your brand story</li>
                 <li><strong>19 years of R&D backing</strong> — we have already made the mistakes so you don't have to</li>

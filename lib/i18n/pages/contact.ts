@@ -42,7 +42,7 @@ export const contactContent: Record<Locale, ContactContent> = {
     cards: [
       { title: "WhatsApp / WeChat", content: "+86 135 1694 6001", description: "Fastest response — typically within 2 hours", actionLabel: "Chat on WhatsApp", highlight: true },
       { title: "Email", content: "caro@dshairbeauty.co.uk", description: "We respond within 24 hours", actionLabel: "Send Email", highlight: false },
-      { title: "Location", content: "Manchester, UK", description: "Serving salons across Greater Manchester & Northwest England", actionLabel: "", highlight: false },
+      { title: "Location", content: "United Kingdom", description: "Serving salons across Greater Manchester & Northwest England", actionLabel: "", highlight: false },
       { title: "Business Hours", content: "Mon – Sat, 9am – 6pm GMT", description: "Urgent enquiries answered via WhatsApp any time", actionLabel: "", highlight: false },
     ],
     salonCtaTitle: "Are you a salon owner?",
@@ -67,7 +67,7 @@ export const contactContent: Record<Locale, ContactContent> = {
     cards: [
       { title: "WhatsApp / WeChat", content: "+86 135 1694 6001", description: "Schnellste Antwort – in der Regel innerhalb von 2 Stunden", actionLabel: "Auf WhatsApp chatten", highlight: true },
       { title: "E-Mail", content: "caro@dshairbeauty.co.uk", description: "Wir antworten innerhalb von 24 Stunden", actionLabel: "E-Mail senden", highlight: false },
-      { title: "Standort", content: "Manchester, UK", description: "Wir betreuen Salons in Greater Manchester & Nordwestengland", actionLabel: "", highlight: false },
+      { title: "Standort", content: "United Kingdom", description: "Wir betreuen Salons in Greater Manchester & Nordwestengland", actionLabel: "", highlight: false },
       { title: "Öffnungszeiten", content: "Mo – Sa, 9–18 Uhr GMT", description: "Dringende Anfragen jederzeit über WhatsApp", actionLabel: "", highlight: false },
     ],
     salonCtaTitle: "Sind Sie Salonbesitzer?",

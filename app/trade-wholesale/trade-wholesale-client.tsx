@@ -370,7 +370,7 @@ export default function TradeWholesaleClient({ content }: { content: TradeWholes
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">Salon Location *</label>
-                      <Input name="location" placeholder="e.g. Didsbury, Manchester" required />
+                      <Input name="location" placeholder="e.g. your city" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5">Phone / WhatsApp *</label>

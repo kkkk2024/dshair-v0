@@ -94,7 +94,7 @@ export function getProductSeoMeta(product: { name: string; description: string; 
     colorInfo,
     lengthInfo ? `Lengths: ${lengthInfo}.` : '',
     priceStr,
-    'Free UK delivery. Trade pricing available.',
+    'Express UK delivery. Trade pricing available.',
   ].filter(Boolean).join(' ')
   // Trim to ~155 chars for meta description
   const description = descParts.length > 160 ? descParts.substring(0, 157) + '...' : descParts

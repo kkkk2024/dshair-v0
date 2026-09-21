@@ -82,7 +82,7 @@ export function CaroChenView({ locale }: { locale: Locale }) {
                 </li>
                 <li>
                   {c.connectMfgLabel}{" "}
-                  <a href="https://wigexporter.com" className="text-[#4A1942] font-semibold underline" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wigexporter.com" className="text-[#4A1942] font-semibold underline" target="_blank" rel="noopener noreferrer">our manufacturing arm 
                     {c.connectMfgLink}
                   </a>
                 </li>

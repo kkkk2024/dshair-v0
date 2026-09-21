@@ -16,7 +16,7 @@ const en: BlogListContent = {
   heroBadge: "Expert Knowledge",
   heroTitle: "Hair Extension Blog",
   heroSubtitle:
-    "Professional guides, product education, and salon business tips — from Manchester's hair extension specialists.",
+    "Professional guides, product education, and salon business tips — from the UK & EU's hair extension specialists.",
   jsonLdName: "Hair Extension Blog | DS Hair Beauty",
   jsonLdDescription:
     "Expert guides on hair extensions for UK professional salons. Hand-tied weft, tape-in, nano ring, aftercare and more.",
@@ -35,7 +35,7 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     heroBadge: "Expertisenwissen",
     heroTitle: "Blog für Haarverlängerungen",
     heroSubtitle:
-      "Professionelle Ratgeber, Produktschulungen und Tipps für das Salongeschäft — von Manchesters Spezialisten für Haarverlängerungen.",
+      "Professionelle Ratgeber, Produktschulungen und Tipps für das Salongeschäft — von Spezialisten für Haarverlängerungen.",
     jsonLdName: "Blog für Haarverlängerungen | DS Hair Beauty",
     jsonLdDescription:
       "Expert Ratgeber zu Haarverlängerungen für UK-Fachsalons. Hand-tied weft, tape-in, nano ring, Nachsorge und mehr.",
@@ -48,7 +48,7 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     heroBadge: "Expertise",
     heroTitle: "Blog sur les Extensions de Cheveux",
     heroSubtitle:
-      "Guides professionnels, formation produit et conseils pour le business du salon — des spécialistes des extensions de Manchester.",
+      "Guides professionnels, formation produit et conseils pour le business du salon — des spécialistes en extensions de cheveux.",
     jsonLdName: "Blog sur les Extensions de Cheveux | DS Hair Beauty",
     jsonLdDescription:
       "Guides experts sur les extensions de cheveux pour les salons professionnels UK. Hand-tied weft, tape-in, nano ring, soins et plus.",
@@ -61,7 +61,7 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     heroBadge: "خبرة احترافية",
     heroTitle: "مدونة إكسسوارات الشعر",
     heroSubtitle:
-      "أدلة احترافية، وتثقيف بالمنتج، ونصائح لأعمال الصالون — من متخصصي إكسسوارات الشعر في Manchester.",
+      "أدلة احترافية، وتثقيف بالمنتج، ونصائح لأعمال الصالون — من متخصصي إكسسوارات الشعر.",
     jsonLdName: "مدونة إكسسوارات الشعر | DS Hair Beauty",
     jsonLdDescription:
       "أدلة خبيرة حول إكسسوارات الشعر لصالونات UK الاحترافية. Hand-tied weft, tape-in, nano ring، والعناية اللاحقة والمزيد.",
@@ -74,7 +74,7 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     heroBadge: "Expertkunskap",
     heroTitle: "Blogg om Hårförlängningar",
     heroSubtitle:
-      "Professionella guider, produktutbildning och tips för salongverksamhet — från Manchesters specialister på hårförlängningar.",
+      "Professionella guider, produktutbildning och tips för salongverksamhet — från specialister på hårförlängningar.",
     jsonLdName: "Blogg om Hårförlängningar | DS Hair Beauty",
     jsonLdDescription:
       "Expertguider om hårförlängningar för UK:s professionella salonger. Hand-tied weft, tape-in, nano ring, eftervård och mer.",
@@ -87,7 +87,7 @@ export const blogListContent: Record<Locale, BlogListContent> = {
     heroBadge: "Wiedza Ekspercka",
     heroTitle: "Blog o Przedłużaniu Włosów",
     heroSubtitle:
-      "Profesjonalne przewodniki, edukacja produktowa i porady dla biznesu salonowego — od specjalistów od przedłużania włosów z Manchesteru.",
+      "Profesjonalne przewodniki, edukacja produktowa i porady dla biznesu salonowego — od specjalistów od przedłużania włosów.",
     jsonLdName: "Blog o Przedłużaniu Włosów | DS Hair Beauty",
     jsonLdDescription:
       "Eksperckie przewodniki o przedłużaniu włosów dla profesjonalnych salonów w UK. Hand-tied weft, tape-in, nano ring, pielęgnacja i więcej.",

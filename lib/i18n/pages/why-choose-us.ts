@@ -44,7 +44,7 @@ const COMPARE_EN = [
   },
   {
     title: "Fast express UK & EU delivery",
-    us: "We are based in Manchester. Orders ship factory-direct via express (3–5 days). Our UK warehouse is launching — until then all lines dispatch from our manufacturing partner.",
+    us: "We are a UK-focused hair extension brand with manufacturing partners in China. Orders ship factory-direct via express (3–5 days) from our manufacturing partner.",
     them: "Imports from China take 2–4 weeks. If a colour is wrong, you wait another month.",
   },
   {
@@ -54,7 +54,7 @@ const COMPARE_EN = [
   },
   {
     title: "Colour matching built in",
-    us: "Custom colour matching — free salon visit in Manchester. We match your clients precisely.",
+    us: "Custom colour matching support — we help you match your clients precisely via our digital colour catalogue and WhatsApp photo matching.",
     them: "Most suppliers send standard swatches. You make it work or spend hours dyeing.",
   },
   {
@@ -94,7 +94,7 @@ const FAQS_EN = [
   },
   {
     q: "How long does delivery take?",
-    a: "Express 3–5 day factory-direct shipping across the UK & EU. Colour-matched or custom orders typically 3–5 business days. (UK warehouse launching.)",
+    a: "Express 3–5 day factory-direct shipping across the UK & EU. Colour-matched or custom orders typically 3–5 business days. (factory-direct express 3–5 day shipping.)",
   },
   {
     q: "What is your return / exchange policy for trade orders?",
@@ -102,7 +102,7 @@ const FAQS_EN = [
   },
   {
     q: "Do you offer colour matching visits?",
-    a: "Yes — free on-site colour consultation for salons in Greater Manchester. For other regions, we offer virtual colour matching via WhatsApp or email with photos.",
+    a: "Yes — we offer colour matching support via our digital colour catalogue and WhatsApp photo matching for salons anywhere in the UK & EU.",
   },
   {
     q: "Can I order samples before committing to a full order?",
@@ -190,7 +190,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         title: "Schneller Express-Versand UK & EU",
-        us: "Wir sitzen in Manchester. Bestellungen gehen factory-direct per Express (3–5 Tage). Unser UK-Lager startet – bis dahin Versand vom Fertigungspartner.",
+        us: "Wir sind eine UK-orientierte Haarverlängerungsmarke mit Fertigungspartnern in China. Bestellungen gehen factory-direct per Express (3–5 Tage) von unserem Fertigungspartner aus.",
         them: "Importe aus China dauern 2–4 Wochen. Ist eine Farbe falsch, warten Sie einen weiteren Monat.",
       },
       {
@@ -200,7 +200,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         title: "Farbabgleich integriert",
-        us: "Individueller Farbabgleich – kostenloser Salonbesuch in Manchester. Wir treffen Ihre Kunden exakt.",
+        us: "Individueller Farbabgleich – wir helfen Ihnen, Ihre Kunden präzise über unseren digitalen Farbkatalog und Foto-Abgleich per WhatsApp zu treffen.",
         them: "Die meisten schicken Standard-Farbkarten. Sie basteln nach oder färben stundenlang.",
       },
       {
@@ -250,7 +250,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         q: "Wie lange dauert die Lieferung?",
-        a: "Express 3–5 Tage factory-direct über UK & EU. Farbabgleich oder Sonderanfertigungen meist 3–5 Werktage. (UK-Lager startet.)",
+        a: "Express 3–5 Tage factory-direct über UK & EU. Farbabgleich oder Sonderanfertigungen meist 3–5 Werktage.",
       },
       {
         q: "Wie ist Ihre Rückgabe-/Umtauschpolitik für Handelsaufträge?",
@@ -258,7 +258,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         q: "Bieten Sie Farbabgleich-Besuche an?",
-        a: "Ja – kostenlose Vor-Ort-Beratung für Salons in Greater Manchester. Andere Regionen: virtueller Farbabgleich per WhatsApp oder E-Mail mit Fotos.",
+        a: "Ja – wir bieten Farbabgleich-Unterstützung über unseren digitalen Farbkatalog und Foto-Abgleich per WhatsApp für Salons im gesamten UK & EU.",
       },
       {
         q: "Kann ich Muster bestellen, bevor ich eine volle Order aufgebe?",
@@ -312,7 +312,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         title: "Livraison express rapide UK & EU",
-        us: "Basés à Manchester. Expédition factory-direct express (3–5 jours). Notre entrepôt UK ouvre — en attendant, envoi depuis notre partenaire.",
+        us: "Nous sommes une marque de extensions focalisée sur le UK, avec des partenaires de fabrication en Chine. Expédition factory-direct express (3–5 jours) depuis notre partenaire.",
         them: "Les importations de Chine prennent 2–4 semaines. Si la couleur est fausse, un mois de plus.",
       },
       {
@@ -322,7 +322,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
       },
       {
         title: "Colorimétrie intégrée",
-        us: "Colorimétrie personnalisée — visite salon gratuite à Manchester. On match vos clientes précisément.",
+        us: "Colorimétrie personnalisée — nous vous aidons à matcher vos clientes précisément via notre catalogue couleur digital et le partage de photos sur WhatsApp.",
         them: "La plupart envoient des nuanciers standard. À vous de faire, ou de teindre des heures.",
       },
       {
@@ -364,9 +364,9 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     faqs: [
       { q: "Quelle est la quantité minimale de commande ?", a: "Aucune pression de minimum. Commandez peu ou beaucoup. Pour la plupart des méthodes, une tête complète = 100 g, mais nous vendons par pack pour commander exactement ce qu'il faut." },
       { q: "Quelles sont vos conditions de paiement ?", a: "Options flexibles pour comptes pro. Standard : prépaiement ou 30 jours net pour comptes approuvés. Contactez-nous." },
-      { q: "Combien de temps pour la livraison ?", a: "Expédition express factory-direct 3–5 jours sur UK & EU. Colorimétrie ou sur-mesure : 3–5 jours ouvrés. (Entrepôt UK ouvre.)" },
+      { q: "Combien de temps pour la livraison ?", a: "Expédition express factory-direct 3–5 jours sur UK & EU. Colorimétrie ou sur-mesure : 3–5 jours ouvrés." },
       { q: "Quelle est votre politique de retour pour les commandes pro ?", a: "Échange pour défaut de fabrication sous 14 jours. Cheveux coupés/modifiés non retournables. Si la couleur est fausse par notre faute, nous couvrons le remplacement." },
-      { q: "Proposez-vous des visites colorimétrie ?", a: "Oui — consultation gratuite sur place pour salons du Grand Manchester. Autres régions : colorimétrie virtuelle via WhatsApp ou e-mail avec photos." },
+      { q: "Proposez-vous des visites colorimétrie ?", a: "Oui — nous proposons un support d’appariement couleur via notre catalogue couleur digital et le partage de photos sur WhatsApp pour les salons de tout le UK & UE." },
       { q: "Puis-je commander des échantillons avant ?", a: "Bien sûr. Nous proposons des packs échantillons pour toutes les méthodes. Contactez-nous via le formulaire, nous envoyons un set au prix pro." },
       { q: "Quelles méthodes fournissez-vous ?", a: "Gammes complètes : Clip-In, Tape-In, Nano Ring, K-Tip, Hand-Tied Weft et Butterfly Weft — plus Hair Toppers et Ponytails. Voir les collections." },
       { q: "Livrez-vous hors UK ?", a: "Oui — UE et international. Livraison UE typique 3–5 jours ouvrés. Contactez-nous pour un devis." },
@@ -399,7 +399,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     comparisons: [
       { title: "أسعار مباشرة من المصنع", us: "نحن نملك الإ production. بلا وسطاء. تدفع سعر المصنع.", them: "معظم موردي بريطانيا هم موزعون. يرفعون السعر 30–60% قبل أن يصلك." },
       { title: "19 عاماً في المجال", us: "نصنع الوصلات منذ 2007. نعرف الجودة غيباً.", them: "العلامات الجديدة تأتي وتذهب. حين تختفي، تبقى مع مخزون لا يطلبه عملاؤك." },
-      { title: "شحن سريع لبريطانيا والاتحاد الأوروبي", us: "مقرنا مانشستر. الشحن مباشر من المصنع بسرعة (3–5 أيام). مستودعنا البريطاني قيد الإطلاق — حالياً من شريك التصنيع.", them: "واردات الصين تستغرق 2–4 أسابيع. إن أخطأ اللون، تنتظر شهراً آخر." },
+      { title: "شحن سريع لبريطانيا والاتحاد الأوروبي", us: "نخدم صالونات بريطانيا والاتحاد الأوروبي. الشحن مباشر من المصنع بسرعة (3–5 أيام) عبر شريك التصنيع.", them: "واردات الصين تستغرق 2–4 أسابيع. إن أخطأ اللون، تنتظر شهراً آخر." },
       { title: "لن نختفي من أمامك", us: "19 عاماً. نفس الفريق. نفس المعايير. حين تحتاجنا نرد.", them: "الموردون يختفون في منتصف الموسم. تُوقف خطوط الألوان. تبحث عن بدائل." },
       { title: "مطابقة لون مدمجة", us: "مطابقة لون مخصصة — زيارة صالون مجانية في مانشستر. نطابق عميلاتك بدقة.", them: "معظمهم يرسلون بطاقات ألوان قياسية. تتدبر الأمر أو تصبغ ساعات." },
       { title: "بلا ضغط حد أدنى", us: "اطلب ما تحتاجه متى شئت. بلا تكديس بلا ضغط.", them: "بعضهم يفرض حداً أدنى. تبقى مع مخزون على الرف." },
@@ -425,7 +425,7 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     faqs: [
       { q: "ما هي الكمية الدنيا للطلب؟", a: "بلا ضغط حد أدنى. اطلب قليلاً أو كثيراً. لمعظم الطرق، رأس كامل = 100 غ، لكننا نورّد بالحزمة لتطلب ما يحتاجه عميلك تماماً." },
       { q: "ما هي شروط الدفع؟", a: "خيارات مرنة للحسابات المسجلة. القياسي: دفع مقدّم أو 30 يوماً لمن يُ approved. تواصل معنا." },
-      { q: "كم تستغرق الشحن؟", a: "شحن سريع مباشر 3–5 أيام لبريطانيا والاتحاد الأوروبي. مطابقة اللون أو المخصص: 3–5 أيام عمل. (مستودع بريطانيا قيد الإطلاق.)" },
+      { q: "كم تستغرق الشحن؟", a: "شحن سريع مباشر 3–5 أيام لبريطانيا والاتحاد الأوروبي. مطابقة اللون أو المخصص: 3–5 أيام عمل." },
       { q: "ما سياسة الإرجاع للطلبات التجارية؟", a: "نستبدل عند عيب مصنعي خلال 14 يوماً. الشعر المقصوص/المعدّل لا يُرجع. إن كان خطأ اللون منا، نتحمل تكلفة البديل." },
       { q: "هل تقدمون زيارات مطابقة لون؟", a: "نعم — استشارة مجانية في الموقع لصالونات مانشستر الكبرى. لمناطق أخرى: مطابقة افتراضية عبر واتساب أو إيميل بالصور." },
       { q: "هل يمكنني طلب عينات قبل الطلب الكامل؟", a: "بالتأكيد. نوفّر حزم عينات لكل الطرق. تواصل معنا عبر النموذج، نرسل مجموعة بسعر الجملة." },
@@ -460,9 +460,9 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     comparisons: [
       { title: "Factory-direct priser", us: "Vi äger produktionen. Inga mellanhänder. Du betalar fabrikspris.", them: "De flesta UK-leverantörer är återförsäljare. De påslår 30–60 % innan det når dig." },
       { title: "19 år i branschen", us: "Vi tillverkar förlängningar sedan 2007. Vi känner kvalitet in i minsta detalj.", them: "Nya varumärken kommer och går. Försvinner de, sitter du med lager kunderna inte kan köpa igen." },
-      { title: "Snabb expressfrakt UK & EU", us: "Vi ligger i Manchester. Order skickas factory-direct express (3–5 dagar). Vårt UK-lager öppnar — tills dess från tillverkningspartnern.", them: "Import från Kina tar 2–4 veckor. Fel färg? Vänta en månad till." },
+      { title: "Snabb expressfrakt UK & EU", us: "Vi är ett UK-inriktat varumärke för hårförlängning med tillverkningspartners i Kina. Order skickas factory-direct express (3–5 dagar) från vår tillverkningspartner.", them: "Import från Kina tar 2–4 veckor. Fel färg? Vänta en månad till." },
       { title: "Vi försvinner inte", us: "19 år. Samma team. Samma standard. När du behöver oss svarar vi.", them: "Leverantörer försvinner mitt i säsongen. Färglinjer läggs ner. Du letar ersättning." },
-      { title: "Färgmatchning inbyggd", us: "Anpassad färgmatchning — gratis salongbesök i Manchester. Vi träffar dina kunder exakt.", them: "De flesta skickar standardnyanser. Du löser det eller färgar i timmar." },
+      { title: "Färgmatchning inbyggd", us: "Anpassad färgmatchning — vi hjälper dig matcha dina kunder exakt via vår digitala färgkatalog och fotomatchning på WhatsApp.", them: "De flesta skickar standardnyanser. Du löser det eller färgar i timmar." },
       { title: "Inget minimikrav", us: "Beställ vad du behöver, när du behöver. Inget överlager, inget tryck.", them: "Vissa tvingar fram minimiorder. Du får lager på hyllan." },
     ],
     promisesTitle: "Fyra saker vi aldrig kompromissar om",
@@ -486,9 +486,9 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     faqs: [
       { q: "Vad är minimikvantitet?", a: "Inget minimikrav. Beställ lite eller mycket. För de flesta metoder är ett helt huvud 100 g, men vi levererar per pack så du beställer exakt vad kunden behöver." },
       { q: "Vilka betalningsvillkor har ni?", a: "Flexibla alternativ för registrerade handelskonton. Standard: förskott eller 30 dagar netto för godkända konton. Kontakta oss." },
-      { q: "Hur lång är leveransen?", a: "Express 3–5 dagar factory-direct över UK & EU. Färgmatchning eller special: 3–5 vardagar. (UK-lager öppnar.)" },
+      { q: "Hur lång är leveransen?", a: "Express 3–5 dagar factory-direct över UK & EU. Färgmatchning eller special: 3–5 vardagar." },
       { q: "Vad gäller retur för handelsordrar?", a: "Vi byter vid tillverkningsfel inom 14 dagar. Klippt/ändrat hår kan inte returneras. Fel färg från oss? Vi täcker ersättningen." },
-      { q: "Erbjuder ni färgbesök?", a: "Ja — gratis platsbesök i Greater Manchester. Andra regioner: virtuell färgmatchning via WhatsApp eller e-post med foton." },
+      { q: "Erbjuder ni färgbesök?", a: "Ja — vi erbjuder färgmatchning via vår digitala färgkatalog och fotomatchning på WhatsApp för salonger i hela UK & EU." },
       { q: "Kan jag beställa prover först?", a: "Absolut. Vi erbjuder provpaket för alla metoder. Kontakta oss via formuläret, vi skickar ett set till handelspris." },
       { q: "Vilka metoder levererar ni?", a: "Hela linjer: Clip-In, Tape-In, Nano Ring, K-Tip, Hand-Tied Weft och Butterfly Weft — plus Hair Toppers och Ponytails. Se kollektioner." },
       { q: "Levererar ni utanför UK?", a: "Ja — EU och internationellt. EU-leverans typiskt 3–5 vardagar. Kontakta oss för fraktoffer." },
@@ -521,9 +521,9 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     comparisons: [
       { title: "Ceny factory-direct", us: "Posiadamy produkcję. Bez pośredników. Płacisz cenę fabryczną.", them: "Większość dostawców UK to odsprzedawcy. Podbijają cenę o 30–60% zanim dojdzie do Ciebie." },
       { title: "19 lat w branży", us: "Robimy przedłużenia od 2007. Znamy jakość od podszewki.", them: "Nowe marki przychodzą i odchodzą. Znikną — zostajesz z towarem, którego klient nie zamówi ponownie." },
-      { title: "Szybka ekspresowa wysyłka UK & UE", us: "Jesteśmy w Manchesterze. Wysyłka factory-direct ekspresem (3–5 dni). Magazyn UK w przygotowaniu — na razie od partnera.", them: "Import z Chin trwa 2–4 tygodnie. Zły kolor? Czekasz kolejny miesiąc." },
+      { title: "Szybka ekspresowa wysyłka UK & UE", us: "Jesteśmy marką włosów zorientowaną na UK, z partnerami produkcyjnymi w Chinach. Wysyłka factory-direct ekspresem (3–5 dni) od naszego partnera produkcyjnego.", them: "Import z Chin trwa 2–4 tygodnie. Zły kolor? Czekasz kolejny miesiąc." },
       { title: "Nie znikniemy", us: "19 lat. To samo tempo. Te same standardy. Gdy nas potrzebujesz, odpowiadamy.", them: "Dostawcy znikają w środku sezonu. Linie kolorów przerywane. Szukasz zamienników." },
-      { title: "Dobór koloru wbudowany", us: "Indywidualny dobór koloru — darmowa wizyta w salonie w Manchesterze. Trafiamy precyzyjnie.", them: "Większość wysyła standardowe wzorniki. Dopasowujesz sam lub godziny farbowania." },
+      { title: "Dobór koloru wbudowany", us: "Indywidualny dobór koloru — pomagamy precyzyjnie dobrać kolor klientek dzięki naszemu cyfrowemu katalogowi i dopasowaniu zdjęć przez WhatsApp.", them: "Większość wysyła standardowe wzorniki. Dopasowujesz sam lub godziny farbowania." },
       { title: "Brak presji minimum", us: "Zamów tyle, ile potrzebujesz, kiedy potrzebujesz. Bez przepełniania, bez presji.", them: "Niektórzy wymuszają min. zamówienia. Kończysz z towarem na półce." },
     ],
     promisesTitle: "Cztery rzeczy, na których nigdy nie ustępujemy",
@@ -547,9 +547,9 @@ export const whyChooseUsContent: Record<Locale, WhyContent> = {
     faqs: [
       { q: "Jaka jest minimalna ilość zamówienia?", a: "Brak presji minimum. Zamów mało lub dużo. Przy większości metod pełna głowa to 100 g, ale dostarczamy w paczkach, byś zamówił dokładnie to, czego potrzebuje klient." },
       { q: "Jakie są warunki płatności?", a: "Elastyczne opcje dla zarejestrowanych kont hurtowych. Standard: przedpłata lub 30 dni netto dla zatwierdzonych. Skontaktuj się z nami." },
-      { q: "Jak długo trwa dostawa?", a: "Ekspresowa wysyłka factory-direct 3–5 dni po UK & UE. Dobór koloru lub niestandardowe: 3–5 dni roboczych. (Magazyn UK w przygotowaniu.)" },
+      { q: "Jak długo trwa dostawa?", a: "Ekspresowa wysyłka factory-direct 3–5 dni po UK & UE. Dobór koloru lub niestandardowe: 3–5 dni roboczych." },
       { q: "Jaka jest polityka zwrotów dla zamówień hurtowych?", a: "Wymieniamy przy wadach produkcyjnych w ciągu 14 dni. Obcięte/zmienione włosy nie podlegają zwrotowi. Błędny kolor z naszej winy? Pokrywamy koszt." },
-      { q: "Czy oferujecie wizyty doboru koloru?", a: "Tak — darmowa konsultacja w salonie w Greater Manchester. Inne regiony: wirtualny dobór przez WhatsApp lub e-mail z fotami." },
+      { q: "Czy oferujecie wizyty doboru koloru?", a: "Tak — oferujemy wsparcie w doborze koloru przez nasz cyfrowy katalog i dopasowanie zdjęć na WhatsApp dla salonów w całym UK & UE." },
       { q: "Czy mogę zamówić próbki przed pełnym zamówieniem?", a: "Jasne. Mamy pakiety próbek dla każdej metody. Napisz przez formularz, wyślemy zestaw w cenie hurtowej." },
       { q: "Jakie metody dostarczacie?", a: "Pełne linie: Clip-In, Tape-In, Nano Ring, K-Tip, Hand-Tied Weft i Butterfly Weft — plus Hair Toppers i Ponytails. Zobacz kolekcje." },
       { q: "Czy wysyłacie poza UK?", a: "Tak — UE i międzynarodowo. Dostawa UE zwykle 3–5 dni roboczych. Skontaktuj się o ofertę." },

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
@@ -119,6 +120,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <AuthorJsonLd />
         {children}
         <WhatsAppButton />
+        {/* Caro AI 客服 Agent：外部脚本 + next/script，水合后执行，避免 SSR 内联脚本被 React hydration 清除 */}
+        <Script src="/caro-widget.js" strategy="afterInteractive" />
         <Analytics />
       </body>
     </html>

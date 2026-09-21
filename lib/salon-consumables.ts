@@ -101,7 +101,7 @@ export const salonConsumables: SalonConsumable[] = [
       "Subscribe & save — auto-delivery each month",
       "Small enough to fit through your letterbox",
       "Same products, lower price than buying separately",
-      "Free UK delivery on orders over £26",
+      "Express UK delivery on orders over £26",
     ],
     whatIncluded: [
       "Nano Rings (Non-Silicone) 1000pc × 1",
@@ -475,14 +475,14 @@ export const salonConsumables: SalonConsumable[] = [
   // ── SAMPLE PACK (1) ──────────────────────────────────────────
   {
     id: "sc-free-sample",
-    name: "Free Sample Pack",
+    name: "Sample Pack",
     slug: "free-sample-pack",
     category: "sample",
     price: 0,
     currency: "GBP",
     description:
-      "Try before you buy. Get a free sample pack delivered to your salon — includes nano rings, sectioning clips, and a threading tool so you can test our quality firsthand. Just cover £4.00 postage. We're that confident you'll love it.",
-    shortDescription: "Free sample pack — just pay £4.00 postage",
+      "Try before you commit. Order a sample pack for your salon — includes nano rings, sectioning clips, and a threading tool so you can test our quality firsthand. Sample price + £4.00 postage, both at your cost.",
+    shortDescription: "Sample pack — sample price + £4.00 postage, at buyer's cost",
     features: [
       "Completely free — just cover £4.00 postage",
       "Test our quality with zero risk",

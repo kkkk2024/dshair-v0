@@ -13,7 +13,7 @@ import type { AboutContent } from "@/lib/i18n/pages/about"
 
 const companyFaqs = [
   { question: "How long has D.S HAIR & BEAUTY been in business?", answer: "Our founder has been in the hair extension industry since 2007 — nearly 20 years of experience sourcing and supplying Remy human hair. D.S HAIR & BEAUTY was formally launched as a dedicated UK brand in 2022, combining decades of supply chain expertise with a professional salon-first approach." },
-  { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are based in Manchester, United Kingdom. Our Manchester base serves salons across the UK & EU with selected UK warehouse launching plus factory-direct express 3–5 day shipping on the full range." },
+  { question: "Where is D.S HAIR & BEAUTY based?", answer: "We are a UK-focused hair extension brand with manufacturing partners in China. We serve salons across the UK & EU with factory-direct express 3–5 day shipping on the full range." },
   { question: "What makes D.S HAIR different from other UK suppliers?", answer: "Three things set us apart: (1) we own the production — no middlemen means better prices, (2) we have 19 years of direct factory relationships in China's hair manufacturing heartland, and (3) we answer within 2 hours — not a ticketing system, a real person who knows your account." },
   { question: "Do you work directly with salons?", answer: "Yes. Professional salons are our core business. We offer trade accounts with preferential pricing, free digital colour matching for UK & EU salons, priority express dispatch, and dedicated account management. Apply through our Salon Partners page." },
   { question: "Is your hair ethically sourced?", answer: "Yes. All our hair is 100% Remy human hair, ethically sourced from trusted manufacturers with full supply chain traceability. Every batch is quality-checked before it leaves our facility. We never use synthetic blends or non-Remy hair." },
@@ -32,7 +32,7 @@ export function AboutView({ content, locale }: { content: AboutContent; locale: 
               <div className="absolute inset-0 z-0">
                 <Image
                   src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
-                  alt="D.S HAIR & BEAUTY – Professional Hair Extension Supplier Manchester"
+                  alt="D.S HAIR & BEAUTY – Professional Hair Extension Supplier UK & EU"
                   fill
                   className="object-cover"
                   priority
@@ -90,7 +90,7 @@ export function AboutView({ content, locale }: { content: AboutContent; locale: 
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                       <p className="text-white font-semibold text-lg">D.S HAIR & BEAUTY</p>
-                      <p className="text-white/70 text-sm">Manchester, United Kingdom</p>
+                      <p className="text-white/70 text-sm">United Kingdom</p>
                     </div>
                   </div>
                   <div>

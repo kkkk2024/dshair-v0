@@ -581,7 +581,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </div>
 
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-900">
-                  <strong>💙 Why Salons Are Switching to Nano K-Tip:</strong> The ultra-micro nano bond is taking UK salons by storm — especially for clients with fine or colour-treated hair. It delivers the same 3–5 month longevity of standard K-tips with up to 40% less weight on each strand, virtually eliminating tension at the hairline. D.S HAIR nano strands are among the most requested items from our Manchester salon partners.
+                  <strong>💙 Why Salons Are Switching to Nano K-Tip:</strong> The ultra-micro nano bond is taking UK salons by storm — especially for clients with fine or colour-treated hair. It delivers the same 3–5 month longevity of standard K-tips with up to 40% less weight on each strand, virtually eliminating tension at the hairline. D.S HAIR nano strands are among the most requested items from our UK salon partners.
                 </div>
               </div>
             ) : product.productType.toLowerCase().includes('butterfly') ? (

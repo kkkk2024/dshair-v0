@@ -9,7 +9,7 @@ export const svSeoPages: SeoPage[] = [
     h1: "Hårförlängningar Partihandel UK",
     metaTitle: "Hårförlängningar Partihandel UK för Salonger | D.S Hair Beauty",
     metaDescription:
-      "Partihandel med äkta hårförlängningar för salonger, stylister och handelsköpare i UK. Fabriksdirekt leverantör med UK-lager som lanseras, expressleverans 3–5 dagar, handelskontostöd och färgmatchning.",
+      "Partihandel med äkta hårförlängningar för salonger, stylister och handelsköpare i UK. Fabriksdirekt leverantör, expressleverans 3–5 dagar, handelskontostöd och färgmatchning.",
     intro:
       "D.S Hair Beauty levererar professionella salonger och stylister med 100% Remy mänskligt hår förlängningar, handelskontostöd och praktisk partibeställning med express 3–5 dagars fabriksdirekt leverans.",
     sections: [
@@ -58,19 +58,19 @@ export const svSeoPages: SeoPage[] = [
     cta: "Ansök om Handelskonto",
   },
   {
-    slug: "hair-extension-supplier-manchester",
-    title: "Hårförlängningsleverantör Manchester",
-    keyword: "hair extension supplier manchester",
+    slug: "hair-extension-supplier-uk",
+    title: "Hårförlängningsleverantör UK",
+    keyword: "hair extension supplier uk",
     intent: "GEO",
-    h1: "Hårförlängningsleverantör — UK-lager lanseras",
-    metaTitle: "Fabriksdirekt Hårförlängningsleverantör Manchester | D.S Hair Beauty",
+    h1: "Hårförlängningsleverantör — Fabriksdirekt",
+    metaTitle: "Fabriksdirekt Hårförlängningsleverantör UK | D.S Hair Beauty",
     metaDescription:
-      "Fabriksdirekt tillverkare av hårförlängningar med UK-lager som lanseras. Expressleverans 3–5 dagar i hela UK & EU, handelspriser och färgstöd.",
+      "Fabriksdirekt tillverkare av hårförlängningar. Expressleverans 3–5 dagar i hela UK & EU, handelspriser och färgstöd.",
     intro:
-      "D.S Hair Beauty är en fabriksdirekt tillverkare. Vårt UK-lager lanseras — salonger får express 3–5 dagars fabriksdirekt leverans till tillverkarpriser, utan mellanhandsmarginal.",
+      "D.S Hair Beauty är en fabriksdirekt tillverkare. Salonger får express 3–5 dagars fabriksdirekt leverans till tillverkarpriser, utan mellanhandsmarginal.",
     sections: [
       {
-        heading: "Fabriksdirekt försörjning. UK-lager lanseras.",
+        heading: "Fabriksdirekt försörjning.",
         body: "Till skillnad från grossister som köper från importörer och lägger på marginal igen, hämtar D.S Hair Beauty direkt från Kinas ledande Remy-hårtillverkare. Beställningar skickas fabriksdirekt med express 3–5 dagars leverans — så du får fabriksdirekt kvalitet med snabb UK-uppfyllelse.",
       },
       {
@@ -84,7 +84,7 @@ export const svSeoPages: SeoPage[] = [
     ],
     bullets: [
       "Fabriksdirekt tillverkarpriser",
-      "UK-lager lanseras — express 3–5 dagars fabriksdirekt leverans",
+      "express 3–5 dagars fabriksdirekt leverans",
       "Handelskontoväg för salonger",
       "Professionella förlängningsmetoder och eftervård",
       "Färgmatchning och WhatsApp-stöd",
@@ -94,15 +94,15 @@ export const svSeoPages: SeoPage[] = [
       {
         question: "Var hålls ert lager?",
         answer:
-          "Vårt UK-lager lanseras. Vi hämtar fabriksdirekt från tillverkare i Kina — så du får tillverkarpriser med express 3–5 dagars UK-leverans.",
+          "Vi levererar fabriksdirekt från tillverkare i Kina — så du får tillverkarpriser med express 3–5 dagars UK-leverans.",
       },
       {
-        question: "Kan Manchester-salonger öppna ett handelskonto?",
+        question: "Kan UK- & EU-salonger öppna ett handelskonto?",
         answer:
           "Ja. Salonger och stylister kan ansöka via salongpartnervägen eller kontakta teamet direkt.",
       },
       {
-        question: "Levererar ni endast Manchester?",
+        question: "Levererar ni endast UK?",
         answer:
           "Nej. Vi levererar till salonger i hela UK och EU med express 3–5 dagars fabriksdirekt leverans i hela landet.",
       },
@@ -479,7 +479,7 @@ export const svSeoPages: SeoPage[] = [
       "Leeds-specifik GEO-sida",
       "Stöder salongs- och mobilastylistförfrågningar",
       "Kopplar stadssökningar till handelskontokonvertering",
-      "Lägger till UK-täckning utöver Manchester och London",
+      "Lägger till UK-täckning",
       "Användbar för intern länkning och sitemap-expansion",
     ],
     faqs: [
