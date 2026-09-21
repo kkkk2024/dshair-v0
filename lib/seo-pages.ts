@@ -88,7 +88,7 @@ export const seoPages: SeoPage[] = [
     sections: [
       {
         heading: "Factory-direct supply for UK & EU salons.",
-        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources factory-direct from China's leading Remy hair manufacturers. Orders ship factory-direct with express UK & EU delivery (3–5 days).,
+        body: "Unlike wholesalers who buy from importers and mark up again, D.S Hair Beauty sources factory-direct from China's leading Remy hair manufacturers. Orders ship factory-direct with express UK & EU delivery (3–5 days).",
       },
       {
         heading: "Professional product range",
@@ -111,7 +111,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Where is your stock held?",
         answer:
-          "We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK & EU delivery (3–5 days).,
+          "We source factory-direct from manufacturers in China — so you get manufacturer pricing with fast UK & EU delivery (3–5 days).",
       },
       {
         question: "Can UK & EU salons open a trade account?",
