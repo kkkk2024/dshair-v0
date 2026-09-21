@@ -180,7 +180,6 @@ export function AuthorJsonLd() {
     ],
     sameAs: [
       'https://www.instagram.com/d.shairbeauty',
-      'https://wigexporter.com',
     ],
   }
 
